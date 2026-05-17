@@ -224,7 +224,15 @@ function updateGameVersion() {
     saved.tagSystemTags = [];
   }
 
-  saved.version = 5.0
+  if (saved.version < 5.1) {
+    // Garante que saves antigos inicializam as pokébolas do Daily Catch
+    if (item.pokeball.got === undefined) item.pokeball.got = 0;
+    if (item.greatball.got === undefined) item.greatball.got = 0;
+    if (item.ultraball.got === undefined) item.ultraball.got = 0;
+    if (item.masterball.got === undefined) item.masterball.got = 0;
+}
+
+  saved.version = 5.1
   document.getElementById(`game-version`).innerHTML = `v${saved.version}`
 }
 
