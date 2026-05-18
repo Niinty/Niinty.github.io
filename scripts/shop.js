@@ -45,13 +45,13 @@ shop.shopGymBadgeMistyTicket = {
         item.autoRefightTicket.newItem++
     },
 }
-shop.shopGymBadgePhoebeTicket = {
+shop.shopGymBadgeLtsurgeTicket = {
     icon: item.autoRefightTicket.id,
     name: `Auto-Refight Ticket`,
     price: 1,
-    currency: item.gymBadgePhoebe.id,
+    currency: item.gymBadgeLtsurge.id,
     category: `goods`,
-    condition: function() { return item.gymBadgePhoebe.got >= 1 },
+    condition: function() { return item.gymBadgeLtsurge.got >= 1 },
     effect: function() {
         item.autoRefightTicket.got++
         item.autoRefightTicket.newItem++
