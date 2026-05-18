@@ -8632,8 +8632,8 @@ pkmn.turtwig = {
         sdef: 55,
         spe: 31,
     },
+    lore: `Ele realiza fotossíntese com o seu corpo, produzindo oxigênio. A folha em sua cabeça murcha se ele estiver com sede.`,
     evolve: function() { return { 1: { pkmn: pkmn.grotle, level: evolutionLevel1 } } },
-    lore: `Ele realiza fotossíntese com o seu corpo, produzindo oxigênio. A folha em sua cabeça murcha se ele estiver com sede. O casco em suas costas é feito de terra. Se o casco estiver úmido ao toque, o Turtwig está muito saudável.`,
 }
 
 pkmn.grotle = {
