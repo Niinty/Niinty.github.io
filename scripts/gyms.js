@@ -35,7 +35,7 @@ const GYMS_LEADERS = [
         level: 20,
         description: "Especialista em Pokémon do tipo Pedra.",
     },
-    /*{
+    {
         areaId: "vsGymLeaderMisty",
         order: 2,
         unlockAreaId: "vsGymLeaderBrock",
@@ -48,7 +48,7 @@ const GYMS_LEADERS = [
         level: 40,
         description: "Especialista em Pokémon do tipo Água.",
     },
-    {
+    /*{
         areaId: "vsGymLeaderPhoebe",
         order: 3,
         unlockAreaId: "vsGymLeaderMisty",
