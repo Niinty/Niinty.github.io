@@ -48,7 +48,7 @@ const GYMS_LEADERS = [
         level: 40,
         description: "Especialista em Pokémon do tipo Água.",
     },
-        {
+    {
         areaId: "vsGymLeaderLtsurge",
         order: 3,
         unlockAreaId: "vsGymLeaderMisty",
@@ -61,19 +61,6 @@ const GYMS_LEADERS = [
         level: 60,
         description: "Especialista em Pokémon do tipo Elétrico.",
     },
-    /*{
-        areaId: "vsGymLeaderPhoebe",
-        order: 3,
-        unlockAreaId: "vsGymLeaderMisty",
-        name: "Gym Leader Phoebe",
-        badge: "Rain Badge",
-        badgeItemId: "gymBadgePhoebe",
-        city: "Sootopolis City",
-        sprite: "phoebe",
-        background: "gym",
-        level: 60,
-        description: "Especialista em Pokémon do tipo Fantasma.",
-    },*/
 ]
 
 function getGymMaxDifficulty() {
@@ -328,8 +315,10 @@ function updateGyms() {
 
     for (const gym of sorted) {
         if (isGymLeaderUnlocked(gym)) continue
+        
+        // MODIFICADO: Se a área global falhar, usamos os dados locais do array do líder para renderizar o card bloqueado com segurança
         const area = areas[gym.areaId]
-        if (!area) continue
+        const displaySprite = area ? area.sprite : (gym.sprite || "brock")
 
         anyListed = true
         const divAreas = document.createElement("div")
@@ -346,7 +335,7 @@ function updateGyms() {
             </span>
             <div></div>
             <div class="vs-card-left">
-                <img class="sprite-trim" style="filter:brightness(0)" src="img/trainers/${area.sprite}.png">
+                <img class="sprite-trim" style="filter:brightness(0)" src="img/trainers/${displaySprite}.png">
             </div>
         `
         listing.appendChild(divAreas)
@@ -358,5 +347,3 @@ function updateGyms() {
 }
 
 registerGymLeaders()
-
-
