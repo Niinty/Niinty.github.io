@@ -4376,7 +4376,7 @@ areas.vsGymLeaderPhoebe = {
     }
 }
 
-/*areas.vsGymLeaderLtsurge = {
+areas.vsGymLeaderLtsurge = {
     name: `Gym Leader Lt. Surge`,
     background : `gym`,
     sprite : `ltsurge`,
@@ -4384,18 +4384,18 @@ areas.vsGymLeaderPhoebe = {
     type: `vs`,
     level : 60,
     team : {
-        slot1 : pkmn.raichu,
-        slot1Moves : [move.surf.id, move.thunder.id, move.thunderbold.id, move.thunderWave.id],
-        slot2 : pkmn.electabuzz,
-        slot2Moves : [move.thunderbold.id, move.thunderPunch.id, move.psychic.id, move.thunder.id],
-        slot3 : pkmn.electrode,
-        slot3Moves : [move.thunder.id, move.rollout.id, move.agility.id, move.electroBall.id],
-        slot4 : pkmn.magneton,
-        slot4Moves : [move.thunderbold.id, move.zapCannon.id, move.thunderWave.id, move.lightScreen.id],
-        slot5 : pkmn.jolteon,
-        slot5Moves : [move.thunder.id, move.agility.id, move.bite.id, move.thunderFang.id],
-        slot6 : pkmn.lanturn,
-        slot6Moves : [move.thunderWave.id, move.zapCannon.id, move.discharge.id, move.surf.id],
+        slot1 : pkmn.drifblim,
+        slot1Moves : [move.icyWind.id, move.hex.id, move.confuseRay.id, move.shadowSneak.id],
+        slot2 : pkmn.mismagius,
+        slot2Moves : [move.ominousWind.id, move.psychic.id, move.shadowBall.id, move.thunderWave.id],
+        slot3 : pkmn.gengar,
+        slot3Moves : [move.lick.id, move.hex.id, move.shadowBall.id, move.shadowSneak.id],
+        slot4 : pkmn.cofagrigus,
+        slot4Moves : [move.ominousWind.id, move.hex.id, move.shadowBall.id, move.shadowSneak.id],
+        slot5 : pkmn.dusknoir,
+        slot5Moves : [move.willOWisp.id, move.hex.id, move.confuseRay.id, move.thunderWave.id],
+        slot6 : pkmn.dragapult,
+        slot6Moves : [move.dragonClaw.id, move.hex.id, move.shadowBall.id, move.dragonDance.id],
     },
     //reward : [item.spellTag, item.goldenBottleCap],
     itemReward: { 1 : { item: item.spellTag.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
@@ -4411,7 +4411,7 @@ areas.vsGymLeaderPhoebe = {
         `
         openTooltip()
     }
-}*/
+}
 
 
 areas.vsTwinTrainersBellisse = {
