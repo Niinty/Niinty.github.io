@@ -3358,7 +3358,7 @@ pkmn.tauros = {
         spe: 110,
     },
     hiddenAbility: ability.sheerForce,
-    lore: `Conhecido por sua constante necessidade de causar alvoroço, este Pokémon derruba árvores grossas para se acalmar caso lhe falte um oponente de batalha.`,
+    lore: `Conhecido por sua constante necessidade de causar alvoroço, este Pokémon derruba árvores grossas para se acalmar caso lhe falte um oponente de batalha.`
 }
 
 pkmn.taurosCombat = {
@@ -8632,8 +8632,8 @@ pkmn.turtwig = {
         sdef: 55,
         spe: 31,
     },
-    lore: `Ele realiza fotossíntese com o seu corpo, produzindo oxigênio. A folha em sua cabeça murcha se ele estiver com sede.`,
     evolve: function() { return { 1: { pkmn: pkmn.grotle, level: evolutionLevel1 } } },
+    lore: `Ele realiza fotossíntese com o seu corpo, produzindo oxigênio. A folha em sua cabeça murcha se ele estiver com sede.`
 }
 
 pkmn.grotle = {
