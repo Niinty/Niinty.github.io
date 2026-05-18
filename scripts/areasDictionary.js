@@ -4376,7 +4376,7 @@ areas.vsGymLeaderPhoebe = {
     }
 }
 
-areas.vsGymLeaderLtsurge = {
+/*areas.vsGymLeaderLtsurge = {
     name: `Gym Leader Lt. Surge`,
     background : `gym`,
     sprite : `ltsurge`,
@@ -4411,7 +4411,7 @@ areas.vsGymLeaderLtsurge = {
         `
         openTooltip()
     }
-}
+}*/
 
 
 areas.vsTwinTrainersBellisse = {
