@@ -765,13 +765,13 @@ item.gymBadgeMisty = {
         return `Chance ao derrotar Misty (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
     },
 }
-item.gymBadgePhoebe = {
+item.gymBadgeLtsurge = {
     type: "key",
-    itemIcon: "pikachuF",
-    rename: "Rain Badge",
+    itemIcon: "gymBadgeLtsurge",
+    rename: "Thunder Badge",
     subtitle: "(Gym)",
     info: function() {
-        return `Chance ao derrotar Phoebe (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
+        return `Chance ao derrotar Lt. Surge (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
     },
 }
 
