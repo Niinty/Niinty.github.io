@@ -4797,7 +4797,7 @@ function getSeed() {
 
   const now = new Date();
   const utcTime = now.getTime(); 
-  const halfDayNumber = Math.floor(utcTime / (1000 * 60 * 60 * 4));
+  const halfDayNumber = Math.floor(utcTime / (1000 * 60 * 60 * 12));
   const dayNumber = Math.floor(utcTime / (1000 * 60 * 60 * 24));
   dailySeed = dayNumber
 
@@ -4814,13 +4814,13 @@ function getSeed() {
   return dayNumber;
 }
 
-let lastHalfDayNumber = Math.floor(Date.now() / (1000 * 60 * 60 * 4));
+let lastHalfDayNumber = Math.floor(Date.now() / (1000 * 60 * 60 * 12));
 
 function updateDailyCounters() {
   const contadores = document.querySelectorAll('.time-counter-daily');
 
   const ahora = Date.now();
-  const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 4));
+  const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 12));
 
   if (halfDayNumber !== lastHalfDayNumber) {
     lastHalfDayNumber = halfDayNumber;
@@ -4832,7 +4832,7 @@ function updateDailyCounters() {
     resetDailyTimers();
   }
 
-  const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 4);
+  const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 12);
   const diff = nextHalfDayStart - ahora;
 
   const horas = String(Math.floor(diff / 3600000)).padStart(2, '0');
@@ -9804,7 +9804,7 @@ function wonderTrade(){
 }
 
 function currentDailyCatchHalfDay(){
-    return Math.floor(Date.now() / (1000 * 60 * 60 * 4))
+    return Math.floor(Date.now() / (1000 * 60 * 60 * 12))
 }
 
 function isDailyCatchUnlocked(){
@@ -9860,8 +9860,8 @@ function getStoredDailyCatchPokemon(){
 
 function getDailyCatchRemainingText(){
     const ahora = Date.now()
-    const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 4))
-    const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 4)
+    const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 12))
+    const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 12)
     const diff = nextHalfDayStart - ahora
     const horas = String(Math.floor(diff / 3600000)).padStart(2, '0')
     const minutos = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0')
@@ -9889,10 +9889,10 @@ function getDailyCatchRank(poke){
 
 function getDailyCatchChance(rank, ballId){
     const chances = {
-        common: { pokeball: 0.6, greatball: 0.85, ultraball: 0.98, masterball: 1 },
-        uncommon: { pokeball: 0.3, greatball: 0.65, ultraball: 0.9, masterball: 1 },
-        rare: { pokeball: 0.1, greatball: 0.35, ultraball: 0.75, masterball: 1 },
-        legendary: { pokeball: 0.025, greatball: 0.12, ultraball: 0.45, masterball: 1 },
+        common: { pokeball: 0.5, greatball: 0.75, ultraball: 0.98, masterball: 1 },
+        uncommon: { pokeball: 0.25, greatball: 0.55, ultraball: 0.85, masterball: 1 },
+        rare: { pokeball: 0.05, greatball: 0.25, ultraball: 0.65, masterball: 1 },
+        legendary: { pokeball: 0.005, greatball: 0.01, ultraball: 0.05, masterball: 1 },
     }
     return chances[rank]?.[ballId] ?? 0
 }
