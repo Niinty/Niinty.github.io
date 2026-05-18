@@ -20,6 +20,7 @@ pkmn.bulbasaur = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ivysaur, level: evolutionLevel1 } } },
     hiddenAbility: ability.thickFat,
+    lore: `Por algum tempo após o seu nascimento, ele cresce alimentando-se da semente em suas costas.`,
     signature : move.frenzyPlant
 }
 
@@ -3357,6 +3358,7 @@ pkmn.tauros = {
         spe: 110,
     },
     hiddenAbility: ability.sheerForce,
+    lore: `Conhecido por sua constante necessidade de causar alvoroço, este Pokémon derruba árvores grossas para se acalmar caso lhe falte um oponente de batalha.`,
 }
 
 pkmn.taurosCombat = {
@@ -8644,6 +8646,7 @@ pkmn.grotle = {
         spe: 36,
     },
     evolve: function() { return { 1: { pkmn: pkmn.torterra, level: evolutionLevel2 } } },
+    lore: `Ele realiza fotossíntese com o seu corpo, produzindo oxigênio. A folha em sua cabeça murcha se ele estiver com sede. O casco em suas costas é feito de terra. Se o casco estiver úmido ao toque, o Turtwig está muito saudável.`,
 }
 
 pkmn.torterra = {
