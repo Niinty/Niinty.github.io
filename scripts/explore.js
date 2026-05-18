@@ -4797,7 +4797,7 @@ function getSeed() {
 
   const now = new Date();
   const utcTime = now.getTime(); 
-  const halfDayNumber = Math.floor(utcTime / (1000 * 60 * 60 * 12));
+  const halfDayNumber = Math.floor(utcTime / (1000 * 60 * 60 * 4));
   const dayNumber = Math.floor(utcTime / (1000 * 60 * 60 * 24));
   dailySeed = dayNumber
 
@@ -4814,13 +4814,13 @@ function getSeed() {
   return dayNumber;
 }
 
-let lastHalfDayNumber = Math.floor(Date.now() / (1000 * 60 * 60 * 12));
+let lastHalfDayNumber = Math.floor(Date.now() / (1000 * 60 * 60 * 4));
 
 function updateDailyCounters() {
   const contadores = document.querySelectorAll('.time-counter-daily');
 
   const ahora = Date.now();
-  const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 12));
+  const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 4));
 
   if (halfDayNumber !== lastHalfDayNumber) {
     lastHalfDayNumber = halfDayNumber;
@@ -4832,7 +4832,7 @@ function updateDailyCounters() {
     resetDailyTimers();
   }
 
-  const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 12);
+  const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 4);
   const diff = nextHalfDayStart - ahora;
 
   const horas = String(Math.floor(diff / 3600000)).padStart(2, '0');
@@ -9804,7 +9804,7 @@ function wonderTrade(){
 }
 
 function currentDailyCatchHalfDay(){
-    return Math.floor(Date.now() / (1000 * 60 * 60 * 12))
+    return Math.floor(Date.now() / (1000 * 60 * 60 * 4))
 }
 
 function isDailyCatchUnlocked(){
@@ -9860,8 +9860,8 @@ function getStoredDailyCatchPokemon(){
 
 function getDailyCatchRemainingText(){
     const ahora = Date.now()
-    const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 12))
-    const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 12)
+    const halfDayNumber = Math.floor(ahora / (1000 * 60 * 60 * 4))
+    const nextHalfDayStart = (halfDayNumber + 1) * (1000 * 60 * 60 * 4)
     const diff = nextHalfDayStart - ahora
     const horas = String(Math.floor(diff / 3600000)).padStart(2, '0')
     const minutos = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0')
