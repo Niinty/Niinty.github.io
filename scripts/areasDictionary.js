@@ -4339,6 +4339,43 @@ areas.vsClownDuck = {
     reward : [pkmn.ducklett, item.bottleCap]
 }
 
+areas.vsGymLeaderPhoebe = {
+    name: `Gym Leader Phoebe`,
+    background : `gym`,
+    sprite : `phoebe`,
+    trainer: true,
+    type: `vs`,
+    level : 60,
+    team : {
+        slot1 : pkmn.drifblim,
+        slot1Moves : [move.icyWind.id, move.hex.id, move.confuseRay.id, move.shadowSneak.id],
+        slot2 : pkmn.mismagius,
+        slot2Moves : [move.ominousWind.id, move.psychic.id, move.shadowBall.id, move.thunderWave.id],
+        slot3 : pkmn.gengar,
+        slot3Moves : [move.lick.id, move.hex.id, move.shadowBall.id, move.shadowSneak.id],
+        slot4 : pkmn.cofagrigus,
+        slot4Moves : [move.ominousWind.id, move.hex.id, move.shadowBall.id, move.shadowSneak.id],
+        slot5 : pkmn.dusknoir,
+        slot5Moves : [move.willOWisp.id, move.hex.id, move.confuseRay.id, move.thunderWave.id],
+        slot6 : pkmn.dragapult,
+        slot6Moves : [move.dragonClaw.id, move.hex.id, move.shadowBall.id, move.dragonDance.id],
+    },
+    //reward : [item.spellTag, item.goldenBottleCap],
+    itemReward: { 1 : { item: item.spellTag.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
+    encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Expert Dojo</div>
+        </div>
+        `
+        openTooltip()
+    }
+}
+
 areas.vsGymLeaderLtsurge = {
     name: `Gym Leader Lt. Surge`,
     background : `gym`,
