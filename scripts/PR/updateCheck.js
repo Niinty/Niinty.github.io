@@ -12,8 +12,9 @@ let updateInterval = null;
 
 async function getLatestCommit() {
   try {
+    // ALTERADO: URL atualizada para o repositório do Niinty
     const res = await fetch(
-      "https://api.github.com/repos/play-pokechill/play-pokechill.github.io/commits/main",
+      "https://api.github.com/repos/Niinty/play-chillmoon.github.io/commits/master",
       { cache: "no-cache" }
     );
 
