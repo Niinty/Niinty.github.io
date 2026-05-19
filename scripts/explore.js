@@ -55,23 +55,34 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     closeTooltip();
     openMenu();
 
-    // Remove o Pokémon dado
+    // 1. Remove o Pokémon dado
     pkmn[playerOfferId].caught--;
 
-    // Dá o novo Pokémon
-    givePkmn(pkmn[systemOfferId], 1);
-    
-    // Aplica o Shiny sorteado anteriormente
-    if (isShiny) pkmn[systemOfferId].shiny = true;
+    // 2. Verifica se já possui o Pokémon recebido
+    let jaPossui = pkmn[systemOfferId].caught > 0;
 
-    // Feedback Visual
-    document.getElementById("wonder-menu").style.display = "flex";
-    document.getElementById("wonder-text").innerHTML = `Troca realizada! Você recebeu um ${format(systemOfferId)}${isShiny ? " ✨Shiny!✨" : ""}!`;
-    document.getElementById("wonder-pkmn").src = isShiny 
-        ? `img/pkmn/shiny/${systemOfferId}.png` 
-        : `img/pkmn/sprite/${systemOfferId}.png`;
+    if (jaPossui) {
+        // Se já possui, exibe a mensagem de aviso e encerra a "troca"
+        document.getElementById("wonder-menu").style.display = "flex";
+        document.getElementById("wonder-text").innerHTML = 
+            `Troca realizada! Você enviou ${format(playerOfferId)}, mas já possui ${format(systemOfferId)}! Ele não foi adicionado.`;
+        
+        // Mantém a imagem do Pokémon recebido para o jogador ver o que "perdeu"
+        document.getElementById("wonder-pkmn").src = `img/pkmn/sprite/${systemOfferId}.png`;
+    } else {
+        // Se NÃO possui, adiciona normalmente
+        givePkmn(pkmn[systemOfferId], 1);
+        if (isShiny) pkmn[systemOfferId].shiny = true;
 
-    // RESETA o bloqueio e marca como reclamado
+        document.getElementById("wonder-menu").style.display = "flex";
+        document.getElementById("wonder-text").innerHTML = 
+            `Troca completada! Você recebeu um ${format(systemOfferId)}${isShiny ? " ✨ Shiny! ✨" : ""}!`;
+        document.getElementById("wonder-pkmn").src = isShiny 
+            ? `img/pkmn/shiny/${systemOfferId}.png` 
+            : `img/pkmn/sprite/${systemOfferId}.png`;
+    }
+
+    // 3. Finaliza o processo de cooldown
     saved.wonderTradeOffered = false;
     saved.wonderTradePlayerPkmn = null;
     saved.wonderTradeSystemPkmn = null;
