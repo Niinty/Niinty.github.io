@@ -34,8 +34,10 @@ pkmn.ivysaur = {
         sdef: 80,
         spe: 60,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.venusaur, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.venusaur, level: evolutionLevel2 },
+                                  2: { pkmn: pkmn.venusaurF, item: item.shinyStone } } },
     hiddenAbility: ability.thickFat,
+    lore: `Há um bulbo nas costas deste Pokémon. Para sustentar seu peso, as pernas e o tronco de Ivysaur crescem grossos e fortes. Se ele começar a passar mais tempo deitado sob a luz do sol, é sinal de que o botão logo florescerá e se transformará em uma grande flor.`,
     signature : move.frenzyPlant
 }
 
@@ -51,11 +53,12 @@ pkmn.venusaur = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaVenusaur, item: item.venusaurite } } },
     hiddenAbility: ability.thickFat,
+    lore: `Há uma grande flor nas costas de Venusaur. Dizem que a flor adquire cores vivas quando recebe bastante nutrição e luz solar. O aroma da flor acalma as emoções das pessoas.`,
     signature : move.frenzyPlant
 }
 
-pkmn.venusaurClone = {
-    type: ["poison","grass"],
+pkmn.venusaurF = {
+    type: ["grass","poison"],
     bst: {
         hp: 80,
         atk: 82,
@@ -64,7 +67,24 @@ pkmn.venusaurClone = {
         sdef: 100,
         spe: 80,
     },
+    evolve: function() { return { 1: { pkmn: pkmn.megaVenusaur, item: item.venusaurite } } },
+    hiddenAbility: ability.thickFat,
+    lore: `Enquanto se aquece e absorve a luz do sol, as pétalas de sua flor liberam um aroma suave e relaxante.`,
+    signature : move.frenzyPlant
+}
+
+pkmn.venusaurClone = {
+    type: ["poison","grass"],
+    bst: {
+        hp: 88,
+        atk: 90,
+        def: 91,
+        satk: 110,
+        sdef: 110,
+        spe: 88,
+    },
     hiddenAbility: ability.imposter,
+    lore: `Nascido de tentativas de recriar um poderoso Venusaur, este Pokémon desenvolveu características únicas e imprevisíveis. Sua flor absorve energia de forma anormal, emitindo um perfume estranho que parece mexer com as emoções de quem se aproxima.`,
     signature : move.frenzyPlant
 }
 
