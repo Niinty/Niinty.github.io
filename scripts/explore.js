@@ -4292,6 +4292,20 @@ function setWildAreas() {
     document.getElementById("explore-listing").appendChild(divPark);
     divPark.dataset.area = areas.wildlifePark.id
 
+    document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === "hidden") {
+                // Atualiza a timestamp antes de sair
+                saved.lastFrameRecorded = Date.now();
+                    
+                // Se for um Boss/Raid que usa hpPercentage, garante que o progresso é salvo
+            if (saved.currentArea !== undefined && areas[saved.currentArea]?.hpPercentage !== undefined) {
+                        areas[saved.currentArea].hpPercentage = (wildPkmnHp / wildPkmnHpMax) * 100;
+                    }
+                    
+            saveGame();
+                }
+    });
+    
     divPark.addEventListener("click", e => { 
             saved.currentAreaBuffer = areas.wildlifePark.id
             document.getElementById(`preview-team-exit`).style.display = "flex"
@@ -10879,6 +10893,17 @@ window.addEventListener('load', function() {
 
 
     loadGame();
+
+    // Calcula quanto tempo passou com o jogo fechado/aba morta
+    if (saved.lastFrameRecorded) {
+        const timeOffline = (Date.now() - saved.lastFrameRecorded) / 1000;
+        // Evita bugar se o tempo for negativo por alguma loucura do relógio
+        if (timeOffline > 0) {
+            afkSeconds += timeOffline;
+        }
+    }
+    saved.lastFrameRecorded = Date.now();
+    
     getSeed();
     seasonCheck();
 
