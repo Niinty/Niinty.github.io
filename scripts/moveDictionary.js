@@ -1254,7 +1254,7 @@ const berryMemoryRare = [ ability.flashHerba.id, ability.flashFae.id, ability.fl
 
 const move = {}
 
-const defaultPlayerMoveTimer = 1500
+const defaultPlayerMoveTimer = 2000
 
 
 //tier 1 - 20-40 uncompromised dmg
