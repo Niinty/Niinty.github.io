@@ -51,6 +51,223 @@ team.slot6.item = undefined
     return Math.random() < number
 }*/
 
+function performTrade(playerOfferId, systemOfferId, isShiny) {
+    closeTooltip();
+    openMenu();
+
+    // Remove o Pokémon dado
+    pkmn[playerOfferId].caught--;
+
+    // Dá o novo Pokémon
+    givePkmn(pkmn[systemOfferId], 1);
+    
+    // Aplica o Shiny sorteado anteriormente
+    if (isShiny) pkmn[systemOfferId].shiny = true;
+
+    // Feedback Visual
+    document.getElementById("wonder-menu").style.display = "flex";
+    document.getElementById("wonder-text").innerHTML = `Troca realizada! Você recebeu um ${format(systemOfferId)}${isShiny ? " ✨Shiny!✨" : ""}!`;
+    document.getElementById("wonder-pkmn").src = isShiny 
+        ? `img/pkmn/shiny/${systemOfferId}.png` 
+        : `img/pkmn/sprite/${systemOfferId}.png`;
+
+    // RESETA o bloqueio e marca como reclamado
+    saved.wonderTradeOffered = false;
+    saved.wonderTradePlayerPkmn = null;
+    saved.wonderTradeSystemPkmn = null;
+    saved.wonderTradeShiny = false;
+    
+    saved.wonderTradeClaimed = true;
+    saveGame();
+}
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Função boa
+
+function executeWonderTrade(playerOffer, systemOffer) {
+
+    closeTooltip();
+
+    openMenu();
+
+
+
+    // Remove o Pokémon dado
+
+    pkmn[playerOffer].caught--;
+
+
+
+    // Dá o novo Pokémon
+
+    givePkmn(pkmn[systemOffer], 1);
+
+
+
+    // Chance de 5% de vir Shiny
+
+    if (rng(1)) pkmn[systemOffer].shiny = true;
+
+
+
+    document.getElementById("wonder-menu").style.display = "flex";
+
+    //document.getElementById("wonder-text").innerHTML = `Troca realizada! Você trocou ${format(playerOffer)} por um ${format(systemOffer)}!`;
+    document.getElementById("wonder-text").innerHTML = `Troca realizada! Você recebeu um ${format(systemOfferId)}${pkmn[systemOfferId].shiny ? " ✨" : ""}!`;
+
+    document.getElementById("wonder-pkmn").src = `img/pkmn/sprite/${systemOffer}.png`;
+
+   
+
+    if (pkmn[systemOffer].shiny) {
+
+        document.getElementById("wonder-pkmn").src = `img/pkmn/shiny/${systemOffer}.png`;
+
+    }
+
+
+
+    saved.wonderTradeClaimed = true;
+
+    saveGame();
+
+};
+
+function getWonderTradePlayerPool() {
+    // Coleta todos os pkmn que estão em algum slot de algum previewTeam
+    const inTeam = new Set();
+
+    // Time ativo
+    for (let s = 1; s <= 6; s++) {
+        if (team[`slot${s}`] && team[`slot${s}`].pkmn) {
+            inTeam.add(team[`slot${s}`].pkmn);
+        }
+    }
+
+    // Todos os preview teams (preview1 a preview30)
+    for (let p = 1; p <= 30; p++) {
+        const preview = saved.previewTeams[`preview${p}`];
+        if (!preview) continue;
+        for (let s = 1; s <= 6; s++) {
+            if (preview[`slot${s}`] && preview[`slot${s}`].pkmn) {
+                inTeam.add(preview[`slot${s}`].pkmn);
+            }
+        }
+    }
+
+    function getWonderTradeGamePool() {
+    // IDs dos míticos (definidos em mythicTrades.js como MYTHIC_TRADES)
+    // MYTHIC_TRADES é um array de objetos { ballId, pkmnId }
+    const mythicIds = new Set(MYTHIC_TRADES.map(t => t.pkmnId));
+
+    return Object.keys(pkmn).filter(id => !mythicIds.has(id));
+}
+
+    // Filtra: capturado (caught > 0) E não está em nenhum time
+    const pool = Object.keys(pkmn).filter(id => {
+        return pkmn[id].caught > 0 && !inTeam.has(id);
+    });
+
+    return pool;
+}
+
+function showWonderTradeConfirmation(playerPkmnId, gamePkmnId, isShiny, level) {
+    // Usa o sistema de modal/popup já existente no jogo.
+    // O padrão do PokeChill é manipular innerHTML de divs existentes
+    // e mostrar/ocultar via classList ou display.
+
+    const playerName = format(playerPkmnId);
+    const gameName   = format(gamePkmnId);
+    const shinyLabel = isShiny ? " ✨ (Shiny!)" : "";
+
+    // Conteúdo do modal — adaptar aos IDs/classes reais do HTML
+    const modalContent = `
+        <div class="wonder-trade-confirmation">
+            <h3>Wonder Trade</h3>
+            <div class="trade-preview">
+                <div class="trade-side">
+                    <p>You send:</p>
+                    <img src="sprites/${playerPkmnId}.png" onerror="this.style.display='none'">
+                    <p><strong>${playerName}</strong></p>
+                    <p>Lv. ${pkmn[playerPkmnId].level}</p>
+                </div>
+                <div class="trade-arrow">⇄</div>
+                <div class="trade-side">
+                    <p>You receive:</p>
+                    <img src="sprites/${gamePkmnId}${isShiny ? '_shiny' : ''}.png" onerror="this.style.display='none'">
+                    <p><strong>${gameName}${shinyLabel}</strong></p>
+                    <p>Lv. ${level}</p>
+                </div>
+            </div>
+            <div class="trade-buttons">
+                <button onclick="confirmWonderTrade('${playerPkmnId}', '${gamePkmnId}', ${isShiny}, ${level})">
+                    Accept Trade
+                </button>
+                <button onclick="cancelWonderTrade()">
+                    Decline
+                </button>
+            </div>
+        </div>
+    `;
+
+    // Injetar no container de modal do jogo (ajustar seletor ao real)
+    document.getElementById("modalContent").innerHTML = modalContent; // adaptar
+    document.getElementById("modal").style.display = "flex";          // adaptar
+}
+
+function confirmWonderTrade(playerPkmnId, gamePkmnId, isShiny, level) {
+    // --- Fechar modal ---
+    document.getElementById("modal").style.display = "none"; // adaptar
+
+    // --- Remover Pokémon do jogador ---
+    // O jogo provavelmente usa pkmn[id].caught-- ou zera os campos.
+    // Seguir o padrão de "soltar" um Pokémon já existente no código.
+    // Exemplo provável (adaptar ao método real de release):
+    pkmn[playerPkmnId].caught = Math.max(0, pkmn[playerPkmnId].caught - 1);
+
+    // Resetar campos de estado se caught chegar a 0
+    if (pkmn[playerPkmnId].caught === 0) {
+        pkmn[playerPkmnId].level   = 1;
+        pkmn[playerPkmnId].exp     = 0;
+        pkmn[playerPkmnId].moves   = { slot1: undefined, slot2: undefined, slot3: undefined, slot4: undefined };
+        pkmn[playerPkmnId].movepool = [];
+        pkmn[playerPkmnId].ivs     = { hp: 0, atk: 0, satk: 0, def: 0, sdef: 0, spe: 0 };
+        pkmn[playerPkmnId].shiny   = false;
+        pkmn[playerPkmnId].ability = undefined;
+        pkmn[playerPkmnId].nature  = undefined;
+        // ... demais campos conforme padrão do release existente
+    }
+
+    // --- Dar Pokémon ao jogador via givePkmn ---
+    givePkmn(pkmn[gamePkmnId], level);
+
+    // Aplicar shiny após givePkmn (givePkmn pode resetar o flag)
+    if (isShiny) {
+        pkmn[gamePkmnId].shiny = true;
+    }
+
+    // Marcar como newPokemon para o badge visual
+    pkmn[gamePkmnId].newPokemon = true;
+
+    // --- Acionar cooldown (manter lógica original) ---
+    // O cooldown provavelmente é salvo em saved. Manter exatamente como estava.
+    // Ex: saved.wonderTradeCooldown = Date.now() + WONDER_TRADE_COOLDOWN_MS;
+
+    // --- Salvar ---
+    saveGame();
+
+    // --- Feedback visual ---
+    showNotification(`Wonder Trade concluído! Você recebeu ${format(gamePkmnId)}${isShiny ? ' ✨' : ''}!`);
+}
+
+function cancelWonderTrade() {
+    document.getElementById("modal").style.display = "none"; // adaptar
+    // NÃO acionar cooldown aqui — jogador recusou a troca
+}
+
+
+
 function rng(number){
     return Math.random() < number
 }
@@ -9725,90 +9942,204 @@ function returnDivisionStars(target, stat){
 
 }
 
+// Função para verificar se o Pokémon está sendo usado
+function isPkmnEquipped(pkmnId) {
+    // Verifica times ativos
+    for (const slot in team) {
+        if (team[slot].pkmn && team[slot].pkmn.id === pkmnId) return true;
+    }
+    // Verifica times de preview
+    if (saved.previewTeams) {
+        for (const t in saved.previewTeams) {
+            for (const slot in saved.previewTeams[t]) {
+                if (saved.previewTeams[t][slot].pkmn === pkmnId) return true;
+            }
+        }
+    }
+    // Verifica treinamento/genética
+    if (saved.trainingPokemon === pkmnId) return true;
+    if (saved.geneticHost === pkmnId || saved.geneticSample === pkmnId) return true;
+    return false;
+}
 
-
-function claimWonderTrade(){
-
-
-    if (saved.wonderTradeClaimed) return
-
+function claimWonderTrade() {
+    if (saved.wonderTradeClaimed) return;
 
     if (areas.vsMasterTrainerGeeta.defeated == false) {
-        document.getElementById("tooltipTop").style.display = `none`
-        document.getElementById("tooltipTitle").style.display = `none`
-        document.getElementById("tooltipBottom").style.display = `none`
-        document.getElementById("tooltipMid").innerHTML = `Defeat Master Trainer Geeta in VS mode to unlock`
-        openTooltip()
-        return
+        document.getElementById("tooltipTop").style.display = `none`;
+        document.getElementById("tooltipTitle").style.display = `none`;
+        document.getElementById("tooltipBottom").style.display = `none`;
+        document.getElementById("tooltipMid").innerHTML = `Defeat Master Trainer Geeta in VS mode to unlock`;
+        openTooltip();
+        return;
     }
 
-
-    document.getElementById("tooltipTop").style.display = "none"
-    document.getElementById("tooltipTitle").innerHTML = `Wonder Trade`
-    document.getElementById("tooltipMid").innerHTML = `Every 12h you might receive a random pokemon`
-    document.getElementById("tooltipBottom").innerHTML = `
-
-        <div onclick="wonderTrade()" class="custom-challenge-button" style="margin-top:0.5rem">Let's do it!</div>
-    
-    `
-    openTooltip()
-
-}
-
-function wonderTrade(){
-
-    closeTooltip()
-    openMenu()
-
-    document.getElementById("wonder-menu").style.display = "flex"
-
-    let chosenPokemon = `magikarp`
-    let chosenShiny = false
-    let unobtainedPokemon = []
-    let obtainedPokemon = []
-
-    for (const i in pkmn){
-        if (pkmn[i].caught>0) continue
-        if (pkmn[i].tagObtainedIn == "frontier" || pkmn[i].tagObtainedIn == "wild" || pkmn[i].tagObtainedIn == "park") unobtainedPokemon.push(i)
-    }
-
-    if (rng(0.5) && unobtainedPokemon.length>0){ //new pokemon
-        if (rng(0.15)) chosenShiny = true
-
-        chosenPokemon = arrayPick(unobtainedPokemon)
-        givePkmn(pkmn[chosenPokemon],1)
-
-    } else { //not so new
-        if (rng(0.50)) chosenShiny = true
-
-        for (const i in pkmn){
-            if (pkmn[i].caught==0) continue
-            if (pkmn[i].shiny==true) continue
-            if (pkmn[i].hidden==true) continue
-            obtainedPokemon.push(i)
+    // Filtra Pokémon do jogador que não estão em uso
+    let playerPool = [];
+    for (const i in pkmn) {
+        if (pkmn[i].caught > 0 && !isPkmnEquipped(i)) {
+            playerPool.push(i);
         }
-
-        chosenPokemon = arrayPick(obtainedPokemon)
-        if (obtainedPokemon.length==0) chosenPokemon = pkmn.magikarp.id
-
     }
 
-    if (chosenShiny) pkmn[chosenPokemon].shiny = true
-    document.getElementById("wonder-text").innerHTML = `Thanks for the ${format(chosenPokemon)}!`
-    document.getElementById("wonder-pkmn").src = `img/pkmn/sprite/${chosenPokemon}.png`
-    if (chosenShiny) document.getElementById("wonder-pkmn").src = `img/pkmn/shiny/${chosenPokemon}.png`
-
-    document.getElementById("wonder-pkmn").oncontextmenu = null;
-    document.getElementById("wonder-pkmn").oncontextmenu = (e) => {
-    tooltipData('pkmnEditor', chosenPokemon)
-    document.getElementById("wonder-menu").style.display = "none"
+    if (playerPool.length === 0) {
+        alert("Você não tem Pokémon disponíveis para troca (eles estão em equipes ou em treinamento)!");
+        return;
     }
 
+    // Sorteia um Pokémon do jogador
+    let playerOffer = arrayPick(playerPool);
 
-    saved.wonderTradeClaimed = true
+    // Sorteia um Pokémon do sistema (sem míticos/inobteníveis)
+    let systemPool = [];
+    for (const i in pkmn) {
+        if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer) {
+            systemPool.push(i);
+        }
+    }
+    let systemOffer = arrayPick(systemPool) || "magikarp";
 
-
+    document.getElementById("tooltipTop").style.display = "none";
+    document.getElementById("tooltipTitle").innerHTML = `Wonder Trade`;
+    document.getElementById("tooltipMid").innerHTML = `
+        <div class="wonder-trade-confirmation">
+            <div class="trade-preview">
+                <div class="trade-side">
+                    <img src="img/pkmn/sprite/${playerOffer}.png">
+                    <span>${format(playerOffer)}</span>
+                </div>
+                <div class="trade-arrow">⇄</div>
+                <div class="trade-side">
+                    <img src="img/pkmn/sprite/${systemOffer}.png">
+                    <span>${format(systemOffer)}</span>
+                </div>
+            </div>
+            <p>Enviar <strong>${format(playerOffer)}</strong> e receber <strong>${format(systemOffer)}</strong>?</p>
+        </div>
+    `;
+    
+    document.getElementById("tooltipBottom").innerHTML = `
+        <div class="trade-buttons">
+            <div onclick="executeWonderTrade('${playerOffer}', '${systemOffer}')" class="custom-challenge-button" style="background:#60BE58">Accept</div>
+            <div onclick="closeTooltip()" class="custom-challenge-button" style="background:#D3425F">Decline</div>
+        </div>
+    `;
+    openTooltip();
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Função boa
+/*function executeWonderTrade(playerOffer, systemOffer) {
+    closeTooltip();
+    openMenu();
+
+    // Remove o Pokémon dado
+    pkmn[playerOffer].caught--;
+
+    // Dá o novo Pokémon
+    givePkmn(pkmn[systemOffer], 1);
+
+    // Chance de 5% de vir Shiny
+    if (rng(1)) pkmn[systemOffer].shiny = true;
+
+    document.getElementById("wonder-menu").style.display = "flex";
+    //document.getElementById("wonder-text").innerHTML = `Troca realizada! Você trocou ${format(playerOffer)} por um ${format(systemOffer)}!`;
+    document.getElementById("wonder-text").innerHTML = `Troca realizada! Você trocou ${format(playerOffer)} por um ${format(systemOffer)}${pkmn[systemOffer].shiny ? "✨ Shiny! ✨" : ""}`;
+    document.getElementById("wonder-pkmn").src = `img/pkmn/sprite/${systemOffer}.png`;
+    
+    if (pkmn[systemOffer].shiny) {
+        document.getElementById("wonder-pkmn").src = `img/pkmn/shiny/${systemOffer}.png`;
+    }
+
+    saved.wonderTradeClaimed = true;
+    saveGame();
+};*/
+
+function wonderTrade() {
+    if (saved.wonderTradeClaimed) return;
+
+    // 1. Filtragem de Pokémon (segurança)
+    let playerPool = [];
+    for (const i in pkmn) {
+        if (pkmn[i].caught > 0 && !isPkmnEquipped(i)) {
+            playerPool.push(i);
+        }
+    }
+
+    if (playerPool.length === 0) {
+        alert("Você não tem Pokémon disponíveis para troca!");
+        return;
+    }
+
+    // 2. Lógica de Persistência (Bloqueio de Reroll)
+    let playerOffer, systemOffer, chosenShiny;
+
+    if (saved.wonderTradeOffered) {
+        console.log("Recuperando Pokémon sorteado:", saved.wonderTradePlayerPkmn, saved.wonderTradeSystemPkmn);
+        // Recupera o que já foi sorteado
+        playerOffer = saved.wonderTradePlayerPkmn;
+        systemOffer = saved.wonderTradeSystemPkmn;
+        chosenShiny = saved.wonderTradeShiny;
+    } else {
+        console.log("Sorteando Pokémon novo...");
+        // Faz o sorteio novo
+        playerOffer = arrayPick(playerPool);
+        
+        let systemPool = [];
+        for (const i in pkmn) {
+            if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer) {
+                systemPool.push(i);
+            }
+        }
+        systemOffer = arrayPick(systemPool) || "magikarp";
+        chosenShiny = rng(0.025);
+
+        // Salva para travar o resultado
+        saved.wonderTradeOffered = true;
+        saved.wonderTradePlayerPkmn = playerOffer;
+        saved.wonderTradeSystemPkmn = systemOffer;
+        saved.wonderTradeShiny = chosenShiny;
+        saveGame();
+    }
+
+    // 3. Montar Interface (Tooltip)
+    document.getElementById("tooltipTop").style.display = "none";
+    document.getElementById("tooltipTitle").innerHTML = "Wonder Trade";
+    document.getElementById("tooltipMid").innerHTML = `
+        <div class="wonder-trade-confirmation">
+            <div class="trade-preview">
+                <div class="trade-side">
+                    <img src="img/pkmn/sprite/${playerOffer}.png">
+                    <span>${format(playerOffer)}</span>
+                </div>
+                <div class="trade-arrow">⇄</div>
+                <div class="trade-side">
+                    <img src="img/pkmn/sprite/${systemOffer}.png">
+                    <span>${format(systemOffer)}</span>
+                </div>
+            </div>
+            <p>Trocar <strong>${format(playerOffer)}</strong> por <strong>${format(systemOffer)}</strong>?</p>
+        </div>
+    `;
+
+    // Dentro da função wonderTrade()
+    document.getElementById("tooltipBottom").innerHTML = `
+        <div class="trade-buttons">
+            <div onclick="performTrade('${playerOffer}', '${systemOffer}', ${chosenShiny})" class="custom-challenge-button" style="background:#60BE58">Aceitar</div>
+            <div onclick="fecharEGuardar()" class="custom-challenge-button" style="background:#D3425F">Recusar</div>
+        </div>
+    `;
+    
+    openTooltip();
+}
+
+    // Crie esta função auxiliar:
+    function fecharEGuardar() {
+        closeTooltip();
+        // Garante que o estado de "oferecido" foi salvo no save do jogo
+        saved.wonderTradeOffered = true; 
+        saveGame();
+        console.log("Estado guardado!");
+    }
 
 function currentDailyCatchHalfDay(){
     return Math.floor(Date.now() / (1000 * 60 * 60 * 12))
