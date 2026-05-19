@@ -948,3 +948,10 @@ function updateSettings(alt){
 
 
 }
+
+// Salva automaticamente ao sair/minimizar
+document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState === "hidden") {
+        saveGame();
+    }
+});
