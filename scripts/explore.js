@@ -2010,13 +2010,6 @@ function updateTeamPkmn(){
 
 }
 
-document.addEventListener("keydown", (e) => {
-  if (e.code === "Space" || e.code === "Escape") {
-    if (document.getElementById("tooltipTop").style.display !== "none") {
-      closeTooltip();
-    }
-  }
-});
 
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
