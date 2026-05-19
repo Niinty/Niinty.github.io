@@ -9965,14 +9965,14 @@ function isPkmnEquipped(pkmnId) {
 function claimWonderTrade() {
     if (saved.wonderTradeClaimed) return;
 
-    if (areas.vsMasterTrainerGeeta.defeated == false) {
+    /*if (areas.vsMasterTrainerGeeta.defeated == false) {
         document.getElementById("tooltipTop").style.display = `none`;
         document.getElementById("tooltipTitle").style.display = `none`;
         document.getElementById("tooltipBottom").style.display = `none`;
         document.getElementById("tooltipMid").innerHTML = `Defeat Master Trainer Geeta in VS mode to unlock`;
         openTooltip();
         return;
-    }
+    }*/
 
     // Filtra Pokémon do jogador que não estão em uso
     let playerPool = [];
