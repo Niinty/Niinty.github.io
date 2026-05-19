@@ -955,3 +955,7 @@ document.addEventListener("visibilitychange", function() {
         saveGame();
     }
 });
+
+window.addEventListener("pagehide", function() {
+    saveGame();
+});
