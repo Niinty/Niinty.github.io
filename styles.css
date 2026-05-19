@@ -38,6 +38,69 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+.wonder-trade-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    color: white; /* Ajuste para a cor do seu texto */
+}
+.trade-preview {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.trade-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    min-width: 80px;
+}
+.trade-side img {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+.trade-arrow {
+    font-size: 1.5rem;
+}
+.trade-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+#wonder-text strong {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
 
     --dark1: #36342F;
@@ -5825,23 +5888,35 @@ transform: translateY(-1rem);
     cursor: help;
 }
 
-#wonder-text{
+#wonder-text {
     width: 95%;
-    height: 2.5rem;
+    /* Remova a altura fixa ou aumente para permitir mais linhas */
+    min-height: 3rem; 
+    padding: 0.5rem;   /* Adicione um respiro interno */
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center; /* Garante alinhamento do texto caso ele quebre em 2 linhas */
+    
     bottom: 0.5rem;
     background: var(--dark1);
     position: absolute;
     border-radius: 0.5rem;
     color: white;
+    
+    /* Mantém as suas animações */
     opacity: 0;
     animation: fade 0.5s 1;
     animation-delay: 3500ms;
-    animation-fill-mode : forwards;
+    animation-fill-mode: forwards;
+    
     cursor: pointer;
     transition: 0.1s;
+    
+    /* IMPORTANTE: Adicione isso para evitar que o texto saia da caixa */
+    box-sizing: border-box; 
+    font-size: 0.9rem;
 }
 
 #wonder-text:hover{
@@ -7144,4 +7219,27 @@ transform: translateY(-1rem);
         grid-template-columns: 1fr;
         gap: 0.6rem;
     }
+}
+
+/* Força o desbloqueio visual e iguala ao tamanho dos outros botões */
+#menu-wonder-trade {
+    background: var(--light1) !important; /* Cor de fundo padrão dos botões */
+    border: var(--light1) solid 3px !important; /* Borda padrão dos botões */
+    filter: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    /* Garante que o tamanho seja igual aos outros .menu-item */
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Força a imagem a ter brilho normal */
+#menu-wonder-trade img {
+    filter: brightness(1) !important;
+    height: 4rem !important;
+    width: 4rem !important;
 }
