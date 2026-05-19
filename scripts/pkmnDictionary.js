@@ -76,12 +76,12 @@ pkmn.venusaurF = {
 pkmn.venusaurClone = {
     type: ["poison","grass"],
     bst: {
-        hp: 88,
-        atk: 90,
-        def: 91,
-        satk: 110,
-        sdef: 110,
-        spe: 88,
+        hp: 80*1.1,
+        atk: 82*1.1,
+        def: 83*1.1,
+        satk: 100*1.1,
+        sdef: 100*1.1,
+        spe: 80*1.1,
     },
     hiddenAbility: ability.imposter,
     lore: `Nascido de tentativas de recriar um poderoso Venusaur, este Pokémon desenvolveu características únicas e imprevisíveis. Sua flor absorve energia de forma anormal, emitindo um perfume estranho que parece mexer com as emoções de quem se aproxima.`,
