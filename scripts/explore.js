@@ -1940,6 +1940,19 @@ let cancelCurrentPlayerAttack = false
 
 function openMenu(){
 
+    // 1. Verifica se o tempo já passou toda vez que o menu abre
+    checkWonderTradeReset();
+
+    // 2. Agora aplica a lógica visual baseada no estado ATUAL
+    const wonderButton = document.getElementById("menu-wonder-trade");
+    if (wonderButton) {
+        if (saved.wonderTradeClaimed) {
+            wonderButton.classList.add("menu-item-locked");
+        } else {
+            wonderButton.classList.remove("menu-item-locked");
+        }
+    }
+
     if (saved.firstTimePlaying){
         if (pkmn.litten.caught==0 && pkmn.turtwig.caught==0 && pkmn.froakie.caught==0){
         navigator.brave?.isBrave?.().then(esBrave => {
