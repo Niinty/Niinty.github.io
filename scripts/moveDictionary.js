@@ -13,284 +13,284 @@ ability.hydratation = {
     rename: `hydration`,
     type: [`water`,`grass`],
     rarity: 1,
-    info: function() {return `Prevents negative status effects while on ${tagRainy} weather`},
+    info: function() {return `Evita efeitos de status negativos enquanto ${tagRainy} estiver ativo`},
 }
 
 ability.sandVeil = {  
     type: [`ground`],
     rarity: 1,
-    info: function() {return `Prevents negative status effects while on ${tagSandstorm} weather`},
+    info: function() {return `Evita efeitos de status negativos enquanto ${tagSandstorm} estiver ativo`},
 }
 
 ability.snowCloak = {  
     type: [`ice`],
     rarity: 1,
-    info: function() {return `Prevents negative status effects while on ${tagHail} weather`},
+    info: function() {return `Evita efeitos de status negativos enquanto ${tagHail} estiver ativo`},
 }
 
 ability.grabGuard = {
     type: [`fighting`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Fighting-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Fighting`},
 }
 
 ability.waterGuard = {
     type: [`water`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Water-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Water`},
 }
 
 ability.flameGuard = {
     type: [`fire`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Flame-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Fire`},
 }
 
 ability.curseGuard = {
     type: [`fairy`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Ghost-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Ghost`},
 }
 
 ability.poisonGuard = {
     type: [`poison`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Poison-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Poison`},
 }
 
 ability.iceGuard = {
     type: [`ice`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Ice-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Ice`},
 }
 
 ability.psychicGuard = {
     type: [`psychic`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Psychic-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Psychic`},
 }
 
 ability.fairyGuard = {
     type: [`fairy`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Fairy-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Fairy`},
 }
 
 ability.leafGuard = {
     type: [`grass`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Grass-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Grass`},
 }
 
 ability.plainGuard = {
     type: [`normal`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Normal-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Normal`},
 }
 
 ability.sinisterGuard = {
     type: [`dark`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Dark-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Dark`},
 }
 
 ability.steelGuard = {
     type: [`steel`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Steel-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Metal`},
 }
 
 ability.dragonGuard = {
     type: [`fairy`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Dragon-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Dragon`},
 }
 
 ability.bugGuard = {
     type: [`bug`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Bug-type moves`},
+    info: function() {return `HReduz em 50% o dano recebido por ataques do tipo Bug`},
 }
 
 ability.rockGuard = {
     type: [`rock`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Rock-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Rock`},
 }
 
 ability.groundGuard = {
     type: [`ground`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Ground-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Ground`},
 }
 
 ability.flyingGuard = {
     type: [`flying`],
     rarity: 1,
-    info: function() {return `Halves the damage received of Flying-type moves`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Flying`},
 }
 
 ability.insomnia = {
     type: [`all`],
     rarity: 1,
-    info: function() {return `Grants immunity to ${tagSleep}`},
+    info: function() {return `Garante imunidade a ${tagSleep}`},
 }
 
 ability.immunity = {
     type: [`all`],
     rarity: 1,
-    info: function() {return `Grants immunity to ${tagPoisoned}`},
+    info: function() {return `Garante imunidade a ${tagPoisoned}`},
 }
 
 ability.limber = {
     type: [`all`],
     rarity: 1,
-    info: function() {return `Grants immunity to ${tagParalysis}`},
+    info: function() {return `Garante imunidade a ${tagParalysis}`},
 }
 
 ability.ownTempo = {
     type: [`all`],
     rarity: 1,
-    info: function() {return `Grants immunity to ${tagConfused}`},
+    info: function() {return `Garante imunidade a ${tagConfused}`},
 }
 
 ability.magmaArmor = {
     type: [`fire`],
     rarity: 1,
-    info: function() {return `Grants immunity to ${tagFreeze}`},
+    info: function() {return `Garante imunidade a ${tagFreeze}`},
 }
 
 ability.waterVeil = {
     type: [`water`, `ice`],
     rarity: 1,
-    info: function() {return `Grants immunity to ${tagBurn}`},
+    info: function() {return `Garante imunidade a ${tagBurn}`},
 }
 
 ability.marvelScale = {
     type: [`water`, `dragon`],
     rarity: 1,
-    info: function() {return `Increases Defense by 50% if afflicted with a status effect`},
+    info: function() {return `Aumenta Defense em 50% se estiver sob efeito de status negativo.`},
 }
 
 ability.livingShield = {
     type: [`bug`,`grass`],
     rarity: 1,
-    info: function() {return `Increases Special Defense by 50% if afflicted with a status effect`},
+    info: function() {return `Aumenta Special Defense em 50% se estiver sob efeito de status negativo.`},
 }
 
 
 ability.overgrow = {
     type: [`grass`],
     rarity: 1,
-    info: function() {return `Increases the power of Grass-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Grass quando o HP estiver abaixo de 50%`},
 }
 
 ability.blaze = {
     type: [`fire`],
     rarity: 1,
-    info: function() {return `Increases the power of Fire-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Fire quando o HP estiver abaixo de 50%`},
 }
 
 ability.swarm = {
     type: [`bug`],
     rarity: 1,
-    info: function() {return `Increases the power of Bug-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Bug quando o HP estiver abaixo de 50%`},
 }
 
 ability.torrent = {
     type: [`water`],
     rarity: 1,
-    info: function() {return `Increases the power of Water-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Water quando o HP estiver abaixo de 50%`},
 }
 
 ability.bastion = {
     type: [`steel`],
     rarity: 1,
-    info: function() {return `Increases the power of Steel-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Steel quando o HP estiver abaixo de 50%`},
 }
 
 ability.average = {
     type: [`normal`],
     rarity: 1,
-    info: function() {return `Increases the power of Normal-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Normal quando o HP estiver abaixo de 50%`},
 }
 
 ability.resolve = {
     type: [`fighting`],
     rarity: 1,
-    info: function() {return `Increases the power of Fighting-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Fighting quando o HP estiver abaixo de 50%`},
 }
 
 ability.mistify = {
     type: [`psychic`],
     rarity: 1,
-    info: function() {return `Increases the power of Psychic-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Psychic quando o HP estiver abaixo de 50%`},
 }
 
 ability.hexerei = {
     type: [`ghost`],
     rarity: 1,
-    info: function() {return `Increases the power of Ghost-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Ghost quando o HP estiver abaixo de 50%`},
 }
 
 ability.glimmer = {
     type: [`fairy`],
     rarity: 1,
-    info: function() {return `Increases the power of Fairy-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Fairy quando o HP estiver abaixo de 50%`},
 }
 
 ability.skyward = {
     type: [`flying`],
     rarity: 1,
-    info: function() {return `Increases the power of Flying-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Flying quando o HP estiver abaixo de 50%`},
 }
 
 ability.draconic = {
     type: [`dragon`],
     rarity: 1,
-    info: function() {return `Increases the power of Dragon-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Dragon quando o HP estiver abaixo de 50%`},
 }
 
 ability.noxious = {
     type: [`poison`],
     rarity: 1,
-    info: function() {return `Increases the power of Poison-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Poison quando o HP estiver abaixo de 50%`},
 }
 
 ability.solid = {
     type: [`rock`],
     rarity: 1,
-    info: function() {return `Increases the power of Rock-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Rock quando o HP estiver abaixo de 50%`},
 }
 
 ability.rime = {
     type: [`ice`],
     rarity: 1,
-    info: function() {return `Increases the power of Ice-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Ice quando o HP estiver abaixo de 50%`},
 }
 
 ability.voltage = {
     type: [`electric`],
     rarity: 1,
-    info: function() {return `Increases the power of Electric-type moves by 30% below 50% HP`},
+    info: function() {return `Aumenta em 30% o dano de ataques do tipo Electric quando o HP estiver abaixo de 50%`},
 }
 
 ability.hyperCutter = {
     type: [`bug`],
     rarity: 1,
-    info: function() {return `Prevents the lowering of any Attack stat`},
+    info: function() {return `Previne a redução de status de Attack e Special Attack`},
 }
 
 ability.bigPecks = {
     type: [`flying`],
     rarity: 1,
-    info: function() {return `Prevents the lowering of any Defense stat`},
+    info: function() {return `Previne a redução de status de Defense e Special Defense`},
 }
 
 ability.wonderSkin = {
     type: [`all`],
     rarity: 1,
-    info: function() {return `50% chance for received Status Effects to miss`},
+    info: function() {return `50% de chance de errar o alvo ao receber um Efeito de Status`},
 }
 
 
@@ -299,79 +299,79 @@ ability.wonderSkin = {
 ability.synchronize = {
     type: [`psychic`, `all`],
     rarity: 2,
-    info: function() {return `Inflicts active status effects to the attacker aswell on the moment of application`},
+    info: function() {return `Também aplica efeitos de status ativos ao atacante no momento da aplicação.`},
 }
 
 ability.solarPower = {  
     type: [`fire`,`grass`],
     rarity: 2,
-    info: function() {return `Increases Special Attack by 50% on ${tagSunny} weather`},
+    info: function() {return `Aumenta Special Attack em 50% enquanto ${tagSunny} estiver ativo`},
 }
 
 ability.iceBody = {  
     type: [`ice`],
     rarity: 2,
-    info: function() {return `Increases Defense by 50% on ${tagHail} weather`},
+    info: function() {return `Aumenta Defense em 50% enquanto ${tagHail} estiver ativo`},
 }
 
 ability.rainDish = {  
     type: [`water`, `grass`],
     rarity: 2,
-    info: function() {return `Increases Special Attack by 50% on ${tagRainy} weather`},
+    info: function() {return `Aumenta Special Attack em 50% enquanto ${tagRainy} estiver ativo`},
 }
 
 ability.sandForce = {  
     type: [`ground`],
     rarity: 2,
-    info: function() {return `Increases Attack by 50% on ${tagSandstorm} weather`},
+    info: function() {return `Aumenta Attack em 50% enquanto ${tagSandstorm} estiver ativo`},
 }
 
 ability.static = {
     type: [`electric`],
     rarity: 2,
-    info: function() {return `15% chance to inflict ${tagParalysis} when attacked`},
+    info: function() {return `15% de chance de infligir ${tagParalysis} ao ser atacado`},
 }
 
 ability.flameBody = {
     type: [`fire`],
     rarity: 2,
-    info: function() {return `15% chance to inflict ${tagBurn} when attacked`},
+    info: function() {return `15% de chance de infligir ${tagBurn} ao ser atacado`},
 }
 
 ability.poisonPoint = {
     type: [`poison`],
     rarity: 2,
-    info: function() {return `15% chance to inflict ${tagPoisoned} when attacked`},
+    info: function() {return `15% de chance de infligir ${tagPoisoned} ao ser atacado`},
 }
 
 ability.strangeCharm = {
     type: [`psychic`, `fairy`],
     rarity: 2,
-    info: function() {return `15% chance to inflict ${tagConfused} when attacked`},
+    info: function() {return `15% de chance de infligir ${tagConfused} ao ser atacado`},
 }
 
 ability.effectSpore = {
     type: [`grass`],
     rarity: 2,
-    info: function() {return `5% chance to inflict ${tagSleep} when attacked`},
+    info: function() {return `5% de chance de infligir ${tagSleep} ao ser atacado`},
 }
 
 ability.glacialBody = {
     type: [`ice`],
     rarity: 2,
-    info: function() {return `5% chance to inflict ${tagFreeze} when attacked`},
+    info: function() {return `5% de chance de infligir ${tagFreeze} ao ser atacado`},
 }
 
 ability.naturalCure = {
     type: [`all`],
     rarity: 2,
-    info: function() {return `Status effects are cleared when switching Pokemon`},
+    info: function() {return `Os efeitos de status são removidos ao trocar de Pokemon`},
 }
 
 ability.technician = {
     type: [`all`],
     rarity: 2,
-    info: function() {return `Multiplies by 1.5x the base damage of moves with equal or less than 60 power`},
+    info: function() {return `Golpes com 60 ou menos poder de ataque são 50% mais fortes`},
 }
 
 
@@ -379,73 +379,73 @@ ability.technician = {
 ability.scrappy = {
     type: [`fighting` , `normal`],
     rarity: 2,
-    info: function() {return `Ghost-type pokemon can be hit with Normal and Fighting-type moves`},
+    info: function() {return `Pokemons do tipo Ghost podem sofrer danos de Pokemons do tipo Normal e Fighting`},
 }
 
 ability.unaware = {
     type: [`all`],
     rarity: 2,
-    info: function() {return `When attacking, ignores the target's stat changes`},
+    info: function() {return `Não considera mudanças de status do alvo ao atacar`},
 }
 
 ability.magicGuard = {
     type: [`psychic`, `fairy`],
     rarity: 2,
-    info: function() {return `Can only take damage from direct damaging moves`},
+    info: function() {return `Receba dano apenas de ataques diretos`},
 }
 
 ability.voltAbsorb = {
     type: [`electric`],
     rarity: 2,
-    info: function() {return `Nullifies received Electric-type moves`},
+    info: function() {return `Anula o dano do tipo Electric`},
 }
 
 ability.waterAbsorb = {
     type: [`water`],
     rarity: 2,
-    info: function() {return `Nullifies received Water-type moves`},
+    info: function() {return `Anula o dano do tipo Water`},
 }
 
 ability.flareAbsorb = {
     type: [`fire`],
     rarity: 2,
-    info: function() {return `Nullifies received Fire-type moves`},
+    info: function() {return `Anula o dano do tipo Fire`},
 }
 
 ability.curseAbsorb = {
     type: [`dark`],
     rarity: 2,
-    info: function() {return `Nullifies received Ghost-type moves`},
+    info: function() {return `Anula o dano do tipo Ghost`},
 }
 
 ability.poisonAbsorb = {
     type: [`poison`],
     rarity: 2,
-    info: function() {return `Nullifies received Poison-type moves`},
+    info: function() {return `Anula o dano do tipo Poison`},
 }
 
 ability.frostAbsorb = {
     type: [`ice`],
     rarity: 2,
-    info: function() {return `Nullifies received Ice-type moves`},
+    info: function() {return `Anula o dano do tipo Ice`},
 }
 
 ability.psychicAbsorb = {
     type: [`psychic`],
     rarity: 2,
-    info: function() {return `Nullifies received Psychic-type moves`},
+    info: function() {return `Anula o dano do tipo Psychic`},
 }
 
 ability.lightAbsorb = {
     type: [`fairy`],
     rarity: 2,
-    info: function() {return `Nullifies received Fairy-type moves`},
+    info: function() {return `Anula o dano do tipo Fairy`},
 }
 
 ability.growthAbsorb = {
     type: [`grass`],
     rarity: 2,
-    info: function() {return `Nullifies received Grass-type moves`},
+    info: function() {return `Anula o dano do tipo Grass`},
 }
 
 
@@ -454,19 +454,19 @@ ability.growthAbsorb = {
 ability.strongJaw = {
     type: [`dark`],
     rarity: 2,
-    info: function() {return `"Fang"-related moves have their base power multiplied by x2 <span style="opacity:0.7">(${joinWithAnd(movesAffectedByStrongJaw)})</span>`},
+    info: function() {return `Golpes do tipo "Fang" possuem seu dano base multiplicado por x2 <span style="opacity:0.7">(${joinWithAnd(movesAffectedByStrongJaw)})</span>`},
 }
 
 ability.toughClaws = {
     type: [`dragon`],
     rarity: 2,
-    info: function() {return `"Claw"-related moves have their base power multiplied by x2 <span style="opacity:0.7">(${joinWithAnd(movesAffectedByToughClaws)})</span>`},
+    info: function() {return `Golpes do tipo "Claw" possuem seu dano base multiplicado por x2 <span style="opacity:0.7">(${joinWithAnd(movesAffectedByToughClaws)})</span>`},
 }
 
 ability.ironFist = {
     type: [`fighting`],
     rarity: 2,
-    info: function() {return `"Punch"-related moves have their base power multiplied by x1.5 <span style="opacity:0.7">(${joinWithAnd(movesAffectedByIronFist)})</span>`},
+    info: function() {return `Golpes do tipo "Punch" possuem seu dano base multiplicado por x1.5 <span style="opacity:0.7">(${joinWithAnd(movesAffectedByIronFist)})</span>`},
 }
 
 
