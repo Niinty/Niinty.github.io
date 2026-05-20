@@ -10336,7 +10336,6 @@ function wonderTrade() {
 }
 
     const tempoAteReset = formatarTempoAteReset();
-    const tempoAteReset = formatarTempoAteReset();
     const resetLabel = `<div style="font-size:0.85rem; opacity:0.7; margin-bottom:0.5rem">
     Ofertas mudam em: <strong id="wonder-trade-countdown">${tempoAteReset}</strong>
 </div>`;
