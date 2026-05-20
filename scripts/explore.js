@@ -1969,15 +1969,17 @@ function openMenu(){
 
     
     // 19/05/2026
-    //if (!saved.wonderTradeClaimed) {document.getElementById(`menu-wonder-trade`).style.display = "flex"} else document.getElementById(`menu-wonder-trade`).style.display = "none"
-    // Deixe o botão sempre visível (flex)
-    document.getElementById(`menu-wonder-trade`).style.display = "flex";
+    // Remova o "else" que esconde o botão
+    const wonderBtn = document.getElementById("menu-wonder-trade");
 
-    // E aqui apenas controlamos se ele está "bloqueado" ou não (usando a classe)
+    // Sempre garante que o botão está visível
+    wonderBtn.style.display = "flex"; 
+
+    // Apenas aplica o filtro de escuro se estiver bloqueado
     if (saved.wonderTradeClaimed) {
-        document.getElementById("menu-wonder-trade").classList.add("menu-item-locked");
+    wonderBtn.classList.add("menu-item-locked");
     } else {
-        document.getElementById("menu-wonder-trade").classList.remove("menu-item-locked");
+    wonderBtn.classList.remove("menu-item-locked");
     }
 
 
