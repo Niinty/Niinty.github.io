@@ -11324,7 +11324,7 @@ window.addEventListener('beforeunload', function(event) {
 window.addEventListener('load', function() {
 
 
-    
+    checkWonderTradeReset();
 
 
     loadGame();
