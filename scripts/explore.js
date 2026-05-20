@@ -10601,6 +10601,18 @@ function claimDailyCatch(){
     } else {
         dailyCatchAttempts = saved.dailyCatchAttempts ?? 0
     }
+
+    // TRAVA DE SEGURANÇA IMEDIATA
+    if (isMythicTradePokemon(saved.dailyCatchPokemon)) {
+        console.warn("Mítico detectado no Daily Catch, forçando reset.");
+        saved.dailyCatchPokemon = undefined;
+        saved.dailyCatchPokemonHalfDay = undefined;
+        saved.dailyCatchAttempts = 0;
+        saveGame();
+        document.getElementById(`daily-catch-message`).textContent = "Erro ao carregar Pokémon. Tente novamente.";
+        return;
+    }
+    
     dailyCatchPokemon = saved.dailyCatchPokemon
     updateDailyCatchMenu()
     openMenu()
