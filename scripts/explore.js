@@ -4721,6 +4721,9 @@ function updatePokedex(){
     let sortedPokemon = []
 
 
+    const pkrsFilter = document.getElementById("pokedex-filter-pokerus");
+    const showOnlyPkrs = pkrsFilter ? pkrsFilter.value : "all";
+
     //create an array, used for sorting
     for (const i in pkmn) {
         //filters
@@ -4749,6 +4752,7 @@ function updatePokedex(){
 
         if (tagSystemTagSearch.length > 0) { //tag system
         if (!pkmn[i].tagList || pkmn[i].tagList.length === 0) continue;
+        if (pkmn[i].ability == undefined) pkmn[i].ability = learnPkmnAbility(pkmn[i].id);
 
         const hasMatchingTag = pkmn[i].tagList.some(pkmnTag =>
             tagSystemTagSearch.some(searchTag =>
@@ -4789,9 +4793,17 @@ function updatePokedex(){
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===2 && (returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===3 && (returnPkmnDivision(pkmn[i])!="A" && returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
 
+        const pokerusFilter = document.getElementById("pokedex-filter-pokerus");
+        if (pokerusFilter && pokerusFilter.value === "true") {
+        if (pkmn[i].pokerus !== true) continue; // Pula este Pokémon se ele não tiver Pokerus
+        }
+
         gotPokemon++
         sortedPokemon.push(pkmn[i])
     }
+
+
+
 
 
     const sort = document.getElementById("pokedex-sort-filter").value
