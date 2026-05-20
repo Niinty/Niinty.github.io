@@ -9337,7 +9337,6 @@ function updateDailyCatchMenu(){
         document.getElementById(`daily-catch-pkmn-rank`).textContent = ``
     }
 
-    //const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
     const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: `
     document.getElementById(`daily-catch-message`).textContent = dailyCatchStatusMessage || defaultMessage
     document.querySelectorAll(`.daily-catch-ball-button`).forEach(button => {
@@ -9389,7 +9388,7 @@ function attemptDailyCatch(ballId){
     if (pkmn[dailyCatchPokemon].caught > 0){
         const improvedStat = improveOwnedDailyCatchIv(dailyCatchPokemon)
         if (improvedStat){
-            document.getElementById(`daily-catch-message`).textContent = `Você já tem ${format(dailyCatchPokemon)}. O IV de ${formatIvStat(improvedStat)} aumentou em 1!`
+            document.getElementById(`daily-catch-message`).textContent = `Você já tem ${format(dailyCatchPokemon)}. O IV dele de ${formatIvStat(improvedStat)} aumentou em 1!`
         } else {
             document.getElementById(`daily-catch-message`).textContent = `Você já tem ${format(dailyCatchPokemon)} e seus IVs já estão no máximo.`
         }
