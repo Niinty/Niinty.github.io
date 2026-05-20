@@ -9141,10 +9141,10 @@ function resetStoredDailyCatchIfExpired(){
     }
 }
 
-function isMythicTradePokemon(poke){
-    // Se a variável não estiver definida, bloqueamos por segurança (retorna true)
+function isMythicTradePokemon(poke) {
+    // Agora a função valida diretamente a variável global
     if (typeof MYTHIC_TRADES === 'undefined') {
-        console.error("ERRO: Lista de míticos não encontrada.");
+        console.warn("Lista de Míticos não carregada, bloqueando míticos por segurança.");
         return true; 
     }
     return MYTHIC_TRADES.some(trade => trade.pkmnId === poke);
