@@ -9019,7 +9019,7 @@ function wonderTrade() {
     const dozeHoras = 43200000;
 
     // Se já trocou antes, conta regressiva das 12h desde a última troca
-    if (saved.wonderTradeLastUsed) {
+    if (saved.wonderTradeClaimed && saved.wonderTradeLastUsed) {
         const tempoRestante = dozeHoras - (Date.now() - saved.wonderTradeLastUsed);
         if (tempoRestante <= 0) return null;
         const h = String(Math.floor(tempoRestante / 3600000)).padStart(2, '0');
@@ -9326,11 +9326,13 @@ function updateDailyCatchMenu(){
 
     if (dailyCatchPokemon){
         const rank = getDailyCatchRank(dailyCatchPokemon)
+        document.getElementById(`daily-catch-pkmn`).style.display = `` // Garante que a imagem volte a aparecer
         document.getElementById(`daily-catch-pkmn`).src = `img/pkmn/sprite/${dailyCatchPokemon}.png`
         document.getElementById(`daily-catch-pkmn-name`).textContent = format(dailyCatchPokemon)
         document.getElementById(`daily-catch-pkmn-rank`).textContent = `Rank: ${rank.charAt(0).toUpperCase() + rank.slice(1)}`
     } else {
-        document.getElementById(`daily-catch-pkmn`).src = ``
+        document.getElementById(`daily-catch-pkmn`).removeAttribute('src') // Remove o src quebrado
+        document.getElementById(`daily-catch-pkmn`).style.display = `none` // Esconde a tag img
         document.getElementById(`daily-catch-pkmn-name`).textContent = ``
         document.getElementById(`daily-catch-pkmn-rank`).textContent = ``
     }
