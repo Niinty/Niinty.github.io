@@ -9337,7 +9337,8 @@ function updateDailyCatchMenu(){
         document.getElementById(`daily-catch-pkmn-rank`).textContent = ``
     }
 
-    const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
+    //const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
+    const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: `
     document.getElementById(`daily-catch-message`).textContent = dailyCatchStatusMessage || defaultMessage
     document.querySelectorAll(`.daily-catch-ball-button`).forEach(button => {
         const ballId = button.dataset.ballId
