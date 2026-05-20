@@ -4721,6 +4721,9 @@ function updatePokedex(){
     let sortedPokemon = []
 
 
+    const pkrsFilter = document.getElementById("pokedex-filter-pokerus");
+    const showOnlyPkrs = pkrsFilter ? pkrsFilter.value : "all";
+
     //create an array, used for sorting
     for (const i in pkmn) {
         //filters
@@ -4749,6 +4752,7 @@ function updatePokedex(){
 
         if (tagSystemTagSearch.length > 0) { //tag system
         if (!pkmn[i].tagList || pkmn[i].tagList.length === 0) continue;
+        if (pkmn[i].ability == undefined) pkmn[i].ability = learnPkmnAbility(pkmn[i].id);
 
         const hasMatchingTag = pkmn[i].tagList.some(pkmnTag =>
             tagSystemTagSearch.some(searchTag =>
@@ -4789,9 +4793,17 @@ function updatePokedex(){
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===2 && (returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===3 && (returnPkmnDivision(pkmn[i])!="A" && returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
 
+        const pokerusFilter = document.getElementById("pokedex-filter-pokerus");
+        if (pokerusFilter && pokerusFilter.value === "true") {
+        if (pkmn[i].pokerus !== true) continue; // Pula este Pokémon se ele não tiver Pokerus
+        }
+
         gotPokemon++
         sortedPokemon.push(pkmn[i])
     }
+
+
+
 
 
     const sort = document.getElementById("pokedex-sort-filter").value
@@ -9019,7 +9031,7 @@ function wonderTrade() {
     const dozeHoras = 43200000;
 
     // Se já trocou antes, conta regressiva das 12h desde a última troca
-    if (saved.wonderTradeLastUsed) {
+    if (saved.wonderTradeClaimed && saved.wonderTradeLastUsed) {
         const tempoRestante = dozeHoras - (Date.now() - saved.wonderTradeLastUsed);
         if (tempoRestante <= 0) return null;
         const h = String(Math.floor(tempoRestante / 3600000)).padStart(2, '0');
@@ -9141,10 +9153,10 @@ function resetStoredDailyCatchIfExpired(){
     }
 }
 
-function isMythicTradePokemon(poke){
-    // Se a variável não estiver definida, bloqueamos por segurança (retorna true)
+function isMythicTradePokemon(poke) {
+    // Agora a função valida diretamente a variável global
     if (typeof MYTHIC_TRADES === 'undefined') {
-        console.error("ERRO: Lista de míticos não encontrada.");
+        console.warn("Lista de Míticos não carregada, bloqueando míticos por segurança.");
         return true; 
     }
     return MYTHIC_TRADES.some(trade => trade.pkmnId === poke);
@@ -9326,16 +9338,18 @@ function updateDailyCatchMenu(){
 
     if (dailyCatchPokemon){
         const rank = getDailyCatchRank(dailyCatchPokemon)
+        document.getElementById(`daily-catch-pkmn`).style.display = `` // Garante que a imagem volte a aparecer
         document.getElementById(`daily-catch-pkmn`).src = `img/pkmn/sprite/${dailyCatchPokemon}.png`
         document.getElementById(`daily-catch-pkmn-name`).textContent = format(dailyCatchPokemon)
         document.getElementById(`daily-catch-pkmn-rank`).textContent = `Rank: ${rank.charAt(0).toUpperCase() + rank.slice(1)}`
     } else {
-        document.getElementById(`daily-catch-pkmn`).src = ``
+        document.getElementById(`daily-catch-pkmn`).removeAttribute('src') // Remove o src quebrado
+        document.getElementById(`daily-catch-pkmn`).style.display = `none` // Esconde a tag img
         document.getElementById(`daily-catch-pkmn-name`).textContent = ``
         document.getElementById(`daily-catch-pkmn-rank`).textContent = ``
     }
 
-    const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
+    const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: `
     document.getElementById(`daily-catch-message`).textContent = dailyCatchStatusMessage || defaultMessage
     document.querySelectorAll(`.daily-catch-ball-button`).forEach(button => {
         const ballId = button.dataset.ballId
@@ -9386,7 +9400,7 @@ function attemptDailyCatch(ballId){
     if (pkmn[dailyCatchPokemon].caught > 0){
         const improvedStat = improveOwnedDailyCatchIv(dailyCatchPokemon)
         if (improvedStat){
-            document.getElementById(`daily-catch-message`).textContent = `Você já tem ${format(dailyCatchPokemon)}. O IV de ${formatIvStat(improvedStat)} aumentou em 1!`
+            document.getElementById(`daily-catch-message`).textContent = `Você já tem ${format(dailyCatchPokemon)}. O IV dele de ${formatIvStat(improvedStat)} aumentou em 1!`
         } else {
             document.getElementById(`daily-catch-message`).textContent = `Você já tem ${format(dailyCatchPokemon)} e seus IVs já estão no máximo.`
         }
