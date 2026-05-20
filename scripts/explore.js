@@ -10066,6 +10066,15 @@ function claimWonderTrade() {
 };*/
 
 function wonderTrade() {
+    // 1. Verifica o cooldown - 19/05/2026
+    if (saved.wonderTradeClaimed) {
+        // Em vez de alert(), usamos o sistema de mensagens do jogo
+        document.getElementById("wonder-menu").style.display = "flex";
+        document.getElementById("wonder-text").innerHTML = "O Wonder Trade está em manutenção! Volte mais tarde.";
+        document.getElementById("wonder-pkmn").src = "img/icons/locked.png"; // Se tiver um ícone de cadeado
+        return;
+    }
+    
     if (saved.wonderTradeClaimed) return;
 
     // 1. Filtragem de Pokémon (segurança)
@@ -10141,6 +10150,11 @@ function wonderTrade() {
     `;
     
     openTooltip();
+}
+
+// 19/05/2026
+function fecharWonderMenu() {
+    document.getElementById("wonder-menu").style.display = "none";
 }
 
     // Crie esta função auxiliar:
