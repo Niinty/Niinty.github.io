@@ -90,6 +90,10 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     
     saved.wonderTradeClaimed = true;
     saveGame();
+
+    // 19/05/2026
+    // Apenas chame a função que aplica a classe de bloqueio
+    updateWonderTradeUI();
 }
 
 
