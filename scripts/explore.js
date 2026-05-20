@@ -10252,22 +10252,15 @@ function formatarTempoRestante() {
 
 function wonderTrade() {
 
-    // Verifica se já resetou antes de mostrar o erro
     checkWonderTradeReset(); 
     
     if (saved.wonderTradeClaimed) {
-        // Calcula o tempo que falta
         const tempo = formatarTempoRestante();
-        
-        // Exibe a mensagem personalizada com o tempo
         document.getElementById("wonder-menu").style.display = "flex";
         document.getElementById("wonder-text").innerHTML = 
             `O Wonder Trade está em manutenção! <br> Disponível em: <strong>${tempo}</strong>`;
-        
-        // Opcional: mostrar um ícone de cadeado
         document.getElementById("wonder-pkmn").src = "img/icons/locked.png";
 
-        // Atualiza a cada 1 segundo enquanto o usuário estiver a ver a mensagem
         let intervalo = setInterval(() => {
             if (document.getElementById("wonder-menu").style.display === "flex") {
                 document.getElementById("wonder-text").innerHTML = 
@@ -10278,21 +10271,8 @@ function wonderTrade() {
         }, 1000);
         
         return;
-
-
-    }
-// 1. Verifica o cooldown
-    if (saved.wonderTradeClaimed) {
-        // Em vez de alert(), usamos o sistema de mensagens do jogo
-        document.getElementById("wonder-menu").style.display = "flex";
-        document.getElementById("wonder-text").innerHTML = "O Wonder Trade está em manutenção! Volte mais tarde.";
-        document.getElementById("wonder-pkmn").src = "img/icons/locked.png"; // Se tiver um ícone de cadeado
-        return;
     }
 
-    if (saved.wonderTradeClaimed) return;
-
-    // 1. Filtragem de Pokémon (segurança)
     let playerPool = [];
     for (const i in pkmn) {
         if (pkmn[i].caught > 0 && !isPkmnEquipped(i)) {
@@ -10305,18 +10285,13 @@ function wonderTrade() {
         return;
     }
 
-    // 2. Lógica de Persistência (Bloqueio de Reroll)
     let playerOffer, systemOffer, chosenShiny;
 
     if (saved.wonderTradeOffered) {
-        console.log("Recuperando Pokémon sorteado:", saved.wonderTradePlayerPkmn, saved.wonderTradeSystemPkmn);
-        // Recupera o que já foi sorteado
         playerOffer = saved.wonderTradePlayerPkmn;
         systemOffer = saved.wonderTradeSystemPkmn;
         chosenShiny = saved.wonderTradeShiny;
     } else {
-        console.log("Sorteando Pokémon novo...");
-        // Faz o sorteio novo
         playerOffer = arrayPick(playerPool);
         
         let systemPool = [];
@@ -10328,7 +10303,6 @@ function wonderTrade() {
         systemOffer = arrayPick(systemPool) || "magikarp";
         chosenShiny = rng(0.025);
 
-        // Salva para travar o resultado
         saved.wonderTradeOffered = true;
         saved.wonderTradePlayerPkmn = playerOffer;
         saved.wonderTradeSystemPkmn = systemOffer;
@@ -10336,11 +10310,42 @@ function wonderTrade() {
         saveGame();
     }
 
-    // 3. Montar Interface (Tooltip)
+    // --- NOVO: calcula tempo até reset ---
+    function formatarTempoAteReset() {
+    const dozeHoras = 43200000;
+    
+    // Se já trocou antes, conta regressiva das 12h desde a última troca
+    if (saved.wonderTradeLastUsed) {
+        const tempoRestante = dozeHoras - (Date.now() - saved.wonderTradeLastUsed);
+        if (tempoRestante <= 0) return null;
+        const h = String(Math.floor(tempoRestante / 3600000)).padStart(2, '0');
+        const m = String(Math.floor((tempoRestante % 3600000) / 60000)).padStart(2, '0');
+        const s = String(Math.floor((tempoRestante % 60000) / 1000)).padStart(2, '0');
+        return `${h}:${m}:${s}`;
+    }
+
+    // Se nunca trocou, mostra tempo até o próximo meio-período do dia (igual ao daily counter)
+    const agora = Date.now();
+    const halfDayNumber = Math.floor(agora / dozeHoras);
+    const proximoReset = (halfDayNumber + 1) * dozeHoras;
+    const tempoRestante = proximoReset - agora;
+    const h = String(Math.floor(tempoRestante / 3600000)).padStart(2, '0');
+    const m = String(Math.floor((tempoRestante % 3600000) / 60000)).padStart(2, '0');
+    const s = String(Math.floor((tempoRestante % 60000) / 1000)).padStart(2, '0');
+    return `${h}:${m}:${s}`;
+}
+
+    const tempoAteReset = formatarTempoAteReset();
+    const tempoAteReset = formatarTempoAteReset();
+    const resetLabel = `<div style="font-size:0.85rem; opacity:0.7; margin-bottom:0.5rem">
+    Ofertas mudam em: <strong id="wonder-trade-countdown">${tempoAteReset}</strong>
+</div>`;
+
     document.getElementById("tooltipTop").style.display = "none";
     document.getElementById("tooltipTitle").innerHTML = "Wonder Trade";
     document.getElementById("tooltipMid").innerHTML = `
         <div class="wonder-trade-confirmation">
+            ${resetLabel}
             <div class="trade-preview">
                 <div class="trade-side">
                     <img src="img/pkmn/sprite/${playerOffer}.png">
@@ -10356,7 +10361,15 @@ function wonderTrade() {
         </div>
     `;
 
-    // Dentro da função wonderTrade()
+    // Atualiza o countdown enquanto o tooltip estiver aberto
+    const wonderCountdownInterval = setInterval(() => {
+        const el = document.getElementById('wonder-trade-countdown');
+        if (!el) { clearInterval(wonderCountdownInterval); return; }
+        const t = formatarTempoAteReset();
+        if (t) el.textContent = t;
+        else { el.textContent = 'em breve'; clearInterval(wonderCountdownInterval); }
+    }, 1000);
+
     document.getElementById("tooltipBottom").innerHTML = `
         <div class="trade-buttons">
             <div onclick="performTrade('${playerOffer}', '${systemOffer}', ${chosenShiny})" class="custom-challenge-button" style="background:#60BE58">Aceitar</div>
