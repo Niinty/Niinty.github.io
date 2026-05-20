@@ -10326,7 +10326,7 @@ function wonderTrade() {
             }
         }
         systemOffer = arrayPick(systemPool) || "magikarp";
-        chosenShiny = rng(1);
+        chosenShiny = rng(0.025);
 
         // Salva para travar o resultado
         saved.wonderTradeOffered = true;
