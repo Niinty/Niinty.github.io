@@ -1959,7 +1959,28 @@ function openMenu(){
     if (today > mysteryGift.duration) document.getElementById(`menu-mystery-gift`).style.display = "none"
 
     if (!saved.claimedExportReward) {document.getElementById(`menu-export-reward`).style.display = "flex"} else document.getElementById(`menu-export-reward`).style.display = "none"
-    if (!saved.wonderTradeClaimed) {document.getElementById(`menu-wonder-trade`).style.display = "flex"} else document.getElementById(`menu-wonder-trade`).style.display = "none"
+
+
+
+
+    
+    // 19/05/2026
+    //if (!saved.wonderTradeClaimed) {document.getElementById(`menu-wonder-trade`).style.display = "flex"} else document.getElementById(`menu-wonder-trade`).style.display = "none"
+    // Deixe o botão sempre visível (flex)
+    document.getElementById(`menu-wonder-trade`).style.display = "flex";
+
+    // E aqui apenas controlamos se ele está "bloqueado" ou não (usando a classe)
+    if (saved.wonderTradeClaimed) {
+        document.getElementById("menu-wonder-trade").classList.add("menu-item-locked");
+    } else {
+        document.getElementById("menu-wonder-trade").classList.remove("menu-item-locked");
+    }
+
+
+
+
+
+    
 
     saved.currentAreaBuffer = undefined
     
