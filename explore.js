@@ -9142,8 +9142,12 @@ function resetStoredDailyCatchIfExpired(){
 }
 
 function isMythicTradePokemon(poke){
-    if (!window.MYTHIC_TRADES) return false
-    return MYTHIC_TRADES.some(trade => trade.pkmnId === poke)
+    // Se a variável não estiver definida, bloqueamos por segurança (retorna true)
+    if (typeof MYTHIC_TRADES === 'undefined') {
+        console.error("ERRO: Lista de míticos não encontrada.");
+        return true; 
+    }
+    return MYTHIC_TRADES.some(trade => trade.pkmnId === poke);
 }
 
 function getStoredDailyCatchPokemon(){
@@ -9286,6 +9290,18 @@ function claimDailyCatch(){
     } else {
         dailyCatchAttempts = saved.dailyCatchAttempts ?? 0
     }
+
+    // TRAVA DE SEGURANÇA IMEDIATA
+    if (isMythicTradePokemon(saved.dailyCatchPokemon)) {
+        console.warn("Mítico detectado no Daily Catch, forçando reset.");
+        saved.dailyCatchPokemon = undefined;
+        saved.dailyCatchPokemonHalfDay = undefined;
+        saved.dailyCatchAttempts = 0;
+        saveGame();
+        document.getElementById(`daily-catch-message`).textContent = "Erro ao carregar Pokémon. Tente novamente.";
+        return;
+    }
+
     dailyCatchPokemon = saved.dailyCatchPokemon
     updateDailyCatchMenu()
     openMenu()
