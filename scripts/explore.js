@@ -10092,7 +10092,53 @@ function claimWonderTrade() {
     saveGame();
 };*/
 
+// 19/05/2026
+function formatarTempoRestante() {
+    // 12 horas em milissegundos
+    const dozeHoras = 43200000;
+    const tempoPassado = Date.now() - saved.wonderTradeLastUsed;
+    const tempoRestante = dozeHoras - tempoPassado;
+
+    if (tempoRestante <= 0) return "00:00";
+
+    const horas = Math.floor(tempoRestante / 3600000);
+    const minutos = Math.floor((tempoRestante % 3600000) / 60000);
+    const segundos = Math.floor((tempoRestante % 60000) / 1000);
+
+    return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+}
+
 function wonderTrade() {
+
+    //19/05/2026
+    checkWonderTradeReset(); 
+    
+    if (saved.wonderTradeClaimed) {
+        // Calcula o tempo que falta
+        const tempo = formatarTempoRestante();
+        
+        // Exibe a mensagem personalizada com o tempo
+        document.getElementById("wonder-menu").style.display = "flex";
+        document.getElementById("wonder-text").innerHTML = 
+            `O Wonder Trade está em manutenção! <br> Disponível em: <strong>${tempo}</strong>`;
+        
+        // Opcional: mostrar um ícone de cadeado
+        document.getElementById("wonder-pkmn").src = "img/icons/locked.png"; 
+        return;
+
+        // Atualiza a cada 1 segundo enquanto o usuário estiver a ver a mensagem
+        let intervalo = setInterval(() => {
+            if (document.getElementById("wonder-menu").style.display === "flex") {
+                document.getElementById("wonder-text").innerHTML = 
+                    `O Wonder Trade está em manutenção! <br> Disponível em: <strong>${formatarTempoRestante()}</strong>`;
+            } else {
+                clearInterval(intervalo);
+            }
+        }, 1000);
+        
+        return;
+    }
+    
     // 1. Verifica o cooldown - 19/05/2026
     if (saved.wonderTradeClaimed) {
         // Em vez de alert(), usamos o sistema de mensagens do jogo
