@@ -5195,6 +5195,7 @@ function updateRaidTimer(){
 setInterval(updateDailyCounters, 1000);
 setInterval(updateEventCounters, 1000);
 setInterval(updateRaidTimer, 1000);
+setInterval(checkWonderTradeReset, 60000); // Checa o Wonder Trade a cada 1 minuto
 
 
 document.getElementById("explore-pkmn-tag").addEventListener("change", e => {
@@ -11415,4 +11416,23 @@ window.addEventListener('load', function() {
     if (saved.arenaCard1 == undefined) createArenaCards()
     //updateTeamExp()
 });
+
+function checkWonderTradeReset() {
+    // 12 horas em milissegundos
+    const dozeHoras = 43200000;
+    const agora = Date.now();
+
+    // Verifique se o lastUsed existe. Se não existir, crie-o.
+    if (!saved.wonderTradeLastUsed) return;
+
+    if (saved.wonderTradeClaimed) {
+        if (agora - saved.wonderTradeLastUsed >= dozeHoras) {
+            // Tempo expirou!
+            saved.wonderTradeClaimed = false;
+            saved.wonderTradeOffered = false;
+            saveGame();
+            console.log("Wonder Trade resetado por tempo!");
+        }
+    }
+}
 
