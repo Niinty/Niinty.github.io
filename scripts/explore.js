@@ -51,6 +51,72 @@ team.slot6.item = undefined
     return Math.random() < number
 }*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --- FUNÇÃO QUE EXECUTA A TROCA (Chamada pelo botão "Aceitar") ---
+
+/*function performTrade(playerOfferId, systemOfferId) {
+
+    closeTooltip();
+
+    openMenu(); // Abre o menu principal para mostrar a animação
+
+
+
+    // Ação: Remove o Pokémon do jogador
+
+    pkmn[playerOfferId].caught--;
+
+
+
+    // Ação: Adiciona o novo Pokémon
+
+    givePkmn(pkmn[systemOfferId], 1);
+
+   
+
+    // Chance de 5% de vir Shiny
+
+    if (rng(0.05)) pkmn[systemOfferId].shiny = true;
+
+
+
+    // Feedback Visual
+
+    document.getElementById("wonder-menu").style.display = "flex";
+
+    document.getElementById("wonder-text").innerHTML = `Troca realizada! Você recebeu um ${format(systemOfferId)}${pkmn[systemOfferId].shiny ? " ✨" : ""}!`;
+
+    document.getElementById("wonder-pkmn").src = pkmn[systemOfferId].shiny
+
+        ? `img/pkmn/shiny/${systemOfferId}.png`
+
+        : `img/pkmn/sprite/${systemOfferId}.png`;
+
+
+
+    saved.wonderTradeClaimed = true;
+
+    saveGame();
+
+}*/
+
 function performTrade(playerOfferId, systemOfferId, isShiny) {
     closeTooltip();
     openMenu();
@@ -89,11 +155,18 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     saved.wonderTradeShiny = false;
     
     saved.wonderTradeClaimed = true;
+    saved.wonderTradeLastUsed = Date.now(); // <--- Adicione isso!
     saveGame();
 
-    // 19/05/2026
-    // Apenas chame a função que aplica a classe de bloqueio
-    updateWonderTradeUI();
+    // FORÇA TOTAL: Teste de diagnóstico
+const btn = document.getElementById("menu-wonder-trade");
+if (btn) {
+    btn.style.filter = "brightness(0) grayscale(1)"; // Força escurecer via JS
+    btn.style.pointerEvents = "none";               // Bloqueia clique
+    console.log("Forçado escurecer via JS!");
+} else {
+    console.log("Elemento não encontrado!");
+}
 }
 
 
@@ -280,6 +353,46 @@ function cancelWonderTrade() {
     document.getElementById("modal").style.display = "none"; // adaptar
     // NÃO acionar cooldown aqui — jogador recusou a troca
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1939,7 +2052,6 @@ let cancelCurrentPlayerAttack = false
 
 
 function openMenu(){
-
     // 1. Verifica se o tempo já passou toda vez que o menu abre
     checkWonderTradeReset();
 
@@ -1976,30 +2088,13 @@ function openMenu(){
     if (today > mysteryGift.duration) document.getElementById(`menu-mystery-gift`).style.display = "none"
 
     if (!saved.claimedExportReward) {document.getElementById(`menu-export-reward`).style.display = "flex"} else document.getElementById(`menu-export-reward`).style.display = "none"
-
-
-
-
     
-    // 19/05/2026
-    // Remova o "else" que esconde o botão
-    const wonderBtn = document.getElementById("menu-wonder-trade");
-
-    // Sempre garante que o botão está visível
-    wonderBtn.style.display = "flex"; 
-
-    // Apenas aplica o filtro de escuro se estiver bloqueado
     if (saved.wonderTradeClaimed) {
-    wonderBtn.classList.add("menu-item-locked");
+        document.getElementById("menu-wonder-trade").classList.add("menu-item-locked");
     } else {
-    wonderBtn.classList.remove("menu-item-locked");
+        document.getElementById("menu-wonder-trade").classList.remove("menu-item-locked");
     }
-
-
-
-
-
-    
+    //if (!saved.wonderTradeClaimed) {document.getElementById(`menu-wonder-trade`).style.display = "flex"} else document.getElementById(`menu-wonder-trade`).style.display = "none"
 
     saved.currentAreaBuffer = undefined
     
@@ -9994,6 +10089,41 @@ function returnDivisionStars(target, stat){
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Função para verificar se o Pokémon está sendo usado
 function isPkmnEquipped(pkmnId) {
     // Verifica times ativos
@@ -10017,14 +10147,14 @@ function isPkmnEquipped(pkmnId) {
 function claimWonderTrade() {
     if (saved.wonderTradeClaimed) return;
 
-    /*if (areas.vsMasterTrainerGeeta.defeated == false) {
+    if (areas.vsMasterTrainerGeeta.defeated == false) {
         document.getElementById("tooltipTop").style.display = `none`;
         document.getElementById("tooltipTitle").style.display = `none`;
         document.getElementById("tooltipBottom").style.display = `none`;
         document.getElementById("tooltipMid").innerHTML = `Defeat Master Trainer Geeta in VS mode to unlock`;
         openTooltip();
         return;
-    }*/
+    }
 
     // Filtra Pokémon do jogador que não estão em uso
     let playerPool = [];
@@ -10105,8 +10235,6 @@ function claimWonderTrade() {
     saved.wonderTradeClaimed = true;
     saveGame();
 };*/
-
-// 19/05/2026
 function formatarTempoRestante() {
     // 12 horas em milissegundos
     const dozeHoras = 43200000;
@@ -10124,7 +10252,7 @@ function formatarTempoRestante() {
 
 function wonderTrade() {
 
-    //19/05/2026
+    // Verifica se já resetou antes de mostrar o erro
     checkWonderTradeReset(); 
     
     if (saved.wonderTradeClaimed) {
@@ -10137,8 +10265,7 @@ function wonderTrade() {
             `O Wonder Trade está em manutenção! <br> Disponível em: <strong>${tempo}</strong>`;
         
         // Opcional: mostrar um ícone de cadeado
-        document.getElementById("wonder-pkmn").src = "img/icons/locked.png"; 
-        return;
+        document.getElementById("wonder-pkmn").src = "img/icons/locked.png";
 
         // Atualiza a cada 1 segundo enquanto o usuário estiver a ver a mensagem
         let intervalo = setInterval(() => {
@@ -10151,9 +10278,10 @@ function wonderTrade() {
         }, 1000);
         
         return;
+
+
     }
-    
-    // 1. Verifica o cooldown - 19/05/2026
+// 1. Verifica o cooldown
     if (saved.wonderTradeClaimed) {
         // Em vez de alert(), usamos o sistema de mensagens do jogo
         document.getElementById("wonder-menu").style.display = "flex";
@@ -10161,7 +10289,7 @@ function wonderTrade() {
         document.getElementById("wonder-pkmn").src = "img/icons/locked.png"; // Se tiver um ícone de cadeado
         return;
     }
-    
+
     if (saved.wonderTradeClaimed) return;
 
     // 1. Filtragem de Pokémon (segurança)
@@ -10198,7 +10326,7 @@ function wonderTrade() {
             }
         }
         systemOffer = arrayPick(systemPool) || "magikarp";
-        chosenShiny = rng(0.025);
+        chosenShiny = rng(1);
 
         // Salva para travar o resultado
         saved.wonderTradeOffered = true;
@@ -10239,7 +10367,6 @@ function wonderTrade() {
     openTooltip();
 }
 
-// 19/05/2026
 function fecharWonderMenu() {
     document.getElementById("wonder-menu").style.display = "none";
 }
@@ -10252,6 +10379,38 @@ function fecharWonderMenu() {
         saveGame();
         console.log("Estado guardado!");
     }
+
+    function updateWonderTradeUI() {
+    const wonderButton = document.getElementById("menu-wonder-trade");
+    if (!wonderButton) return;
+
+    if (saved.wonderTradeClaimed) {
+        // Bloqueia o ícone
+        wonderButton.classList.add("menu-item-locked");
+    } else {
+        // Libera o ícone
+        wonderButton.classList.remove("menu-item-locked");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function currentDailyCatchHalfDay(){
     return Math.floor(Date.now() / (1000 * 60 * 60 * 12))
