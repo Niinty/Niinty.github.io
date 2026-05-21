@@ -4489,6 +4489,8 @@ function resetPokedexFilters(){
     document.getElementById("pokedex-filter-shiny").value = "all";
     document.getElementById("pokedex-filter-signature").value = "all";
     document.getElementById("pokedex-filter-ribbon").value = "all";
+
+    document.getElementById("pokedex-filter-pokerus").value = "all";
 }
 
 
