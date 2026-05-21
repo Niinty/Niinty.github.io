@@ -6300,7 +6300,7 @@ const wildlifePoolRare = [
     pkmn.charcadet.id, pkmn.bombirdier.id, pkmn.cyclizar.id, pkmn.dondozo.id, pkmn.tatsugiri.id, pkmn.frigibax.id, pkmn.tinkatink.id, pkmn.vivillonFancy.id,
     
     
-    pkmn.heracross.id, pkmn.skarmory.id, pkmn.absol.id, pkmn.feebas.id, pkmn.munchlax.id, pkmn.phione.id, pkmn.axew.id, pkmn.druddigon.id, pkmn.oranguru.id, pkmn.turtonator.id, 
+    pkmn.heracross.id, pkmn.skarmory.id, pkmn.absol.id, pkmn.feebas.id, pkmn.munchlax.id, pkmn.axew.id, pkmn.druddigon.id, pkmn.oranguru.id, pkmn.turtonator.id, 
     pkmn.mimikyu.id, pkmn.dracozolt.id, pkmn.arctozolt.id, pkmn.dracovish.id, pkmn.arctovish.id, pkmn.duraludon.id, pkmn.cetoddle.id, pkmn.luvdisc.id, pkmn.aron.id, pkmn.meowth.id, 
 
     //fodder
