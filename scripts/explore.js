@@ -4719,7 +4719,11 @@ function updatePokedex(){
     let totalPokemon = 0
     let gotPokemon = 0
     let sortedPokemon = []
-
+	
+	const pkrsFilter = document.getElementById("pokedex-filter-pokerus");
+    const showOnlyPkrs = pkrsFilter ? pkrsFilter.value : "all";
+	
+	
 
     //create an array, used for sorting
     for (const i in pkmn) {
@@ -4749,6 +4753,10 @@ function updatePokedex(){
 
         if (tagSystemTagSearch.length > 0) { //tag system
         if (!pkmn[i].tagList || pkmn[i].tagList.length === 0) continue;
+		// --- NOVO FILTRO DE POKERUS ---
+        if (showOnlyPkrs === "true" && pkmn[i].pokerus !== true) {
+            continue; // Isso pula o resto do código para este Pokémon
+        }
 
         const hasMatchingTag = pkmn[i].tagList.some(pkmnTag =>
             tagSystemTagSearch.some(searchTag =>
@@ -4780,6 +4788,12 @@ function updatePokedex(){
 
 
         if (pkmn[i].caught==0 && pkmn[i].tagObtainedIn == "unobtainable") continue
+
+
+		const pokerusFilter = document.getElementById("pokedex-filter-pokerus");
+		if (pokerusFilter && pokerusFilter.value === "true" && pkmn[i].pokerus !== true) {
+        continue; 
+    }
 
         totalPokemon++
 
