@@ -83,17 +83,10 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     }
 
     // 3. Finaliza o processo de cooldown
-    //saved.wonderTradeOffered = false;
-    //saved.wonderTradePlayerPkmn = null;
-    //saved.wonderTradeSystemPkmn = null;
-    //saved.wonderTradeShiny = false;
-
-    saved.wonderTradeClaimed = true;
-    saved.wonderTradeLastUsed = Date.now();
-    saveGame();
-    
-    // Atualiza a tela
-    document.getElementById("wonder-menu").style.display = "flex";
+    saved.wonderTradeOffered = false;
+    saved.wonderTradePlayerPkmn = null;
+    saved.wonderTradeSystemPkmn = null;
+    saved.wonderTradeShiny = false;
 
     saved.wonderTradeClaimed = true;
     saved.wonderTradeLastUsed = Date.now();
@@ -4728,9 +4721,6 @@ function updatePokedex(){
     let sortedPokemon = []
 
 
-    const pkrsFilter = document.getElementById("pokedex-filter-pokerus");
-    const showOnlyPkrs = pkrsFilter ? pkrsFilter.value : "all";
-
     //create an array, used for sorting
     for (const i in pkmn) {
         //filters
@@ -4759,7 +4749,6 @@ function updatePokedex(){
 
         if (tagSystemTagSearch.length > 0) { //tag system
         if (!pkmn[i].tagList || pkmn[i].tagList.length === 0) continue;
-        if (pkmn[i].ability == undefined) pkmn[i].ability = learnPkmnAbility(pkmn[i].id);
 
         const hasMatchingTag = pkmn[i].tagList.some(pkmnTag =>
             tagSystemTagSearch.some(searchTag =>
@@ -4800,17 +4789,9 @@ function updatePokedex(){
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===2 && (returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===3 && (returnPkmnDivision(pkmn[i])!="A" && returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
 
-        const pokerusFilter = document.getElementById("pokedex-filter-pokerus");
-        if (pokerusFilter && pokerusFilter.value === "true") {
-        if (pkmn[i].pokerus !== true) continue; // Pula este Pokémon se ele não tiver Pokerus
-        }
-
         gotPokemon++
         sortedPokemon.push(pkmn[i])
     }
-
-
-
 
 
     const sort = document.getElementById("pokedex-sort-filter").value
@@ -8973,31 +8954,9 @@ function formatarTempoRestante() {
     return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
 }
 
-/*function wonderTrade() {
+function wonderTrade() {
 
     checkWonderTradeReset();
-
-    let playerOffer, systemOffer, chosenShiny;
-
-    // Se já existe uma oferta pendente e o tempo não venceu:
-    if (saved.wonderTradeOffered && !saved.wonderTradeClaimed) {
-        // Usa os valores já sorteados anteriormente
-        playerOffer = saved.wonderTradePlayerPkmn;
-        systemOffer = saved.wonderTradeSystemPkmn;
-        chosenShiny = saved.wonderTradeShiny;
-    } else {
-        // Sorteia novo se não houver oferta (ou após reset)
-        let playerPool = [];
-        // ... (código do seu sorteio de playerPool)
-        playerOffer = arrayPick(playerPool);
-        // ... (código do sorteio de systemOffer)
-        
-        saved.wonderTradeOffered = true;
-        saved.wonderTradePlayerPkmn = playerOffer;
-        saved.wonderTradeSystemPkmn = systemOffer;
-        saved.wonderTradeShiny = chosenShiny;
-        saveGame();
-    }
 
     if (saved.wonderTradeClaimed) {
         const tempo = formatarTempoRestante();
@@ -9030,7 +8989,7 @@ function formatarTempoRestante() {
         return;
     }
 
-    //let playerOffer, systemOffer, chosenShiny;
+    let playerOffer, systemOffer, chosenShiny;
 
     if (saved.wonderTradeOffered) {
         playerOffer = saved.wonderTradePlayerPkmn;
@@ -9053,47 +9012,7 @@ function formatarTempoRestante() {
         saved.wonderTradeSystemPkmn = systemOffer;
         saved.wonderTradeShiny = chosenShiny;
         saveGame();
-    }*/
-
-    function wonderTrade() {
-    // 1. Primeiro, checamos se o cooldown acabou e limpamos, se necessário
-    checkWonderTradeReset();
-
-    // 2. Declaramos as variáveis no topo do escopo da função
-    let playerOffer, systemOffer, chosenShiny;
-
-    // 3. Verificamos se já existe uma oferta pendente
-    if (saved.wonderTradeOffered && !saved.wonderTradeClaimed) {
-        // Usa os dados salvos
-        playerOffer = saved.wonderTradePlayerPkmn;
-        systemOffer = saved.wonderTradeSystemPkmn;
-        chosenShiny = saved.wonderTradeShiny;
-    } else {
-        // Se não houver oferta (ou se o cooldown limpou tudo), sorteamos novas
-        let playerPool = []; 
-        // ... (seu código original de preenchimento de playerPool) ...
-
-        if (playerPool.length === 0) {
-            alert("Você não tem Pokémon disponíveis para troca!");
-            return;
-        }
-
-        playerOffer = arrayPick(playerPool);
-        // ... (seu código de sorteio do systemOffer)
-        systemOffer = "AlgumPokemon"; // Exemplo
-        chosenShiny = false; // Exemplo
-
-        // Salva os dados
-        saved.wonderTradeOffered = true;
-        saved.wonderTradePlayerPkmn = playerOffer;
-        saved.wonderTradeSystemPkmn = systemOffer;
-        saved.wonderTradeShiny = chosenShiny;
-        saveGame();
     }
-
-    // 4. Aqui você abre o seu menu/tooltip com as variáveis (playerOffer, etc.)
-    console.log("Troca pronta para exibir:", playerOffer);
-}
 
     // --- NOVO: calcula tempo até reset ---
     function formatarTempoAteReset() {
@@ -10205,25 +10124,6 @@ window.addEventListener('load', function() {
 });
 
 function checkWonderTradeReset() {
-    const dozeHoras = 43200000;
-    const agora = Date.now();
-
-    if (!saved.wonderTradeLastUsed) return;
-
-    if (saved.wonderTradeClaimed) {
-        if (agora - saved.wonderTradeLastUsed >= dozeHoras) {
-            // Tempo expirou: reseta o estado da troca e limpa a oferta antiga
-            saved.wonderTradeClaimed = false;
-            saved.wonderTradeOffered = false; // Isso força o sorteio de um novo PKMN
-            saved.wonderTradePlayerPkmn = null;
-            saved.wonderTradeSystemPkmn = null;
-            saved.wonderTradeShiny = false;
-            saveGame();
-        }
-    }
-}
-
-/*function checkWonderTradeReset() {
     // 12 horas em milissegundos
     const dozeHoras = 43200000;
     const agora = Date.now();
@@ -10239,4 +10139,4 @@ function checkWonderTradeReset() {
             saveGame();
         }
     }
-}*/
+}
