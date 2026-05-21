@@ -8977,6 +8977,8 @@ function wonderTrade() {
 
     checkWonderTradeReset();
 
+    let playerOffer, systemOffer, chosenShiny;
+
     // Se já existe uma oferta pendente e o tempo não venceu:
     if (saved.wonderTradeOffered && !saved.wonderTradeClaimed) {
         // Usa os valores já sorteados anteriormente
@@ -9028,7 +9030,7 @@ function wonderTrade() {
         return;
     }
 
-    let playerOffer, systemOffer, chosenShiny;
+    //let playerOffer, systemOffer, chosenShiny;
 
     if (saved.wonderTradeOffered) {
         playerOffer = saved.wonderTradePlayerPkmn;
