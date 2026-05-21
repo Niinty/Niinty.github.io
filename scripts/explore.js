@@ -83,10 +83,17 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     }
 
     // 3. Finaliza o processo de cooldown
-    saved.wonderTradeOffered = false;
-    saved.wonderTradePlayerPkmn = null;
-    saved.wonderTradeSystemPkmn = null;
-    saved.wonderTradeShiny = false;
+    //saved.wonderTradeOffered = false;
+    //saved.wonderTradePlayerPkmn = null;
+    //saved.wonderTradeSystemPkmn = null;
+    //saved.wonderTradeShiny = false;
+
+    saved.wonderTradeClaimed = true;
+    saved.wonderTradeLastUsed = Date.now();
+    saveGame();
+    
+    // Atualiza a tela
+    document.getElementById("wonder-menu").style.display = "flex";
 
     saved.wonderTradeClaimed = true;
     saved.wonderTradeLastUsed = Date.now();
@@ -8970,6 +8977,26 @@ function wonderTrade() {
 
     checkWonderTradeReset();
 
+    // Se já existe uma oferta pendente e o tempo não venceu:
+    if (saved.wonderTradeOffered && !saved.wonderTradeClaimed) {
+        // Usa os valores já sorteados anteriormente
+        playerOffer = saved.wonderTradePlayerPkmn;
+        systemOffer = saved.wonderTradeSystemPkmn;
+        chosenShiny = saved.wonderTradeShiny;
+    } else {
+        // Sorteia novo se não houver oferta (ou após reset)
+        let playerPool = [];
+        // ... (código do seu sorteio de playerPool)
+        playerOffer = arrayPick(playerPool);
+        // ... (código do sorteio de systemOffer)
+        
+        saved.wonderTradeOffered = true;
+        saved.wonderTradePlayerPkmn = playerOffer;
+        saved.wonderTradeSystemPkmn = systemOffer;
+        saved.wonderTradeShiny = chosenShiny;
+        saveGame();
+    }
+
     if (saved.wonderTradeClaimed) {
         const tempo = formatarTempoRestante();
         document.getElementById("wonder-menu").style.display = "flex";
@@ -10136,6 +10163,25 @@ window.addEventListener('load', function() {
 });
 
 function checkWonderTradeReset() {
+    const dozeHoras = 43200000;
+    const agora = Date.now();
+
+    if (!saved.wonderTradeLastUsed) return;
+
+    if (saved.wonderTradeClaimed) {
+        if (agora - saved.wonderTradeLastUsed >= dozeHoras) {
+            // Tempo expirou: reseta o estado da troca e limpa a oferta antiga
+            saved.wonderTradeClaimed = false;
+            saved.wonderTradeOffered = false; // Isso força o sorteio de um novo PKMN
+            saved.wonderTradePlayerPkmn = null;
+            saved.wonderTradeSystemPkmn = null;
+            saved.wonderTradeShiny = false;
+            saveGame();
+        }
+    }
+}
+
+/*function checkWonderTradeReset() {
     // 12 horas em milissegundos
     const dozeHoras = 43200000;
     const agora = Date.now();
@@ -10151,4 +10197,4 @@ function checkWonderTradeReset() {
             saveGame();
         }
     }
-}
+}*/
