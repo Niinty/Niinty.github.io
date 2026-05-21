@@ -8973,7 +8973,7 @@ function formatarTempoRestante() {
     return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
 }
 
-function wonderTrade() {
+/*function wonderTrade() {
 
     checkWonderTradeReset();
 
@@ -9053,7 +9053,47 @@ function wonderTrade() {
         saved.wonderTradeSystemPkmn = systemOffer;
         saved.wonderTradeShiny = chosenShiny;
         saveGame();
+    }*/
+
+    function wonderTrade() {
+    // 1. Primeiro, checamos se o cooldown acabou e limpamos, se necessário
+    checkWonderTradeReset();
+
+    // 2. Declaramos as variáveis no topo do escopo da função
+    let playerOffer, systemOffer, chosenShiny;
+
+    // 3. Verificamos se já existe uma oferta pendente
+    if (saved.wonderTradeOffered && !saved.wonderTradeClaimed) {
+        // Usa os dados salvos
+        playerOffer = saved.wonderTradePlayerPkmn;
+        systemOffer = saved.wonderTradeSystemPkmn;
+        chosenShiny = saved.wonderTradeShiny;
+    } else {
+        // Se não houver oferta (ou se o cooldown limpou tudo), sorteamos novas
+        let playerPool = []; 
+        // ... (seu código original de preenchimento de playerPool) ...
+
+        if (playerPool.length === 0) {
+            alert("Você não tem Pokémon disponíveis para troca!");
+            return;
+        }
+
+        playerOffer = arrayPick(playerPool);
+        // ... (seu código de sorteio do systemOffer)
+        systemOffer = "AlgumPokemon"; // Exemplo
+        chosenShiny = false; // Exemplo
+
+        // Salva os dados
+        saved.wonderTradeOffered = true;
+        saved.wonderTradePlayerPkmn = playerOffer;
+        saved.wonderTradeSystemPkmn = systemOffer;
+        saved.wonderTradeShiny = chosenShiny;
+        saveGame();
     }
+
+    // 4. Aqui você abre o seu menu/tooltip com as variáveis (playerOffer, etc.)
+    console.log("Troca pronta para exibir:", playerOffer);
+}
 
     // --- NOVO: calcula tempo até reset ---
     function formatarTempoAteReset() {
