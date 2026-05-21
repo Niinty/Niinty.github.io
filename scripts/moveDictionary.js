@@ -109,7 +109,7 @@ ability.dragonGuard = {
 ability.bugGuard = {
     type: [`bug`],
     rarity: 1,
-    info: function() {return `HReduz em 50% o dano recebido por ataques do tipo Bug`},
+    info: function() {return `Reduz em 50% o dano recebido por ataques do tipo Bug`},
 }
 
 ability.rockGuard = {
