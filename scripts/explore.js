@@ -4799,7 +4799,9 @@ function updatePokedex(){
         }
 
         // 3. Agora sim, incrementa os contadores e adiciona na lista
-        totalPokemon++; 
+        totalPokemon++;
+        if (pkmn[i].caught == 0) continue; // Pula não capturados
+        
         gotPokemon++;
         sortedPokemon.push(pkmn[i]);
     }
