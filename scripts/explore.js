@@ -4789,8 +4789,19 @@ function updatePokedex(){
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===2 && (returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
         if (areas[saved.currentAreaBuffer]?.type=="frontier" && rotationFrontierCurrent===3 && (returnPkmnDivision(pkmn[i])!="A" && returnPkmnDivision(pkmn[i])!="B" && returnPkmnDivision(pkmn[i])!="C" &&  returnPkmnDivision(pkmn[i])!="D")) continue
 
-        gotPokemon++
-        sortedPokemon.push(pkmn[i])
+        // 1. Verifique se o Pokémon foi capturado
+        if (pkmn[i].caught == 0) continue;
+
+        // 2. ADICIONE AQUI O FILTRO DE POKERUS:
+        const pokerusFilter = document.getElementById("pokedex-filter-pokerus");
+        if (pokerusFilter && pokerusFilter.value === "true" && pkmn[i].pokerus !== true) {
+            continue; // Pula este Pokémon se o filtro estiver ligado e ele não tiver o vírus
+        }
+
+        // 3. Agora sim, incrementa os contadores e adiciona na lista
+        totalPokemon++; 
+        gotPokemon++;
+        sortedPokemon.push(pkmn[i]);
     }
 
 
