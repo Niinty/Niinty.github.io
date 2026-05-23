@@ -246,7 +246,7 @@ function setSearchTags() {
         
         for (const i in areas){
             if (areas[i].type=="wild") {
-                if (areas[i].spawns.common.includes(pkmn[e]) || areas[i].spawns.uncommon.includes(pkmn[e]) || areas[i].spawns.rare.includes(pkmn[e])){
+                if (areas[i].spawns.common?.includes(pkmn[e]) || areas[i].spawns.uncommon?.includes(pkmn[e]) || areas[i].spawns.rare?.includes(pkmn[e])){
                     pkmn[e].tagObtainedIn = "wild"
                 }
             }

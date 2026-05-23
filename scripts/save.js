@@ -83,6 +83,8 @@ function saveGame() {
 
   }
 
+  legendsSave(data);  // ← ADICIONE AQUI, depois do loop de pkmn
+
   localStorage.setItem("gameData", JSON.stringify(data));
 }
 
@@ -171,6 +173,9 @@ function loadGame() {
   }
 
   if (typeof registerGymLeaders === "function") registerGymLeaders()
+  if (typeof registerLegends === "function") registerLegends()  // ← ADICIONE AQUI
+  
+  legendsLoad(data);  // ← E AQUI, logo abaixo
 }
 
 

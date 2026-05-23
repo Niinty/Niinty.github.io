@@ -56,7 +56,7 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     openMenu();
 
     // 1. Remove o Pokémon dado
-    pkmn[playerOfferId].caught--;
+    pkmn[playerOfferId].caught = 0;
 
     // 2. Verifica se já possui o Pokémon recebido
     let jaPossui = pkmn[systemOfferId].caught > 0;
@@ -523,7 +523,22 @@ for (let i = 0; i < 4; i++) {
 
 
     }
-    else {
+    else if (areas[saved.currentArea]?.isLegendsBattle) {
+
+        // ── LEGENDS: spawn fixo, nível fixo, sem aleatoriedade ──
+        spawnedPkmn = areas[saved.currentArea].legendId;
+        wildLevel   = areas[saved.currentArea].level;
+
+        const legendThresholds = [0, 10, 20, 30];
+        for (let t of legendThresholds) {
+            if (wildLevel > t) {
+                const moveId = learnPkmnMove(spawnedPkmn, wildLevel, "wild");
+                if (moveId && !randomMoves.includes(moveId)) randomMoves.push(moveId);
+                else randomMoves.push(undefined);
+            }
+        }
+
+    } else {
 
 
     if (areas[saved.currentArea].level !== undefined) wildLevel = random(areas[saved.currentArea].level-9,areas[saved.currentArea].level)
@@ -586,6 +601,11 @@ for (let t of thresholds) {
     if (areas[saved.currentArea].difficulty == tier2difficulty) wildPkmnHp = 139300
     if (areas[saved.currentArea].difficulty == tier3difficulty) wildPkmnHp = 398000
     if (areas[saved.currentArea].difficulty == tier4difficulty) wildPkmnHp = 1302000
+
+    // ── LEGENDS: aplica multiplicador de HP sobre o valor base ──
+    if (areas[saved.currentArea]?.isLegendsBattle) {
+        wildPkmnHp *= areas[saved.currentArea].legendHpMultiplier;
+    }
 
 
     wildPkmnHpMax = wildPkmnHp
@@ -712,6 +732,8 @@ function dropItem(){
     if (areas[saved.currentArea].drops?.uncommon && rng(0.15)) drop = arrayPick(areas[saved.currentArea].drops?.uncommon).id
     if (areas[saved.currentArea].drops?.rare && rng(rareDropChance)) drop = arrayPick(areas[saved.currentArea].drops?.rare).id
 
+    if (drop == undefined) return
+    if (drop == "nothing") return
     if (item[drop].type=="held" && item[drop].got>= 20) drop = item.bottleCap.id
     if (item[drop].type!=="held" && item[drop].evo && item[drop].got>= 10) drop = item.bottleCap.id
 
@@ -770,8 +792,19 @@ function exitCombat(){
         document.getElementById("dimension-menu").style.display = "flex"
     }
 
+
+    // DEPOIS:
     voidAnimation("area-end","tooltipBoxAppear 0.2s reverse 1 ease-in");
-    setTimeout(() => {document.getElementById("area-end").style.display = "none"}, 150);
+
+        setTimeout(() => {
+        document.getElementById("area-end").style.display = "none";
+        if (areas[saved.lastAreaJoined]?.isLegendsBattle) {
+            document.getElementById("explore-menu").style.display = "none";
+            document.getElementById("menu-button-parent").style.display = "flex";  // ← ADICIONE
+            document.getElementById("menu-button").classList.add("menu-button-open");
+        }
+    }, 150);
+
     saveGame()
 
 
@@ -781,7 +814,8 @@ function exitCombat(){
 function leaveCombat(){
 
 
-    if (areas[saved.currentArea].hpPercentage) {
+    //if (areas[saved.currentArea].hpPercentage) {
+    if (areas[saved.currentArea]?.hpPercentage && !areas[saved.currentArea]?.isLegendsBattle) {
         const percent = (wildPkmnHp / wildPkmnHpMax) * 100;
         areas[saved.currentArea].hpPercentage = percent
 
@@ -837,8 +871,8 @@ function leaveCombat(){
         } else {
             document.getElementById("vs-menu").style.display = "flex"
             if (areas[saved.currentArea].type == "frontier") updateFrontier()
-        }
-    } else  document.getElementById("explore-menu").style.display = "flex"
+            }
+        } else  document.getElementById("explore-menu").style.display = "flex"
 
     if (areas[saved.currentArea].trainer) {
         if (areas[saved.currentArea].isGym) updateGyms()
@@ -1190,7 +1224,9 @@ function leaveCombat(){
 
 
     document.getElementById("area-refight").style.display = "none"
-    if ( item.autoRefightTicket.got>0 && areas[saved.currentArea].type!="vs" && areas[saved.currentArea].type!="frontier" && areas[saved.currentArea].id != "training" && areas[saved.currentArea].encounter != true ) {
+    if ( areas[saved.currentArea]?.isLegendsBattle ) {
+        // Legends: sem Auto-Refight, apenas Fight Again
+    } else if ( item.autoRefightTicket.got>0 && areas[saved.currentArea].type!="vs" && areas[saved.currentArea].type!="frontier" && areas[saved.currentArea].id != "training" && areas[saved.currentArea].encounter != true ) {
         document.getElementById("area-refight").style.display = "flex"
         document.getElementById("area-refight").innerHTML = `
         <svg style="margin-right:0.3rem" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><path fill="currentColor" fill-rule="evenodd" d="M10.797 2.482a.61.61 0 0 1 0 .866L9.44 4.705h.924c1.393 0 2.305.572 2.845 1.343c.515.736.651 1.593.651 2.153c0 .561-.136 1.418-.651 2.154c-.54.77-1.452 1.342-2.845 1.342c-.948 0-1.695-.48-2.295-1.08c-.584-.584-1.093-1.347-1.56-2.046l-.019-.03c-.49-.734-.936-1.4-1.425-1.889c-.481-.48-.935-.721-1.429-.721c-1.01 0-1.54.39-1.84.82c-.327.466-.43 1.05-.43 1.45s.103.985.43 1.451c.3.43.83.82 1.84.82c.512 0 .982-.259 1.482-.775a.613.613 0 0 1 .88.852c-.612.632-1.379 1.148-2.362 1.148c-1.393 0-2.305-.571-2.845-1.342C.276 9.619.14 8.762.14 8.2s.137-1.418.651-2.153c.54-.77 1.452-1.343 2.845-1.343c.948 0 1.695.48 2.295 1.08c.584.585 1.093 1.348 1.56 2.047l.019.03c.49.734.936 1.4 1.425 1.889c.481.48.935.721 1.429.721c1.01 0 1.54-.39 1.84-.82c.327-.466.43-1.05.43-1.45s-.103-.986-.43-1.451c-.3-.43-.83-.82-1.84-.82H7.961a.613.613 0 0 1-.433-1.046L9.93 2.482a.61.61 0 0 1 .866 0" clip-rule="evenodd"/></svg>
@@ -1237,17 +1273,20 @@ function leaveCombat(){
     if (saved.autoRefight == true) storedAfkSeconds = afkSeconds
     afkSeconds = 0
 
+    const wasLegendsBattle = areas[saved.currentArea]?.isLegendsBattle;
     saved.currentArea = undefined
 
-    setWildAreas()
-
-
-    if (saved.autoRefight == true) {
-        rejoinArea()
+    if (wasLegendsBattle) {
+        areas[saved.lastAreaJoined].hpPercentage = undefined;
+        saved.autoRefight = false; // Legends não usa auto-refight
+        saveGame();
+    } else {
+        setWildAreas()
+        if (saved.autoRefight == true) {
+            rejoinArea()
+        }
+        saveGame()
     }
-
-
-    saveGame()
 
 
 }
@@ -1296,6 +1335,7 @@ function rejoinArea(){
         document.getElementById(`area-end`).style.display = `none`;
         document.getElementById("content-explore").style.display = "flex"
         document.getElementById("menu-button-parent").style.display = "flex"
+
         initialiseArea()
         saveGame()
 
@@ -1316,15 +1356,16 @@ function rejoinArea(){
 
             saved.currentArea = saved.lastAreaJoined
 
-                    document.getElementById(`explore-menu`).style.display = `none`
-                    document.getElementById(`vs-menu`).style.display = `none`
-                    document.getElementById(`training-menu`).style.display = `none`
+                document.getElementById(`explore-menu`).style.display = `none`
+                document.getElementById(`vs-menu`).style.display = `none`
+                document.getElementById(`training-menu`).style.display = `none`
 
-          document.getElementById(`area-end`).style.display = `none`;
-          document.getElementById("content-explore").style.display = "flex"
-        document.getElementById("menu-button-parent").style.display = "flex"
-          initialiseArea()
-              saveGame()
+                document.getElementById(`area-end`).style.display = `none`;
+                document.getElementById("content-explore").style.display = "flex"
+                document.getElementById("menu-button-parent").style.display = "flex"
+
+        initialiseArea()
+                saveGame()
 
     }, 500);
 
@@ -1510,9 +1551,18 @@ for (let i = activeBars; i < hpBars.length; i++) {
 
     if (areas[saved.currentArea]?.trainer) currentTrainerSlot++
 
+    const capturedArea = saved.currentArea;  // ← captura antes do timeout
+    
+        setTimeout(() => {
 
-    setTimeout(() => {
-
+        // ── LEGENDS: não respawna, chama encounterEffect e sai ──
+        if (areas[capturedArea]?.isLegendsBattle) {
+            if (saved.currentArea !== capturedArea) return; // ← área mudou, ignora
+            if (areas[capturedArea].encounterEffect) areas[capturedArea].encounterEffect();
+            areas[capturedArea].defeated = true;
+            leaveCombat();
+            return;
+        }
 
         setWildPkmn()
     document.getElementById("exploe-wild-hp").style.transition = "0s"
@@ -1997,7 +2047,7 @@ function shouldCombatStop(){
     //if (document.getElementById(`item-menu`).style.display === "flex") return true
     //if (document.getElementById(`pokedex-menu`).style.display === "flex") return true
     if (document.getElementById(`team-menu`).style.display === "flex") return true
-    if (wildLevel===0) return true
+    if (wildLevel===0 && !areas[saved.currentArea]?.isLegendsBattle) return true
     if (wildPkmnHp<0) return true
     if (saved.currentArea === undefined) return true
     return false
@@ -3627,6 +3677,9 @@ function exploreCombatWild() {
 
 function initialiseArea(){
 
+    // Reseta o accumulator para evitar ticks acumulados durante a transição
+    accumulator = 0;
+    lastDeltaTime = performance.now();
 
     zCrystalTurn = 0
     for (const i in pkmn) if (pkmn[i].battling) pkmn[i].battling=undefined
@@ -3687,7 +3740,7 @@ function initialiseArea(){
 
     document.getElementById("auto-refight-info").style.display = "none"
 
-    if (saved.autoRefight==true){
+    if (saved.autoRefight==true && !areas[saved.currentArea]?.isLegendsBattle){
     document.getElementById("auto-refight-info").style.display = "flex"
     document.getElementById("auto-refight-info").innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9"><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>
@@ -5987,7 +6040,7 @@ function switchMenu(id){
     if (id!=="items") document.getElementById(`item-menu`).style.display = "none"
     if (id!=="dex") document.getElementById(`pokedex-menu`).style.display = "none"
     if (id!=="travel") document.getElementById(`explore-menu`).style.display = "none"
-    if (id!=="travel") document.getElementById(`content-explore`).style.display = "none"
+     if (id!=="travel" && !areas[saved.currentArea]?.isLegendsBattle) document.getElementById(`content-explore`).style.display = "none"
     if (id!=="vs") document.getElementById(`vs-menu`).style.display = "none"
     if (id!=="gyms") document.getElementById(`gyms-menu`).style.display = "none"
     if (id!=="team") document.getElementById(`team-menu`).style.display = "none"
@@ -6000,6 +6053,12 @@ function switchMenu(id){
 
 
     openMenu()
+
+    // Legends: restaura menu-button-parent que submenus escondem
+    if (areas[saved.currentArea]?.isLegendsBattle) {
+        document.getElementById("menu-button-parent").style.display = "flex";
+        document.getElementById("menu-button").classList.remove("menu-button-open");
+    }
 
 
 }
@@ -9345,12 +9404,22 @@ function updateDailyCatchMenu(){
         document.getElementById(`daily-catch-pkmn-name`).textContent = format(dailyCatchPokemon)
         document.getElementById(`daily-catch-pkmn-rank`).textContent = `Rank: ${rank.charAt(0).toUpperCase() + rank.slice(1)}`
     } else {
-        document.getElementById(`daily-catch-pkmn`).src = ``
+        document.getElementById(`daily-catch-pkmn`).src = `img/icons/locked.png`
         document.getElementById(`daily-catch-pkmn-name`).textContent = ``
         document.getElementById(`daily-catch-pkmn-rank`).textContent = ``
     }
 
-    const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
+    //const defaultMessage = available ? `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.` : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
+    
+    // DEPOIS:
+    const alreadyCaught = dailyCatchPokemon && pkmn[dailyCatchPokemon]?.caught > 0
+    const defaultMessage = available
+        ? alreadyCaught
+            ? `Você já tem ${format(dailyCatchPokemon)}! Usar pokébolas vai melhorar algum de seus IVs. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.`
+            : `Escolha uma Poké Bola. ${triesLeft} tentativa${triesLeft == 1 ? `` : `s`} restante${triesLeft == 1 ? `` : `s`}.`
+        : `Cooldown do Daily Catch: ${getDailyCatchRemainingText()}`
+    
+    
     document.getElementById(`daily-catch-message`).textContent = dailyCatchStatusMessage || defaultMessage
     document.querySelectorAll(`.daily-catch-ball-button`).forEach(button => {
         const ballId = button.dataset.ballId
