@@ -28,9 +28,9 @@ const LEGENDS_LIST = [
         catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
             { itemId: "neverMeltIce", amount: 1, chance: 0.1 },
-            { itemId: "blackApricorn", amount: 1, chance: 0.35 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
         ],
         // Background da área de batalha
         background: "iceCave",
@@ -55,9 +55,9 @@ const LEGENDS_LIST = [
         catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
             { itemId: "magnet", amount: 1, chance: 0.1 },
-            { itemId: "blackApricorn", amount: 1, chance: 0.35 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
         ],
         // Background da área de batalha
         background: "trench",
@@ -82,9 +82,9 @@ const LEGENDS_LIST = [
         catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
             { itemId: "charcoal", amount: 1, chance: 0.1 },
-            { itemId: "blackApricorn", amount: 1, chance: 0.35 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
         ],
         // Background da área de batalha
         background: "volcano",
@@ -109,8 +109,8 @@ const LEGENDS_LIST = [
         catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
-            { itemId: "blackApricorn", amount: 1, chance: 0.35 },
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
         ],
         // Background da área de batalha
         background: "cave",
