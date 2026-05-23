@@ -133,7 +133,7 @@
 
 .legend-card {
     display: flex;
-    align-items: center;
+    align-items: center;  /* ← volta para center */
     gap: 14px;
     border-radius: 10px;
     padding: 12px 14px;
