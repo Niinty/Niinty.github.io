@@ -17,10 +17,10 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 4.0,
-        damageMultiplier: 4.0,
+        hpMultiplier: 5.0,
+        damageMultiplier: 6.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 100,
+        battleLevel: 120,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 200, // tier3difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -35,7 +35,7 @@ const LEGENDS_LIST = [
         // Background da área de batalha
         background: "cave",
         // Nível com que o Pokémon é dado ao jogador ao capturar
-        giveLevel: 10,
+        giveLevel: 1,
     },
     // ── Exemplo de como adicionar o próximo ──────────────────────────────────
     // {
