@@ -4059,12 +4059,12 @@ pkmn.megaDragonite = {
 pkmn.mewtwo = {
     type: ["psychic"],
     bst: {
-        hp: 106*1.1,
-        atk: 110*1.1,
-        def: 90*1.1,
-        satk: 154*1.1,
-        sdef: 90*1.1,
-        spe: 130*1.1,
+        hp: 106*1.12,
+        atk: 110*1.12,
+        def: 90*1.12,
+        satk: 154*1.12,
+        sdef: 90*1.12,
+        spe: 130*1.12,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaMewtwoX, item: item.mewtwoniteX } } },
     hiddenAbility: ability.aromaVeil,
@@ -4074,24 +4074,24 @@ pkmn.mewtwo = {
 pkmn.megaMewtwoX = {
     type: ["psychic","fighting"],
     bst: {
-        hp: 106,
-        atk: 190,
-        def: 100,
-        satk: 154,
-        sdef: 100,
-        spe: 130,
+        hp: 106*1.12,
+        atk: 190*1.12,
+        def: 100*1.12,
+        satk: 154*1.12,
+        sdef: 100*1.12,
+        spe: 130*1.12,
     }
 }
 
 pkmn.megaMewtwoY = {
     type: ["psychic"],
     bst: {
-        hp: 106,
-        atk: 150,
-        def: 70,
-        satk: 194,
-        sdef: 120,
-        spe: 140,
+        hp: 106*1.12,
+        atk: 150*1.12,
+        def: 70*1.12,
+        satk: 194*1.12,
+        sdef: 120*1.12,
+        spe: 140*1.12,
     }
 }
 
