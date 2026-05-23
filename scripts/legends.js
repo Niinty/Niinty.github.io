@@ -13,7 +13,7 @@ const LEGENDS_LIST = [
     {
         id: "mewtwo",
         // Custo em Black Apricorns para desbloquear
-        unlockCost: 3,
+        unlockCost: 2,
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
@@ -27,8 +27,7 @@ const LEGENDS_LIST = [
         catchRate: 0.05,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            {item: item.goldenBottleCap.id, amount: 15, chance: 1.0 },
-            //{ itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
+            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
             { itemId: "twistedSpoon", amount: 1, chance: 0.5 },
             { itemId: "blackApricorn", amount: 1, chance: 0.35 },
             { itemId: "psychicGem", amount: 1, chance: 0.05 }, 
