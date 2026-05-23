@@ -17,8 +17,8 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 3.0,
-        damageMultiplier: 3.5,
+        hpMultiplier: 1.5,
+        damageMultiplier: 5.0,
         // Nível com que o lendário aparece na batalha
         battleLevel: 150,
         // Dificuldade da área (usa constantes do areasDictionary)
