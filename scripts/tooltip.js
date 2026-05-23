@@ -1745,10 +1745,13 @@ const sortedMovepool = movepool
 
         for (const i in areas){
             if (areas[i].type=="wild") {
-                if (areas[i].spawns.common.includes(pkmn[ttdata]) || areas[i].spawns.uncommon.includes(pkmn[ttdata]) || areas[i].spawns.rare.includes(pkmn[ttdata])){
+                //if (areas[i].spawns.common.includes(pkmn[ttdata]) || areas[i].spawns.uncommon.includes(pkmn[ttdata]) || areas[i].spawns.rare.includes(pkmn[ttdata])){
+                if (areas[i].spawns.common?.includes(pkmn[ttdata]) || areas[i].spawns.uncommon?.includes(pkmn[ttdata]) || areas[i].spawns.rare?.includes(pkmn[ttdata])){
                     wildSpawn = areas[i].id
                 }
             }
+
+        
 
 
 

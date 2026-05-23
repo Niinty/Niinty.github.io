@@ -397,8 +397,14 @@ async function processSprite(img) {
   img.dataset.lastSrc = img.src;
 
   if (!img.complete) {
-    await new Promise(resolve => img.onload = resolve);
+    await new Promise(resolve => {
+      img.onload = resolve;
+      img.onerror = resolve; // resolve também em caso de erro, não trava
+    });
   }
+
+  // Imagem falhou ou está vazia — não tenta trimar
+  if (!img.naturalWidth || img.naturalWidth === 0) return;
 
   try {
     const result = await trimTransparent(img);
