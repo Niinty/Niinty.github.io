@@ -1035,8 +1035,10 @@ function leaveCombat(){
         rarePkmnChance += 0.01
      }
 
-
-    if (item.mysteryEgg.got>0 && areas[saved.currentArea].spawns!=undefined) {//wild
+    
+     // DEPOIS:
+    if (item.mysteryEgg.got>0 && areas[saved.currentArea].spawns!=undefined && !areas[saved.currentArea]?.isLegendsBattle) {//wild
+    //if (item.mysteryEgg.got>0 && areas[saved.currentArea].spawns!=undefined) {//wild
 
 
     for (let i = 0; i < item.mysteryEgg.got; i++) {
