@@ -301,14 +301,24 @@ function _buildLegendCard(legend) {
     var spriteSrc = "/img/pkmn/sprite/" + legend.id + ".png";
 
     // Texto do botão e estado
-    var btnLabel, btnDisabled, btnClass;
+        var btnLabel, btnDisabled, btnClass;
     if (isActive) {
-        var isFighting = (saved.currentArea === (LEGENDS_AREA_PREFIX + legend.id)) &&
-                          document.getElementById("content-explore")?.style.display === "flex";
+        var isFighting = saved.currentArea === (LEGENDS_AREA_PREFIX + legend.id);
+        var inOtherBattle = saved.currentArea !== undefined && !isFighting;
 
-        btnLabel    = isFighting ? "↩ Return to Battle" : "▶ Battle!";
-        btnDisabled = "";
-        btnClass    = "legend-btn legend-btn--battle";
+        if (isFighting) {
+            btnLabel    = "↩ Return to Battle";
+            btnDisabled = "";
+            btnClass    = "legend-btn legend-btn--battle";
+        } else if (inOtherBattle) {
+            btnLabel    = "⚔ Termine a batalha em andamento primeiro!";
+            btnDisabled = "disabled";
+            btnClass    = "legend-btn legend-btn--disabled";
+        } else {
+            btnLabel    = "▶ Battle!";
+            btnDisabled = "";
+            btnClass    = "legend-btn legend-btn--battle";
+        }
     } else {
         var hasEnough = _getApricornCount() >= legend.unlockCost;
         btnLabel    = "🍎 Unlock (" + legend.unlockCost + " Black Apricorn)";
@@ -405,6 +415,7 @@ function _handleLegendCardBtn(btn) {
         document.getElementById("genetics-menu").style.display   = "none";
         document.getElementById("shop-menu").style.display       = "none";
         document.getElementById("dimension-menu").style.display  = "none";
+        document.getElementById("dictionary-menu").style.display = "none";
         document.getElementById("explore-menu").style.display    = "none";
         // Restaura tela de batalha
         document.getElementById("content-explore").style.display = "flex";
@@ -471,13 +482,23 @@ function _confirmLegendUnlock(legendId) {
 }
 
 function _startLegendBattle(legendId) {
+    
     var areaId = LEGENDS_AREA_PREFIX + legendId;
+
     if (!areas[areaId]) {
         _showLegendToast("Battle area not found. Try reloading.", "error");
         return;
     }
 
+    // Bloqueia se já estiver em batalha (Wild, VS, Frontier, etc.)
+    if (saved.currentArea !== undefined) {
+        _showLegendToast("Finish your current battle before challenging a Legend!", "error");
+        return;
+    }
+
     closeLegendsMenu();
+
+
     document.getElementById("menu-button").classList.remove("menu-button-open");
 
     // Seta buffer e abre seleção de time — mesmo padrão das outras áreas
