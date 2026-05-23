@@ -20,19 +20,19 @@ const LEGENDS_LIST = [
         hpMultiplier: 3.0,
         damageMultiplier: 3.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 100,
+        battleLevel: 70,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 200, // tier3difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 0.0,
+        catchRate: 1.0,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            //{ itemId: "charcoal", amount: 1, chance: 1.0 },
+            { itemId: "charcoal", amount: 1, chance: 1.0 },
         ],
         // Background da área de batalha
         background: "cave",
         // Nível com que o Pokémon é dado ao jogador ao capturar
-        giveLevel: 1,
+        giveLevel: 70,
     },
     // ── Exemplo de como adicionar o próximo ──────────────────────────────────
     // {
@@ -270,11 +270,11 @@ function _buildLegendsHTML() {
                 '</div>',
                 '<button class="legends-close-btn" onclick="closeLegendsMenu()">✕</button>',
             '</div>',
-            '<div class="legends-subtitle">Gaste suas Bottle Caps para desafiar um Pokémon lendário!</div>',
+            '<div class="legends-subtitle">Spend Black Apricorns to challenge Legendary Pokémon</div>',
             '<div class="legends-apricorn-count">',
                 '<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display=\'none\'" class="legends-apricorn-icon">',
                 '<span id="legends-apricorn-display">',
-                    _getApricornCount() + ' Bottle Cap' + (_getApricornCount() !== 1 ? 's' : ''),
+                    _getApricornCount() + ' Black Apricorn' + (_getApricornCount() !== 1 ? 's' : ''),
                 '</span>',
             '</div>',
             '<div class="legends-grid">',
@@ -309,7 +309,7 @@ function _buildLegendCard(legend) {
         btnClass    = "legend-btn legend-btn--battle";
     } else {
         var hasEnough = _getApricornCount() >= legend.unlockCost;
-        btnLabel    = "🍎 Unlock (" + legend.unlockCost + " Bottle Cap)";
+        btnLabel    = "🍎 Unlock (" + legend.unlockCost + " Black Apricorn)";
         btnDisabled = hasEnough ? "" : "disabled";
         btnClass    = "legend-btn legend-btn--unlock" + (hasEnough ? "" : " legend-btn--disabled");
     }
@@ -421,7 +421,7 @@ function _showLegendUnlockConfirm(legendId) {
     var have     = _getApricornCount();
 
     if (have < legend.unlockCost) {
-        _showLegendToast("Sem Bottle Caps suficientes! (Necessita " + legend.unlockCost + ", Possui " + have + ")", "error");
+        _showLegendToast("Not enough Black Apricorns! (Need " + legend.unlockCost + ", have " + have + ")", "error");
         return;
     }
 
@@ -435,9 +435,9 @@ function _showLegendUnlockConfirm(legendId) {
             <img src="img/pkmn/sprite/${legendId}.png" style="width:64px; image-rendering:pixelated">
             <div style="font-size:1rem; font-weight:700">${pkmnName}</div>
             <div style="font-size:0.85rem; opacity:0.8; text-align:center">
-                Consumir <strong>${legend.unlockCost} Bottle Caps(s)</strong> para desbloquear ${pkmnName} por <strong>72 horas</strong>?
+                Spend <strong>${legend.unlockCost} Black Apricorn(s)</strong> to unlock ${pkmnName} for <strong>72 hours</strong>?
             </div>
-            <div style="font-size:0.8rem; opacity:0.6">Você tem: ${have} Bottle Caps</div>
+            <div style="font-size:0.8rem; opacity:0.6">You have: ${have} Black Apricorn(s)</div>
         </div>
     `;
     document.getElementById("tooltipBottom").innerHTML = `
@@ -462,9 +462,9 @@ function _confirmLegendUnlock(legendId) {
     if (success) {
         closeLegendsMenu();
         openLegendsMenu();
-        _showLegendToast(pkmnName + " Liberado! 72 hours restantes.", "sucesso");
+        _showLegendToast(pkmnName + " unlocked! 72 hours remaining.", "success");
     } else {
-        _showLegendToast("Não foi possível desbloquear. Confira suas Bottle Caps.", "error");
+        _showLegendToast("Could not unlock. Check your Black Apricorns.", "error");
     }
 }
 
@@ -579,7 +579,7 @@ function _updateLegendsTimers() {
     var apricornDisplay = document.getElementById("legends-apricorn-display");
     if (apricornDisplay) {
         var count = _getApricornCount();
-        apricornDisplay.textContent = count + " Bottle Caps" + (count !== 1 ? "s" : "");
+        apricornDisplay.textContent = count + " Black Apricorn" + (count !== 1 ? "s" : "");
     }
 }
 
