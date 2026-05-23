@@ -18,11 +18,11 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
         hpMultiplier: 5.0,
-        damageMultiplier: 6.5,
+        damageMultiplier: 8.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 120,
+        battleLevel: 150,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 200, // tier3difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.05,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
