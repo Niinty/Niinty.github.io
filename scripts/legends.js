@@ -13,26 +13,29 @@ const LEGENDS_LIST = [
     {
         id: "mewtwo",
         // Custo em Black Apricorns para desbloquear
-        unlockCost: 1,
+        unlockCost: 3,
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 2.0,
+        hpMultiplier: 4.0,
+        damageMultiplier: 4.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 70,
+        battleLevel: 100,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 200, // tier3difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 0.0,
+        catchRate: 0.05,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "bottleCap", amount: 1, chance: 1.0 },
+            { itemId: "bottleCap", amount: 10, chance: 0.5 },
+            { itemId: "twistedSpoon", amount: 1, chance: 0.5 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.35 },
+            { itemId: "psychicGem", amount: 1, chance: 0.05 }, 
         ],
         // Background da área de batalha
         background: "cave",
         // Nível com que o Pokémon é dado ao jogador ao capturar
-        giveLevel: 70,
+        giveLevel: 10,
     },
     // ── Exemplo de como adicionar o próximo ──────────────────────────────────
     // {
@@ -54,7 +57,7 @@ const LEGENDS_LIST = [
 // 2. CONSTANTES INTERNAS
 // ---------------------------------------------------------------------------
 
-const LEGENDS_APRICORN_ID   = "bottleCap";
+const LEGENDS_APRICORN_ID   = "blackApricorn";
 const LEGENDS_AREA_PREFIX   = "legendsBattle_";   // ex: "legendsBattle_mewtwo"
 const LEGENDS_SAVE_KEY      = "legendsData";
 
@@ -477,28 +480,19 @@ function _startLegendBattle(legendId) {
     closeLegendsMenu();
     document.getElementById("menu-button").classList.remove("menu-button-open");
 
-    // Seta currentArea ANTES do timeout para shouldCombatStop() não parar o gameLoop
-    areas[areaId].hpPercentage = undefined;
-    saved.currentArea       = areaId;
+    // Seta buffer e abre seleção de time — mesmo padrão das outras áreas
     saved.currentAreaBuffer = areaId;
+    saved.currentArea       = areaId;
     saved.lastAreaJoined    = areaId;
+    areas[areaId].hpPercentage = undefined;
 
-    if (typeof voidAnimation === "function") {
-        voidAnimation("explore-transition", "exploreTransition 1s 1");
-        document.getElementById("explore-transition").style.display = "flex";
-    }
-
-    setTimeout(function() {
-        document.getElementById("explore-menu").style.display    = "none";
-        document.getElementById("vs-menu").style.display         = "none";
-        document.getElementById("training-menu").style.display   = "none";
-        document.getElementById("area-end").style.display        = "none";
-        document.getElementById("content-explore").style.display = "flex";
-        document.getElementById("menu-button-parent").style.display = "flex";
-
-        if (typeof initialiseArea === "function") initialiseArea();
-        if (typeof saveGame === "function") saveGame();
-    }, 500);
+    document.getElementById("preview-team-exit").style.display = "flex";
+    document.getElementById("team-menu").style.zIndex = "50";
+    document.getElementById("team-menu").style.display = "flex";
+    document.getElementById("menu-button-parent").style.display = "none";
+    document.getElementById("explore-menu").style.display = "none";
+    updatePreviewTeam();
+    afkSeconds = 0;
 }
 
 // ---------------------------------------------------------------------------
