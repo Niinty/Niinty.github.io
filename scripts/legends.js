@@ -13,7 +13,7 @@ const LEGENDS_LIST = [
     {
         id: "mewtwo",
         // Custo em Black Apricorns para desbloquear
-        unlockCost: 3,
+        unlockCost: 1,
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
@@ -24,10 +24,10 @@ const LEGENDS_LIST = [
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 200, // tier3difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 1.0,
+        catchRate: 0.0,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "charcoal", amount: 1, chance: 1.0 },
+            { itemId: "bottleCap", amount: 1, chance: 1.0 },
         ],
         // Background da área de batalha
         background: "cave",
@@ -54,7 +54,7 @@ const LEGENDS_LIST = [
 // 2. CONSTANTES INTERNAS
 // ---------------------------------------------------------------------------
 
-const LEGENDS_APRICORN_ID   = "blackApricorn";
+const LEGENDS_APRICORN_ID   = "bottleCap";
 const LEGENDS_AREA_PREFIX   = "legendsBattle_";   // ex: "legendsBattle_mewtwo"
 const LEGENDS_SAVE_KEY      = "legendsData";
 
