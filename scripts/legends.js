@@ -25,7 +25,7 @@ const LEGENDS_LIST = [
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 0.05,
+        catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
             { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
@@ -52,7 +52,7 @@ const LEGENDS_LIST = [
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 0.05,
+        catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
             { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
@@ -79,7 +79,7 @@ const LEGENDS_LIST = [
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 0.05,
+        catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
             { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
@@ -106,7 +106,7 @@ const LEGENDS_LIST = [
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 0.05,
+        catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
             { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
