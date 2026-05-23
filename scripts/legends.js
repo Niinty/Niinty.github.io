@@ -27,7 +27,7 @@ const LEGENDS_LIST = [
         catchRate: 0.05,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "bottleCap", amount: 10, chance: 0.5 },
+            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
             { itemId: "twistedSpoon", amount: 1, chance: 0.5 },
             { itemId: "blackApricorn", amount: 1, chance: 0.35 },
             { itemId: "psychicGem", amount: 1, chance: 0.05 }, 
