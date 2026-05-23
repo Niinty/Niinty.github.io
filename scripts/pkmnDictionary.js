@@ -4059,16 +4059,16 @@ pkmn.megaDragonite = {
 pkmn.mewtwo = {
     type: ["psychic"],
     bst: {
-        hp: 106*1.03,
-        atk: 110*1.03,
-        def: 90*1.03,
-        satk: 154*1.03,
-        sdef: 90*1.03,
-        spe: 130*1.03,
+        hp: 106*1.1,
+        atk: 110*1.1,
+        def: 90*1.1,
+        satk: 154*1.1,
+        sdef: 90*1.1,
+        spe: 130*1.1,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaMewtwoX, item: item.mewtwoniteX } } },
     hiddenAbility: ability.aromaVeil,
-    lore: `Mewtwo é um Pokémon que foi criado por manipulação genética. No entanto, embora o poder científico dos humanos tenha criado o corpo desse Pokémon, eles falharam em conceder a Mewtwo um coração compassivo.`
+    lore: `Mewtwo é um Pokémon criado por manipulação genética. No entanto, embora o poder científico dos humanos tenha criado o corpo desse Pokémon, eles falharam miseravelmente em conceder a Mewtwo um coração compassivo.`
 }
 
 pkmn.megaMewtwoX = {
