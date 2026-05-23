@@ -20,14 +20,15 @@ const LEGENDS_LIST = [
         hpMultiplier: 2.0,
         damageMultiplier: 5.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 300,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.05,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
+            {item: item.goldenBottleCap.id, amount: 15, chance: 1.0 },
+            //{ itemId: "goldenBottleCap", amount: 25, chance: 0.75 },
             { itemId: "twistedSpoon", amount: 1, chance: 0.5 },
             { itemId: "blackApricorn", amount: 1, chance: 0.35 },
             { itemId: "psychicGem", amount: 1, chance: 0.05 }, 
