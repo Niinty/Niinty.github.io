@@ -3921,7 +3921,7 @@ pkmn.articuno = {
         spe: 85*1.12,
     },
     hiddenAbility: ability.glacialBody,
-    lore : `The cold of winter. Air chills and frost gathers in its wake. Snowfall follows as it passes, and mountains are left sealed in ice where it lingers.`,
+    lore : `Articuno é um Pokémon pássaro lendário que pode controlar o gelo. O bater de suas asas resfria o ar. Como resultado, diz-se que quando este Pokémon voa, a neve cai.`,
     eggMove : move.snowscape
 }
 
@@ -3951,7 +3951,7 @@ pkmn.zapdos = {
         spe: 100*1.12,
     },
     hiddenAbility: ability.dauntingLook,
-    lore: `The storm of summer. Thunder rolls with its cry, and lightning strikes in time with its wings. The skies darken as it passes, and violent storms follow its soar.`,
+    lore: `Zapdos é um Pokémon pássaro lendário que possui a habilidade de controlar a eletricidade. Ele geralmente vive em nuvens de tempestade. Ele ganha poder se for atingido por raios.`,
     eggMove : move.charge
 }
 
@@ -3981,7 +3981,7 @@ pkmn.moltres = {
         spe: 90*1.12,
     },
     hiddenAbility: ability.fieryPelt,
-    lore : `The warmth of spring. Its fire does not scorch the world, but stirs it awake, melting snow and kindling new life. The cold loosens its hold as it passes, and the land is renewed by heat and light.`,
+    lore : `Moltres é um Pokémon pássaro lendário que possui a habilidade de controlar o fogo. Se este Pokémon estiver ferido, diz-se que ele mergulha seu corpo no magma derretido de um vulcão para queimar e curar a si mesmo.`,
     eggMove : move.magmaStorm
 }
 
