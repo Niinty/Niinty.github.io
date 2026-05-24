@@ -426,3 +426,117 @@
 #tooltip {
     z-index: 9500 !important;
 }
+
+/* ── Grid de regiões ─────────────────────────────────────────────────────── */
+
+.legends-region-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legends-region-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    position: relative;
+    border-left: 3px solid var(--region-color, #ffd700);
+}
+
+.legends-region-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateX(2px);
+}
+
+.legends-region-card:active {
+    transform: scale(0.98);
+}
+
+.legends-region-card--soon {
+    opacity: 0.45;
+    cursor: not-allowed;
+    border-left-color: #555;
+}
+
+.legends-region-card--soon:hover {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.08);
+    transform: none;
+}
+
+.legends-region-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+}
+
+.legends-region-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.legends-region-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--light1, #e8ddd0);
+    letter-spacing: 0.02em;
+}
+
+.legends-region-count {
+    font-size: 0.72rem;
+    color: var(--light2, #b0a898);
+    opacity: 0.8;
+}
+
+.legends-region-soon-text {
+    color: #888;
+    font-style: italic;
+}
+
+.legends-region-badge {
+    background: rgba(255, 215, 0, 0.15);
+    color: #ffd700;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.legends-region-arrow {
+    color: var(--light2, #b0a898);
+    font-size: 1.2rem;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+/* ── Botão back ──────────────────────────────────────────────────────────── */
+
+.legends-back-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    color: var(--light2, #b0a898);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 1px 8px;
+    transition: background 0.15s, color 0.15s;
+    line-height: 1.4;
+    margin-right: 4px;
+}
+
+.legends-back-btn:hover {
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+}
