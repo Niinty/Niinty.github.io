@@ -13,6 +13,7 @@ const LEGENDS_LIST = [
 
         {
         id: "articuno",
+        region: "kanto",
         // Custo em Black Apricorns para desbloquear
         unlockCost: 2,
         // Duração da janela de batalha em ms (72h)
@@ -40,6 +41,7 @@ const LEGENDS_LIST = [
 
     {
         id: "zapdos",
+        region: "kanto",
         // Custo em Black Apricorns para desbloquear
         unlockCost: 2,
         // Duração da janela de batalha em ms (72h)
@@ -67,6 +69,7 @@ const LEGENDS_LIST = [
 
     {
         id: "moltres",
+        region: "kanto",
         // Custo em Black Apricorns para desbloquear
         unlockCost: 2,
         // Duração da janela de batalha em ms (72h)
@@ -94,6 +97,7 @@ const LEGENDS_LIST = [
 
     {
         id: "mewtwo",
+        region: "kanto",
         // Custo em Black Apricorns para desbloquear
         unlockCost: 2,
         // Duração da janela de batalha em ms (72h)
@@ -138,8 +142,26 @@ const LEGENDS_LIST = [
 // ---------------------------------------------------------------------------
 
 const LEGENDS_APRICORN_ID   = "blackApricorn";
+
+// Regiões disponíveis no menu de seleção
+const LEGENDS_REGIONS = [
+    { id: "kanto",  name: "Kanto",  color: "#E8534A", icon: "🔴" },
+    { id: "johto",  name: "Johto",  color: "#C0A060", icon: "🟡" },
+    { id: "hoenn",  name: "Hoenn",  color: "#4A90D9", icon: "🔵" },
+    { id: "sinnoh", name: "Sinnoh", color: "#7B68EE", icon: "🟣" },
+    { id: "unova",  name: "Unova",  color: "#888888", icon: "⚫" },
+    { id: "kalos",  name: "Kalos",  color: "#5BA85A", icon: "🟢" },
+    { id: "alola",  name: "Alola",  color: "#F4A460", icon: "🟠" },
+    { id: "galar",  name: "Galar",  color: "#9370DB", icon: "🟣" },
+    { id: "hisui",  name: "Hisui",  color: "#87CEEB", icon: "🩵" },
+    { id: "paldea", name: "Paldea", color: "#E07B5A", icon: "🟠" },
+    { id: "gen10",  name: "Gen 10", color: "#555555", icon: "⏳", comingSoon: true },
+];
 const LEGENDS_AREA_PREFIX   = "legendsBattle_";   // ex: "legendsBattle_mewtwo"
 const LEGENDS_SAVE_KEY      = "legendsData";
+
+// Estado interno — região atualmente selecionada
+var _legendsCurrentRegion   = null;
 
 // ---------------------------------------------------------------------------
 // 3. INICIALIZAÇÃO DO SAVE
@@ -308,26 +330,36 @@ function _getLegendConfig(legendId) {
 var _legendsTimerInterval = null;
 
 function openLegendsMenu() {
-    // Remove modal anterior se existir
+    _legendsCurrentRegion = null;
+    _openLegendsModal(_buildLegendsRegionHTML());
+}
+
+function openLegendsRegion(regionId) {
+    _legendsCurrentRegion = regionId;
+    _openLegendsModal(_buildLegendsHTML(regionId));
+    _legendsTimerInterval = setInterval(_updateLegendsTimers, 1000);
+    _bindLegendCardEvents();
+}
+
+function _openLegendsModal(html) {
+    // Para timer anterior se existir
+    if (_legendsTimerInterval) {
+        clearInterval(_legendsTimerInterval);
+        _legendsTimerInterval = null;
+    }
+
     var existing = document.getElementById("legends-modal");
     if (existing) existing.remove();
 
     var modal = document.createElement("div");
     modal.id  = "legends-modal";
     modal.className = "legends-modal-overlay";
-    modal.innerHTML = _buildLegendsHTML();
+    modal.innerHTML = html;
     document.body.appendChild(modal);
 
-    // Fecha ao clicar no overlay (fora do painel)
     modal.addEventListener("click", function(e) {
         if (e.target === modal) closeLegendsMenu();
     });
-
-    // Inicia atualização dos timers a cada segundo
-    _legendsTimerInterval = setInterval(_updateLegendsTimers, 1000);
-
-    // Vincula eventos dos cards
-    _bindLegendCardEvents();
 }
 
 function closeLegendsMenu() {
@@ -339,10 +371,36 @@ function closeLegendsMenu() {
     }
 }
 
-function _buildLegendsHTML() {
-    var cardsHTML = LEGENDS_LIST.map(function(legend) {
-        return _buildLegendCard(legend);
-    }).join("");
+function _buildLegendsRegionHTML() {
+    var apricornCount = _getApricornCount();
+
+    var regionsHTML = LEGENDS_REGIONS.map(function(region) {
+        // Conta lendários disponíveis e ativos nesta região
+        var legendsInRegion = LEGENDS_LIST.filter(function(l) { return l.region === region.id; });
+        var activeCount     = legendsInRegion.filter(function(l) { return _isLegendActive(l.id); }).length;
+        var total           = legendsInRegion.length;
+        var comingSoon      = region.comingSoon || total === 0;
+
+        var badgeHTML = activeCount > 0
+            ? '<span class="legends-region-badge">' + activeCount + ' active</span>'
+            : '';
+
+        return [
+            '<div class="legends-region-card' + (comingSoon ? ' legends-region-card--soon' : '') + '" ',
+                comingSoon ? '' : 'onclick="openLegendsRegion(\'' + region.id + '\')"',
+                'style="--region-color:' + region.color + '">',
+                '<span class="legends-region-icon">' + region.icon + '</span>',
+                '<div class="legends-region-info">',
+                    '<span class="legends-region-name">' + region.name + '</span>',
+                    comingSoon
+                        ? '<span class="legends-region-count legends-region-soon-text">Coming Soon</span>'
+                        : '<span class="legends-region-count">' + total + ' Legendary Pokémon</span>',
+                '</div>',
+                badgeHTML,
+                comingSoon ? '' : '<span class="legends-region-arrow">›</span>',
+            '</div>',
+        ].join('');
+    }).join('');
 
     return [
         '<div class="legends-panel">',
@@ -353,9 +411,48 @@ function _buildLegendsHTML() {
                 '</div>',
                 '<button class="legends-close-btn" onclick="closeLegendsMenu()">✕</button>',
             '</div>',
-            '<div class="legends-subtitle">Spend Black Apricorns to challenge Legendary Pokémon</div>',
+            '<div class="legends-subtitle">Choose a region to challenge its Legendary Pokémon</div>',
+            '<div class="legends-apricorn-count">',
+            '<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display=\'none\'" class="legends-apricorn-icon">',
+                //'<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display='none," class="legends-apricorn-icon">',
+                '<span id="legends-apricorn-display">',
+                    apricornCount + ' Black Apricorn' + (apricornCount !== 1 ? 's' : ''),
+                '</span>',
+            '</div>',
+            '<div class="legends-region-grid">',
+                regionsHTML,
+            '</div>',
+        '</div>',
+    ].join('');
+}
+
+function _buildLegendsHTML(regionId) {
+    var regionConfig = LEGENDS_REGIONS.find(function(r) { return r.id === regionId; });
+    var regionName   = regionConfig ? regionConfig.name : regionId;
+    var filtered     = LEGENDS_LIST.filter(function(l) { return l.region === regionId; });
+    var cardsHTML    = filtered.map(function(legend) {
+        return _buildLegendCard(legend);
+    }).join("");
+
+    if (!cardsHTML) {
+        cardsHTML = '<div style="text-align:center;padding:20px;opacity:0.6">No Legendary Pokémon in this region yet.</div>';
+    }
+
+    return [
+        '<div class="legends-panel">',
+            '<div class="legends-header">',
+                '<div class="legends-title-wrap">',
+                    '<button class="legends-back-btn" onclick="openLegendsMenu()">&#8249;</button>',
+                    '<span class="legends-icon">&#9876;</span>',
+                    '<span class="legends-title">' + regionName + '</span>',
+                '</div>',
+                '<button class="legends-close-btn" onclick="closeLegendsMenu()">&#x2715;</button>',
+            '</div>',
+            '<div class="legends-subtitle">Spend Black Apricorns to challenge Legendary Pokemon</div>',
             '<div class="legends-apricorn-count">',
                 '<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display=\'none\'" class="legends-apricorn-icon">',
+                //'<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display='none'" class="legends-apricorn-icon">',
+                //`<img src="img/items/${LEGENDS_APRICORN_ID}.png" onerror="this.style.display='none'" class="legends-apricorn-icon">`,
                 '<span id="legends-apricorn-display">',
                     _getApricornCount() + ' Black Apricorn' + (_getApricornCount() !== 1 ? 's' : ''),
                 '</span>',
@@ -735,4 +832,3 @@ function registerLegends() {
     registerLegendAreas();
     console.log("[Legends] Sistema inicializado. Lendários registrados:", LEGENDS_LIST.map(function(l){ return l.id; }));
 }
-
