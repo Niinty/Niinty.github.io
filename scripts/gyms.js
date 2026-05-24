@@ -108,7 +108,7 @@ const GYMS_LEADERS = [
             slot5 : pkmn.victreebel,
             slot5Moves : [move.appleAcid.id, move.noxiousTorque.id, move.seedBomb.id, move.toxic.id],
             slot6 : pkmn.exeggutor,
-            slot6Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psyBeam.id],
+            slot6Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psybeam.id],
         },
 
         itemReward: {
