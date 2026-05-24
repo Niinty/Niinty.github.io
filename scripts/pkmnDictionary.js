@@ -3913,27 +3913,27 @@ pkmn.snorlaxGmax = {
 pkmn.articuno = {
     type: ["ice","flying"],
     bst: {
-        hp: 90,
-        atk: 85,
-        def: 100,
-        satk: 95,
-        sdef: 125,
-        spe: 85,
+        hp: 90*1.12,
+        atk: 85*1.12,
+        def: 100*1.12,
+        satk: 95*1.12,
+        sdef: 125*1.12,
+        spe: 85*1.12,
     },
     hiddenAbility: ability.glacialBody,
-    lore : `The cold of winter. Air chills and frost gathers in its wake. Snowfall follows as it passes, and mountains are left sealed in ice where it lingers.`,
+    lore : `Articuno é um Pokémon pássaro lendário que pode controlar o gelo. O bater de suas asas resfria o ar. Como resultado, diz-se que quando este Pokémon voa, a neve cai.`,
     eggMove : move.snowscape
 }
 
 pkmn.galarianArticuno = {
     type: ["psychic","flying"],
     bst: {
-        hp: 90,
-        atk: 85,
-        def: 85,
-        satk: 125,
-        sdef: 150,
-        spe: 95,
+        hp: 90*1.12,
+        atk: 85*1.12,
+        def: 85*1.12,
+        satk: 125*1.12,
+        sdef: 150*1.12,
+        spe: 95*1.12,
     },
     hiddenAbility: ability.justified,
     signature : move.freezingGlare
@@ -3943,27 +3943,27 @@ pkmn.galarianArticuno = {
 pkmn.zapdos = {
     type: ["electric","flying"],
     bst: {
-        hp: 90,
-        atk: 90,
-        def: 85,
-        satk: 125,
-        sdef: 90,
-        spe: 100,
+        hp: 90*1.12,
+        atk: 90*1.12,
+        def: 85*1.12,
+        satk: 125*1.12,
+        sdef: 90*1.12,
+        spe: 100*1.12,
     },
     hiddenAbility: ability.dauntingLook,
-    lore: `The storm of summer. Thunder rolls with its cry, and lightning strikes in time with its wings. The skies darken as it passes, and violent storms follow its soar.`,
+    lore: `Zapdos é um Pokémon pássaro lendário que possui a habilidade de controlar a eletricidade. Ele geralmente vive em nuvens de tempestade. Ele ganha poder se for atingido por raios.`,
     eggMove : move.charge
 }
 
 pkmn.galarianZapdos = {
     type: ["fighting","flying"],
     bst: {
-        hp: 90,
-        atk: 125,
-        def: 90,
-        satk: 85,
-        sdef: 90,
-        spe: 150,
+        hp: 90*1.12,
+        atk: 125*1.12,
+        def: 90*1.12,
+        satk: 85*1.12,
+        sdef: 90*1.12,
+        spe: 150*1.12,
     },
     hiddenAbility: ability.angerPoint,
     signature : move.thunderousKick
@@ -3973,27 +3973,27 @@ pkmn.galarianZapdos = {
 pkmn.moltres = {
     type: ["fire","flying"],
     bst: {
-        hp: 90,
-        atk: 100,
-        def: 90,
-        satk: 125,
-        sdef: 85,
-        spe: 90,
+        hp: 90*1.12,
+        atk: 100*1.12,
+        def: 90*1.12,
+        satk: 125*1.12,
+        sdef: 85*1.12,
+        spe: 90*1.12,
     },
     hiddenAbility: ability.fieryPelt,
-    lore : `The warmth of spring. Its fire does not scorch the world, but stirs it awake, melting snow and kindling new life. The cold loosens its hold as it passes, and the land is renewed by heat and light.`,
+    lore : `Moltres é um Pokémon pássaro lendário que possui a habilidade de controlar o fogo. Se este Pokémon estiver ferido, diz-se que ele mergulha seu corpo no magma derretido de um vulcão para queimar e curar a si mesmo.`,
     eggMove : move.magmaStorm
 }
 
 pkmn.galarianMoltres = {
     type: ["dark","flying"],
     bst: {
-        hp: 90,
-        atk: 85,
-        def: 90,
-        satk: 150,
-        sdef: 125,
-        spe: 90,
+        hp: 90*1.12,
+        atk: 85*1.12,
+        def: 90*1.12,
+        satk: 150*1.12,
+        sdef: 125*1.12,
+        spe: 90*1.12,
     },
     hiddenAbility: ability.gloomilate,
     signature : move.fieryWrath
@@ -4059,38 +4059,39 @@ pkmn.megaDragonite = {
 pkmn.mewtwo = {
     type: ["psychic"],
     bst: {
-        hp: 106,
-        atk: 110,
-        def: 90,
-        satk: 154,
-        sdef: 90,
-        spe: 130,
+        hp: 106*1.12,
+        atk: 110*1.12,
+        def: 90*1.12,
+        satk: 154*1.12,
+        sdef: 90*1.12,
+        spe: 130*1.12,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaMewtwoX, item: item.mewtwoniteX } } },
-    lore: `Shaped by human hands, bears the weight of creation twisted. Though it carries the memory of life that came before, it walks a path apart, questioning the bounds of its own existence.`
+    hiddenAbility: ability.aromaVeil,
+    lore: `Mewtwo é um Pokémon criado por manipulação genética. No entanto, embora o poder científico dos humanos tenha criado o corpo desse Pokémon, eles falharam miseravelmente em conceder a Mewtwo um coração compassivo.`
 }
 
 pkmn.megaMewtwoX = {
     type: ["psychic","fighting"],
     bst: {
-        hp: 106,
-        atk: 190,
-        def: 100,
-        satk: 154,
-        sdef: 100,
-        spe: 130,
+        hp: 106*1.12,
+        atk: 190*1.12,
+        def: 100*1.12,
+        satk: 154*1.12,
+        sdef: 100*1.12,
+        spe: 130*1.12,
     }
 }
 
 pkmn.megaMewtwoY = {
     type: ["psychic"],
     bst: {
-        hp: 106,
-        atk: 150,
-        def: 70,
-        satk: 194,
-        sdef: 120,
-        spe: 140,
+        hp: 106*1.12,
+        atk: 150*1.12,
+        def: 70*1.12,
+        satk: 194*1.12,
+        sdef: 120*1.12,
+        spe: 140*1.12,
     }
 }
 

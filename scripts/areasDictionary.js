@@ -1864,7 +1864,7 @@ areas.fierySummit = {
 */
 
 
-areas.eventZapdos = {
+/*areas.eventZapdos = {
     rotation: 1,
     type: `event`,
     name: `Zapdos Lair`,
@@ -1925,7 +1925,7 @@ areas.eventMoltres = {
     },
     reward : [pkmn.moltres],
     category: 1,
-}
+}*/
 
 areas.eventMegaCamerupt = {
     rotation: 1,
@@ -2420,7 +2420,7 @@ areas.eventMegaPinsir = {
     category: 2,
 }
 
-areas.eventGalarianZapdos = {
+/*areas.eventGalarianZapdos = {
     rotation: 2,
     type: `event`,
     name: `Badlands Roost`,
@@ -2439,7 +2439,7 @@ areas.eventGalarianZapdos = {
     },
     reward : [pkmn.galarianZapdos],
     category: 2,
-}
+}*/
 
 areas.eventTingLu = {
     rotation: 2,
@@ -3232,7 +3232,7 @@ areas.eventMegaDragonite = {
     category: 2,
 }
 
-areas.eventGalarianMoltres = {
+/*areas.eventGalarianMoltres = {
     rotation: 4,
     type: `event`,
     name: `Evil Roost`,
@@ -3251,7 +3251,7 @@ areas.eventGalarianMoltres = {
     },
     reward : [pkmn.galarianMoltres],
     category: 2,
-}
+}*/
 
 
 
@@ -3660,7 +3660,7 @@ areas.eventChiYu = {
     category: 2,
 }
 
-areas.eventGalarianArticuno = {
+/*areas.eventGalarianArticuno = {
     rotation: 5,
     type: `event`,
     name: `Frozen Roost`,
@@ -3679,7 +3679,7 @@ areas.eventGalarianArticuno = {
     },
     reward : [pkmn.galarianArticuno],
     category: 2,
-}
+}*/
 
 
 

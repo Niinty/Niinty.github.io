@@ -17,6 +17,23 @@
  */
 
 const GYM_BASE_HP_MULTIPLIER = 4
+
+// Regiões disponíveis no menu de Ginásios
+const GYM_REGIONS = [
+    { id: "kanto",  name: "Kanto",  color: "#E8534A", icon: "🔴" },
+    { id: "johto",  name: "Johto",  color: "#C0A060", icon: "🟡" },
+    { id: "hoenn",  name: "Hoenn",  color: "#4A90D9", icon: "🔵" },
+    { id: "sinnoh", name: "Sinnoh", color: "#7B68EE", icon: "🟣" },
+    { id: "unova",  name: "Unova",  color: "#888888", icon: "⚫" },
+    { id: "kalos",  name: "Kalos",  color: "#5BA85A", icon: "🟢" },
+    { id: "alola",  name: "Alola",  color: "#F4A460", icon: "🟠" },
+    { id: "galar",  name: "Galar",  color: "#9370DB", icon: "🟣" },
+    { id: "hisui",  name: "Hisui",  color: "#87CEEB", icon: "🩵" },
+    { id: "paldea", name: "Paldea", color: "#E07B5A", icon: "🟠" },
+];
+
+// Estado interno — região selecionada no menu
+var _gymsCurrentRegion = null;
 const GYM_LEVEL_CAP = 100
 const GYM_SCALE_PER_DEFEAT = 1.01 // A dificuldade escala 1% a cada vitória, o que é um aumento suave que mantém os líderes desafiadores mesmo após várias derrotas. O limite de 100% (tier IV) garante que a dificuldade não se torne impossível, mas ainda assim oferece um desafio significativo para jogadores experientes.
 const GYM_BADGE_DROP_CHANCE = 0.3 // Chance de dropar a insígnia ao derrotar o líder (se ainda não tiver a insígnia)
@@ -24,6 +41,7 @@ const GYM_BADGE_DROP_CHANCE = 0.3 // Chance de dropar a insígnia ao derrotar o 
 const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderBrock",
+        region: "kanto",
         order: 1,
         unlockAreaId: null,
         name: "Gym Leader Brock",
@@ -37,6 +55,7 @@ const GYMS_LEADERS = [
     },
     {
         areaId: "vsGymLeaderMisty",
+        region: "kanto",
         order: 2,
         unlockAreaId: "vsGymLeaderBrock",
         name: "Gym Leader Misty",
@@ -50,6 +69,7 @@ const GYMS_LEADERS = [
     },
     {
         areaId: "vsGymLeaderLtsurge",
+        region: "kanto",
         order: 3,
         unlockAreaId: "vsGymLeaderMisty",
         name: "Gym Leader Lt. Surge",
@@ -60,6 +80,56 @@ const GYMS_LEADERS = [
         background: "gym",
         level: 60,
         description: "Especialista em Pokémon do tipo Elétrico.",
+    },
+
+    {
+        areaId: "vsGymLeaderErika",
+        region: "kanto",
+        order: 4,
+        unlockAreaId: "vsGymLeaderLtsurge",
+        name: "Gym Leader Erika",
+        badge: "Rainbow Badge",
+        badgeItemId: "gymBadgeErika",
+        city: "Celadon City",
+        sprite: "erika",
+        background: "gym",
+        level: 80,
+        description: "Especialista em Pokémon do tipo Grama.",
+
+        team: {
+            slot1 : pkmn.vileplume,
+            slot1Moves : [move.trailblaze.id, move.sludge.id, move.razorLeaf.id, move.acid.id],
+            slot2 : pkmn.clefable,
+            slot2Moves : [move.lunarDance.id, move.alluringVoice.id, move.fairyWind.id, move.disarmingVoice.id],
+            slot3 : pkmn.tangela,
+            slot3Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
+            slot4 : pkmn.dewgong,
+            slot4Moves : [move.surf.id, move.auroraBeam.id, move.scald.id, move.blizzard.id],
+            slot5 : pkmn.victreebel,
+            slot5Moves : [move.appleAcid.id, move.noxiousTorque.id, move.seedBomb.id, move.toxic.id],
+            slot6 : pkmn.exeggutor,
+            slot6Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psyBeam.id],
+        },
+
+        itemReward: {
+                1: { item: item.spellTag.id,    amount: 1  },
+                2: { item: item.fashionCase.id, amount: 3  },
+                3: { item: item.bottleCap.id,   amount: 10 },
+        },
+
+        encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >Tier I Event Raids unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Victory Road</div>
+        <div style="filter:hue-rotate(50deg)" >Level Training unlocked</div>
+        </div>
+        `
+        openTooltip()
+        },
     },
 ]
 
@@ -231,16 +301,91 @@ function isGymLeaderUnlocked(gym) {
     return prev && prev.defeated === true
 }
 
-/** Monta o menu Ginásios (cartas iguais ao VS) */
-function updateGyms() {
+/** Monta o menu Ginásios — mostra regiões ou líderes da região selecionada */
+function updateGyms(regionId) {
     const listing = document.getElementById("gyms-listing")
     if (!listing) return
 
     listing.innerHTML = ""
-
     document.getElementById("gyms-menu-header").style.backgroundImage = "url(img/bg/gym.png)"
 
-    const sorted = [...GYMS_LEADERS].sort((a, b) => a.order - b.order)
+    // Se não há região selecionada, mostra a tela de seleção de regiões
+    if (!regionId && !_gymsCurrentRegion) {
+        _renderGymsRegions(listing)
+        return
+    }
+
+    const activeRegion = regionId || _gymsCurrentRegion
+    _gymsCurrentRegion = activeRegion
+    _renderGymsLeaders(listing, activeRegion)
+}
+
+function _renderGymsRegions(listing) {
+    // Botão de voltar não necessário aqui — é a tela inicial
+    const header = document.getElementById("gyms-menu-header")
+
+    const regionGrid = document.createElement("div")
+    regionGrid.style.cssText = "display:flex; flex-direction:column; gap:8px; padding:8px"
+
+    GYM_REGIONS.forEach(function(region) {
+        const leadersInRegion = GYMS_LEADERS.filter(function(g) { return g.region === region.id; })
+        const total = leadersInRegion.length
+        if (total === 0) return // Não mostra regiões sem líderes cadastrados
+
+        const defeated = leadersInRegion.filter(function(g) {
+            return areas[g.areaId] && areas[g.areaId].defeated
+        }).length
+
+        const card = document.createElement("div")
+        card.style.cssText = [
+            "display:flex; align-items:center; gap:12px; padding:12px 14px;",
+            "border-radius:10px; border:1px solid rgba(255,255,255,0.08);",
+            "background:rgba(255,255,255,0.03); cursor:pointer;",
+            "border-left:3px solid " + region.color + ";",
+            "transition:background 0.15s, transform 0.1s;"
+        ].join("")
+
+        card.onmouseover = function() { this.style.background = "rgba(255,255,255,0.07)"; this.style.transform = "translateX(2px)"; }
+        card.onmouseout  = function() { this.style.background = "rgba(255,255,255,0.03)"; this.style.transform = ""; }
+        card.onclick     = function() { updateGyms(region.id); }
+
+        card.innerHTML = [
+            '<span style="font-size:1.4rem;width:32px;text-align:center;flex-shrink:0">' + region.icon + '</span>',
+            '<div style="flex:1;display:flex;flex-direction:column;gap:2px">',
+                '<span style="font-size:0.95rem;font-weight:700;color:var(--light1,#e8ddd0)">' + region.name + '</span>',
+                '<span style="font-size:0.72rem;color:var(--light2,#b0a898);opacity:0.8">' + defeated + ' / ' + total + ' leaders defeated</span>',
+            '</div>',
+            '<span style="color:var(--light2,#b0a898);font-size:1.2rem;opacity:0.5">›</span>',
+        ].join("")
+
+        regionGrid.appendChild(card)
+    })
+
+    listing.appendChild(regionGrid)
+}
+
+function _renderGymsLeaders(listing, regionId) {
+    const regionConfig = GYM_REGIONS.find(function(r) { return r.id === regionId; })
+    const regionName   = regionConfig ? regionConfig.name : regionId
+
+    // Botão de voltar
+    const backBtn = document.createElement("div")
+    backBtn.style.cssText = "display:flex;align-items:center;gap:8px;padding:8px 8px 4px;cursor:pointer;opacity:0.7"
+    backBtn.onmouseover = function() { this.style.opacity = "1"; }
+    backBtn.onmouseout  = function() { this.style.opacity = "0.7"; }
+    backBtn.onclick = function() { _gymsCurrentRegion = null; updateGyms(); }
+    backBtn.innerHTML = '<span style="font-size:1.1rem">‹</span><span style="font-size:0.85rem">All Regions</span>'
+    listing.appendChild(backBtn)
+
+    // Filtra líderes da região
+    const filtered = GYMS_LEADERS.filter(function(g) { return g.region === regionId; })
+
+    if (filtered.length === 0) {
+        listing.innerHTML += '<div style="text-align:center;padding:20px;opacity:0.6">No gym leaders in this region yet.</div>'
+        return
+    }
+
+    const sorted = filtered.sort(function(a, b) { return a.order - b.order; })
     let anyListed = false
 
     for (const gym of sorted) {
@@ -342,8 +487,12 @@ function updateGyms() {
     }
 
     if (!anyListed) {
-        listing.innerHTML = `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; background:#ECDEB7; border-radius:0.3rem; height:15rem; width:15rem; text-align:center"><img src="img/pkmn/sprite/pikachuRockstar.png">No gym leaders available yet.<br><span style="font-size:0.9rem; opacity:0.7">Defeat the previous leader to unlock the next</span></div>`
+        const emptyDiv = document.createElement("div")
+        emptyDiv.style.cssText = "display:flex;flex-direction:column;justify-content:center;align-items:center;background:#ECDEB7;border-radius:0.3rem;height:15rem;width:15rem;text-align:center"
+        emptyDiv.innerHTML = '<img src="img/pkmn/sprite/pikachuRockstar.png">No gym leaders available yet.<br><span style="font-size:0.9rem;opacity:0.7">Defeat the previous leader to unlock the next</span>'
+        listing.appendChild(emptyDiv)
     }
 }
+
 
 registerGymLeaders()

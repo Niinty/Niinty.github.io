@@ -10,29 +10,116 @@
 // ---------------------------------------------------------------------------
 
 const LEGENDS_LIST = [
-    {
-        id: "mewtwo",
+
+        {
+        id: "articuno",
+        region: "kanto",
         // Custo em Black Apricorns para desbloquear
-        unlockCost: 3,
+        unlockCost: 2,
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
         hpMultiplier: 2.0,
-        damageMultiplier: 2.0,
+        damageMultiplier: 5.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 70,
+        battleLevel: 300,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 200, // tier3difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
-        catchRate: 1.0,
+        catchRate: 0.025,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
         drops: [
-            { itemId: "charcoal", amount: 1, chance: 1.0 },
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "neverMeltIce", amount: 1, chance: 0.1 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "iceCave",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "zapdos",
+        region: "kanto",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.025,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "magnet", amount: 1, chance: 0.1 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "trench",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "moltres",
+        region: "kanto",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.025,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "charcoal", amount: 1, chance: 0.1 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "volcano",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "mewtwo",
+        region: "kanto",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.025,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
         ],
         // Background da área de batalha
         background: "cave",
         // Nível com que o Pokémon é dado ao jogador ao capturar
-        giveLevel: 70,
+        giveLevel: 1,
     },
     // ── Exemplo de como adicionar o próximo ──────────────────────────────────
     // {
@@ -55,8 +142,26 @@ const LEGENDS_LIST = [
 // ---------------------------------------------------------------------------
 
 const LEGENDS_APRICORN_ID   = "blackApricorn";
+
+// Regiões disponíveis no menu de seleção
+const LEGENDS_REGIONS = [
+    { id: "kanto",  name: "Kanto",  color: "#E8534A", icon: "🔴" },
+    { id: "johto",  name: "Johto",  color: "#C0A060", icon: "🟡" },
+    { id: "hoenn",  name: "Hoenn",  color: "#4A90D9", icon: "🔵" },
+    { id: "sinnoh", name: "Sinnoh", color: "#7B68EE", icon: "🟣" },
+    { id: "unova",  name: "Unova",  color: "#888888", icon: "⚫" },
+    { id: "kalos",  name: "Kalos",  color: "#5BA85A", icon: "🟢" },
+    { id: "alola",  name: "Alola",  color: "#F4A460", icon: "🟠" },
+    { id: "galar",  name: "Galar",  color: "#9370DB", icon: "🟣" },
+    { id: "hisui",  name: "Hisui",  color: "#87CEEB", icon: "🩵" },
+    { id: "paldea", name: "Paldea", color: "#E07B5A", icon: "🟠" },
+    { id: "gen10",  name: "Gen 10", color: "#555555", icon: "⏳", comingSoon: true },
+];
 const LEGENDS_AREA_PREFIX   = "legendsBattle_";   // ex: "legendsBattle_mewtwo"
 const LEGENDS_SAVE_KEY      = "legendsData";
+
+// Estado interno — região atualmente selecionada
+var _legendsCurrentRegion   = null;
 
 // ---------------------------------------------------------------------------
 // 3. INICIALIZAÇÃO DO SAVE
@@ -225,26 +330,36 @@ function _getLegendConfig(legendId) {
 var _legendsTimerInterval = null;
 
 function openLegendsMenu() {
-    // Remove modal anterior se existir
+    _legendsCurrentRegion = null;
+    _openLegendsModal(_buildLegendsRegionHTML());
+}
+
+function openLegendsRegion(regionId) {
+    _legendsCurrentRegion = regionId;
+    _openLegendsModal(_buildLegendsHTML(regionId));
+    _legendsTimerInterval = setInterval(_updateLegendsTimers, 1000);
+    _bindLegendCardEvents();
+}
+
+function _openLegendsModal(html) {
+    // Para timer anterior se existir
+    if (_legendsTimerInterval) {
+        clearInterval(_legendsTimerInterval);
+        _legendsTimerInterval = null;
+    }
+
     var existing = document.getElementById("legends-modal");
     if (existing) existing.remove();
 
     var modal = document.createElement("div");
     modal.id  = "legends-modal";
     modal.className = "legends-modal-overlay";
-    modal.innerHTML = _buildLegendsHTML();
+    modal.innerHTML = html;
     document.body.appendChild(modal);
 
-    // Fecha ao clicar no overlay (fora do painel)
     modal.addEventListener("click", function(e) {
         if (e.target === modal) closeLegendsMenu();
     });
-
-    // Inicia atualização dos timers a cada segundo
-    _legendsTimerInterval = setInterval(_updateLegendsTimers, 1000);
-
-    // Vincula eventos dos cards
-    _bindLegendCardEvents();
 }
 
 function closeLegendsMenu() {
@@ -256,10 +371,36 @@ function closeLegendsMenu() {
     }
 }
 
-function _buildLegendsHTML() {
-    var cardsHTML = LEGENDS_LIST.map(function(legend) {
-        return _buildLegendCard(legend);
-    }).join("");
+function _buildLegendsRegionHTML() {
+    var apricornCount = _getApricornCount();
+
+    var regionsHTML = LEGENDS_REGIONS.map(function(region) {
+        // Conta lendários disponíveis e ativos nesta região
+        var legendsInRegion = LEGENDS_LIST.filter(function(l) { return l.region === region.id; });
+        var activeCount     = legendsInRegion.filter(function(l) { return _isLegendActive(l.id); }).length;
+        var total           = legendsInRegion.length;
+        var comingSoon      = region.comingSoon || total === 0;
+
+        var badgeHTML = activeCount > 0
+            ? '<span class="legends-region-badge">' + activeCount + ' active</span>'
+            : '';
+
+        return [
+            '<div class="legends-region-card' + (comingSoon ? ' legends-region-card--soon' : '') + '" ',
+                comingSoon ? '' : 'onclick="openLegendsRegion(\'' + region.id + '\')"',
+                'style="--region-color:' + region.color + '">',
+                '<span class="legends-region-icon">' + region.icon + '</span>',
+                '<div class="legends-region-info">',
+                    '<span class="legends-region-name">' + region.name + '</span>',
+                    comingSoon
+                        ? '<span class="legends-region-count legends-region-soon-text">Coming Soon</span>'
+                        : '<span class="legends-region-count">' + total + ' Legendary Pokémon</span>',
+                '</div>',
+                badgeHTML,
+                comingSoon ? '' : '<span class="legends-region-arrow">›</span>',
+            '</div>',
+        ].join('');
+    }).join('');
 
     return [
         '<div class="legends-panel">',
@@ -270,9 +411,48 @@ function _buildLegendsHTML() {
                 '</div>',
                 '<button class="legends-close-btn" onclick="closeLegendsMenu()">✕</button>',
             '</div>',
-            '<div class="legends-subtitle">Spend Black Apricorns to challenge Legendary Pokémon</div>',
+            '<div class="legends-subtitle">Choose a region to challenge its Legendary Pokémon</div>',
+            '<div class="legends-apricorn-count">',
+            '<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display=\'none\'" class="legends-apricorn-icon">',
+                //'<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display='none," class="legends-apricorn-icon">',
+                '<span id="legends-apricorn-display">',
+                    apricornCount + ' Black Apricorn' + (apricornCount !== 1 ? 's' : ''),
+                '</span>',
+            '</div>',
+            '<div class="legends-region-grid">',
+                regionsHTML,
+            '</div>',
+        '</div>',
+    ].join('');
+}
+
+function _buildLegendsHTML(regionId) {
+    var regionConfig = LEGENDS_REGIONS.find(function(r) { return r.id === regionId; });
+    var regionName   = regionConfig ? regionConfig.name : regionId;
+    var filtered     = LEGENDS_LIST.filter(function(l) { return l.region === regionId; });
+    var cardsHTML    = filtered.map(function(legend) {
+        return _buildLegendCard(legend);
+    }).join("");
+
+    if (!cardsHTML) {
+        cardsHTML = '<div style="text-align:center;padding:20px;opacity:0.6">No Legendary Pokémon in this region yet.</div>';
+    }
+
+    return [
+        '<div class="legends-panel">',
+            '<div class="legends-header">',
+                '<div class="legends-title-wrap">',
+                    '<button class="legends-back-btn" onclick="openLegendsMenu()">&#8249;</button>',
+                    '<span class="legends-icon">&#9876;</span>',
+                    '<span class="legends-title">' + regionName + '</span>',
+                '</div>',
+                '<button class="legends-close-btn" onclick="closeLegendsMenu()">&#x2715;</button>',
+            '</div>',
+            '<div class="legends-subtitle">Spend Black Apricorns to challenge Legendary Pokemon</div>',
             '<div class="legends-apricorn-count">',
                 '<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display=\'none\'" class="legends-apricorn-icon">',
+                //'<img src="img/items/' + LEGENDS_APRICORN_ID + '.png" onerror="this.style.display='none'" class="legends-apricorn-icon">',
+                //`<img src="img/items/${LEGENDS_APRICORN_ID}.png" onerror="this.style.display='none'" class="legends-apricorn-icon">`,
                 '<span id="legends-apricorn-display">',
                     _getApricornCount() + ' Black Apricorn' + (_getApricornCount() !== 1 ? 's' : ''),
                 '</span>',
@@ -298,14 +478,24 @@ function _buildLegendCard(legend) {
     var spriteSrc = "/img/pkmn/sprite/" + legend.id + ".png";
 
     // Texto do botão e estado
-    var btnLabel, btnDisabled, btnClass;
+        var btnLabel, btnDisabled, btnClass;
     if (isActive) {
-        var isFighting = (saved.currentArea === (LEGENDS_AREA_PREFIX + legend.id)) &&
-                          document.getElementById("content-explore")?.style.display === "flex";
+        var isFighting = saved.currentArea === (LEGENDS_AREA_PREFIX + legend.id);
+        var inOtherBattle = saved.currentArea !== undefined && !isFighting;
 
-        btnLabel    = isFighting ? "↩ Return to Battle" : "▶ Battle!";
-        btnDisabled = "";
-        btnClass    = "legend-btn legend-btn--battle";
+        if (isFighting) {
+            btnLabel    = "↩ Return to Battle";
+            btnDisabled = "";
+            btnClass    = "legend-btn legend-btn--battle";
+        } else if (inOtherBattle) {
+            btnLabel    = "⚔ Termine a batalha em andamento primeiro!";
+            btnDisabled = "disabled";
+            btnClass    = "legend-btn legend-btn--disabled";
+        } else {
+            btnLabel    = "▶ Battle!";
+            btnDisabled = "";
+            btnClass    = "legend-btn legend-btn--battle";
+        }
     } else {
         var hasEnough = _getApricornCount() >= legend.unlockCost;
         btnLabel    = "🍎 Unlock (" + legend.unlockCost + " Black Apricorn)";
@@ -402,6 +592,7 @@ function _handleLegendCardBtn(btn) {
         document.getElementById("genetics-menu").style.display   = "none";
         document.getElementById("shop-menu").style.display       = "none";
         document.getElementById("dimension-menu").style.display  = "none";
+        document.getElementById("dictionary-menu").style.display = "none";
         document.getElementById("explore-menu").style.display    = "none";
         // Restaura tela de batalha
         document.getElementById("content-explore").style.display = "flex";
@@ -468,37 +659,38 @@ function _confirmLegendUnlock(legendId) {
 }
 
 function _startLegendBattle(legendId) {
+    
     var areaId = LEGENDS_AREA_PREFIX + legendId;
+
     if (!areas[areaId]) {
         _showLegendToast("Battle area not found. Try reloading.", "error");
         return;
     }
 
-    closeLegendsMenu();
-    document.getElementById("menu-button").classList.remove("menu-button-open");
-
-    // Seta currentArea ANTES do timeout para shouldCombatStop() não parar o gameLoop
-    areas[areaId].hpPercentage = undefined;
-    saved.currentArea       = areaId;
-    saved.currentAreaBuffer = areaId;
-    saved.lastAreaJoined    = areaId;
-
-    if (typeof voidAnimation === "function") {
-        voidAnimation("explore-transition", "exploreTransition 1s 1");
-        document.getElementById("explore-transition").style.display = "flex";
+    // Bloqueia se já estiver em batalha (Wild, VS, Frontier, etc.)
+    if (saved.currentArea !== undefined) {
+        _showLegendToast("Finish your current battle before challenging a Legend!", "error");
+        return;
     }
 
-    setTimeout(function() {
-        document.getElementById("explore-menu").style.display    = "none";
-        document.getElementById("vs-menu").style.display         = "none";
-        document.getElementById("training-menu").style.display   = "none";
-        document.getElementById("area-end").style.display        = "none";
-        document.getElementById("content-explore").style.display = "flex";
-        document.getElementById("menu-button-parent").style.display = "flex";
+    closeLegendsMenu();
 
-        if (typeof initialiseArea === "function") initialiseArea();
-        if (typeof saveGame === "function") saveGame();
-    }, 500);
+
+    document.getElementById("menu-button").classList.remove("menu-button-open");
+
+    // Seta buffer e abre seleção de time — mesmo padrão das outras áreas
+    saved.currentAreaBuffer = areaId;
+    saved.currentArea       = areaId;
+    saved.lastAreaJoined    = areaId;
+    areas[areaId].hpPercentage = undefined;
+
+    document.getElementById("preview-team-exit").style.display = "flex";
+    document.getElementById("team-menu").style.zIndex = "50";
+    document.getElementById("team-menu").style.display = "flex";
+    document.getElementById("menu-button-parent").style.display = "none";
+    document.getElementById("explore-menu").style.display = "none";
+    updatePreviewTeam();
+    afkSeconds = 0;
 }
 
 // ---------------------------------------------------------------------------
@@ -640,4 +832,3 @@ function registerLegends() {
     registerLegendAreas();
     console.log("[Legends] Sistema inicializado. Lendários registrados:", LEGENDS_LIST.map(function(l){ return l.id; }));
 }
-
