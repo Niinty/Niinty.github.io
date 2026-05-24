@@ -81,6 +81,56 @@ const GYMS_LEADERS = [
         level: 60,
         description: "Especialista em Pokémon do tipo Elétrico.",
     },
+
+    {
+        areaId: "vsGymLeaderErika",
+        region: "kanto",
+        order: 4,
+        unlockAreaId: "vsGymLeaderLtsurge",
+        name: "Gym Leader Erika",
+        badge: "Rainbow Badge",
+        badgeItemId: "gymBadgeErika",
+        city: "Celadon City",
+        sprite: "erika",
+        background: "gym",
+        level: 80,
+        description: "Especialista em Pokémon do tipo Grama.",
+
+        team: {
+            slot1 : pkmn.vileplume,
+            slot1Moves : [move.trailblaze.id, move.sludge.id, move.razorLeaf.id, move.acid.id],
+            slot2 : pkmn.clefable,
+            slot2Moves : [move.lunarDance.id, move.alluringVoice.id, move.fairyWind.id, move.disarmingVoice.id],
+            slot3 : pkmn.tangela,
+            slot3Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
+            slot4 : pkmn.dewgong,
+            slot4Moves : [move.surf.id, move.auroraBeam.id, move.scald.id, move.blizzard.id],
+            slot5 : pkmn.victreebel,
+            slot5Moves : [move.appleAcid.id, move.noxiousTorque.id, move.seedBomb.id, move.toxic.id],
+            slot6 : pkmn.exeggutor,
+            slot6Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psyBeam.id],
+        },
+
+        itemReward: {
+                1: { item: item.spellTag.id,    amount: 1  },
+                2: { item: item.fashionCase.id, amount: 3  },
+                3: { item: item.bottleCap.id,   amount: 10 },
+        },
+
+        encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >Tier I Event Raids unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Victory Road</div>
+        <div style="filter:hue-rotate(50deg)" >Level Training unlocked</div>
+        </div>
+        `
+        openTooltip()
+        },
+    },
 ]
 
 function getGymMaxDifficulty() {
