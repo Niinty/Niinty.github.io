@@ -4506,7 +4506,7 @@ areas.vsEliteTrainerCynthia = {
     },
     //reward : [item.dragonFang, item.goldenBottleCap],
     itemReward: { 1 : { item: item.dragonFang.id, amount: 1 }, 2 : { item: item.bottleCap.id, amount: 10 }},
-    encounterEffect: function() {
+    /*encounterEffect: function() {
         document.getElementById("tooltipTop").style.display = `none`
         document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
         document.getElementById("tooltipBottom").style.display = `none`
@@ -4518,7 +4518,7 @@ areas.vsEliteTrainerCynthia = {
         </div>
         `
         openTooltip()
-    }
+    }*/
 }
 
 areas.vsEliteFourLorelei = {
