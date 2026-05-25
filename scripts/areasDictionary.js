@@ -6131,7 +6131,7 @@ t4: omniboost + wonder guard
 //t3: mega legends, primals, dawn wings, etc
 //t4: u necrozam
 
-areas.dimensionPalkia = {
+/*areas.dimensionPalkia = {
     type: `dimensionBlueprint`,
     icon: pkmn.palkia,
     tier: 1,
@@ -6145,7 +6145,7 @@ areas.dimensionPalkia = {
     reward : [pkmn.palkia, item.whiteApricorn],
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.reverseField.id],
     skills : {3 : skill.ironSpirit.id}
-}
+}*/
 
 areas.dimensionPikachuGmax = {
     type: `dimensionBlueprint`,
@@ -6163,7 +6163,7 @@ areas.dimensionPikachuGmax = {
     skills : {3 : skill.ironWill.id, 2 : skill.electroblast.id}
 }
 
-areas.dimensionKyuremWhite = {
+/*areas.dimensionKyuremWhite = {
     type: `dimensionBlueprint`,
     icon: pkmn.kyuremWhite,
     tier: 3,
@@ -6194,7 +6194,7 @@ areas.dimensionMegaRayquaza = {
     reward : [pkmn.magikarp],
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.ironBody.id, field.wonderWard.id ],
     skills : {3 : skill.omniboost.id, 2 : skill.suddenDeath.id, 1 : skill.demoralisingRoar.id}
-}
+}*/
 
 
 
@@ -6215,7 +6215,7 @@ function secretFight(area){
     setWildAreas()
 }
 
-areas.missingArea = {
+/*areas.missingArea = {
     background : `missing`,
     trainer: true,
     encounter: true,
@@ -6227,7 +6227,7 @@ areas.missingArea = {
         slot1Moves : [move.agility.id,move.triAttack.id, move.thunderWave.id, move.fly.id],
     },
     reward : [pkmn.missingno],
-}
+}*/
 
 areas.studioA = {
     background : `mall`,
@@ -6392,7 +6392,8 @@ areas.wildlifePark = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsNormal
+        rare : wildRareItemsNormal,
+        epic: epicItens
     }
 }
 
@@ -6466,7 +6467,7 @@ areas.trickyForest = {
 }
 
 
-areas.seasonMarshadow = {
+/*areas.seasonMarshadow = {
     season : season.halloween.id,
     type: `season`,
     timed: 60,
@@ -6486,7 +6487,7 @@ areas.seasonMarshadow = {
         slot1Moves : [move.powerupPunch.id,move.shadowPunch.id, move.machPunk.id, move.bulletPunch.id],
     },  
     reward : [pkmn.marshadow],
-}
+}*/
 
 
 
