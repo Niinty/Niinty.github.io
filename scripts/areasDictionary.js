@@ -413,7 +413,7 @@ const wildRareItems = [
   wildRareItemsFairy
 ]
 //rotation 1
-areas.["rota1-Kanto"] = {
+areas.rota1Kanto = {
     rotation : 1,
     name: `Rota 1 - Kanto`,
     level : wildAreaLevel1,
