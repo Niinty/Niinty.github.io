@@ -390,6 +390,8 @@ const wildRareItemsSteel = [item.metalCoat, item.babiriBerry]
 const wildRareItemsNormal = [item.silkScarf]
 const wildRareItemsFairy = [item.fairyFeather, item.roseliBerry]
 
+const epicItens = [item.blackApricorn]
+
 const wildRareItems = [
   wildRareItemsFire, 
   wildRareItemsWater, 
