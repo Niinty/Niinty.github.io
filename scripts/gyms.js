@@ -34,8 +34,8 @@ const GYM_REGIONS = [
 
 // Estado interno — região selecionada no menu
 var _gymsCurrentRegion = null;
-const GYM_LEVEL_CAP = 100
-const GYM_SCALE_PER_DEFEAT = 1.01 // A dificuldade escala 1% a cada vitória, o que é um aumento suave que mantém os líderes desafiadores mesmo após várias derrotas. O limite de 100% (tier IV) garante que a dificuldade não se torne impossível, mas ainda assim oferece um desafio significativo para jogadores experientes.
+const GYM_LEVEL_CAP = 200
+const GYM_SCALE_PER_DEFEAT = 1.02 // A dificuldade escala 1% a cada vitória, o que é um aumento suave que mantém os líderes desafiadores mesmo após várias derrotas. O limite de 100% (tier IV) garante que a dificuldade não se torne impossível, mas ainda assim oferece um desafio significativo para jogadores experientes.
 const GYM_BADGE_DROP_CHANCE = 0.3 // Chance de dropar a insígnia ao derrotar o líder (se ainda não tiver a insígnia)
 
 const GYMS_LEADERS = [
