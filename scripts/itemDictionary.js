@@ -783,6 +783,15 @@ item.gymBadgeErika = {
         return `Chance ao derrotar Erika (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
     },
 }
+item.gymBadgeKoga = {
+    type: "key",
+    itemIcon: "gymBadgeKoga",
+    rename: "Soul Badge",
+    subtitle: "(Gym)",
+    info: function() {
+        return `Chance ao derrotar Koga (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
+    },
+}
 
 
 
