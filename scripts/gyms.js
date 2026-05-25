@@ -135,7 +135,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderKoga",
         region: "kanto",
-        order: 4,
+        order: 5,
         unlockAreaId: "vsGymLeaderErika",
         name: "Gym Leader Koga",
         badge: "Soul Badge",
