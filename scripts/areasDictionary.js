@@ -2631,7 +2631,7 @@ areas.frozenTomb = {
 
 */
 
-areas.eventRegirock = {
+/*areas.eventRegirock = {
     rotation: 3,
     type: `event`,
     name: `Regirock Tomb`,
@@ -2692,7 +2692,7 @@ areas.eventRegice = {
     },
     reward : [pkmn.regice],
     category: 1,
-}
+}*/
 
 areas.eventMegaMawile = {
     rotation: 3,
@@ -2759,7 +2759,7 @@ areas.eventMegaSteelix = {
 
 
 
-areas.eventRegieleki = {
+/*areas.eventRegieleki = {
     rotation: 3,
     type: `event`,
     name: `Transistor Ruins`,
@@ -2799,7 +2799,7 @@ areas.eventRegidrago = {
     },
     reward : [pkmn.regidrago],
     category: 2,
-}
+}*/
 
 areas.eventGougingFire = {
     rotation: 3,
@@ -2887,7 +2887,7 @@ areas.aetherHeadquarters = {
 
 
 
-areas.eventNaganadel = {
+/*areas.eventNaganadel = {
     rotation: 4,
     type: `event`,
     name: `Chamber-00`,
@@ -3096,7 +3096,7 @@ areas.eventBlacephalon = {
     },
     reward : [pkmn.blacephalon],
     category: 1,
-}
+}*/
 
 
 
@@ -3144,7 +3144,7 @@ areas.eventMegaMetagross = {
 }
 
 
-areas.eventTapuFini = {
+/*areas.eventTapuFini = {
     rotation: 4,
     type: `event`,
     name: `Tempest Trench`,
@@ -3209,7 +3209,7 @@ areas.eventChienPao = {
     },
     reward : [pkmn.chienPao],
     category: 2,
-}
+}*/
 
 areas.eventMegaDragonite = {
     rotation: 4,
@@ -3367,7 +3367,7 @@ areas.eventMegaGengar = {
 
 
 
-areas.eventThundurusTherian = {
+/*areas.eventThundurusTherian = {
     rotation: 5,
     type: `event`,
     name: `Far Cloudscape`,
@@ -3564,7 +3564,7 @@ areas.eventIronValiant = {
     },
     reward : [pkmn.ironValiant],
     category: 1,
-}
+}*/
 
 
 
@@ -3789,7 +3789,7 @@ areas.eventMegaGallade = {
     category: 2,
 }
 
-areas.eventCresselia = {
+/*areas.eventCresselia = {
     rotation: 6,
     type: `event`,
     name: `Dream Plains`,
@@ -3829,7 +3829,7 @@ areas.eventHeatran = {
     },
     reward : [pkmn.heatran],
     category: 2,
-}
+}*/
 
 
 
@@ -3875,7 +3875,7 @@ areas.eventMegaHeracross = {
     category: 2,
 }
 
-areas.eventWoChien = {
+/*areas.eventWoChien = {
     rotation: 6,
     type: `event`,
     name: `Grasswither Shrine`,
@@ -3894,7 +3894,7 @@ areas.eventWoChien = {
     },
     reward : [pkmn.woChien],
     category: 2,
-}
+}*/
 
 
 
@@ -3924,7 +3924,7 @@ areas.lakeAcuity = {
 
 */
 
-areas.eventMesprit = {
+/*areas.eventMesprit = {
     rotation: 6,
     type: `event`,
     name: `Mesprit cavern`,
@@ -3986,7 +3986,7 @@ areas.eventUxie = {
     },
     reward : [pkmn.uxie],
     category: 1,
-}
+}*/
 
 
 areas.eventMegaPidgeot = {
