@@ -5992,40 +5992,48 @@ pkmn.miltank = {
 pkmn.raikou = {
     type: ["electric"],
     bst: {
-        hp: 90,
-        atk: 85,
-        def: 75,
-        satk: 115,
-        sdef: 100,
-        spe: 115,
+        hp: 90*1.12,
+        atk: 85*1.12,
+        def: 75*1.12,
+        satk: 115*1.12,
+        sdef: 100*1.12,
+        spe: 115*1.12,
     },
-    eggMove : move.charge
+    signature: move.auraWheel,
+    hiddenAbility: ability.moody,
+    lore: `Raikou personifica a velocidade do relâmpago. Os rugidos deste Pokémon enviam ondas de choque que fazem o ar estremecer e sacodem o chão como se raios tivessem acabado de cair.`,
 }
 
 // 244 Entei
 pkmn.entei = {
     type: ["fire"],
     bst: {
-        hp: 115,
-        atk: 115,
-        def: 85,
-        satk: 90,
-        sdef: 75,
-        spe: 100,
-    }
+        hp: 115*1.12,
+        atk: 115*1.12,
+        def: 85*1.12,
+        satk: 90*1.12,
+        sdef: 75*1.12,
+        spe: 100*1.12,
+    },
+    signature: move.pyroBall,
+    hiddenAbility: ability.hugePower,
+    lore: `Entei personifica a paixão do magma. Acredita-se que este Pokémon tenha nascido durante a erupção de um vulcão. Ele lança enormes explosões de fogo que consomem completamente tudo o que tocam.`,
 }
 
 // 245 Suicune
 pkmn.suicune = {
     type: ["water"],
     bst: {
-        hp: 100,
-        atk: 75,
-        def: 115,
-        satk: 90,
-        sdef: 115,
-        spe: 85,
-    }
+        hp: 100*1.12,
+        atk: 75*1.12,
+        def: 115*1.12,
+        satk: 90*1.12,
+        sdef: 115*1.12,
+        spe: 85*1.12,
+    },
+    signature: move.aquaStep,
+    hiddenAbility: ability.parentalBond,
+    lore: `Suicune personifica a compaixão de uma nascente de água pura. Ele percorre a terra com graciosidade. Este Pokémon tem o poder de purificar água contaminada.`,
 }
 
 // 246 Larvitar → Pupitar → Tyranitar
@@ -6088,29 +6096,32 @@ pkmn.megaTyranitar = {
 pkmn.lugia = {
     type: ["psychic","flying"],
     bst: {
-        hp: 106,
-        atk: 90,
-        def: 130,
-        satk: 90,
-        sdef: 154,
-        spe: 110,
+        hp: 106*1.12,
+        atk: 90*1.12,
+        def: 130*1.12,
+        satk: 90*1.12,
+        sdef: 154*1.12,
+        spe: 110*1.12,
     },
-    signature: move.aeroblast
+    signature: move.aeroblast,
+    hiddenAbility: ability.hydrolate,
+    lore: `As asas de Lugia possuem um poder devastador — um simples bater de asas pode destruir casas comuns. Por isso, este Pokémon escolhe viver longe da vista de todos, nas profundezas do mar.`,
 }
 
 // 250 Ho-oh
 pkmn.hooh = {
     type: ["fire","flying"],
     bst: {
-        hp: 106,
-        atk: 130,
-        def: 90,
-        satk: 110,
-        sdef: 154,
-        spe: 90,
+        hp: 106*1.12,
+        atk: 130*1.12,
+        def: 90*1.12,
+        satk: 110*1.12,
+        sdef: 154*1.12,
+        spe: 90*1.12,
     },
-    signature: move.sacredFire
-
+    signature: move.sacredFire,
+    hiddenAbility: ability.pyrolate,
+    lore: `As penas de Ho-Oh brilham em sete cores diferentes dependendo do ângulo em que a luz as atinge. Dizem que essas penas trazem felicidade para aqueles que as carregam. Conta-se que este Pokémon vive ao pé de um arco-íris.`,
 }
 
 // 251 Celebi
