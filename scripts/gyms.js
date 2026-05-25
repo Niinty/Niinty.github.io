@@ -131,6 +131,41 @@ const GYMS_LEADERS = [
         openTooltip()
         },
     },
+
+    {
+        areaId: "vsGymLeaderKoga",
+        region: "kanto",
+        order: 4,
+        unlockAreaId: "vsGymLeaderErika",
+        name: "Gym Leader Koga",
+        badge: "Soul Badge",
+        badgeItemId: "gymBadgeKoga",
+        city: "Fuchsia City",
+        sprite: "koga",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Posion.",
+
+        team: {
+            slot1 : pkmn.venomoth,
+            slot1Moves : [move.stunSpore.id, move.psychic.id, move.crossPoison.id, move.hyperBeam.id],
+            slot2 : pkmn.muk,
+            slot2Moves : [move.sludge.id, move.hyperBeam.id, move.toxic.id, move.crossPoison.id],
+            slot3 : pkmn.weezing,
+            slot3Moves : [move.sludge.id, move.fireBlast.id, move.toxic.id, move.hyperBeam.id],
+            slot4 : pkmn.hypno,
+            slot4Moves : [move.psychic.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
+            slot5 : pkmn.tangela,
+            slot5Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
+            slot6 : pkmn.parasect,
+            slot6Moves : [move.seedBomb.id, move.razorLeaf.id, move.cottonSpore.id, move.bugBuzz.id],
+        },
+
+        itemReward: {
+                1: { item: item.fashionCase.id, amount: 3  },
+                2: { item: item.bottleCap.id,   amount: 10 },
+        },
+    },
 ]
 
 function getGymMaxDifficulty() {
