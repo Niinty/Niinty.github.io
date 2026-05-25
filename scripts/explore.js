@@ -734,7 +734,7 @@ function dropItem(){
 
     // A SUA NOVA CATEGORIA AQUI!
     // rng(0.01) significa 1% de chance de dropar. Você pode mudar para 0.005 (0.5%) etc.
-    if (areas[saved.currentArea].drops?.epic && rng(0.0015)) drop = arrayPick(areas[saved.currentArea].drops?.epic).id
+    if (areas[saved.currentArea].drops?.epic && rng(0.0005)) drop = arrayPick(areas[saved.currentArea].drops?.epic).id
 
     if (drop == undefined) return
     if (drop == "nothing") return
