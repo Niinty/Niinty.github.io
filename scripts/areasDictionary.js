@@ -426,7 +426,8 @@ areas.verdantForest = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsBug
+        rare : wildRareItemsBug,
+        epic: epicItens
     }
 }
 
@@ -444,7 +445,8 @@ areas.foggyGraveyard = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGhost
+        rare : wildRareItemsGhost,
+        epic: epicItens
     }
 }
 
@@ -461,7 +463,8 @@ areas.woodlandConcert = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGrass
+        rare : wildRareItemsGrass,
+        epic: epicItens
     }
 }
 
@@ -478,7 +481,8 @@ areas.mantleCore = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsRock
+        rare : wildRareItemsRock,
+        epic: epicItens
     }
 }
 
@@ -496,7 +500,8 @@ areas.fidoPark = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsNormal
+        rare : wildRareItemsNormal,
+        epic: epicItens
     }
 }
 
@@ -513,7 +518,8 @@ areas.citySewers = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsPoison
+        rare : wildRareItemsPoison,
+        epic: epicItens
     }
 }
 
@@ -530,7 +536,8 @@ areas.activeVolcano = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFire
+        rare : wildRareItemsFire,
+        epic: epicItens
     }
 } 
 
@@ -547,7 +554,8 @@ areas.powerPlant = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsElectric
+        rare : wildRareItemsElectric,
+        epic: epicItens
     }
 }
 
@@ -565,7 +573,8 @@ areas.quietMeadow = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsDark
+        rare : wildRareItemsDark,
+        epic: epicItens
     }
 }
 
@@ -583,7 +592,8 @@ areas.urbanWalkway = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFairy
+        rare : wildRareItemsFairy,
+        epic: epicItens
     }
 }
 
@@ -601,7 +611,8 @@ areas.sandyDunes = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGround
+        rare : wildRareItemsGround,
+        epic: epicItens
     }
 }
 
@@ -619,7 +630,8 @@ areas.sunkenShip = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsSteel
+        rare : wildRareItemsSteel,
+        epic: epicItens
     }
 }
 
@@ -637,7 +649,8 @@ areas.offshoreRigger = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFlying
+        rare : wildRareItemsFlying,
+        epic: epicItens
     }
 }
 
@@ -654,7 +667,8 @@ areas.safariZone = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsNormal
+        rare : wildRareItemsNormal,
+        epic: epicItens
     }
 }
 
@@ -671,7 +685,8 @@ areas.coolBeach = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsWater
+        rare : wildRareItemsWater,
+        epic: epicItens
     }
 }
 
@@ -688,7 +703,8 @@ areas.computeringLab = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsPsychic
+        rare : wildRareItemsPsychic,
+        epic: epicItens
     }
 }
 
@@ -707,7 +723,8 @@ areas.gemstoneCavern = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsRock
+        rare : wildRareItemsRock,
+        epic: epicItens
     }
 }
 
@@ -724,7 +741,8 @@ areas.frozenLake = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsIce
+        rare : wildRareItemsIce,
+        epic: epicItens
     }
 }
 
@@ -741,7 +759,8 @@ areas.abandonedManor = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGhost
+        rare : wildRareItemsGhost,
+        epic: epicItens
     }
 }
 
@@ -758,7 +777,8 @@ areas.dracoLair = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsDragon
+        rare : wildRareItemsDragon,
+        epic: epicItens
     }
 }
 
@@ -776,7 +796,8 @@ areas.mountainTrail = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsRock
+        rare : wildRareItemsRock,
+        epic: epicItens
     }
 }
 
@@ -794,7 +815,8 @@ areas.teaParlor = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFairy
+        rare : wildRareItemsFairy,
+        epic: epicItens
     }
 }
 
@@ -811,7 +833,8 @@ areas.pokemonDojo = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFighting
+        rare : wildRareItemsFighting,
+        epic: epicItens
     }
 }
 
@@ -828,7 +851,8 @@ areas.skyHigh = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFlying
+        rare : wildRareItemsFlying,
+        epic: epicItens
     }
 }
 
@@ -846,7 +870,8 @@ areas.dankCave = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsDark
+        rare : wildRareItemsDark,
+        epic: epicItens
     }
 }
 
@@ -864,7 +889,8 @@ areas.forestShrine = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsPsychic
+        rare : wildRareItemsPsychic,
+        epic: epicItens
     }
 }
 
@@ -881,7 +907,8 @@ areas.streetCircus = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFairy
+        rare : wildRareItemsFairy,
+        epic: epicItens
     }
 }
 
@@ -898,7 +925,8 @@ areas.weaponsFacility = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsSteel
+        rare : wildRareItemsSteel,
+        epic: epicItens
     }
 }
 
@@ -916,7 +944,8 @@ areas.scorchingBadlands = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGround
+        rare : wildRareItemsGround,
+        epic: epicItens
     }
 }
 
@@ -934,7 +963,8 @@ areas.lavaLake = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFire
+        rare : wildRareItemsFire,
+        epic: epicItens
     }
 }
 
@@ -951,7 +981,8 @@ areas.crashingSeaside = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsWater
+        rare : wildRareItemsWater,
+        epic: epicItens
     }
 }
 
@@ -968,7 +999,8 @@ areas.strangeSpace = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsDragon
+        rare : wildRareItemsDragon,
+        epic: epicItens
     }
 }
 
@@ -987,7 +1019,8 @@ areas.chargestoneCave  = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsElectric
+        rare : wildRareItemsElectric,
+        epic: epicItens
     }
 }
 
@@ -1005,7 +1038,8 @@ areas.seafoamCurrents = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFlying
+        rare : wildRareItemsFlying,
+        epic: epicItens
     }
 }
 
@@ -1023,7 +1057,8 @@ areas.valorLakeside = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGrass
+        rare : wildRareItemsGrass,
+        epic: epicItens
     }
 }
 
@@ -1040,7 +1075,8 @@ areas.thornwoodForest = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsPoison
+        rare : wildRareItemsPoison,
+        epic: epicItens
     }
 }
 
@@ -1059,7 +1095,8 @@ areas.unovaWorks = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFighting
+        rare : wildRareItemsFighting,
+        epic: epicItens
     }
 }
 
@@ -1077,7 +1114,8 @@ areas.snowpointCliff = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsIce
+        rare : wildRareItemsIce,
+        epic: epicItens
     }
 }
 
@@ -1095,7 +1133,8 @@ areas.hollowNest = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsBug
+        rare : wildRareItemsBug,
+        epic: epicItens
     }
 }
 
@@ -1112,7 +1151,8 @@ areas.poniCanyon = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsDragon
+        rare : wildRareItemsDragon,
+        epic: epicItens
     }
 }
 
@@ -1130,7 +1170,8 @@ areas.seaBed = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsWater
+        rare : wildRareItemsWater,
+        epic: epicItens
     }
 }
 
@@ -1148,7 +1189,8 @@ areas.lonLonRanch = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsNormal
+        rare : wildRareItemsNormal,
+        epic: epicItens
     }
 }
 
@@ -1166,7 +1208,8 @@ areas.saruTemple = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsFire
+        rare : wildRareItemsFire,
+        epic: epicItens
     }
 }
 
@@ -1183,7 +1226,8 @@ areas.evilSummit = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsDark
+        rare : wildRareItemsDark,
+        epic: epicItens
     }
 }
 
@@ -1201,7 +1245,8 @@ areas.fuegoIronworks = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsSteel
+        rare : wildRareItemsSteel,
+        epic: epicItens
     }
 }
 
@@ -1219,7 +1264,8 @@ areas.permafrostGrotto = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsIce
+        rare : wildRareItemsIce,
+        epic: epicItens
     }
 }
 
@@ -1237,7 +1283,8 @@ areas.berryForest = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsPsychic
+        rare : wildRareItemsPsychic,
+        epic: epicItens
     }
 }
 
@@ -1254,7 +1301,8 @@ areas.relicPassage = {
     },
     drops: {
         common : [item.mysteryEgg],
-        rare : wildRareItemsGhost
+        rare : wildRareItemsGhost,
+        epic: epicItens
     }
 }
 
