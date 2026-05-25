@@ -6448,10 +6448,10 @@ for (const i in areas){
         areas[i].unlockRequirement = function() { return areas.vsGymLeaderLtsurge.defeated }
     }
 
-    if (areas[i].type == "wild" && areas[i].level == wildAreaLevel5) {
+    /*if (areas[i].type == "wild" && areas[i].level == wildAreaLevel5) {
         areas[i].unlockDescription = `Defeat Gym Leader Erika in Ginásios to unlock`
         areas[i].unlockRequirement = function() { return areas.vsGymLeaderErika.defeated }
-    }
+    }*/
 
 }
 
