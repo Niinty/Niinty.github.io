@@ -413,25 +413,7 @@ const wildRareItems = [
   wildRareItemsFairy
 ]
 //rotation 1
-areas.verdantForest = {
-    rotation : 1,
-    level : wildAreaLevel1,
-    type: `wild`,
-    background : `forest`,
-    icon: pkmn.caterpie,
-    spawns: {
-        common : [pkmn.caterpie,pkmn.exeggcute, pkmn.scatterbug],
-        uncommon : [pkmn.bonsly],
-        rare : [pkmn.scyther]
-    },
-    drops: {
-        common : [item.mysteryEgg],
-        rare : wildRareItemsBug,
-        epic: epicItens
-    }
-}
-
-areas.route01 = {
+areas.["rota1-Kanto"] = {
     rotation : 1,
     name: `Rota 1 - Kanto`,
     level : wildAreaLevel1,
@@ -442,6 +424,24 @@ areas.route01 = {
         common : [pkmn.pidgey,pkmn.rattata],
         uncommon : [pkmn.oddish,pkmn.bellsprout],
         rare : [pkmn.pikachu]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.verdantForest = {
+    rotation : 1,
+    level : wildAreaLevel1,
+    type: `wild`,
+    background : `forest`,
+    icon: pkmn.caterpie,
+    spawns: {
+        common : [pkmn.caterpie,pkmn.exeggcute, pkmn.scatterbug],
+        uncommon : [pkmn.bonsly],
+        rare : [pkmn.scyther]
     },
     drops: {
         common : [item.mysteryEgg],
