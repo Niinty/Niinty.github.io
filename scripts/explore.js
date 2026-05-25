@@ -8,7 +8,7 @@ saved.currentSeason = undefined
 
 // Default fatigue multiplier: reduce fatigue by 25% (0.75)
 // To change for testing, edit this value here.
-let testFatigueMultiplier = 1
+let testFatigueMultiplier = 0.8
 
 let team = {}
 
