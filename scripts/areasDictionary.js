@@ -431,6 +431,25 @@ areas.verdantForest = {
     }
 }
 
+areas.route01 = {
+    rotation : 1,
+    name: `Rota 1 - Kanto`,
+    level : wildAreaLevel1,
+    type: `wild`,
+    background : `forest`,
+    icon: pkmn.pidgey,
+    spawns: {
+        common : [pkmn.pidgey,pkmn.rattata],
+        uncommon : [pkmn.oddish,pkmn.bellsprout],
+        rare : [pkmn.pikachu]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
 areas.foggyGraveyard = {
     unlock : function() {return false},
     rotation : 1,
