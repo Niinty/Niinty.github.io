@@ -708,7 +708,7 @@ function dropItem(){
         if (rng(0.005)) { item.pokeball.newItem++; item.pokeball.got++; saveGame(); }
         if (rng(0.0005)) { item.greatball.newItem++; item.greatball.got++; saveGame(); }
         if (rng(0.00008)) { item.ultraball.newItem++; item.ultraball.got++; saveGame(); }
-        if (rng(0.000001)) { item.masterball.newItem++; item.masterball.got++; saveGame(); }
+        if (rng(0.00001)) { item.masterball.newItem++; item.masterball.got++; saveGame(); }
     }
 
     let drop;
