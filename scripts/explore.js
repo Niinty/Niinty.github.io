@@ -732,6 +732,10 @@ function dropItem(){
     if (areas[saved.currentArea].drops?.uncommon && rng(0.15)) drop = arrayPick(areas[saved.currentArea].drops?.uncommon).id
     if (areas[saved.currentArea].drops?.rare && rng(rareDropChance)) drop = arrayPick(areas[saved.currentArea].drops?.rare).id
 
+    // A SUA NOVA CATEGORIA AQUI!
+    // rng(0.01) significa 1% de chance de dropar. Você pode mudar para 0.005 (0.5%) etc.
+    if (areas[saved.currentArea].drops?.epic && rng(0.0015)) drop = arrayPick(areas[saved.currentArea].drops?.epic).id
+
     if (drop == undefined) return
     if (drop == "nothing") return
     if (item[drop].type=="held" && item[drop].got>= 20) drop = item.bottleCap.id
