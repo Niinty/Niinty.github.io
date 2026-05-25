@@ -758,7 +758,7 @@ item.gymBadgeBrock = {
 }
 item.gymBadgeMisty = {
     type: "key",
-    itemIcon: "pikachuF",
+    itemIcon: "gymBadgeMisty",
     rename: "Cascade Badge",
     subtitle: "(Gym)",
     info: function() {
