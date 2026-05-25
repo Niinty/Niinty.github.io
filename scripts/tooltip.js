@@ -103,6 +103,7 @@ function tooltipData(category, ttdata){
 
         if (listName === "uncommon") { tag = `<span>Uncommon</span>`; }
         if (listName === "rare") { tag = `<span>Rare!</span>`; }
+        if (listName === "epic") { tag = `<span>Epic!</span>`; }
 
         if (pkmn[item.id].shiny && areas[ttdata].uncatchable!=true && areas[ttdata].type != "dungeon") tag += `<div class="wild-shiny-tag">✦</div>`
 
@@ -136,6 +137,7 @@ function tooltipData(category, ttdata){
         let tag = "";
         if (listName === "rare") { tag = `<span>Rare!</span>`; }
         if (listName === "uncommon") { tag = `<span>Uncommon</span>`; }
+        if (listName === "epic") { tag = `<span>Epic!</span>`; }
         div.className = "area-preview";
         if (item.type!=="tm") div.innerHTML = `<img style="scale:2" src="img/items/${item.id}.png">` + tag;
         if (item.type=="tm") div.innerHTML = `<img style="scale:2" src="img/items/tm${format(move[item.move].type)}.png">` + tag;
