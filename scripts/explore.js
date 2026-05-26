@@ -1309,10 +1309,10 @@ saved.autoRefight = false
 
 function autoRefight(){
 
-    // Legends: custa 20 Bottle Caps
+    // Legends: custa 01 Bottle Caps
     if (areas[saved.lastAreaJoined]?.isLegendsBattle) {
-        if (item.bottleCap.got < 20) return
-        item.bottleCap.got -= 20
+        if (item.bottleCap.got < 1) return
+        item.bottleCap.got -= 1
         saveGame()
     }
 
