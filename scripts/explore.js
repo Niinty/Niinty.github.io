@@ -10277,5 +10277,3 @@ function checkWonderTradeReset() {
         saveGame();
     }
 }
-
-
