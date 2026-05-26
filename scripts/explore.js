@@ -9036,6 +9036,22 @@ function formatarTempoRestante() {
 
 function wonderTrade() {
 
+    // --- NOVA REGRA: Verifica se a oferta que está salva já venceu ---
+    if (saved.wonderTradeOffered) {
+        const dozeHoras = 43200000;
+        const agora = Date.now();
+        const periodoAtual = Math.floor(agora / dozeHoras);
+        
+        // Se não tivermos o registro de quando a oferta foi gerada, ou se o período virou:
+        if (!saved.wonderTradeOfferPeriod || saved.wonderTradeOfferPeriod < periodoAtual) {
+            // Invalida a oferta antiga!
+            saved.wonderTradeOffered = false; 
+            saved.wonderTradePlayerPkmn = null;
+            saved.wonderTradeSystemPkmn = null;
+            saved.wonderTradeShiny = false;
+        }
+    }
+
     checkWonderTradeReset();
 
     if (saved.wonderTradeClaimed) {
@@ -9091,6 +9107,11 @@ function wonderTrade() {
         saved.wonderTradePlayerPkmn = playerOffer;
         saved.wonderTradeSystemPkmn = systemOffer;
         saved.wonderTradeShiny = chosenShiny;
+
+        // --- NOVO: Registra o "período" exato em que esta oferta foi criada ---
+        const dozeHoras = 43200000;
+        saved.wonderTradeOfferPeriod = Math.floor(Date.now() / dozeHoras);
+        
         saveGame();
     }
 
