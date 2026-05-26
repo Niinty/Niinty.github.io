@@ -1290,7 +1290,21 @@ function leaveCombat(){
 
     if (wasLegendsBattle) {
         areas[saved.lastAreaJoined].hpPercentage = undefined;
-        saved.autoRefight = false; // Legends não usa auto-refight
+        
+        // --- NOVA LÓGICA DE AUTO-REFIGHT PARA LEGENDS ---
+        if (saved.autoRefight == true) {
+            // Tenta cobrar 1 Bottle Cap para iniciar a PRÓXIMA batalha automática
+            if (item.bottleCap.got >= 1) {
+                item.bottleCap.got -= 1;
+                rejoinArea();
+            } else {
+                // Acabaram os Bottle Caps, interrompe o loop automático
+                saved.autoRefight = false; 
+            }
+        } else {
+            saved.autoRefight = false;
+        }
+
         saveGame();
     } else {
         setWildAreas()
