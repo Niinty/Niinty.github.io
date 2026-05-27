@@ -424,7 +424,7 @@ const LEGENDS_LIST = [
     },    
 
     {
-        id: "groundon",
+        id: "groudon",
         region: "hoenn",
         // Custo em Black Apricorns para desbloquear
         unlockCost: 2,
