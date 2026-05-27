@@ -3772,7 +3772,35 @@ function initialiseArea(){
 
     document.getElementById("auto-refight-info").style.display = "none"
 
-    if (saved.autoRefight==true && !areas[saved.currentArea]?.isLegendsBattle){
+    if (saved.autoRefight == true) {
+        
+        // 1. Regra para os Legends (Consome Bottle Caps)
+        if (areas[saved.currentArea]?.isLegendsBattle) {
+            document.getElementById("auto-refight-info").style.display = "flex";
+            document.getElementById("auto-refight-info").innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9"><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>
+            <div> Auto-Refight is active! <span>(x${item.bottleCap.got} <img src="img/items/bottleCap.png"> Bottle Caps remaining)</span> Click to disable it</div>
+            `;
+        } 
+        // 2. Regra para Treinamento / Encontros (Grátis)
+        else if (areas[saved.currentArea]?.encounter || saved.currentArea == areas.training.id) {
+            document.getElementById("auto-refight-info").style.display = "flex";
+            document.getElementById("auto-refight-info").innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9"><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>
+            <div> Auto-Refight is active! <span>(Wont consume an <img src="img/items/autoRefightTicket.png"> Auto-Refight Ticket)</span> Click to disable it</div>
+            `;
+        } 
+        // 3. Regra para áreas normais (Consome Tickets)
+        else {
+            document.getElementById("auto-refight-info").style.display = "flex";
+            document.getElementById("auto-refight-info").innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9"><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>
+            <div> Auto-Refight is active! <span>(x${item.autoRefightTicket.got} <img src="img/items/autoRefightTicket.png"> Auto-Refight Tickets remaining)</span> Click to disable it</div>
+            `;
+        }
+    }
+    
+    /*if (saved.autoRefight==true && !areas[saved.currentArea]?.isLegendsBattle){
     document.getElementById("auto-refight-info").style.display = "flex"
     document.getElementById("auto-refight-info").innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9"><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>
@@ -3780,7 +3808,7 @@ function initialiseArea(){
            <div> Auto-Refight is active! <span>(x${item.autoRefightTicket.got} <img src="img/items/autoRefightTicket.png"> Auto-Refight Tickets remaining)</span> Click to disable it</div>
     `
     }
-
+    
     if (saved.autoRefight==true && areas[saved.currentArea].encounter || saved.autoRefight==true && saved.currentArea == areas.training.id){
     document.getElementById("auto-refight-info").style.display = "flex"
     document.getElementById("auto-refight-info").innerHTML = `
@@ -3788,7 +3816,7 @@ function initialiseArea(){
 
            <div> Auto-Refight is active! <span>(Wont consume an <img src="img/items/autoRefightTicket.png"> Auto-Refight Ticket)</span> Click to disable it</div>
     `
-    }
+    }*/
 
 
     if (testAbility(`active`,  ability.drizzle.id )) changeWeather("rainy")
