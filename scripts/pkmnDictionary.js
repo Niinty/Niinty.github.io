@@ -100,6 +100,7 @@ pkmn.megaVenusaur = {
         spe: 80*1.3,
     },
     hiddenAbility: ability.thickFat,
+    lore: `Para sustentar sua flor, que cresceu devido à Mega Evolução, suas costas e pernas ficaram mais fortes.`,
     signature : move.frenzyPlant
 }
 
@@ -114,6 +115,7 @@ pkmn.venusaurGmax = {
         spe: 80*1.2,
     },
     hiddenAbility: ability.thickFat,
+    lore: `Há uma grande flor nas costas do Venusaur. Diz-se que a flor assume cores vivas se receber bastante nutrição e luz solar. O aroma da flor acalma as emoções das pessoas.`,
     signature : move.frenzyPlant
 }
 
@@ -129,6 +131,7 @@ pkmn.charmander = {
         spe: 65,
     },
     evolve: function() { return { 1: { pkmn: pkmn.charmeleon, level: evolutionLevel1 } } },
+    lore: `A chama na ponta da cauda é um indicador de sua vitalidade. Se estiver saudável, sua cauda queima intensamente.`,
     hiddenAbility: ability.toughClaws,
     signature : move.flameBurst
 }
@@ -144,6 +147,7 @@ pkmn.charmeleon = {
         spe: 80,
     },
     evolve: function() { return { 1: { pkmn: pkmn.charizard, level: evolutionLevel2 } } },
+    lore: `Nas montanhas rochosas onde Charmeleon vive, suas caudas flamejantes brilham à noite como estrelas.`,
     hiddenAbility: ability.toughClaws,
     signature : move.flameBurst
 }
@@ -165,6 +169,7 @@ pkmn.charizard = {
         } 
     },
     hiddenAbility: ability.toughClaws,
+    lore: `Dizem que o fogo de Charizard queima com mais intensidade se ele tiver passado por batalhas difíceis.`,
     signature : move.flameBurst
 }
 
@@ -179,6 +184,7 @@ pkmn.charizardClone = {
         spe: 100*1.1,
     },
     hiddenAbility: ability.imposter,
+    lore: `Exalando chamas intensas e quentes, ele pode derreter quase tudo. Seu hálito inflige dor terrível aos inimigos.`,
     signature : move.flameBurst
 }
 
@@ -193,6 +199,7 @@ pkmn.megaCharizardX = {
         spe: 100*1.3,
     },
     hiddenAbility: ability.toughClaws,
+    lore: `O poder avassalador que preenche todo o seu corpo faz com que ele fique negro e crie intensas chamas azuis.`,
     signature : move.brutalClaw
 }
 
@@ -207,6 +214,7 @@ pkmn.megaCharizardY = {
         spe: 100*1.3,
     },
     hiddenAbility: ability.drought,
+    lore: `Sua ligação com seu Treinador é a fonte de seu poder. Possui velocidade e manobrabilidade superiores às de um caça a jato.`,
     signature : move.flameBurst
 }
 
@@ -221,6 +229,7 @@ pkmn.charizardGmax = {
         spe: 100*1.2,
     },
     hiddenAbility: ability.drought,
+    lore: `Esta figura colossal de Charizard, com asas flamejantes, foi criada pela energia Gigantamax.`,
     signature : move.flameBurst
 }
 
@@ -236,6 +245,7 @@ pkmn.squirtle = {
         spe: 43,
     },
     evolve: function() { return { 1: { pkmn: pkmn.wartortle, level: evolutionLevel1 } } },
+    lore: `Ele se abriga em sua concha e, em seguida, contra-ataca com jatos de água sempre que possível.`,
     hiddenAbility: ability.rainDish,
     signature : move.hydroCannon
 }
@@ -251,6 +261,7 @@ pkmn.wartortle = {
         spe: 58,
     },
     evolve: function() { return { 1: { pkmn: pkmn.blastoise, level: evolutionLevel2 } } },
+    lore: `Diz-se que vive 10.000 anos. Sua cauda peluda é popular como símbolo de longevidade.`,
     hiddenAbility: ability.rainDish,
     signature : move.hydroCannon
 }
@@ -266,6 +277,7 @@ pkmn.blastoise = {
         spe: 78,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaBlastoise, item: item.blastoisinite } } },
+    lore: `Os jatos de água expelidos pelos canhões de foguete em seu casco podem perfurar aço espesso.`,
     hiddenAbility: ability.rainDish,
     signature : move.hydroCannon
 }
@@ -281,6 +293,7 @@ pkmn.blastoiseClone = {
         spe: 78,
     },
     hiddenAbility: ability.imposter,
+    lore: `Assim que mira no inimigo, dispara água com ainda mais força que uma mangueira de incêndio.`,
     signature : move.hydroCannon
 }
 
@@ -295,7 +308,8 @@ pkmn.megaBlastoise = {
         spe: 78*1.3,
     },
     signature : move.hydroCannon,
-    hiddenAbility: ability.megaLauncher,
+    lore: `O canhão em suas costas é tão potente quanto o de um tanque. Suas pernas e costas robustas permitem que ele suporte o recuo do disparo.`,
+    hiddenAbility: ability.megaLauncher
 }
 
 pkmn.blastoiseGmax = {
@@ -309,7 +323,8 @@ pkmn.blastoiseGmax = {
         spe: 78*1.2,
     },
     signature : move.hydroCannon,
-    hiddenAbility: ability.megaLauncher,
+    lore: `Seu casco cresceu para acompanhar seu corpo maciço, apresentando 31 canhões — 12 grandes e um canhão central principal que pode ser apontado independentemente.`,
+    hiddenAbility: ability.megaLauncher
 }
 
 // 010 Caterpie → Metapod → Butterfree
