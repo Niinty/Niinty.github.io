@@ -166,6 +166,41 @@ const GYMS_LEADERS = [
                 2: { item: item.bottleCap.id,   amount: 10 },
         },
     },
+
+    /*{
+        areaId: "vsGymLeaderSabrina",
+        region: "kanto",
+        order: 6,
+        unlockAreaId: "vsGymLeaderSabrina",
+        name: "Gym Leader Sabrina",
+        badge: "Marsh Badge",
+        badgeItemId: "gymBadgeSabrina",
+        city: "Saffron City",
+        sprite: "sabrina",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Psíquico.",
+
+        team: {
+            slot1 : pkmn.alakazam,
+            slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.dig.id],
+            slot2 : pkmn.snorlax,
+            slot2Moves : [move.amnesia.id, move.hyperBeam.id, move.iceBeam.id, move.thunderbolt.id],
+            slot3 : pkmn.weezing,
+            slot3Moves : [move.sludge.id, move.fireBlast.id, move.toxic.id, move.hyperBeam.id],
+            slot4 : pkmn.hypno,
+            slot4Moves : [move.amnesia.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
+            slot5 : pkmn.tangela,
+            slot5Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
+            slot6 : pkmn.parasect,
+            slot6Moves : [move.amnesia.id, move.razorLeaf.id, move.cottonSpore.id, move.bugBuzz.id],
+        },
+
+        itemReward: {
+                1: { item: item.fashionCase.id, amount: 3  },
+                2: { item: item.bottleCap.id,   amount: 10 },
+        },
+    },*/
 ]
 
 function getGymMaxDifficulty() {
