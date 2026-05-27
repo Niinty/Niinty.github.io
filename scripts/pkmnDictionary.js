@@ -8336,12 +8336,12 @@ pkmn.salamence = {
 pkmn.megaSalamence = {
     type: ["dragon","flying"],
     bst: {
-        hp: 95,
-        atk: 145,
-        def: 130,
-        satk: 120,
-        sdef: 90,
-        spe: 120,
+        hp: 95*1.2,
+        atk: 145*1.2,
+        def: 130*1.2,
+        satk: 120*1.2,
+        sdef: 90*1.2,
+        spe: 120*1.2,
     },
     hiddenAbility: ability.aerilate,
 }
@@ -8392,12 +8392,12 @@ pkmn.metagross = {
 pkmn.megaMetagross = {
     type: ["steel","psychic"],
     bst: {
-        hp: 80,
-        atk: 145,
-        def: 150,
-        satk: 105,
-        sdef: 110,
-        spe: 110,
+        hp: 80*1.2,
+        atk: 145*1.2,
+        def: 150*1.2,
+        satk: 105*1.2,
+        sdef: 110*1.2,
+        spe: 110*1.2,
     },
     hiddenAbility: ability.toughClaws,
 }
@@ -8406,12 +8406,12 @@ pkmn.megaMetagross = {
 pkmn.regirock = {
     type: ["rock"],
     bst: {
-        hp: 80,
-        atk: 100,
-        def: 200,
-        satk: 50,
-        sdef: 100,
-        spe: 50,
+        hp: 80*1.12,
+        atk: 100*1.12,
+        def: 200*1.12,
+        satk: 50*1.12,
+        sdef: 100*1.12,
+        spe: 50*1.12,
     },
     hiddenAbility: ability.solid,
     signature : move.zapCannon
@@ -8421,12 +8421,12 @@ pkmn.regirock = {
 pkmn.regice = {
     type: ["ice"],
     bst: {
-        hp: 80,
-        atk: 50,
-        def: 100,
-        satk: 100,
-        sdef: 200,
-        spe: 50,
+        hp: 80*1.12,
+        atk: 50*1.12,
+        def: 100*1.12,
+        satk: 100*1.12,
+        sdef: 200*1.12,
+        spe: 50*1.12,
     },
     hiddenAbility: ability.iceBody,
     signature : move.zapCannon
@@ -8436,12 +8436,12 @@ pkmn.regice = {
 pkmn.registeel = {
     type: ["steel"],
     bst: {
-        hp: 80,
-        atk: 75,
-        def: 150,
-        satk: 75,
-        sdef: 150,
-        spe: 20,
+        hp: 80*1.12,
+        atk: 75*1.12,
+        def: 150*1.12,
+        satk: 75*1.12,
+        sdef: 150*1.12,
+        spe: 20*1.12,
     },
     hiddenAbility: ability.bastion,
     signature : move.zapCannon
@@ -8451,12 +8451,12 @@ pkmn.registeel = {
 pkmn.latias = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 80,
-        atk: 80,
-        def: 90,
-        satk: 110,
-        sdef: 130,
-        spe: 110,
+        hp: 80*1.12,
+        atk: 80*1.12,
+        def: 90*1.12,
+        satk: 110*1.12,
+        sdef: 130*1.12,
+        spe: 110*1.12,
     },
     hiddenAbility: ability.levitate,
     signature : move.mistBall
@@ -8465,12 +8465,12 @@ pkmn.latias = {
 pkmn.megaLatias = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 120,
-        atk: 100,
-        def: 120,
-        satk: 140,
-        sdef: 180,
-        spe: 140,
+        hp: 120*1.12,
+        atk: 100*1.12,
+        def: 120*1.12,
+        satk: 140*1.12,
+        sdef: 180*1.12,
+        spe: 140*1.12,
     },
     hiddenAbility: ability.levitate,
     signature : move.mistBall
@@ -8480,12 +8480,12 @@ pkmn.megaLatias = {
 pkmn.latios = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 80,
-        atk: 90,
-        def: 80,
-        satk: 130,
-        sdef: 110,
-        spe: 110,
+        hp: 80*1.12,
+        atk: 90*1.12,
+        def: 80*1.12,
+        satk: 130*1.12,
+        sdef: 110*1.12,
+        spe: 110*1.12,
     },
     hiddenAbility: ability.levitate,
     signature : move.lusterPurge,
@@ -8494,12 +8494,12 @@ pkmn.latios = {
 pkmn.megaLatios = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 120,
-        atk: 140,
-        def: 100,
-        satk: 180,
-        sdef: 120,
-        spe: 140,
+        hp: 120*1.12,
+        atk: 140*1.12,
+        def: 100*1.12,
+        satk: 180*1.12,
+        sdef: 120*1.12,
+        spe: 140*1.12,
     },
     hiddenAbility: ability.levitate,
     signature : move.lusterPurge
@@ -8509,12 +8509,12 @@ pkmn.megaLatios = {
 pkmn.kyogre = {
     type: ["water"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 90,
-        satk: 150,
-        sdef: 140,
-        spe: 90,
+        hp: 100*1.12,
+        atk: 100*1.12,
+        def: 90*1.12,
+        satk: 150*1.12,
+        sdef: 140*1.12,
+        spe: 90*1.12,
     },
     hiddenAbility: ability.drizzle,
     lore: `A reminder of the power that once carved the seas. Its ancient rivalry with Groudon lingers quietly, a balance written into the land and water.`
@@ -8523,12 +8523,12 @@ pkmn.kyogre = {
 pkmn.kyogrePrimal = {
     type: ["water"],
     bst: {
-        hp: 100,
-        atk: 150,
-        def: 90,
-        satk: 180,
-        sdef: 160,
-        spe: 90,
+        hp: 100*1.12,
+        atk: 150*1.12,
+        def: 90*1.12,
+        satk: 180*1.12,
+        sdef: 160*1.12,
+        spe: 90*1.12,
     },
     lore: `The oceans made visible, and the force that first shaped the seas across the world. Waves rise and storms gather at its will.`
 }
@@ -8537,12 +8537,12 @@ pkmn.kyogrePrimal = {
 pkmn.groudon = {
     type: ["ground"],
     bst: {
-        hp: 100,
-        atk: 150,
-        def: 140,
-        satk: 100,
-        sdef: 90,
-        spe: 90,
+        hp: 100*1.12,
+        atk: 150*1.12,
+        def: 140*1.12,
+        satk: 100*1.12,
+        sdef: 90*1.12,
+        spe: 90*1.12,
     },
     hiddenAbility: ability.drought,
     lore: `A reminder of the power that once carved the lands. Its ancient rivalry with Kyogre lingers quietly, a balance written into the land and water.`
@@ -8552,12 +8552,12 @@ pkmn.groudon = {
 pkmn.groudonPrimal = {
     type: ["ground","fire"],
     bst: {
-        hp: 100,
-        atk: 180,
-        def: 160,
-        satk: 150,
-        sdef: 90,
-        spe: 90,
+        hp: 100*1.12,
+        atk: 180*1.12,
+        def: 160*1.12,
+        satk: 150*1.12,
+        sdef: 90*1.12,
+        spe: 90*1.12,
     },
     lore: `The continents made whole, and the force that first shaped the land across the world. Mountains rise and deserts stretch at its will.`
 }
@@ -8566,12 +8566,12 @@ pkmn.groudonPrimal = {
 pkmn.rayquaza = {
     type: ["dragon","flying"],
     bst: {
-        hp: 105,
-        atk: 150,
-        def: 90,
-        satk: 150,
-        sdef: 90,
-        spe: 95,
+        hp: 105*1.12,
+        atk: 150*1.12,
+        def: 90*1.12,
+        satk: 150*1.12,
+        sdef: 90*1.12,
+        spe: 95*1.12,
     },
     lore: `The force that watches over the world from above. It tempers the chaos of the seas and the land, acting as a mediator between Kyogre and Groudon. The winds and currents obey its passage, and it stands as guardian of the skies.`
 }
@@ -8579,12 +8579,12 @@ pkmn.rayquaza = {
 pkmn.megaRayquaza = {
     type: ["dragon","flying"],
     bst: {
-        hp: 105,
-        atk: 200,
-        def: 120,
-        satk: 200,
-        sdef: 120,
-        spe: 115,
+        hp: 105*1.12,
+        atk: 200*1.12,
+        def: 120*1.12,
+        satk: 200*1.12,
+        sdef: 120*1.12,
+        spe: 115*1.12,
     },
     lore: `Ascending the atmosphere, its reach extending into the upper skies. Protecting not only the world below but the space above, guarding against threats from beyond.`
 }
