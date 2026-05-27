@@ -58,6 +58,7 @@ pkmn.venusaur = {
 }
 
 pkmn.venusaurF = {
+    tagObtainedIn: "unobtainable",  // ← excluído do Arceus
     type: ["grass","poison"],
     bst: {
         hp: 80,
@@ -91,12 +92,12 @@ pkmn.venusaurClone = {
 pkmn.megaVenusaur = {
     type: ["grass","poison"],
     bst: {
-        hp: 80,
-        atk: 100,
-        def: 123,
-        satk: 122,
-        sdef: 120,
-        spe: 80,
+        hp: 80*1.3,
+        atk: 100*1.3,
+        def: 123*1.3,
+        satk: 122*1.3,
+        sdef: 120*1.3,
+        spe: 80*1.3,
     },
     hiddenAbility: ability.thickFat,
     signature : move.frenzyPlant
@@ -105,12 +106,12 @@ pkmn.megaVenusaur = {
 pkmn.venusaurGmax = {
     type: ["grass","poison"],
     bst: {
-        hp: 80*1.3,
-        atk: 100*1.3,
-        def: 123*1.3,
-        satk: 122*1.0,
-        sdef: 120*1.3,
-        spe: 80*1.3,
+        hp: 80*1.2,
+        atk: 100*1.2,
+        def: 123*1.2,
+        satk: 122*1.2,
+        sdef: 120*1.2,
+        spe: 80*1.2,
     },
     hiddenAbility: ability.thickFat,
     signature : move.frenzyPlant
@@ -170,12 +171,12 @@ pkmn.charizard = {
 pkmn.charizardClone = {
     type: ["flying","fire"],
     bst: {
-        hp: 78,
-        atk: 84,
-        def: 78,
-        satk: 109,
-        sdef: 85,
-        spe: 100,
+        hp: 78*1.1,
+        atk: 84*1.1,
+        def: 78*1.1,
+        satk: 109*1.1,
+        sdef: 85*1.1,
+        spe: 100*1.1,
     },
     hiddenAbility: ability.imposter,
     signature : move.flameBurst
@@ -184,12 +185,12 @@ pkmn.charizardClone = {
 pkmn.megaCharizardX = {
     type: ["fire","dragon"],
     bst: {
-        hp: 78,
-        atk: 130,
-        def: 111,
-        satk: 130,
-        sdef: 85,
-        spe: 100,
+        hp: 78*1.3,
+        atk: 130*1.3,
+        def: 111*1.3,
+        satk: 130*1.3,
+        sdef: 85*1.3,
+        spe: 100*1.3,
     },
     hiddenAbility: ability.toughClaws,
     signature : move.brutalClaw
@@ -198,12 +199,12 @@ pkmn.megaCharizardX = {
 pkmn.megaCharizardY = {
     type: ["fire","flying"],
     bst: {
-        hp: 78,
-        atk: 104,
-        def: 78,
-        satk: 159,
-        sdef: 115,
-        spe: 100,
+        hp: 78*1.3,
+        atk: 104*1.3,
+        def: 78*1.3,
+        satk: 159*1.3,
+        sdef: 115*1.3,
+        spe: 100*1.3,
     },
     hiddenAbility: ability.drought,
     signature : move.flameBurst
@@ -212,12 +213,12 @@ pkmn.megaCharizardY = {
 pkmn.charizardGmax = {
     type: ["fire","flying"],
     bst: {
-        hp: 78*1.3,
-        atk: 104*1.3,
-        def: 78*1.3,
-        satk: 159*1.0,
-        sdef: 115*1.3,
-        spe: 100*1.3,
+        hp: 78*1.2,
+        atk: 104*1.2,
+        def: 78*1.2,
+        satk: 159*1.2,
+        sdef: 115*1.2,
+        spe: 100*1.2,
     },
     hiddenAbility: ability.drought,
     signature : move.flameBurst
@@ -286,12 +287,12 @@ pkmn.blastoiseClone = {
 pkmn.megaBlastoise = {
     type: ["water"],
     bst: {
-        hp: 79,
-        atk: 103,
-        def: 120,
-        satk: 135,
-        sdef: 115,
-        spe: 78,
+        hp: 79*1.3,
+        atk: 103*1.3,
+        def: 120*1.3,
+        satk: 135*1.3,
+        sdef: 115*1.3,
+        spe: 78*1.3,
     },
     signature : move.hydroCannon,
     hiddenAbility: ability.megaLauncher,
@@ -300,12 +301,12 @@ pkmn.megaBlastoise = {
 pkmn.blastoiseGmax = {
     type: ["water"],
     bst: {
-        hp: 79*1.3,
-        atk: 103*1.3,
-        def: 120*1.0,
-        satk: 135*1.3,
-        sdef: 115*1.3,
-        spe: 78*1.3,
+        hp: 79*1.2,
+        atk: 103*1.2,
+        def: 120*1.2,
+        satk: 135*1.2,
+        sdef: 115*1.2,
+        spe: 78*1.2,
     },
     signature : move.hydroCannon,
     hiddenAbility: ability.megaLauncher,
