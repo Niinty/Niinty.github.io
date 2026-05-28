@@ -4075,12 +4075,12 @@ pkmn.megaDragonite = {
 pkmn.mewtwo = {
     type: ["psychic"],
     bst: {
-        hp: 106*1.12,
-        atk: 110*1.12,
-        def: 90*1.12,
-        satk: 154*1.12,
-        sdef: 90*1.12,
-        spe: 130*1.12,
+        hp: 106*1.3,
+        atk: 110*1.3,
+        def: 90*1.3,
+        satk: 154*1.3,
+        sdef: 90*1.3,
+        spe: 130*1.3,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaMewtwoX, item: item.mewtwoniteX } } },
     hiddenAbility: ability.aromaVeil,
@@ -4090,24 +4090,24 @@ pkmn.mewtwo = {
 pkmn.megaMewtwoX = {
     type: ["psychic","fighting"],
     bst: {
-        hp: 106*1.12,
-        atk: 190*1.12,
-        def: 100*1.12,
-        satk: 154*1.12,
-        sdef: 100*1.12,
-        spe: 130*1.12,
+        hp: 106*1.35,
+        atk: 190*1.35,
+        def: 100*1.35,
+        satk: 154*1.35,
+        sdef: 100*1.35,
+        spe: 130*1.35,
     }
 }
 
 pkmn.megaMewtwoY = {
     type: ["psychic"],
     bst: {
-        hp: 106*1.12,
-        atk: 150*1.12,
-        def: 70*1.12,
-        satk: 194*1.12,
-        sdef: 120*1.12,
-        spe: 140*1.12,
+        hp: 106*1.35,
+        atk: 150*1.35,
+        def: 70*1.35,
+        satk: 194*1.35,
+        sdef: 120*1.35,
+        spe: 140*1.35,
     }
 }
 
@@ -8538,12 +8538,12 @@ pkmn.kyogre = {
 pkmn.kyogrePrimal = {
     type: ["water"],
     bst: {
-        hp: 100*1.12,
-        atk: 150*1.12,
-        def: 90*1.12,
-        satk: 180*1.12,
-        sdef: 160*1.12,
-        spe: 90*1.12,
+        hp: 100*1.35,
+        atk: 150*1.35,
+        def: 90*1.35,
+        satk: 180*1.35,
+        sdef: 160*1.35,
+        spe: 90*1.35,
     },
     lore: `The oceans made visible, and the force that first shaped the seas across the world. Waves rise and storms gather at its will.`
 }
@@ -8567,12 +8567,12 @@ pkmn.groudon = {
 pkmn.groudonPrimal = {
     type: ["ground","fire"],
     bst: {
-        hp: 100*1.12,
-        atk: 180*1.12,
-        def: 160*1.12,
-        satk: 150*1.12,
-        sdef: 90*1.12,
-        spe: 90*1.12,
+        hp: 100*1.35,
+        atk: 180*1.35,
+        def: 160*1.35,
+        satk: 150*1.35,
+        sdef: 90*1.35,
+        spe: 90*1.35,
     },
     lore: `The continents made whole, and the force that first shaped the land across the world. Mountains rise and deserts stretch at its will.`
 }
@@ -8581,12 +8581,12 @@ pkmn.groudonPrimal = {
 pkmn.rayquaza = {
     type: ["dragon","flying"],
     bst: {
-        hp: 105*1.12,
-        atk: 150*1.12,
-        def: 90*1.12,
-        satk: 150*1.12,
-        sdef: 90*1.12,
-        spe: 95*1.12,
+        hp: 105*1.3,
+        atk: 150*1.3,
+        def: 90*1*1.3,
+        satk: 150*1.3,
+        sdef: 90*1.3,
+        spe: 95*1.3,
     },
     lore: `The force that watches over the world from above. It tempers the chaos of the seas and the land, acting as a mediator between Kyogre and Groudon. The winds and currents obey its passage, and it stands as guardian of the skies.`
 }
@@ -8594,12 +8594,12 @@ pkmn.rayquaza = {
 pkmn.megaRayquaza = {
     type: ["dragon","flying"],
     bst: {
-        hp: 105*1.12,
-        atk: 200*1.12,
-        def: 120*1.12,
-        satk: 200*1.12,
-        sdef: 120*1.12,
-        spe: 115*1.12,
+        hp: 105*1.35,
+        atk: 200*1.35,
+        def: 120*1.35,
+        satk: 200*1.35,
+        sdef: 120*1.35,
+        spe: 115*1.35,
     },
     lore: `Ascending the atmosphere, its reach extending into the upper skies. Protecting not only the world below but the space above, guarding against threats from beyond.`
 }
@@ -10311,6 +10311,7 @@ pkmn.arceusRock = {
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
 }
 
+
 pkmn.arceusBug = {
     type : ["bug"],
     bst: {
@@ -10324,7 +10325,7 @@ pkmn.arceusBug = {
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
 }
-
+    
 pkmn.arceusGhost = {
     type : ["ghost"],
     bst: {
@@ -16502,12 +16503,12 @@ pkmn.necrozmaDuskMane = {
 pkmn.ultraNecrozma = {
     type: ["psychic","dragon"],
     bst: {
-        hp: 97,
-        atk: 197,
-        def: 97,
-        satk: 197,
-        sdef: 97,
-        spe: 159,
+        hp: 97*1.35,
+        atk: 197*1.35,
+        def: 97*1.35,
+        satk: 197*1.35,
+        sdef: 97*1.35,
+        spe: 159*1.35,
     }
 }
 
@@ -18052,12 +18053,12 @@ pkmn.dragapult = {
 pkmn.zacian = {
   type: ["fairy"],
   bst: {
-    hp: 92,
-    atk: 130,
-    def: 115,
-    satk: 80,
-    sdef: 115,
-    spe: 138,
+    hp: 92*1.3,
+    atk: 130*1.3,
+    def: 115*1.3,
+    satk: 80*1.3,
+    sdef: 115*1.3,
+    spe: 138*1.3,
   },
     hiddenAbility: ability.iaido,
 }
@@ -18065,12 +18066,12 @@ pkmn.zacian = {
 pkmn.zacianCrowned = {
     type: ["fairy","steel"],
     bst: {
-        hp: 92,
-        atk: 170,
-        def: 115,
-        satk: 80,
-        sdef: 115,
-        spe: 148,
+        hp: 92*1.3,
+        atk: 170*1.3,
+        def: 115*1.3,
+        satk: 80*1.3,
+        sdef: 115*1.3,
+        spe: 148*1.3,
     }
 }
 
@@ -18104,12 +18105,12 @@ pkmn.zamazentaCrowned = {
 pkmn.eternatus = {
   type: ["poison","dragon"],
   bst: {
-    hp: 140,
-    atk: 85,
-    def: 95,
-    satk: 145,
-    sdef: 95,
-    spe: 130,
+    hp: 140*1.35,
+    atk: 85*1.35,
+    def: 95*1.35,
+    satk: 145*1.35,
+    sdef: 95*1.35,
+    spe: 130*1.35,
   },
     hiddenAbility: ability.supremeOverlord,
 }
@@ -18271,36 +18272,36 @@ pkmn.spectrier = {
 pkmn.calyrex = {
   type: ["psychic","grass"],
   bst: {
-    hp: 100,
-    atk: 80,
-    def: 80,
-    satk: 80,
-    sdef: 80,
-    spe: 80,
+    hp: 100*1.3,
+    atk: 80*1.3,
+    def: 80*1.3,
+    satk: 80*1.3,
+    sdef: 80*1.3,
+    spe: 80*1.3,
   },
 }
 
 pkmn.calyrexIce = {
   type: ["psychic","ice"],
   bst: {
-    hp: 100,
-    atk: 165,
-    def: 150,
-    satk: 85,
-    sdef: 130,
-    spe: 50,
+    hp: 100*1.3,
+    atk: 165*1.3,
+    def: 150*1.3,
+    satk: 85*1.3,
+    sdef: 130*1.3,
+    spe: 50*1.3,
   },
 }
 
 pkmn.calyrexShadow = {
   type: ["psychic","ghost"],
   bst: {
-    hp: 100,
-    atk: 85,
-    def: 80,
-    satk: 165,
-    sdef: 100,
-    spe: 150,
+    hp: 100*1.3,
+    atk: 85*1.3,
+    def: 80*1.3,
+    satk: 165*1.3,
+    sdef: 100*1.3,
+    spe: 150*1.3,
   },
 }
 
