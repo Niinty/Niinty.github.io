@@ -9987,6 +9987,7 @@ function assignMegaDimension(){
 
 function updateMegaDimension(tier){
 
+    return;
 
     assignMegaDimension()
 
