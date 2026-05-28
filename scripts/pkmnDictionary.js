@@ -10227,12 +10227,12 @@ pkmn.shayminSky = {
 pkmn.arceus = {
     type : ["normal"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     hiddenAbility: ability.thousandArms,
