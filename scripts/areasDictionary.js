@@ -6164,7 +6164,7 @@ t4: omniboost + wonder guard
     skills : {3 : skill.ironWill.id, 2 : skill.electroblast.id}
 }*/
 
-areas.dimensionPikachuGmax = {
+/*areas.dimensionPikachuGmax = {
     type: `dimensionBlueprint`,
     icon: pkmn.pikachuGmax,
     tier: 2,
@@ -6183,7 +6183,7 @@ areas.dimensionPikachuGmax = {
     },
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.harshSun.id],
     skills : {3 : skill.ironWill.id, 2 : skill.pyroblast.id}
-}
+}*/
 
 /*areas.dimensionKyuremWhite = {
     type: `dimensionBlueprint`,
