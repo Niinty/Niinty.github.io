@@ -5535,12 +5535,12 @@ pkmn.heracross = {
 pkmn.megaHeracross = {
     type: ["bug","fighting"],
     bst: {
-        hp: 80,
-        atk: 185,
-        def: 115,
-        satk: 40,
-        sdef: 105,
-        spe: 75,
+        hp: 80*1.2,
+        atk: 185*1.2,
+        def: 115*1.2,
+        satk: 40*1.2,
+        sdef: 105*1.2,
+        spe: 75*1.2,
     },
     hiddenAbility: ability.skillLink,
     signature : move.megahorn
