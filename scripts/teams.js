@@ -488,6 +488,7 @@ function injectPreviewTeam(){
     setTimeout(() => {
           document.getElementById(`team-menu`).style.display = `none`;
           document.getElementById(`vs-menu`).style.display = `none`;
+          document.getElementById(`training-menu`).style.display = `none`; 
           document.getElementById("content-explore").style.display = "flex"
             document.getElementById(`team-menu`).style.zIndex = `30`
             document.getElementById(`preview-team-exit`).style.display = "none"
