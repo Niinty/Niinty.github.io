@@ -3929,12 +3929,12 @@ pkmn.snorlaxGmax = {
 pkmn.articuno = {
     type: ["ice","flying"],
     bst: {
-        hp: 90*1.12,
-        atk: 85*1.12,
-        def: 100*1.12,
-        satk: 95*1.12,
-        sdef: 125*1.12,
-        spe: 85*1.12,
+        hp: 90*1.15,
+        atk: 85*1.15,
+        def: 100*1.15,
+        satk: 95*1.15,
+        sdef: 125*1.15,
+        spe: 85*1.15,
     },
     hiddenAbility: ability.glacialBody,
     lore : `Articuno é um Pokémon pássaro lendário que pode controlar o gelo. O bater de suas asas resfria o ar. Como resultado, diz-se que quando este Pokémon voa, a neve cai.`,
@@ -3944,12 +3944,12 @@ pkmn.articuno = {
 pkmn.galarianArticuno = {
     type: ["psychic","flying"],
     bst: {
-        hp: 90*1.12,
-        atk: 85*1.12,
-        def: 85*1.12,
-        satk: 125*1.12,
-        sdef: 150*1.12,
-        spe: 95*1.12,
+        hp: 90*1.15,
+        atk: 85*1.15,
+        def: 85*1.15,
+        satk: 125*1.15,
+        sdef: 150*1.15,
+        spe: 95*1.15,
     },
     hiddenAbility: ability.justified,
     signature : move.freezingGlare
@@ -3959,12 +3959,12 @@ pkmn.galarianArticuno = {
 pkmn.zapdos = {
     type: ["electric","flying"],
     bst: {
-        hp: 90*1.12,
-        atk: 90*1.12,
-        def: 85*1.12,
-        satk: 125*1.12,
-        sdef: 90*1.12,
-        spe: 100*1.12,
+        hp: 90*1.15,
+        atk: 90*1.15,
+        def: 85*1.15,
+        satk: 125*1.15,
+        sdef: 90*1.15,
+        spe: 100*1.15,
     },
     hiddenAbility: ability.dauntingLook,
     lore: `Zapdos é um Pokémon pássaro lendário que possui a habilidade de controlar a eletricidade. Ele geralmente vive em nuvens de tempestade. Ele ganha poder se for atingido por raios.`,
@@ -3974,12 +3974,12 @@ pkmn.zapdos = {
 pkmn.galarianZapdos = {
     type: ["fighting","flying"],
     bst: {
-        hp: 90*1.12,
-        atk: 125*1.12,
-        def: 90*1.12,
-        satk: 85*1.12,
-        sdef: 90*1.12,
-        spe: 150*1.12,
+        hp: 90*1.15,
+        atk: 125*1.15,
+        def: 90*1.15,
+        satk: 85*1.15,
+        sdef: 90*1.15,
+        spe: 150*1.15,
     },
     hiddenAbility: ability.angerPoint,
     signature : move.thunderousKick
@@ -3989,12 +3989,12 @@ pkmn.galarianZapdos = {
 pkmn.moltres = {
     type: ["fire","flying"],
     bst: {
-        hp: 90*1.12,
-        atk: 100*1.12,
-        def: 90*1.12,
-        satk: 125*1.12,
-        sdef: 85*1.12,
-        spe: 90*1.12,
+        hp: 90*1.15,
+        atk: 100*1.15,
+        def: 90*1.15,
+        satk: 125*1.15,
+        sdef: 85*1.15,
+        spe: 90*1.15,
     },
     hiddenAbility: ability.fieryPelt,
     lore : `Moltres é um Pokémon pássaro lendário que possui a habilidade de controlar o fogo. Se este Pokémon estiver ferido, diz-se que ele mergulha seu corpo no magma derretido de um vulcão para queimar e curar a si mesmo.`,
@@ -4004,12 +4004,12 @@ pkmn.moltres = {
 pkmn.galarianMoltres = {
     type: ["dark","flying"],
     bst: {
-        hp: 90*1.12,
-        atk: 85*1.12,
-        def: 90*1.12,
-        satk: 150*1.12,
-        sdef: 125*1.12,
-        spe: 90*1.12,
+        hp: 90*1.15,
+        atk: 85*1.15,
+        def: 90*1.15,
+        satk: 150*1.15,
+        sdef: 125*1.15,
+        spe: 90*1.15,
     },
     hiddenAbility: ability.gloomilate,
     signature : move.fieryWrath
@@ -4115,12 +4115,12 @@ pkmn.megaMewtwoY = {
 pkmn.mew = {
     type: ["psychic"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 100,
-        satk: 100,
-        sdef: 100,
-        spe: 100,
+        hp: 100*1.5,
+        atk: 100*1.5,
+        def: 100*1.5,
+        satk: 100*1.5,
+        sdef: 100*1.5,
+        spe: 100*1.5,
     },
     hiddenAbility: ability.protean,
     lore: `The origin from which all Pokemon as we know trace their beginnings. Its form, small and gentle, carries the memory of every creature that would follow.`
@@ -6008,12 +6008,12 @@ pkmn.miltank = {
 pkmn.raikou = {
     type: ["electric"],
     bst: {
-        hp: 90*1.12,
-        atk: 85*1.12,
-        def: 75*1.12,
-        satk: 115*1.12,
-        sdef: 100*1.12,
-        spe: 115*1.12,
+        hp: 90*1.15,
+        atk: 85*1.15,
+        def: 75*1.15,
+        satk: 115*1.15,
+        sdef: 100*1.15,
+        spe: 115*1.15,
     },
     signature: move.auraWheel,
     hiddenAbility: ability.moody,
@@ -6024,12 +6024,12 @@ pkmn.raikou = {
 pkmn.entei = {
     type: ["fire"],
     bst: {
-        hp: 115*1.12,
-        atk: 115*1.12,
-        def: 85*1.12,
-        satk: 90*1.12,
-        sdef: 75*1.12,
-        spe: 100*1.12,
+        hp: 115*1.15,
+        atk: 115*1.15,
+        def: 85*1.15,
+        satk: 90*1.15,
+        sdef: 75*1.15,
+        spe: 100*1.15,
     },
     signature: move.pyroBall,
     hiddenAbility: ability.hugePower,
@@ -6040,12 +6040,12 @@ pkmn.entei = {
 pkmn.suicune = {
     type: ["water"],
     bst: {
-        hp: 100*1.12,
-        atk: 75*1.12,
-        def: 115*1.12,
-        satk: 90*1.12,
-        sdef: 115*1.12,
-        spe: 85*1.12,
+        hp: 100*1.15,
+        atk: 75*1.15,
+        def: 115*1.15,
+        satk: 90*1.15,
+        sdef: 115*1.15,
+        spe: 85*1.15,
     },
     signature: move.aquaStep,
     hiddenAbility: ability.parentalBond,
@@ -6112,12 +6112,12 @@ pkmn.megaTyranitar = {
 pkmn.lugia = {
     type: ["psychic","flying"],
     bst: {
-        hp: 106*1.12,
-        atk: 90*1.12,
-        def: 130*1.12,
-        satk: 90*1.12,
-        sdef: 154*1.12,
-        spe: 110*1.12,
+        hp: 106*1.35,
+        atk: 90*1.35,
+        def: 130*1.35,
+        satk: 90*1.35,
+        sdef: 154*1.35,
+        spe: 110*1.35,
     },
     signature: move.aeroblast,
     hiddenAbility: ability.hydrolate,
@@ -6128,12 +6128,12 @@ pkmn.lugia = {
 pkmn.hooh = {
     type: ["fire","flying"],
     bst: {
-        hp: 106*1.12,
-        atk: 130*1.12,
-        def: 90*1.12,
-        satk: 110*1.12,
-        sdef: 154*1.12,
-        spe: 90*1.12,
+        hp: 106*1.35,
+        atk: 130*1.35,
+        def: 90*1.35,
+        satk: 110*1.35,
+        sdef: 154*1.35,
+        spe: 90*1.35,
     },
     signature: move.sacredFire,
     hiddenAbility: ability.pyrolate,
@@ -6144,12 +6144,12 @@ pkmn.hooh = {
 pkmn.celebi = {
     type: ["psychic","grass"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 100,
-        satk: 100,
-        sdef: 100,
-        spe: 100,
+        hp: 100*1.5,
+        atk: 100*1.5,
+        def: 100*1.5,
+        satk: 100*1.5,
+        sdef: 100*1.5,
+        spe: 100*1.5,
     },
     hiddenAbility: ability.grassySurge,
     lore: `Traveling through time and appearing where the past and future meet, it preserves the natural order, ensuring that the cycles of life, growth, and seasons continue uninterrupted.`
@@ -8421,12 +8421,12 @@ pkmn.megaMetagross = {
 pkmn.regirock = {
     type: ["rock"],
     bst: {
-        hp: 80*1.12,
-        atk: 100*1.12,
-        def: 200*1.12,
-        satk: 50*1.12,
-        sdef: 100*1.12,
-        spe: 50*1.12,
+        hp: 80*1.15,
+        atk: 100*1.15,
+        def: 200*1.15,
+        satk: 50*1.15,
+        sdef: 100*1.15,
+        spe: 50*1.15,
     },
     hiddenAbility: ability.solid,
     signature : move.zapCannon
@@ -8436,12 +8436,12 @@ pkmn.regirock = {
 pkmn.regice = {
     type: ["ice"],
     bst: {
-        hp: 80*1.12,
-        atk: 50*1.12,
-        def: 100*1.12,
-        satk: 100*1.12,
-        sdef: 200*1.12,
-        spe: 50*1.12,
+        hp: 80*1.15,
+        atk: 50*1.15,
+        def: 100*1.15,
+        satk: 100*1.15,
+        sdef: 200*1.15,
+        spe: 50*1.15,
     },
     hiddenAbility: ability.iceBody,
     signature : move.zapCannon
@@ -8451,12 +8451,12 @@ pkmn.regice = {
 pkmn.registeel = {
     type: ["steel"],
     bst: {
-        hp: 80*1.12,
-        atk: 75*1.12,
-        def: 150*1.12,
-        satk: 75*1.12,
-        sdef: 150*1.12,
-        spe: 20*1.12,
+        hp: 80*1.15,
+        atk: 75*1.15,
+        def: 150*1.15,
+        satk: 75*1.15,
+        sdef: 150*1.15,
+        spe: 20*1.15,
     },
     hiddenAbility: ability.bastion,
     signature : move.zapCannon
@@ -8466,12 +8466,12 @@ pkmn.registeel = {
 pkmn.latias = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 80*1.12,
-        atk: 80*1.12,
-        def: 90*1.12,
-        satk: 110*1.12,
-        sdef: 130*1.12,
-        spe: 110*1.12,
+        hp: 80*1.15,
+        atk: 80*1.15,
+        def: 90*1.15,
+        satk: 110*1.15,
+        sdef: 130*1.15,
+        spe: 110*1.15,
     },
     hiddenAbility: ability.levitate,
     signature : move.mistBall
@@ -8480,12 +8480,12 @@ pkmn.latias = {
 pkmn.megaLatias = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 120*1.12,
-        atk: 100*1.12,
-        def: 120*1.12,
-        satk: 140*1.12,
-        sdef: 180*1.12,
-        spe: 140*1.12,
+        hp: 120*1.15,
+        atk: 100*1.15,
+        def: 120*1.15,
+        satk: 140*1.15,
+        sdef: 180*1.15,
+        spe: 140*1.15,
     },
     hiddenAbility: ability.levitate,
     signature : move.mistBall
@@ -8495,12 +8495,12 @@ pkmn.megaLatias = {
 pkmn.latios = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 80*1.12,
-        atk: 90*1.12,
-        def: 80*1.12,
-        satk: 130*1.12,
-        sdef: 110*1.12,
-        spe: 110*1.12,
+        hp: 80*1.15,
+        atk: 90*1.15,
+        def: 80*1.15,
+        satk: 130*1.15,
+        sdef: 110*1.15,
+        spe: 110*1.15,
     },
     hiddenAbility: ability.levitate,
     signature : move.lusterPurge,
@@ -8509,12 +8509,12 @@ pkmn.latios = {
 pkmn.megaLatios = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 120*1.12,
-        atk: 140*1.12,
-        def: 100*1.12,
-        satk: 180*1.12,
-        sdef: 120*1.12,
-        spe: 140*1.12,
+        hp: 120*1.15,
+        atk: 140*1.15,
+        def: 100*1.15,
+        satk: 180*1.15,
+        sdef: 120*1.15,
+        spe: 140*1.15,
     },
     hiddenAbility: ability.levitate,
     signature : move.lusterPurge
@@ -8524,12 +8524,12 @@ pkmn.megaLatios = {
 pkmn.kyogre = {
     type: ["water"],
     bst: {
-        hp: 100*1.12,
-        atk: 100*1.12,
-        def: 90*1.12,
-        satk: 150*1.12,
-        sdef: 140*1.12,
-        spe: 90*1.12,
+        hp: 100*1.15,
+        atk: 100*1.15,
+        def: 90*1.15,
+        satk: 150*1.15,
+        sdef: 140*1.15,
+        spe: 90*1.15,
     },
     hiddenAbility: ability.drizzle,
     lore: `A reminder of the power that once carved the seas. Its ancient rivalry with Groudon lingers quietly, a balance written into the land and water.`
@@ -8552,12 +8552,12 @@ pkmn.kyogrePrimal = {
 pkmn.groudon = {
     type: ["ground"],
     bst: {
-        hp: 100*1.12,
-        atk: 150*1.12,
-        def: 140*1.12,
-        satk: 100*1.12,
-        sdef: 90*1.12,
-        spe: 90*1.12,
+        hp: 100*1.15,
+        atk: 150*1.15,
+        def: 140*1.15,
+        satk: 100*1.15,
+        sdef: 90*1.15,
+        spe: 90*1.15,
     },
     hiddenAbility: ability.drought,
     lore: `A reminder of the power that once carved the lands. Its ancient rivalry with Kyogre lingers quietly, a balance written into the land and water.`
@@ -8608,12 +8608,12 @@ pkmn.megaRayquaza = {
 pkmn.jirachi = {
     type: ["steel","psychic"],
     bst: {
-        hp: 100,
-        atk: 125,
-        def: 100,
-        satk: 125,
-        sdef: 100,
-        spe: 100,
+        hp: 100*1.5,
+        atk: 125*1.5,
+        def: 100*1.5,
+        satk: 125*1.5,
+        sdef: 100*1.5,
+        spe: 100*1.5,
     },
     hiddenAbility: ability.sereneGrace,
     signature : move.doomDesire,
@@ -8624,36 +8624,36 @@ pkmn.jirachi = {
 pkmn.deoxys = {
     type: ["psychic"],
     bst: {
-        hp: 50,
-        atk: 150,
-        def: 50,
-        satk: 150,
-        sdef: 50,
-        spe: 150,
+        hp: 50*1.5,
+        atk: 150*1.5,
+        def: 50*1.5,
+        satk: 150*1.5,
+        sdef: 50*1.5,
+        spe: 150*1.5,
     }
 }
 
 pkmn.deoxysAttack = {
     type: ["psychic"],
     bst: {
-        hp: 50,
-        atk: 200,
+        hp: 50*1.5,
+        atk: 200*1.5,
         def: 20,
-        satk: 200,
+        satk: 200*1.5,
         sdef: 20,
-        spe: 150,
+        spe: 150*1.5,
     }
 }
 
 pkmn.deoxysDefense = {
     type: ["psychic"],
     bst: {
-        hp: 50,
+        hp: 50*1.5,
         atk: 70,
-        def: 200,
+        def: 200*1.5,
         satk: 70,
-        sdef: 200,
-        spe: 90,
+        sdef: 200*1.5,
+        spe: 90*1.5,
     }
 }
 
@@ -8661,11 +8661,11 @@ pkmn.deoxysSpeed = {
     type: ["psychic"],
     bst: {
         hp: 50,
-        atk: 115,
+        atk: 115*1.5,
         def: 90,
-        satk: 115,
+        satk: 115*1.5,
         sdef: 90,
-        spe: 200,
+        spe: 200*1.5,
     }
 }
 
@@ -9997,12 +9997,12 @@ pkmn.azelf = {
 pkmn.dialga = {
     type: ["steel","dragon"],
     bst: {
-        hp: 100,
-        atk: 120,
-        def: 120,
-        satk: 150,
-        sdef: 100,
-        spe: 90,
+        hp: 100*1.35,
+        atk: 120*1.35,
+        def: 120*1.35,
+        satk: 150*1.35,
+        sdef: 100*1.35,
+        spe: 90*1.35,
     },
     signature : move.roarOfTime,
     lore: `Bound by weight and limit, a shape time itself can endure. Its power yet governs past and future, though restrained, for the world cannot withstand the full measure of eternity given form.`
@@ -10011,12 +10011,12 @@ pkmn.dialga = {
 pkmn.dialgaOrigin = {
     type: ["steel","dragon"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 190,
-        satk: 160,
-        sdef: 120,
-        spe: 90,
+        hp: 100*1.35,
+        atk: 100*1.35,
+        def: 190*1.35,
+        satk: 160*1.35,
+        sdef: 120*1.35,
+        spe: 90*1.35,
     },
     lore: `Shaped by the Original One, when the universe had yet to know its first moment, It was brought forth to give law to duration. By its heartbeat, time began to flow; by its will, past and future were torn apart and given order. Without It, all life trapped by eternal stillness.`
 }
@@ -10025,12 +10025,12 @@ pkmn.dialgaOrigin = {
 pkmn.palkia = {
     type: ["water","dragon"],
     bst: {
-        hp: 90,
-        atk: 120,
-        def: 100,
-        satk: 150,
-        sdef: 120,
-        spe: 100,
+        hp: 90*1.35,
+        atk: 120*1.35,
+        def: 100*1.35,
+        satk: 150*1.35,
+        sdef: 120*1.35,
+        spe: 100*1.35,
     },
     signature : move.spacialRend,
     hiddenAbility: ability.supremeOverlord,
@@ -10040,12 +10040,12 @@ pkmn.palkia = {
 pkmn.palkiaOrigin = {
     type: ["water","dragon"],
     bst: {
-        hp: 90,
-        atk: 100,
-        def: 120,
-        satk: 190,
-        sdef: 160,
-        spe: 100,
+        hp: 90*1.35,
+        atk: 100*1.35,
+        def: 120*1.35,
+        satk: 190*1.35,
+        sdef: 160*1.35,
+        spe: 100*1.35,
     },
     lore: `Shaped by the Original One, when the universe was yet unmeasured, It was brought forth to give form to expanse. By its existence, space became vast; by its will, distance gained meaning. Without It, the world would have no breadth, no separation between sky and land, nor any path for life to walk.`
 }
@@ -10098,12 +10098,12 @@ pkmn.regigigas = {
 pkmn.giratina = {
     type: ["ghost","dragon"],
     bst: {
-        hp: 150,
-        atk: 100,
-        def: 120,
-        satk: 100,
-        sdef: 120,
-        spe: 90,
+        hp: 150*1.35,
+        atk: 100*1.35,
+        def: 120*1.35,
+        satk: 100*1.35,
+        sdef: 120*1.35,
+        spe: 90*1.35,
     },
     signature : move.shadowForce,
     lore: `Bound by weight and limit, a shape reality can tolerate. Its power yet governs antimatter and opposition, though restrained, for the world cannot endure the force that unravels all creation made whole.`
@@ -10112,12 +10112,12 @@ pkmn.giratina = {
 pkmn.giratinaOrigin = {
     type: ["ghost","dragon"],
     bst: {
-        hp: 100,
-        atk: 160,
-        def: 100,
-        satk: 150,
-        sdef: 100,
-        spe: 160,
+        hp: 100*1.35,
+        atk: 160*1.35,
+        def: 100*1.35,
+        satk: 150*1.35,
+        sdef: 100*1.35,
+        spe: 160*1.35,
     },
     lore: `Shaped by the Original One, when the laws of creation first took form, It was born in defiance of them. Given dominion over antithesis of matter, It was cast away for its violence, bound to a world where logic collapses and direction has no meaning.`
 }
@@ -13088,12 +13088,12 @@ pkmn.enamorusTherian = {
 pkmn.reshiram = {
   type: ["dragon","fire"],
   bst: {
-    hp: 100,
-    atk: 120,
-    def: 100,
-    satk: 150,
-    sdef: 120,
-    spe: 90,
+    hp: 100*1.35,
+    atk: 120*1.35,
+    def: 100*1.35,
+    satk: 150*1.35,
+    sdef: 120*1.35,
+    spe: 90*1.35,
   },
     signature : move.blueFlare
 }
@@ -13102,12 +13102,12 @@ pkmn.reshiram = {
 pkmn.zekrom = {
   type: ["dragon","electric"],
   bst: {
-    hp: 100,
-    atk: 150,
-    def: 120,
-    satk: 120,
-    sdef: 100,
-    spe: 90,
+    hp: 100*1.35,
+    atk: 150*1.35,
+    def: 120*1.35,
+    satk: 120*1.35,
+    sdef: 100*1.35,
+    spe: 90*1.35,
   },
     signature : move.boltStrike
 }
@@ -13117,12 +13117,12 @@ pkmn.zekrom = {
 pkmn.kyurem = {
   type: ["dragon","ice"],
   bst: {
-    hp: 125,
-    atk: 130,
-    def: 90,
-    satk: 130,
-    sdef: 90,
-    spe: 95,
+    hp: 125*1.35,
+    atk: 130*1.35,
+    def: 90*1.35,
+    satk: 130*1.35,
+    sdef: 90*1.35,
+    spe: 95*1.35,
   },
     hiddenAbility: ability.glaciate,
     signature : move.glaciate
@@ -13131,24 +13131,24 @@ pkmn.kyurem = {
 pkmn.kyuremBlack = {
     type: ["dragon","ice"],
     bst: {
-        hp: 165,
-        atk: 180,
-        def: 100,
-        satk: 120,
-        sdef: 90,
-        spe: 110,
+        hp: 165*1.35,
+        atk: 180*1.35,
+        def: 100*1.35,
+        satk: 120*1.35,
+        sdef: 90*1.35,
+        spe: 110*1.35,
     }
 }
 
 pkmn.kyuremWhite = {
     type: ["dragon","ice"],
     bst: {
-        hp: 165,
-        atk: 120,
-        def: 90,
-        satk: 180,
-        sdef: 100,
-        spe: 110,
+        hp: 165*1.35,
+        atk: 120*1.35,
+        def: 90*1.35,
+        satk: 180*1.35,
+        sdef: 100*1.35,
+        spe: 110*1.35,
     }
 }
 
@@ -14950,12 +14950,12 @@ pkmn.noivern = {
 pkmn.xerneas = {
     type: ["fairy"],
     bst: {
-        hp: 126,
-        atk: 131,
-        def: 95,
-        satk: 131,
-        sdef: 98,
-        spe: 99,
+        hp: 126*1.3,
+        atk: 131*1.3,
+        def: 95*1.3,
+        satk: 131*1.3,
+        sdef: 98*1.3,
+        spe: 99*1.3,
     }
 }
 
@@ -14963,12 +14963,12 @@ pkmn.xerneas = {
 pkmn.yveltal = {
     type: ["dark","flying"],
     bst: {
-        hp: 126,
-        atk: 131,
-        def: 95,
-        satk: 131,
-        sdef: 98,
-        spe: 99,
+        hp: 126*1.3,
+        atk: 131*1.3,
+        def: 95*1.3,
+        satk: 131*1.3,
+        sdef: 98*1.3,
+        spe: 99*1.3,
     }
 }
 
@@ -15003,12 +15003,12 @@ pkmn.zygarde100 = {
     rename: `zygarde 100%`,
     type: ["dragon","ground"],
     bst: {
-        hp: 216,
-        atk: 100,
-        def: 181,
-        satk: 91,
-        sdef: 125,
-        spe: 85,
+        hp: 216*1.3,
+        atk: 100*1.3,
+        def: 181*1.3,
+        satk: 91*1.3,
+        sdef: 125*1.3,
+        spe: 85*1.3,
     },
     // evolve: function() { return { 1: { pkmn: pkmn.megaZygarde, item: item.zygardite } } },
 }
@@ -15016,12 +15016,12 @@ pkmn.zygarde100 = {
 pkmn.megaZygarde = {
     type: ["dragon","ground"],
     bst: {
-        hp: 216,
-        atk: 100,
-        def: 91,
-        satk: 216,
-        sdef: 85,
-        spe: 100,
+        hp: 216*1.3,
+        atk: 100*1.3,
+        def: 91*1.3,
+        satk: 216*1.3,
+        sdef: 85*1.3,
+        spe: 100*1.3,
     }
 }
 
@@ -16335,12 +16335,12 @@ pkmn.cosmoem = {
 pkmn.solgaleo = {
   type: ["psychic","steel"],
   bst: {
-    hp: 137,
-    atk: 137,
-    def: 107,
-    satk: 113,
-    sdef: 89,
-    spe: 97,
+    hp: 137*1.3,
+    atk: 137*1.3,
+    def: 107*1.3,
+    satk: 113*1.3,
+    sdef: 89*1.3,
+    spe: 97*1.3,
   },
     hiddenAbility: ability.fullMetalBody,
     signature : move.sunsteelStrike
@@ -16349,12 +16349,12 @@ pkmn.solgaleo = {
 pkmn.lunala = {
   type: ["psychic","ghost"],
   bst: {
-    hp: 137,
-    atk: 113,
-    def: 89,
-    satk: 137,
-    sdef: 107,
-    spe: 97,
+    hp: 137*1.3,
+    atk: 113*1.3,
+    def: 89*1.3,
+    satk: 137*1.3,
+    sdef: 107*1.3,
+    spe: 97*1.3,
   },
     signature : move.moongeistBeam
 }
