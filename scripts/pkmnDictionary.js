@@ -10244,12 +10244,12 @@ pkmn.arceus = {
 pkmn.arceusFighting = {
     type : ["fighting"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10258,12 +10258,12 @@ pkmn.arceusFighting = {
 pkmn.arceusflying = {
     type : ["flying"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10272,12 +10272,12 @@ pkmn.arceusflying = {
 pkmn.arceusPoison = {
     type : ["poison"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10286,12 +10286,12 @@ pkmn.arceusPoison = {
 pkmn.arceusGround = {
     type : ["ground"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10300,12 +10300,12 @@ pkmn.arceusGround = {
 pkmn.arceusRock = {
     type : ["rock"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10315,12 +10315,12 @@ pkmn.arceusRock = {
 pkmn.arceusBug = {
     type : ["bug"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10329,12 +10329,12 @@ pkmn.arceusBug = {
 pkmn.arceusGhost = {
     type : ["ghost"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10343,12 +10343,12 @@ pkmn.arceusGhost = {
 pkmn.arceusSteel = {
     type : ["steel"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10357,12 +10357,12 @@ pkmn.arceusSteel = {
 pkmn.arceusFire = {
     type : ["fire"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10371,12 +10371,12 @@ pkmn.arceusFire = {
 pkmn.arceusWater = {
     type : ["water"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10385,12 +10385,12 @@ pkmn.arceusWater = {
 pkmn.arceusGrass = {
     type : ["grass"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10399,12 +10399,12 @@ pkmn.arceusGrass = {
 pkmn.arceusElectric = {
     type : ["electric"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10413,12 +10413,12 @@ pkmn.arceusElectric = {
 pkmn.arceusPsychic = {
     type : ["psychic"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10427,12 +10427,12 @@ pkmn.arceusPsychic = {
 pkmn.arceusIce = {
     type : ["ice"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10441,12 +10441,12 @@ pkmn.arceusIce = {
 pkmn.arceusDragon = {
     type : ["dragon"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10455,12 +10455,12 @@ pkmn.arceusDragon = {
 pkmn.arceusDark = {
     type : ["dark"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
@@ -10469,12 +10469,12 @@ pkmn.arceusDark = {
 pkmn.arceusFairy = {
     type : ["fairy"],
     bst: {
-    hp: 120,
-    atk : 120,
-    def: 120,
-    satk : 120,
-    sdef: 120,
-    spe: 120,
+    hp: 120*1.35,
+    atk : 120*1.35,
+    def: 120*1.35,
+    satk : 120*1.35,
+    sdef: 120*1.35,
+    spe: 120*1.35,
     },
     signature : move.judgment,
     lore: `Emerging from nothing, existence was created from its birth, setting the threads of the universe in motion. The pillars that govern reality shaped by its thousand arms, and yet this is only a vessel, one that the mind can tolerate.`
