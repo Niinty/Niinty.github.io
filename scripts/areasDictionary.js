@@ -5217,7 +5217,7 @@ areas.vsLegendTrainerAsh = {
         slot3Moves : [move.crabhammer.id, move.machPunk.id, move.xScissor.id],
         slot4 : pkmn.charizardGmax,
         slot4Moves : [move.ironDefense.id, move.ironTail.id, move.flamethrower.id],
-        slot5 : pkmn.pikachuGmax,
+        slot5 : pkmn.ax,
         slot5Moves : [move.extremeSpeed.id, move.ironTail.id, move.voltTackle.id],
         slot6 : pkmn.greninjaAsh,
         slot6Moves : [move.waterShuriken.id, move.darkPulse.id, move.hydroCannon.id],
@@ -5950,7 +5950,7 @@ let rotationDimensionMax = 1;
 
 
 
-areas.dimensionRift1 = {
+/*areas.dimensionRift1 = {
     tier : 1,
     type: `dimension`,
     name: `Weak Dimensional Rift`,
@@ -6109,6 +6109,7 @@ areas.dimensionRaid4 = {
     },
     reward : [pkmn.nihilego],
 }
+*/
 
 
 /*
@@ -6147,7 +6148,7 @@ t4: omniboost + wonder guard
     skills : {3 : skill.ironSpirit.id}
 }*/
 
-areas.dimensionPikachuGmax = {
+/*areas.dimensionPikachuGmax = {
     type: `dimensionBlueprint`,
     icon: pkmn.pikachuGmax,
     tier: 2,
@@ -6161,6 +6162,27 @@ areas.dimensionPikachuGmax = {
     reward : [pkmn.pikachuGmax, item.whiteApricorn],
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.weakeningCurse.id ],
     skills : {3 : skill.ironWill.id, 2 : skill.electroblast.id}
+}*/
+
+areas.dimensionPikachuGmax = {
+    type: `dimensionBlueprint`,
+    icon: pkmn.pikachuGmax,
+    tier: 2,
+    rotation: 1,
+    difficulty: tier4difficulty,
+    level : 100,
+    team : {
+        slot1 : pkmn.pikachuGmax,
+        slot1Moves : [move.bulkUp.id, move.flamethrower.id, move.fly.id, move.dragonClaw.id],
+    },
+    reward : [item.whiteApricorn],
+    encounterEffect: function() {
+        if (Math.random() < 0.005) {
+            pkmn.pikachuGmax.newPokemon = true;
+        }
+    },
+    fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.harshSun.id],
+    skills : {3 : skill.ironWill.id, 2 : skill.pyroblast.id}
 }
 
 /*areas.dimensionKyuremWhite = {
@@ -6240,7 +6262,7 @@ areas.studioA = {
         slot1 : pkmn.f00,
         slot1Moves : [move.thunderWave.id,move.nastyPlot.id, move.thunder.id, move.iceBeam.id],
     },
-    reward : [pkmn.f00],
+    //reward : [pkmn.f00],
 }
 
 areas.secretGhost = {
@@ -6254,7 +6276,7 @@ areas.secretGhost = {
         slot1 : pkmn.ghost,
         slot1Moves : [move.fog.id,move.shadowBall.id, move.nightDaze.id, move.confuseRay.id],
     },
-    reward : [pkmn.ghost],
+    //reward : [pkmn.ghost],
 }
 
 areas.secretOnix = {
@@ -6268,7 +6290,7 @@ areas.secretOnix = {
         slot1 : pkmn.crystalOnix,
         slot1Moves : [move.avalanche.id,move.earthquake.id, move.dig.id, move.mirrorShot.id],
     },
-    reward : [pkmn.crystalOnix],
+    //reward : [pkmn.crystalOnix],
 }
 
 areas.secretHumanoid = {
@@ -6282,7 +6304,7 @@ areas.secretHumanoid = {
         slot1 : pkmn.humanoid,
         slot1Moves : [move.confuseRay.id,move.nightDaze.id, move.amnesia.id, move.sludgeWave.id],
     },
-    reward : [pkmn.humanoid],
+    //reward : [pkmn.humanoid],
 }
 
 areas.secretAerodactly = {
@@ -6296,7 +6318,7 @@ areas.secretAerodactly = {
         slot1 : pkmn.aerodactylB,
         slot1Moves : [move.rockSlide.id,move.earthquake.id, move.fly.id, move.shadowClaw.id],
     },
-    reward : [pkmn.aerodactylB],
+    //reward : [pkmn.aerodactylB],
 }
 
 areas.secretKabutops = {
@@ -6310,7 +6332,7 @@ areas.secretKabutops = {
         slot1 : pkmn.kabutopsB,
         slot1Moves : [move.rockSlide.id,move.earthquake.id, move.fly.id, move.shadowClaw.id],
     },
-    reward : [pkmn.kabutopsB],
+    //reward : [pkmn.kabutopsB],
 }
 
 
