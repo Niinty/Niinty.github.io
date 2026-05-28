@@ -1049,6 +1049,10 @@ function _startLegendBattle(legendId) {
     document.getElementById("team-menu").style.display = "flex";
     document.getElementById("menu-button-parent").style.display = "none";
     document.getElementById("explore-menu").style.display = "none";
+    document.getElementById("training-menu").style.display = "none";
+    document.getElementById("vs-menu").style.display = "none";      
+    document.getElementById("gyms-menu").style.display = "none";    
+    
     updatePreviewTeam();
     afkSeconds = 0;
 }
