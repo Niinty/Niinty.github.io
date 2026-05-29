@@ -4802,7 +4802,7 @@ areas.vsTeamLeaderGiovanni = {
     },
     //reward : [item.abilityCapsule, item.goldenBottleCap],
     itemReward: { 1 : { item: item.abilityCapsule.id, amount: 3 }, 2 : { item: item.bottleCap.id, amount: 10 }},
-    encounterEffect: function() {
+    /*encounterEffect: function() {
         document.getElementById("tooltipTop").style.display = `none`
         document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
         document.getElementById("tooltipBottom").style.display = `none`
@@ -4813,7 +4813,7 @@ areas.vsTeamLeaderGiovanni = {
         </div>
         `
         openTooltip()
-    }
+    }*/
 }
 
 
