@@ -57,6 +57,35 @@ shop.shopGymBadgeLtsurgeTicket = {
         item.autoRefightTicket.newItem++
     },
 }
+shop.shopGymBadgeErikaTicket = {
+    icon: item.autoRefightTicket.id,
+    name: `Auto-Refight Ticket`,
+    price: 1,
+    currency: item.gymBadgeErika.id,
+    category: `goods`,
+    condition: function() { return item.gymBadgeErika.got >= 1 },
+    effect: function() {
+        item.autoRefightTicket.got++
+        item.autoRefightTicket.newItem++
+    },
+}
+shop.shopGymBadgeKogaTicket = {
+    icon: item.autoRefightTicket.id,
+    name: `Auto-Refight Ticket`,
+    price: 1,
+    currency: item.gymBadgeKoga.id,
+    category: `goods`,
+    condition: function() { return item.gymBadgeKoga.got >= 1 },
+    effect: function() {
+        item.autoRefightTicket.got++
+        item.autoRefightTicket.newItem++
+    },
+}
+
+
+
+
+
 
 
 shop.shoprareCandy = {
