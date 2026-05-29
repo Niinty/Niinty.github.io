@@ -3925,6 +3925,7 @@ pkmn.snorlaxGmax = {
     signature : move.bellyDrum
 }
 
+// Lendário
 // 144 Articuno
 pkmn.articuno = {
     type: ["ice","flying"],
@@ -3941,6 +3942,7 @@ pkmn.articuno = {
     eggMove : move.snowscape
 }
 
+// Lendário
 pkmn.galarianArticuno = {
     type: ["psychic","flying"],
     bst: {
@@ -3955,6 +3957,7 @@ pkmn.galarianArticuno = {
     signature : move.freezingGlare
 }
 
+// Lendário
 // 145 Zapdos
 pkmn.zapdos = {
     type: ["electric","flying"],
@@ -3971,6 +3974,7 @@ pkmn.zapdos = {
     eggMove : move.charge
 }
 
+// Lendário
 pkmn.galarianZapdos = {
     type: ["fighting","flying"],
     bst: {
@@ -3985,6 +3989,7 @@ pkmn.galarianZapdos = {
     signature : move.thunderousKick
 }
 
+// Lendário
 // 146 Moltres
 pkmn.moltres = {
     type: ["fire","flying"],
@@ -4001,6 +4006,7 @@ pkmn.moltres = {
     eggMove : move.magmaStorm
 }
 
+// Lendário
 pkmn.galarianMoltres = {
     type: ["dark","flying"],
     bst: {
@@ -4071,6 +4077,7 @@ pkmn.megaDragonite = {
     hiddenAbility: ability.multiscale,
 }
 
+// Lendário
 // 150 Mewtwo
 pkmn.mewtwo = {
     type: ["psychic"],
@@ -4111,6 +4118,7 @@ pkmn.megaMewtwoY = {
     }
 }
 
+// Mítico
 // 151 Mew
 pkmn.mew = {
     type: ["psychic"],
@@ -5898,12 +5906,12 @@ pkmn.houndoom = {
 pkmn.megaHoundoom = {
     type: ["dark","fire"],
     bst: {
-        hp: 75,
-        atk: 90,
-        def: 90,
-        satk: 140,
-        sdef: 90,
-        spe: 115,
+        hp: 75*1.2,
+        atk: 90*1.2,
+        def: 90*1.2,
+        satk: 140*1.2,
+        sdef: 90*1.2,
+        spe: 115*1.2,
     },
     hiddenAbility: ability.solarPower,
     eggMove: move.howl,
@@ -6004,6 +6012,7 @@ pkmn.miltank = {
 
 // 242 Blissey
 
+// Lendário
 // 243 Raikou
 pkmn.raikou = {
     type: ["electric"],
@@ -6020,6 +6029,7 @@ pkmn.raikou = {
     lore: `Raikou personifica a velocidade do relâmpago. Os rugidos deste Pokémon enviam ondas de choque que fazem o ar estremecer e sacodem o chão como se raios tivessem acabado de cair.`,
 }
 
+// Lendário
 // 244 Entei
 pkmn.entei = {
     type: ["fire"],
@@ -6036,6 +6046,7 @@ pkmn.entei = {
     lore: `Entei personifica a paixão do magma. Acredita-se que este Pokémon tenha nascido durante a erupção de um vulcão. Ele lança enormes explosões de fogo que consomem completamente tudo o que tocam.`,
 }
 
+// Lendário
 // 245 Suicune
 pkmn.suicune = {
     type: ["water"],
@@ -6098,16 +6109,17 @@ pkmn.tyranitar = {
 pkmn.megaTyranitar = {
     type: ["rock","dark"],
     bst: {
-        hp: 100,
-        atk: 164,
-        def: 150,
-        satk: 95,
-        sdef: 120,
-        spe: 71,
+        hp: 100*1.2,
+        atk: 164*1.2,
+        def: 150*1.2,
+        satk: 95*1.2,
+        sdef: 120*1.2,
+        spe: 71*1.2,
     },
     hiddenAbility: ability.sandStream,
 }
 
+// Lendário
 // 249 Lugia
 pkmn.lugia = {
     type: ["psychic","flying"],
@@ -6124,6 +6136,7 @@ pkmn.lugia = {
     lore: `As asas de Lugia possuem um poder devastador — um simples bater de asas pode destruir casas comuns. Por isso, este Pokémon escolhe viver longe da vista de todos, nas profundezas do mar.`,
 }
 
+// Lendário
 // 250 Ho-oh
 pkmn.hooh = {
     type: ["fire","flying"],
@@ -6140,6 +6153,7 @@ pkmn.hooh = {
     lore: `As penas de Ho-Oh brilham em sete cores diferentes dependendo do ângulo em que a luz as atinge. Dizem que essas penas trazem felicidade para aqueles que as carregam. Conta-se que este Pokémon vive ao pé de um arco-íris.`,
 }
 
+// Mítico
 // 251 Celebi
 pkmn.celebi = {
     type: ["psychic","grass"],
