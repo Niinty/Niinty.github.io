@@ -339,6 +339,7 @@ pkmn.caterpie = {
         spe: 45,
     },
     evolve: function() { return { 1: { pkmn: pkmn.metapod, level: evolutionLevel1 } } },
+    lore: `É fácil de capturar e cresce rapidamente, tornando-se uma das principais recomendações para Treinadores Pokémon iniciantes.`,
     hiddenAbility: ability.tintedLens,
 }
 
@@ -353,6 +354,7 @@ pkmn.metapod = {
         spe: 30,
     },
     evolve: function() { return { 1: { pkmn: pkmn.butterfree, level: evolutionLevel2 } } },
+    lore: `Sua carapaça está cheia de suas partes internas macias. Ele não se move muito por causa do risco de acabar derramando suas entranhas sem querer.`,
     hiddenAbility: ability.tintedLens,
 }
 
@@ -366,6 +368,7 @@ pkmn.butterfree = {
         sdef: 80,
         spe: 70,
     },
+    lore: `Néctar de flores bonitas é sua comida favorita. Em campos floridos, ele trava batalhas acirradas contra Cutiefly por território.`,
     hiddenAbility: ability.tintedLens,
 }
 
@@ -379,6 +382,7 @@ pkmn.butterfreeGmax = {
         sdef: 80*1.9,
         spe: 70*1.9,
     },
+    lore: `Depois de prender seus oponentes em um tornado capaz de arremessar um caminhão de 10 toneladas, ele os finaliza com suas escamas venenosas.`,
     hiddenAbility: ability.tintedLens,
 }
 
@@ -394,6 +398,7 @@ pkmn.weedle = {
         spe: 50,
     },
     evolve: function() { return { 1: { pkmn: pkmn.kakuna, level: evolutionLevel1 } } },
+    lore: `Weedle possui um olfato extremamente apurado. Ele é capaz de distinguir suas folhas favoritas daquelas de que não gosta apenas farejando com sua grande probóscide vermelha (nariz).`,
     hiddenAbility: ability.adaptability,
     eggMove : move.toxicThread
 }
@@ -409,6 +414,7 @@ pkmn.kakuna = {
         spe: 35,
     },
     evolve: function() { return { 1: { pkmn: pkmn.beedrill, level: evolutionLevel2 } } },
+    lore: `Kakuna permanece praticamente imóvel enquanto se prende a uma árvore. Porém, internamente, ele está extremamente ativo enquanto se prepara para sua próxima evolução. Isso pode ser percebido pelo quão quente sua carapaça fica ao toque.`,
     hiddenAbility: ability.adaptability,
     eggMove : move.toxicThread
 }
@@ -424,6 +430,7 @@ pkmn.beedrill = {
         spe: 75,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaBeedrill, item: item.beedrillite } } },
+    lore: `Beedrill é extremamente territorial. Ninguém deveria se aproximar de seu ninho — isso é pela própria segurança. Se enfurecidos, eles atacarão em um enxame furioso.`,
     hiddenAbility: ability.adaptability,
     eggMove : move.toxicThread
 }
@@ -439,6 +446,7 @@ pkmn.megaBeedrill = {
         spe: 160,
     },
     hiddenAbility: ability.adaptability,
+    lore: `Suas patas se tornaram ferrões venenosos. Ele perfura sua presa repetidamente com os ferrões em seus membros, desferindo o golpe final com o ferrão em sua parte traseira.`,
     eggMove : move.toxicThread
 }
 
@@ -454,6 +462,7 @@ pkmn.pidgey = {
         spe: 56,
     },
     evolve: function() { return { 1: { pkmn: pkmn.pidgeotto, level: evolutionLevel1 } } },
+    lore: `É dócil e prefere evitar conflitos. Porém, se for incomodado, pode revidar ferozmente.`,
     hiddenAbility: ability.unburden,
     eggMove : move.meFirst
 }
@@ -469,6 +478,7 @@ pkmn.pidgeotto = {
         spe: 80,
     },
     evolve: function() { return { 1: { pkmn: pkmn.pidgeot, level: evolutionLevel2 } } },
+    lore: `As garras de suas patas são bem desenvolvidas. Ele consegue carregar presas, como um Exeggcute, até seu ninho a mais de 95 quilômetros de distância.`,
     hiddenAbility: ability.unburden,
     eggMove : move.meFirst
 }
@@ -484,6 +494,7 @@ pkmn.pidgeot = {
         spe: 101,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaPidgeot, item: item.pidgeotite } } },
+    lore: `Ele abre amplamente suas magníficas asas para intimidar inimigos. Cruza os céus em velocidade Mach 2.`,
     hiddenAbility: ability.unburden,
     eggMove : move.meFirst
 }
@@ -499,6 +510,7 @@ pkmn.megaPidgeot = {
         spe: 121,
     },
     hiddenAbility: ability.noGuard,
+    lore: `Com sua força muscular agora muito aumentada, ele consegue voar continuamente por duas semanas sem descansar.`,
     eggMove : move.meFirst
 }
 
@@ -514,6 +526,7 @@ pkmn.rattata = {
         spe: 72,
     },
     evolve: function() { return { 1: { pkmn: pkmn.raticate, level: evolutionLevel1 } } },
+    lore: `Rattata é extremamente cauteloso. Mesmo enquanto dorme, ele permanece atento movendo constantemente suas orelhas para escutar ao redor. Ele não é exigente quanto ao lugar onde vive — fará seu ninho em qualquer lugar.`,
     hiddenAbility: ability.guts,
 }
 
@@ -528,6 +541,7 @@ pkmn.alolanRattata = {
         spe: 72,
     },
     evolve: function() { return { 1: { pkmn: pkmn.alolanRaticate, level: evolutionLevel1 } } },
+    lore: `Com seus incisivos, ele rói portas e invade as casas das pessoas. Depois, com um movimento de seus bigodes, rouba qualquer comida que encontrar.`,
     hiddenAbility: ability.blackPelt,
 }
 
@@ -542,6 +556,7 @@ pkmn.raticate = {
         spe: 97,
     },
     hiddenAbility: ability.guts,
+    lore: `As presas resistentes de Raticate crescem continuamente. Para mantê-las desgastadas, ele rói pedras e troncos. Pode até mastigar as paredes das casas.`,
 }
 
 pkmn.alolanRaticate = {
@@ -555,6 +570,7 @@ pkmn.alolanRaticate = {
         spe: 77,
     },
     hiddenAbility: ability.blackPelt,
+    lore: `Ele possui uma personalidade incrivelmente gananciosa. Seu ninho fica cheio de comida reunida pelos Rattata sob suas ordens, tanta que ele sequer consegue comer tudo.`,
 }
 
 // 021 Spearow → Fearow
