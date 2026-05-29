@@ -2013,7 +2013,11 @@ areas.eventMegaCamerupt = {
         slot1 : pkmn.megaCamerupt,
         slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
     },
-    reward : [item.cameruptite, pkmn.numel],
+    // REMOVIDO: pkmn.numel
+    // ALTERADO: item.cameruptite agora tem 10% de chance (0.1) de vir no array
+    get reward() {
+        return Math.random() < 0.025 ? [item.cameruptite] : [];
+    },
     category: 1,
 }
 
