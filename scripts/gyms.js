@@ -34,7 +34,7 @@ const GYM_REGIONS = [
 
 // Estado interno — região selecionada no menu
 var _gymsCurrentRegion = null;
-const GYM_LEVEL_CAP = 200
+const GYM_LEVEL_CAP = 300
 const GYM_SCALE_PER_DEFEAT = 1.02 // A dificuldade escala 1% a cada vitória, o que é um aumento suave que mantém os líderes desafiadores mesmo após várias derrotas. O limite de 100% (tier IV) garante que a dificuldade não se torne impossível, mas ainda assim oferece um desafio significativo para jogadores experientes.
 const GYM_BADGE_DROP_CHANCE = 0.3 // Chance de dropar a insígnia ao derrotar o líder (se ainda não tiver a insígnia)
 
@@ -171,7 +171,7 @@ const GYMS_LEADERS = [
         areaId: "vsGymLeaderSabrina",
         region: "kanto",
         order: 6,
-        unlockAreaId: "vsGymLeaderKoga",
+        unlockAreaId: "vsGymLeaderSabrina",
         name: "Gym Leader Sabrina",
         badge: "Marsh Badge",
         badgeItemId: "gymBadgeSabrina",
@@ -201,6 +201,107 @@ const GYMS_LEADERS = [
                 2: { item: item.bottleCap.id,   amount: 10 },
         },
     },
+
+        {
+        areaId: "vsGymLeaderBlaine",
+        region: "kanto",
+        order: 7,
+        unlockAreaId: "vsGymLeaderBlaine",
+        name: "Gym Leader Blaine",
+        badge: "Volcano Badge",
+        badgeItemId: "gymBadgeBlaine",
+        city: "Cinnabar City",
+        sprite: "blaine",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Fogo.",
+
+        team: {
+            slot1 : pkmn.alakazam,
+            slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.dig.id],
+            slot2 : pkmn.snorlax,
+            slot2Moves : [move.amnesia.id, move.hyperBeam.id, move.iceBeam.id, move.thunderbolt.id],
+            slot3 : pkmn.mrmime,
+            slot3Moves : [move.thunderWave, move.confusion.id,move.futureSight.id, move.psybeam.id],
+            slot4 : pkmn.hypno,
+            slot4Moves : [move.amnesia.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
+            slot5 : pkmn.exeggutor,
+            slot5Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psybeam.id],
+            slot6 : pkmn.wigglytuff,
+            slot6Moves : [move.hyperVoice.id, move.iceBeam.id, move.moonblast.id, move.hyperBeam.id],
+        },
+
+        itemReward: {
+                1: { item: item.fashionCase.id, amount: 3  },
+                2: { item: item.bottleCap.id,   amount: 10 },
+        },
+    },
+
+
+
+
+
+
+    {
+        areaId: "vsGymLeaderGiovanni",
+        region: "kanto",
+        order: 8,
+        unlockAreaId: "vsGymLeaderGiovanni",
+        name: "Gym Leader Giovanni",
+        badge: "Earth Badge",
+        badgeItemId: "gymBadgeGiovanni",
+        city: "Viridian City",
+        sprite: "giovanni",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Ground.",
+
+        team: {
+            slot1 : pkmn.slaking,
+            slot1Moves : [move.bulkUp.id,move.gigaImpact.id, move.shadowPunch.id, move.extremeSpeed.id],
+            slot2 : pkmn.krookodile,
+            slot2Moves : [move.honeClaws.id, move.earthquake.id, move.nightSlash.id, move.sandstorm.id],
+            slot3 : pkmn.tyranitar,
+            slot3Moves : [move.earthquake.id, move.rockSlide.id, move.ironDefense.id, move.crunch.id],
+            slot4 : pkmn.megaKangaskhan,
+            slot4Moves : [move.powerupPunch.id, move.gigaImpact.id, move.closeCombat.id, move.thunderPunch.id],
+            slot5 : pkmn.hydreigon,
+            slot5Moves : [move.nastyPlot.id, move.dracoMeteor.id, move.darkPulse.id, move.toxic.id],
+            slot6 : pkmn.mewtwo,
+            slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.confuseRay.id],
+        },
+
+        itemReward: {
+                1: { item: item.fashionCase.id, amount: 3  },
+                2: { item: item.bottleCap.id,   amount: 10 },
+        },
+
+        encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >Tier II Event Raids unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >Genetics unlocked</div>
+        </div>
+        `
+        openTooltip()
+        }
+    },
+    
+
+
+
+
+
+
+
+
+
+
+
+    
 ]
 
 function getGymMaxDifficulty() {
