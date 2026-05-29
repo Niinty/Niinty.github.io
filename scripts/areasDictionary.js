@@ -1844,7 +1844,7 @@ areas.eventMegaBlastoise = {
         slot1 : pkmn.megaBlastoise,
         slot1Moves : [move.rainDance.id,move.hydroCannon.id, move.iceBeam.id, move.thunder.id],
     },
-    reward : [item.blastoisinite, pkmn.squirtle],
+    //reward : [item.blastoisinite, pkmn.squirtle],
     category: 2,
 }
 
@@ -1865,7 +1865,7 @@ areas.eventMegaCharizardY = {
         slot1 : pkmn.megaCharizardY,
         slot1Moves : [move.sunnyDay.id,move.fireBlast.id, move.airShlash.id, move.dracoMeteor.id],
     },
-    reward : [item.charizarditeY, pkmn.charmander],
+    //reward : [item.charizarditeY, pkmn.charmander],
     category: 2,
 }
 
@@ -1886,12 +1886,10 @@ areas.eventMegaVenusaur = {
         slot1 : pkmn.megaVenusaur,
         slot1Moves : [move.grassyTerrain.id,move.frenzyPlant.id, move.acidArmor.id, move.sludgeWave.id],
     },
-    reward : [item.venusaurite, pkmn.bulbasaur],
+    //reward : [item.venusaurite, pkmn.bulbasaur],
     category: 2,
 }
 
-
-/*
 
 areas.articSummit = {
     rotation: 1,
@@ -1929,72 +1927,6 @@ areas.fierySummit = {
         uncommon : [item.fieryRock]
     },
 }
-
-*/
-
-
-/*areas.eventZapdos = {
-    rotation: 1,
-    type: `event`,
-    name: `Zapdos Lair`,
-    background : `cave`,
-    icon: pkmn.zapdos,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.epochFeather.got--},
-    unlockDescription : `Requires an <img src="img/items/epochFeather.png"> Epoch Feather to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.zapdos,
-        slot1Moves : [move.thunderbolt.id,move.discharge.id, move.hurricane.id, move.fly.id],
-    },
-    reward : [pkmn.zapdos],
-    category: 1,
-}
-
-areas.eventArticuno = {
-    rotation: 1,
-    type: `event`,
-    name: `Articuno Den`,
-    background : `cave`,
-    icon: pkmn.articuno,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.epochFeather.got--},
-    unlockDescription : `Requires an <img src="img/items/epochFeather.png"> Epoch Feather to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.articuno,
-        slot1Moves : [move.blizzard.id,move.iceBeam.id, move.hurricane.id, move.fly.id],
-    },
-    reward : [pkmn.articuno],
-    category: 1,
-}
-
-areas.eventMoltres = {
-    rotation: 1,
-    type: `event`,
-    name: `Moltres Roost`,
-    background : `cave`,
-    icon: pkmn.moltres,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.epochFeather.got--},
-    unlockDescription : `Requires an <img src="img/items/epochFeather.png"> Epoch Feather to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.moltres,
-        slot1Moves : [move.fireBlast.id,move.heatWave.id, move.hurricane.id, move.fly.id],
-    },
-    reward : [pkmn.moltres],
-    category: 1,
-}*/
 
 areas.eventMegaCamerupt = {
     rotation: 1,
@@ -2038,7 +1970,7 @@ areas.eventMegaManectric = {
         slot1 : pkmn.megaManectric,
         slot1Moves : [move.electricTerrain.id,move.discharge.id, move.iceBeam.id, move.thunderFang.id],
     },
-    reward : [item.manectite, pkmn.electrike],
+    //reward : [item.manectite, pkmn.electrike],
     category: 1,
 }
 
@@ -2059,7 +1991,7 @@ areas.eventMegaAbomasnow = {
         slot1 : pkmn.megaAbomasnow,
         slot1Moves : [move.hail.id,move.iceBeam.id, move.energyBall.id, move.surf.id],
     },
-    reward : [item.abomasite, pkmn.snover],
+    //reward : [item.abomasite, pkmn.snover],
     category: 1,
 }
 
@@ -2082,7 +2014,7 @@ areas.eventMegaRaichuX = {
         slot1 : pkmn.megaRaichuX,
         slot1Moves : [move.bulkUp.id,move.voltTackle.id, move.icePunch.id, move.crossChop.id],
     },
-    reward : [item.raichutiteX, pkmn.pichu],
+    //reward : [item.raichutiteX, pkmn.pichu],
     category: 2,
 }
 
@@ -2103,7 +2035,7 @@ areas.eventMegaRaichuY = {
         slot1 : pkmn.megaRaichuY,
         slot1Moves : [move.calmMind.id,move.voltTackle.id, move.iceBeam.id, move.auraSphere.id],
     },
-    reward : [item.raichutiteY, pkmn.pichu],
+    //reward : [item.raichutiteY, pkmn.pichu],
     category: 2,
 }
 
@@ -2124,7 +2056,7 @@ areas.eventMegaCharizardX = {
         slot1 : pkmn.megaCharizardX,
         slot1Moves : [move.dragonClaw.id,move.fly.id, move.brutalClaw.id, move.metalClaw.id],
     },
-    reward : [item.charizarditeX, pkmn.charmander],
+    //reward : [item.charizarditeX, pkmn.charmander],
     category: 2,
 }
 
