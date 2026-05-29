@@ -1928,7 +1928,7 @@ areas.fierySummit = {
     },
 }
 
-areas.eventMegaCamerupt = {
+/*areas.eventMegaCamerupt = {
     rotation: 1,
     type: `event`,
     name: `Camerupt Mega-Showdown`,
@@ -1949,6 +1949,42 @@ areas.eventMegaCamerupt = {
     // ALTERADO: item.cameruptite agora tem 10% de chance (0.1) de vir no array
     get reward() {
         return Math.random() < 0.025 ? [item.cameruptite] : [];
+    },
+    category: 1,
+}*/
+
+areas.eventMegaCamerupt = {
+    rotation: 1,
+    type: `event`,
+    name: `Camerupt Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaCamerupt,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaCamerupt,
+        slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
+    },
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [item.cameruptite],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [item.cameruptite];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.1 ? [item.cameruptite] : [];
     },
     category: 1,
 }
