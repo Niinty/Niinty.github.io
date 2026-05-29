@@ -171,7 +171,7 @@ const GYMS_LEADERS = [
         areaId: "vsGymLeaderSabrina",
         region: "kanto",
         order: 6,
-        unlockAreaId: "vsGymLeaderSabrina",
+        unlockAreaId: "vsGymLeaderKoga",
         name: "Gym Leader Sabrina",
         badge: "Marsh Badge",
         badgeItemId: "gymBadgeSabrina",
