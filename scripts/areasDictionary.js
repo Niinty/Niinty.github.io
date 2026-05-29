@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 12;
+const rotationWildMax = 13;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -413,24 +413,6 @@ const wildRareItems = [
   wildRareItemsFairy
 ]
 //rotation 1
-areas.rota1Kanto = {
-    rotation : 1,
-    name: `Rota 1 - Kanto`,
-    level : wildAreaLevel1,
-    type: `wild`,
-    background : `forest`,
-    icon: pkmn.pidgey,
-    spawns: {
-        common : [pkmn.pidgey,pkmn.rattata],
-        uncommon : [pkmn.oddish,pkmn.bellsprout],
-        rare : [pkmn.pikachu]
-    },
-    drops: {
-        common : [item.mysteryEgg],
-        rare : wildRareItemsBug,
-        epic: epicItens
-    }
-}
 
 areas.verdantForest = {
     rotation : 1,
@@ -1325,7 +1307,82 @@ areas.relicPassage = {
     }
 }
 
+//Rotation 13
+areas.rota1Kanto = {
+    rotation : 13,
+    name: `Rota 1 - Kanto`,
+    level : wildAreaLevel1,
+    type: `wild`,
+    background : `route`,
+    icon: pkmn.pidgey,
+    spawns: {
+        common : [pkmn.pidgey,pkmn.rattata],
+        uncommon : [pkmn.oddish,pkmn.bellsprout],
+        rare : [pkmn.pikachu]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
 
+areas.rota2Kanto = {
+    rotation : 13,
+    name: `Rota 2 - Kanto`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `route`,
+    icon: pkmn.nidoranF,
+    spawns: {
+        common : [pkmn.weedle,pkmn.caterpie],
+        uncommon : [pkmn.nidoranF,pkmn.nidoranM],
+        rare : [pkmn.mrmime]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.rota3Kanto = {
+    rotation : 13,
+    name: `Rota 3 - Kanto`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `route`,
+    icon: pkmn.jigglypuff,
+    spawns: {
+        common : [pkmn.spearow,pkmn.sandshrew],
+        uncommon : [pkmn.jigglypuff,pkmn.zubat],
+        rare : [pkmn.mankey]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.mtMoon = {
+    rotation : 13,
+    name: `Mt. Moon`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.geodude,
+    spawns: {
+        common : [pkmn.clefairy,pkmn.paras],
+        uncommon : [pkmn.geodude,pkmn.onix],
+        rare : [pkmn.chansey]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
 
 /*
 Normal 3
