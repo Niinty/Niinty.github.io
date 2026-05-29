@@ -1740,7 +1740,6 @@ const sortedMovepool = movepool
         document.getElementById("tooltipMid").style.display = "inline"
 
 
-
         let wildSpawn = ""
         let eventSpawn = ""
         let encounterSpawn = ""
@@ -1748,14 +1747,10 @@ const sortedMovepool = movepool
         for (const i in areas){
             if (areas[i].type=="wild") {
                 //if (areas[i].spawns.common.includes(pkmn[ttdata]) || areas[i].spawns.uncommon.includes(pkmn[ttdata]) || areas[i].spawns.rare.includes(pkmn[ttdata])){
-                if (areas[i].spawns.common?.includes(pkmn[ttdata]) || areas[i].spawns.uncommon?.includes(pkmn[ttdata]) || areas[i].spawns.rare?.includes(pkmn[ttdata])){
+                if (areas[i].spawns?.common?.includes(pkmn[ttdata]) || areas[i].spawns?.uncommon?.includes(pkmn[ttdata]) || areas[i].spawns?.rare?.includes(pkmn[ttdata])){
                     wildSpawn = areas[i].id
                 }
             }
-
-        
-
-
 
             if (areas[i].type=="event" && areas[i].uncatchable != true){
                 if (areas[i].spawns?.common?.includes(pkmn[ttdata]) || areas[i].spawns?.uncommon?.includes(pkmn[ttdata]) || areas[i].spawns?.rare?.includes(pkmn[ttdata])){
@@ -1765,18 +1760,13 @@ const sortedMovepool = movepool
 
 
             if (areas[i].encounter) {
-                if ( areas[i].team.slot1 == pkmn[ttdata] || areas[i].reward.includes(pkmn[ttdata])) encounterSpawn = areas[i].id
+                // CORREÇÃO 1: Adicionado o "?" para não quebrar caso a rota não possua revalidação de "reward" cadastrada
+                if ( areas[i].team?.slot1 == pkmn[ttdata] || areas[i].reward?.includes(pkmn[ttdata])) encounterSpawn = areas[i].id
             }
         }
 
 
         let parkSpawn = ""
-
-
-        
-
-
-
 
         let spawnLocation = ""
         if (wildSpawn != "") spawnLocation += `<span>Found in the wild area ${format(wildSpawn)} (Rotation ${areas[wildSpawn].rotation})</span>`
@@ -1794,7 +1784,10 @@ const sortedMovepool = movepool
         `
 
         let staminaMult = 1
-        if (pkmn[ttdata].ability == ability.stamina.id ||  (  pkmn[ttdata].hiddenAbility?.id == ability.stamina.id && pkmn[ttdata].hiddenAbilityUnlocked ) ) staminaMult = 2
+        // CORREÇÃO 2: Proteção da validação da Habilidade "Stamina" prevenindo o travamento inicial por leitura de arrays/objetos vazios
+        if (typeof ability !== 'undefined' && ability.stamina) {
+            if (pkmn[ttdata].ability == ability.stamina.id ||  (  pkmn[ttdata].hiddenAbility?.id == ability.stamina.id && pkmn[ttdata].hiddenAbilityUnlocked ) ) staminaMult = 2
+        }
 
         if (saved.gamemodAfk !=true) document.getElementById("tooltipMid").innerHTML += `This Pokemon can last ${(100 + Math.pow(1.15, 6) * (pkmn[ttdata].bst.hp*30 + (pkmn[ttdata].bst.def + pkmn[ttdata].bst.sdef)*15)*staminaMult).toFixed(0)} turns before fainting from Battle Fatigue at maximum IVs`
         else document.getElementById("tooltipMid").innerHTML += `This Pokemon can last ${(100 + Math.pow(1.15, 6) * (pkmn[ttdata].bst.hp*30 + (pkmn[ttdata].bst.def + pkmn[ttdata].bst.sdef)*15)*staminaMult).toFixed(0)*3} turns before fainting from Battle Fatigue at maximum IVs`
@@ -1804,18 +1797,11 @@ const sortedMovepool = movepool
         <div>Abilities</div>
         <div style="width:100%; height:100%; position:relative; display:flex;justify-content:start;align-items:center;flex-direction:column; max-height:25vh; overflow-y:scroll; padding-top:0.5rem;">${getAbilityPoolByTier(pkmn[ttdata])}</div>
         
-        <div onclick="window.getMoveset(pkmn.${ttdata})" class="custom-challenge-button" style="margin-top:0.5rem">Check learnable moves</div>
-
-
+        <div onclick="if(typeof window.getMoveset === 'function') window.getMoveset(pkmn['${ttdata}']);" class="custom-challenge-button" style="margin-top:0.5rem">Check learnable moves</div>
         `
 
-
         openTooltip()
-
-
-
     }
-
 
 
 
