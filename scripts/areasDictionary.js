@@ -1984,7 +1984,7 @@ areas.eventMegaCamerupt = {
         }
         
         // Chance real de 10% na hora de ganhar o prêmio após a batalha
-        return Math.random() < 0.1 ? [item.cameruptite] : [];
+        return Math.random() < 0.025 ? [item.cameruptite] : [];
     },
     category: 1,
 }
@@ -2242,7 +2242,7 @@ areas.eventFlutterMane = {
         slot1 : pkmn.flutterMane,
         slot1Moves : [move.nastyPlot.id,move.shadowBall.id, move.moonblast.id, move.babydollEyes.id],
     },
-    reward : [pkmn.flutterMane],
+    //reward : [pkmn.flutterMane],
     category: 1,
 }
 
@@ -2307,7 +2307,7 @@ areas.eventMegaAerodactly = {
         slot1 : pkmn.megaAerodactyl,
         slot1Moves : [move.accelerock.id,move.rockSlide.id, move.airShlash.id, move.earthquake.id],
     },
-    reward : [item.aerodactylite, pkmn.aerodactyl],
+    //reward : [item.aerodactylite, pkmn.aerodactyl],
     category: 1,
 }
 
@@ -2328,7 +2328,7 @@ areas.eventMegaGyarados = {
         slot1 : pkmn.megaGyarados,
         slot1Moves : [move.icyWind.id,move.aquaTail.id, move.fly.id, move.crunch.id],
     },
-    reward : [item.gyaradosite, pkmn.magikarp],
+    //reward : [item.gyaradosite, pkmn.magikarp],
     category: 1,
 }
 
@@ -2392,7 +2392,7 @@ areas.eventMegaGarchomp = {
         slot1 : pkmn.megaGarchomp,
         slot1Moves : [move.bulldoze.id,move.earthquake.id, move.ironHead.id, move.zenHeadbut.id],
     },
-    reward : [item.garchompite, pkmn.gible],
+    //reward : [item.garchompite, pkmn.gible],
     category: 2,
 }
 
@@ -2413,7 +2413,7 @@ areas.eventMegaTyranitar = {
         slot1 : pkmn.megaTyranitar,
         slot1Moves : [move.ironDefense.id,move.earthquake.id, move.crunch.id, move.gigaImpact.id],
     },
-    reward : [item.tyranitarite, pkmn.larvitar],
+    //reward : [item.tyranitarite, pkmn.larvitar],
     category: 2,
 }
 
@@ -2434,7 +2434,7 @@ areas.eventTapuBulu = {
         slot1 : pkmn.tapuBulu,
         slot1Moves : [move.grassyTerrain.id,move.playRough.id, move.seedBomb.id, move.earthquake.id],
     },
-    reward : [pkmn.tapuBulu],
+    //reward : [pkmn.tapuBulu],
     category: 2,
 }
 
@@ -2457,7 +2457,7 @@ areas.eventMegaPinsir = {
         slot1 : pkmn.megaPinsir,
         slot1Moves : [move.earthquake.id,move.xScissor.id, move.gigaImpact.id, move.fly.id],
     },
-    reward : [item.pinsirite, pkmn.pinsir],
+    //reward : [item.pinsirite, pkmn.pinsir],
     category: 2,
 }
 
