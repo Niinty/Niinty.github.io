@@ -167,7 +167,7 @@ const GYMS_LEADERS = [
         },
     },
 
-    /*{
+    {
         areaId: "vsGymLeaderSabrina",
         region: "kanto",
         order: 6,
@@ -186,21 +186,21 @@ const GYMS_LEADERS = [
             slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.dig.id],
             slot2 : pkmn.snorlax,
             slot2Moves : [move.amnesia.id, move.hyperBeam.id, move.iceBeam.id, move.thunderbolt.id],
-            slot3 : pkmn.weezing,
-            slot3Moves : [move.sludge.id, move.fireBlast.id, move.toxic.id, move.hyperBeam.id],
+            slot3 : pkmn.mrmime,
+            slot3Moves : [move.thunderWave, move.confusion.id,move.futureSight.id, move.psybeam.id],
             slot4 : pkmn.hypno,
             slot4Moves : [move.amnesia.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
-            slot5 : pkmn.tangela,
-            slot5Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
-            slot6 : pkmn.parasect,
-            slot6Moves : [move.amnesia.id, move.razorLeaf.id, move.cottonSpore.id, move.bugBuzz.id],
+            slot5 : pkmn.exeggutor,
+            slot5Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psybeam.id],
+            slot6 : pkmn.wigglytuff,
+            slot6Moves : [move.hyperVoice.id, move.iceBeam.id, move.moonblast.id, move.hyperBeam.id],
         },
 
         itemReward: {
                 1: { item: item.fashionCase.id, amount: 3  },
                 2: { item: item.bottleCap.id,   amount: 10 },
         },
-    },*/
+    },
 ]
 
 function getGymMaxDifficulty() {
