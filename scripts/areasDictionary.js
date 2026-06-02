@@ -2028,6 +2028,54 @@ areas.eventMegaVenusaur = {
     category: 2,
 }
 
+areas.eventMegaFeraligatr = {
+    rotation: 1,
+    type: `event`,
+    name: `Feraligatr Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaFeraligatr,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.pokeflute.got--},
+    unlockDescription : `Requires a <img src="img/items/pokeflute.png"> Pokeflute to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaFeraligatr,
+        slot1Moves : [move.aquaJet.id,move.scald.id, move.hydroPump.id, move.surf.id],
+    },
+    //reward : [item.venusaurite, pkmn.bulbasaur],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.totodile, item.feraligite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.totodile, item.feraligite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.totodile);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.feraligite);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
 
 areas.articSummit = {
     rotation: 1,
