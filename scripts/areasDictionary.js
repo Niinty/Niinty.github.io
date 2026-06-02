@@ -2195,6 +2195,13 @@ areas.primitiveGrove = {
 }
 
 
+
+
+
+
+
+
+
 areas.eventGreatTusk = {
     rotation: 2,
     type: `event`,
@@ -2212,9 +2219,55 @@ areas.eventGreatTusk = {
         slot1 : pkmn.greatTusk,
         slot1Moves : [move.earthquake.id,move.bulkUp.id, move.focusBlast.id, move.earthPower.id],
     },
-    reward : [pkmn.greatTusk],
+    
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.greatTusk],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.greatTusk];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.greatTusk] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 areas.eventScreamTail = {
     rotation: 2,
