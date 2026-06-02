@@ -2242,33 +2242,6 @@ areas.eventGreatTusk = {
     category: 1,
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 areas.eventScreamTail = {
     rotation: 2,
     type: `event`,
@@ -2286,10 +2259,28 @@ areas.eventScreamTail = {
         slot1 : pkmn.screamTail,
         slot1Moves : [move.moonblast.id,move.psychic.id, move.hyperVoice.id, move.disarmingVoice.id],
     },
-    reward : [pkmn.screamTail],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.screamTail],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.screamTail];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.screamTail] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
-
 
 areas.eventSlitherWing = {
     rotation: 2,
@@ -2308,11 +2299,28 @@ areas.eventSlitherWing = {
         slot1 : pkmn.slitherWing,
         slot1Moves : [move.stringShot.id,move.bugBuzz.id, move.signalBeam.id, move.fly.id],
     },
-    reward : [pkmn.slitherWing],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.slitherWing],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.slitherWing];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.slitherWing] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
-
-
 
 areas.eventBruteBonnet = {
     rotation: 2,
@@ -2331,9 +2339,38 @@ areas.eventBruteBonnet = {
         slot1 : pkmn.bruteBonnet,
         slot1Moves : [move.spore.id,move.seedBomb.id, move.solarBeam.id, move.darkPulse.id],
     },
-    reward : [pkmn.bruteBonnet],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.bruteBonnet],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.bruteBonnet];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.bruteBonnet] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
+
+
+
+
+
+
+
+
+
+
 
 areas.eventFlutterMane = {
     rotation: 2,
@@ -2352,7 +2389,26 @@ areas.eventFlutterMane = {
         slot1 : pkmn.flutterMane,
         slot1Moves : [move.nastyPlot.id,move.shadowBall.id, move.moonblast.id, move.babydollEyes.id],
     },
-    //reward : [pkmn.flutterMane],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.flutterMane],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.flutterMane];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.flutterMane] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
 
@@ -2373,7 +2429,26 @@ areas.eventSandyShocks = {
         slot1 : pkmn.sandyShocks,
         slot1Moves : [move.earthquake.id,move.thunderbolt.id, move.discharge.id, move.electroWeb.id],
     },
-    reward : [pkmn.sandyShocks],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.sandyShocks],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.sandyShocks];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.sandyShocks] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
 
@@ -2395,12 +2470,31 @@ areas.eventRoaringMoon = {
         slot1 : pkmn.roaringMoon,
         slot1Moves : [move.agility.id,move.fly.id, move.dragonRush.id, move.crunch.id],
     },
-    reward : [pkmn.roaringMoon],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.roaringMoon],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.roaringMoon];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.roaringMoon] : [];
+    },
+    //... até aqui
+    
     category: 1,
 }
 
 
-areas.eventMegaAerodactly = {
+/*areas.eventMegaAerodactly = {
     rotation: 2,
     type: `event`,
     name: `Aerodactyl Mega-Showdown`,
@@ -2417,7 +2511,74 @@ areas.eventMegaAerodactly = {
         slot1 : pkmn.megaAerodactyl,
         slot1Moves : [move.accelerock.id,move.rockSlide.id, move.airShlash.id, move.earthquake.id],
     },
-    //reward : [item.aerodactylite, pkmn.aerodactyl],
+
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.megaAerodactyl, item.aerodatite],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAerodactyl];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.megaAerodactyl] : [];
+    },
+    //... até aqui
+    
+    category: 1,
+}*/
+areas.eventMegaAerodactly = {
+    rotation: 2,
+    type: `event`,
+    name: `Aerodactyl Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAerodactyl,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/ancientOrchid.png"> Ancient Orchids to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAerodactyl,
+        slot1Moves : [move.accelerock.id, move.rockSlide.id, move.airShlash.id, move.earthquake.id],
+    },
+
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.aerodactyl, item.aerodactylite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.aerodactyl, item.aerodactylite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.aerodactyl);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.aerodactylite);
+        }
+        
+        return nishLoot;
+    },
+    
     category: 1,
 }
 
