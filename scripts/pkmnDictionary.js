@@ -4305,6 +4305,7 @@ pkmn.feraligatr = {
         sdef: 83,
         spe: 78,
     },
+    evolve: function() { return { 1: { pkmn: pkmn.megaFeraligatr, item: item.feralitite } } },
     hiddenAbility: ability.sheerForce,
 }
 
