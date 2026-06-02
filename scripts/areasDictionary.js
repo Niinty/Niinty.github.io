@@ -1902,6 +1902,33 @@ areas.eventMegaBlastoise = {
         slot1Moves : [move.rainDance.id,move.hydroCannon.id, move.iceBeam.id, move.thunder.id],
     },
     //reward : [item.blastoisinite, pkmn.squirtle],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.squirtle, item.blastoisinite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.squirtle, item.blastoisinite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.squirtle);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.blastoisinite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -1923,6 +1950,33 @@ areas.eventMegaCharizardY = {
         slot1Moves : [move.sunnyDay.id,move.fireBlast.id, move.airShlash.id, move.dracoMeteor.id],
     },
     //reward : [item.charizarditeY, pkmn.charmander],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.charmander, item.charizarditeY],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.charmander, item.charizarditeY];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.charmander);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.charizarditeY);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -1944,6 +1998,33 @@ areas.eventMegaVenusaur = {
         slot1Moves : [move.grassyTerrain.id,move.frenzyPlant.id, move.acidArmor.id, move.sludgeWave.id],
     },
     //reward : [item.venusaurite, pkmn.bulbasaur],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.bulbasaur, item.venusaurite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.bulbasaur, item.venusaurite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.bulbasaur);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.venusaurite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -2028,20 +2109,32 @@ areas.eventMegaCamerupt = {
         slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
     },
     
-    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
-    displayReward: [item.cameruptite],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.numel, item.cameruptite],
 
-    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
     get reward() {
-        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
-        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
         const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
         if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [item.cameruptite];
+            return [pkmn.numel, item.cameruptite];
         }
         
-        // Chance real de 10% na hora de ganhar o prêmio após a batalha
-        return Math.random() < 0.025 ? [item.cameruptite] : [];
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.numel);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.cameruptite);
+        }
+        
+        return nishLoot;
     },
     category: 1,
 }
@@ -2064,6 +2157,33 @@ areas.eventMegaManectric = {
         slot1Moves : [move.electricTerrain.id,move.discharge.id, move.iceBeam.id, move.thunderFang.id],
     },
     //reward : [item.manectite, pkmn.electrike],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.electrike, item.manectite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.electrike, item.manectite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.electrike);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.manectite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -2085,6 +2205,33 @@ areas.eventMegaAbomasnow = {
         slot1Moves : [move.hail.id,move.iceBeam.id, move.energyBall.id, move.surf.id],
     },
     //reward : [item.abomasite, pkmn.snover],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.snover, item.abomasite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.snover, item.abomasite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.snover);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.abomasite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -2108,6 +2255,33 @@ areas.eventMegaRaichuX = {
         slot1Moves : [move.bulkUp.id,move.voltTackle.id, move.icePunch.id, move.crossChop.id],
     },
     //reward : [item.raichutiteX, pkmn.pichu],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.pichu, item.raichutiteX],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.pichu, item.raichutiteX];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.pichu);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.raichutiteX);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -2129,6 +2303,33 @@ areas.eventMegaRaichuY = {
         slot1Moves : [move.calmMind.id,move.voltTackle.id, move.iceBeam.id, move.auraSphere.id],
     },
     //reward : [item.raichutiteY, pkmn.pichu],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.pichu, item.raichutiteY],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.pichu, item.raichutiteY];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.pichu);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.raichutiteY);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -2150,6 +2351,33 @@ areas.eventMegaCharizardX = {
         slot1Moves : [move.dragonClaw.id,move.fly.id, move.brutalClaw.id, move.metalClaw.id],
     },
     //reward : [item.charizarditeX, pkmn.charmander],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.charmander, item.charizarditeX],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.charmander, item.charizarditeX];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.charmander);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.charizarditeX);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -2582,6 +2810,8 @@ areas.eventMegaAerodactly = {
     category: 1,
 }
 
+
+                    
 areas.eventMegaGyarados = {
     rotation: 2,
     type: `event`,
@@ -2599,7 +2829,35 @@ areas.eventMegaGyarados = {
         slot1 : pkmn.megaGyarados,
         slot1Moves : [move.icyWind.id,move.aquaTail.id, move.fly.id, move.crunch.id],
     },
-    //reward : [item.gyaradosite, pkmn.magikarp],
+
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.gyarados, item.gyaradosite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gyarados, item.gyaradosite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.gyarados);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.gyaradosite);
+        }
+        
+        return nishLoot;
+    },
+    
     category: 1,
 }
 
@@ -2664,6 +2922,35 @@ areas.eventMegaGarchomp = {
         slot1Moves : [move.bulldoze.id,move.earthquake.id, move.ironHead.id, move.zenHeadbut.id],
     },
     //reward : [item.garchompite, pkmn.gible],
+
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.gible, item.garchompite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gible, item.garchompite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.gible);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.garchompite);
+        }
+        
+        return nishLoot;
+    },
+    
     category: 2,
 }
 
@@ -2685,10 +2972,38 @@ areas.eventMegaTyranitar = {
         slot1Moves : [move.ironDefense.id,move.earthquake.id, move.crunch.id, move.gigaImpact.id],
     },
     //reward : [item.tyranitarite, pkmn.larvitar],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.larvitar, item.tyranitarite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.larvitar, item.tyranitarite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.larvitar);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.tyranitarite);
+        }
+        
+        return nishLoot;
+    },
+    
     category: 2,
 }
 
-areas.eventTapuBulu = {
+/*areas.eventTapuBulu = {
     rotation: 2,
     type: `event`,
     name: `Virgin Meadow`,
@@ -2707,7 +3022,7 @@ areas.eventTapuBulu = {
     },
     //reward : [pkmn.tapuBulu],
     category: 2,
-}
+}*/
 
 
 
@@ -2729,6 +3044,35 @@ areas.eventMegaPinsir = {
         slot1Moves : [move.earthquake.id,move.xScissor.id, move.gigaImpact.id, move.fly.id],
     },
     //reward : [item.pinsirite, pkmn.pinsir],
+
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.pinsir, item.pinsirite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.pinsir, item.pinsirite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.pinsir);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.pinsirite);
+        }
+        
+        return nishLoot;
+    },
+    
     category: 2,
 }
 
@@ -2753,7 +3097,7 @@ areas.eventMegaPinsir = {
     category: 2,
 }*/
 
-areas.eventTingLu = {
+/*areas.eventTingLu = {
     rotation: 2,
     type: `event`,
     name: `Groundblight Shrine`,
@@ -2772,7 +3116,7 @@ areas.eventTingLu = {
     },
     reward : [pkmn.tingLu],
     category: 2,
-}
+}*/
 
 
 
@@ -2873,7 +3217,35 @@ areas.eventMegaSceptile = {
         slot1 : pkmn.megaSceptile,
         slot1Moves : [move.thunderWave.id,move.outrage.id, move.focusBlast.id, move.solarBeam.id],
     },
-    reward : [item.sceptilite, pkmn.treecko],
+    //reward : [item.sceptilite, pkmn.treecko],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.treecko, item.sceptilite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.treecko, item.sceptilite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.treecko);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.sceptilite);
+        }
+        
+        return nishLoot;
+    },
+    
     category: 2,
 }
 
@@ -2894,7 +3266,34 @@ areas.eventMegaSwampert = {
         slot1 : pkmn.megaSwampert,
         slot1Moves : [move.rainDance.id,move.aquaJet.id, move.earthquake.id, move.icePunch.id],
     },
-    reward : [item.swampertite, pkmn.mudkip],
+    //reward : [item.swampertite, pkmn.mudkip],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.mudkip, item.swampertite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.mudkip, item.swampertite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.mudkip);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.swampertite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -2915,7 +3314,34 @@ areas.eventMegaBlaziken = {
         slot1 : pkmn.megaBlaziken,
         slot1Moves : [move.flareBlitz.id,move.blazeKick.id, move.lowSweep.id, move.bounce.id],
     },
-    reward : [item.blazikenite, pkmn.torchic],
+    //reward : [item.blazikenite, pkmn.torchic],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.torchic, item.blazikenite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.torchic, item.blazikenite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.torchic);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.blazikenite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -3023,7 +3449,34 @@ areas.eventMegaMawile = {
         slot1 : pkmn.megaMawile,
         slot1Moves : [move.charm.id,move.ironHead.id, move.playRough.id, move.ironTail.id],
     },
-    reward : [item.mawilite, pkmn.mawile],
+    //reward : [item.mawilite, pkmn.mawile],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.mawile, item.mawilite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.mawile, item.mawilite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.mawile);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.mawilite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -3044,7 +3497,34 @@ areas.eventMegaGlalie = {
         slot1 : pkmn.megaGlalie,
         slot1Moves : [move.hail.id,move.blizzard.id, move.iceBeam.id, move.thunderbolt.id],
     },
-    reward : [item.glalitite, pkmn.snorunt],
+    //reward : [item.glalitite, pkmn.snorunt],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.snorunt, item.glalitite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.snorunt, item.glalitite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.snorunt);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.glalitite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -3065,7 +3545,34 @@ areas.eventMegaSteelix = {
         slot1 : pkmn.megaSteelix,
         slot1Moves : [move.ironDefense.id,move.ironTail.id, move.earthquake.id, move.rockSlide.id],
     },
-    reward : [item.steelixite, pkmn.onix],
+    //reward : [item.steelixite, pkmn.onix],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.onix, item.steelixite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.onix, item.steelixite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.onix);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.steelixite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -3130,7 +3637,25 @@ areas.eventGougingFire = {
         slot1 : pkmn.gougingFire,
         slot1Moves : [move.sunnyDay.id,move.fireBlast.id, move.earthquake.id, move.dracoMeteor.id],
     },
-    reward : [pkmn.gougingFire],
+    //reward : [pkmn.gougingFire],
+    //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.gougingFire],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gougingFire];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.gougingFire] : [];
+    },
+    //... até aqui
     category: 2,
 }
 
@@ -3451,7 +3976,34 @@ areas.eventMegaMetagross = {
         slot1 : pkmn.megaMetagross,
         slot1Moves : [move.ironDefense.id,move.ironHead.id, move.zenHeadbut.id, move.earthquake.id],
     },
-    reward : [item.metagrossite, pkmn.beldum],
+    //reward : [item.metagrossite, pkmn.beldum],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.beldum, item.metagrossite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.beldum, item.metagrossite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.beldum);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.metagrossite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -3540,7 +4092,34 @@ areas.eventMegaDragonite = {
         slot1 : pkmn.megaDragonite,
         slot1Moves : [move.dragonDance.id,move.firePunch.id, move.icePunch.id, move.thunderPunch.id],
     },
-    reward : [item.dragonitite, pkmn.dratini],
+    //reward : [item.dragonitite, pkmn.dratini],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.dratini, item.dragonitite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.dratini, item.dragonitite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.dratini);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.dragonitite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -3673,7 +4252,34 @@ areas.eventMegaGengar = {
         slot1 : pkmn.megaGengar,
         slot1Moves : [move.fog.id,move.shadowBall.id, move.darkPulse.id, move.sludgeWave.id],
     },
-    reward : [item.gengarite, pkmn.gastly],
+    //reward : [item.gengarite, pkmn.gastly],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.gastly, item.gengarite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gastly, item.gengarite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.gastly);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.gengarite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -3719,8 +4325,7 @@ areas.eventTapuKoko = {
     },
     reward : [pkmn.tapuKoko],
     category: 2,
-}
-
+}*/
 
 
 
@@ -3742,7 +4347,25 @@ areas.eventIronThorns = {
         slot1 : pkmn.ironThorns,
         slot1Moves : [move.ironDefense.id,move.thunder.id, move.rockSlide.id, move.earthquake.id],
     },
-    reward : [pkmn.ironThorns],
+    //reward : [pkmn.ironThorns],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironThorns],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironThorns];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironThorns] : [];
+    },
+    //... até aqui
     category: 1,
 }
 
@@ -3763,7 +4386,25 @@ areas.eventIronHands = {
         slot1 : pkmn.ironHands,
         slot1Moves : [move.magneticFlux.id,move.thunderbolt.id, move.ironHead.id, move.closeCombat.id],
     },
-    reward : [pkmn.ironHands],
+    //reward : [pkmn.ironHands],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironHands],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironHands];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironHands] : [];
+    },
+    //... até aqui
     category: 1,
 }
 
@@ -3784,13 +4425,27 @@ areas.eventIronJugulis = {
         slot1 : pkmn.ironJugulis,
         slot1Moves : [move.nastyPlot.id,move.darkPulse.id, move.flamethrower.id, move.thunderbolt.id],
     },
-    reward : [pkmn.ironJugulis],
+    //reward : [pkmn.ironJugulis],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironJugulis],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironJugulis];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironJugulis] : [];
+    },
+    //... até aqui
     category: 1,
 }
-
-
-
-
 
 areas.eventIronTreads = {
     rotation: 5,
@@ -3809,7 +4464,25 @@ areas.eventIronTreads = {
         slot1 : pkmn.ironTreads,
         slot1Moves : [move.earthquake.id,move.ironDefense.id, move.ironHead.id, move.earthPower.id],
     },
-    reward : [pkmn.ironTreads],
+    //reward : [pkmn.ironTreads],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironTreads],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironTreads];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironTreads] : [];
+    },
+    //... até aqui
     category: 1,
 }
 
@@ -3831,7 +4504,25 @@ areas.eventIronBundle = {
         slot1 : pkmn.ironBundle,
         slot1Moves : [move.magneticFlux.id,move.thunder.id, move.iceBeam.id, move.hydroPump.id],
     },
-    reward : [pkmn.ironBundle],
+    //reward : [pkmn.ironBundle],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironBundle],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironBundle];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironBundle] : [];
+    },
+    //... até aqui
     category: 1,
 }
 
@@ -3852,7 +4543,25 @@ areas.eventIronMoth = {
         slot1 : pkmn.ironMoth,
         slot1Moves : [move.quiverDance.id,move.thunderbolt.id, move.bugBuzz.id, move.heatWave.id],
     },
-    reward : [pkmn.ironMoth],
+    //reward : [pkmn.ironMoth],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironMoth],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironMoth];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironMoth] : [];
+    },
+    //... até aqui
     category: 1,
 }
 
@@ -3874,9 +4583,27 @@ areas.eventIronValiant = {
         slot1 : pkmn.ironValiant,
         slot1Moves : [move.ironDefense.id,move.powerupPunch.id, move.ironHead.id, move.playRough.id],
     },
-    reward : [pkmn.ironValiant],
+    //reward : [pkmn.ironValiant],
+        //Para modificar copie daqui...
+    
+    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.ironValiant],
+
+    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
+    get reward() {
+        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
+        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
+        const stack = new Error().stack || "";
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironValiant];
+        }
+        
+        // Chance real de 10% na hora de ganhar o prêmio após a batalha
+        return Math.random() < 0.025 ? [pkmn.ironValiant] : [];
+    },
+    //... até aqui
     category: 1,
-}*/
+}
 
 
 
@@ -3897,7 +4624,34 @@ areas.eventMegaScizor = {
         slot1 : pkmn.megaScizor,
         slot1Moves : [move.agility.id,move.machPunk.id, move.xScissor.id, move.ironHead.id],
     },
-    reward : [item.scizorite, pkmn.scyther],
+    //reward : [item.scizorite, pkmn.scyther],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.scyther, item.scizorite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.scyther, item.scizorite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.scyther);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.scizorite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -3919,7 +4673,34 @@ areas.eventMegaAggron = {
         slot1 : pkmn.megaAggron,
         slot1Moves : [move.ironDefense.id,move.ironHead.id, move.ironTail.id, move.earthquake.id],
     },
-    reward : [item.aggronite, pkmn.aron],
+    //reward : [item.aggronite, pkmn.aron],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.aron, item.aggronite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.aron, item.aggronite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.aron);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.aggronite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -3946,12 +4727,39 @@ areas.eventMegaBaxcalibur = {
         slot1 : pkmn.megaBaxcalibur,
         slot1Moves : [move.icicleCrash.id,move.dracoMeteor.id, move.earthquake.id, move.ironHead.id],
     },
-    reward : [item.baxcaliburite, pkmn.frigibax],
+    //reward : [item.baxcaliburite, pkmn.frigibax],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.frigibax, item.baxcaliburite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.frigibax, item.baxcaliburite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.frigibax);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.baxcaliburite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
 
-areas.eventChiYu = {
+/*areas.eventChiYu = {
     rotation: 5,
     type: `event`,
     name: `Firescourge Shrine`,
@@ -3970,7 +4778,7 @@ areas.eventChiYu = {
     },
     reward : [pkmn.chiYu],
     category: 2,
-}
+}*/
 
 /*areas.eventGalarianArticuno = {
     rotation: 5,
@@ -4097,7 +4905,34 @@ areas.eventMegaGallade = {
         slot1 : pkmn.megaGallade,
         slot1Moves : [move.psychoCut.id,move.playRough.id, move.closeCombat.id, move.nightSlash.id],
     },
-    reward : [item.galladite, pkmn.ralts],
+    //reward : [item.galladite, pkmn.ralts],
+            // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ralts, item.galladite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ralts, item.galladite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ralts);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.galladite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -4162,7 +4997,34 @@ areas.eventMegaLucario = {
         slot1 : pkmn.megaLucario,
         slot1Moves : [move.bulkUp.id,move.skyUppercut.id, move.ironHead.id, move.icePunch.id],
     },
-    reward : [item.lucarionite, pkmn.riolu],
+    //reward : [item.lucarionite, pkmn.riolu],
+            // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.riolu, item.lucarionite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.riolu, item.lucarionite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.riolu);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.lucarionite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -4183,7 +5045,34 @@ areas.eventMegaHeracross = {
         slot1 : pkmn.megaHeracross,
         slot1Moves : [move.thunderWave.id,move.xScissor.id, move.fly.id, move.earthquake.id],
     },
-    reward : [item.heracronite, pkmn.heracross],
+    //reward : [item.heracronite, pkmn.heracross],
+            // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.heracross, item.heracronite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.heracross, item.heracronite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.heracross);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.heracronite);
+        }
+        
+        return nishLoot;
+    },
     category: 2,
 }
 
@@ -4255,9 +5144,9 @@ areas.lakeAcuity = {
     },
     reward : [pkmn.mesprit],
     category: 1,
-}
+}*/
 
-areas.eventAzelf = {
+/*areas.eventAzelf = {
     rotation: 6,
     type: `event`,
     name: `Azelf cavern`,
@@ -4276,10 +5165,10 @@ areas.eventAzelf = {
     },
     reward : [pkmn.azelf],
     category: 1,
-}
+}*/
 
 
-areas.eventUxie = {
+/*areas.eventUxie = {
     rotation: 6,
     type: `event`,
     name: `Uxie cavern`,
@@ -4318,7 +5207,34 @@ areas.eventMegaPidgeot = {
         slot1 : pkmn.megaPidgeot,
         slot1Moves : [move.featherDance.id,move.fly.id, move.hyperVoice.id, move.heatWave.id],
     },
-    reward : [item.pidgeotite, pkmn.pidgey],
+    //reward : [item.pidgeotite, pkmn.pidgey],
+            // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.pidgey, item.pidgeotite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.pidgey, item.pidgeotite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.pidgey);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.pidgeotite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -4339,7 +5255,34 @@ areas.eventMegaBeedrill = {
         slot1 : pkmn.megaBeedrill,
         slot1Moves : [move.stringShot.id,move.xScissor.id, move.crossPoison.id, move.bugBuzz.id],
     },
-    reward : [item.beedrillite, pkmn.weedle],
+    //reward : [item.beedrillite, pkmn.weedle],
+            // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.weedle, item.beedrillite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.weedle, item.beedrillite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.weedle);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.beedrillite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
@@ -4360,7 +5303,34 @@ areas.eventMegaAlakazam = {
         slot1 : pkmn.megaAlakazam,
         slot1Moves : [move.amnesia.id,move.psychic.id, move.energyBall.id, move.moonblast.id],
     },
-    reward : [item.alakazite, pkmn.abra],
+    //reward : [item.alakazite, pkmn.abra],
+            // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.abra, item.alakazite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.abra, item.alakazite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.abra);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.alakazite);
+        }
+        
+        return nishLoot;
+    },
     category: 1,
 }
 
