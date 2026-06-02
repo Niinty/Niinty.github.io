@@ -438,12 +438,12 @@ pkmn.beedrill = {
 pkmn.megaBeedrill = {
     type: ["bug","poison"],
     bst: {
-        hp: 80,
-        atk: 150,
-        def: 40,
-        satk: 15,
-        sdef: 80,
-        spe: 160,
+        hp: 80*1.2,
+        atk: 150*1.2,
+        def: 40*1.2,
+        satk: 15*1.2,
+        sdef: 80*1.2,
+        spe: 160*1.2,
     },
     hiddenAbility: ability.adaptability,
     lore: `Suas patas se tornaram ferrões venenosos. Ele perfura sua presa repetidamente com os ferrões em seus membros, desferindo o golpe final com o ferrão em sua parte traseira.`,
@@ -502,12 +502,12 @@ pkmn.pidgeot = {
 pkmn.megaPidgeot = {
     type: ["normal","flying"],
     bst: {
-        hp: 83,
-        atk: 80,
-        def: 80,
-        satk: 135,
-        sdef: 80,
-        spe: 121,
+        hp: 83*1.2,
+        atk: 80*1.2,
+        def: 80*1.2,
+        satk: 135*1.2,
+        sdef: 80*1.2,
+        spe: 121*1.2,
     },
     hiddenAbility: ability.noGuard,
     lore: `Com sua força muscular agora muito aumentada, ele consegue voar continuamente por duas semanas sem descansar.`,
@@ -875,12 +875,12 @@ pkmn.alolanRaichu = {
 pkmn.megaRaichuX = {
     type: ["electric"],
     bst: {
-        hp: 120,
-        atk: 175,
-        def: 95,
-        satk: 90,
-        sdef: 95,
-        spe: 100,
+        hp: 120*1.2,
+        atk: 175*1.2,
+        def: 95*1.2,
+        satk: 90*1.2,
+        sdef: 95*1.2,
+        spe: 100*1.2,
     },
     hiddenAbility: ability.ambidextrous,
     signature : move.voltTackle,
@@ -889,12 +889,12 @@ pkmn.megaRaichuX = {
 pkmn.megaRaichuY = {
     type: ["electric"],
     bst: {
-        hp: 60,
-        atk: 160,
-        def: 55,
-        satk: 160,
-        sdef: 80,
-        spe: 140,
+        hp: 60*1.2,
+        atk: 160*1.2,
+        def: 55*1.2,
+        satk: 160*1.2,
+        sdef: 80*1.2,
+        spe: 140*1.2,
     },
     hiddenAbility: ability.electricSurge,
     signature : move.voltTackle,
@@ -1097,12 +1097,12 @@ pkmn.clefable = {
 pkmn.megaClefable = {
     type: ["fairy", "flying"],
     bst: {
-        hp: 95,
-        atk: 80,
-        def: 93,
-        satk: 135,
-        sdef: 110,
-        spe: 70,
+        hp: 95*1.2,
+        atk: 80*1.2,
+        def: 93*1.2,
+        satk: 135*1.2,
+        sdef: 110*1.2,
+        spe: 70*1.2,
     },
     hiddenAbility: ability.magicGuard,
     eggMove : move.lunarDance
@@ -1764,12 +1764,12 @@ pkmn.alakazam = {
 pkmn.megaAlakazam = {
     type: ["psychic"],
     bst: {
-        hp: 55,
-        atk: 50,
-        def: 65,
-        satk: 175,
-        sdef: 105,
-        spe: 150,
+        hp: 55*1.2,
+        atk: 50*1.2,
+        def: 65*1.2,
+        satk: 175*1.2,
+        sdef: 105*1.2,
+        spe: 150*1.2,
     },
     hiddenAbility: ability.magicGuard,
     signature : move.kinesis
@@ -1882,12 +1882,12 @@ pkmn.victreebel = {
 pkmn.megaVictreebel = {
     type: ["grass","poison"],
     bst: {
-        hp: 80,
-        atk: 125,
-        def: 85,
-        satk: 135,
-        sdef: 95,
-        spe: 70,
+        hp: 80*1.2,
+        atk: 125*1.2,
+        def: 85*1.2,
+        satk: 135*1.2,
+        sdef: 95*1.2,
+        spe: 70*1.2,
     },
     hiddenAbility: ability.chlorophyll,
     eggMove : move.appleAcid
@@ -2124,12 +2124,12 @@ pkmn.slowbro = {
 pkmn.megaSlowbro = {
     type: ["water","psychic"],
     bst: {
-        hp: 95,
-        atk: 75,
-        def: 180,
-        satk: 130,
-        sdef: 80,
-        spe: 30,
+        hp: 95*1.2,
+        atk: 75*1.2,
+        def: 180*1.2,
+        satk: 130*1.2,
+        sdef: 80*1.2,
+        spe: 30*1.2,
     },
     hiddenAbility: ability.unaware,
     signature : move.chillyReception
@@ -2447,12 +2447,12 @@ pkmn.gengar = {
 pkmn.megaGengar = {
     type: ["ghost","poison"],
     bst: {
-        hp: 90,
-        atk: 65,
-        def: 80,
-        satk: 180,
-        sdef: 125,
-        spe: 130,
+        hp: 90*1.2,
+        atk: 65*1.2,
+        def: 80*1.2,
+        satk: 180*1.2,
+        sdef: 125*1.2,
+        spe: 130*1.2,
     },
     hiddenAbility: ability.somberField,
 }
@@ -2502,12 +2502,12 @@ pkmn.steelix = {
 pkmn.megaSteelix = {
     type: ["steel","ground"],
     bst: {
-        hp: 75,
-        atk: 125,
-        def: 230,
-        satk: 55,
-        sdef: 95,
-        spe: 30,
+        hp: 75*1.2,
+        atk: 125*1.2,
+        def: 230*1.2,
+        satk: 55*1.2,
+        sdef: 95*1.2,
+        spe: 30*1.2,
     },
     hiddenAbility: ability.sheerForce,
 }
@@ -3011,12 +3011,12 @@ pkmn.kangaskhan = {
 pkmn.megaKangaskhan = {
     type: ["normal"],
     bst: {
-        hp: 120,
-        atk: 125,
-        def: 100,
-        satk: 60,
-        sdef: 100,
-        spe: 100,
+        hp: 120*1.2,
+        atk: 125*1.2,
+        def: 100*1.2,
+        satk: 60*1.2,
+        sdef: 100*1.2,
+        spe: 100*1.2,
     },
     hiddenAbility: ability.parentalBond,
     eggMove : move.headCharge,
@@ -3128,12 +3128,12 @@ pkmn.starmie = {
 pkmn.megaStarmie = {
     type: ["water","psychic"],
     bst: {
-        hp: 60,
-        atk: 140,
-        def: 105,
-        satk: 130,
-        sdef: 105,
-        spe: 120,
+        hp: 60*1.2,
+        atk: 140*1.2,
+        def: 105*1.2,
+        satk: 130*1.2,
+        sdef: 105*1.2,
+        spe: 120*1.2,
     },
     signature : move.camouflage
 }
@@ -3229,12 +3229,12 @@ pkmn.scizor = {
 pkmn.megaScizor = {
     type: ["bug","steel"],
     bst: {
-        hp: 70,
-        atk: 150,
-        def: 140,
-        satk: 65,
-        sdef: 100,
-        spe: 75,
+        hp: 70*1.2,
+        atk: 150*1.2,
+        def: 140*1.2,
+        satk: 65*1.2,
+        sdef: 100*1.2,
+        spe: 75*1.2,
     },
     hiddenAbility: ability.technician,
 }
@@ -3387,12 +3387,12 @@ pkmn.pinsir = {
 pkmn.megaPinsir = {
     type: ["bug","flying"],
     bst: {
-        hp: 99,
-        atk: 155,
-        def: 120,
-        satk: 80,
-        sdef: 90,
-        spe: 105,
+        hp: 99*1.2,
+        atk: 155*1.2,
+        def: 120*1.2,
+        satk: 80*1.2,
+        sdef: 90*1.2,
+        spe: 105*1.2,
     },
     hiddenAbility: ability.aerilate,
     eggMove : move.camouflage
@@ -3563,12 +3563,12 @@ pkmn.gyarados = {
 pkmn.megaGyarados = {
     type: ["water","dark"],
     bst: {
-        hp: 95,
-        atk: 155,
-        def: 109,
-        satk: 70,
-        sdef: 130,
-        spe: 81,
+        hp: 95*1.2,
+        atk: 155*1.2,
+        def: 109*1.2,
+        satk: 70*1.2,
+        sdef: 130*1.2,
+        spe: 81*1.2,
     },
     hiddenAbility: ability.intimidate,
 }
@@ -3887,12 +3887,12 @@ pkmn.aerodactyl = {
 pkmn.megaAerodactyl = {
     type: ["rock","flying"],
     bst: {
-        hp: 80,
-        atk: 135,
-        def: 85,
-        satk: 70,
-        sdef: 95,
-        spe: 150,
+        hp: 80*1.2,
+        atk: 135*1.2,
+        def: 85*1.2,
+        satk: 70*1.2,
+        sdef: 95*1.2,
+        spe: 150*1.2,
     },
     hiddenAbility: ability.toughClaws,
 }
@@ -4083,12 +4083,12 @@ pkmn.dragonite = {
 pkmn.megaDragonite = {
     type: ["dragon","flying"],
     bst: {
-        hp: 91,
-        atk: 124,
-        def: 115,
-        satk: 145,
-        sdef: 125,
-        spe: 100,
+        hp: 91*1.2,
+        atk: 124*1.2,
+        def: 115*1.2,
+        satk: 145*1.2,
+        sdef: 125*1.2,
+        spe: 100*1.2,
     },
     hiddenAbility: ability.multiscale,
 }
@@ -4198,12 +4198,12 @@ pkmn.meganium = {
 pkmn.megaMeganium = {
     type: ["grass", "fairy"],
     bst: {
-        hp: 80,
-        atk: 92,
-        def: 115,
-        satk: 143,
-        sdef: 115,
-        spe: 80,
+        hp: 80*1.2,
+        atk: 92*1.2,
+        def: 115*1.2,
+        satk: 143*1.2,
+        sdef: 115*1.2,
+        spe: 80*1.2,
     },
     hiddenAbility: ability.costar,
     eggMove : move.floralHealing
@@ -4311,12 +4311,12 @@ pkmn.feraligatr = {
 pkmn.megaFeraligatr = {
     type: ["water", "dragon"],
     bst: {
-        hp: 85,
-        atk: 160,
-        def: 125,
-        satk: 89,
-        sdef: 93,
-        spe: 78,
+        hp: 85*1.2,
+        atk: 160*1.2,
+        def: 125*1.2,
+        satk: 89*1.2,
+        sdef: 93*1.2,
+        spe: 78*1.2,
     }
 }
 
@@ -4598,12 +4598,12 @@ pkmn.ampharos = {
 pkmn.megaAmpharos = {
     type: ["electric","dragon"],
     bst: {
-        hp: 90,
-        atk: 95,
-        def: 105,
-        satk: 165,
-        sdef: 110,
-        spe: 45,
+        hp: 90*1.2,
+        atk: 95*1.2,
+        def: 105*1.2,
+        satk: 165*1.2,
+        sdef: 110*1.2,
+        spe: 45*1.2,
     },
     hiddenAbility: ability.flashElectro,
     eggMove : move.zapCannon
