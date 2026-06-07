@@ -4121,7 +4121,7 @@ pkmn.megaMewtwoX = {
         satk: 154*1.35,
         sdef: 100*1.35,
         spe: 130*1.35,
-    }
+    },
     hiddenAbility: ability.parentalBond,
     lore: `O poder psíquico fortaleceu seus músculos. Ele possui uma força de preensão de uma tonelada e consegue percorrer 100 metros em exatos dois segundos!`
 }
@@ -4135,7 +4135,7 @@ pkmn.megaMewtwoY = {
         satk: 194*1.35,
         sdef: 120*1.35,
         spe: 140*1.35,
-    }
+    },
     hiddenAbility: ability.supremeOverlord,
     lore: `Apesar de seu tamanho reduzido, seu poder mental cresceu de forma fenomenal. Com um simples pensamento, ele pode reduzir um arranha-céu a escombros.`
 }
