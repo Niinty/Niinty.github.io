@@ -115,8 +115,8 @@ const LEGENDS_LIST = [
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
             { itemId: "blackApricorn", amount: 1, chance: 0.05 },
-            { itemId: "mewtwoniteX", amount: 1, chance: 0.005 },
-            { itemId: "mewtwoniteY", amount: 1, chance: 0.005 },
+            { itemId: "mewtwoniteX", amount: 1, chance: 0.0025 },
+            { itemId: "mewtwoniteY", amount: 1, chance: 0.0025 },
         ],
         // Background da área de batalha
         background: "cave",
