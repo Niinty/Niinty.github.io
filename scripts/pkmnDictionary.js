@@ -4105,7 +4105,9 @@ pkmn.mewtwo = {
         sdef: 90*1.3,
         spe: 130*1.3,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.megaMewtwoX, item: item.mewtwoniteX } } },
+    evolve: function() { return { 
+        1: { pkmn: pkmn.megaMewtwoX, item: item.mewtwoniteX },
+        2: { pkmn: pkmn.megaMewtwoY, item: item.mewtwoniteY } } },
     hiddenAbility: ability.aromaVeil,
     lore: `Mewtwo é um Pokémon criado por manipulação genética. No entanto, embora o poder científico dos humanos tenha criado o corpo desse Pokémon, eles falharam miseravelmente em conceder a Mewtwo um coração compassivo.`
 }
@@ -4120,6 +4122,8 @@ pkmn.megaMewtwoX = {
         sdef: 100*1.35,
         spe: 130*1.35,
     }
+    hiddenAbility: ability.parentalBond,
+    lore: `O poder psíquico fortaleceu seus músculos. Ele possui uma força de preensão de uma tonelada e consegue percorrer 100 metros em exatos dois segundos!`
 }
 
 pkmn.megaMewtwoY = {
@@ -4132,6 +4136,8 @@ pkmn.megaMewtwoY = {
         sdef: 120*1.35,
         spe: 140*1.35,
     }
+    hiddenAbility: ability.supremeOverlord,
+    lore: `Apesar de seu tamanho reduzido, seu poder mental cresceu de forma fenomenal. Com um simples pensamento, ele pode reduzir um arranha-céu a escombros.`
 }
 
 // Mítico
