@@ -1352,6 +1352,13 @@ item.diancite = {
     heldBonusPkmn: function() { return pkmn.megaDiancie.id },
 }
 
+item.heatranite = {
+    evo: true,
+    info: function() {return `Use: Evolve a certain Pokemon<br>When held: Increases the damage dealt by ${format(this.heldBonusPkmn())} by x${this.heldBonusPower().toFixed(2)}`},
+    heldBonusPower: function() { return 1.15+(0.1*returnItemLevel(this.id)) },
+    heldBonusPkmn: function() { return pkmn.megaHeatran.id },
+}
+
 item.dragonitite = {
     evo: true,
     info: function() {return `Use: Evolve a certain Pokemon<br>When held: Increases the damage dealt by ${format(this.heldBonusPkmn())} by x${this.heldBonusPower().toFixed(2)}`},
