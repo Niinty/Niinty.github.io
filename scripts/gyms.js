@@ -187,7 +187,7 @@ const GYMS_LEADERS = [
             slot2 : pkmn.snorlax,
             slot2Moves : [move.amnesia.id, move.hyperBeam.id, move.iceBeam.id, move.thunderbolt.id],
             slot3 : pkmn.mrmime,
-            slot3Moves : [move.thunderWave, move.confusion.id,move.futureSight.id, move.psybeam.id],
+            slot3Moves : [move.amnesia, move.confusion.id, move.futureSight.id, move.psybeam.id],
             slot4 : pkmn.hypno,
             slot4Moves : [move.amnesia.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
             slot5 : pkmn.exeggutor,
