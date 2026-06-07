@@ -9986,48 +9986,48 @@ pkmn.rotomMow = {
 pkmn.uxie = {
     type: ["psychic"],
     bst: {
-        hp: 75,
-        atk: 30,
-        def: 120,
-        satk: 75,
-        sdef: 150,
-        spe: 80,
+        hp: 75*1.3,
+        atk: 30*1.3,
+        def: 120*1.3,
+        satk: 75*1.3,
+        sdef: 150*1.3,
+        spe: 80*1.3,
     },
     hiddenAbility: ability.sinisterGuard,
     signature : move.mysticalPower,
-    lore: `Emerged to give shape to knowledge. When the world was still new, it shared understanding with humanity, allowing thought and memory to take root. Its presence quiets turmoil to the gods of time and space.`
+    lore: `Nasceu para dar forma ao conhecimento. Quando o mundo ainda engatinhava, concedeu entendimento à humanidade, permitindo que o pensamento e a memória florescessem. Sua presença é capaz de silenciar os conflitos dos deuses do tempo e do espaço.`
 }
 
 // 481 Mesprit
 pkmn.mesprit = {
     type: ["psychic"],
     bst: {
-        hp: 100,
-        atk: 105,
-        def: 105,
-        satk: 105,
-        sdef: 105,
-        spe: 120,
+        hp: 100*1.3,
+        atk: 105*1.3,
+        def: 105*1.3,
+        satk: 105*1.3,
+        sdef: 105*1.3,
+        spe: 120*1.3,
     },
     hiddenAbility: ability.levitate,
     signature : move.mysticalPower,
-    lore: `Emerged to give shape to emotion. When the world was still new, it shared feeling with humanity, allowing joy, sorrow, and empathy to take root. Its presence soothes unrest to the gods of time and space.`
+    lore: `Nasceu para dar forma às emoções. Quando o mundo ainda engatinhava, concedeu sentimentos à humanidade, permitindo que a alegria, a tristeza e a empatia florescessem. Sua presença apazigua a inquietação dos deuses do tempo e do espaço.`
 }
 
 // 482 Azelf
 pkmn.azelf = {
     type: ["psychic"],
     bst: {
-        hp: 75,
-        atk: 100,
-        def: 70,
-        satk: 120,
-        sdef: 70,
-        spe: 155,
+        hp: 75*1.3,
+        atk: 100*1.3,
+        def: 70*1.3,
+        satk: 120*1.3,
+        sdef: 70*1.3,
+        spe: 155*1.3,
     },
     hiddenAbility: ability.prankster,
     signature : move.mysticalPower,
-    lore: `Emerged to give shape to will. When the world was still new, it granted resolve to humanity, allowing action, choice, and determination to take form. Its presence steels the spirit of the gods of time and space.`
+    lore: `Nasceu para dar forma à vontade. Quando o mundo ainda engatinhava, concedeu determinação à humanidade, permitindo que a ação, a escolha e a perseverança florescessem. Sua presença fortalece o espírito dos deuses do tempo e do espaço.`
 }
 
 // 483 Dialga
@@ -10041,8 +10041,9 @@ pkmn.dialga = {
         sdef: 100*1.35,
         spe: 90*1.35,
     },
+    hiddenAbility: ability.gooey,
     signature : move.roarOfTime,
-    lore: `Bound by weight and limit, a shape time itself can endure. Its power yet governs past and future, though restrained, for the world cannot withstand the full measure of eternity given form.`
+    lore: `Limitado por um corpo que o próprio tempo é capaz de sustentar, ainda governa o passado e o futuro. Seu poder permanece selado, pois o mundo não suportaria contemplar a plenitude da eternidade encarnada.`
 }
 
 pkmn.dialgaOrigin = {
@@ -10055,7 +10056,9 @@ pkmn.dialgaOrigin = {
         sdef: 120*1.35,
         spe: 90*1.35,
     },
-    lore: `Shaped by the Original One, when the universe had yet to know its first moment, It was brought forth to give law to duration. By its heartbeat, time began to flow; by its will, past and future were torn apart and given order. Without It, all life trapped by eternal stillness.`
+    hiddenAbility: ability.gooey,
+    signature : move.roarOfTime,
+    lore: `Criado pelo Original quando o universo ainda aguardava seu primeiro momento, surgiu para governar o curso do tempo. Com o pulsar de seu coração, a corrente temporal começou a fluir; por sua vontade, passado e futuro foram divididos e postos em ordem. Sem sua existência, toda a vida estaria aprisionada em uma estagnação eterna.`
 }
 
 // 484 Palkia
@@ -10071,7 +10074,7 @@ pkmn.palkia = {
     },
     signature : move.spacialRend,
     hiddenAbility: ability.supremeOverlord,
-    lore: `Bound by weight and limit, a shape space itself can sustain. Its power yet governs distance and separation, though restrained, for the world cannot bear the weight of infinite breadth given form.`
+    lore: `Limitado por um corpo que o próprio espaço é capaz de sustentar, ainda governa a distância e a separação entre todas as coisas. Seu poder permanece selado, pois o mundo não suportaria o peso da vastidão infinita encarnada.`
 }
 
 pkmn.palkiaOrigin = {
@@ -10084,51 +10087,56 @@ pkmn.palkiaOrigin = {
         sdef: 160*1.35,
         spe: 100*1.35,
     },
-    lore: `Shaped by the Original One, when the universe was yet unmeasured, It was brought forth to give form to expanse. By its existence, space became vast; by its will, distance gained meaning. Without It, the world would have no breadth, no separation between sky and land, nor any path for life to walk.`
+    signature : move.spacialRend,
+    hiddenAbility: ability.supremeOverlord,
+    lore: `Criado pelo Original quando o universo ainda era desprovido de limites, surgiu para governar a extensão do espaço. Por sua existência, a vastidão foi concebida; por sua vontade, todas as distâncias passaram a existir. Sem sua presença, não haveria separação entre céu e terra, nem horizontes a alcançar, e a própria vida não teria por onde seguir seu caminho.`
 }
 
 // 485 Heatran
 pkmn.heatran = {
     type: ["fire","steel"],
     bst: {
-        hp: 91,
-        atk: 90,
-        def: 146,
-        satk: 130,
-        sdef: 106,
-        spe: 77,
+        hp: 91*1.3,
+        atk: 90*1.3,
+        def: 146*1.3,
+        satk: 130*1.3,
+        sdef: 106*1.3,
+        spe: 77*1.3,
     },
     hiddenAbility: ability.pyrolate,
     signature : move.magmaStorm,
-    lore: `Formed within the depths of the earth, it moves through molten stone and scorched caverns, shaping volcanoes among the land through heat and pressure.`
+    lore: `Nascido nas profundezas da terra, percorre mares de magma e cavernas abrasadoras. Seu intenso calor e pressão moldam vulcões por toda a região.`
 }
 
 pkmn.megaHeatran = {
     type: ["fire","steel"],
     bst: {
-        hp: 120,
-        atk: 120,
-        def: 106,
-        satk: 175,
-        sdef: 201,
-        spe: 67,
-    }
+        hp: 120*1.35,
+        atk: 120*1.35,
+        def: 106*1.35,
+        satk: 175*1.35,
+        sdef: 201*1.35,
+        spe: 67*1.35,
+    },
+    hiddenAbility: ability.pyrolate,
+    signature : move.magmaStorm,
+    lore: `Dizem que, quando libera todo o seu poder, sua temperatura corporal pode ultrapassar 1 milhão de graus Celsius. O calor avassalador que emana de seu corpo mantém os inimigos à distância.`
 }
 
 // 486 Regigigas
 pkmn.regigigas = {
     type: ["normal"],
     bst: {
-        hp: 200,
-        atk: 160,
-        def: 110,
-        satk: 80,
-        sdef: 110,
-        spe: 50,
+        hp: 200*1.3,
+        atk: 160*1.3,
+        def: 110*1.3,
+        satk: 80*1.3,
+        sdef: 110*1.3,
+        spe: 50*1.3,
     },
-    lore: `Regigigas moved the continents into place, hauling landmasses with ropes of stone and ice, shaping the world through sheer strength. From this labor came the order of the land, after which it fell into long slumber.`,
     hiddenAbility: ability.normalize,
     signature : move.crushGrip,
+    lore: `Com força incomparável, Regigigas arrastou os continentes para seus lugares usando cordas de pedra e gelo. Seu trabalho deu forma ao mundo e estabeleceu a ordem das terras. Após concluir essa tarefa monumental, mergulhou em um sono que durou eras.`
 }
 
 // 487 Giratina
@@ -10142,8 +10150,9 @@ pkmn.giratina = {
         sdef: 120*1.35,
         spe: 90*1.35,
     },
+    hiddenAbility: ability.stamina,
     signature : move.shadowForce,
-    lore: `Bound by weight and limit, a shape reality can tolerate. Its power yet governs antimatter and opposition, though restrained, for the world cannot endure the force that unravels all creation made whole.`
+    lore: `Limitado por um corpo que a própria realidade é capaz de suportar, ainda governa a antimatéria e tudo aquilo que se opõe à criação. Seu poder permanece selado, pois o mundo não resistiria à força capaz de desfazer toda a existência e reduzir a criação ao nada.`
 }
 
 pkmn.giratinaOrigin = {
@@ -10156,35 +10165,37 @@ pkmn.giratinaOrigin = {
         sdef: 100*1.35,
         spe: 160*1.35,
     },
-    lore: `Shaped by the Original One, when the laws of creation first took form, It was born in defiance of them. Given dominion over antithesis of matter, It was cast away for its violence, bound to a world where logic collapses and direction has no meaning.`
+    hiddenAbility: ability.stamina,
+    signature : move.shadowForce,
+    lore: `Criado pelo Original quando as leis da criação foram estabelecidas, surgiu como sua contraposição. Investido com poder sobre a antimatéria, foi expulso por sua violência e relegado a um reino onde a lógica entra em colapso e conceitos como cima, baixo, distância e direção deixam de existir.`
 }
 
 // 488 Cresselia
 pkmn.cresselia = {
     type: ["psychic"],
     bst: {
-        hp: 150,
-        atk: 70,
-        def: 120,
-        satk: 75,
-        sdef: 130,
-        spe: 85,
+        hp: 150*1.3,
+        atk: 70*1.3,
+        def: 120*1.3,
+        satk: 75*1.3,
+        sdef: 130*1.3,
+        spe: 85*1.3,
     },
     hiddenAbility: ability.magicGuard,
     signature : move.lunarDance,
-    lore: `The embodiment of moon light. From the earliest ages, it has watched over sleep and dreams, bringing peaceful rest where darkness gathers. Its feathers dispel the nightmares born by Darkrai, as they balance the quiet rhythm of night that was set into the world.`
+    lore: `Encarnação da luz lunar. Desde tempos imemoriais, vela pelo sono e pelos sonhos, concedendo repouso tranquilo onde a escuridão se faz presente. Suas plumas dispersam os pesadelos gerados por :contentReference[oaicite:0]{index=0}, mantendo o delicado equilíbrio da noite que foi estabelecido sobre o mundo.`
 }
 
 // 489 Phione
 pkmn.phione = {
     type: ["water"],
     bst: {
-        hp: 80,
-        atk: 80,
-        def: 80,
-        satk: 80,
-        sdef: 80,
-        spe: 80,
+        hp: 80*1.3,
+        atk: 80*1.3,
+        def: 80*1.3,
+        satk: 80*1.3,
+        sdef: 80*1.3,
+        spe: 80*1.3,
     },
     eggMove : move.tailGlow
 }
@@ -10193,12 +10204,12 @@ pkmn.phione = {
 pkmn.manaphy = {
     type: ["water"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 100,
-        satk: 100,
-        sdef: 100,
-        spe: 100,
+        hp: 100*1.3,
+        atk: 100*1.3,
+        def: 100*1.3,
+        satk: 100*1.3,
+        sdef: 100*1.3,
+        spe: 100*1.3,
     },
     lore: `The prince of the seas, the chosen of its kind, born with a bond that links all ocean life. It guides the creatures of the waters, preserving harmony beneath the waves.`,
     eggMove : move.tailGlow
