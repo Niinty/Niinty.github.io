@@ -705,9 +705,9 @@ function dropItem(){
     if (saved.currentArea == undefined) return
 
     if ((areas[saved.currentArea]?.type === "wild" || saved.currentArea === areas.wildlifePark?.id)){
-        if (rng(0.005)) { item.pokeball.newItem++; item.pokeball.got++; saveGame(); }
-        if (rng(0.0005)) { item.greatball.newItem++; item.greatball.got++; saveGame(); }
-        if (rng(0.00008)) { item.ultraball.newItem++; item.ultraball.got++; saveGame(); }
+        if (rng(0.0015)) { item.pokeball.newItem++; item.pokeball.got++; saveGame(); }
+        if (rng(0.00015)) { item.greatball.newItem++; item.greatball.got++; saveGame(); }
+        if (rng(0.00007)) { item.ultraball.newItem++; item.ultraball.got++; saveGame(); }
         if (rng(0.00001)) { item.masterball.newItem++; item.masterball.got++; saveGame(); }
     }
 
