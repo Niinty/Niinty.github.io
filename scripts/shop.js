@@ -21,6 +21,7 @@ shop.exchange1 = {
 }
 
 /** 1 insígnia de ginásio → 1 Auto-Refight Ticket (farm difícil via rematch) */
+//KANTO
 shop.shopGymBadgeBrockTicket = {
     icon: item.autoRefightTicket.id,
     name: `Auto-Refight Ticket`,
@@ -81,7 +82,45 @@ shop.shopGymBadgeKogaTicket = {
         item.autoRefightTicket.newItem++
     },
 }
+shop.shopGymBadgeSabrinaTicket = {
+    icon: item.autoRefightTicket.id,
+    name: `Auto-Refight Ticket`,
+    price: 1,
+    currency: item.gymBadgeSabrina.id,
+    category: `goods`,
+    condition: function() { return item.gymBadgeSabrina.got >= 1 },
+    effect: function() {
+        item.autoRefightTicket.got++
+        item.autoRefightTicket.newItem++
+    },
+}
+shop.shopGymBadgeBlaineTicket = {
+    icon: item.autoRefightTicket.id,
+    name: `Auto-Refight Ticket`,
+    price: 1,
+    currency: item.gymBadgeBlaine.id,
+    category: `goods`,
+    condition: function() { return item.gymBadgeBlaine.got >= 1 },
+    effect: function() {
+        item.autoRefightTicket.got++
+        item.autoRefightTicket.newItem++
+    },
+}
+shop.shopGymBadgeGiovanniTicket = {
+    icon: item.autoRefightTicket.id,
+    name: `Auto-Refight Ticket`,
+    price: 1,
+    currency: item.gymBadgeGiovanni.id,
+    category: `goods`,
+    condition: function() { return item.gymBadgeGiovanni.got >= 1 },
+    effect: function() {
+        item.autoRefightTicket.got++
+        item.autoRefightTicket.newItem++
+    },
+}
 
+
+//JOHTO
 
 
 
