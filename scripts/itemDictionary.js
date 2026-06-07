@@ -747,6 +747,7 @@ item.autoRefightTicket = {
 }
 
 /** Insígnias de ginásio — ícone temporário: pikachuF (troque em img/pkmn/sprite ou itemIcon) */
+//KANTO
 item.gymBadgeBrock = {
     type: "key",
     itemIcon: "gymBadgeBrock",
@@ -801,7 +802,27 @@ item.gymBadgeSabrina = {
         return `Chance ao derrotar Sabrina (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
     },
 }
+item.gymBadgeBlaine = {
+    type: "key",
+    itemIcon: "gymBadgeBlaine",
+    rename: "Volcano Badge",
+    subtitle: "(Gym)",
+    info: function() {
+        return `Chance ao derrotar Blaine (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
+    },
+}
+item.gymBadgeGiovanni = {
+    type: "key",
+    itemIcon: "gymBadgeGiovanni",
+    rename: "Earth Badge",
+    subtitle: "(Gym)",
+    info: function() {
+        return `Chance ao derrotar Giovanni (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
+    },
+}
 
+
+//JOHTO
 
 
 
