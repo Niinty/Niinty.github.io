@@ -751,7 +751,7 @@ item.autoRefightTicket = {
 item.gymBadgeBrock = {
     type: "key",
     itemIcon: "gymBadgeBrock",
-    rename: "Boulder Badge",
+    rename: "Rocha",
     subtitle: "(Gym)",
     info: function() {
         return `Obtenha ao derrotar Brock (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -760,7 +760,7 @@ item.gymBadgeBrock = {
 item.gymBadgeMisty = {
     type: "key",
     itemIcon: "gymBadgeMisty",
-    rename: "Cascade Badge",
+    rename: "Cascata",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Misty (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -769,7 +769,7 @@ item.gymBadgeMisty = {
 item.gymBadgeLtsurge = {
     type: "key",
     itemIcon: "gymBadgeLtsurge",
-    rename: "Thunder Badge",
+    rename: "Trovao",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Lt. Surge (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -778,7 +778,7 @@ item.gymBadgeLtsurge = {
 item.gymBadgeErika = {
     type: "key",
     itemIcon: "gymBadgeErika",
-    rename: "Rainbow Badge",
+    rename: "Arco-Iris",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Erika (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -787,7 +787,7 @@ item.gymBadgeErika = {
 item.gymBadgeKoga = {
     type: "key",
     itemIcon: "gymBadgeKoga",
-    rename: "Soul Badge",
+    rename: "Alma",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Koga (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -796,7 +796,7 @@ item.gymBadgeKoga = {
 item.gymBadgeSabrina = {
     type: "key",
     itemIcon: "gymBadgeSabrina",
-    rename: "Marsh Badge",
+    rename: "Pantano",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Sabrina (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -805,7 +805,7 @@ item.gymBadgeSabrina = {
 item.gymBadgeBlaine = {
     type: "key",
     itemIcon: "gymBadgeBlaine",
-    rename: "Volcano Badge",
+    rename: "Vulcao",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Blaine (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
@@ -814,7 +814,7 @@ item.gymBadgeBlaine = {
 item.gymBadgeGiovanni = {
     type: "key",
     itemIcon: "gymBadgeGiovanni",
-    rename: "Earth Badge",
+    rename: "Terra",
     subtitle: "(Gym)",
     info: function() {
         return `Chance ao derrotar Giovanni (rematch). Troque na Poke-Mart por 1 Auto-Refight Ticket. (Possui: ${this.got})`
