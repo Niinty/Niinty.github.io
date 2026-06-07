@@ -10103,6 +10103,7 @@ pkmn.heatran = {
         sdef: 106*1.3,
         spe: 77*1.3,
     },
+    evolve: function() { return { 1: { pkmn: pkmn.megaHeatran, item: item.heatranite } } },
     hiddenAbility: ability.pyrolate,
     signature : move.magmaStorm,
     lore: `Nascido nas profundezas da terra, percorre mares de magma e cavernas abrasadoras. Seu intenso calor e pressão moldam vulcões por toda a região.`
