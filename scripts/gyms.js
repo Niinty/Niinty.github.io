@@ -171,7 +171,7 @@ const GYMS_LEADERS = [
         areaId: "vsGymLeaderSabrina",
         region: "kanto",
         order: 6,
-        unlockAreaId: "vsGymLeaderSabrina",
+        unlockAreaId: "vsGymLeaderKoga",
         name: "Gym Leader Sabrina",
         badge: "Marsh Badge",
         badgeItemId: "gymBadgeSabrina",
@@ -206,7 +206,7 @@ const GYMS_LEADERS = [
         areaId: "vsGymLeaderBlaine",
         region: "kanto",
         order: 7,
-        unlockAreaId: "vsGymLeaderBlaine",
+        unlockAreaId: "vsGymLeaderSabrina",
         name: "Gym Leader Blaine",
         badge: "Volcano Badge",
         badgeItemId: "gymBadgeBlaine",
@@ -217,18 +217,18 @@ const GYMS_LEADERS = [
         description: "Especialista em Pokémon do tipo Fogo.",
 
         team: {
-            slot1 : pkmn.alakazam,
-            slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.dig.id],
-            slot2 : pkmn.snorlax,
-            slot2Moves : [move.amnesia.id, move.hyperBeam.id, move.iceBeam.id, move.thunderbolt.id],
-            slot3 : pkmn.mrmime,
-            slot3Moves : [move.thunderWave, move.confusion.id,move.futureSight.id, move.psybeam.id],
-            slot4 : pkmn.hypno,
-            slot4Moves : [move.amnesia.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
-            slot5 : pkmn.exeggutor,
-            slot5Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psybeam.id],
-            slot6 : pkmn.wigglytuff,
-            slot6Moves : [move.hyperVoice.id, move.iceBeam.id, move.moonblast.id, move.hyperBeam.id],
+            slot1 : pkmn.charizard,
+            slot1Moves : [move.flamethrower.id, move.firePunch.id, move.fireBlast.id, move.flareBlitz.id],
+            slot2 : pkmn.arcanine,
+            slot2Moves : [move.fireFang.id, move.fireSpin.id, move.flamethrower.id, move.flareBlitz.id],
+            slot3 : pkmn.rapidash,
+            slot3Moves : [move.overheat, move.heatWave.id,move.fireFang.id, move.flameCharge.id],
+            slot4 : pkmn.ninetales,
+            slot4Moves : [move.flamethrower.id, move.fireFang.id, move.fireBlast.id, move.fireSpin.id],
+            slot5 : pkmn.flareon,
+            slot5Moves : [move.fireBlast.id, move.fireFang.id, move.flameCharge.id, move.flamethrower.id],
+            slot6 : pkmn.magmar,
+            slot6Moves : [move.firePunch.id, move.flamethrower.id, move.fireBlast.id, move.blazeKick.id],
         },
 
         itemReward: {
@@ -237,16 +237,11 @@ const GYMS_LEADERS = [
         },
     },
 
-
-
-
-
-
-    {
+        {
         areaId: "vsGymLeaderGiovanni",
         region: "kanto",
         order: 8,
-        unlockAreaId: "vsGymLeaderGiovanni",
+        unlockAreaId: "vsGymLeaderBlaine",
         name: "Gym Leader Giovanni",
         badge: "Earth Badge",
         badgeItemId: "gymBadgeGiovanni",
@@ -257,18 +252,18 @@ const GYMS_LEADERS = [
         description: "Especialista em Pokémon do tipo Ground.",
 
         team: {
-            slot1 : pkmn.slaking,
-            slot1Moves : [move.bulkUp.id,move.gigaImpact.id, move.shadowPunch.id, move.extremeSpeed.id],
-            slot2 : pkmn.krookodile,
-            slot2Moves : [move.honeClaws.id, move.earthquake.id, move.nightSlash.id, move.sandstorm.id],
-            slot3 : pkmn.tyranitar,
-            slot3Moves : [move.earthquake.id, move.rockSlide.id, move.ironDefense.id, move.crunch.id],
-            slot4 : pkmn.megaKangaskhan,
-            slot4Moves : [move.powerupPunch.id, move.gigaImpact.id, move.closeCombat.id, move.thunderPunch.id],
-            slot5 : pkmn.hydreigon,
-            slot5Moves : [move.nastyPlot.id, move.dracoMeteor.id, move.darkPulse.id, move.toxic.id],
+            slot1 : pkmn.nidoking,
+            slot1Moves : [move.crossPoison.id,move.poisonClaw.id, move.sludgeWave.id, move.toxicThread.id],
+            slot2 : pkmn.golem,
+            slot2Moves : [move.highHorsepower.id, move.earthquake.id, move.magnitude.id, move.sandstorm.id],
+            slot3 : pkmn.nidoqueen,
+            slot3Moves : [move.toxicThread.id, move.venoshock.id, move.crossPoison.id, move.poisonClaw.id],
+            slot4 : pkmn.dugtrio,
+            slot4Moves : [move.dig.id, move.highHorsepower.id, move.bulldoze.id, move.earthquake.id],
+            slot5 : pkmn.rhydon,
+            slot5Moves : [move.rototiller.id, move.scorchingSands.id, move.earthPower.id, move.thunder.id],
             slot6 : pkmn.mewtwo,
-            slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.confuseRay.id],
+            slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.zenHeadbut.id],
         },
 
         itemReward: {
