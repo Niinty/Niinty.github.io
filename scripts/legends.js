@@ -725,6 +725,178 @@ const LEGENDS_LIST = [
         giveLevel: 1,
     },         
 
+    //Lendarios de Unova
+    {
+        id: "cobalion",
+        region: "unova",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "cave",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+                
+    {
+        id: "terrakion",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "mountain",
+        giveLevel: 1,
+    },
+                
+    {
+        id: "virizion",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "forest",
+        giveLevel: 1,
+    },
+                
+    {
+        id: "tornadus",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "sky",
+        giveLevel: 1,
+    },
+                
+    {
+        id: "thundurus",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "sky",
+        giveLevel: 1,
+    },
+                
+    {
+        id: "landorus",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "desert",
+        giveLevel: 1,
+    },
+                
+    {
+        id: "reshiram",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "cave", // Ou outro cenário imponente que combine com a Dragonspiral Tower / N's Castle
+        giveLevel: 1,
+    },
+                
+    {
+        id: "zekrom",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "cave", 
+        giveLevel: 1,
+    },
+                
+    {
+        id: "kyurem",
+        region: "unova",
+        unlockCost: 2,
+        windowMs: 72 * 60 * 60 * 1000,
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        battleLevel: 300,
+        difficulty: 600,
+        catchRate: 0.01,
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        background: "cave", // Referência à Giant Chasm
+        giveLevel: 1,
+    },
+
         
         
     // ── Exemplo de como adicionar o próximo ──────────────────────────────────
