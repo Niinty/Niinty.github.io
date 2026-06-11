@@ -705,17 +705,17 @@ function dropItem(){
     if (saved.currentArea == undefined) return
 
     if ((areas[saved.currentArea]?.type === "wild" || saved.currentArea === areas.wildlifePark?.id)){
-        if (rng(0.0015)) { item.pokeball.newItem++; item.pokeball.got++; saveGame(); }
-        if (rng(0.00015)) { item.greatball.newItem++; item.greatball.got++; saveGame(); }
-        if (rng(0.00007)) { item.ultraball.newItem++; item.ultraball.got++; saveGame(); }
-        if (rng(0.00001)) { item.masterball.newItem++; item.masterball.got++; saveGame(); }
+        if (rng(0.001)) { item.pokeball.newItem++; item.pokeball.got++; saveGame(); }
+        if (rng(0.0001)) { item.greatball.newItem++; item.greatball.got++; saveGame(); }
+        if (rng(0.00005)) { item.ultraball.newItem++; item.ultraball.got++; saveGame(); }
+        if (rng(0.000005)) { item.masterball.newItem++; item.masterball.got++; saveGame(); }
     }
 
     let drop;
     drop = arrayPick(areas[saved.currentArea].drops?.common).id
 
 
-    let rareDropChance = 0.03
+    let rareDropChance = 0.02
 
      for (const slot in team) {
 
@@ -734,7 +734,7 @@ function dropItem(){
 
     // A SUA NOVA CATEGORIA AQUI!
     // rng(0.01) significa 1% de chance de dropar. Você pode mudar para 0.005 (0.5%) etc.
-    if (areas[saved.currentArea].drops?.epic && rng(0.00015)) drop = arrayPick(areas[saved.currentArea].drops?.epic).id
+    if (areas[saved.currentArea].drops?.epic && rng(0.00005)) drop = arrayPick(areas[saved.currentArea].drops?.epic).id
 
     if (drop == undefined) return
     if (drop == "nothing") return
