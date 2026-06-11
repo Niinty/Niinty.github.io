@@ -858,7 +858,7 @@ item.whiteApricorn = {
 
 item.blackApricorn = {
     type: "key",
-    info: function() {return `Obtained in ★★★ and ★★★★ mega-dimension raids. Exchanged in the Poke-Mart`},
+    info: function() {return `Obtida durante suas aventuras e batalhas!`},
 }
 
 
