@@ -12991,7 +12991,7 @@ pkmn.larvesta = {
     spe: 60,
   },
   evolve: function() { return { 1: { pkmn: pkmn.volcarona, level: evolutionLevel3 } } },
-    signature : move.fieryDance
+  signature : move.fieryDance
 }
 
 pkmn.volcarona = {
@@ -13011,66 +13011,75 @@ pkmn.volcarona = {
 pkmn.cobalion = {
   type: ["steel","fighting"],
   bst: {
-    hp: 91,
-    atk: 90,
-    def: 129,
-    satk: 90,
-    sdef: 72,
-    spe: 108,
+    hp: 91*1.3,
+    atk: 90*1.3,
+    def: 129*1.3,
+    satk: 90*1.3,
+    sdef: 72*1.3,
+    spe: 108*1.3,
   },
     hiddenAbility: ability.fullMetalBody,
+    signature : move.gearUp,
+    lore: `Ele tem um corpo e um coração de aço. Trabalhou com seus aliados para punir pessoas quando elas machucavam Pokémon.`,
 }
 
 // 639 Terrakion
 pkmn.terrakion = {
   type: ["rock","fighting"],
   bst: {
-    hp: 91,
-    atk: 129,
-    def: 90,
-    satk: 72,
-    sdef: 90,
-    spe: 108,
+    hp: 91*1.3,
+    atk: 129*1.3,
+    def: 90*1.3,
+    satk: 72*1.3,
+    sdef: 90*1.3,
+    spe: 108*1.3,
   },
+    hiddenAbility: ability.stamina,
+    signature : move.rockWrecker,
+    lore: `Sua investida é forte o bastante para atravessar a muralha de um castelo gigantesco com um único golpe. Este Pokémon é mencionado em lendas.`,
 }
 
 // 640 Virizion
 pkmn.virizion = {
   type: ["grass","fighting"],
   bst: {
-    hp: 91,
-    atk: 90,
-    def: 72,
-    satk: 90,
-    sdef: 129,
-    spe: 108,
+    hp: 91*1.3,
+    atk: 90*1.3,
+    def: 72*1.3,
+    satk: 90*1.3,
+    sdef: 129*1.3,
+    spe: 108*1.3,
   },
     hiddenAbility: ability.stamina,
+    signature : move.drumBeating,
+    lore: `De sua cabeça brotam chifres afiados como lâminas. Usando movimentos semelhantes a redemoinhos, ele confunde os oponentes e os corta rapidamente.`,
 }
 
 // 641 Tornadus
 pkmn.tornadus = {
   type: ["flying"],
   bst: {
-    hp: 79,
-    atk: 115,
-    def: 70,
-    satk: 125,
-    sdef: 80,
-    spe: 111,
+    hp: 79*1.3,
+    atk: 115*1.3,
+    def: 70*1.3,
+    satk: 125*1.3,
+    sdef: 80*1.3,
+    spe: 111*1.3,
   },
     hiddenAbility: ability.climaTact,
+    signature : move.flyingPress,
+    lore: `Tornadus expele uma enorme quantidade de energia pela cauda, causando tempestades violentas. Seu poder é grande o suficiente para arrancar casas do chão e levá-las pelos ares.`,
 }
 
 pkmn.tornadusTherian = {
     type: ["flying"],
     bst: {
-        hp: 129,
-        atk: 100,
-        def: 80,
-        satk: 110,
-        sdef: 90,
-        spe: 121,
+        hp: 129*1.3,
+        atk: 100*1.3,
+        def: 80*1.3,
+        satk: 110*1.3,
+        sdef: 90*1.3,
+        spe: 121*1.3,
     }
 }
 
@@ -13078,25 +13087,27 @@ pkmn.tornadusTherian = {
 pkmn.thundurus = {
   type: ["electric","flying"],
   bst: {
-    hp: 79,
-    atk: 115,
-    def: 70,
-    satk: 125,
-    sdef: 80,
-    spe: 111,
+    hp: 79*1.3,
+    atk: 115*1.3,
+    def: 70*1.3,
+    satk: 125*1.3,
+    sdef: 80*1.3,
+    spe: 111*1.3,
   },
     hiddenAbility: ability.climaTact,
+    signature : move.zingZap,
+    lore: `Os espinhos em sua cauda descarregam imensos raios elétricos. Ele voa pela região de Unova disparando relâmpagos por onde passa.`,
 }
 
 pkmn.thundurusTherian = {
     type: ["electric","flying"],
     bst: {
-        hp: 129,
-        atk: 115,
-        def: 70,
-        satk: 145,
-        sdef: 80,
-        spe: 121,
+        hp: 129*1.3,
+        atk: 115*1.3,
+        def: 70*1.3,
+        satk: 145*1.3,
+        sdef: 80*1.3,
+        spe: 121*1.3,
     },
     hiddenAbility: ability.prankster,
 }
@@ -13105,26 +13116,27 @@ pkmn.thundurusTherian = {
 pkmn.landorus = {
   type: ["ground","flying"],
   bst: {
-    hp: 89,
-    atk: 125,
-    def: 90,
-    satk: 115,
-    sdef: 80,
-    spe: 101,
+    hp: 89*1.3,
+    atk: 125*1.3,
+    def: 90*1.3,
+    satk: 115*1.3,
+    sdef: 80*1.3,
+    spe: 101*1.3,
   },
     hiddenAbility: ability.climaTact,
-    signature : move.sandsearStorm
+    signature : move.sandsearStorm,
+    lore: `As terras visitadas por Landorus produzem colheitas tão abundantes que ele passou a ser reverenciado como o Guardião dos Campos.`,
 }
 
 pkmn.landorusTherian = {
     type: ["ground","flying"],
     bst: {
-        hp: 129,
-        atk: 145,
-        def: 90,
-        satk: 105,
-        sdef: 110,
-        spe: 91,
+        hp: 129*1.3,
+        atk: 145*1.3,
+        def: 90*1.3,
+        satk: 105*1.3,
+        sdef: 110*1.3,
+        spe: 91*1.3,
     }
 }
 
@@ -13165,7 +13177,9 @@ pkmn.reshiram = {
     sdef: 120*1.35,
     spe: 90*1.35,
   },
-    signature : move.blueFlare
+    hiddenAbility: ability.treasureOfRuin,
+    signature : move.blueFlare,
+    lore: `Quando a cauda de Reshiram entra em combustão, a energia térmica gerada movimenta a atmosfera e altera o clima do mundo.`,
 }
 
 // 644 Zekrom
@@ -13179,7 +13193,9 @@ pkmn.zekrom = {
     sdef: 100*1.35,
     spe: 90*1.35,
   },
-    signature : move.boltStrike
+    hiddenAbility: ability.treasureOfRuin,
+    signature : move.boltStrike,
+    lore: `Ocultando-se em nuvens de tempestade, ele voa por toda a região de Unova. Ele gera eletricidade em sua cauda.`,
 }
 
 
@@ -13195,7 +13211,8 @@ pkmn.kyurem = {
     spe: 95*1.35,
   },
     hiddenAbility: ability.glaciate,
-    signature : move.glaciate
+    signature : move.glaciate,
+    lore: `Este lendário Pokémon de gelo aguarda que um herói preencha as partes ausentes de seu corpo com a Verdade ou os Ideais.`,
 }
 
 pkmn.kyuremBlack = {
@@ -13207,7 +13224,10 @@ pkmn.kyuremBlack = {
         satk: 120*1.35,
         sdef: 90*1.35,
         spe: 110*1.35,
-    }
+    },
+    hiddenAbility: ability.glaciate,
+    signature : move.glaciate,
+    lore: `A semelhança entre os genes de Zekrom e Kyurem permitiu que Kyurem absorvesse Zekrom. Agora, Kyurem pode usar tanto o poder da eletricidade quanto o do gelo.`,
 }
 
 pkmn.kyuremWhite = {
@@ -13219,7 +13239,10 @@ pkmn.kyuremWhite = {
         satk: 180*1.35,
         sdef: 100*1.35,
         spe: 110*1.35,
-    }
+    },
+    hiddenAbility: ability.glaciate,
+    signature : move.glaciate,
+    lore: `A semelhança entre os genes de Reshiram e Kyurem permitiu que Kyurem absorvesse Reshiram. Agora, Kyurem pode usar tanto o poder do fogo quanto o do gelo.`,
 }
 
 // 647 Keldeo
