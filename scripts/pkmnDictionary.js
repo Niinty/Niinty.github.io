@@ -586,6 +586,7 @@ pkmn.spearow = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.fearow, level: evolutionLevel1 } } },
     hiddenAbility: ability.bigPecks,
+    lore: `Suas asas curtas o impedem de voar para longe. Ele se move rapidamente saltando pela grama alta em busca de insetos para se alimentar.`,
 }
 
 pkmn.fearow = {
@@ -599,6 +600,7 @@ pkmn.fearow = {
         spe: 100,
     },
     hiddenAbility: ability.bigPecks,
+    lore: `Desenhou asas grandes e fortes que o permitem voar o dia todo sem cansar. Ele usa seu longo bico para capturar presas no solo ou na água.`,
 }
 
 // 023 Ekans → Arbok
@@ -614,6 +616,7 @@ pkmn.ekans = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.arbok, level: evolutionLevel1 } } },
     hiddenAbility: ability.intimidate,
+    lore: `Ele se move silenciosamente pela grama para atacar suas presas por trás. Engole ovos de Pokémon passarinhos inteiros, um de cada vez.`,
 }
 
 pkmn.arbok = {
@@ -627,6 +630,7 @@ pkmn.arbok = {
         spe: 80,
     },
     hiddenAbility: ability.intimidate,
+    lore: `O padrão assustador em sua barriga serve para intimidar os inimigos. Ele prende suas vítimas apertando-as com seu corpo musculoso e injetando um veneno mortal.`,
 }
 
 // 025 Pichu → Pikachu → Raichu
@@ -642,7 +646,8 @@ pkmn.spikyPichu = {
         spe: 60,
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Uma variação rara de Pichu com uma mutação na orelha esquerda. Embora suas bochechas guardem pouca eletricidade, ele descarrega faíscas ao menor sinal de susto.`,
 }
 
 pkmn.pichu = {
@@ -657,7 +662,8 @@ pkmn.pichu = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.pikachu, level: evolutionLevel1 } } },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Ele ainda não é habilidoso em armazenar eletricidade. Quando se assusta ou ri, acaba liberando descargas elétricas acidentais pelas bochechas.`,
 }
 
 pkmn.pikachu = {
@@ -672,7 +678,8 @@ pkmn.pikachu = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.raichu, item: item.thunderStone } } },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Ele levanta sua cauda para vigiar os arredores. Às vezes, sua cauda é atingida por raios nessa posição, o que ajuda a recarregar sua energia elétrica.`,
 }
 
 pkmn.pikachuGmax = {
@@ -687,6 +694,7 @@ pkmn.pikachuGmax = {
     },
     signature : move.voltTackle,
     hiddenAbility: ability.electricSurge,
+    lore: `Quando esmaga seus oponentes com sua cauda em formato de raio, libera uma descarga de eletricidade equivalente a um raio da natureza.`
 }
 
 pkmn.pikachuAsh = {
@@ -700,7 +708,8 @@ pkmn.pikachuAsh = {
         spe: 90,
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Este Pikachu usa o boné de seu parceiro de longa data. A forte conexão entre os dois permitiu que ele ultrapassasse os limites comuns de sua espécie.`,
 }
 
 pkmn.pikachuWorld = {
@@ -714,7 +723,8 @@ pkmn.pikachuWorld = {
         spe: 90,
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Um Pikachu que viajou por diversas regiões ao lado de seu treinador, absorvendo a experiência de inúmeras batalhas ao redor do mundo.`,
 }
 
 pkmn.pikachuHoenn = {
@@ -728,21 +738,8 @@ pkmn.pikachuHoenn = {
         spe: 90,
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
-}
-
-pkmn.pikachuWorld = {
-    type: ["electric"],
-    bst: {
-        hp: 35,
-        atk: 55,
-        def: 40,
-        satk: 50,
-        sdef: 50,
-        spe: 90,
-    },
-    hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Ostentando um boné que remete às suas aventuras na ensolarada região de Hoenn, este Pokémon carrega o espírito de exploração em seu olhar.`,
 }
 
 pkmn.pikachuUnova = {
@@ -756,7 +753,8 @@ pkmn.pikachuUnova = {
         spe: 90,
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Este Pikachu usa o boné que marcou sua jornada pelas terras urbanas e misteriosas de Unova, mantendo suas bochechas elétricas sempre prontas para o combate.`,
 }
 
 pkmn.pikachuKalos = {
@@ -770,7 +768,8 @@ pkmn.pikachuKalos = {
         spe: 90,
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Relembrando a região onde o mistério da Mega Evolução foi desvendado, este Pikachu veste orgulhosamente o boné usado em suas andanças por Kalos.`,
 }
 
 pkmn.pikachuBelle = {
@@ -783,7 +782,8 @@ pkmn.pikachuBelle = {
         sdef: 80,
         spe: 110,
     },
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Vestida com um traje elegante e clássico de concurso, esta Pikachu encanta a todos com suas apresentações graciosas e golpes elétricos refinados.`,
 }
 
 pkmn.pikachuLibre = {
@@ -796,7 +796,8 @@ pkmn.pikachuLibre = {
         sdef: 80,
         spe: 110,
     },
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Uma lutadora destemida que usa roupas de lucha libre. Ela domina o ringue combinando velocidade elétrica com golpes de luta devastadores vindos do ar.`,
 }
 
 pkmn.pikachuPhd = {
@@ -809,7 +810,8 @@ pkmn.pikachuPhd = {
         sdef: 80,
         spe: 110,
     },
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Com seus óculos e jaleco de cientista, esta Pikachu estuda os mistérios da energia elétrica, usando sua mente brilhante para prever os movimentos dos oponentes.`,
 }
 
 pkmn.pikachuPopstar = {
@@ -822,7 +824,8 @@ pkmn.pikachuPopstar = {
         sdef: 80,
         spe: 110,
     },
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Uma verdadeira idol dos palcos. Seu figurino fofo e suas canções energéticas espalham alegria, eletrizando o público e os aliados durante as batalhas.`,
 }
 
 pkmn.pikachuRockstar = {
@@ -835,7 +838,8 @@ pkmn.pikachuRockstar = {
         sdef: 80,
         spe: 110,
     },
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Com uma jaqueta de couro cheia de atitude, este Pikachu traz a energia do rock'n'roll para o combate, transformando faíscas elétricas em riffs explosivos e escaldantes.`,
 }
 
 pkmn.raichu = {
@@ -848,14 +852,15 @@ pkmn.raichu = {
         sdef: 80,
         spe: 110,
     },
-        evolve: function() { 
+    evolve: function() { 
         return { 
             1: { pkmn: pkmn.megaRaichuX, item: item.raichutiteX }, 
             2: { pkmn: pkmn.megaRaichuY, item: item.raichutiteY },
         } 
     },
     hiddenAbility: ability.electricSurge,
-    signature : move.voltTackle
+    signature : move.voltTackle,
+    lore: `Se suas bolsas elétricas ficarem vazias, ele levanta a cauda para coletar eletricidade da atmosfera. Seu corpo brilha fracamente no escuro quando está totalmente carregado.`,
 }
 
 pkmn.alolanRaichu = {
@@ -870,6 +875,7 @@ pkmn.alolanRaichu = {
     },
     hiddenAbility: ability.electricSurge,
     signature : move.voltTackle,
+    lore: `Ele usa seus poderes psíquicos para concentrar eletricidade em sua cauda e flutuar sobre ela. Os cientistas locais ainda não sabem o motivo de sua mudança de forma em Alola.`,
 }
 
 pkmn.megaRaichuX = {
@@ -884,6 +890,7 @@ pkmn.megaRaichuX = {
     },
     hiddenAbility: ability.ambidextrous,
     signature : move.voltTackle,
+    lore: `A energia da Mega Evolução expandiu seu sistema nervoso. Ele consegue descarregar correntes elétricas brutais de ambas as patas dianteiras simultaneamente sem sofrer recuo.`,
 }
 
 pkmn.megaRaichuY = {
@@ -898,7 +905,10 @@ pkmn.megaRaichuY = {
     },
     hiddenAbility: ability.electricSurge,
     signature : move.voltTackle,
+    lore: `Sob o efeito da Mega Evolução, sua cauda age como um para-raios hipereficiente, transformando o campo de batalha em uma tempestade elétrica contínua e devastadora.`,
 }
+
+// 027 Sandshrew → Sandslash
 
 // 027 Sandshrew → Sandslash
 
@@ -914,7 +924,8 @@ pkmn.sandshrew = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.sandslash, level: evolutionLevel1 } } },
     hiddenAbility: ability.skillLink,
-    eggMove : move.boneRush
+    eggMove : move.boneRush,
+    lore: `Ele prefere viver em áreas arenosas e áridas. Quando se sente ameaçado, ele se enrola como uma bola para se proteger de ataques e rolar para longe.`,
 }
 pkmn.sandslash = {
     type: ["ground"],
@@ -927,9 +938,9 @@ pkmn.sandslash = {
         spe: 65,
     },
     hiddenAbility: ability.skillLink,
-    eggMove : move.boneRush
+    eggMove : move.boneRush,
+    lore: `Sua carapaça de espinhos o protege de predadores. Ele corre em alta velocidade pelas dunas e usa suas garras afiadas para cavar buracos profundos em segundos.`,
 }
-
 
 pkmn.alolanSandshrew = {
     type: ["ice", "steel"],
@@ -943,10 +954,9 @@ pkmn.alolanSandshrew = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.alolanSandslash, level: evolutionLevel1 } } },
     hiddenAbility: ability.slushRush,
-    signature : move.iceBall
+    signature : move.iceBall,
+    lore: `Sua pele mudou para uma carapaça de gelo duro como aço após migrar para montanhas nevadas. Ele desliza pelo gelo usando sua barriga lisa.`,
 }
-
-
 
 pkmn.alolanSandslash = {
     type: ["ice", "steel"],
@@ -959,7 +969,8 @@ pkmn.alolanSandslash = {
         spe: 65,
     },
     hiddenAbility: ability.slushRush,
-    signature : move.iceBall
+    signature : move.iceBall,
+    lore: `Os espinhos em suas costas são cobertos por uma camada espessa de gelo cortante. Ele abre caminho por nevascas severas usando suas garras gigantes de gelo.`,
 }
 
 // 029 Nidoran♀ → Nidorina → Nidoqueen
@@ -975,7 +986,8 @@ pkmn.nidoranF = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.nidorina, level: evolutionLevel1 } } },
     hiddenAbility: ability.sheerForce,
-    eggMove : move.poisonTail
+    eggMove : move.poisonTail,
+    lore: `Embora seja pequena e pacífica por natureza, suas pequenas farpas contêm um veneno perigoso. Ela reage agressivamente se for pisada acidentalmente.`,
 }
 
 pkmn.nidorina = {
@@ -990,7 +1002,8 @@ pkmn.nidorina = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.nidoqueen, item: item.moonStone } } },
     hiddenAbility: ability.sheerForce,
-    eggMove : move.poisonTail
+    eggMove : move.poisonTail,
+    lore: `Quando está com seus companheiros ou família, ela recolhe seus espinhos para não machucar ninguém. Ela fica nervosa rapidamente se for separada do grupo.`,
 }
 
 pkmn.nidoqueen = {
@@ -1004,7 +1017,8 @@ pkmn.nidoqueen = {
         spe: 76,
     },
     hiddenAbility: ability.sheerForce,
-    eggMove : move.poisonTail
+    eggMove : move.poisonTail,
+    lore: `Seu corpo robusto é protegido por escamas duras como rocha. Ela usa seu peso massivo para derrubar adversários e defende seus filhotes com a própria vida.`,
 }
 
 // 032 Nidoran♂ → Nidorino → Nidoking
@@ -1020,6 +1034,7 @@ pkmn.nidoranM = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.nidorino, level: evolutionLevel1 } } },
     hiddenAbility: ability.sheerForce,
+    lore: `Ele mexe suas grandes orelhas constantemente para ouvir ruídos distantes. O chifre em sua testa secreta um veneno potente ao menor impacto.`,
 }
 
 pkmn.nidorino = {
@@ -1034,6 +1049,7 @@ pkmn.nidorino = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.nidoking, item: item.moonStone } } },
     hiddenAbility: ability.sheerForce,
+    lore: `Tem uma personalidade irritadiça e violenta. Ele avança contra qualquer ameaça em potencial, perfurando o inimigo com seu chifre resistente para injetar toxinas.`,
 }
 
 pkmn.nidoking = {
@@ -1047,6 +1063,7 @@ pkmn.nidoking = {
         spe: 85,
     },
     hiddenAbility: ability.sheerForce,
+    lore: `Sua cauda poderosa tem força para quebrar uma torre de transmissão de energia. Uma vez que inicia um ataque furioso, nada consegue pará-lo até que o alvo seja esmagado.`,
 }
 
 // 035 Cleffa → Clefairy → Clefable
@@ -1062,7 +1079,8 @@ pkmn.cleffa = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.clefairy, level: evolutionLevel1 } } },
     hiddenAbility: ability.magicGuard,
-    eggMove : move.lunarDance
+    eggMove : move.lunarDance,
+    lore: `Devido ao seu formato estrelado, muitas pessoas acreditam que este Pokémon chegou à Terra pegando carona em um meteoro cadente durante a noite.`,
 }
 
 pkmn.clefairy = {
@@ -1077,7 +1095,8 @@ pkmn.clefairy = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.clefable, item: item.moonStone } } },
     hiddenAbility: ability.magicGuard,
-    eggMove : move.lunarDance
+    eggMove : move.lunarDance,
+    lore: `Sua aparência adorável o tornou um Pokémon muito popular. Eles se reúnem para dançar em noites de lua cheia, flutuando levemente pelo ar.`,
 }
 
 pkmn.clefable = {
@@ -1091,7 +1110,8 @@ pkmn.clefable = {
         spe: 60,
     },
     hiddenAbility: ability.magicGuard,
-    eggMove : move.lunarDance
+    eggMove : move.lunarDance,
+    lore: `Sua audição é extremamente aguçada, permitindo-lhe ouvir um alfinete caindo a quilômetros de distância. Por isso, prefere viver em montanhas silenciosas e isoladas.`,
 }
 
 pkmn.megaClefable = {
@@ -1105,7 +1125,8 @@ pkmn.megaClefable = {
         spe: 70*1.2,
     },
     hiddenAbility: ability.magicGuard,
-    eggMove : move.lunarDance
+    eggMove : move.lunarDance,
+    lore: `A energia oculta da Pedra da Lua transbordou através da Mega Evolução. Suas asas cresceram tanto que ele agora consegue voar diretamente em direção ao espaço sideral.`,
 }
 
 // 037 Vulpix → Ninetales
