@@ -7223,13 +7223,14 @@ pkmn.medicham = {
 pkmn.megaMedicham = {
     type: ["fighting","psychic"],
     bst: {
-        hp: 60,
-        atk: 160,
-        def: 85,
-        satk: 80,
-        sdef: 85,
-        spe: 100,
+        hp: 60*1.2,
+        atk: 160*1.2,
+        def: 85*1.2,
+        satk: 80*1.2,
+        sdef: 85*1.2,
+        spe: 100*1.2,
     },
+    hiddenAbility: ability.hugePower,
     signature : move.hiJumpKick
 }
 
