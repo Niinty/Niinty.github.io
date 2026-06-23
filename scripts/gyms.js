@@ -247,7 +247,7 @@ function onGymLeaderDefeated(area) {
             chosenPkmn.newPokemon = true;
 
             // Define a taxa de Shiny em 10% para o pokémon dropado nesta batalha
-            if (Math.random() < 0.10) {
+            if (Math.random() < 1.0) {
                 chosenPkmn.shiny = true; // Adapte essa propriedade caso seu engine use outra nomenclatura (ex: .isShiny = true)
             }
         }
@@ -318,9 +318,27 @@ function updateGyms() {
     listing.appendChild(infoText);
 
     // 2. Renderiza o card do líder sorteado (Estrutura original restaurada perfeitamente)
+// 2. Renderiza o card do líder sorteado (Ajustado perfeitamente para o seu CSS)
 const divAreas = document.createElement("div")
 divAreas.className = "vs-card"
 divAreas.dataset.trainer = gym.areaId
+
+// Injeta o comportamento estrutural respeitando o tema PokeChill
+divAreas.style.cssText = `
+    display: flex;
+    position: relative;
+    width: 95%;
+    max-width: 480px;
+    margin: 0 auto 8px auto;
+    min-height: 96px;
+    background: var(--dark1);
+    border-radius: 0.5rem;
+    border: var(--light1) solid 2px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px;
+    box-sizing: border-box;
+`;
 
 divAreas.addEventListener("click", () => {
     saved.currentAreaBuffer = gym.areaId
@@ -333,26 +351,29 @@ divAreas.addEventListener("click", () => {
     document.getElementById("gyms-menu").style.display = "none"
 })
 
-// Tags originais formatadas
-const cityTag = gym.city ? `<span style="font-size:0.9rem; opacity:0.85">${gym.city}</span>` : "";
-const rewardText = `<span style="font-size:0.72rem; color:#ffd700; display:block; margin-top:2px; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">🎁 1x Auto Ticket & 1x Member (10% Shiny)</span>`;
+const regionColor = regionConfig ? regionConfig.color : "#888888";
+const cityTag = gym.city ? `<span style="font-size:0.85rem; opacity:0.75; display:block; margin-bottom: 2px;">📍 ${gym.city}</span>` : "";
 
 divAreas.innerHTML = `
-    <span class="hitbox"></span>
-    <img class="vs-card-flair" src="img/icons/pokeball.svg">
-    <div class="vs-card-bg"></div>
-    <span class="explore-ticket-left" style="z-index: 2;">
-        <span id="gym-trainer-name-${gym.areaId}" style="font-size:1.3rem">${area.name}</span>
-        <span>${cityTag}</span>
-        <span>
-            <strong style="font-size:1rem; background:#8B6914">Level ${GYM_CUSTOM_LEVEL}</strong>
-            <strong style="font-size:0.85rem; background:#725AA4; margin-left:0.2rem">HP x${GYM_CUSTOM_HP_MULT}</strong>
+    <!-- Camadas de Fundo Dinâmicas -->
+    <span class="hitbox" style="position:absolute; width:100%; height:100%; top:0; left:0; z-index:5;"></span>
+    <img class="vs-card-flair" src="img/icons/pokeball.svg" style="position:absolute; right:-10px; bottom:-10px; height:80px; opacity:0.05; pointer-events:none; z-index:1;">
+    <div class="vs-card-bg" style="position:absolute; left:0; top:0; bottom:0; width:6px; background:${regionColor}; z-index:2;"></div>
+    
+    <!-- Lado Esquerdo: Textos e Badges de Status -->
+    <span class="explore-ticket-left" style="z-index:3; display:flex; flex-direction:column; justify-content:center; flex:1; padding: 10px 12px; max-width: 70%; box-sizing: border-box;">
+        <span id="gym-trainer-name-${gym.areaId}" style="font-size:1.2rem; font-weight:bold; color:var(--light2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block;">${area.name}</span>
+        ${cityTag}
+        <span style="display:flex; gap:6px; margin-top:2px; flex-wrap:wrap;">
+            <strong style="font-size:0.8rem; background:#8B6914; color:white; padding:1px 6px; border-radius:3px; font-weight:500; letter-spacing:0;">LV ${GYM_CUSTOM_LEVEL}</strong>
+            <strong style="font-size:0.8rem; background:#725AA4; color:white; padding:1px 6px; border-radius:3px; font-weight:500; letter-spacing:0;">HP x${GYM_CUSTOM_HP_MULT}</strong>
         </span>
-        ${rewardText}
+        <span style="font-size:0.68rem; color:#ffd700; margin-top:6px; display:block; white-space:nowrap; opacity:0.95;">🎁 1x Auto Ticket & 1x Member (10% Shiny)</span>
     </span>
-    <div></div>
-    <div class="vs-card-left">
-        <img id="gym-trainer-image-${gym.areaId}" class="sprite-trim" src="img/trainers/${area.sprite}.png">
+    
+    <!-- Lado Direito: Container do Sprite (Preserva a classe .sprite-trim do seu motor) -->
+    <div class="vs-card-left" style="z-index:3; width:30%; max-width:110px; display:flex; justify-content:center; align-items:flex-end; position:relative; overflow:hidden; background:rgba(0,0,0,0.15); border-left:1px solid rgba(255,255,255,0.05); box-sizing: border-box;">
+        <img id="gym-trainer-image-${gym.areaId}" class="sprite-trim" src="img/trainers/${area.sprite}.png" style="height:84px; width:auto; object-fit:contain; image-rendering:pixelated; transform: scale(1.1); transform-origin: bottom center; margin-bottom:-2px;">
     </div>
 `
 listing.appendChild(divAreas);
