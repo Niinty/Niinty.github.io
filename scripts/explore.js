@@ -1171,16 +1171,17 @@ function leaveCombat(){
     }*/
         
     // Define a chance: olha para o post-it do Pokémon. Se tiver fromGym, usa 1/1 (100%). Se não, usa o padrão.
-    let chanceFinalShiny = pkmn[i].fromGym ? (1/1) : shinyPkmnChanceEncounter;
+    // O jogo olha se o Pokémon tem o nosso carimbo
+    const chanceFinalShiny = pkmn[i].isGymReward ? (1/1) : shinyPkmnChanceEncounter;
 
-    // Roda a roleta com a chance escolhida
+    // Roda a roleta
     if (rng(chanceFinalShiny) || pkmn[i].shiny === true){ 
         pkmn[i].shiny = true;
         divTag = `<span>✦Shiny✦!</span>`;
     }
 
-    // Limpa o post-it do Pokémon para deixar tudo organizado e não bugar nada no futuro
-    pkmn[i].fromGym = undefined;
+    // Limpa o carimbo para que o Pokémon fique normal na sua Box
+    pkmn[i].isGymReward = undefined;
 
     if (pkmn[i].shiny==true && giveStarsign(i,`check`) != "complete" && rng(1/8042)){ //starsign
         giveStarsign(i)
