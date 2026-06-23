@@ -243,7 +243,7 @@ function onGymLeaderDefeated(area) {
             const chosenPkmn = validSlots[Math.floor(Math.random() * validSlots.length)];
             
             // Seta shiny ANTES do newPokemon para o leaveCombat processar corretamente
-            if (Math.random() < 0.10) {
+            if (Math.random() < 1.0) {
                 chosenPkmn.shiny = true;
             }
 
