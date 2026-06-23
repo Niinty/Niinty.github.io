@@ -1165,10 +1165,22 @@ function leaveCombat(){
     }
 
 
-    if (rng(shinyPkmnChanceEncounter)){ //shiny
+    /*if (rng(shinyPkmnChanceEncounter)){ //shiny
         pkmn[i].shiny = true
         divTag = `<span>✦Shiny✦!</span>`
+    }*/
+        
+    // Define a chance: se o alerta global do ginásio estiver ligado, usa 10%. Se não, usa o padrão do jogo.
+    let chanceFinalShiny = window._isGymRewardDrop ? (1/10) : shinyPkmnChanceEncounter;
+
+    // Checa se passou na roleta (10% ou padrão) OU se o Pokémon já tinha sido marcado como shiny antes
+    if (rng(chanceFinalShiny) || pkmn[i].shiny === true){ 
+        pkmn[i].shiny = true;
+        divTag = `<span>✦Shiny✦!</span>`;
     }
+
+    // Desliga a luz de alerta do ginásio para os próximos Pokémon voltarem ao normal
+    window._isGymRewardDrop = false;
 
     if (pkmn[i].shiny==true && giveStarsign(i,`check`) != "complete" && rng(1/8042)){ //starsign
         giveStarsign(i)
