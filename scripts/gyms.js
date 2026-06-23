@@ -320,11 +320,12 @@ function updateGyms() {
     // 2. Renderiza o card do líder sorteado (Estrutura original restaurada perfeitamente)
 // 2. Renderiza o card do líder sorteado (Ajustado perfeitamente para o seu CSS)
 // 2. Renderiza o card do líder sorteado (Blindado contra sprites gigantes)
+// 2. Renderiza o card do líder sorteado (Corrigido com integração de Shiny)
 const divAreas = document.createElement("div")
 divAreas.className = "vs-card"
 divAreas.dataset.trainer = gym.areaId
 
-// Estrutura principal com altura um pouco maior para acomodar melhor os textos
+// Estrutura principal blindada contra quebras de layout
 divAreas.style.cssText = `
     display: flex;
     position: relative;
@@ -343,6 +344,14 @@ divAreas.style.cssText = `
 
 divAreas.addEventListener("click", () => {
     saved.currentAreaBuffer = gym.areaId
+    
+    // Se o seu jogo gera o Pokémon do líder ou a recompensa no momento do clique,
+    // nós ativamos a flag aqui. Caso você tenha uma função específica de vitória (Ex: winGym),
+    // mova a linha abaixo para dentro dela antes de chamar o givePkmn().
+    if (typeof gym.rewardPokemon === 'object') {
+        gym.rewardPokemon.fromGym = true; 
+    }
+
     document.getElementById("preview-team-exit").style.display = "flex"
     document.getElementById("team-menu").style.zIndex = "50"
     document.getElementById("team-menu").style.display = "flex"
@@ -361,7 +370,7 @@ divAreas.innerHTML = `
     <img class="vs-card-flair" src="img/icons/pokeball.svg" style="position:absolute; right:-10px; bottom:-10px; height:80px; opacity:0.05; pointer-events:none; z-index:1;">
     <div class="vs-card-bg" style="position:absolute; left:0; top:0; bottom:0; width:6px; background:${regionColor}; z-index:2;"></div>
     
-    <!-- Lado Esquerdo: Textos (Garante 65% do espaço e não deixa o sprite empurrar) -->
+    <!-- Lado Esquerdo: Textos (Protegido em 65% da largura) -->
     <span class="explore-ticket-left" style="z-index:3; display:flex; flex-direction:column; justify-content:center; width: 65%; padding: 10px 12px; box-sizing: border-box;">
         <span id="gym-trainer-name-${gym.areaId}" style="font-size:1.2rem; font-weight:bold; color:var(--light2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block;">${area.name}</span>
         ${cityTag}
@@ -369,9 +378,10 @@ divAreas.innerHTML = `
             <strong style="font-size:0.8rem; background:#8B6914; color:white; padding:2px 6px; border-radius:3px; font-weight:500; letter-spacing:0;">LV ${GYM_CUSTOM_LEVEL}</strong>
             <strong style="font-size:0.8rem; background:#725AA4; color:white; padding:2px 6px; border-radius:3px; font-weight:500; letter-spacing:0;">HP x${GYM_CUSTOM_HP_MULT}</strong>
         </span>
+        <span style="font-size:0.68rem; color:#ffd700; margin-top:8px; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; opacity:0.95;">🎁 1x Auto Ticket & 1x Member (10% Shiny)</span>
     </span>
     
-    <!-- Lado Direito: Container do Sprite (Garante exatamente 35% do espaço) -->
+    <!-- Lado Direito: Container do Sprite (Fixado em 35% com contenção de tamanho) -->
     <div class="vs-card-left" style="z-index:3; width:35%; display:flex; justify-content:center; align-items:center; position:relative; overflow:hidden; background:rgba(0,0,0,0.15); border-left:1px solid rgba(255,255,255,0.05); box-sizing: border-box;">
         <img id="gym-trainer-image-${gym.areaId}" class="sprite-trim" src="img/trainers/${area.sprite}.png" style="max-height:100%; max-width:100%; width:auto; height:auto; object-fit:contain; image-rendering:pixelated;">
     </div>
