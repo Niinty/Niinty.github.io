@@ -239,17 +239,16 @@ function onGymLeaderDefeated(area) {
             }
         }
 
-        if (validSlots.length > 0) {
-            // Escolhe um Pokémon aleatório do time dele
+            if (validSlots.length > 0) {
             const chosenPkmn = validSlots[Math.floor(Math.random() * validSlots.length)];
             
-            chosenPkmn.caught++;
-            chosenPkmn.newPokemon = true;
-
-            // Define a taxa de Shiny em 10% para o pokémon dropado nesta batalha
+            // Seta shiny ANTES do newPokemon para o leaveCombat processar corretamente
             if (Math.random() < 0.10) {
-                chosenPkmn.shiny = true; // Adapte essa propriedade caso seu engine use outra nomenclatura (ex: .isShiny = true)
+                chosenPkmn.shiny = true;
             }
+
+            // NÃO faz caught++ aqui — o leaveCombat já faz ao processar newPokemon
+            chosenPkmn.newPokemon = true;
         }
     }
 
