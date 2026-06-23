@@ -207,15 +207,20 @@ function givePkmn(poke, level) {
 
     poke.ability = learnPkmnAbility(poke.id);
 
-    const shinyChance = poke.fromGym ? (1/1) : (1/4096);
+    // Checa se o post-it veio no Pokémon OU se o alerta global de ginásio está ligado
+    const isGymReward = poke.fromGym || window._isGymRewardDrop;
+    
+    // Se for recompensa de ginásio, usa 10% (1/10). Senão, usa 1/4096.
+    // (Para testar se está funcionando, coloque 1/1 no lugar de 1/10 para ser 100%)
+    const shinyChance = isGymReward ? (1/10) : (1/4096);
 
     if (rng(shinyChance)) {
         poke.shiny = true;
     }
+
+    // DESLIGA O ALERTA para que os próximos Pokémons selvagens não venham com 10%
+    window._isGymRewardDrop = false; 
     
-    //if (rng(1/4096)) poke.shiny = true
-
-
     updatePokedex();
 }
 
