@@ -350,7 +350,6 @@ function updateGyms() {
                 <strong style="font-size:1rem; background:#8B6914">Level ${GYM_CUSTOM_LEVEL}</strong>
                 <strong style="font-size:0.85rem; background:#725AA4; margin-left:0.2rem">HP x${GYM_CUSTOM_HP_MULT}</strong>
             </span>
-            <span style="font-size:0.75rem; color:#ffd700; margin-top:4px;">🎁 Rewards: 1x Auto Ticket & 1x Member (10% Shiny)</span>
         </span>
         <div></div>
         <div class="vs-card-left">
