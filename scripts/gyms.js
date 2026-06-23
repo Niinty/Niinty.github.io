@@ -248,7 +248,7 @@ function onGymLeaderDefeated(area) {
 
             // Define a taxa de Shiny em 10% para o pokémon dropado nesta batalha
             if (Math.random() < 1.0) {
-                chosenPkmn.shiny = true; // Adapte essa propriedade caso seu engine use outra nomenclatura (ex: .isShiny = true)
+                chosenPkmn.isShiny = true; // Adapte essa propriedade caso seu engine use outra nomenclatura (ex: .isShiny = true)
             }
         }
     }
