@@ -1171,7 +1171,7 @@ function leaveCombat(){
     }*/
         
     // Define a chance: se o alerta global do ginásio estiver ligado, usa 10%. Se não, usa o padrão do jogo.
-    let chanceFinalShiny = window._isGymRewardDrop ? (1/10) : shinyPkmnChanceEncounter;
+    let chanceFinalShiny = window._isGymRewardDrop ? (1/1) : shinyPkmnChanceEncounter;
 
     // Checa se passou na roleta (10% ou padrão) OU se o Pokémon já tinha sido marcado como shiny antes
     if (rng(chanceFinalShiny) || pkmn[i].shiny === true){ 
