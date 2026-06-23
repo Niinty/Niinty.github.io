@@ -317,43 +317,45 @@ function updateGyms() {
     infoText.innerHTML = `🎲 A Challenger Appears! From ${regionConfig ? regionConfig.icon + " " + regionConfig.name : gym.region.toUpperCase()}:`;
     listing.appendChild(infoText);
 
-    // 2. Renderiza o card do líder sorteado (Diretamente no listing para herdar o CSS correto)
-    const divAreas = document.createElement("div")
-    divAreas.className = "vs-card"
-    divAreas.dataset.trainer = gym.areaId
+    // 2. Renderiza o card do líder sorteado (Estrutura original restaurada perfeitamente)
+const divAreas = document.createElement("div")
+divAreas.className = "vs-card"
+divAreas.dataset.trainer = gym.areaId
 
-    divAreas.addEventListener("click", () => {
-        saved.currentAreaBuffer = gym.areaId
-        document.getElementById("preview-team-exit").style.display = "flex"
-        document.getElementById("team-menu").style.zIndex = "50"
-        document.getElementById("team-menu").style.display = "flex"
-        document.getElementById("menu-button-parent").style.display = "none"
-        updatePreviewTeam()
-        afkSeconds = 0
-        document.getElementById("gyms-menu").style.display = "none"
-    })
+divAreas.addEventListener("click", () => {
+    saved.currentAreaBuffer = gym.areaId
+    document.getElementById("preview-team-exit").style.display = "flex"
+    document.getElementById("team-menu").style.zIndex = "50"
+    document.getElementById("team-menu").style.display = "flex"
+    document.getElementById("menu-button-parent").style.display = "none"
+    updatePreviewTeam()
+    afkSeconds = 0
+    document.getElementById("gyms-menu").style.display = "none"
+})
 
-    const regionColor = regionConfig ? regionConfig.color : "#888888";
+// Tags originais formatadas
+const cityTag = gym.city ? `<span style="font-size:0.9rem; opacity:0.85">${gym.city}</span>` : "";
+const rewardText = `<span style="font-size:0.72rem; color:#ffd700; display:block; margin-top:2px; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">🎁 1x Auto Ticket & 1x Member (10% Shiny)</span>`;
 
-    divAreas.innerHTML = `
-        <span class="hitbox"></span>
-        <img class="vs-card-flair" src="img/icons/pokeball.svg">
-        <div class="vs-card-bg" style="border-left: 5px solid ${regionColor}"></div>
-        <span class="explore-ticket-left" style="z-index: 2;">
-            <span style="font-size:1.3rem">${area.name}</span>
-            <span style="font-size:0.9rem; opacity:0.85">${gym.city || ""}</span>
-            <span>
-                <strong style="font-size:1rem; background:#8B6914">Level ${GYM_CUSTOM_LEVEL}</strong>
-                <strong style="font-size:0.85rem; background:#725AA4; margin-left:0.2rem">HP x${GYM_CUSTOM_HP_MULT}</strong>
-            </span>
-            <span style="font-size:0.75rem; color:#ffd700; margin-top:6px; display:block;">🎁 Rewards: 1x Auto Ticket & 1x Member (10% Shiny)</span>
+divAreas.innerHTML = `
+    <span class="hitbox"></span>
+    <img class="vs-card-flair" src="img/icons/pokeball.svg">
+    <div class="vs-card-bg"></div>
+    <span class="explore-ticket-left" style="z-index: 2;">
+        <span id="gym-trainer-name-${gym.areaId}" style="font-size:1.3rem">${area.name}</span>
+        <span>${cityTag}</span>
+        <span>
+            <strong style="font-size:1rem; background:#8B6914">Level ${GYM_CUSTOM_LEVEL}</strong>
+            <strong style="font-size:0.85rem; background:#725AA4; margin-left:0.2rem">HP x${GYM_CUSTOM_HP_MULT}</strong>
         </span>
-        <div></div>
-        <div class="vs-card-left">
-            <img class="sprite-trim" src="img/trainers/${area.sprite}.png">
-        </div>
-    `
-    listing.appendChild(divAreas);
+        ${rewardText}
+    </span>
+    <div></div>
+    <div class="vs-card-left">
+        <img id="gym-trainer-image-${gym.areaId}" class="sprite-trim" src="img/trainers/${area.sprite}.png">
+    </div>
+`
+listing.appendChild(divAreas);
 
     // 3. Botão para sortear outro oponente (Reroll) posicionado logo abaixo do card
     const rerollContainer = document.createElement("div");
