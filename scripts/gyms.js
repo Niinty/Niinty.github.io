@@ -195,7 +195,7 @@ const GYMS_LEADERS = [
             slot5 : pkmn.rhydon, slot5Moves : [move.rototiller.id, move.scorchingSands.id, move.earthPower.id, move.thunder.id],
             slot6 : pkmn.mewtwo, slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.zenHeadbut.id],
         },
-    }
+    },
 
     //Johto
     {
@@ -212,7 +212,7 @@ const GYMS_LEADERS = [
         team: {
             slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
             slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
-        }
+        },
     },
 ]
 
