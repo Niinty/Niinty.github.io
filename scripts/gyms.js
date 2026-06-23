@@ -239,13 +239,12 @@ function onGymLeaderDefeated(area) {
             }
         }
 
-            if (validSlots.length > 0) {
+        if (validSlots.length > 0) {
             const chosenPkmn = validSlots[Math.floor(Math.random() * validSlots.length)];
             
-            // Seta shiny ANTES do newPokemon para o leaveCombat processar corretamente
-            if (Math.random() < 1.0) {
-                chosenPkmn.shiny = true;
-            }
+            // A MÁGICA ACONTECE AQUI:
+            // Avisa a função givePkmn (no explore.js) que este Pokémon veio do ginásio
+            chosenPkmn.fromGym = true;
 
             // NÃO faz caught++ aqui — o leaveCombat já faz ao processar newPokemon
             chosenPkmn.newPokemon = true;
