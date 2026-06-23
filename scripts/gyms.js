@@ -467,197 +467,182 @@ function isGymLeaderUnlocked(gym) {
     return prev && prev.defeated === true
 }
 
-/** Monta o menu Ginásios — mostra regiões ou líderes da região selecionada */
-function updateGyms(regionId) {
-    const listing = document.getElementById("gyms-listing")
-    if (!listing) return
+/** 
+ * MODO SORTEIO — sorteia um líder aleatório de todos os disponíveis.
+ * Novo sorteio a cada vez que o jogador volta ao menu.
+ * Drop: ticket de auto-refight + pokémon aleatório do time (chance de 10% shiny).
+ */
 
-    listing.innerHTML = ""
-    document.getElementById("gyms-menu-header").style.backgroundImage = "url(img/bg/gym.png)"
+// ── Configuração do sorteio ───────────────────────────────────────────────
+const GYM_SORTEIO_DIFFICULTY    = 200;  // ← ajuste aqui: 25/70/200/600
+const GYM_SORTEIO_LEVEL         = 200;  // ← nível do time do líder sorteado
+const GYM_SORTEIO_SHINY_CHANCE  = 0.10; // ← 10% de chance de pokémon shiny
 
-    // Se não há região selecionada, mostra a tela de seleção de regiões
-    if (!regionId && !_gymsCurrentRegion) {
-        _renderGymsRegions(listing)
-        return
-    }
+// Estado interno
+var _gymSorteioAtual = null; // líder sorteado atualmente
 
-    const activeRegion = regionId || _gymsCurrentRegion
-    _gymsCurrentRegion = activeRegion
-    _renderGymsLeaders(listing, activeRegion)
+/** Sorteia um líder aleatório entre todos os disponíveis */
+function _sortearGymLeader() {
+    const disponiveis = GYMS_LEADERS.filter(function(g) {
+        return areas[g.areaId] !== undefined || g.team !== undefined;
+    });
+    if (disponiveis.length === 0) return null;
+    return disponiveis[Math.floor(Math.random() * disponiveis.length)];
 }
 
-function _renderGymsRegions(listing) {
-    // Botão de voltar não necessário aqui — é a tela inicial
-    const header = document.getElementById("gyms-menu-header")
+/** Pega um pokémon aleatório do time do líder */
+function _getPkmnAleatorioDoTime(gym) {
+    const area = areas[gym.areaId];
+    const team = gym.team || (area && area.team);
+    if (!team) return null;
 
-    const regionGrid = document.createElement("div")
-    regionGrid.style.cssText = "display:flex; flex-direction:column; gap:8px; padding:8px"
-
-    GYM_REGIONS.forEach(function(region) {
-        const leadersInRegion = GYMS_LEADERS.filter(function(g) { return g.region === region.id; })
-        const total = leadersInRegion.length
-        if (total === 0) return // Não mostra regiões sem líderes cadastrados
-
-        const defeated = leadersInRegion.filter(function(g) {
-            return areas[g.areaId] && areas[g.areaId].defeated
-        }).length
-
-        const card = document.createElement("div")
-        card.style.cssText = [
-            "display:flex; align-items:center; gap:12px; padding:12px 14px;",
-            "border-radius:10px; border:1px solid rgba(255,255,255,0.08);",
-            "background:rgba(255,255,255,0.03); cursor:pointer;",
-            "border-left:3px solid " + region.color + ";",
-            "transition:background 0.15s, transform 0.1s;"
-        ].join("")
-
-        card.onmouseover = function() { this.style.background = "rgba(255,255,255,0.07)"; this.style.transform = "translateX(2px)"; }
-        card.onmouseout  = function() { this.style.background = "rgba(255,255,255,0.03)"; this.style.transform = ""; }
-        card.onclick     = function() { updateGyms(region.id); }
-
-        card.innerHTML = [
-            '<span style="font-size:1.4rem;width:32px;text-align:center;flex-shrink:0">' + region.icon + '</span>',
-            '<div style="flex:1;display:flex;flex-direction:column;gap:2px">',
-                '<span style="font-size:0.95rem;font-weight:700;color:var(--light1,#e8ddd0)">' + region.name + '</span>',
-                '<span style="font-size:0.72rem;color:var(--light2,#b0a898);opacity:0.8">' + defeated + ' / ' + total + ' leaders defeated</span>',
-            '</div>',
-            '<span style="color:var(--light2,#b0a898);font-size:1.2rem;opacity:0.5">›</span>',
-        ].join("")
-
-        regionGrid.appendChild(card)
-    })
-
-    listing.appendChild(regionGrid)
+    const slots = [];
+    for (let i = 1; i <= 6; i++) {
+        const p = team['slot' + i];
+        if (p && p.id) slots.push(p.id);
+    }
+    if (slots.length === 0) return null;
+    return slots[Math.floor(Math.random() * slots.length)];
 }
 
-function _renderGymsLeaders(listing, regionId) {
-    const regionConfig = GYM_REGIONS.find(function(r) { return r.id === regionId; })
-    const regionName   = regionConfig ? regionConfig.name : regionId
+/** Monta o menu Ginásios — mostra o líder sorteado */
+function updateGyms() {
+    const listing = document.getElementById("gyms-listing");
+    if (!listing) return;
 
-    // Botão de voltar
-    const backBtn = document.createElement("div")
-    backBtn.style.cssText = "display:flex;align-items:center;gap:8px;padding:8px 8px 4px;cursor:pointer;opacity:0.7"
-    backBtn.onmouseover = function() { this.style.opacity = "1"; }
-    backBtn.onmouseout  = function() { this.style.opacity = "0.7"; }
-    backBtn.onclick = function() { _gymsCurrentRegion = null; updateGyms(); }
-    backBtn.innerHTML = '<span style="font-size:1.1rem">‹</span><span style="font-size:0.85rem">All Regions</span>'
-    listing.appendChild(backBtn)
+    listing.innerHTML = "";
+    document.getElementById("gyms-menu-header").style.backgroundImage = "url(img/bg/gym.png)";
 
-    // Filtra líderes da região
-    const filtered = GYMS_LEADERS.filter(function(g) { return g.region === regionId; })
+    // Sorteia novo líder a cada vez que o menu abre
+    _gymSorteioAtual = _sortearGymLeader();
 
-    if (filtered.length === 0) {
-        listing.innerHTML += '<div style="text-align:center;padding:20px;opacity:0.6">No gym leaders in this region yet.</div>'
-        return
+    if (!_gymSorteioAtual) {
+        listing.innerHTML = '<div style="text-align:center;padding:20px;opacity:0.6">No gym leaders available.</div>';
+        return;
     }
 
-    const sorted = filtered.sort(function(a, b) { return a.order - b.order; })
-    let anyListed = false
+    const gym  = _gymSorteioAtual;
+    const area = areas[gym.areaId];
+    const team = gym.team || (area && area.team);
 
-    for (const gym of sorted) {
-        const area = areas[gym.areaId]
-        if (!area) continue
+    // Monta preview do time
+    var teamHTML = '';
+    if (team) {
+        teamHTML = '<div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px">';
+        for (let i = 1; i <= 6; i++) {
+            const p = team['slot' + i];
+            if (p && p.id) {
+                teamHTML += '<img src="img/pkmn/sprite/' + p.id + '.png" ' +
+                    'style="width:40px;height:40px;image-rendering:pixelated" ' +
+                    'onerror="this.style.display='none'">';
+            }
+        }
+        teamHTML += '</div>';
+    }
 
-        const unlocked = isGymLeaderUnlocked(gym)
-        if (!unlocked) continue
+    // Pokémon que pode dropar
+    const pkmnDrop = _getPkmnAleatorioDoTime(gym);
+    const pkmnDropName = pkmnDrop ? format(pkmnDrop) : '?';
+    const dropHTML = pkmnDrop
+        ? '<div style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:0.8rem;opacity:0.85">' +
+              '<img src="img/pkmn/sprite/' + pkmnDrop + '.png" style="width:28px;height:28px;image-rendering:pixelated">' +
+              '<span>' + pkmnDropName + ' <span style="opacity:0.6">(' + (GYM_SORTEIO_SHINY_CHANCE * 100) + '% shiny)</span></span>' +
+              '<img src="img/items/autoRefightTicket.png" style="width:22px;height:22px;image-rendering:pixelated;margin-left:6px">' +
+              '<span style="opacity:0.6">Auto-Refight Ticket</span>' +
+          '</div>'
+        : '';
 
-        anyListed = true
-        const effectiveLevel = getGymEffectiveLevel(area)
-        const defeats = getGymDefeatCount(area)
-        const rematchTag = area.defeated
-            ? `<strong style="font-size:0.8rem; background:#4a6741; margin-left:0.2rem">Rematch ×${defeats}</strong>`
-            : ""
+    const card = document.createElement("div");
+    card.className = "vs-card";
+    card.style.cursor = "pointer";
+    card.innerHTML = `
+        <span class="hitbox"></span>
+        <img class="vs-card-flair" src="img/icons/pokeball.svg">
+        <div class="vs-card-bg"></div>
+        <span class="explore-ticket-left" style="z-index:2;">
+            <span style="font-size:1.3rem">${gym.name || 'Gym Leader'}</span>
+            <span style="font-size:0.9rem;opacity:0.85">${gym.city || ''}</span>
+            <span>
+                <strong style="font-size:1rem;background:#8B6914">Level ${GYM_SORTEIO_LEVEL}</strong>
+                ${gym.badge ? '<strong style="font-size:0.85rem;background:#8B6914;margin-left:0.2rem">' + gym.badge + '</strong>' : ''}
+            </span>
+            ${teamHTML}
+            <div style="margin-top:4px;font-size:0.75rem;opacity:0.7">⚔ Drops:</div>
+            ${dropHTML}
+        </span>
+        <div></div>
+        <div class="vs-card-left">
+            <img class="sprite-trim" src="img/trainers/${gym.sprite || 'brock'}.png">
+        </div>
+    `;
 
-        const divAreas = document.createElement("div")
-        divAreas.className = "vs-card"
-        divAreas.dataset.trainer = gym.areaId
+    card.addEventListener("click", function() {
+        _entrarGymSorteio(gym);
+    });
 
-        divAreas.addEventListener("click", () => {
-            saved.currentAreaBuffer = gym.areaId
-            document.getElementById("preview-team-exit").style.display = "flex"
-            document.getElementById("team-menu").style.zIndex = "50"
-            document.getElementById("team-menu").style.display = "flex"
-            document.getElementById("menu-button-parent").style.display = "none"
-            updatePreviewTeam()
-            afkSeconds = 0
-            document.getElementById("gyms-menu").style.display = "none"
-        })
+    listing.appendChild(card);
 
-        let nameTag = ""
-        if (area.encounterEffect && !area.defeated) {
-            nameTag = `<svg class="event-icon" style="color:#8B6914" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.795 2h-2c-1.886 0-2.829 0-3.414.586c-.586.586-.586 1.528-.586 3.414v3.5h10V6c0-1.886 0-2.828-.586-3.414S14.681 2 12.795 2" opacity="0.5"/><path fill="currentColor" fill-rule="evenodd" d="M13.23 5.783a3 3 0 0 0-2.872 0L5.564 8.397A3 3 0 0 0 4 11.031v4.938a3 3 0 0 0 1.564 2.634l4.794 2.614a3 3 0 0 0 2.872 0l4.795-2.614a3 3 0 0 0 1.564-2.634V11.03a3 3 0 0 0-1.564-2.634zM11.794 10.5c-.284 0-.474.34-.854 1.023l-.098.176c-.108.194-.162.29-.246.354s-.19.088-.399.135l-.19.044c-.739.167-1.108.25-1.195.532c-.088.283.163.577.666 1.165l.13.152c.144.167.215.25.247.354s.022.215 0 .438l-.02.203c-.076.785-.114 1.178.116 1.352s.575.015 1.266-.303l.179-.082c.196-.09.294-.135.398-.135s.203.045.399.135l.179.082c.69.319 1.036.477 1.266.303s.192-.567.116-1.352l-.02-.203c-.022-.223-.033-.334 0-.438c.032-.103.103-.187.246-.354l.13-.152c.504-.588.755-.882.667-1.165c-.088-.282-.457-.365-1.194-.532l-.191-.044c-.21-.047-.315-.07-.399-.135c-.084-.064-.138-.16-.246-.354l-.098-.176c-.38-.682-.57-1.023-.855-1.023" clip-rule="evenodd"/></svg>`
+    // Botão de novo sorteio
+    const rerollBtn = document.createElement("div");
+    rerollBtn.style.cssText = "text-align:center;padding:10px;cursor:pointer;opacity:0.7;font-size:0.85rem;";
+    rerollBtn.textContent = "🔀 Sortear outro líder";
+    rerollBtn.onmouseover = function() { this.style.opacity = "1"; };
+    rerollBtn.onmouseout  = function() { this.style.opacity = "0.7"; };
+    rerollBtn.onclick = function() { updateGyms(); };
+    listing.appendChild(rerollBtn);
+}
+
+/** Inicia a batalha com o líder sorteado */
+function _entrarGymSorteio(gym) {
+    if (saved.currentArea !== undefined) return;
+
+    const areaId = gym.areaId;
+
+    // Garante que a área existe com os dados do sorteio
+    if (!areas[areaId] && gym.team) {
+        areas[areaId] = buildGymAreaFromConfig(gym);
+        areas[areaId].id = areaId;
+    }
+
+    if (!areas[areaId]) return;
+
+    // Aplica dificuldade e nível fixos do sorteio
+    areas[areaId].difficulty = GYM_SORTEIO_DIFFICULTY;
+    areas[areaId].level      = GYM_SORTEIO_LEVEL;
+    areas[areaId].trainer    = true;
+    areas[areaId].type       = areas[areaId].type || "vs";
+    areas[areaId].isGym      = true;
+    areas[areaId].gymBadgeItemId = gym.badgeItemId;
+
+    // Define o drop ao vencer
+    areas[areaId].encounterEffect = function() {
+        // Auto-Refight Ticket sempre
+        if (item.autoRefightTicket) {
+            item.autoRefightTicket.got++;
+            item.autoRefightTicket.newItem++;
         }
 
-        let fieldTag = ""
-        if (area.fieldEffect) {
-            fieldTag = `<strong style="font-size:1rem; background:#725AA4; margin-left:0.2rem">+ Field Effect</strong>`
+        // Pokémon aleatório do time
+        const pkmnId = _getPkmnAleatorioDoTime(gym);
+        if (pkmnId && pkmn[pkmnId]) {
+            if (Math.random() < GYM_SORTEIO_SHINY_CHANCE) {
+                pkmn[pkmnId].shiny = true;
+            }
+            pkmn[pkmnId].newPokemon = true;
         }
+    };
 
-        const badgeTag = gym.badge
-            ? `<strong style="font-size:0.85rem; background:#8B6914; margin-left:0.2rem">${gym.badge}</strong>`
-            : ""
-        const cityTag = gym.city
-            ? `<span style="font-size:0.9rem; opacity:0.85">${gym.city}</span>`
-            : ""
+    saved.currentAreaBuffer  = areaId;
+    saved.currentArea        = areaId;
+    saved.lastAreaJoined     = areaId;
 
-        const trainerName = area.name
-        const trainerSprite = area.sprite
-        const maxDiff = getGymMaxDifficulty()
-        const diffPct = Math.round((getGymEffectiveHpMultiplier(area) / maxDiff) * 100)
-
-        divAreas.innerHTML = `
-            <span class="hitbox"></span>
-            <img class="vs-card-flair" src="img/icons/pokeball.svg">
-            <div class="vs-card-bg"></div>
-            <span class="explore-ticket-left" style="z-index: 2;">
-                <span id="gym-trainer-name-${gym.areaId}" style="font-size:1.3rem">${trainerName}${nameTag}</span>
-                <span>${cityTag}</span>
-                <span><strong style="font-size:1rem; background:#8B6914">Level ${effectiveLevel}</strong>${badgeTag}${fieldTag}${rematchTag}</span>
-                <!-- Dificuldade removida por solicitação. -->
-            </span>
-            <div></div>
-            <div class="vs-card-left">
-                <img id="gym-trainer-image-${gym.areaId}" class="sprite-trim" src="img/trainers/${trainerSprite}.png">
-            </div>
-        `
-
-        listing.appendChild(divAreas)
-    }
-
-    for (const gym of sorted) {
-        if (isGymLeaderUnlocked(gym)) continue
-        
-        // MODIFICADO: Se a área global falhar, usamos os dados locais do array do líder para renderizar o card bloqueado com segurança
-        const area = areas[gym.areaId]
-        const displaySprite = area ? area.sprite : (gym.sprite || "brock")
-
-        anyListed = true
-        const divAreas = document.createElement("div")
-        divAreas.className = "vs-card"
-        divAreas.style.cursor = "default"
-        divAreas.style.filter = "brightness(0.3)"
-        divAreas.innerHTML = `
-            <span class="hitbox"></span>
-            <img class="vs-card-flair" src="img/icons/pokeball.svg">
-            <div class="vs-card-bg"></div>
-            <span class="explore-ticket-left" style="z-index: 2;">
-                <span style="font-size:1.3rem">Locked</span>
-                <span style="font-size:0.9rem; opacity:0.85">${gym.city || ""}</span>
-            </span>
-            <div></div>
-            <div class="vs-card-left">
-                <img class="sprite-trim" style="filter:brightness(0)" src="img/trainers/${displaySprite}.png">
-            </div>
-        `
-        listing.appendChild(divAreas)
-    }
-
-    if (!anyListed) {
-        const emptyDiv = document.createElement("div")
-        emptyDiv.style.cssText = "display:flex;flex-direction:column;justify-content:center;align-items:center;background:#ECDEB7;border-radius:0.3rem;height:15rem;width:15rem;text-align:center"
-        emptyDiv.innerHTML = '<img src="img/pkmn/sprite/pikachuRockstar.png">No gym leaders available yet.<br><span style="font-size:0.9rem;opacity:0.7">Defeat the previous leader to unlock the next</span>'
-        listing.appendChild(emptyDiv)
-    }
+    document.getElementById("preview-team-exit").style.display = "flex";
+    document.getElementById("team-menu").style.zIndex          = "50";
+    document.getElementById("team-menu").style.display         = "flex";
+    document.getElementById("menu-button-parent").style.display = "none";
+    document.getElementById("gyms-menu").style.display         = "none";
+    updatePreviewTeam();
+    afkSeconds = 0;
 }
 
 
