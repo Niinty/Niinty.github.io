@@ -196,6 +196,24 @@ const GYMS_LEADERS = [
             slot6 : pkmn.mewtwo, slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.zenHeadbut.id],
         },
     }
+
+    //Johto
+    {
+        areaId: "vsGymLeaderFalkner",
+        region: "johto",
+        order: 1,
+        unlockAreaId: null,
+        name: "Gym Leader Falkner",
+        city: "Violet City",
+        sprite: "falkner",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Voador.",
+        team: {
+            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
+            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+        }
+    },
 ]
 
 function getGymMaxDifficulty() {
