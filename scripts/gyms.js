@@ -239,17 +239,19 @@ function onGymLeaderDefeated(area) {
             }
         }
 
-        if (validSlots.length > 0) {
+    if (validSlots.length > 0) {
             const chosenPkmn = validSlots[Math.floor(Math.random() * validSlots.length)];
             
-            // A MÁGICA ACONTECE AQUI:
-            // Avisa a função givePkmn (no explore.js) que este Pokémon veio do ginásio
-            chosenPkmn.fromGym = true;
+            // LIGA O ALERTA GLOBAL DE RECOMPENSA DE GINÁSIO
+            window._isGymRewardDrop = true; 
+            
+            // (Opcional, mas não custa manter)
+            chosenPkmn.fromGym = true; 
 
             // NÃO faz caught++ aqui — o leaveCombat já faz ao processar newPokemon
             chosenPkmn.newPokemon = true;
-        }
     }
+}
 
     area.gymDefeatCount = getGymDefeatCount(area) + 1;
     area.defeated = true;
