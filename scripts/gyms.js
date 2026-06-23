@@ -294,6 +294,7 @@ function buildGymAreaFromConfig(gym) {
 }
 
 /** Renderiza a tela de Boss Roulette (Líder de Ginásio Aleatório) */
+/** Renderiza a tela de Boss Roulette (Líder de Ginásio Aleatório) */
 function updateGyms() {
     const listing = document.getElementById("gyms-listing")
     if (!listing) return
@@ -308,23 +309,18 @@ function updateGyms() {
 
     const gym = _currentRandomGymLeader;
     const area = areas[gym.areaId];
-
-    // Cria container para centralizar a interface da Roleta
-    const rouletteContainer = document.createElement("div");
-    rouletteContainer.style.cssText = "display:flex; flex-direction:column; gap:12px; padding:12px; align-items:center;"
-
-    // Texto informativo superior
-    const infoText = document.createElement("div");
-    infoText.style.cssText = "font-size:0.95rem; text-align:center; color:var(--light1,#e8ddd0); opacity:0.9; font-weight:bold; margin-bottom: 4px;";
     const regionConfig = GYM_REGIONS.find(r => r.id === gym.region);
-    infoText.innerHTML = `🎲 A Challenger Appears! From ${regionConfig ? regionConfig.icon + " " + regionConfig.name : gym.region.toUpperCase()}:`;
-    rouletteContainer.appendChild(infoText);
 
-    // Renderiza o card do líder sorteado
+    // 1. Texto informativo superior (Injetado diretamente no topo da listagem)
+    const infoText = document.createElement("div");
+    infoText.style.cssText = "font-size:0.95rem; text-align:center; color:var(--light1,#e8ddd0); opacity:0.9; font-weight:bold; margin: 12px 0 6px 0; width:100%;";
+    infoText.innerHTML = `🎲 A Challenger Appears! From ${regionConfig ? regionConfig.icon + " " + regionConfig.name : gym.region.toUpperCase()}:`;
+    listing.appendChild(infoText);
+
+    // 2. Renderiza o card do líder sorteado (Diretamente no listing para herdar o CSS correto)
     const divAreas = document.createElement("div")
     divAreas.className = "vs-card"
     divAreas.dataset.trainer = gym.areaId
-    divAreas.style.width = "100%"
 
     divAreas.addEventListener("click", () => {
         saved.currentAreaBuffer = gym.areaId
@@ -350,29 +346,33 @@ function updateGyms() {
                 <strong style="font-size:1rem; background:#8B6914">Level ${GYM_CUSTOM_LEVEL}</strong>
                 <strong style="font-size:0.85rem; background:#725AA4; margin-left:0.2rem">HP x${GYM_CUSTOM_HP_MULT}</strong>
             </span>
-            <span style="font-size:0.75rem; color:#ffd700; margin-top:4px;">🎁 Rewards: 1x Auto Ticket & 1x Member (10% Shiny)</span>
+            <span style="font-size:0.75rem; color:#ffd700; margin-top:6px; display:block;">🎁 Rewards: 1x Auto Ticket & 1x Member (10% Shiny)</span>
         </span>
         <div></div>
         <div class="vs-card-left">
             <img class="sprite-trim" src="img/trainers/${area.sprite}.png">
         </div>
     `
-    rouletteContainer.appendChild(divAreas);
+    listing.appendChild(divAreas);
 
-    // Botão para sortear outro oponente (Reroll)
+    // 3. Botão para sortear outro oponente (Reroll) posicionado logo abaixo do card
+    const rerollContainer = document.createElement("div");
+    rerollContainer.style.cssText = "width:100%; text-align:center; margin-top:14px; padding-bottom:20px;";
+
     const rerollBtn = document.createElement("button");
-    rerollBtn.className = "generic-button"; // use as classes de botões do seu CSS padrão se preferir
-    rerollBtn.style.cssText = "padding: 8px 16px; background: #c63333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.9rem; transition: background 0.2s;"
+    rerollBtn.className = "generic-button"; 
+    rerollBtn.style.cssText = "padding: 10px 20px; background: #c63333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.95rem; transition: background 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.2);"
     rerollBtn.innerHTML = "🔄 Roll Another Leader";
+    
     rerollBtn.onmouseover = function() { this.style.background = "#e04444"; }
     rerollBtn.onmouseout = function() { this.style.background = "#c63333"; }
     rerollBtn.onclick = function() {
         rollRandomGymLeader();
         updateGyms();
     }
-    rouletteContainer.appendChild(rerollBtn);
-
-    listing.appendChild(rouletteContainer);
+    
+    rerollContainer.appendChild(rerollBtn);
+    listing.appendChild(rerollContainer);
 }
 
 // Inicializa
