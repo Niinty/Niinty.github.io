@@ -222,16 +222,15 @@ function rollRandomGymLeader() {
 }
 
 function onGymLeaderDefeated(area) {
-    // 1. Drop Garantido: 1x Auto Refight Ticket
-    const ticketId = "autoRefightTicket"; // Modifique aqui para o ID exato do seu item de ticket
+    // 1. Drop Garantido do Ticket
+    const ticketId = "autoRefightTicket";
     if (item[ticketId] !== undefined) {
         item[ticketId].got++;
         item[ticketId].newItem++;
     }
 
-    // 2. Drop do Pokémon do Líder enfrentado
+    // 2. Identifica o Pokémon da recompensa e CARIMBA ele
     if (area.team) {
-        // Mapeia quais slots do time do líder possuem um Pokémon válido preenchido
         const validSlots = [];
         for (let i = 1; i <= 6; i++) {
             if (area.team[`slot${i}`]) {
@@ -239,21 +238,16 @@ function onGymLeaderDefeated(area) {
             }
         }
 
-    if (validSlots.length > 0) {
+        if (validSlots.length > 0) {
             const chosenPkmn = validSlots[Math.floor(Math.random() * validSlots.length)];
             
-            // O jogo usa isso para saber que tem que entregar o Pokémon
-            chosenPkmn.newPokemon = true;
-            
-            // ADICIONE ISSO: O nosso post-it personalizado!
-            chosenPkmn.fromGym = true; 
+            chosenPkmn.newPokemon = true; // O sinalizador original do seu jogo
+            chosenPkmn.isGymReward = true; // O NOSSO carimbo para os 10%
+        }
     }
-}
 
     area.gymDefeatCount = getGymDefeatCount(area) + 1;
     area.defeated = true;
-    
-    // Após vencer, limpa o líder atual para forçar um novo sorteio na próxima abertura de menu
     _currentRandomGymLeader = null;
 }
 
