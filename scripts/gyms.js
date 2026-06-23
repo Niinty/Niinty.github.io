@@ -242,14 +242,11 @@ function onGymLeaderDefeated(area) {
     if (validSlots.length > 0) {
             const chosenPkmn = validSlots[Math.floor(Math.random() * validSlots.length)];
             
-            // LIGA O ALERTA GLOBAL DE RECOMPENSA DE GINÁSIO
-            window._isGymRewardDrop = true; 
-            
-            // (Opcional, mas não custa manter)
-            chosenPkmn.fromGym = true; 
-
-            // NÃO faz caught++ aqui — o leaveCombat já faz ao processar newPokemon
+            // O jogo usa isso para saber que tem que entregar o Pokémon
             chosenPkmn.newPokemon = true;
+            
+            // ADICIONE ISSO: O nosso post-it personalizado!
+            chosenPkmn.fromGym = true; 
     }
 }
 
