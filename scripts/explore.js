@@ -207,7 +207,7 @@ function givePkmn(poke, level) {
 
     poke.ability = learnPkmnAbility(poke.id);
 
-    const shinyChance = poke.fromGym ? (1/10) : (1/4096);
+    const shinyChance = poke.fromGym ? (1/1) : (1/4096);
 
     if (rng(shinyChance)) {
         poke.shiny = true;
