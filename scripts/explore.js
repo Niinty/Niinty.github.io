@@ -6154,6 +6154,10 @@ let evoItemToUse = undefined
 let vitaminToUse = undefined
 let itemToUse = undefined
 
+function getItemImageSrc(i) {
+    return `img/items/${i}.png`;
+}
+
 function updateItemBag(){
 
     document.getElementById(`item-menu-list`).innerHTML = ""
