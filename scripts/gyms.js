@@ -368,7 +368,6 @@ divAreas.innerHTML = `
             <strong style="font-size:0.8rem; background:#8B6914; color:white; padding:1px 6px; border-radius:3px; font-weight:500; letter-spacing:0;">LV ${GYM_CUSTOM_LEVEL}</strong>
             <strong style="font-size:0.8rem; background:#725AA4; color:white; padding:1px 6px; border-radius:3px; font-weight:500; letter-spacing:0;">HP x${GYM_CUSTOM_HP_MULT}</strong>
         </span>
-        <span style="font-size:0.68rem; color:#ffd700; margin-top:6px; display:block; white-space:nowrap; opacity:0.95;">🎁 1x Auto Ticket & 1x Member (10% Shiny)</span>
     </span>
     
     <!-- Lado Direito: Container do Sprite (Preserva a classe .sprite-trim do seu motor) -->
