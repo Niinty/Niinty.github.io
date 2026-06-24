@@ -214,6 +214,54 @@ const GYMS_LEADERS = [
             slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
         },
     },
+        {
+        areaId: "vsGymLeaderBugsy",
+        region: "johto",
+        order: 2,
+        unlockAreaId: null,
+        name: "Gym Leader Bugsy",
+        city: "Azalea City",
+        sprite: "bugsy",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Inseto.",
+        team: {
+            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
+            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+        },
+    },
+        {
+        areaId: "vsGymLeaderWhitney",
+        region: "johto",
+        order: 3,
+        unlockAreaId: null,
+        name: "Gym Leader Whitney",
+        city: "Goldenrod City",
+        sprite: "whitney",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Normal.",
+        team: {
+            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
+            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+        },
+    },
+        {
+        areaId: "vsGymLeaderMorty",
+        region: "johto",
+        order: 4,
+        unlockAreaId: null,
+        name: "Gym Leader Morty",
+        city: "Ecruteak City",
+        sprite: "morty",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Fantasma.",
+        team: {
+            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
+            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+        },
+    },
 ]
 
 function getGymMaxDifficulty() {
