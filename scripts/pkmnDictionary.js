@@ -1142,6 +1142,7 @@ pkmn.vulpix = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ninetales, item: item.fireStone } } },
     hiddenAbility: ability.drought,
+    lore: `Quando nasce, tem apenas uma cauda. Conforme cresce, a cauda se divide em seis.`,
 }
 
 pkmn.alolanVulpix = {
@@ -1156,6 +1157,7 @@ pkmn.alolanVulpix = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.alolanNinetales, level: evolutionLevel2 } } },
     hiddenAbility: ability.snowWarning,
+    lore: `Exala um ar mais frio do que -15°C. As pessoas mais velhas de Alola o chamam pelo nome antigo: Keokeo.`,
 }
 
 pkmn.ninetales = {
@@ -1169,6 +1171,7 @@ pkmn.ninetales = {
         spe: 100,
     },
     hiddenAbility: ability.drought,
+    lore: `Dizem que cada uma de suas nove caudas possui um poder místico. Pode viver até mil anos.`,
 }
 
 pkmn.alolanNinetales = {
@@ -1182,6 +1185,7 @@ pkmn.alolanNinetales = {
         spe: 109,
     },
     hiddenAbility: ability.snowWarning,
+    lore: `Habita montanhas perpetuamente cobertas de neve e é reverenciada como a encarnação de uma divindade.`,
 }
 
 // 039 Igglybuff → Jigglypuff → Wigglytuff
@@ -1197,7 +1201,8 @@ pkmn.igglybuff = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.jigglypuff, level: evolutionLevel1 } } },
     hiddenAbility: ability.pixilate,
-    eggMove : move.eggBomb
+    eggMove : move.eggBomb,
+    lore: `Seu corpo é tão elástico que, se ele começar a pular, não consegue parar de quicar.`,
 }
 
 pkmn.jigglypuff = {
@@ -1212,7 +1217,8 @@ pkmn.jigglypuff = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.wigglytuff, item: item.moonStone } } },
     hiddenAbility: ability.pixilate,
-    eggMove : move.eggBomb
+    eggMove : move.eggBomb,
+    lore: `Seus olhos grandes e redondos brilham quando ele começa a cantar uma melodia hipnótica que faz todos adormecerem.`,
 }
 
 pkmn.wigglytuff = {
@@ -1226,7 +1232,8 @@ pkmn.wigglytuff = {
         spe: 45,
     },
     hiddenAbility: ability.pixilate,
-    eggMove : move.eggBomb
+    eggMove : move.eggBomb,
+    lore: `Seu corpo é tão macio e elástico que, se inflar, ele pode continuar flutuando para sempre.`,
 }
 
 // 041 Zubat → Golbat → Crobat
@@ -1242,6 +1249,7 @@ pkmn.zubat = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.golbat, level: evolutionLevel1 } } },
     hiddenAbility: ability.dauntingLook,
+    lore: `Ele não possui olhos e vive em cavernas escuras, usando ondas ultrassônicas para navegar e sugar o sangue de presas vivas.`,
 }
 
 pkmn.golbat = {
@@ -1256,6 +1264,7 @@ pkmn.golbat = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.crobat, item: item.linkStone } } },
     hiddenAbility: ability.dauntingLook,
+    lore: `Ele adora sangue fresco. Se morder, não solta até estar totalmente saciado.`,
 }
 
 pkmn.crobat = {
@@ -1269,6 +1278,7 @@ pkmn.crobat = {
         spe: 130,
     },
     hiddenAbility: ability.dauntingLook,
+    lore: `Voa silenciosamente. Se ele voar durante o dia, é porque está exausto.`,
 }
 
 // 043 Oddish → Gloom → Vileplume / Bellossom
@@ -1284,7 +1294,8 @@ pkmn.oddish = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.gloom, level: evolutionLevel1 } } },
     hiddenAbility: ability.chlorophyll,
-    signature : move.trailblaze
+    signature : move.trailblaze,
+    lore: `Durante o dia, ele se enterra no solo para absorver nutrientes, parecendo uma planta.`,
 }
 
 pkmn.gloom = {
@@ -1304,7 +1315,8 @@ pkmn.gloom = {
         } 
     },
     hiddenAbility: ability.chlorophyll,
-    signature : move.trailblaze
+    signature : move.trailblaze,
+    lore: `O cheiro fétido que exala de sua boca é capaz de desmaiar humanos a quilômetros.`,
 }
 
 pkmn.vileplume = {
@@ -1318,7 +1330,8 @@ pkmn.vileplume = {
         spe: 50,
     },
     hiddenAbility: ability.chlorophyll,
-    signature : move.trailblaze
+    signature : move.trailblaze,
+    lore: `Suas pétalas imensas liberam um pólen altamente tóxico que causa paralisia severa.`,
 }
 
 pkmn.bellossom = {
@@ -1332,7 +1345,8 @@ pkmn.bellossom = {
         spe: 50,
     },
     hiddenAbility: ability.dancer,
-    signature : move.trailblaze
+    signature : move.trailblaze,
+    lore: `Quando dançam juntas, suas pétalas produzem um som hipnótico e relaxante.`,
 }
 
 // 046 Paras → Parasect
