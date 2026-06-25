@@ -197,6 +197,23 @@ const GYMS_LEADERS = [
         },
     },
 
+    {
+        areaId: "vsGymLeaderCissy",
+        region: "johto",
+        order: 9,
+        unlockAreaId: null,
+        name: "Gym Leader Cissy",
+        city: "Mikan Island",
+        sprite: "cissy",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Agua.",
+        team: {
+            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
+            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+        },
+    },
+
     //Johto
     {
         areaId: "vsGymLeaderFalkner",
@@ -214,7 +231,7 @@ const GYMS_LEADERS = [
             slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
         },
     },
-        {
+    {
         areaId: "vsGymLeaderBugsy",
         region: "johto",
         order: 2,
@@ -230,7 +247,7 @@ const GYMS_LEADERS = [
             slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
         },
     },
-        {
+    {
         areaId: "vsGymLeaderWhitney",
         region: "johto",
         order: 3,
@@ -246,7 +263,7 @@ const GYMS_LEADERS = [
             slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
         },
     },
-        {
+    {
         areaId: "vsGymLeaderMorty",
         region: "johto",
         order: 4,
