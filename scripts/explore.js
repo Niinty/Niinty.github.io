@@ -8355,8 +8355,8 @@ training.level = {
 }
 
 training.iv1 = { //disapears if you have more than x ivs
-    name: `IV Training I`,
-    info: `Gain 2 random IV stars. Can only be done with less than 10 IV stars`,
+    name: `Treino de IV I`,
+    info: `Ganhe 2 estrelas aleatórias de IV. Só poderá ser realizado com 10 estrelas de IV ou menos`,
     tier: 1,
     color: `#699edf`,
     condition: function() {
@@ -8364,7 +8364,7 @@ training.iv1 = { //disapears if you have more than x ivs
         const totalSum = id.ivs.hp + id.ivs.atk + id.ivs.satk + id.ivs.def + id.ivs.sdef + id.ivs.spe
         if (totalSum<10) return true
     },
-    errorText: `You must have less than 10 IV stars, or alread max IVs reached`,
+    errorText: `Você deve ter menos de 10 estrelas de IV. Ou já alcançou o máximo de IVs possível.`,
     effect: function() {
 
     const i = saved.trainingPokemon
@@ -8409,8 +8409,8 @@ training.iv1 = { //disapears if you have more than x ivs
 }
 
 training.iv2 = { //doesnt appear until you have more than x ivs
-    name: `IV Training II`,
-    info: `Gain 2 random IV stars. Can only be done with less than 22 IV stars`,
+    name: `Treino de IV II`,
+    info: `Ganhe 2 estrelas aleatórias de IV. Só poderá ser realizado com 22 estrelas de IV ou menos`,
     tier: 2,
     color: `#699edf`,
     condition: function() {
@@ -8418,7 +8418,7 @@ training.iv2 = { //doesnt appear until you have more than x ivs
         const totalSum = id.ivs.hp + id.ivs.atk + id.ivs.satk + id.ivs.def + id.ivs.sdef + id.ivs.spe
         if (totalSum<22) return true
     },
-    errorText: `You must have less than 22 IV stars, or alread max IVs reached`,
+    errorText: `Você deve ter menos de 22 estrelas de IV. Ou já alcançou o máximo de IVs possível.`,
     effect: function() {
 
     const i = saved.trainingPokemon
@@ -8463,8 +8463,8 @@ training.iv2 = { //doesnt appear until you have more than x ivs
 }
 
 training.iv3 = { //doesnt appear until you have more than x ivs
-    name: `IV Training III`,
-    info: `Gain 2 random IV stars`,
+    name: `Treino de IV III`,
+    info: `Ganhe 2 estrelas aleatórias de IV.`,
     tier: 3,
     color: `#699edf`,
     condition: function() {
@@ -8472,7 +8472,7 @@ training.iv3 = { //doesnt appear until you have more than x ivs
         const totalSum = id.ivs.hp + id.ivs.atk + id.ivs.satk + id.ivs.def + id.ivs.sdef + id.ivs.spe
         if (totalSum<36) return true
     },
-    errorText: `You already have the maximum possible IVs`,
+    errorText: `Você já alcançou o máximo de IVs possível.`,
     effect: function() {
 
     const i = saved.trainingPokemon
@@ -8517,8 +8517,8 @@ training.iv3 = { //doesnt appear until you have more than x ivs
 }
 
 training.ability = {
-    name: `Ability Training`,
-    info: `Rerolls the Pokemon Ability`,
+    name: `Treino de Habilidade`,
+    info: `Adquira uma nova Habilidade para o Pokemon`,
     tier: 1,
     color: `#69df96`,
     effect: function() {
