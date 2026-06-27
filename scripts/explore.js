@@ -1042,8 +1042,8 @@ function leaveCombat(){
         if (team[slot].item == item.pureIncense.id) rarePkmnChance += item.pureIncense.power()/100
         if (team[slot].item == item.shinyCharm.id) shinyPkmnChance *= (item.shinyCharm.power() /100) +1
         if (team[slot].item == item.shinyCharm.id) shinyPkmnChanceEncounter *= (item.shinyCharm.power() /100) +1
-        if (testAbility(slot, ability.goodAsGold.id) ) shinyPkmnChance *= 1.15
-        if (testAbility(slot, ability.goodAsGold.id) ) shinyPkmnChanceEncounter *= 1.15
+        if (testAbility(slot, ability.goodAsGold.id) ) shinyPkmnChance *= 1.025
+        if (testAbility(slot, ability.goodAsGold.id) ) shinyPkmnChanceEncounter *= 1.025
     }
 
     if (saved.hasTeatimeBeenUsed == true){
