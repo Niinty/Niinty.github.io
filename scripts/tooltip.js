@@ -1532,8 +1532,8 @@ const sortedMovepool = movepool
 
         document.getElementById("tooltipTop").style.display = "none"
         document.getElementById("tooltipBottom").style.display = "none"
-        document.getElementById("tooltipTitle").innerHTML = `Restricted Action`
-        document.getElementById("tooltipMid").innerHTML = `Moves cannot be freely switched at this moment`
+        document.getElementById("tooltipTitle").innerHTML = `Ação restrita`
+        document.getElementById("tooltipMid").innerHTML = `Não é possível alterar o moveset neste momento`
         openTooltip()
         return
 
@@ -1545,8 +1545,8 @@ const sortedMovepool = movepool
 
         document.getElementById("tooltipTop").style.display = "none"
         document.getElementById("tooltipBottom").style.display = "none"
-        document.getElementById("tooltipTitle").innerHTML = `Restricted Move`
-        document.getElementById("tooltipMid").innerHTML = `Restricted moves cannot be freely switched during combat`
+        document.getElementById("tooltipTitle").innerHTML = `Moveset restrito`
+        document.getElementById("tooltipMid").innerHTML = `Movesets restritos não podem ser alterados durante a batalha`
         openTooltip()
         return
     }
@@ -1769,15 +1769,15 @@ const sortedMovepool = movepool
         let parkSpawn = ""
 
         let spawnLocation = ""
-        if (wildSpawn != "") spawnLocation += `<span>Found in the wild area ${format(wildSpawn)} (Rotation ${areas[wildSpawn].rotation})</span>`
-        if ( wildlifePoolCommon.includes(ttdata) || wildlifePoolUncommon.includes(ttdata) || wildlifePoolRare.includes(ttdata) ) spawnLocation += `<span>Found randomly in the Wildlife Park wild area</span>`
-        if ( exclusiveFrontierPkmn.includes(pkmn[ttdata]) ) spawnLocation += `<span>Obtained as a random reward in the Battle Frontier</span>`
-        if (encounterSpawn != "") spawnLocation += `<span>Obtained in the event ${format(areas[encounterSpawn].name)} (Rotation ${areas[encounterSpawn].rotation})</span>`
-        if (eventSpawn != "") spawnLocation += `<span>Found in the event ${format(eventSpawn)} (Rotation ${areas[eventSpawn].rotation})</span>`
-        if (spawnLocation == "") spawnLocation = `This Pokemon cannot be caught on its current stage`
-        if (pkmn[ttdata].tagObtainedIn == "unobtainable") spawnLocation = `This Pokemon is unobtainable`
-        if (pkmn[ttdata].tagObtainedIn == "mart") spawnLocation = `Can be purchased in the Poke-Mart`
-        if (pkmn[ttdata].tagObtainedIn == "arceus") spawnLocation = `Unlocked while all obtainable Pokemon have been caught`
+        if (wildSpawn != "") spawnLocation += `<span>Encontrado na área selvagem ${format(wildSpawn)} (Rotação ${areas[wildSpawn].rotation})</span>`
+        if ( wildlifePoolCommon.includes(ttdata) || wildlifePoolUncommon.includes(ttdata) || wildlifePoolRare.includes(ttdata) ) spawnLocation += `<span>Encontrado aleatoriamente na área Wildlife Park</span>`
+        if ( exclusiveFrontierPkmn.includes(pkmn[ttdata]) ) spawnLocation += `<span>Adquirido de forma aleatória como recompensa na Battle Frontier</span>`
+        if (encounterSpawn != "") spawnLocation += `<span>Obtido no evento ${format(areas[encounterSpawn].name)} (Rotação ${areas[encounterSpawn].rotation})</span>`
+        if (eventSpawn != "") spawnLocation += `<span>Obtido no evento ${format(eventSpawn)} (Rotação ${areas[eventSpawn].rotation})</span>`
+        if (spawnLocation == "") spawnLocation = `Este Pokemon não pode ser capturado no estágio atual`
+        if (pkmn[ttdata].tagObtainedIn == "unobtainable") spawnLocation = `De que forma será que este Pokemon pode ser capturado...`
+        if (pkmn[ttdata].tagObtainedIn == "mart") spawnLocation = `Pode ser obtido no Poke-Mart`
+        if (pkmn[ttdata].tagObtainedIn == "arceus") spawnLocation = `Liberado quando todos os outros Pokemons tiverem sido capturados`
 
         document.getElementById("tooltipMid").innerHTML = `
         <span style="display:flex; flex-direction:column">${spawnLocation}<span>
