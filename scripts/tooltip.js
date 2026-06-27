@@ -1775,7 +1775,7 @@ const sortedMovepool = movepool
         if (encounterSpawn != "") spawnLocation += `<span>Obtido no evento ${format(areas[encounterSpawn].name)} (Rotação ${areas[encounterSpawn].rotation})</span>`
         if (eventSpawn != "") spawnLocation += `<span>Obtido no evento ${format(eventSpawn)} (Rotação ${areas[eventSpawn].rotation})</span>`
         if (spawnLocation == "") spawnLocation = `Este Pokemon não pode ser capturado no estágio atual`
-        if (pkmn[ttdata].tagObtainedIn == "unobtainable") spawnLocation = `De que forma será que este Pokemon pode ser capturado...`
+        if (pkmn[ttdata].tagObtainedIn == "unobtainable") spawnLocation = `De que forma será que este Pokemon poderia ser capturado...`
         if (pkmn[ttdata].tagObtainedIn == "mart") spawnLocation = `Pode ser obtido no Poke-Mart`
         if (pkmn[ttdata].tagObtainedIn == "arceus") spawnLocation = `Liberado quando todos os outros Pokemons tiverem sido capturados`
 
@@ -1789,8 +1789,8 @@ const sortedMovepool = movepool
             if (pkmn[ttdata].ability == ability.stamina.id ||  (  pkmn[ttdata].hiddenAbility?.id == ability.stamina.id && pkmn[ttdata].hiddenAbilityUnlocked ) ) staminaMult = 2
         }
 
-        if (saved.gamemodAfk !=true) document.getElementById("tooltipMid").innerHTML += `This Pokemon can last ${(100 + Math.pow(1.15, 6) * (pkmn[ttdata].bst.hp*30 + (pkmn[ttdata].bst.def + pkmn[ttdata].bst.sdef)*15)*staminaMult).toFixed(0)} turns before fainting from Battle Fatigue at maximum IVs`
-        else document.getElementById("tooltipMid").innerHTML += `This Pokemon can last ${(100 + Math.pow(1.15, 6) * (pkmn[ttdata].bst.hp*30 + (pkmn[ttdata].bst.def + pkmn[ttdata].bst.sdef)*15)*staminaMult).toFixed(0)*3} turns before fainting from Battle Fatigue at maximum IVs`
+        if (saved.gamemodAfk !=true) document.getElementById("tooltipMid").innerHTML += `Este Pokemon poderá durar até ${(100 + Math.pow(1.15, 6) * (pkmn[ttdata].bst.hp*30 + (pkmn[ttdata].bst.def + pkmn[ttdata].bst.sdef)*15)*staminaMult).toFixed(0)} turnos, antes de ser nocauteado devido à fadiga (com IVs maximizados)`
+        else document.getElementById("tooltipMid").innerHTML += `Este Pokemon poderá durar até ${(100 + Math.pow(1.15, 6) * (pkmn[ttdata].bst.hp*30 + (pkmn[ttdata].bst.def + pkmn[ttdata].bst.sdef)*15)*staminaMult).toFixed(0)*3} turnos, antes de ser nocauteado devido à fadiga (com IVs maximizados)`
 
 
         document.getElementById("tooltipBottom").innerHTML = `
@@ -1838,40 +1838,40 @@ const sortedMovepool = movepool
         for (const i in areas){
             if (areas[i].type=="wild") {
             if (areas[i].drops?.common?.includes(item[ttdata]) || areas[i].drops?.uncommon?.includes(item[ttdata]) || areas[i].drops?.rare?.includes(item[ttdata])){
-                obtainText += `<span>Can be dropped in the wild area ${format(i)} (Rotation ${areas[i].rotation})</span>`
+                obtainText += `<span>Pode ser dropado na área selvagem ${format(i)} (Rotação ${areas[i].rotation})</span>`
             }
             }
 
             if (areas[i].type=="event") {
             if (areas[i].drops?.common?.includes(item[ttdata]) || areas[i].drops?.uncommon?.includes(item[ttdata]) || areas[i].drops?.rare?.includes(item[ttdata])){
-                obtainText += `<span>Can be dropped in the event area ${format(i)} (Rotation ${areas[i].rotation})</span>`
+                obtainText += `<span>Pode ser dropado no evento ${format(i)} (Rotação ${areas[i].rotation})</span>`
             }
             }
 
             if (areas[i].type=="dungeon") {
             if (areas[i].drops?.common?.includes(item[ttdata]) || areas[i].drops?.uncommon?.includes(item[ttdata]) || areas[i].drops?.rare?.includes(item[ttdata])){
-                obtainText += `<span>Can be dropped in the dungeon area ${format(i)} (Rotation ${areas[i].rotation})</span>`
+                obtainText += `<span>Pode ser dropado na área de dungeon ${format(i)} (Rotação ${areas[i].rotation})</span>`
             }
             }
 
 
             if (areas[i].encounter) {
             if (areas[i].reward?.includes(item[ttdata])){
-                obtainText += `<span>Reward from the event ${format(areas[i].name)} (Rotation ${areas[i].rotation})</span>`
+                obtainText += `<span>Recompensa do evento ${format(areas[i].name)} (Rotação ${areas[i].rotation})</span>`
             }
             }
         }
 
-        if ([item.hpUp.id, item.protein.id, item.iron.id, item.calcium.id, item.zinc.id, item.carbos.id, item.timeCandy.id].includes(ttdata)) obtainText += `<span>Obtained via Export Reward</span>`
+        if ([item.hpUp.id, item.protein.id, item.iron.id, item.calcium.id, item.zinc.id, item.carbos.id, item.timeCandy.id].includes(ttdata)) obtainText += `<span>Obtido via Export Reward</span>`
 
-        for (const i in spiralingRewards) if (spiralingRewards[i].item==ttdata) obtainText += `<span>Reward from Spiraling Tower</span>`
+        for (const i in spiralingRewards) if (spiralingRewards[i].item==ttdata) obtainText += `<span>Recompensa da Spiraling Tower</span>`
 
 
         for (const i in shop) {
-            if (shop[i].icon == ttdata) obtainText += `<span>Can be bought in the Poke-Mart</span>`
+            if (shop[i].icon == ttdata) obtainText += `<span>Pode ser comprado no Poke-Mart</span>`
         }
 
-        if (item[ttdata].type=="decor" && item[ttdata].rarity) obtainText += `<span>Can be bought in the Poke-Mart</span>`
+        if (item[ttdata].type=="decor" && item[ttdata].rarity) obtainText += `<span>Pode ser comprado no Poke-Mart</span>`
 
 
 
