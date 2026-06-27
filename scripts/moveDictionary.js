@@ -870,7 +870,7 @@ ability.thousandArms = {
 
 ability.goodAsGold = {
     rarity: 3,
-    info: function() {return `Increases the chance of encountering a wild shiny pokemon by 15%. Works always for everyone regardless of the user`},
+    info: function() {return `Increases the chance of encountering a wild shiny pokemon by 2,5%. Works always for everyone regardless of the user`},
 }
 
 ability.wonderGuard = {
