@@ -785,13 +785,13 @@ frontierArray.sort((a, b) => a.data.tier - b.data.tier);
         document.getElementById("tooltipMid").style.display = `none`
 
         if (ttdata === `VS`) document.getElementById("tooltipTitle").innerHTML = `VS Trainers`
-        if (ttdata === `VS`) document.getElementById("tooltipBottom").innerHTML = `Defeat increasingly difficult trainers and carve yourself a path of fame! You may unlock additional areas to explore as your progress`
+        if (ttdata === `VS`) document.getElementById("tooltipBottom").innerHTML = `Enfrente treinadores cada vez mais fortes e conquiste seu lugar entre os grandes! Conforme você avança, novas áreas para explorar serão desbloqueadas.`
 
         if (ttdata === `Frontier`) document.getElementById("tooltipTitle").innerHTML = `Battle Frontier`
-        if (ttdata === `Frontier`) document.getElementById("tooltipBottom").innerHTML = `The Battle Frontier houses different types of challenges under a specific division restriction that rotates every three days. Trainers fought here will reset every day`
+        if (ttdata === `Frontier`) document.getElementById("tooltipBottom").innerHTML = `A Batalha da Fronteira reúne vários desafios com uma restrição de divisão específica, que muda a cada três dias. Os treinadores enfrentados aqui são reiniciados todos os dias.`
 
         if (ttdata === `Spiral`) document.getElementById("tooltipTitle").innerHTML = `Battle Tower`
-        if (ttdata === `Spiral`) document.getElementById("tooltipBottom").innerHTML = `The Battle Tower is an infinitely-scaling challenge in which every Pokemon defeated will increase the difficulty. Type Immunities inside this challenge will be instead converted to resistances<br><br>Every time you enter the tower, you will start from floor 1, but you can try as many times as you'd like<br><br>Your highest reached floor will be saved, and reset when the league rotation changes. You will be rewarded for every new highest floor reached at the end of the battle<br><br>There is a maximum of 100 Golden Bottlecaps achievable`
+        if (ttdata === `Spiral`) document.getElementById("tooltipBottom").innerHTML = `A Torre de Batalha é um desafio de dificuldade infinita, onde cada Pokémon derrotado aumenta ainda mais o desafio. Durante esse desafio, imunidades de tipo são convertidas em resistências.<br><brSempre que entrar na Torre, você começará do Andar 1, mas poderá tentar quantas vezes quiser.<br><br>O andar mais alto que você alcançar será salvo e será reiniciado quando a rotação da Liga mudar. Sempre que atingir um novo recorde de andar, você receberá uma recompensa ao final da batalha.<br><br>É possível obter no máximo 100 Golden Bottlecaps`
         if (ttdata === `Spiral`) document.getElementById("tooltipMid").style.display = `inline`
         if (ttdata === `Spiral`) document.getElementById("tooltipMid").innerHTML = `Current Type Rotation: ${format(saved.currentSpiralingType)}`
 
