@@ -5443,28 +5443,7 @@ areas.vsBugCatcherMilo = {
         slot5 : pkmn.pinsir,
         slot5Moves : [move.twineedle.id, move.bugBuzz.id],
     },
-    reward : [pkmn.tangela, item.chartiBerry,  item.bottleCap]
-}
-
-areas.vsGymLeaderBrock = {
-    name: `Gym Leader Brock`,
-    background : `gym`,
-    sprite : `brock`,
-    trainer: true,
-    type: `vs`,
-    level : 20,
-    team : {
-        slot1 : pkmn.onix,
-        slot1Moves : [move.earthquake.id,move.ironHead.id, move.sandstorm.id, move.stoneEdge.id],
-        slot2 : pkmn.golem,
-        slot2Moves : [move.rollout.id, move.quickAttack.id, move.stoneEdge.id,move.rockThrow.id],
-        slot3 : pkmn.kabutops,
-        slot3Moves : [move.rockThrow.id, move.aquaJet.id, move.swordsDance.id, move.waterfall.id],
-        slot4 : pkmn.aerodactyl,
-        slot4Moves : [move.rockSlide.id, move.hurricane.id, move.fireFang.id, move.iceFang.id],
-    },
-    //reward : [item.hardStone, item.goldenBottleCap],
-    itemReward: { 1 : { item: item.hardStone.id, amount: 1 }, 2 : { item: item.bottleCap.id, amount: 10 }},
+    reward : [pkmn.tangela, item.chartiBerry,  item.bottleCap],
     encounterEffect: function() {
         document.getElementById("tooltipTop").style.display = `none`
         document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
@@ -5528,7 +5507,20 @@ areas.vsSchoolKidAaron = {
         slot6 : pkmn.kadabra,
         slot6Moves : [move.calmMind.id, move.psybeam.id, move.confusion.id],
     },
-    reward : [pkmn.pichu, item.bottleCap]
+    reward : [pkmn.pichu, item.bottleCap],
+        encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Advanced Dojo</div>
+        <div style="filter:hue-rotate(300deg)" >Training unlocked</div>
+        </div>
+        `
+        openTooltip()
+    }
 }
 
 areas.vsRocketGrunt1 = {
@@ -5578,19 +5570,6 @@ areas.vsGymLeaderMisty = {
     },
     //reward : [item.mysticWater, item.goldenBottleCap],
     //itemReward: { 1 : { item: item.mysticWater.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
-    encounterEffect: function() {
-        document.getElementById("tooltipTop").style.display = `none`
-        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
-        document.getElementById("tooltipBottom").style.display = `none`
-        document.getElementById("tooltipMid").innerHTML = `
-        <div class="genetics-overview-tags" >
-        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
-        <div style="filter:hue-rotate(0deg)" >New Dungeon: Advanced Dojo</div>
-        <div style="filter:hue-rotate(300deg)" >Training unlocked</div>
-        </div>
-        `
-        openTooltip()
-    }
 }
 
 areas.vsSwimmerDan = {
