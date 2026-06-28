@@ -212,7 +212,7 @@ function givePkmn(poke, level) {
     
     // Se for recompensa de ginásio, usa 10% (1/10). Senão, usa 1/4096.
     // (Para testar se está funcionando, coloque 1/1 no lugar de 1/10 para ser 100%)
-    const shinyChance = isGymReward ? (1/1) : (1/4096);
+    const shinyChance = isGymReward ? (1/60) : (1/4096);
 
     if (rng(shinyChance)) {
         poke.shiny = true;
