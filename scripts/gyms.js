@@ -9,7 +9,7 @@ const GYM_BASE_HP_MULTIPLIER = 4
 
 // Configurações de Dificuldade Customizável (Ajuste aqui como quiser)
 const GYM_CUSTOM_LEVEL = 150       // Nível fixo ou base para os líderes sorteados
-const GYM_CUSTOM_HP_MULT = 10      // Multiplicador de HP customizado para o desafio
+const GYM_CUSTOM_HP_MULT = 20      // Multiplicador de HP customizado para o desafio
 
 // Regiões disponíveis no menu de Ginásios
 const GYM_REGIONS = [
