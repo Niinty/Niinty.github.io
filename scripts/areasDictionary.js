@@ -1423,7 +1423,7 @@ areas.sinnohUndergroundI = {
     background : `cave`,
     level : wildAreaLevel2,
     unlockDescription : `Defeat Gym Leader Brock in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderBrock.defeated },
+    unlockRequirement : function() { return areas.vsBugCatcherMilo.defeated },
     icon: item.waterStone,
     spawns: {
         common : [pkmn.carbink,pkmn.boldore, pkmn.shieldon, pkmn.roggenrola],
@@ -1439,8 +1439,8 @@ areas.beginnerDojoI = {
     type: `dungeon`,
     background : `gym`,
     level : wildAreaLevel2,
-    unlockDescription : `Defeat Gym Leader Brock in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderBrock.defeated },
+    unlockDescription : `Defeat Milo in VS to unlock`,
+    unlockRequirement : function() { return areas.vsBugCatcherMilo.defeated },
     icon: item.tmDummy,
     spawns: {
         common : [pkmn.makuhita,pkmn.tyrogue, pkmn.meditite, pkmn.riolu],
@@ -1455,8 +1455,8 @@ areas.advancedDojoI = {
     rotation : 1,
     type: `dungeon`,
     background : `gym`,
-    unlockDescription : `Defeat Gym Leader Misty in VS to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderMisty.defeated },
+    unlockDescription : `Defeat Aaron in VS to unlock`,
+    unlockRequirement : function() { return areas.vsGymLeaderAaron.defeated },
     level : wildAreaLevel3,
     icon: item.tmDummy,
     spawns: {
@@ -1546,8 +1546,8 @@ areas.sinnohUndergroundII = {
     type: `dungeon`,
     background : `cave`,
     level : wildAreaLevel2,
-    unlockDescription : `Defeat Gym Leader Brock in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderBrock.defeated },
+    unlockDescription : `Defeat Milo in VS to unlock`,
+    unlockRequirement : function() { return areas.vsBugCatcherMilo.defeated },
     icon: item.leafStone,
     spawns: {
         common : [pkmn.carbink,pkmn.boldore, pkmn.shieldon, pkmn.roggenrola],
@@ -1562,8 +1562,8 @@ areas.beginnerDojoII = {
     rotation : 2,
     type: `dungeon`,
     background : `gym`,
-    unlockDescription : `Defeat Gym Leader Brock in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderBrock.defeated },
+    unlockDescription : `Defeat Milo in VS to unlock`,
+    unlockRequirement : function() { return areas.vsBugCatcherMilo.defeated },
     level : wildAreaLevel2,
     icon: item.tmDummy,
     spawns: {
@@ -1580,8 +1580,8 @@ areas.advancedDojoII = {
     type: `dungeon`,
     background : `gym`,
     level : wildAreaLevel3,
-    unlockDescription : `Defeat Gym Leader Misty in VS to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderMisty.defeated },
+    unlockDescription : `Defeat Aaron in VS to unlock`,
+    unlockRequirement : function() { return areas.vsGymLeaderAaron.defeated },
     icon: item.tmDummy,
     spawns: {
         common : [pkmn.hariyama,pkmn.hitmonchan, pkmn.medicham, pkmn.throh],
@@ -1669,8 +1669,8 @@ areas.sinnohUndergroundIII = {
     type: `dungeon`,
     background : `cave`,
     level : wildAreaLevel2,
-    unlockDescription : `Defeat Gym Leader Brock in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderBrock.defeated },
+    unlockDescription : `Defeat Milo in to unlock`,
+    unlockRequirement : function() { return areas.vsBugCatcherMilo.defeated },
     icon: item.fireStone,
     spawns: {
         common : [pkmn.carbink,pkmn.boldore, pkmn.shieldon, pkmn.roggenrola],
@@ -1685,8 +1685,8 @@ areas.beginnerDojoIII = {
     rotation : 3,
     type: `dungeon`,
     background : `gym`,
-    unlockDescription : `Defeat Gym Leader Brock in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderBrock.defeated },
+    unlockDescription : `Defeat Milo in VS to unlock`,
+    unlockRequirement : function() { return areas.vsBugCatcherMilo.defeated },
     level : wildAreaLevel2,
     icon: item.tmDummy,
     spawns: {
@@ -1702,8 +1702,8 @@ areas.advancedDojoIII = {
     rotation : 3,
     type: `dungeon`,
     background : `gym`,
-    unlockDescription : `Defeat Gym Leader Misty in VS to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderMisty.defeated },
+    unlockDescription : `Defeat Aaron in VS to unlock`,
+    unlockRequirement : function() { return areas.vsGymLeaderAaron.defeated },
     level : wildAreaLevel3,
     icon: item.tmDummy,
     spawns: {
@@ -7750,13 +7750,13 @@ for (const i in areas){
     if (areas[i].trainer) areas[i].defeated = false
 
     if (areas[i].type == "wild" && areas[i].level == wildAreaLevel2) {
-        areas[i].unlockDescription = `Defeat Gym Leader Brock in Ginásios to unlock`
-        areas[i].unlockRequirement = function() { return areas.vsGymLeaderBrock.defeated }
+        areas[i].unlockDescription = `Defeat Milo in VS s to unlock`
+        areas[i].unlockRequirement = function() { return areas.vsBugCatcherMilo.defeated }
     }
 
     if (areas[i].type == "wild" && areas[i].level == wildAreaLevel3) {
-        areas[i].unlockDescription = `Defeat Gym Leader Misty in VS to unlock`
-        areas[i].unlockRequirement = function() { return areas.vsGymLeaderMisty.defeated }
+        areas[i].unlockDescription = `Defeat Aaron in VS to unlock`
+        areas[i].unlockRequirement = function() { return areas.vsGymLeaderAaron.defeated }
     }
 
     if (areas[i].type == "wild" && areas[i].level == wildAreaLevel4) {
