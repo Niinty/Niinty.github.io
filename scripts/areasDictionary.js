@@ -5443,23 +5443,7 @@ areas.vsBugCatcherMilo = {
         slot5 : pkmn.pinsir,
         slot5Moves : [move.twineedle.id, move.bugBuzz.id],
     },
-    reward : [pkmn.tangela, item.chartiBerry,  item.bottleCap],
-    encounterEffect: function() {
-        document.getElementById("tooltipTop").style.display = `none`
-        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
-        document.getElementById("tooltipBottom").style.display = `none`
-        document.getElementById("tooltipMid").innerHTML = `
-        <div class="genetics-overview-tags" >
-        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
-        <div style="filter:hue-rotate(0deg)" >New Dungeon: Sinnoh Underground</div>
-        <div style="filter:hue-rotate(0deg)" >New Dungeon: Beginner Dojo</div>
-        <div style="filter:hue-rotate(50deg)" >Mystery Gift unlocked</div>
-        <div style="filter:hue-rotate(200deg)" >Export Reward unlocked</div>
-        <div style="filter:hue-rotate(300deg)" >Poke-Mart unlocked</div>
-        </div>
-        `
-        openTooltip()
-    }
+    reward : [pkmn.tangela, item.chartiBerry,  item.bottleCap]
 }
 
 areas.vsBlackBeltRyan = {
