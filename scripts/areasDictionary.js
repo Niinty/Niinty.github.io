@@ -5577,7 +5577,7 @@ areas.vsGymLeaderMisty = {
         slot6Moves : [move.psychic.id, move.auroraBeam.id, move.waterPulse.id],
     },
     //reward : [item.mysticWater, item.goldenBottleCap],
-    itemReward: { 1 : { item: item.mysticWater.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
+    //itemReward: { 1 : { item: item.mysticWater.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
     encounterEffect: function() {
         document.getElementById("tooltipTop").style.display = `none`
         document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
@@ -5724,7 +5724,7 @@ areas.vsGymLeaderLtsurge = {
         slot6Moves : [move.thunderFang.id, move.discharge.id, move.agility.id, move.thunder.id],
     },
     //reward : [item.spellTag, item.goldenBottleCap],
-    itemReward: { 1 : { item: item.spellTag.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
+    //itemReward: { 1 : { item: item.spellTag.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
     encounterEffect: function() {
         document.getElementById("tooltipTop").style.display = `none`
         document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
