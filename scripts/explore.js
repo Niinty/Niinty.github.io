@@ -173,7 +173,6 @@ function givePkmn(poke, level) {
     poke.caught++;
     poke.movepool = poke.movepool || [];
     poke.moves = poke.moves || { slot1: null, slot2: null, slot3: null, slot4: null };
-    // Asegurarse de que exista newMoves
     poke.newMoves = poke.newMoves || [];
 
     for (let lvl = 1; lvl <= finalLevel; lvl++) {
@@ -181,46 +180,27 @@ function givePkmn(poke, level) {
             const learntMove = learnPkmnMove(poke.id, lvl);
             if (!learntMove) continue;
 
-            // Añadir al movepool solo si no está ya
             if (!poke.movepool.includes(learntMove)) {
                 poke.movepool.push(learntMove);
             }
-
         }
     }
 
-    // equips moves into slots
     const slots = ["slot1", "slot2", "slot3", "slot4"];
     const equippedMoves = Object.values(poke.moves).filter(m => m);
     const availableMoves = poke.movepool.filter(m => !equippedMoves.includes(m));
 
     let i = 0;
     for (const slot of slots) {
-    if (!poke.moves[slot] && availableMoves[i]) {
-        poke.moves[slot] = availableMoves[i];
-        i++;
-    }
+        if (!poke.moves[slot] && availableMoves[i]) {
+            poke.moves[slot] = availableMoves[i];
+            i++;
+        }
     }
 
     poke.level = finalLevel;
-
-
     poke.ability = learnPkmnAbility(poke.id);
 
-    // Checa se o post-it veio no Pokémon OU se o alerta global de ginásio está ligado
-    const isGymReward = poke.fromGym || window._isGymRewardDrop;
-    
-    // Se for recompensa de ginásio, usa 10% (1/10). Senão, usa 1/4096.
-    // (Para testar se está funcionando, coloque 1/1 no lugar de 1/10 para ser 100%)
-    const shinyChance = isGymReward ? (1/60) : (1/4096);
-
-    if (rng(shinyChance)) {
-        poke.shiny = true;
-    }
-
-    // DESLIGA O ALERTA para que os próximos Pokémons selvagens não venham com 10%
-    window._isGymRewardDrop = false; 
-    
     updatePokedex();
 }
 
@@ -1163,16 +1143,10 @@ function leaveCombat(){
         pkmn[i].ability = learnPkmnAbility(pkmn[i].id)
         divTag = `<span>New!</span>`
     }
-
-
-    /*if (rng(shinyPkmnChanceEncounter)){ //shiny
-        pkmn[i].shiny = true
-        divTag = `<span>✦Shiny✦!</span>`
-    }*/
         
     // Define a chance: olha para o post-it do Pokémon. Se tiver fromGym, usa 1/1 (100%). Se não, usa o padrão.
     // O jogo olha se o Pokémon tem o nosso carimbo
-    const chanceFinalShiny = pkmn[i].isGymReward ? (1/1) : shinyPkmnChanceEncounter;
+    const chanceFinalShiny = pkmn[i].isGymReward ? (0.015) : shinyPkmnChanceEncounter;
 
     // Roda a roleta
     if (rng(chanceFinalShiny) || pkmn[i].shiny === true){ 
