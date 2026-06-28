@@ -1456,7 +1456,7 @@ areas.advancedDojoI = {
     type: `dungeon`,
     background : `gym`,
     unlockDescription : `Defeat Aaron in VS to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderAaron.defeated },
+    unlockRequirement : function() { return areas.vsSchoolKidAaron.defeated },
     level : wildAreaLevel3,
     icon: item.tmDummy,
     spawns: {
@@ -1581,7 +1581,7 @@ areas.advancedDojoII = {
     background : `gym`,
     level : wildAreaLevel3,
     unlockDescription : `Defeat Aaron in VS to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderAaron.defeated },
+    unlockRequirement : function() { return areas.vsSchoolKidAaron.defeated },
     icon: item.tmDummy,
     spawns: {
         common : [pkmn.hariyama,pkmn.hitmonchan, pkmn.medicham, pkmn.throh],
@@ -1703,7 +1703,7 @@ areas.advancedDojoIII = {
     type: `dungeon`,
     background : `gym`,
     unlockDescription : `Defeat Aaron in VS to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderAaron.defeated },
+    unlockRequirement : function() { return areas.vsSchoolKidAaron.defeated },
     level : wildAreaLevel3,
     icon: item.tmDummy,
     spawns: {
@@ -5443,7 +5443,23 @@ areas.vsBugCatcherMilo = {
         slot5 : pkmn.pinsir,
         slot5Moves : [move.twineedle.id, move.bugBuzz.id],
     },
-    reward : [pkmn.tangela, item.chartiBerry,  item.bottleCap]
+    reward : [pkmn.tangela, item.chartiBerry,  item.bottleCap],
+    encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Sinnoh Underground</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Beginner Dojo</div>
+        <div style="filter:hue-rotate(50deg)" >Mystery Gift unlocked</div>
+        <div style="filter:hue-rotate(200deg)" >Export Reward unlocked</div>
+        <div style="filter:hue-rotate(300deg)" >Poke-Mart unlocked</div>
+        </div>
+        `
+    openTooltip()
+    }
 }
 
 areas.vsBlackBeltRyan = {
@@ -5503,7 +5519,7 @@ areas.vsSchoolKidAaron = {
         <div style="filter:hue-rotate(300deg)" >Training unlocked</div>
         </div>
         `
-        openTooltip()
+    openTooltip()
     }
 }
 
@@ -5529,31 +5545,6 @@ areas.vsRocketGrunt1 = {
         slot6Moves : [move.hex.id, move.ominousWind.id, move.psychic.id],
     },
     reward : [pkmn.gastly, item.bottleCap]
-}
-
-areas.vsGymLeaderMisty = {
-    name: `Gym Leader Misty`,
-    background : `gym`,
-    sprite : `misty`,
-    trainer: true,
-    type: `vs`,
-    level : 40,
-    team : {
-        slot1 : pkmn.golduck,
-        slot1Moves : [move.aquaJet.id,move.confusion.id, move.thunderWave.id],
-        slot2 : pkmn.quagsire,
-        slot2Moves : [move.waterGun.id, move.mudSlap.id, move.mudShot.id],
-        slot3 : pkmn.lanturn,
-        slot3Moves : [move.thunderWave.id, move.chargeBeam.id, move.waterGun.id],
-        slot4 : pkmn.floatzel,
-        slot4Moves : [move.aquaJet.id, move.futureSight.id, move.chillingWater.id],
-        slot5 : pkmn.lapras,
-        slot5Moves : [move.waterGun.id, move.waterPulse.id, move.psybeam.id],
-        slot6 : pkmn.starmie,
-        slot6Moves : [move.psychic.id, move.auroraBeam.id, move.waterPulse.id],
-    },
-    //reward : [item.mysticWater, item.goldenBottleCap],
-    //itemReward: { 1 : { item: item.mysticWater.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
 }
 
 areas.vsSwimmerDan = {
@@ -5601,7 +5592,19 @@ areas.vsVeteranToshiro = {
         slot6 : pkmn.shiftry,
         slot6Moves : [move.leafage.id, move.leafBlade.id, move.pursuit.id],
     },
-    reward : [pkmn.swirlix, item.bottleCap]
+    reward : [pkmn.swirlix, item.bottleCap],
+        encounterEffect: function() {
+        document.getElementById("tooltipTop").style.display = `none`
+        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
+        document.getElementById("tooltipBottom").style.display = `none`
+        document.getElementById("tooltipMid").innerHTML = `
+        <div class="genetics-overview-tags" >
+        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
+        <div style="filter:hue-rotate(0deg)" >New Dungeon: Expert Dojo</div>
+        </div>
+        `
+        openTooltip()
+    }
 }
 
 areas.vsClownDuck = {
@@ -5664,44 +5667,6 @@ areas.vsGymLeaderPhoebe = {
         openTooltip()
     }
 }
-
-areas.vsGymLeaderLtsurge = {
-    name: `Gym Leader Lt. Surge`,
-    background : `gym`,
-    sprite : `ltsurge`,
-    trainer: true,
-    type: `vs`,
-    level : 60,
-    team : {
-        slot1 : pkmn.jolteon,
-        slot1Moves : [move.agility.id, move.thunder.id, move.electroWeb.id, move.thunderShock.id],
-        slot2 : pkmn.magneton,
-        slot2Moves : [move.electricTerrain.id, move.magneticFlux.id, move.thunderWave.id, move.discharge.id],
-        slot3 : pkmn.electrode,
-        slot3Moves : [move.thunderbolt.id, move.thunder.id, move.agility.id, move.wildCharge.id],
-        slot4 : pkmn.lanturn,
-        slot4Moves : [move.surf.id, move.confuseRay.id, move.thunderWave.id, move.blizzard.id],
-        slot5 : pkmn.electabuzz,
-        slot5Moves : [move.thunderPunch.id, move.chargeBeam.id, move.wildCharge.id, move.thunderWave.id],
-        slot6 : pkmn.raichu,
-        slot6Moves : [move.thunderFang.id, move.discharge.id, move.agility.id, move.thunder.id],
-    },
-    //reward : [item.spellTag, item.goldenBottleCap],
-    //itemReward: { 1 : { item: item.spellTag.id, amount: 1 }, 2 : { item: item.fashionCase.id, amount: 3 }, 3 : { item: item.bottleCap.id, amount: 10 }},
-    encounterEffect: function() {
-        document.getElementById("tooltipTop").style.display = `none`
-        document.getElementById("tooltipTitle").innerHTML = `New features unlocked!`
-        document.getElementById("tooltipBottom").style.display = `none`
-        document.getElementById("tooltipMid").innerHTML = `
-        <div class="genetics-overview-tags" >
-        <div style="filter:hue-rotate(100deg)" >New Wild Area unlocked</div>
-        <div style="filter:hue-rotate(0deg)" >New Dungeon: Expert Dojo</div>
-        </div>
-        `
-        openTooltip()
-    }
-}
-
 
 areas.vsTwinTrainersBellisse = {
     name: `Twin Trainers Bellise`,
@@ -7756,18 +7721,13 @@ for (const i in areas){
 
     if (areas[i].type == "wild" && areas[i].level == wildAreaLevel3) {
         areas[i].unlockDescription = `Defeat Aaron in VS to unlock`
-        areas[i].unlockRequirement = function() { return areas.vsGymLeaderAaron.defeated }
+        areas[i].unlockRequirement = function() { return areas.vsSchoolKidAaron.defeated }
     }
 
     if (areas[i].type == "wild" && areas[i].level == wildAreaLevel4) {
-        areas[i].unlockDescription = `Defeat Gym Leader Lt. Surge in Ginásios to unlock`
-        areas[i].unlockRequirement = function() { return areas.vsGymLeaderLtsurge.defeated }
+        areas[i].unlockDescription = `Defeat Toshiro in VS to unlock`
+        areas[i].unlockRequirement = function() { return areas.vsVeteranToshiro.defeated }
     }
-
-    /*if (areas[i].type == "wild" && areas[i].level == wildAreaLevel5) {
-        areas[i].unlockDescription = `Defeat Gym Leader Erika in Ginásios to unlock`
-        areas[i].unlockRequirement = function() { return areas.vsGymLeaderErika.defeated }
-    }*/
 
 }
 
