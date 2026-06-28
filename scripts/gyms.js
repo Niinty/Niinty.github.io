@@ -8,8 +8,8 @@
 const GYM_BASE_HP_MULTIPLIER = 4
 
 // Configurações de Dificuldade Customizável (Ajuste aqui como quiser)
-const GYM_CUSTOM_LEVEL = 200       // Nível fixo ou base para os líderes sorteados
-const GYM_CUSTOM_HP_MULT = 15      // Multiplicador de HP customizado para o desafio
+const GYM_CUSTOM_LEVEL = 150       // Nível fixo ou base para os líderes sorteados
+const GYM_CUSTOM_HP_MULT = 10      // Multiplicador de HP customizado para o desafio
 
 // Regiões disponíveis no menu de Ginásios
 const GYM_REGIONS = [
@@ -40,11 +40,14 @@ const GYMS_LEADERS = [
         city: "Pewter City",
         sprite: "brock",
         background: "gym",
-        level: 20,
         description: "Especialista em Pokémon do tipo Pedra.",
         team: {
-            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
-            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+            slot1 : pkmn.onix, slot1Moves : [move.rockWrecker.id, move.stoneEdge.id, move.powerGem.id, move.rockSlide.id],
+            slot2 : pkmn.golem, slot2Moves : [move.meteorBeam.id, move.powerGem.id, move.rockSlide.id, move.smackDown.id],
+            slot3 : pkmn.aerodactyl, slot3Moves : [move.rockPolish.id, move.smackDown.id, move.fly.id, move.ancientPower.id],
+            slot4 : pkmn.rhydon, slot4Moves : [move.stoneEdge.id, move.rockTomb.id, move.thunder.id, move.earthquake.id],
+            slot5 : pkmn.kabutops, slot5Moves : [move.rockPolish.id, move.rockSlide.id, move.ancientPower.id, move.rollout.id],
+            slot6 : pkmn.omastar, slot6Moves : [move.smackDown.id, move.powerGem.id, move.surf.id, move.stoneEdge.id],
         }
     },
     {
@@ -54,11 +57,14 @@ const GYMS_LEADERS = [
         city: "Cerulean City",
         sprite: "misty",
         background: "gym",
-        level: 40,
         description: "Especialista em Pokémon do tipo Água.",
         team: {
-            slot1: pkmn.staryu, slot1Moves: [move.waterGun.id],
-            slot2: pkmn.starmie, slot2Moves: [move.bubbleBeam.id]
+            slot1 : pkmn.lapras, slot1Moves : [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2 : pkmn.cloyster, slot2Moves : [move.glaciate.id, move.mountainGale.id, move.snipeShot.id, move.tripleAxel.id],
+            slot3 : pkmn.vaporeon, slot3Moves : [move.surf.id, move.fishiousRend.id, move.sparklingAria.id, move.hydroCannon.id],
+            slot4 : pkmn.gyarados, slot4Moves : [move.clamp.id, move.surf.id, move.scald.id, move.hydroCannon.id],
+            slot5 : pkmn.slowbro, slot5Moves : [move.jetPunch.id, move.snipeShot.id, move.fishiousRend.id, move.tripleDive.id],
+            slot6 : pkmn.starmie, slot6Moves : [move.waterShuriken.id, move.aquaStep.id, move.surf.id, move.sparklingAria.id],
         }
     },
     {
@@ -68,10 +74,14 @@ const GYMS_LEADERS = [
         city: "Vermilion City",
         sprite: "ltsurge",
         background: "gym",
-        level: 60,
         description: "Especialista em Pokémon do tipo Elétrico.",
         team: {
-            slot1: pkmn.raichu, slot1Moves: [move.thunderbolt.id]
+            slot1 : pkmn.raichu, slot1Moves : [move.thunder.id, move.boltStrike.id, move.thunderPunch.id, move.wildCharge.id],
+            slot2 : pkmn.jolteon, slot2Moves : [move.zapCannon.id, move.wildCharge.id, move.electroBall.id, move.voltTackle.id],
+            slot3 : pkmn.electabuzz, slot3Moves : [move.auraWheel.id, move.thunder.id, move.sparklingAria.id, move.discharge.id],
+            slot4 : pkmn.electrode, slot4Moves : [move.boltStrike.id, move.zingZap.id, move.voltTackle.id, move.thunderCage.id],
+            slot5 : pkmn.magneton, slot5Moves : [move.ionise.id, move.flashCannon.id, move.electroBall.id, move.thunder.id],
+            slot6 : pkmn.zapdos, slot6Moves : [move.zapCannon.id, move.zingZap.id, move.auraWheel.id, move.voltTackle.id],
         }
     },
     {
@@ -81,15 +91,14 @@ const GYMS_LEADERS = [
         city: "Celadon City",
         sprite: "erika",
         background: "gym",
-        level: 80,
         description: "Especialista em Pokémon do tipo Grama.",
         team: {
-            slot1 : pkmn.vileplume, slot1Moves : [move.trailblaze.id, move.sludge.id, move.razorLeaf.id, move.acid.id],
-            slot2 : pkmn.clefable, slot2Moves : [move.lunarDance.id, move.alluringVoice.id, move.fairyWind.id, move.disarmingVoice.id],
-            slot3 : pkmn.tangela, slot3Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
-            slot4 : pkmn.dewgong, slot4Moves : [move.surf.id, move.auroraBeam.id, move.scald.id, move.blizzard.id],
+            slot1 : pkmn.vileplume, slot1Moves : [move.trailblaze.id, move.sludge.id, move.razorLeaf.id, move.chloroblast.id],
+            slot2 : pkmn.venusaur, slot2Moves : [move.seedFlare.id, move.toxic.id, move.cottonGuard.id, move.trailblaze.id],
+            slot3 : pkmn.tangela, slot3Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.tropKick.id],
+            slot4 : pkmn.parasect, slot4Moves : [move.drumBeating.id, move.seedFlare.id, move.cottonGuard.id, move.chloroblast.id],
             slot5 : pkmn.victreebel, slot5Moves : [move.appleAcid.id, move.noxiousTorque.id, move.seedBomb.id, move.toxic.id],
-            slot6 : pkmn.exeggutor, slot6Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psybeam.id],
+            slot6 : pkmn.exeggutor, slot6Moves : [move.barrage.id, move.tropKick.id, move.magicalLeaf.id, move.psybeam.id],
         },
     },
     {
@@ -99,15 +108,14 @@ const GYMS_LEADERS = [
         city: "Fuchsia City",
         sprite: "koga",
         background: "gym",
-        level: 100,
         description: "Especialista em Pokémon do tipo Poison.",
         team: {
-            slot1 : pkmn.venomoth, slot1Moves : [move.stunSpore.id, move.psychic.id, move.crossPoison.id, move.hyperBeam.id],
+            slot1 : pkmn.gengar, slot1Moves : [move.moongeistBeam.id, move.toxic.id, move.phantomForce.id, move.venoshock.id],
             slot2 : pkmn.muk, slot2Moves : [move.sludge.id, move.hyperBeam.id, move.toxic.id, move.crossPoison.id],
-            slot3 : pkmn.weezing, slot3Moves : [move.sludge.id, move.fireBlast.id, move.toxic.id, move.hyperBeam.id],
-            slot4 : pkmn.hypno, slot4Moves : [move.psychic.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
-            slot5 : pkmn.tangela, slot5Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
-            slot6 : pkmn.parasect, slot6Moves : [move.seedBomb.id, move.razorLeaf.id, move.cottonSpore.id, move.bugBuzz.id],
+            slot3 : pkmn.nidoking, slot3Moves : [move.sludge.id, move.acidArmor.id, move.earthquake.id, move.sandsearStorm.id],
+            slot4 : pkmn.venusaur, slot4Moves : [move.seedFlare.id, move.toxic.id, move.cottonGuard.id, move.trailblaze.id],
+            slot5 : pkmn.nidoqueen, slot5Moves : [move.highHorsepower.id, move.crossPoison.id, move.acidArmor.id, move.sludgeBomb.id],
+            slot6 : pkmn.tentacruel, slot6Moves : [move.surf.id, move.sludge.id, move.sludgeBomb.id, move.scald.id],
         },
     },
     {
@@ -117,15 +125,14 @@ const GYMS_LEADERS = [
         city: "Fuchsia City",
         sprite: "janine",
         background: "gym",
-        level: 100,
         description: "Especialista em Pokémon do tipo Poison.",
         team: {
-            slot1 : pkmn.venomoth, slot1Moves : [move.stunSpore.id, move.psychic.id, move.crossPoison.id, move.hyperBeam.id],
-            slot2 : pkmn.muk, slot2Moves : [move.sludge.id, move.hyperBeam.id, move.toxic.id, move.crossPoison.id],
-            slot3 : pkmn.weezing, slot3Moves : [move.sludge.id, move.fireBlast.id, move.toxic.id, move.hyperBeam.id],
-            slot4 : pkmn.starmie, slot4Moves: [move.bubbleBeam.id, move.surf, move.aquaJet, move.bubbleBeam],
-            slot5 : pkmn.tangela, slot5Moves : [move.seedBomb.id, move.leafage.id, move.razorLeaf.id, move.cottonSpore.id],
-            slot6 : pkmn.parasect, slot6Moves : [move.seedBomb.id, move.razorLeaf.id, move.cottonSpore.id, move.bugBuzz.id],
+            slot1 : pkmn.weezing, slot1Moves : [move.sludgeBomb.id, move.toxic.id, move.crossPoison.id, move.venoshock.id],
+            slot2 : pkmn.victreebel, slot2Moves : [move.sludge.id, move.drumBeating.id, move.poisonJab.id, move.trailblaze.id],
+            slot3 : pkmn.nidoking, slot3Moves : [move.muddyWater.id, move.acidArmor.id, move.earthquake.id, move.sandsearStorm.id],
+            slot4 : pkmn.venusaur, slot4Moves : [move.seedFlare.id, move.toxic.id, move.barbBarrage.id, move.trailblaze.id],
+            slot5 : pkmn.golbat, slot5Moves : [move.acrobatics.id, move.crossPoison.id, move.peck.id, move.sludgeBomb.id],
+            slot6 : pkmn.tentacruel, slot6Moves : [move.sludge.id, move.surf.id, move.sludgeBomb.id, move.scald.id],
         },
     },
     {
@@ -135,15 +142,14 @@ const GYMS_LEADERS = [
         city: "Saffron City",
         sprite: "sabrina",
         background: "gym",
-        level: 100,
         description: "Especialista em Pokémon do tipo Psíquico.",
         team: {
-            slot1 : pkmn.alakazam, slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.dig.id],
-            slot2 : pkmn.snorlax, slot2Moves : [move.amnesia.id, move.hyperBeam.id, move.iceBeam.id, move.thunderbolt.id],
-            slot3 : pkmn.mrmime, slot3Moves : [move.amnesia.id, move.confusion.id, move.futureSight.id, move.psybeam.id],
-            slot4 : pkmn.hypno, slot4Moves : [move.amnesia.id, move.powerupPunch.id, move.psybeam.id, move.lowSweep.id],
-            slot5 : pkmn.exeggutor, slot5Moves : [move.barrage.id, move.futureSight.id, move.magicalLeaf.id, move.psybeam.id],
-            slot6 : pkmn.wigglytuff, slot6Moves : [move.hyperVoice.id, move.iceBeam.id, move.moonblast.id, move.hyperBeam.id],
+            slot1 : pkmn.alakazam, slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.kinesis.id],
+            slot2 : pkmn.starmie, slot2Moves : [move.amnesia.id, move.lusterPurge.id, move.surf.id, move.prismaticLaser.id],
+            slot3 : pkmn.mrmime, slot3Moves : [move.kinesis.id, move.confusion.id, move.futureSight.id, move.psybeam.id],
+            slot4 : pkmn.hypno, slot4Moves : [move.amnesia.id, move.mistBall.id, move.psybeam.id, move.prismaticLaser.id],
+            slot5 : pkmn.exeggutor, slot5Moves : [move.barrage.id, move.futureSight.id, move.prismaticLaser.id, move.psybeam.id],
+            slot6 : pkmn.slowbro, slot6Moves : [move.kinesis.id, move.mistBall.id, move.mysticalPower.id, move.lunarDance.id],
         },
     },
     {
@@ -153,14 +159,13 @@ const GYMS_LEADERS = [
         city: "Cinnabar City",
         sprite: "blaine",
         background: "gym",
-        level: 100,
         description: "Especialista em Pokémon do tipo Fogo.",
         team: {
             slot1 : pkmn.charizard, slot1Moves : [move.flamethrower.id, move.firePunch.id, move.fireBlast.id, move.flareBlitz.id],
             slot2 : pkmn.arcanine, slot2Moves : [move.fireFang.id, move.fireSpin.id, move.flamethrower.id, move.flareBlitz.id],
             slot3 : pkmn.rapidash, slot3Moves : [move.overheat.id, move.heatWave.id, move.fireFang.id, move.flameCharge.id],
             slot4 : pkmn.ninetales, slot4Moves : [move.flamethrower.id, move.fireFang.id, move.fireBlast.id, move.fireSpin.id],
-            slot5 : pkmn.flareon, slot5Moves : [move.fireBlast.id, move.fireFang.id, move.flameCharge.id, move.flamethrower.id],
+            slot5 : pkmn.moltres, slot5Moves : [move.fireBlast.id, move.flameBurst.id, move.vCreate.id, move.flamethrower.id],
             slot6 : pkmn.magmar, slot6Moves : [move.firePunch.id, move.flamethrower.id, move.fireBlast.id, move.blazeKick.id],
         },
     },
@@ -179,7 +184,7 @@ const GYMS_LEADERS = [
             slot3 : pkmn.nidoqueen, slot3Moves : [move.toxicThread.id, move.venoshock.id, move.crossPoison.id, move.poisonClaw.id],
             slot4 : pkmn.dugtrio, slot4Moves : [move.dig.id, move.highHorsepower.id, move.bulldoze.id, move.earthquake.id],
             slot5 : pkmn.rhydon, slot5Moves : [move.rototiller.id, move.scorchingSands.id, move.earthPower.id, move.thunder.id],
-            slot6 : pkmn.mewtwo, slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.zenHeadbut.id],
+            slot6 : pkmn.giovanniMewtwo, slot6Moves : [move.calmMind.id, move.psychic.id, move.shadowBall.id, move.zenHeadbut.id],
         },
     },
 
@@ -193,13 +198,17 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Agua.",
         team: {
-            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
-            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+            slot1 : pkmn.lapras, slot1Moves : [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2 : pkmn.cloyster, slot2Moves : [move.glaciate.id, move.mountainGale.id, move.snipeShot.id, move.tripleAxel.id],
+            slot3 : pkmn.blastoise, slot3Moves : [move.surf.id, move.fishiousRend.id, move.sparklingAria.id, move.hydroCannon.id],
+            slot4 : pkmn.gyarados, slot4Moves : [move.clamp.id, move.surf.id, move.scald.id, move.hydroCannon.id],
+            slot5 : pkmn.seadra, slot5Moves : [move.jetPunch.id, move.snipeShot.id, move.fishiousRend.id, move.tripleDive.id],
+            slot6 : pkmn.starmie, slot6Moves : [move.waterShuriken.id, move.aquaStep.id, move.surf.id, move.sparklingAria.id],
         },
     },
 
     //Johto
-    {
+    /*{
         areaId: "vsGymLeaderFalkner",
         region: "johto",
         name: "Gym Leader Falkner",
@@ -254,7 +263,7 @@ const GYMS_LEADERS = [
             slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
             slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
         },
-    },
+    },*/
 ]
 
 function getGymMaxDifficulty() {
