@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 14;
+const rotationWildMax = 15;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -1453,6 +1453,83 @@ areas.mtSilver = {
         common : [pkmn.ponyta,pkmn.sneasel],
         uncommon : [pkmn.poliwag,pkmn.doduo],
         rare : [pkmn.ursaring]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 15
+areas.petalburgWoods = {
+    rotation : 15,
+    name: `Petalburg Woods`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.shroomish,
+    spawns: {
+        common : [pkmn.shroomish,pkmn.wurmple],
+        uncommon : [pkmn.tailow,pkmn.poochyena],
+        rare : [pkmn.phantump]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.graniteCave = {
+    rotation : 15,
+    name: `Granite Cave`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.aron,
+    spawns: {
+        common : [pkmn.aron,pkmn.nosepass],
+        uncommon : [pkmn.abra,pkmn.mawile],
+        rare : [pkmn.sableye]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.meteorFalls = {
+    rotation : 15,
+    name: `Meteor Falls`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.barboach,
+    spawns: {
+        common : [pkmn.barboach,pkmn.goldeen],
+        uncommon : [pkmn.lunatone,pkmn.solrock],
+        rare : [pkmn.wishcash]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.shoalCave = {
+    rotation : 15,
+    name: `Shoal Cave`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.wailmer,
+    spawns: {
+        common : [pkmn.wailmer,pkmn.spheal],
+        uncommon : [pkmn.snorunt,pkmn.tentacool],
+        rare : [pkmn.golbat]
     },
     drops: {
         common : [item.mysteryEgg],
