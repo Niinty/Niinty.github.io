@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 13;
+const rotationWildMax = 14;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -1308,17 +1308,17 @@ areas.relicPassage = {
 }
 
 //Rotation 13
-areas.rota1Kanto = {
+areas.viridianForest = {
     rotation : 13,
-    name: `Rota 1 - Kanto`,
-    level : wildAreaLevel1,
+    name: `Viridian Forest`,
+    level : wildAreaLevel2,
     type: `wild`,
-    background : `route`,
-    icon: pkmn.pidgey,
+    background : `exploreHead1`,
+    icon: pkmn.caterpie,
     spawns: {
-        common : [pkmn.pidgey,pkmn.rattata],
-        uncommon : [pkmn.oddish,pkmn.bellsprout],
-        rare : [pkmn.pikachu]
+        common : [pkmn.caterpie,pkmn.weedle],
+        uncommon : [pkmn.metapod,pkmn.kakuna],
+        rare : [pkmn.beedrill]
     },
     drops: {
         common : [item.mysteryEgg],
@@ -1327,17 +1327,17 @@ areas.rota1Kanto = {
     }
 }
 
-areas.rota2Kanto = {
+areas.lavenderTown = {
     rotation : 13,
-    name: `Rota 2 - Kanto`,
-    level : wildAreaLevel2,
+    name: `Lavender Town`,
+    level : wildAreaLevel3,
     type: `wild`,
-    background : `route`,
-    icon: pkmn.nidoranF,
+    background : `night`,
+    icon: pkmn.gastly,
     spawns: {
-        common : [pkmn.weedle,pkmn.caterpie],
-        uncommon : [pkmn.nidoranF,pkmn.nidoranM],
-        rare : [pkmn.mrmime]
+        common : [pkmn.gastly,pkmn.zubat],
+        uncommon : [pkmn.chansey,pkmn.haunter],
+        rare : [pkmn.marowak]
     },
     drops: {
         common : [item.mysteryEgg],
@@ -1346,17 +1346,17 @@ areas.rota2Kanto = {
     }
 }
 
-areas.rota3Kanto = {
+areas.seafoamIslands = {
     rotation : 13,
-    name: `Rota 3 - Kanto`,
-    level : wildAreaLevel3,
+    name: `Seafoam Islands`,
+    level : wildAreaLevel4,
     type: `wild`,
-    background : `route`,
-    icon: pkmn.jigglypuff,
+    background : `iceCave`,
+    icon: pkmn.horsea,
     spawns: {
-        common : [pkmn.spearow,pkmn.sandshrew],
-        uncommon : [pkmn.jigglypuff,pkmn.zubat],
-        rare : [pkmn.mankey]
+        common : [pkmn.horsea,pkmn.krabby],
+        uncommon : [pkmn.psyduck,pkmn.slowpoke],
+        rare : [pkmn.seel]
     },
     drops: {
         common : [item.mysteryEgg],
@@ -1368,7 +1368,7 @@ areas.rota3Kanto = {
 areas.mtMoon = {
     rotation : 13,
     name: `Mt. Moon`,
-    level : wildAreaLevel4,
+    level : wildAreaLevel5,
     type: `wild`,
     background : `cave`,
     icon: pkmn.geodude,
@@ -1376,6 +1376,83 @@ areas.mtMoon = {
         common : [pkmn.clefairy,pkmn.paras],
         uncommon : [pkmn.geodude,pkmn.onix],
         rare : [pkmn.chansey]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 14
+areas.ilexForest = {
+    rotation : 14,
+    name: `Ilex Forest`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.poliwag,
+    spawns: {
+        common : [pkmn.poliwag,pkmn.hoothoot],
+        uncommon : [pkmn.exeggute,pkmn.pineco],
+        rare : [pkmn.butterfree]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.whirlIslands = {
+    rotation : 14,
+    name: `Whirl Islands`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `trench`,
+    icon: pkmn.tentacool,
+    spawns: {
+        common : [pkmn.tentacool,pkmn.magikarp],
+        uncommon : [pkmn.krabby,pkmn.seel],
+        rare : [pkmn.seadra]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.burnedTower = {
+    rotation : 14,
+    name: `Burned Tower`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `tower`,
+    icon: pkmn.koffing,
+    spawns: {
+        common : [pkmn.koffing,pkmn.zubat],
+        uncommon : [pkmn.raticate,pkmn.weezing],
+        rare : [pkmn.magmar]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.mtSilver = {
+    rotation : 14,
+    name: `Mt. Silver`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `mountain`,
+    icon: pkmn.ponyta,
+    spawns: {
+        common : [pkmn.ponyta,pkmn.sneasel],
+        uncommon : [pkmn.poliwag,pkmn.doduo],
+        rare : [pkmn.ursaring]
     },
     drops: {
         common : [item.mysteryEgg],
