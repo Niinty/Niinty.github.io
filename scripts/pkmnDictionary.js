@@ -1362,6 +1362,7 @@ pkmn.paras = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.parasect, level: evolutionLevel2 } } },
     hiddenAbility: ability.colorSpore,
+    lore: `Os fungos em suas costas crescem sugando nutrientes do hospedeiro, controlando-o.`,
 }
 
 pkmn.parasect = {
@@ -1375,6 +1376,7 @@ pkmn.parasect = {
         spe: 30,
     },
     hiddenAbility: ability.colorSpore,
+    lore: `O cogumelo nas costas assumiu o controle total do inseto, que agora vagueia sem rumo.`,
 }
 
 // 048 Venonat → Venomoth
@@ -1390,6 +1392,7 @@ pkmn.venonat = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.venomoth, level: evolutionLevel2 } } },
     hiddenAbility: ability.moltShed,
+    lore: `Seus olhos servem como radar, emitindo raios que podem paralisar vítimas.`,
 }
 
 pkmn.venomoth = {
@@ -1403,6 +1406,7 @@ pkmn.venomoth = {
         spe: 90,
     },
     hiddenAbility: ability.moltShed,
+    lore: `Suas asas soltam pó tóxico ao bater, que pode causar náuseas ou inconsciência.`,
 }
 
 // 050 Diglett → Dugtrio
@@ -1418,6 +1422,7 @@ pkmn.diglett = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.dugtrio, level: evolutionLevel2 } } },
     hiddenAbility: ability.sandForce,
+    lore: `Ele vive no subsolo. A superfície que ele revira é ideal para o plantio de vegetais.`,
 }
 
 pkmn.alolanDiglett = {
@@ -1431,6 +1436,7 @@ pkmn.alolanDiglett = {
         spe: 90,
     },
     evolve: function() { return { 1: { pkmn: pkmn.alolanDugtrio, level: evolutionLevel2 } } },
+    lore: `Graças ao solo vulcânico rico em ferro de Alola, ele desenvolveu lindos bigodes metálicos na cabeça`,
 }
 
 pkmn.dugtrio = {
@@ -1444,6 +1450,7 @@ pkmn.dugtrio = {
         spe: 120,
     },
     hiddenAbility: ability.sandForce,
+    lore: `Um trio de Diglett que trabalha em equipe para escavar túneis em alta velocidade.`,
 }
 
 pkmn.alolanDugtrio = {
@@ -1455,7 +1462,9 @@ pkmn.alolanDugtrio = {
         satk: 50,
         sdef: 70,
         spe: 110,
-    }
+    },
+    hiddenAbility: ability.ferrilate,
+    lore: `Na região de Alola, é considerado uma divindade feminina da terra. Acredita-se que pegar seus pelos traga má sorte.`, 
 }
 
 // 052 Meowth → Persian / Galarian Meowth → Perrserker
@@ -1471,7 +1480,8 @@ pkmn.meowth = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.persian, level: evolutionLevel2 } } },
     hiddenAbility: ability.technician,
-    signature : move.payDay
+    signature : move.payDay,
+    lore: `Adora objetos brilhantes e coleciona moedas roubadas de humanos.`,
 }
 
 pkmn.meowthGmax = {
@@ -1485,7 +1495,8 @@ pkmn.meowthGmax = {
         spe: 40*3,
     },
     hiddenAbility: ability.technician,
-    signature : move.payDay
+    signature : move.payDay,
+    lore: `"O seu desejo por objetos brilhantes aumenta a tal ponto que ele causa danos às janelas de arranha-céus e paredes externas para afiar as suas garras. A moeda gigante na sua cabeça emite tanto poder que envolve toda a área num brilho dourado`,
 }
 
 pkmn.alolanMeowth = {
@@ -1500,7 +1511,8 @@ pkmn.alolanMeowth = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.alolanPersian, level: evolutionLevel2 } } },
     hiddenAbility: ability.technician,
-    signature : move.payDay
+    signature : move.payDay,
+    lore: `Originalmente não era encontrado em Alola. Eles se tornaram selvagens e aumentaram em população devido à ação humana.`,
 }
 
 pkmn.galarianMeowth = {
@@ -1513,7 +1525,10 @@ pkmn.galarianMeowth = {
         sdef: 40,
         spe: 40,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.perrserker, level: evolutionLevel2 } } }
+    evolve: function() { return { 1: { pkmn: pkmn.perrserker, level: evolutionLevel2 } } },
+    hiddenAbility: ability.technician,
+    signature : move.payDay,
+    lore: `Viver com um povo selvagem e marinheiro endureceu tanto o corpo deste Pokémon que partes dele se transformaram em ferro.`,
 }
 
 pkmn.persian = {
@@ -1527,7 +1542,8 @@ pkmn.persian = {
         spe: 115,
     },
     hiddenAbility: ability.technician,
-    signature : move.payDay
+    signature : move.payDay,
+    lore: `Destaca-se pelo temperamento cruel e violento, atacando quando a cauda é erguida ou ao olhar nos olhos, com garras afiadas.`,
 }
 
 pkmn.alolanPersian = {
@@ -1541,7 +1557,8 @@ pkmn.alolanPersian = {
         spe: 115,
     },
     hiddenAbility: ability.technician,
-    signature : move.payDay
+    signature : move.payDay,
+    lore: `Seu rosto redondo e sua pelagem macia e aveludada fizeram dele um Pokémon muito popular em Alola.`,
 }
 
 pkmn.perrserker = {
@@ -1554,6 +1571,9 @@ pkmn.perrserker = {
     sdef: 60,
     spe: 50,
   },
+  hiddenAbility: ability.technician,
+  signature : move.payDay,
+  lore: `O que parece ser um capacete de ferro é, na verdade, cabelo endurecido. Este Pokémon vive para a emoção da batalha.`,
 }
 
 // 054 Psyduck → Golduck
@@ -1569,7 +1589,8 @@ pkmn.psyduck = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.golduck, level: evolutionLevel2 } } },
     hiddenAbility: ability.rainDish,
-    signature : move.soak
+    signature : move.soak,
+    lore: `Sofre de dores de cabeça constantes. Quando a dor aumenta, libera poderes psíquicos.`,
 }
 
 pkmn.golduck = {
@@ -1583,7 +1604,8 @@ pkmn.golduck = {
         spe: 85,
     },
     hiddenAbility: ability.rainDish,
-    signature : move.soak
+    signature : move.soak,
+    lore: `Seus nados são graciosos, mas pode nadar em velocidades espantosas com suas nadadeiras.`,
 }
 
 // 056 Mankey → Primeape
@@ -1599,7 +1621,8 @@ pkmn.mankey = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.primeape, level: evolutionLevel2 } } },
     hiddenAbility: ability.rivalry,
-    signature : move.rageFist
+    signature : move.rageFist,
+    lore: `Ele se enfurece facilmente. Se um membro do grupo se irrita, todos começam a brigar.`,
 }
 
 pkmn.primeape = {
@@ -1614,6 +1637,7 @@ pkmn.primeape = {
     },
     hiddenAbility: ability.rivalry,
     signature : move.rageFist,
+    lore: `Ele é tão agressivo que nunca para de perseguir quem o irrita, mesmo que isso custe sua vida.`,
     evolve: function() { return { 1: { pkmn: pkmn.annihilape, item: item.oddRock } } }
 }
 
@@ -1629,6 +1653,7 @@ pkmn.annihilape = {
   },
     hiddenAbility: ability.rivalry,
     signature : move.rageFist,
+    lore: `Quando sua raiva subiu além de um ponto crítico, este Pokémon ganhou poder que é desvinculado dos limites de seu corpo físico.`,
 }
 
 // 058 Growlithe → Arcanine
@@ -1645,6 +1670,7 @@ pkmn.growlithe = {
     evolve: function() { return { 1: { pkmn: pkmn.arcanine, item: item.fireStone } } },
     hiddenAbility: ability.fieryPelt,
     eggMove : move.howl,
+    lore: `Ele é extremamente leal ao seu treinador, protegendo-o com seu sopro de fogo.`,
 }
 
 pkmn.hisuianGrowlithe = {
@@ -1659,7 +1685,8 @@ pkmn.hisuianGrowlithe = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.hisuianArcanine, level: evolutionLevel2 } } },
     hiddenAbility: ability.sandyPelt,
-    signature : move.heatCrash
+    signature : move.heatCrash,
+    lore: `Eles patrulham seu território em pares. Acredito que os componentes de rocha ígnea na pelagem dessa espécie sejam resultado da atividade vulcânica em seu habitat.`,
 }
 
 pkmn.arcanine = {
@@ -1674,6 +1701,7 @@ pkmn.arcanine = {
     },
     hiddenAbility: ability.fieryPelt,
     eggMove : move.howl,
+    lore: `Considerado um Pokémon lendário em muitas regiões por sua velocidade e elegância.`,
 }
 
 pkmn.hisuianArcanine = {
@@ -1687,7 +1715,8 @@ pkmn.hisuianArcanine = {
         spe: 95,
     },
     hiddenAbility: ability.sandyPelt,
-    signature : move.heatCrash
+    signature : move.heatCrash,
+    lore: `Ataca os inimigos com presas envoltas em chamas ardentes. Apesar do seu volume, desvia-se habilmente para todos os lados, conduzindo os adversários a uma perseguição enganadoramente divertida, enquanto dança à volta deles.`,
 }
 
 // 060 Poliwag → Poliwhirl → Poliwrath / Politoed
