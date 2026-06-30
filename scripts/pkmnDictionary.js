@@ -932,7 +932,7 @@ pkmn.raichu = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.megaRaichuX, item: item.raichutiteX }, 
-            { pkmn: pkmn.megaRaichuY, item: item.raichutiteY },
+            2: { pkmn: pkmn.megaRaichuY, item: item.raichutiteY },
         } 
     },
     hiddenAbility: ability.electricSurge,
