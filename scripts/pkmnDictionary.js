@@ -34,8 +34,12 @@ pkmn.ivysaur = {
         sdef: 80,
         spe: 60,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.venusaur, level: evolutionLevel2 },
-                                  2: { pkmn: pkmn.venusaurf, item: item.shinyStone } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.venusaur, level: evolutionLevel2 },
+            2: { pkmn: pkmn.venusaurF, item: item.shinyStone } 
+        } 
+    },
     hiddenAbility: ability.thickFat,
     lore: `Há um bulbo nas costas deste Pokémon. Para sustentar seu peso, as pernas e o tronco de Ivysaur crescem grossos e fortes. Se ele começar a passar mais tempo deitado sob a luz do sol, é sinal de que o botão logo florescerá e se transformará em uma grande flor.`,
     signature : move.frenzyPlant
@@ -356,7 +360,7 @@ pkmn.metapod = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.butterfree, level: evolutionLevel2 },
-            2: { pkmn: pkmn.butterfreef, item: item.shinyStone },
+            2: { pkmn: pkmn.butterfreeF, item: item.shinyStone },
         } 
     },
     lore: `Sua carapaça está cheia de suas partes internas macias. Ele não se move muito por causa do risco de acabar derramando suas entranhas sem querer.`,
@@ -561,7 +565,7 @@ pkmn.rattataF = {
     },
     evolve: function() { 
         return {
-            1: { pkmn: pkmn.raticatef, level: evolutionLevel1 },
+            1: { pkmn: pkmn.raticateF, level: evolutionLevel1 },
         }
     },
     lore: `Vivendo onde quer que haja comida disponível, ele vasculha incessantemente por mantimentos o dia inteiro.`,
@@ -715,7 +719,7 @@ pkmn.pichu = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.pikachu, level: evolutionLevel1 },
-            2: { pkmn: pkmn.pikachuf, item: item.shinyStone },
+            2: { pkmn: pkmn.pikachuF, item: item.shinyStone },
         }
     },
     hiddenAbility: ability.electricSurge,
@@ -751,7 +755,7 @@ pkmn.pikachuF = {
     },
     evolve: function() { 
         return { 
-            1: { pkmn: pkmn.raichuf, item: item.thunderStone },
+            1: { pkmn: pkmn.raichuF, item: item.thunderStone },
         }
     },
     hiddenAbility: ability.electricSurge,
@@ -1423,7 +1427,7 @@ pkmn.oddish = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.gloom, level: evolutionLevel1 },
-            2: { pkmn: pkmn.gloomf, item: item.shinyStone },
+            2: { pkmn: pkmn.gloomF, item: item.shinyStone },
         }
     },
     hiddenAbility: ability.chlorophyll,
