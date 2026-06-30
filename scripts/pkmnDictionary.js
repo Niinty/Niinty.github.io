@@ -35,7 +35,7 @@ pkmn.ivysaur = {
         spe: 60,
     },
     evolve: function() { return { 1: { pkmn: pkmn.venusaur, level: evolutionLevel2 },
-                                  2: { pkmn: pkmn.venusaurF, item: item.shinyStone } } },
+                                  2: { pkmn: pkmn.venusaurf, item: item.shinyStone } } },
     hiddenAbility: ability.thickFat,
     lore: `Há um bulbo nas costas deste Pokémon. Para sustentar seu peso, as pernas e o tronco de Ivysaur crescem grossos e fortes. Se ele começar a passar mais tempo deitado sob a luz do sol, é sinal de que o botão logo florescerá e se transformará em uma grande flor.`,
     signature : move.frenzyPlant
