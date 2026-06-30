@@ -1412,7 +1412,7 @@ areas.whirlIslands = {
     background : `trench`,
     icon: pkmn.tentacool,
     spawns: {
-        common : [pkmn.tentacool,pkmn.magikarp],
+        common : [pkmn.tentacool,pkmn.magikarpF],
         uncommon : [pkmn.krabby,pkmn.seel],
         rare : [pkmn.seadra]
     },
@@ -7692,12 +7692,12 @@ const wildlifePoolCommon = [
     pkmn.purrloin.id, pkmn.blitzle.id, pkmn.drilbur.id, pkmn.karrablast.id, pkmn.tynamo.id, pkmn.shelmet.id, pkmn.bunnelby.id, pkmn.flabebe.id, pkmn.skiddo.id, 
     pkmn.dwebble.id, pkmn.tirtouga.id, pkmn.solosis.id, pkmn.pancham.id, pkmn.spritzee.id, pkmn.clauncher.id, pkmn.bergmite.id, pkmn.yungoos.id, 
     pkmn.wishiwashi.id, pkmn.dewpider.id, pkmn.cutiefly.id, pkmn.fomantis.id, pkmn.morelull.id, pkmn.stufful.id, pkmn.bounsweet.id, pkmn.sandygast.id, pkmn.skwovet.id, pkmn.gossifleur.id, 
-    pkmn.yamper.id, pkmn.toxel.id, pkmn.indeedee.id, pkmn.cufant.id, pkmn.plusle.id, pkmn.chewtle.id,
+    pkmn.yamper.id, pkmn.toxel.id, pkmn.indeedee.id, pkmn.cufant.id, pkmn.plusle.id, pkmn.chewtle.id, pkmn.magikarpF.id, pkmn.zubatF.id, pkmn.pikachuF.id,
 
 
     //fodder
     pkmn.rattata.id, pkmn.zigzagoon.id, pkmn.starly.id, pkmn.pidgey.id, pkmn.patrat.id, pkmn.caterpie.id, pkmn.taillow.id, pkmn.lillipup.id,
-    pkmn.fletchling.id, pkmn.zubat.id, pkmn.poochyena.id, pkmn.pidove.id, pkmn.weedle.id, pkmn.rookidee.id, 
+    pkmn.fletchling.id, pkmn.zubat.id, pkmn.poochyena.id, pkmn.pidove.id, pkmn.weedle.id, pkmn.rookidee.id,pkmn.rattataF.id, 
     pkmn.pikipek.id, pkmn.spinarak.id, pkmn.hoppip.id, pkmn.wingull.id, pkmn.wooloo.id, pkmn.sunkern.id,
     pkmn.scatterbug.id, pkmn.kricketot.id, pkmn.whismur.id,  pkmn.venipede.id, pkmn.blipbug.id, pkmn.pawmi.id,
     pkmn.oddish.id, pkmn.bellsprout.id,pkmn.geodude.id, pkmn.magikarp.id, pkmn.marill.id, pkmn.wooper.id,
@@ -7713,7 +7713,7 @@ const wildlifePoolCommon = [
 
 const wildlifePoolUncommon = [
     
-    pkmn.tandemaus.id, pkmn.maschiff.id, pkmn.klawf.id, pkmn.finizen.id, pkmn.orthworm.id, 
+    pkmn.tandemaus.id, pkmn.maschiff.id, pkmn.klawf.id, pkmn.finizen.id, pkmn.orthworm.id, pkmn.goldeen.id, 
     
     pkmn.lapras.id, pkmn.omanyte.id, pkmn.qwilfish.id, pkmn.happiny.id, pkmn.kecleon.id, pkmn.volbeat.id, pkmn.cranidos.id, pkmn.audino.id, pkmn.sawk.id, pkmn.crabrawler.id, 
     pkmn.basculin.id, pkmn.emolga.id, pkmn.alomomola.id, pkmn.stunfisk.id, pkmn.komala.id, pkmn.clobbopus.id, pkmn.gligar.id, pkmn.inkay.id, pkmn.nacli.id, pkmn.glameow.id, 
@@ -7721,7 +7721,7 @@ const wildlifePoolUncommon = [
     //fodder
     pkmn.ducklett.id, pkmn.tauros.id, pkmn.kabuto.id, pkmn.ditto.id, pkmn.dunsparce.id, pkmn.girafarig.id,
     pkmn.miltank.id, pkmn.illumise.id, pkmn.castform.id, pkmn.tropius.id, pkmn.croagunk.id,
-    pkmn.throh.id, pkmn.maractus.id, pkmn.sigilyph.id,
+    pkmn.throh.id, pkmn.maractus.id, pkmn.sigilyph.id, pkmn.eeveeF.id,
     pkmn.binacle.id, pkmn.helioptile.id, pkmn.carbink.id,pkmn.mudbray.id, pkmn.salandit.id,pkmn.togedemaru.id
     
 
@@ -7731,10 +7731,10 @@ const wildlifePoolUncommon = [
 
 const wildlifePoolRare = [
     
-    pkmn.charcadet.id, pkmn.bombirdier.id, pkmn.cyclizar.id, pkmn.dondozo.id, pkmn.tatsugiri.id, pkmn.frigibax.id, pkmn.tinkatink.id, pkmn.vivillonFancy.id,
+    pkmn.charcadet.id, pkmn.bombirdier.id, pkmn.cyclizar.id, pkmn.dondozo.id, pkmn.tatsugiri.id, pkmn.frigibax.id, pkmn.tinkatink.id, pkmn.vivillonFancy.id, pkmn.rhyhornF.id,
     
     
-    pkmn.heracross.id, pkmn.skarmory.id, pkmn.absol.id, pkmn.feebas.id, pkmn.munchlax.id, pkmn.axew.id, pkmn.druddigon.id, pkmn.oranguru.id, pkmn.turtonator.id, 
+    pkmn.heracross.id, pkmn.skarmory.id, pkmn.absol.id, pkmn.feebas.id, pkmn.munchlax.id, pkmn.axew.id, pkmn.druddigon.id, pkmn.oranguru.id, pkmn.turtonator.id, pkmn.scytherF.id, 
     pkmn.mimikyu.id, pkmn.dracozolt.id, pkmn.arctozolt.id, pkmn.dracovish.id, pkmn.arctovish.id, pkmn.duraludon.id, pkmn.cetoddle.id, pkmn.luvdisc.id, pkmn.aron.id, pkmn.meowth.id, 
 
     //fodder
