@@ -1423,7 +1423,7 @@ pkmn.oddish = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.gloom, level: evolutionLevel1 },
-            2: { pkmn: pkmn.gloomf, level: shinyStone },
+            2: { pkmn: pkmn.gloomf, item: item.shinyStone },
         }
     },
     hiddenAbility: ability.chlorophyll,
@@ -1962,7 +1962,7 @@ pkmn.abra = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.kadabra, level: evolutionLevel1 },
-            2: { pkmn: pkmn.kadabraf, level: shinyStone },
+            2: { pkmn: pkmn.kadabraf, item: item.shinyStone },
         } 
     },
     hiddenAbility: ability.magicGuard,
@@ -2541,7 +2541,7 @@ pkmn.doduof = {
         sdef: 35,
         spe: 75,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.dodriof, level: shinyStone } } },
+    evolve: function() { return { 1: { pkmn: pkmn.dodriof, item: item.shinyStone } } },
     hiddenAbility: ability.parentalBond,
     signature : move.triAttack,
     lore: `Ele vive em uma planície gramada onde pode enxergar a longas distâncias. Se avistar um inimigo, ele foge a quase 100 km/h.`,
