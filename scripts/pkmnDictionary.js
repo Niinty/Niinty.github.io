@@ -356,7 +356,7 @@ pkmn.metapod = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.butterfree, level: evolutionLevel2 },
-            2: { pkmn: pkmn.butterfreef, item: shinyStone }
+            2: { pkmn: pkmn.butterfreef, item: shinyStone },
         } 
     },
     lore: `Sua carapaça está cheia de suas partes internas macias. Ele não se move muito por causa do risco de acabar derramando suas entranhas sem querer.`,
@@ -932,7 +932,7 @@ pkmn.raichu = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.megaRaichuX, item: item.raichutiteX }, 
-            2: { pkmn: pkmn.megaRaichuY, item: item.raichutiteY },
+            { pkmn: pkmn.megaRaichuY, item: item.raichutiteY },
         } 
     },
     hiddenAbility: ability.electricSurge,
@@ -1444,7 +1444,7 @@ pkmn.gloom = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.vileplume, item: item.leafStone }, 
-            2: { pkmn: pkmn.bellossom, item: item.sunStone } 
+            2: { pkmn: pkmn.bellossom, item: item.sunStone },
         } 
     },
     hiddenAbility: ability.chlorophyll,
@@ -1465,7 +1465,7 @@ pkmn.gloomf = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.vileplumef, item: item.shinyStone }, 
-            2: { pkmn: pkmn.bellossom, item: item.sunStone } 
+            2: { pkmn: pkmn.bellossom, item: item.sunStone }, 
         } 
     },
     hiddenAbility: ability.chlorophyll,
@@ -1916,7 +1916,7 @@ pkmn.poliwhirl = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.poliwrath, item: item.waterStone }, 
-            2: { pkmn: pkmn.politoed, item: item.oddRock } 
+            2: { pkmn: pkmn.politoed, item: item.oddRock }, 
         } 
     },
     hiddenAbility: ability.swiftSwim,
@@ -1962,7 +1962,7 @@ pkmn.abra = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.kadabra, level: evolutionLevel1 },
-            2: { pkmn: pkmn.kadabraf, level: shinyStone }
+            2: { pkmn: pkmn.kadabraf, level: shinyStone },
         } 
     },
     hiddenAbility: ability.magicGuard,
@@ -2339,7 +2339,7 @@ pkmn.slowpoke = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.slowbro, level: evolutionLevel2 }, 
-            2: { pkmn: pkmn.slowking, item: item.oddRock } 
+            2: { pkmn: pkmn.slowking, item: item.oddRock }, 
         } 
     },
     hiddenAbility: ability.unaware,
@@ -2359,7 +2359,7 @@ pkmn.galarianSlowpoke = {
     evolve: function() { 
         return {
             1: { pkmn: pkmn.galarianSlowbro, level: evolutionLevel2 }, 
-            2: { pkmn: pkmn.galarianSlowking, item: item.oddRock }
+            2: { pkmn: pkmn.galarianSlowking, item: item.oddRock },
         } 
     }
 }
