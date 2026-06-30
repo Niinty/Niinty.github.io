@@ -57,7 +57,7 @@ pkmn.venusaur = {
     signature : move.frenzyPlant
 }
 
-pkmn.venusaurF = {
+pkmn.venusaurf = {
     tagObtainedIn: "unobtainable",  // ← excluído do Arceus
     type: ["grass","poison"],
     bst: {
@@ -353,7 +353,12 @@ pkmn.metapod = {
         sdef: 25,
         spe: 30,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.butterfree, level: evolutionLevel2 } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.butterfree, level: evolutionLevel2 },
+            2: { pkmn: pkmn.butterfreef, item: shinyStone }
+        } 
+    },
     lore: `Sua carapaça está cheia de suas partes internas macias. Ele não se move muito por causa do risco de acabar derramando suas entranhas sem querer.`,
     hiddenAbility: ability.tintedLens,
 }
@@ -369,6 +374,20 @@ pkmn.butterfree = {
         spe: 70,
     },
     lore: `Néctar de flores bonitas é sua comida favorita. Em campos floridos, ele trava batalhas acirradas contra Cutiefly por território.`,
+    hiddenAbility: ability.tintedLens,
+}
+
+pkmn.butterfreef = {
+    type: ["bug","flying"],
+    bst: {
+        hp: 60,
+        atk: 45,
+        def: 50,
+        satk: 90,
+        sdef: 80,
+        spe: 70,
+    },
+    lore: `O pó repelente à água em suas asas permite que ele colete mel, mesmo nas chuvas mais fortes.`,
     hiddenAbility: ability.tintedLens,
 }
 
@@ -530,6 +549,25 @@ pkmn.rattata = {
     hiddenAbility: ability.guts,
 }
 
+pkmn.rattataf = {
+    type: ["normal"],
+    bst: {
+        hp: 30,
+        atk: 56,
+        def: 35,
+        satk: 25,
+        sdef: 35,
+        spe: 72,
+    },
+    evolve: function() { 
+        return {
+            1: { pkmn: pkmn.raticatef, item: shinyStone },
+        }
+    },
+    lore: `Vivendo onde quer que haja comida disponível, ele vasculha incessantemente por mantimentos o dia inteiro.`,
+    hiddenAbility: ability.guts,
+}
+
 pkmn.alolanRattata = {
     type: ["dark", "normal"],
     bst: {
@@ -557,6 +595,20 @@ pkmn.raticate = {
     },
     hiddenAbility: ability.guts,
     lore: `As presas resistentes de Raticate crescem continuamente. Para mantê-las desgastadas, ele rói pedras e troncos. Pode até mastigar as paredes das casas.`,
+}
+
+pkmn.raticatef = {
+    type: ["normal"],
+    bst: {
+        hp: 55,
+        atk: 81,
+        def: 60,
+        satk: 50,
+        sdef: 70,
+        spe: 97,
+    },
+    hiddenAbility: ability.guts,
+    lore: `.Seus bigodes o ajudam a manter o equilíbrio. Suas presas nunca param de crescer, então ele rói para desgastá-las.`,
 }
 
 pkmn.alolanRaticate = {
@@ -660,7 +712,12 @@ pkmn.pichu = {
         sdef: 35,
         spe: 60,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.pikachu, level: evolutionLevel1 } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.pikachu, level: evolutionLevel1 },
+            2: { pkmn: pkmn.pikachuf, item: shinyStone },
+        }
+    },
     hiddenAbility: ability.electricSurge,
     signature : move.voltTackle,
     lore: `Ele ainda não é habilidoso em armazenar eletricidade. Quando se assusta ou ri, acaba liberando descargas elétricas acidentais pelas bochechas.`,
@@ -680,6 +737,26 @@ pkmn.pikachu = {
     hiddenAbility: ability.electricSurge,
     signature : move.voltTackle,
     lore: `Ele levanta sua cauda para vigiar os arredores. Às vezes, sua cauda é atingida por raios nessa posição, o que ajuda a recarregar sua energia elétrica.`,
+}
+
+pkmn.pikachuf = {
+    type: ["electric"],
+    bst: {
+        hp: 35,
+        atk: 55,
+        def: 40,
+        satk: 50,
+        sdef: 50,
+        spe: 90,
+    },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.raichuf, item: item.shinyStone },
+        }
+    },
+    hiddenAbility: ability.electricSurge,
+    signature : move.voltTackle,
+    lore: `Possui pequenas bolsas elétricas em ambas as bochechas. Se ameaçado, dispara descargas elétricas a partir dessas bolsas.`,
 }
 
 pkmn.pikachuGmax = {
@@ -861,6 +938,27 @@ pkmn.raichu = {
     hiddenAbility: ability.electricSurge,
     signature : move.voltTackle,
     lore: `Se suas bolsas elétricas ficarem vazias, ele levanta a cauda para coletar eletricidade da atmosfera. Seu corpo brilha fracamente no escuro quando está totalmente carregado.`,
+}
+
+pkmn.raichuf = {
+    type: ["electric"],
+    bst: {
+        hp: 60,
+        atk: 90,
+        def: 55,
+        satk: 90,
+        sdef: 80,
+        spe: 110,
+    },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.megaRaichuX, item: item.raichutiteX }, 
+            2: { pkmn: pkmn.megaRaichuY, item: item.raichutiteY },
+        } 
+    },
+    hiddenAbility: ability.electricSurge,
+    signature : move.voltTackle,
+    lore: `Sua cauda longa serve como aterramento para se proteger de sua própria eletricidade de alta voltagem.`,
 }
 
 pkmn.alolanRaichu = {
@@ -1252,6 +1350,21 @@ pkmn.zubat = {
     lore: `Ele não possui olhos e vive em cavernas escuras, usando ondas ultrassônicas para navegar e sugar o sangue de presas vivas.`,
 }
 
+pkmn.zubatf = {
+    type: ["poison","flying"],
+    bst: {
+        hp: 40,
+        atk: 45,
+        def: 35,
+        satk: 30,
+        sdef: 40,
+        spe: 55,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.golbatf, item: shinyStone } } },
+    hiddenAbility: ability.dauntingLook,
+    lore: `Dorme em cavernas durante o dia. Não possui olhos, então, para verificar o ambiente enquanto voa, emite ondas ultrassônicas.`,
+}
+
 pkmn.golbat = {
     type: ["poison","flying"],
     bst: {
@@ -1265,6 +1378,21 @@ pkmn.golbat = {
     evolve: function() { return { 1: { pkmn: pkmn.crobat, item: item.linkStone } } },
     hiddenAbility: ability.dauntingLook,
     lore: `Ele adora sangue fresco. Se morder, não solta até estar totalmente saciado.`,
+}
+
+pkmn.golbatf = {
+    type: ["poison","flying"],
+    bst: {
+        hp: 75,
+        atk: 80,
+        def: 70,
+        satk: 65,
+        sdef: 75,
+        spe: 90,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.crobat, item: item.linkStone } } },
+    hiddenAbility: ability.dauntingLook,
+    lore: `Uma vez que morde, não para de drenar energia da vítima, mesmo que fique pesado demais para voar.`,
 }
 
 pkmn.crobat = {
@@ -1292,7 +1420,12 @@ pkmn.oddish = {
         sdef: 65,
         spe: 30,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.gloom, level: evolutionLevel1 } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.gloom, level: evolutionLevel1 },
+            2: { pkmn: pkmn.gloomf, level: shinyStone },
+        }
+    },
     hiddenAbility: ability.chlorophyll,
     signature : move.trailblaze,
     lore: `Durante o dia, ele se enterra no solo para absorver nutrientes, parecendo uma planta.`,
@@ -1319,6 +1452,27 @@ pkmn.gloom = {
     lore: `O cheiro fétido que exala de sua boca é capaz de desmaiar humanos a quilômetros.`,
 }
 
+pkmn.gloomf = {
+    type: ["grass","poison"],
+    bst: {
+        hp: 60,
+        atk: 65,
+        def: 70,
+        satk: 85,
+        sdef: 75,
+        spe: 40,
+    },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.vileplumef, item: item.shinyStone }, 
+            2: { pkmn: pkmn.bellossom, item: item.sunStone } 
+        } 
+    },
+    hiddenAbility: ability.chlorophyll,
+    signature : move.trailblaze,
+    lore: `O mel que baba de sua boca tem um cheiro tão atroz que consegue fazer narizes se contorcerem a mais de um quilômetro e meio de distância.`,
+}
+
 pkmn.vileplume = {
     type: ["grass","poison"],
     bst: {
@@ -1332,6 +1486,21 @@ pkmn.vileplume = {
     hiddenAbility: ability.chlorophyll,
     signature : move.trailblaze,
     lore: `Suas pétalas imensas liberam um pólen altamente tóxico que causa paralisia severa.`,
+}
+
+pkmn.vileplumef = {
+    type: ["grass","poison"],
+    bst: {
+        hp: 75,
+        atk: 80,
+        def: 85,
+        satk: 110,
+        sdef: 90,
+        spe: 50,
+    },
+    hiddenAbility: ability.chlorophyll,
+    signature : move.trailblaze,
+    lore: `Suas pétalas são as maiores do mundo. Ele espalha cruelmente um pólen que causa alergia a partir de suas pétalas.`,
 }
 
 pkmn.bellossom = {
@@ -1790,9 +1959,15 @@ pkmn.abra = {
         sdef: 55,
         spe: 90,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.kadabra, level: evolutionLevel1 } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.kadabra, level: evolutionLevel1 },
+            2: { pkmn: pkmn.kadabraf, level: shinyStone }
+        } 
+    },
     hiddenAbility: ability.magicGuard,
-    signature : move.kinesis
+    signature : move.kinesis,
+    lore: `Ele pressente ataques iminentes e se teletransporta para um local seguro antes que os ataques possam atingi-lo.`,
 }
 
 pkmn.kadabra = {
@@ -1807,7 +1982,24 @@ pkmn.kadabra = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.alakazam, item: item.linkStone } } },
     hiddenAbility: ability.magicGuard,
-    signature : move.kinesis
+    signature : move.kinesis,
+    lore: `Possui fortes capacidades mentais, mas seus poderes psíquicos são reduzidos à metade quando não está segurando uma colher de prata.`,
+}
+
+pkmn.kadabraf = {
+    type: ["psychic"],
+    bst: {
+        hp: 40,
+        atk: 35,
+        def: 30,
+        satk: 120,
+        sdef: 100,
+        spe: 105,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.alakazam, item: item.linkStone } } },
+    hiddenAbility: ability.magicGuard,
+    signature : move.kinesis,
+    lore: `A telecinese deste Pokémon é imensamente poderosa. Para se preparar para a evolução, o Kadabra armazena energia psíquica na estrela em sua testa.`,
 }
 
 pkmn.alakazam = {
@@ -1822,7 +2014,8 @@ pkmn.alakazam = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaAlakazam, item: item.alakazite } } },
     hiddenAbility: ability.magicGuard,
-    signature : move.kinesis
+    signature : move.kinesis,
+    lore: `Diz-se que as colheres agarradas em suas mãos foram criadas por seus poderes psíquicos.`,
 }
 
 pkmn.megaAlakazam = {
@@ -1836,7 +2029,8 @@ pkmn.megaAlakazam = {
         spe: 150*1.2,
     },
     hiddenAbility: ability.magicGuard,
-    signature : move.kinesis
+    signature : move.kinesis,
+    lore: `Embora tenha fortes habilidades psíquicas e alta inteligência, os músculos de um Alakazam são muito fracos. Ele usa o poder psíquico para mover seu corpo.`,
 }
 
 // 066 Machop → Machoke → Machamp
@@ -2333,7 +2527,24 @@ pkmn.doduo = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.dodrio, level: evolutionLevel2 } } },
     hiddenAbility: ability.parentalBond,
-    signature : move.triAttack
+    signature : move.triAttack,
+    lore: `Mesmo enquanto come ou dorme, uma das cabeças permanece sempre vigilante quanto a qualquer sinal de perigo. Quando ameaçado, ele foge a mais de 100 quilômetros por hora.`,
+}
+
+pkmn.doduof = {
+    type: ["normal","flying"],
+    bst: {
+        hp: 35,
+        atk: 85,
+        def: 45,
+        satk: 35,
+        sdef: 35,
+        spe: 75,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.dodriof, level: shinyStone } } },
+    hiddenAbility: ability.parentalBond,
+    signature : move.triAttack,
+    lore: `Ele vive em uma planície gramada onde pode enxergar a longas distâncias. Se avistar um inimigo, ele foge a quase 100 km/h.`,
 }
 
 pkmn.dodrio = {
@@ -2347,7 +2558,23 @@ pkmn.dodrio = {
         spe: 110,
     },
     hiddenAbility: ability.parentalBond,
-    signature : move.triAttack
+    signature : move.triAttack,
+    lore: `Ele coleta dados e planeja três vezes mais sabiamente, mas pode pensar demais e ficar imobilizado.`,
+}
+
+pkmn.dodriof = {
+    type: ["normal","flying"],
+    bst: {
+        hp: 60,
+        atk: 110,
+        def: 70,
+        satk: 60,
+        sdef: 60,
+        spe: 110,
+    },
+    hiddenAbility: ability.parentalBond,
+    signature : move.triAttack,
+    lore: `Uma espécie estranha que é raramente encontrada. As três cabeças representam, respectivamente, alegria, tristeza e raiva.`,
 }
 
 // 086 Seel → Dewgong
