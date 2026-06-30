@@ -57,8 +57,8 @@ pkmn.venusaur = {
     signature : move.frenzyPlant
 }
 
-pkmn.venusaurf = {
-    tagObtainedIn: "unobtainable",  // ← excluído do Arceus
+pkmn.venusaurF = {
+    //tagObtainedIn: "unobtainable",  // ← excluído do Arceus
     type: ["grass","poison"],
     bst: {
         hp: 80,
@@ -377,7 +377,7 @@ pkmn.butterfree = {
     hiddenAbility: ability.tintedLens,
 }
 
-pkmn.butterfreef = {
+pkmn.butterfreeF = {
     type: ["bug","flying"],
     bst: {
         hp: 60,
@@ -549,7 +549,7 @@ pkmn.rattata = {
     hiddenAbility: ability.guts,
 }
 
-pkmn.rattataf = {
+pkmn.rattataF = {
     type: ["normal"],
     bst: {
         hp: 30,
@@ -561,7 +561,7 @@ pkmn.rattataf = {
     },
     evolve: function() { 
         return {
-            1: { pkmn: pkmn.raticatef, item: item.shinyStone },
+            1: { pkmn: pkmn.raticatef, level: evolutionLevel1 },
         }
     },
     lore: `Vivendo onde quer que haja comida disponível, ele vasculha incessantemente por mantimentos o dia inteiro.`,
@@ -597,7 +597,7 @@ pkmn.raticate = {
     lore: `As presas resistentes de Raticate crescem continuamente. Para mantê-las desgastadas, ele rói pedras e troncos. Pode até mastigar as paredes das casas.`,
 }
 
-pkmn.raticatef = {
+pkmn.raticateF = {
     type: ["normal"],
     bst: {
         hp: 55,
@@ -739,7 +739,7 @@ pkmn.pikachu = {
     lore: `Ele levanta sua cauda para vigiar os arredores. Às vezes, sua cauda é atingida por raios nessa posição, o que ajuda a recarregar sua energia elétrica.`,
 }
 
-pkmn.pikachuf = {
+pkmn.pikachuF = {
     type: ["electric"],
     bst: {
         hp: 35,
@@ -751,7 +751,7 @@ pkmn.pikachuf = {
     },
     evolve: function() { 
         return { 
-            1: { pkmn: pkmn.raichuf, item: item.shinyStone },
+            1: { pkmn: pkmn.raichuf, item: item.thunderStone },
         }
     },
     hiddenAbility: ability.electricSurge,
@@ -940,7 +940,7 @@ pkmn.raichu = {
     lore: `Se suas bolsas elétricas ficarem vazias, ele levanta a cauda para coletar eletricidade da atmosfera. Seu corpo brilha fracamente no escuro quando está totalmente carregado.`,
 }
 
-pkmn.raichuf = {
+pkmn.raichuF = {
     type: ["electric"],
     bst: {
         hp: 60,
@@ -1350,7 +1350,7 @@ pkmn.zubat = {
     lore: `Ele não possui olhos e vive em cavernas escuras, usando ondas ultrassônicas para navegar e sugar o sangue de presas vivas.`,
 }
 
-pkmn.zubatf = {
+pkmn.zubatF = {
     type: ["poison","flying"],
     bst: {
         hp: 40,
@@ -1360,7 +1360,7 @@ pkmn.zubatf = {
         sdef: 40,
         spe: 55,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.golbatf, item: item.shinyStone } } },
+    evolve: function() { return { 1: { pkmn: pkmn.golbatF, level: evolutionLevel1 } } },
     hiddenAbility: ability.dauntingLook,
     lore: `Dorme em cavernas durante o dia. Não possui olhos, então, para verificar o ambiente enquanto voa, emite ondas ultrassônicas.`,
 }
@@ -1380,7 +1380,7 @@ pkmn.golbat = {
     lore: `Ele adora sangue fresco. Se morder, não solta até estar totalmente saciado.`,
 }
 
-pkmn.golbatf = {
+pkmn.golbatF = {
     type: ["poison","flying"],
     bst: {
         hp: 75,
@@ -1452,7 +1452,7 @@ pkmn.gloom = {
     lore: `O cheiro fétido que exala de sua boca é capaz de desmaiar humanos a quilômetros.`,
 }
 
-pkmn.gloomf = {
+pkmn.gloomF = {
     type: ["grass","poison"],
     bst: {
         hp: 60,
@@ -1464,7 +1464,7 @@ pkmn.gloomf = {
     },
     evolve: function() { 
         return { 
-            1: { pkmn: pkmn.vileplumef, item: item.shinyStone }, 
+            1: { pkmn: pkmn.vileplumeF, item: item.leafStone }, 
             2: { pkmn: pkmn.bellossom, item: item.sunStone }, 
         } 
     },
@@ -1488,7 +1488,7 @@ pkmn.vileplume = {
     lore: `Suas pétalas imensas liberam um pólen altamente tóxico que causa paralisia severa.`,
 }
 
-pkmn.vileplumef = {
+pkmn.vileplumeF = {
     type: ["grass","poison"],
     bst: {
         hp: 75,
@@ -1962,7 +1962,7 @@ pkmn.abra = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.kadabra, level: evolutionLevel1 },
-            2: { pkmn: pkmn.kadabraf, item: item.shinyStone },
+            2: { pkmn: pkmn.kadabraF, item: item.shinyStone },
         } 
     },
     hiddenAbility: ability.magicGuard,
@@ -1986,7 +1986,7 @@ pkmn.kadabra = {
     lore: `Possui fortes capacidades mentais, mas seus poderes psíquicos são reduzidos à metade quando não está segurando uma colher de prata.`,
 }
 
-pkmn.kadabraf = {
+pkmn.kadabraF = {
     type: ["psychic"],
     bst: {
         hp: 40,
@@ -1996,7 +1996,7 @@ pkmn.kadabraf = {
         sdef: 100,
         spe: 105,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.alakazam, item: item.linkStone } } },
+    evolve: function() { return { 1: { pkmn: pkmn.alakazamF, item: item.linkStone } } },
     hiddenAbility: ability.magicGuard,
     signature : move.kinesis,
     lore: `A telecinese deste Pokémon é imensamente poderosa. Para se preparar para a evolução, o Kadabra armazena energia psíquica na estrela em sua testa.`,
@@ -2016,6 +2016,22 @@ pkmn.alakazam = {
     hiddenAbility: ability.magicGuard,
     signature : move.kinesis,
     lore: `Diz-se que as colheres agarradas em suas mãos foram criadas por seus poderes psíquicos.`,
+}
+
+pkmn.alakazamF = {
+    type: ["psychic"],
+    bst: {
+        hp: 55,
+        atk: 50,
+        def: 45,
+        satk: 135,
+        sdef: 95,
+        spe: 120,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.megaAlakazam, item: item.alakazite } } },
+    hiddenAbility: ability.magicGuard,
+    signature : move.kinesis,
+    lore: `Possui uma memória perfeita, lembrando de tudo que ocorreu desde o seu nascimento até a morte.`,
 }
 
 pkmn.megaAlakazam = {
@@ -2531,7 +2547,7 @@ pkmn.doduo = {
     lore: `Mesmo enquanto come ou dorme, uma das cabeças permanece sempre vigilante quanto a qualquer sinal de perigo. Quando ameaçado, ele foge a mais de 100 quilômetros por hora.`,
 }
 
-pkmn.doduof = {
+pkmn.doduoF = {
     type: ["normal","flying"],
     bst: {
         hp: 35,
@@ -2541,7 +2557,7 @@ pkmn.doduof = {
         sdef: 35,
         spe: 75,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.dodriof, item: item.shinyStone } } },
+    evolve: function() { return { 1: { pkmn: pkmn.dodrioF, level: evolutionLevel2 } } },
     hiddenAbility: ability.parentalBond,
     signature : move.triAttack,
     lore: `Ele vive em uma planície gramada onde pode enxergar a longas distâncias. Se avistar um inimigo, ele foge a quase 100 km/h.`,
@@ -2562,7 +2578,7 @@ pkmn.dodrio = {
     lore: `Ele coleta dados e planeja três vezes mais sabiamente, mas pode pensar demais e ficar imobilizado.`,
 }
 
-pkmn.dodriof = {
+pkmn.dodrioF = {
     type: ["normal","flying"],
     bst: {
         hp: 60,
@@ -2814,7 +2830,12 @@ pkmn.drowzee = {
         sdef: 90,
         spe: 42,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.hypno, level: evolutionLevel2 } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.hypno, level: evolutionLevel2 },
+            2: { pkmn: pkmn.hypnoF, item: item.shinyStone }, 
+        }
+    },
     hiddenAbility: ability.sinisterGuard,
 }
 
@@ -2829,6 +2850,21 @@ pkmn.hypno = {
         spe: 67,
     },
     hiddenAbility: ability.sinisterGuard,
+    lore: `Ele balança um pêndulo para hipnotizar suas vítimas. Houve casos de crianças desaparecidas.`,
+}
+
+pkmn.hypnoF = {
+    type: ["psychic"],
+    bst: {
+        hp: 85,
+        atk: 73,
+        def: 70,
+        satk: 73,
+        sdef: 115,
+        spe: 67,
+    },
+    hiddenAbility: ability.sinisterGuard,
+    lore: `Ele carrega um pêndulo prateado e seu movimento arqueado, juntamente com o brilho, induz o oponente a um estado profundo de hipnose em questão de segundos.`,
 }
 
 // 098 Krabby → Kingler
@@ -3163,7 +3199,24 @@ pkmn.rhyhorn = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.rhydon, level: evolutionLevel3 } } },
     hiddenAbility: ability.sandRush,
-    signature : move.rockWrecker
+    signature : move.rockWrecker,
+    lore: `Sua inteligência é baixa; ele só entende comandos de "avançar" e "atacar".`,
+}
+
+pkmn.rhyhornF = {
+    type: ["ground","rock"],
+    bst: {
+        hp: 80,
+        atk: 85,
+        def: 95,
+        satk: 30,
+        sdef: 30,
+        spe: 25,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.rhydonF, level: evolutionLevel3 } } },
+    hiddenAbility: ability.sandRush,
+    signature : move.rockWrecker,
+    lore: `Forte, mas não muito inteligente, pode destruir até mesmo um arranha-céu com suas investidas.`,
 }
 
 pkmn.rhydon = {
@@ -3178,7 +3231,24 @@ pkmn.rhydon = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.rhyperior, item: item.linkStone } } },
     hiddenAbility: ability.sandRush,
-    signature : move.rockWrecker
+    signature : move.rockWrecker,
+    lore: `O primeiro Pokémon a ser criado. Sua pele é tão dura que resiste até à lava vulcânica.`,
+}
+
+pkmn.rhydonF = {
+    type: ["ground","rock"],
+    bst: {
+        hp: 105,
+        atk: 130,
+        def: 120,
+        satk: 45,
+        sdef: 45,
+        spe: 40,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.rhyperior, item: item.linkStone } } },
+    hiddenAbility: ability.sandRush,
+    signature : move.rockWrecker,
+    lore: `Evoluiu para andar sobre as patas traseiras, o que lhe permitiu expandir seu habitat até áreas montanhosas íngremes.`,
 }
 
 pkmn.rhyperior = {
@@ -3371,6 +3441,22 @@ pkmn.goldeen = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.seaking, level: evolutionLevel2 } } },
     hiddenAbility: ability.swiftSwim,
+    lore: `Seus movimentos na água são elegantes, mas pode saltar obstáculos com força bruta.`,
+}
+
+pkmn.goldeenF = {
+    type: ["water"],
+    bst: {
+        hp: 45,
+        atk: 67,
+        def: 60,
+        satk: 35,
+        sdef: 50,
+        spe: 63,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.seakingF, level: evolutionLevel2 } } },
+    hiddenAbility: ability.swiftSwim,
+    lore: `O Goldeen possui um temperamento bastante selvagem. Embora nade graciosamente, é conhecido por usar seu chifre para atacar e quebrar vidros de aquários caso seja mantido em cativeiro. Seu chifre costuma ser maior nos machos do que nas fêmeas.`,
 }
 
 pkmn.seaking = {
@@ -3384,6 +3470,21 @@ pkmn.seaking = {
         spe: 68,
     },
     hiddenAbility: ability.swiftSwim,
+    lore: `Durante a época de reprodução, eles mudam de cor e constroem ninhos esculpidos em rochas.`,
+}
+
+pkmn.seakingF = {
+    type: ["water"],
+    bst: {
+        hp: 80,
+        atk: 92,
+        def: 65,
+        satk: 65,
+        sdef: 80,
+        spe: 68,
+    },
+    hiddenAbility: ability.swiftSwim,
+    lore: `Extremamente protetor com seus ovos, o macho e a fêmea se revezam patrulhando o ninho por mais de um mês.`,
 }
 
 // 120 Staryu → Starmie
@@ -3501,6 +3602,22 @@ pkmn.scyther = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.scizor, item: item.metalCoat } } },
     hiddenAbility: ability.technician,
+    lore: `Ele se move tão rápido que corta presas antes mesmo que elas percebam o movimento.`,
+}
+
+pkmn.scytherF = {
+    type: ["bug","flying"],
+    bst: {
+        hp: 70,
+        atk: 110,
+        def: 80,
+        satk: 55,
+        sdef: 80,
+        spe: 105,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.scizor, item: item.metalCoat } } },
+    hiddenAbility: ability.technician,
+    lore: `As foices afiadas em seus antebraços tornam-se cada vez mais afiadas ao cortar objetos duros. Ele corta a grama com suas lâminas afiadas, movendo-se rápido demais para o olho humano rastrear.`,
 }
 
 pkmn.scizor = {
@@ -3756,7 +3873,24 @@ pkmn.magikarp = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.gyarados, level: evolutionLevel1 } } },
     hiddenAbility: ability.waterGuard,
-    signature : move.splash
+    signature : move.splash,
+    lore: `Famoso por ser o Pokémon mais inútil e fraco, mas consegue saltar montanhas inteiras.`,
+}
+
+pkmn.magikarpF = {
+    type: ["water"],
+    bst: {
+        hp: 20,
+        atk: 10,
+        def: 55,
+        satk: 15,
+        sdef: 20,
+        spe: 80,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.gyaradosF, level: evolutionLevel1 } } },
+    hiddenAbility: ability.waterGuard,
+    signature : move.splash,
+    lore: `Um Pokémon famoso por não fazer nada além de se debater. É considerado muito fraco.`,
 }
 
 pkmn.magikarpKoi = {
@@ -3849,6 +3983,22 @@ pkmn.gyarados = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaGyarados, item: item.gyaradosite } } },
     hiddenAbility: ability.intimidate,
+    lore: `Quando ele entra em fúria, é capaz de destruir cidades inteiras com suas rajadas de água.`,
+}
+
+pkmn.gyaradosF = {
+    type: ["water","flying"],
+    bst: {
+        hp: 95,
+        atk: 125,
+        def: 79,
+        satk: 60,
+        sdef: 100,
+        spe: 81,
+    },
+    evolve: function() { return { 1: { pkmn: pkmn.megaGyarados, item: item.gyaradosite } } },
+    hiddenAbility: ability.intimidate,
+    lore: `Quando o Magikarp evolui, suas células cerebrais passam por uma transformação estrutural. Dizem que essa mudança é a culpada pela natureza extremamente violenta deste Pokémon.`,
 }
 
 pkmn.megaGyarados = {
@@ -3932,7 +4082,35 @@ pkmn.eevee = {
         }
     },
     hiddenAbility: ability.normalize,
-    signature : move.batonPass
+    signature : move.batonPass,
+    lore: `Sua composição genética é instável, permitindo que evolua para diversas formas.`,
+}
+
+pkmn.eeveeF = {
+    type: ["normal"],
+    bst: {
+        hp: 55,
+        atk: 55,
+        def: 50,
+        satk: 45,
+        sdef: 65,
+        spe: 55,
+    },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.vaporeon, item: item.waterStone },
+            2: { pkmn: pkmn.jolteon, item: item.thunderStone },
+            3: { pkmn: pkmn.flareon, item: item.fireStone },
+            4: { pkmn: pkmn.espeon, item: item.dawnStone },
+            5: { pkmn: pkmn.umbreon, item: item.duskStone },
+            6: { pkmn: pkmn.leafeon, item: item.leafStone },
+            7: { pkmn: pkmn.glaceon, item: item.iceStone },
+            8: { pkmn: pkmn.sylveon, item: item.shinyStone } 
+        }
+    },
+    hiddenAbility: ability.normalize,
+    signature : move.batonPass,
+    lore: `Seu DNA é facilmente influenciado pelo ambiente, permitindo que ele se adapte perfeitamente a diferentes habitats.`,
 }
 
 pkmn.eeveeGmax = {
