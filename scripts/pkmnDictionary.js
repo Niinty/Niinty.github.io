@@ -356,7 +356,7 @@ pkmn.metapod = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.butterfree, level: evolutionLevel2 },
-            2: { pkmn: pkmn.butterfreef, item: shinyStone },
+            2: { pkmn: pkmn.butterfreef, item: item.shinyStone },
         } 
     },
     lore: `Sua carapaça está cheia de suas partes internas macias. Ele não se move muito por causa do risco de acabar derramando suas entranhas sem querer.`,
@@ -561,7 +561,7 @@ pkmn.rattataf = {
     },
     evolve: function() { 
         return {
-            1: { pkmn: pkmn.raticatef, item: shinyStone },
+            1: { pkmn: pkmn.raticatef, item: item.shinyStone },
         }
     },
     lore: `Vivendo onde quer que haja comida disponível, ele vasculha incessantemente por mantimentos o dia inteiro.`,
@@ -715,7 +715,7 @@ pkmn.pichu = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.pikachu, level: evolutionLevel1 },
-            2: { pkmn: pkmn.pikachuf, item: shinyStone },
+            2: { pkmn: pkmn.pikachuf, item: item.shinyStone },
         }
     },
     hiddenAbility: ability.electricSurge,
@@ -1360,7 +1360,7 @@ pkmn.zubatf = {
         sdef: 40,
         spe: 55,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.golbatf, item: shinyStone } } },
+    evolve: function() { return { 1: { pkmn: pkmn.golbatf, item: item.shinyStone } } },
     hiddenAbility: ability.dauntingLook,
     lore: `Dorme em cavernas durante o dia. Não possui olhos, então, para verificar o ambiente enquanto voa, emite ondas ultrassônicas.`,
 }
