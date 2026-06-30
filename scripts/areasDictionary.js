@@ -1394,7 +1394,7 @@ areas.ilexForest = {
     icon: pkmn.poliwag,
     spawns: {
         common : [pkmn.poliwag,pkmn.hoothoot],
-        uncommon : [pkmn.exeggute,pkmn.pineco],
+        uncommon : [pkmn.exeggcute,pkmn.pineco],
         rare : [pkmn.butterfree]
     },
     drops: {
@@ -1471,7 +1471,7 @@ areas.petalburgWoods = {
     icon: pkmn.shroomish,
     spawns: {
         common : [pkmn.shroomish,pkmn.wurmple],
-        uncommon : [pkmn.tailow,pkmn.poochyena],
+        uncommon : [pkmn.taillow,pkmn.poochyena],
         rare : [pkmn.phantump]
     },
     drops: {
@@ -1510,7 +1510,7 @@ areas.meteorFalls = {
     spawns: {
         common : [pkmn.barboach,pkmn.goldeen],
         uncommon : [pkmn.lunatone,pkmn.solrock],
-        rare : [pkmn.wishcash]
+        rare : [pkmn.whishcash]
     },
     drops: {
         common : [item.mysteryEgg],
