@@ -1510,7 +1510,7 @@ areas.meteorFalls = {
     spawns: {
         common : [pkmn.barboach,pkmn.goldeen],
         uncommon : [pkmn.lunatone,pkmn.solrock],
-        rare : [pkmn.whishcash]
+        rare : [pkmn.whiscash]
     },
     drops: {
         common : [item.mysteryEgg],
