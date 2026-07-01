@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 15;
+const rotationWildMax = 16;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -1530,6 +1530,83 @@ areas.shoalCave = {
         common : [pkmn.wailmer,pkmn.spheal],
         uncommon : [pkmn.snorunt,pkmn.tentacool],
         rare : [pkmn.golbat]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 16
+areas.eternaForest = {
+    rotation : 16,
+    name: `Eterna Forest`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.bidoof,
+    spawns: {
+        common : [pkmn.budew,pkmn.bidoof],
+        uncommon : [pkmn.kricketot,pkmn.beautifly],
+        rare : [pkmn.dustox]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.waywardCave = {
+    rotation : 16,
+    name: `Wayward Cave`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.geodude,
+    spawns: {
+        common : [pkmn.geodude,pkmn.zubat],
+        uncommon : [pkmn.bronzor,pkmn.gible],
+        rare : [pkmn.onix]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.ironIsland = {
+    rotation : 16,
+    name: `Iron Island`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.finneon,
+    spawns: {
+        common : [pkmn.finneon,pkmn.wingull],
+        uncommon : [pkmn.golbat,pkmn.graveler],
+        rare : [pkmn.steelix]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.mtCoronet = {
+    rotation : 16,
+    name: `Mt. Coronet`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `mountain`,
+    icon: pkmn.chingling,
+    spawns: {
+        common : [pkmn.chingling,pkmn.machop],
+        uncommon : [pkmn.dratini,pkmn.absol],
+        rare : [pkmn.feebas]
     },
     drops: {
         common : [item.mysteryEgg],
