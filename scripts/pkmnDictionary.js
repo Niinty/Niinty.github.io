@@ -10681,12 +10681,12 @@ pkmn.cresselia = {
 pkmn.phione = {
     type: ["water"],
     bst: {
-        hp: 80*1.3,
-        atk: 80*1.3,
-        def: 80*1.3,
-        satk: 80*1.3,
-        sdef: 80*1.3,
-        spe: 80*1.3,
+        hp: 80*1.5,
+        atk: 80*1.5,
+        def: 80*1.5,
+        satk: 80*1.5,
+        sdef: 80*1.5,
+        spe: 80*1.5,
     },
     eggMove : move.tailGlow
 }
@@ -10695,12 +10695,12 @@ pkmn.phione = {
 pkmn.manaphy = {
     type: ["water"],
     bst: {
-        hp: 100*1.3,
-        atk: 100*1.3,
-        def: 100*1.3,
-        satk: 100*1.3,
-        sdef: 100*1.3,
-        spe: 100*1.3,
+        hp: 100*1.5,
+        atk: 100*1.5,
+        def: 100*1.5,
+        satk: 100*1.5,
+        sdef: 100*1.5,
+        spe: 100*1.5,
     },
     lore: `The prince of the seas, the chosen of its kind, born with a bond that links all ocean life. It guides the creatures of the waters, preserving harmony beneath the waves.`,
     eggMove : move.tailGlow
@@ -10710,12 +10710,12 @@ pkmn.manaphy = {
 pkmn.darkrai = {
     type: ["dark"],
     bst: {
-        hp: 70,
-        atk: 90,
-        def: 90,
-        satk: 155,
-        sdef: 100,
-        spe: 155,
+        hp: 70*1.5,
+        atk: 90*1.5,
+        def: 90*1.5,
+        satk: 155*1.5,
+        sdef: 100*1.5,
+        spe: 155*1.5,
     },
     hiddenAbility: ability.lightAbsorb,
     lore: `The embodiment of night shadow. From the earliest ages, it has been bound to dreams, drawing forth fear and unrest where its presence lingers. Nightmares follow in its wake, not by intent, but as a reflection of its nature.`
@@ -10724,12 +10724,12 @@ pkmn.darkrai = {
 pkmn.megaDarkrai = {
     type: ["dark"],
     bst: {
-        hp: 70*1.35,
-        atk: 120*1.35,
-        def: 150*1.35,
-        satk: 165*1.35,
-        sdef: 150*1.35,
-        spe: 85*1.35,
+        hp: 70*1.5,
+        atk: 120*1.5,
+        def: 150*1.5,
+        satk: 165*1.5,
+        sdef: 150*1.5,
+        spe: 85*1.5,
     }
 }
 
@@ -10737,12 +10737,12 @@ pkmn.megaDarkrai = {
 pkmn.shaymin = {
     type: ["grass"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 100,
-        satk: 125,
-        sdef: 125,
-        spe: 100,
+        hp: 100*1.5,
+        atk: 100*1.5,
+        def: 100*1.5,
+        satk: 125*1.5,
+        sdef: 125*1.5,
+        spe: 100*1.5,
     },
     hiddenAbility: ability.verdify,
     lore: `Embodying gratitude and the renewal of life, It moves across barren lands, leaving fields of flowers in its wake and restoring the vitality of nature, bringing growth and bloom to places long abandoned.`
@@ -10751,12 +10751,12 @@ pkmn.shaymin = {
 pkmn.shayminSky = {
     type: ["grass", "flying"],
     bst: {
-        hp: 100,
-        atk: 103,
-        def: 75,
-        satk: 170,
-        sdef: 75,
-        spe: 170,
+        hp: 100*1.5,
+        atk: 103*1.5,
+        def: 75*1.5,
+        satk: 170*1.5,
+        sdef: 75*1.5,
+        spe: 170*1.5,
     },
     hiddenAbility: ability.verdify,
     lore: `Embodying gratitude and the renewal of life, It moves across barren lands, leaving fields of flowers in its wake and restoring the vitality of nature, bringing growth and bloom to places long abandoned.`
@@ -10766,12 +10766,12 @@ pkmn.shayminSky = {
 pkmn.arceus = {
     type : ["normal"],
     bst: {
-    hp: 120*1.35,
-    atk : 120*1.35,
-    def: 120*1.35,
-    satk : 120*1.35,
-    sdef: 120*1.35,
-    spe: 120*1.35,
+    hp: 120*1.5,
+    atk : 120*1.5,
+    def: 120*1.5,
+    satk : 120*1.5,
+    sdef: 120*1.5,
+    spe: 120*1.5,
     },
     signature : move.judgment,
     hiddenAbility: ability.thousandArms,
@@ -11025,12 +11025,12 @@ pkmn.arceusFairy = {
 pkmn.victini = {
     type: ["psychic","fire"],
     bst: {
-        hp: 100,
-        atk: 100,
-        def: 100,
-        satk: 100,
-        sdef: 100,
-        spe: 100,
+        hp: 100*1.5,
+        atk: 100*1.5,
+        def: 100*1.5,
+        satk: 100*1.5,
+        sdef: 100*1.5,
+        spe: 100*1.5,
     },
     signature : move.vCreate
 }
@@ -13718,24 +13718,24 @@ pkmn.kyuremWhite = {
 pkmn.keldeo = {
   type: ["water","fighting"],
   bst: {
-    hp: 91,
-    atk: 72,
-    def: 90,
-    satk: 129,
-    sdef: 90,
-    spe: 108,
+    hp: 91*1.5,
+    atk: 72*1.5,
+    def: 90*1.5,
+    satk: 129*1.5,
+    sdef: 90*1.5,
+    spe: 108*1.5,
   },
 }
 
 pkmn.keldeoResolute = {
   type: ["water","fighting"],
   bst: {
-    hp: 91,
-    atk: 72,
-    def: 90,
-    satk: 129,
-    sdef: 90,
-    spe: 108,
+    hp: 91*1.5,
+    atk: 72*1.5,
+    def: 90*1.5,
+    satk: 129*1.5,
+    sdef: 90*1.5,
+    spe: 108*1.5,
   },
 }
 
@@ -13743,12 +13743,12 @@ pkmn.keldeoResolute = {
 pkmn.meloetta = {
   type: ["normal","psychic"],
   bst: {
-    hp: 100,
-    atk: 77,
-    def: 77,
-    satk: 128,
-    sdef: 128,
-    spe: 90,
+    hp: 100*1.5,
+    atk: 77*1.5,
+    def: 77*1.5,
+    satk: 128*1.5,
+    sdef: 128*1.5,
+    spe: 90*1.5,
   },
     hiddenAbility: ability.cacophony,
     signature : move.relicSong
@@ -13757,12 +13757,12 @@ pkmn.meloetta = {
 pkmn.meloettaPirouette = {
   type: ["normal","fighting"],
   bst: {
-    hp: 100,
-    atk: 128,
-    def: 90,
-    satk: 77,
-    sdef: 77,
-    spe: 128,
+    hp: 100*1.5,
+    atk: 128*1.5,
+    def: 90*1.5,
+    satk: 77*1.5,
+    sdef: 77*1.5,
+    spe: 128*1.5,
   },
     hiddenAbility: ability.cacophony,
     signature : move.relicSong
@@ -13772,12 +13772,12 @@ pkmn.meloettaPirouette = {
 pkmn.genesect = {
   type: ["bug","steel"],
   bst: {
-    hp: 71,
-    atk: 120,
-    def: 95,
-    satk: 120,
-    sdef: 95,
-    spe: 99,
+    hp: 71*1.5,
+    atk: 120*1.5,
+    def: 95*1.5,
+    satk: 120*1.5,
+    sdef: 95*1.5,
+    spe: 99*1.5,
   },
     hiddenAbility: ability.megaLauncher,
     eggMove : move.conversion
@@ -15591,12 +15591,12 @@ pkmn.megaZygarde = {
 pkmn.diancie = {
     type: ["rock","fairy"],
     bst: {
-        hp: 50*1.3,
-        atk: 100*1.3,
-        def: 150*1.3,
-        satk: 100*1.3,
-        sdef: 150*1.3,
-        spe: 50*1.3,
+        hp: 50*1.5,
+        atk: 100*1.5,
+        def: 150*1.5,
+        satk: 100*1.5,
+        sdef: 150*1.5,
+        spe: 50*1.5,
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaDiancie, item: item.diancite } } },
 }
@@ -15604,12 +15604,12 @@ pkmn.diancie = {
 pkmn.megaDiancie = {
     type: ["rock","fairy"],
     bst: {
-        hp: 50*1.35,
-        atk: 160*1.35,
-        def: 110*1.35,
-        satk: 160*1.35,
-        sdef: 110*1.35,
-        spe: 110*1.35,
+        hp: 50*1.5,
+        atk: 160*1.5,
+        def: 110*1.5,
+        satk: 160*1.5,
+        sdef: 110*1.5,
+        spe: 110*1.5,
     }
 }
 
@@ -15617,24 +15617,24 @@ pkmn.megaDiancie = {
 pkmn.hoopa = {
     type: ["psychic","ghost"],
     bst: {
-        hp: 80*1.3,
-        atk: 110*1.3,
-        def: 60*1.3,
-        satk: 150*1.3,
-        sdef: 130*1.3,
-        spe: 70*1.3,
+        hp: 80*1.5,
+        atk: 110*1.5,
+        def: 60*1.5,
+        satk: 150*1.5,
+        sdef: 130*1.5,
+        spe: 70*1.5,
     }
 }
 
 pkmn.hoopaUnbound = {
     type: ["psychic","dark"],
     bst: {
-        hp: 80*1.3,
-        atk: 160*1.3,
-        def: 60*1.3,
-        satk: 170*1.3,
-        sdef: 130*1.3,
-        spe: 80*1.3,
+        hp: 80*1.5,
+        atk: 160*1.5,
+        def: 60*1.5,
+        satk: 170*1.5,
+        sdef: 130*1.5,
+        spe: 80*1.5,
     }
 }
 
@@ -15642,12 +15642,12 @@ pkmn.hoopaUnbound = {
 pkmn.volcanion = {
     type: ["fire","water"],
     bst: {
-        hp: 80*1.35,
-        atk: 110*1.35,
-        def: 120*1.35,
-        satk: 130*1.35,
-        sdef: 90*1.35,
-        spe: 70*1.35,
+        hp: 80*1.5,
+        atk: 110*1.5,
+        def: 120*1.5,
+        satk: 130*1.5,
+        sdef: 90*1.5,
+        spe: 70*1.5,
     }
 }
 
@@ -17078,12 +17078,12 @@ pkmn.ultraNecrozma = {
 pkmn.magearna = {
     type: ["steel","fairy"],
     bst: {
-        hp: 80*1.3,
-        atk: 95*1.3,
-        def: 115*1.3,
-        satk: 130*1.3,
-        sdef: 115*1.3,
-        spe: 65*1.3,
+        hp: 80*1.5,
+        atk: 95*1.5,
+        def: 115*1.5,
+        satk: 130*1.5,
+        sdef: 115*1.5,
+        spe: 65*1.5,
     },
     // evolve: function() { return { 1: { pkmn: pkmn.megaMagearna, item: item.magearnite } } },
     signature : move.gearUp
@@ -17092,12 +17092,12 @@ pkmn.magearna = {
 pkmn.magearnaOriginal = {
     type: ["steel","fairy"],
     bst: {
-        hp: 80*1.3,
-        atk: 95*1.3,
-        def: 115*1.3,
-        satk: 130*1.3,
-        sdef: 115*1.3,
-        spe: 65*1.3,
+        hp: 80*1.5,
+        atk: 95*1.5,
+        def: 115*1.5,
+        satk: 130*1.5,
+        sdef: 115*1.5,
+        spe: 65*1.5,
     },
     signature : move.gearUp
 }
@@ -17107,24 +17107,24 @@ pkmn.magearnaOriginal = {
 pkmn.megaMagearna = {
     type: ["steel","fairy"],
     bst: {
-        hp: 80*1.35,
-        atk: 125*1.35,
-        def: 155*1.35,
-        satk: 170*1.35,
-        sdef: 115*1.35,
-        spe: 95*1.35,
+        hp: 80*1.5,
+        atk: 125*1.5,
+        def: 155*1.5,
+        satk: 170*1.5,
+        sdef: 115*1.5,
+        spe: 95*1.5,
     }
 }
 
 pkmn.megaMagearnaOriginal = {
     type: ["steel","fairy"],
     bst: {
-        hp: 80*1.35,
-        atk: 125*1.35,
-        def: 155*1.35,
-        satk: 170*1.35,
-        sdef: 115*1.35,
-        spe: 95*1.35,
+        hp: 80*1.5,
+        atk: 125*1.5,
+        def: 155*1.5,
+        satk: 170*1.5,
+        sdef: 115*1.5,
+        spe: 95*1.5,
     }
 }
 
@@ -17135,12 +17135,12 @@ pkmn.marshadow = {
     hidden:true,
     type: ["fighting","ghost"],
     bst: {
-        hp: 90*1.3,
-        atk: 125*1.3,
-        def: 80*1.3,
-        satk: 90*1.3,
-        sdef: 90*1.3,
-        spe: 125*1.3,
+        hp: 90*1.5,
+        atk: 125*1.5,
+        def: 80*1.5,
+        satk: 90*1.5,
+        sdef: 90*1.5,
+        spe: 125*1.5,
     },
     hiddenAbility: ability.soulAsterism,
     signature : move.spectralThief
@@ -17240,12 +17240,12 @@ pkmn.megaZeraora = {
 pkmn.meltan = {
   type: ["steel"],
   bst: {
-    hp: 46,
-    atk: 65,
-    def: 65,
-    satk: 55,
-    sdef: 35,
-    spe: 34,
+    hp: 46*1.5,
+    atk: 65*1.5,
+    def: 65*1.5,
+    satk: 55*1.5,
+    sdef: 35*1.5,
+    spe: 34*1.5,
   },
   evolve: function() { return { 1: { pkmn: pkmn.melmetal, level: evolutionLevel3 } } },
     hiddenAbility: ability.ferrilate,
@@ -17255,12 +17255,12 @@ pkmn.meltan = {
 pkmn.melmetal = {
   type: ["steel"],
   bst: {
-    hp: 135,
-    atk: 143,
-    def: 143,
-    satk: 80,
-    sdef: 65,
-    spe: 34,
+    hp: 135*1.5,
+    atk: 143*1.5,
+    def: 143*1.5,
+    satk: 80*1.5,
+    sdef: 65*1.5,
+    spe: 34*1.5,
   },
     hiddenAbility: ability.ferrilate,
     eggMove : move.gigatonHammer
@@ -18752,24 +18752,24 @@ pkmn.urshifuRapidGmax = {
 pkmn.zarude = {
   type: ["dark","grass"],
   bst: {
-    hp: 105,
-    atk: 120,
-    def: 105,
-    satk: 70,
-    sdef: 95,
-    spe: 105,
+    hp: 105*1.5,
+    atk: 120*1.5,
+    def: 105*1.5,
+    satk: 70*1.5,
+    sdef: 95*1.5,
+    spe: 105*1.5,
   },
 }
 
 pkmn.zarudeDada = {
   type: ["dark","grass"],
   bst: {
-    hp: 105,
-    atk: 120,
-    def: 105,
-    satk: 70,
-    sdef: 95,
-    spe: 105,
+    hp: 105*1.5,
+    atk: 120*1.5,
+    def: 105*1.5,
+    satk: 70*1.5,
+    sdef: 95*1.5,
+    spe: 105*1.5,
   },
 }
 
@@ -20670,12 +20670,12 @@ pkmn.terapagosStellar = {
 pkmn.pecharunt = {
   type: ["poison", "ghost"],
   bst: {
-    hp: 88,
-    atk: 88,
-    def: 160,
-    satk: 88,
-    sdef: 88,
-    spe: 88,
+    hp: 88*1.5,
+    atk: 88*1.5,
+    def: 160*1.5,
+    satk: 88*1.5,
+    sdef: 88*1.5,
+    spe: 88*1.5,
   }
 }
 
