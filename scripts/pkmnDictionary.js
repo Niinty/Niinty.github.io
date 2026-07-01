@@ -4589,12 +4589,12 @@ pkmn.mewtwo = {
 pkmn.giovanniMewtwo = {
     type: ["psychic"],
     bst: {
-        hp: 106*1.4,
-        atk: 110*1.4,
-        def: 90*1.4,
-        satk: 154*1.4,
-        sdef: 90*1.4,
-        spe: 130*1.4,
+        hp: 106*1.35,
+        atk: 110*1.35,
+        def: 90*1.35,
+        satk: 154*1.35,
+        sdef: 90*1.35,
+        spe: 130*1.35,
     },
     hiddenAbility: ability.aromaVeil,
     lore: `Forçado a usar uma armadura cibernética desenvolvida por Giovanni. O traje suprime e canaliza seu poder devastador, transformando sua fúria existencial na arma militar mais temida do planeta.`,
@@ -4604,12 +4604,12 @@ pkmn.giovanniMewtwo = {
 pkmn.megaMewtwoX = {
     type: ["psychic","fighting"],
     bst: {
-        hp: 106*1.35,
-        atk: 190*1.35,
-        def: 100*1.35,
-        satk: 154*1.35,
-        sdef: 100*1.35,
-        spe: 130*1.35,
+        hp: 106*1.4,
+        atk: 190*1.4,
+        def: 100*1.4,
+        satk: 154*1.4,
+        sdef: 100*1.4,
+        spe: 130*1.4,
     },
     hiddenAbility: ability.parentalBond,
     lore: `O poder psíquico fortaleceu seus músculos. Ele possui uma força de preensão de uma tonelada e consegue percorrer 100 metros em exatos dois segundos!`
@@ -4618,12 +4618,12 @@ pkmn.megaMewtwoX = {
 pkmn.megaMewtwoY = {
     type: ["psychic"],
     bst: {
-        hp: 106*1.35,
-        atk: 150*1.35,
-        def: 70*1.35,
-        satk: 194*1.35,
-        sdef: 120*1.35,
-        spe: 140*1.35,
+        hp: 106*1.4,
+        atk: 150*1.4,
+        def: 70*1.4,
+        satk: 194*1.4,
+        sdef: 120*1.4,
+        spe: 140*1.4,
     },
     hiddenAbility: ability.supremeOverlord,
     lore: `Apesar de seu tamanho reduzido, seu poder mental cresceu de forma fenomenal. Com um simples pensamento, ele pode reduzir um arranha-céu a escombros.`
@@ -8993,12 +8993,12 @@ pkmn.registeel = {
 pkmn.latias = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 80*1.15,
-        atk: 80*1.15,
-        def: 90*1.15,
-        satk: 110*1.15,
-        sdef: 130*1.15,
-        spe: 110*1.15,
+        hp: 80*1.3,
+        atk: 80*1.3,
+        def: 90*1.3,
+        satk: 110*1.3,
+        sdef: 130*1.3,
+        spe: 110*1.3,
     },
     hiddenAbility: ability.levitate,
     signature : move.mistBall
@@ -9022,12 +9022,12 @@ pkmn.megaLatias = {
 pkmn.latios = {
     type: ["dragon","psychic"],
     bst: {
-        hp: 80*1.15,
-        atk: 90*1.15,
-        def: 80*1.15,
-        satk: 130*1.15,
-        sdef: 110*1.15,
-        spe: 110*1.15,
+        hp: 80*1.3,
+        atk: 90*1.3,
+        def: 80*1.3,
+        satk: 130*1.3,
+        sdef: 110*1.3,
+        spe: 110*1.3,
     },
     hiddenAbility: ability.levitate,
     signature : move.lusterPurge,
@@ -10124,21 +10124,17 @@ pkmn.megaGarchomp = {
     eggMove: move.mudSport,
 }
 
-/*
-
 pkmn.megaGarchompZ = {
     type: ["dragon"],
     bst: {
-        hp: 108,
-        atk: 130,
-        def: 85,
-        satk: 141,
-        sdef: 85,
-        spe: 151,
+        hp: 108*1.2,
+        atk: 130*1.2,
+        def: 85*1.2,
+        satk: 141*1.2,
+        sdef: 85*1.2,
+        spe: 151*1.2,
     }
 }
-
-*/
 
 // 446 Munchlax
 
@@ -13236,12 +13232,12 @@ pkmn.golurk = {
 pkmn.megaGolurk = {
   type: ["ground","ghost"],
   bst: {
-    hp: 89,
-    atk: 159,
-    def: 105,
-    satk: 70,
-    sdef: 105,
-    spe: 55,
+    hp: 89*1.2,
+    atk: 159*1.2,
+    def: 105*1.2,
+    satk: 70*1.2,
+    sdef: 105*1.2,
+    spe: 55*1.2,
   }
 }
 */
@@ -16450,12 +16446,12 @@ pkmn.golisopod = {
 pkmn.megaGolisopod = {
   type: ["bug","steel"],
   bst: {
-    hp: 75,
-    atk: 150,
-    def: 175,
-    satk: 70,
-    sdef: 120,
-    spe: 40,
+    hp: 75*1.2,
+    atk: 150*1.2,
+    def: 175*1.2,
+    satk: 70*1.2,
+    sdef: 120*1.2,
+    spe: 40*1.2,
   },
 }
 
@@ -19991,36 +19987,36 @@ pkmn.tatsugiriStretchy = {
 pkmn.megaTatsugiriCurly = {
   type: ["dragon", "water"],
   bst: {
-    hp: 68,
-    atk: 65,
-    def: 90,
-    satk: 135,
-    sdef: 125,
-    spe: 92,
+    hp: 68*1.2,
+    atk: 65*1.2,
+    def: 90*1.2,
+    satk: 135*1.2,
+    sdef: 125*1.2,
+    spe: 92*1.2,
   }
 }
 
 pkmn.megaTatsugiriDroopy = {
   type: ["dragon", "water"],
   bst: {
-    hp: 68,
-    atk: 65,
-    def: 90,
-    satk: 135,
-    sdef: 125,
-    spe: 92,
+    hp: 68*1.2,
+    atk: 65*1.2,
+    def: 90*1.2,
+    satk: 135*1.2,
+    sdef: 125*1.2,
+    spe: 92*1.2,
   }
 }
 
 pkmn.megaTatsugiriStretchy = {
   type: ["dragon", "water"],
   bst: {
-    hp: 68,
-    atk: 65,
-    def: 90,
-    satk: 135,
-    sdef: 125,
-    spe: 92,
+    hp: 68*1.2,
+    atk: 65*1.2,
+    def: 90*1.2,
+    satk: 135*1.2,
+    sdef: 125*1.2,
+    spe: 92*1.2,
   }
 }
 
@@ -20036,12 +20032,12 @@ pkmn.megaTatsugiriStretchy = {
 pkmn.greatTusk = {
     type: ["ground", "fighting"],
     bst: {
-        hp: 115,
-        atk: 131,
-        def: 131,
-        satk: 53,
-        sdef: 53,
-        spe: 87,
+        hp: 115*1.25,
+        atk: 131*1.25,
+        def: 131*1.25,
+        satk: 53*1.25,
+        sdef: 53*1.25,
+        spe: 87*1.25,
     },
     hiddenAbility: ability.protosynthesis,
 }
@@ -20050,12 +20046,12 @@ pkmn.greatTusk = {
 pkmn.screamTail = {
     type: ["fairy", "psychic"],
     bst: {
-        hp: 115,
-        atk: 65,
-        def: 99,
-        satk: 65,
-        sdef: 115,
-        spe: 111,
+        hp: 115*1.25,
+        atk: 65*1.25,
+        def: 99*1.25,
+        satk: 65*1.25,
+        sdef: 115*1.25,
+        spe: 111*1.25,
     },
     hiddenAbility: ability.protosynthesis,
     eggMove : move.boomburst
@@ -20065,12 +20061,12 @@ pkmn.screamTail = {
 pkmn.bruteBonnet = {
     type: ["grass", "dark"],
     bst: {
-        hp: 111,
-        atk: 127,
-        def: 99,
-        satk: 79,
-        sdef: 99,
-        spe: 55,
+        hp: 111*1.25,
+        atk: 127*1.25,
+        def: 99*1.25,
+        satk: 79*1.25,
+        sdef: 99*1.25,
+        spe: 55*1.25,
     },
     hiddenAbility: ability.protosynthesis,
     eggMove : move.cottonGuard
@@ -20080,12 +20076,12 @@ pkmn.bruteBonnet = {
 pkmn.flutterMane = {
     type: ["ghost", "fairy"],
     bst: {
-        hp: 75,
-        atk: 55,
-        def: 55,
-        satk: 135,
-        sdef: 135,
-        spe: 135,
+        hp: 75*1.25,
+        atk: 55*1.25,
+        def: 55*1.25,
+        satk: 135*1.25,
+        sdef: 135*1.25,
+        spe: 135*1.25,
     },
     hiddenAbility: ability.protosynthesis,
 }
@@ -20094,12 +20090,12 @@ pkmn.flutterMane = {
 pkmn.slitherWing = {
     type: ["bug", "fighting"],
     bst: {
-        hp: 85,
-        atk: 135,
-        def: 79,
-        satk: 85,
-        sdef: 105,
-        spe: 81,
+        hp: 85*1.25,
+        atk: 135*1.25,
+        def: 79*1.25,
+        satk: 85*1.25,
+        sdef: 105*1.25,
+        spe: 81*1.25,
     },
     hiddenAbility: ability.protosynthesis,
 }
@@ -20108,12 +20104,12 @@ pkmn.slitherWing = {
 pkmn.sandyShocks = {
     type: ["electric", "ground"],
     bst: {
-        hp: 85,
-        atk: 81,
-        def: 97,
-        satk: 121,
-        sdef: 85,
-        spe: 101,
+        hp: 85*1.25,
+        atk: 81*1.25,
+        def: 97*1.25,
+        satk: 121*1.25,
+        sdef: 85*1.25,
+        spe: 101*1.25,
     },
     hiddenAbility: ability.protosynthesis,
     eggMove : move.ionise
@@ -20123,12 +20119,12 @@ pkmn.sandyShocks = {
 pkmn.ironTreads = {
     type: ["ground","steel"],
     bst: {
-        hp: 110,
-        atk: 112,
-        def: 120,
-        satk: 72,
-        sdef: 70,
-        spe: 106,
+        hp: 110*1.25,
+        atk: 112*1.25,
+        def: 120*1.25,
+        satk: 72*1.25,
+        sdef: 70*1.25,
+        spe: 106*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20137,12 +20133,12 @@ pkmn.ironTreads = {
 pkmn.ironBundle = {
     type: ["ice","water"],
     bst: {
-        hp: 56,
-        atk: 80,
-        def: 114,
-        satk: 124,
-        sdef: 60,
-        spe: 136,
+        hp: 56*1.25,
+        atk: 80*1.25,
+        def: 114*1.25,
+        satk: 124*1.25,
+        sdef: 60*1.25,
+        spe: 136*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20151,12 +20147,12 @@ pkmn.ironBundle = {
 pkmn.ironHands = {
     type: ["fighting","electric"],
     bst: {
-        hp: 154,
-        atk: 150,
-        def: 108,
-        satk: 50,
-        sdef: 68,
-        spe: 50,
+        hp: 154*1.25,
+        atk: 150*1.25,
+        def: 108*1.25,
+        satk: 50*1.25,
+        sdef: 68*1.25,
+        spe: 50*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20165,12 +20161,12 @@ pkmn.ironHands = {
 pkmn.ironJugulis = {
     type: ["dark","flying"],
     bst: {
-        hp: 94,
-        atk: 80,
-        def: 86,
-        satk: 122,
-        sdef: 80,
-        spe: 108,
+        hp: 94*1.25,
+        atk: 80*1.25,
+        def: 86*1.25,
+        satk: 122*1.25,
+        sdef: 80*1.25,
+        spe: 108*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20179,12 +20175,12 @@ pkmn.ironJugulis = {
 pkmn.ironMoth = {
     type: ["fire","poison"],
     bst: {
-        hp: 80,
-        atk: 70,
-        def: 60,
-        satk: 140,
-        sdef: 110,
-        spe: 110,
+        hp: 80*1.25,
+        atk: 70*1.25,
+        def: 60*1.25,
+        satk: 140*1.25,
+        sdef: 110*1.25,
+        spe: 110*1.25,
     },
     hiddenAbility: ability.quarkDrive,
     signature : move.fieryDance
@@ -20194,12 +20190,12 @@ pkmn.ironMoth = {
 pkmn.ironThorns = {
     type: ["rock","electric"],
     bst: {
-        hp: 100,
-        atk: 154,
-        def: 110,
-        satk: 70,
-        sdef: 84,
-        spe: 72,
+        hp: 100*1.25,
+        atk: 154*1.25,
+        def: 110*1.25,
+        satk: 70*1.25,
+        sdef: 84*1.25,
+        spe: 72*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20370,12 +20366,12 @@ pkmn.chiYu = {
 pkmn.roaringMoon = {
     type: ["dragon", "dark"],
     bst: {
-        hp: 105,
-        atk: 139,
-        def: 80,
-        satk: 55,
-        sdef: 101,
-        spe: 119,
+        hp: 105*1.25,
+        atk: 139*1.25,
+        def: 80*1.25,
+        satk: 55*1.25,
+        sdef: 101*1.25,
+        spe: 119*1.25,
     },
     hiddenAbility: ability.protosynthesis,
 }
@@ -20384,12 +20380,12 @@ pkmn.roaringMoon = {
 pkmn.ironValiant = {
     type: ["fairy","fighting"],
     bst: {
-        hp: 74,
-        atk: 130,
-        def: 90,
-        satk: 120,
-        sdef: 60,
-        spe: 116,
+        hp: 74*1.25,
+        atk: 130*1.25,
+        def: 90*1.25,
+        satk: 120*1.25,
+        sdef: 60*1.25,
+        spe: 116*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20398,12 +20394,12 @@ pkmn.ironValiant = {
 pkmn.ironLeaves = {
     type: ["grass","psychic"],
     bst: {
-        hp: 90,
-        atk: 130,
-        def: 138,
-        satk: 70,
-        sdef: 108,
-        spe: 104,
+        hp: 90*1.25,
+        atk: 130*1.25,
+        def: 138*1.25,
+        satk: 70*1.25,
+        sdef: 108*1.25,
+        spe: 104*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20412,12 +20408,12 @@ pkmn.ironLeaves = {
 pkmn.ironBoulder = {
     type: ["rock","psychic"],
     bst: {
-        hp: 90,
-        atk: 120,
-        def: 80,
-        satk: 68,
-        sdef: 108,
-        spe: 124,
+        hp: 90*1.25,
+        atk: 120*1.25,
+        def: 80*1.25,
+        satk: 68*1.25,
+        sdef: 108*1.25,
+        spe: 124*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20426,12 +20422,12 @@ pkmn.ironBoulder = {
 pkmn.ironCrown = {
     type: ["steel","psychic"],
     bst: {
-        hp: 90,
-        atk: 72,
-        def: 100,
-        satk: 122,
-        sdef: 138,
-        spe: 98,
+        hp: 90*1.25,
+        atk: 72*1.25,
+        def: 100*1.25,
+        satk: 122*1.25,
+        sdef: 138*1.25,
+        spe: 98*1.25,
     },
     hiddenAbility: ability.quarkDrive,
 }
@@ -20466,12 +20462,12 @@ pkmn.miraidon = {
 pkmn.walkingWake = {
   type: ["water", "dragon"],
   bst: {
-    hp: 95,
-    atk: 180,
-    def: 110,
-    satk: 190,
-    sdef: 80,
-    spe: 100,
+    hp: 95*1.35,
+    atk: 180*1.35,
+    def: 110*1.35,
+    satk: 190*1.35,
+    sdef: 80*1.35,
+    spe: 100*1.35,
   },
     hiddenAbility: ability.protosynthesis,
 }
@@ -20480,12 +20476,12 @@ pkmn.walkingWake = {
 pkmn.gougingFire = {
     type: ["fire","dragon"],
     bst: {
-        hp: 105,
-        atk: 115,
-        def: 121,
-        satk: 115,
-        sdef: 93,
-        spe: 91,
+        hp: 105*1.35,
+        atk: 115*1.35,
+        def: 121*1.35,
+        satk: 115*1.35,
+        sdef: 93*1.35,
+        spe: 91*1.35,
     },
     hiddenAbility: ability.protosynthesis,
 }
@@ -20494,12 +20490,12 @@ pkmn.gougingFire = {
 pkmn.ragingBolt = {
     type: ["electric","dragon"],
     bst: {
-        hp: 155,
-        atk: 73,
-        def: 91,
-        satk: 157,
-        sdef: 89,
-        spe: 75,
+        hp: 155*1.35,
+        atk: 73*1.35,
+        def: 91*1.35,
+        satk: 157*1.35,
+        sdef: 89*1.35,
+        spe: 75*1.35,
     },
     hiddenAbility: ability.protosynthesis,
 }
