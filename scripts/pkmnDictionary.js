@@ -16921,12 +16921,12 @@ pkmn.lunala = {
 pkmn.nihilego = {
   type: ["rock","poison"],
   bst: {
-    hp: 109,
-    atk: 53,
-    def: 50,
-    satk: 147,
-    sdef: 141,
-    spe: 103,
+    hp: 109*1.25,
+    atk: 53*1.25,
+    def: 50*1.25,
+    satk: 147*1.25,
+    sdef: 141*1.25,
+    spe: 103*1.25,
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.mimic
@@ -16936,12 +16936,12 @@ pkmn.nihilego = {
 pkmn.buzzwole = {
   type: ["bug","fighting"],
   bst: {
-    hp: 120,
-    atk: 140,
-    def: 140,
-    satk: 53,
-    sdef: 53,
-    spe: 79,
+    hp: 120*1.25,
+    atk: 140*1.25,
+    def: 140*1.25,
+    satk: 53*1.25,
+    sdef: 53*1.25,
+    spe: 79*1.25,
   },
     hiddenAbility: ability.beastBoost,
 }
@@ -16950,12 +16950,12 @@ pkmn.buzzwole = {
 pkmn.pheromosa = {
   type: ["bug","fighting"],
   bst: {
-    hp: 80,
-    atk: 140,
-    def: 40,
-    satk: 140,
-    sdef: 40,
-    spe: 161,
+    hp: 80*1.25,
+    atk: 140*1.25,
+    def: 40*1.25,
+    satk: 140*1.25,
+    sdef: 40*1.25,
+    spe: 161*1.25,
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.meFirst
@@ -16965,12 +16965,12 @@ pkmn.pheromosa = {
 pkmn.xurkitree = {
   type: ["electric"],
   bst: {
-    hp: 100,
-    atk: 89,
-    def: 80,
-    satk: 180,
-    sdef: 80,
-    spe: 100,
+    hp: 100*1.25,
+    atk: 89*1.25,
+    def: 80*1.25,
+    satk: 180*1.25,
+    sdef: 80*1.25,
+    spe: 100*1.25,
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.ionise
@@ -16980,12 +16980,12 @@ pkmn.xurkitree = {
 pkmn.celesteela = {
   type: ["steel","flying"],
   bst: {
-    hp: 80,
-    atk: 120,
-    def: 120,
-    satk: 107,
-    sdef: 101,
-    spe: 61,
+    hp: 80*1.25,
+    atk: 120*1.25,
+    def: 120*1.25,
+    satk: 107*1.25,
+    sdef: 101*1.25,
+    spe: 61*1.25,
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.anchorShot
@@ -16995,12 +16995,12 @@ pkmn.celesteela = {
 pkmn.kartana = {
   type: ["grass","steel"],
   bst: {
-    hp: 59,
-    atk: 181,
-    def: 140,
-    satk: 60,
-    sdef: 40,
-    spe: 120,
+    hp: 59*1.25,
+    atk: 181*1.25,
+    def: 140*1.25,
+    satk: 60*1.25,
+    sdef: 40*1.25,
+    spe: 120*1.25,
   },
     hiddenAbility: ability.beastBoost,
 }
@@ -17009,12 +17009,12 @@ pkmn.kartana = {
 pkmn.guzzlord = {
   type: ["dark","dragon"],
   bst: {
-    hp: 223,
-    atk: 131,
-    def: 80,
-    satk: 100,
-    sdef: 53,
-    spe: 43,
+    hp: 223*1.25,
+    atk: 131*1.25,
+    def: 80*1.25,
+    satk: 100*1.25,
+    sdef: 53*1.25,
+    spe: 43*1.25,
   },
     hiddenAbility: ability.beastBoost,
 }
@@ -17147,12 +17147,12 @@ pkmn.marshadow = {
 pkmn.poipole = {
   type: ["poison"],
   bst: {
-    hp: 67,
-    atk: 73,
-    def: 67,
-    satk: 73,
-    sdef: 67,
-    spe: 73,
+    hp: 67*1.25,
+    atk: 73*1.25,
+    def: 67*1.25,
+    satk: 73*1.25,
+    sdef: 67*1.25,
+    spe: 73*1.25,
   },
   evolve: function() { return { 1: { pkmn: pkmn.naganadel, level: evolutionLevel3 } } },
     hiddenAbility: ability.beastBoost,
