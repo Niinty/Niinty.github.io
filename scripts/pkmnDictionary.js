@@ -398,12 +398,12 @@ pkmn.butterfreeF = {
 pkmn.butterfreeGmax = {
     type: ["bug","flying"],
     bst: {
-        hp: 60*1.9,
-        atk: 45*1.9,
-        def: 50*1.9,
-        satk: 90*1.9,
-        sdef: 80*1.9,
-        spe: 70*1.9,
+        hp: 60*1.15,
+        atk: 45*1.15,
+        def: 50*1.15,
+        satk: 90*1.15,
+        sdef: 80*1.15,
+        spe: 70*1.15,
     },
     lore: `Depois de prender seus oponentes em um tornado capaz de arremessar um caminhão de 10 toneladas, ele os finaliza com suas escamas venenosas.`,
     hiddenAbility: ability.tintedLens,
@@ -766,12 +766,12 @@ pkmn.pikachuF = {
 pkmn.pikachuGmax = {
     type: ["electric"],
     bst: {
-        hp: 200,
-        atk: 120,
-        def: 90,
-        satk: 120,
-        sdef: 90,
-        spe: 110,
+        hp: 200*1.15,
+        atk: 120*1.15,
+        def: 90*1.15,
+        satk: 120*1.15,
+        sdef: 90*1.15,
+        spe: 110*1.15,
     },
     signature : move.voltTackle,
     hiddenAbility: ability.electricSurge,
@@ -1660,12 +1660,12 @@ pkmn.meowth = {
 pkmn.meowthGmax = {
     type: ["normal"],
     bst: {
-        hp: 90*2,
-        atk: 45*3,
-        def: 35*3,
-        satk: 40*3,
-        sdef: 40*3,
-        spe: 40*3,
+        hp: 90*1.15,
+        atk: 45*1.15,
+        def: 35*1.15,
+        satk: 40*1.15,
+        sdef: 40*1.15,
+        spe: 40*1.15,
     },
     hiddenAbility: ability.technician,
     signature : move.payDay,
@@ -2101,12 +2101,12 @@ pkmn.machamp = {
 pkmn.machampGmax = {
     type: ["fighting"],
     bst: {
-        hp: 90*1.5,
-        atk: 130*1.5,
-        def: 80*1.5,
-        satk: 65*1.5,
-        sdef: 85*1.5,
-        spe: 55*1.5,
+        hp: 90*1.15,
+        atk: 130*1.15,
+        def: 80*1.15,
+        satk: 65*1.15,
+        sdef: 85*1.15,
+        spe: 55*1.15,
     },
     hiddenAbility: ability.guts,
     signature : move.dynamicPunch
@@ -2771,12 +2771,12 @@ pkmn.megaGengar = {
 pkmn.gengarGmax = {
     type: ["ghost","poison"],
     bst: {
-        hp: 110*1.1,
-        atk: 65*1.5,
-        def: 80*1.5,
-        satk: 190*1.1,
-        sdef: 95*1.5,
-        spe: 90*1.1,
+        hp: 110*1.15,
+        atk: 65*1.15,
+        def: 80*1.15,
+        satk: 190*1.15,
+        sdef: 95*1.15,
+        spe: 90*1.15,
     },
     hiddenAbility: ability.somberField,
 }
@@ -2904,12 +2904,12 @@ pkmn.kingler = {
 pkmn.kinglerGmax = {
     type: ["water"],
     bst: {
-        hp: 55*1.5,
-        atk: 130*1.5,
-        def: 115*1.5,
-        satk: 50*1.5,
-        sdef: 50*1.5,
-        spe: 75*1.5,
+        hp: 55*1.15,
+        atk: 130*1.15,
+        def: 115*1.15,
+        satk: 50*1.15,
+        sdef: 50*1.15,
+        spe: 75*1.15,
     },
     hiddenAbility: ability.toughClaws,
     signature : move.crabhammer
@@ -4036,12 +4036,12 @@ pkmn.lapras = {
 pkmn.laprasGmax = {
     type: ["water","ice"],
     bst: {
-        hp: 130*1.5,
-        atk: 85*1.5,
-        def: 80*1.5,
-        satk: 85*1.5,
-        sdef: 95*1.5,
-        spe: 60*1.5,
+        hp: 130*1.15,
+        atk: 85*1.15,
+        def: 80*1.15,
+        satk: 85*1.15,
+        sdef: 95*1.15,
+        spe: 60*1.15,
     },
     hiddenAbility: ability.waterAbsorb,
     eggMove : move.sparklingAria
@@ -4120,12 +4120,12 @@ pkmn.eeveeF = {
 pkmn.eeveeGmax = {
     type: ["normal"],
     bst: {
-        hp: 55*1.5,
-        atk: 55*1.5,
-        def: 50*1.5,
-        satk: 45*1.5,
-        sdef: 65*1.5,
-        spe: 55*1.5,
+        hp: 55*1.15,
+        atk: 55*1.15,
+        def: 50*1.15,
+        satk: 45*1.15,
+        sdef: 65*1.15,
+        spe: 55*1.15,
     },
     hiddenAbility: ability.normalize,
     signature : move.batonPass
@@ -4403,12 +4403,12 @@ pkmn.snorlax = {
 pkmn.snorlaxGmax = {
     type: ["normal"],
     bst: {
-        hp: 160*1.5,
-        atk: 110*1.5,
-        def: 65*1.4,
-        satk: 65*1.4,
-        sdef: 110*1.4,
-        spe: 30*1.4,
+        hp: 160*1.15,
+        atk: 110*1.15,
+        def: 65*1.15,
+        satk: 65*1.15,
+        sdef: 110*1.15,
+        spe: 30*1.15,
     },
     hiddenAbility: ability.thickFat,
     signature : move.bellyDrum
@@ -12284,12 +12284,12 @@ pkmn.garbodor = {
 pkmn.garbodorGmax = {
   type: ["poison"],
   bst: {
-    hp: 80*1.6,
-    atk: 95*1.6,
-    def: 82*1.6,
-    satk: 60*1.6,
-    sdef: 82*1.6,
-    spe: 75*1.6,
+    hp: 80*1.15,
+    atk: 95*1.15,
+    def: 82*1.15,
+    satk: 60*1.15,
+    sdef: 82*1.15,
+    spe: 75*1.15,
   },
     hiddenAbility: ability.toxicBoost,
 }
@@ -17265,12 +17265,12 @@ pkmn.melmetal = {
 pkmn.melmetalGmax = {
   type: ["steel"],
   bst: {
-    hp: 135*1.5,
-    atk: 143*1.5,
-    def: 143*1.5,
-    satk: 80*1.5,
-    sdef: 65*1.5,
-    spe: 34*1.5,
+    hp: 135*1.15,
+    atk: 143*1.15,
+    def: 143*1.15,
+    satk: 80*1.15,
+    sdef: 65*1.15,
+    spe: 34*1.15,
   },
     hiddenAbility: ability.ferrilate,
     eggMove : move.gigatonHammer
@@ -17324,12 +17324,12 @@ pkmn.rillaboom = {
 pkmn.rillaboomGmax = {
   type: ["grass"],
   bst: {
-    hp: 100*1.5,
-    atk: 125*1.5,
-    def: 90*1.5,
-    satk: 60*1.5,
-    sdef: 70*1.5,
-    spe: 85*1.5,
+    hp: 100*1.15,
+    atk: 125*1.15,
+    def: 90*1.15,
+    satk: 60*1.15,
+    sdef: 70*1.15,
+    spe: 85*1.15,
   },
     hiddenAbility: ability.grassySurge,
     signature : move.drumBeating
@@ -17383,12 +17383,12 @@ pkmn.cinderace = {
 pkmn.cinderaceGmax = {
   type: ["fire"],
   bst: {
-    hp: 80*1.5,
-    atk: 110*1.5,
-    def: 70*1.5,
-    satk: 65*1.5,
-    sdef: 75*1.5,
-    spe: 119*1.5,
+    hp: 80*1.15,
+    atk: 110*1.15,
+    def: 70*1.15,
+    satk: 65*1.15,
+    sdef: 75*1.15,
+    spe: 119*1.15,
   },
     signature : move.pyroBall,
     hiddenAbility: ability.libero,
@@ -17439,12 +17439,12 @@ pkmn.inteleon = {
 pkmn.inteleonGmax = {
   type: ["water"],
   bst: {
-    hp: 70*1.5,
-    atk: 85*1.5,
-    def: 65*1.5,
-    satk: 125*1.5,
-    sdef: 65*1.5,
-    spe: 120*1.5,
+    hp: 70*1.15,
+    atk: 85*1.15,
+    def: 65*1.15,
+    satk: 125*1.15,
+    sdef: 65*1.15,
+    spe: 120*1.15,
   },
     signature : move.snipeShot
 }
@@ -17523,12 +17523,12 @@ pkmn.corviknight = {
 pkmn.corviknightGmax = {
   type: ["flying","steel"],
   bst: {
-    hp: 98*1.5,
-    atk: 87*1.5,
-    def: 105*1.5,
-    satk: 53*1.5,
-    sdef: 85*1.5,
-    spe: 67*1.5,
+    hp: 98*1.15,
+    atk: 87*1.15,
+    def: 105*1.15,
+    satk: 53*1.15,
+    sdef: 85*1.15,
+    spe: 67*1.15,
   },
 }
 
@@ -17577,12 +17577,12 @@ pkmn.orbeetle = {
 pkmn.orbeetleGmax = {
   type: ["bug","psychic"],
   bst: {
-    hp: 60*1.6,
-    atk: 45*1.6,
-    def: 110*1.6,
-    satk: 80*1.6,
-    sdef: 120*1.6,
-    spe: 90*1.6,
+    hp: 60*1.15,
+    atk: 45*1.15,
+    def: 110*1.15,
+    satk: 80*1.15,
+    sdef: 120*1.15,
+    spe: 90*1.15,
   },
     eggMove: move.magicPowder,
 }
@@ -17700,12 +17700,12 @@ pkmn.drednaw = {
 pkmn.drednawGmax = {
   type: ["water","rock"],
   bst: {
-    hp: 90*1.65,
-    atk: 115*1.65,
-    def: 90*1.65,
-    satk: 48*1.65,
-    sdef: 68*1.65,
-    spe: 60*1.65,
+    hp: 90*1.15,
+    atk: 115*1.15,
+    def: 90*1.15,
+    satk: 48*1.15,
+    sdef: 68*1.15,
+    spe: 60*1.15,
   },
     hiddenAbility: ability.strongJaw,
 }
@@ -17785,12 +17785,12 @@ pkmn.coalossal = {
 pkmn.coalossalGmax = {
   type: ["rock","fire"],
   bst: {
-    hp: 110*1.5,
-    atk: 80*1.5,
-    def: 120*1.5,
-    satk: 80*1.5,
-    sdef: 90*1.5,
-    spe: 30*1.5,
+    hp: 110*1.15,
+    atk: 80*1.15,
+    def: 120*1.15,
+    satk: 80*1.15,
+    sdef: 90*1.15,
+    spe: 30*1.15,
   },
     hiddenAbility: ability.solarPower,
 }
@@ -17848,12 +17848,12 @@ pkmn.appletun = {
 pkmn.appletunGmax = {
   type: ["grass","dragon"],
   bst: {
-    hp: 110*1.5,
-    atk: 85*1.5,
-    def: 80*1.5,
-    satk: 100*1.5,
-    sdef: 80*1.5,
-    spe: 30*1.5,
+    hp: 110*1.15,
+    atk: 85*1.15,
+    def: 80*1.15,
+    satk: 100*1.15,
+    sdef: 80*1.15,
+    spe: 30*1.15,
   },
     hiddenAbility: ability.dragonGuard,
     signature : move.appleAcid
@@ -17915,12 +17915,12 @@ pkmn.sandaconda = {
 pkmn.sandacondaGmax = {
   type: ["ground"],
   bst: {
-    hp: 72*1.6,
-    atk: 107*1.6,
-    def: 125*1.6,
-    satk: 65*1.6,
-    sdef: 70*1.6,
-    spe: 71*1.6,
+    hp: 72*1.15,
+    atk: 107*1.15,
+    def: 125*1.15,
+    satk: 65*1.15,
+    sdef: 70*1.15,
+    spe: 71*1.15,
   },
     hiddenAbility: ability.sandyPelt,
 }
@@ -17999,12 +17999,12 @@ pkmn.toxtricity = {
 pkmn.toxtricityGmax = {
   type: ["electric","poison"],
   bst: {
-    hp: 75*1.5,
-    atk: 98*1.5,
-    def: 70*1.5,
-    satk: 114*1.5,
-    sdef: 70*1.5,
-    spe: 75*1.5,
+    hp: 75*1.15,
+    atk: 98*1.15,
+    def: 70*1.15,
+    satk: 114*1.15,
+    sdef: 70*1.15,
+    spe: 75*1.15,
   },
     hiddenAbility: ability.galvanize,
     eggMove : move.boomburst
@@ -18043,12 +18043,12 @@ pkmn.centiskorch = {
 pkmn.centiskorchGmax = {
   type: ["fire","bug"],
   bst: {
-    hp: 100*1.5,
-    atk: 115*1.5,
-    def: 65*1.5,
-    satk: 90*1.5,
-    sdef: 90*1.5,
-    spe: 65*1.5,
+    hp: 100*1.15,
+    atk: 115*1.15,
+    def: 65*1.15,
+    satk: 90*1.15,
+    sdef: 90*1.15,
+    spe: 65*1.15,
   },
     signature : move.burnUp,
     hiddenAbility: ability.scorch,
@@ -18163,12 +18163,12 @@ pkmn.hatterene = {
 pkmn.hattereneGmax = {
   type: ["psychic","fairy"],
   bst: {
-    hp: 57*1.5,
-    atk: 90*1.5,
-    def: 95*1.5,
-    satk: 136*1.5,
-    sdef: 103*1.5,
-    spe: 29*1.5,
+    hp: 57*1.15,
+    atk: 90*1.15,
+    def: 95*1.15,
+    satk: 136*1.15,
+    sdef: 103*1.15,
+    spe: 29*1.15,
   },
     signature : move.magicPowder,
         hiddenAbility: ability.neuroforce,
@@ -18223,12 +18223,12 @@ pkmn.grimmsnarl = {
 pkmn.grimmsnarlGmax = {
   type: ["dark","fairy"],
   bst: {
-    hp: 95*1.6,
-    atk: 120*1.6,
-    def: 65*1.6,
-    satk: 95*1.6,
-    sdef: 75*1.6,
-    spe: 60*1.6,
+    hp: 95*1.15,
+    atk: 120*1.15,
+    def: 65*1.15,
+    satk: 95*1.15,
+    sdef: 75*1.15,
+    spe: 60*1.15,
   },
     hiddenAbility: ability.prankster,
     signature : move.falseSurrender
@@ -18274,12 +18274,12 @@ pkmn.alcremie = {
 pkmn.alcremieGmax = {
   type: ["fairy"],
   bst: {
-    hp: 65*1.6,
-    atk: 60*1.6,
-    def: 75*1.6,
-    satk: 110*1.6,
-    sdef: 121*1.6,
-    spe: 64*1.6,
+    hp: 65*1.15,
+    atk: 60*1.15,
+    def: 75*1.15,
+    satk: 110*1.15,
+    sdef: 121*1.15,
+    spe: 64*1.15,
   },
     hiddenAbility: ability.mistySurge,
     eggMove : move.teatime
@@ -18450,12 +18450,12 @@ pkmn.copperajah = {
 pkmn.copperajahGmax = {
   type: ["steel"],
   bst: {
-    hp: 122*1.5,
-    atk: 130*1.5,
-    def: 69*1.5,
-    satk: 80*1.5,
-    sdef: 69*1.5,
-    spe: 30*1.5,
+    hp: 122*1.15,
+    atk: 130*1.15,
+    def: 69*1.15,
+    satk: 80*1.15,
+    sdef: 69*1.15,
+    spe: 30*1.15,
   },
     hiddenAbility: ability.sheerForce,
 }
@@ -18537,12 +18537,12 @@ pkmn.duraludon = {
 pkmn.duraludonGmax = {
   type: ["steel","dragon"],
   bst: {
-    hp: 70*1.5,
-    atk: 95*1.5,
-    def: 115*1.5,
-    satk: 120*1.5,
-    sdef: 50*1.5,
-    spe: 85*1.5,
+    hp: 70*1.15,
+    atk: 95*1.15,
+    def: 115*1.15,
+    satk: 120*1.15,
+    sdef: 50*1.15,
+    spe: 85*1.15,
   },
     hiddenAbility: ability.stamina,
     eggMove : move.kingsShield
@@ -18709,12 +18709,12 @@ pkmn.urshifuSingleGmax = {
     rename: `urshifu S. Gmax`,
   type: ["fighting","dark"],
   bst: {
-    hp: 100*1.5,
-    atk: 130*1.5,
-    def: 100*1.5,
-    satk: 63*1.5,
-    sdef: 60*1.5,
-    spe: 97*1.5,
+    hp: 100*1.15,
+    atk: 130*1.15,
+    def: 100*1.15,
+    satk: 63*1.15,
+    sdef: 60*1.15,
+    spe: 97*1.15,
   },
 }
 
@@ -18735,12 +18735,12 @@ pkmn.urshifuRapidGmax = {
     rename: `urshifu R. Gmax`,
   type: ["fighting","water"],
   bst: {
-    hp: 100*1.5,
-    atk: 130*1.5,
-    def: 100*1.5,
-    satk: 63*1.5,
-    sdef: 60*1.5,
-    spe: 97*1.5,
+    hp: 100*1.15,
+    atk: 130*1.15,
+    def: 100*1.15,
+    satk: 63*1.15,
+    sdef: 60*1.15,
+    spe: 97*1.15,
   },
 }
 
