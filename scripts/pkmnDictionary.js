@@ -10105,7 +10105,12 @@ pkmn.garchomp = {
         sdef: 85,
         spe: 102,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.megaGarchomp, item: item.garchompite } } },
+    evolve: function() { 
+        return { 
+            1: { pkmn: pkmn.megaGarchomp, item: item.garchompite }, 
+            2: { pkmn: pkmn.megaGarchompZ, item: item.garchompiteZ }
+        } 
+    },
     hiddenAbility: ability.sandForce,
     eggMove: move.mudSport,
 }
@@ -10163,7 +10168,12 @@ pkmn.lucario = {
         sdef: 70,
         spe: 90,
     },
-    evolve: function() { return { 1: { pkmn: pkmn.megaLucario, item: item.lucarionite } } },
+    evolve: function() { 
+        return {
+            1: { pkmn: pkmn.megaLucario, item: item.lucarionite },
+            2: { pkmn: pkmn.megaLucarioZ, item: item.lucarioniteZ },
+        } 
+    },
     hiddenAbility: ability.adaptability,
 }
 
