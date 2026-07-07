@@ -10129,7 +10129,7 @@ pkmn.megaGarchomp = {
     eggMove: move.mudSport,
 }
 
-pkmn.megaGarchompZ = {
+/*pkmn.megaGarchompZ = {
     type: ["dragon"],
     bst: {
         hp: 108*1.2,
@@ -10139,7 +10139,7 @@ pkmn.megaGarchompZ = {
         sdef: 85*1.2,
         spe: 151*1.2,
     }
-}
+}*/
 
 // 446 Munchlax
 
