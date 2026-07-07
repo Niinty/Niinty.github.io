@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 16;
+const rotationWildMax = 18;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -1607,6 +1607,160 @@ areas.mtCoronet = {
         common : [pkmn.chingling,pkmn.machop],
         uncommon : [pkmn.dratini,pkmn.absol],
         rare : [pkmn.feebas]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 17
+areas.pinwheelForest = {
+    rotation : 17,
+    name: `Pinwheel Forest`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.audino,
+    spawns: {
+        common : [pkmn.pidove,pkmn.timburr],
+        uncommon : [pkmn.audino,pkmn.tympole],
+        rare : [pkmn.lilligant]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.chargestoneCave = {
+    rotation : 17,
+    name: `Chargestone Cave`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.boldore,
+    spawns: {
+        common : [pkmn.joltik,pkmn.klink],
+        uncommon : [pkmn.boldore,pkmn.ferroseed],
+        rare : [pkmn.tynamo]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.celestialTower = {
+    rotation : 17,
+    name: `Celestial Tower`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `tower`,
+    icon: pkmn.elgyem,
+    spawns: {
+        common : [pkmn.litwick,pkmn.beldum],
+        uncommon : [pkmn.elgyem,pkmn.golbat],
+        rare : [pkmn.skarmory]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.giantChasm = {
+    rotation : 17,
+    name: `Giant Chasm`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `mountain`,
+    icon: pkmn.absol,
+    spawns: {
+        common : [pkmn.tangela,pkmn.swellow],
+        uncommon : [pkmn.absol,pkmn.drifblim],
+        rare : [pkmn.crobat]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 18
+areas.santaluneForest = {
+    rotation : 18,
+    name: `Santalune Forest`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.pikachu,
+    spawns: {
+        common : [pkmn.caterpie,pkmn.weedle],
+        uncommon : [pkmn.fletchling,pkmn.bunnelby],
+        rare : [pkmn.pikachu]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.reflectionCave = {
+    rotation : 18,
+    name: `Reflection Cave`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.wobbuffet,
+    spawns: {
+        common : [pkmn.carbink,pkmn.woobat],
+        uncommon : [pkmn.wobbuffet,pkmn.ferroseed],
+        rare : [pkmn.mimejr]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.frostCavern = {
+    rotation : 18,
+    name: `Frost Cavern`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `iceCave`,
+    icon: pkmn.beartic,
+    spawns: {
+        common : [pkmn.smoochum,pkmn.poliwag],
+        uncommon : [pkmn.beartic,pkmn.cryogonal],
+        rare : [pkmn.jynx]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.terminusCave = {
+    rotation : 18,
+    name: `Terminus Cave`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.durant,
+    spawns: {
+        common : [pkmn.shuckle,pkmn.aron],
+        uncommon : [pkmn.durant,pkmn.pupitar],
+        rare : [pkmn.sandslash]
     },
     drops: {
         common : [item.mysteryEgg],
