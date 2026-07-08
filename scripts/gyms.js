@@ -218,8 +218,12 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Voador.",
         team: {
-            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
-            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
         },
     },
     {
@@ -232,8 +236,12 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Inseto.",
         team: {
-            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
-            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
         },
     },
     {
@@ -246,8 +254,12 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Normal.",
         team: {
-            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
-            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
         },
     },
     {
@@ -260,10 +272,90 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Fantasma.",
         team: {
-            slot1: pkmn.onix, slot1Moves: [move.rockThrow.id],
-            slot2: pkmn.geodude, slot2Moves: [move.tackle.id]
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
         },
-    },*/
+    },
+    {
+        areaId: "vsGymLeaderChuck",
+        region: "johto",
+        name: "Gym Leader Chuck",
+        city: "Cianwood City",
+        sprite: "chuck",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Lutador.",
+        team: {
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+        },
+    },
+    {
+        areaId: "vsGymLeaderJasmine",
+        region: "johto",
+        name: "Gym Leader Jasmine",
+        city: "Olivine City",
+        sprite: "jasmine",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Aço.",
+        team: {
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+        },
+    },
+    {
+        areaId: "vsGymLeaderPryce",
+        region: "johto",
+        name: "Gym Leader Pryce",
+        city: "Mahogany City",
+        sprite: "pryce",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Gelo.",
+        team: {
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+        },
+    },
+    {
+        areaId: "vsGymLeaderClair",
+        region: "johto",
+        name: "Gym Leader Clair",
+        city: "Blackthorn City",
+        sprite: "clair",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Dragão.",
+        team: {
+            slot1: pkmn.geodude, slot1Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot2: pkmn.geodude, slot2Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot3: pkmn.geodude, slot3Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot4: pkmn.geodude, slot4Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot5: pkmn.geodude, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+            slot6: pkmn.geodude, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
+        },
+    },
+    
+    
+    
+ */
 ]
 
 function getGymMaxDifficulty() {
