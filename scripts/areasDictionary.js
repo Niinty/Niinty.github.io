@@ -1857,8 +1857,8 @@ areas.expertDojoI = {
     rotation : 1,
     type: `dungeon`,
     background : `gym`,
-    unlockDescription : `Defeat Gym Leader Lt. Surge in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderLtsurge.defeated },
+    unlockDescription : `Defeat Swimmer Dan in VS to unlock`,
+    unlockRequirement : function() { return areas.vsSwimmerDan.defeated },
     level : wildAreaLevel4,
     icon: item.tmDummy,
     spawns: {
@@ -1981,8 +1981,8 @@ areas.expertDojoII = {
     rotation : 2,
     type: `dungeon`,
     background : `gym`,
-    unlockDescription : `Defeat Gym Leader Lt. Surge in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderLtsurge.defeated },
+    unlockDescription : `Defeat Swimmer Dan in VS to unlock`,
+    unlockRequirement : function() { return areas.vsSwimmerDan.defeated },
     level : wildAreaLevel4,
     icon: item.tmDummy,
     spawns: {
@@ -2105,8 +2105,8 @@ areas.expertDojoIII = {
     type: `dungeon`,
     background : `gym`,
     level : wildAreaLevel4,
-    unlockDescription : `Defeat Gym Leader Lt. Surge in Ginásios to unlock`,
-    unlockRequirement : function() { return areas.vsGymLeaderLtsurge.defeated },
+    unlockDescription : `Defeat Swimmer Dan in VS to unlock`,
+    unlockRequirement : function() { return areas.vsSwimmerDan.defeated },
     icon: item.tmDummy,
     spawns: {
         common : [pkmn.lucario,pkmn.machamp, pkmn.hawlucha, pkmn.mienshao],
