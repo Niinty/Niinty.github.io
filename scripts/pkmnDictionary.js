@@ -3419,6 +3419,7 @@ pkmn.tangelaEvent = {
         spe: 60,
     },
     hiddenAbility: ability.curseAbsorb,
+    lore: `Numa variação vista apenas em ocasiões especiais, suas vinhas parecem brilhar com uma tonalidade diferente do normal, atraindo atenção.`,
 }
 
 pkmn.tangrowth = {
@@ -3432,6 +3433,7 @@ pkmn.tangrowth = {
         spe: 50,
     },
     hiddenAbility: ability.growthAbsorb,
+    lore: `Suas vinhas cresceram tanto que começaram a se mover por conta própria, agarrando qualquer coisa que se aproxime demais.`,
 }
 
 // 115 Kangaskhan
@@ -3448,6 +3450,7 @@ pkmn.kangaskhan = {
     evolve: function() { return { 1: { pkmn: pkmn.megaKangaskhan, item: item.kangaskhanite } } },
     hiddenAbility: ability.parentalBond,
     eggMove : move.headCharge,
+    lore: `Ela cria seu filhote na bolsa em sua barriga por vários anos, raramente deixando-o sair até que esteja pronto para se defender sozinho.`,
 }
 
 pkmn.megaKangaskhan = {
@@ -3462,6 +3465,7 @@ pkmn.megaKangaskhan = {
     },
     hiddenAbility: ability.parentalBond,
     eggMove : move.headCharge,
+    lore: `A megaevolução faz com que o filhote em sua bolsa também se torne mais forte, lutando ao lado da mãe em perfeita sincronia.`,
 }
 
 // 116 Horsea → Seadra → Kingdra
@@ -3478,6 +3482,7 @@ pkmn.horsea = {
     evolve: function() { return { 1: { pkmn: pkmn.seadra, level: evolutionLevel2 } } },
     eggMove : move.snipeShot,
     hiddenAbility: ability.reckless,
+    lore: `Ele vive em mares tropicais rasos. Quando ameaçado, dispara jatos de tinta preta e foge nadando de costas usando sua nadadeira dorsal.`,
 }
 
 pkmn.seadra = {
@@ -3493,6 +3498,7 @@ pkmn.seadra = {
     evolve: function() { return { 1: { pkmn: pkmn.kingdra, level: evolutionLevel3 } } },
     eggMove : move.snipeShot,
     hiddenAbility: ability.reckless,
+    lore: `As pontas afiadas em seu corpo secretam veneno potente. Pescadores temem picadas fatais vindas de suas nadadeiras semelhantes a lâminas.`,
 }
 
 pkmn.kingdra = {
@@ -3507,6 +3513,7 @@ pkmn.kingdra = {
     },
     eggMove : move.snipeShot,
     hiddenAbility: ability.reckless,
+    lore: `Diz-se que este Pokémon dorme no fundo de redemoinhos oceânicos. Quando desperta, cria tempestades violentas vindas do mar profundo.`,
 }
 
 // 118 Goldeen → Seaking
@@ -3581,7 +3588,8 @@ pkmn.staryu = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.starmie, item: item.waterStone } } },
     hiddenAbility: ability.synchronize,
-    signature : move.camouflage
+    signature : move.camouflage,
+    lore: `Seu núcleo central brilha em sete cores durante a noite ao longo da costa. Ele pode regenerar qualquer parte perdida de seu corpo.`,
 }
 
 pkmn.starmie = {
@@ -3595,7 +3603,8 @@ pkmn.starmie = {
         spe: 115,
     },
     hiddenAbility: ability.synchronize,
-    signature : move.camouflage
+    signature : move.camouflage,
+    lore: `Seu núcleo misterioso brilha em sete cores. Alguns pesquisadores acreditam que este Pokémon veio do espaço sideral.`,
 }
 
 pkmn.megaStarmie = {
@@ -3608,7 +3617,8 @@ pkmn.megaStarmie = {
         sdef: 105*1.2,
         spe: 120*1.2,
     },
-    signature : move.camouflage
+    signature : move.camouflage,
+    lore: `Sua megaevolução intensifica o brilho de seu núcleo central, que agora emite luzes ainda mais vibrantes em padrões complexos.`,
 }
 
 // 122 Mime Jr. → Mr. Mime / Galarian Mr. Mime → Mr. Rime
@@ -3625,7 +3635,8 @@ pkmn.mimejr = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.mrmime, level: evolutionLevel1 } } },
     hiddenAbility: ability.technician,
-    signature : move.mimic
+    signature : move.mimic,
+    lore: `Ele aprende a imitar os gestos e expressões de seus pais observando-os de perto, praticando constantemente para se tornar melhor.`,
 }
 
 pkmn.mrmime = {
@@ -3640,7 +3651,8 @@ pkmn.mrmime = {
         spe: 90,
     },
     hiddenAbility: ability.technician,
-    signature : move.mimic
+    signature : move.mimic,
+    lore: `Sua habilidade de pantomima é tão convincente que paredes invisíveis criadas por seus gestos parecem realmente existir.`,
 }
 
 pkmn.galarianMrmime = {
@@ -3655,6 +3667,7 @@ pkmn.galarianMrmime = {
         spe: 100,
     },
     evolve: function() { return { 1: { pkmn: pkmn.mrRime, item: item.iceStone } } },
+    lore: `Ele dança com movimentos gráceis, e o ritmo hipnótico gerado por sua batuta de gelo pode congelar até os pensamentos de quem assiste.`,
 }
 
 pkmn.mrRime = {
@@ -3667,7 +3680,8 @@ pkmn.mrRime = {
     sdef: 100,
     spe: 70,
   },
-    signature : move.mimic
+    signature : move.mimic,
+    lore: `Ele adora fazer os outros rirem com sua dança cômica, mas seus passos escondem uma técnica de combate surpreendentemente sofisticada.`,
 }
 
 // 123 Scyther → Scizor / Kleavor
@@ -3713,6 +3727,7 @@ pkmn.scizor = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaScizor, item: item.scizorite } } },
     hiddenAbility: ability.technician,
+    lore: `Suas garras de aço são mais afiadas que qualquer lâmina. Ele ataca voando silenciosamente e cortando o alvo antes que perceba.`,
 }
 
 pkmn.megaScizor = {
@@ -3726,6 +3741,7 @@ pkmn.megaScizor = {
         spe: 75*1.2,
     },
     hiddenAbility: ability.technician,
+    lore: `A megaevolução torna seu exoesqueleto ainda mais denso e reforçado, permitindo voos e ataques em velocidades impressionantes.`,
 }
 
 pkmn.kleavor = {
@@ -3738,6 +3754,7 @@ pkmn.kleavor = {
         sdef: 70,
         spe: 85,
     },
+    lore: `Uma forma ancestral de Scizor cujos braços evoluíram como machados de pedra, usados para desbravar florestas densas.`,
 }
 
 // 124 Smoochum → Jynx
@@ -3753,7 +3770,8 @@ pkmn.smoochum = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.jynx, level: evolutionLevel2 } } },
     hiddenAbility: ability.strategist,
-    signature : move.lovelyKiss
+    signature : move.lovelyKiss,
+    lore: `Ela testa a maciez dos lábios de tudo que encontra, encostando-os em pedras e no chão, o que às vezes a deixa com um gosto ruim na boca.`,
 }
 
 pkmn.jynx = {
@@ -3767,7 +3785,8 @@ pkmn.jynx = {
         spe: 95,
     },
     hiddenAbility: ability.strategist,
-    signature : move.lovelyKiss
+    signature : move.lovelyKiss,
+    lore: `Ela se move ritmicamente como se estivesse dançando, um comportamento que fez algumas pessoas acreditarem que ela podia se comunicar por gestos.`,
 }
 
 // 125 Elekid → Electabuzz → Electivire
