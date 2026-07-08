@@ -1196,7 +1196,330 @@ const LEGENDS_LIST = [
         giveLevel: 1,
     },
 
-        
+    //Lendarios de Galar
+    {
+        id: "zacian",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "forest",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+   
+    {
+        id: "zamazenta",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "galarianArticuno",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },    
+
+    {
+        id: "galarianZapdos",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },   
+
+    {
+        id: "galarianMoltres",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },  
+
+    {
+        id: "regieleki",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "regidrago",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },  
+
+    {
+        id: "calyrex",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "glastrier",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "snow",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },  
+
+    {
+        id: "spectrier",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "night",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },  
+
+    {
+        id: "kubfu",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "gym",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },  
+
+    {
+        id: "urshifu",
+        region: "galar",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "gym",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    }, 
         
     // ── Exemplo de como adicionar o próximo ──────────────────────────────────
     // {
