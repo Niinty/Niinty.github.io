@@ -49,8 +49,6 @@ team.slot6.item = undefined
 
 
 // --- FUNÇÃO QUE EXECUTA A TROCA (Chamada pelo botão "Aceitar") ---
-
-
 function performTrade(playerOfferId, systemOfferId, isShiny) {
     closeTooltip();
     openMenu();
@@ -93,7 +91,6 @@ function performTrade(playerOfferId, systemOfferId, isShiny) {
     saveGame();
 }
 
-
 function rng(number){
     return Math.random() < number
 }
@@ -106,7 +103,6 @@ function rngSeeded(number){
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 function voidAnimation(divName, animationName) {
     const element = document.getElementById(divName);
@@ -155,7 +151,6 @@ function arrayPick(array, n = 1, seed) {
   return n === 1 ? picks[0] : picks;
 }
 
-
 function mulberry32(a) {
   return function() {
     a |= 0;
@@ -165,7 +160,6 @@ function mulberry32(a) {
     return ((t ^ t >>> 14) >>> 0) / 4294967296;
   };
 }
-
 
 function givePkmn(poke, level) {
     const finalLevel = level ?? 1;
@@ -204,8 +198,6 @@ function givePkmn(poke, level) {
     updatePokedex();
 }
 
-
-//saved.currentArea = areas.activeVolcano.id;
 saved.currentArea = undefined;
 saved.currentAreaBuffer = undefined;
 saved.currentPkmn;
@@ -236,14 +228,12 @@ function setWildPkmn(){
     document.getElementById(`training-indicator`).style.display = `none`
     document.getElementById(`raid-timer-indicator`).style.display = `none`
 
-
     wildPkmnHp = 0
 
     let spawnedPkmn;
     let maxTrainerSlot = 1
     let hpMultiplier = 2
     let randomMoves = [];
-
 
     if (saved.currentArea == areas.training.id) {
 
@@ -257,7 +247,6 @@ function setWildPkmn(){
     if (areas.training.tier==1) areaDivision++
     if (areas.training.tier>=3 && rng(0.8)) areaDivision--
 
-
     hpMultiplier = 3;
     if (areas.training.tier==2) hpMultiplier = 8;
     if (areas.training.tier==3) hpMultiplier = 18;
@@ -268,8 +257,6 @@ function setWildPkmn(){
     spawnedPkmn = randomDivisionPkmn(areaDivision, typeWeak(pkmn[saved.trainingPokemon].type[0],pkmn[saved.trainingPokemon].type[1],1), undefined, undefined, "training")
     if (pkmn[saved.trainingPokemon].type[1] != undefined && rng(0.5)) spawnedPkmn = randomDivisionPkmn(areaDivision, typeWeak(pkmn[saved.trainingPokemon].type[0],pkmn[saved.trainingPokemon].type[1],2), undefined, undefined, "training")
 
-
-    //if it cant, safe of a higher division
     if (!pkmn[spawnedPkmn]) {
     areaDivision = numericDivision(areaDivision)
     areaDivision--
@@ -278,7 +265,6 @@ function setWildPkmn(){
     spawnedPkmn = randomDivisionPkmn(areaDivision, typeWeak(pkmn[saved.trainingPokemon].type[0],pkmn[saved.trainingPokemon].type[1],1), undefined, undefined, "training")
     if (pkmn[saved.trainingPokemon].type[1] != undefined && rng(0.5)) spawnedPkmn = randomDivisionPkmn(areaDivision, typeWeak(pkmn[saved.trainingPokemon].type[0],pkmn[saved.trainingPokemon].type[1],2), undefined, undefined, "training")
     }
-
 
     //if still cant, try to make it safe in one of the types
     if (!pkmn[spawnedPkmn]) {
@@ -289,7 +275,6 @@ function setWildPkmn(){
     if (pkmn[saved.trainingPokemon].type[1] != undefined && rng(0.5)) spawnedPkmn = randomDivisionPkmn(areaDivision, typeWeak(pkmn[saved.trainingPokemon].type[0],2), undefined, undefined, "training")
     }
 
-
     //if still cant, unsafe of same division, out of luck
     if (!pkmn[spawnedPkmn]) {
     areaDivision = numericDivision(returnPkmnDivision(pkmn[saved.trainingPokemon]))
@@ -299,11 +284,9 @@ function setWildPkmn(){
     if (pkmn[saved.trainingPokemon].type[1] != undefined && rng(0.5)) spawnedPkmn = randomDivisionPkmn(areaDivision, typeWeak(pkmn[saved.trainingPokemon].type[0],pkmn[saved.trainingPokemon].type[1],2))
     }
 
-
     wildLevel = pkmn[saved.trainingPokemon].level
     if (areas.training.tier==2) wildLevel = pkmn[saved.trainingPokemon].level+10
     if (areas.training.tier==3) wildLevel = pkmn[saved.trainingPokemon].level+20
-
 
     const thresholds = [0, 10, 20, 30];
     for (let t of thresholds) {
@@ -317,9 +300,7 @@ function setWildPkmn(){
         }
     }
 
-
     if (currentTrainingWave<=0) {  training[areas.training.currentTraining].effect(); leaveCombat(); setTrainingMenu(); return }
-
 
     } else if (saved.currentArea == areas.frontierSpiralingTower.id) {
     document.getElementById(`spiraling-indicator`).style.display = `flex`
@@ -414,10 +395,7 @@ for (let i = 0; i < 4; i++) {
                 if (saved.arenaActiveCard==3) {item.goldenBottleCap.got+=4; item.goldenBottleCap.newItem +=4; }
 
                 if (item.battlePass.got>0) {item.goldenBottleCap.got+=3; item.goldenBottleCap.newItem +=3; }
-
-
             }
-
 
             if (!isGymLeaderWin && areas[saved.currentArea].reward){
             const rewards = areas[saved.currentArea].reward;
@@ -437,7 +415,6 @@ for (let i = 0; i < 4; i++) {
             }
             }
             }
-
 
             if (!isGymLeaderWin && areas[saved.currentArea].itemReward) { //new function
                 const rewards = areas[saved.currentArea].itemReward;
@@ -540,7 +517,6 @@ for (let i = 0; i < 4; i++) {
 
     if (areas[saved.currentArea].spawns.common == undefined) spawnedPkmn = arrayPick(areas[saved.currentArea].spawns.rare).id
 
-
     // picks amount of moves based on level
 const thresholds = [0, 10, 20, 30];
 for (let t of thresholds) {
@@ -556,16 +532,13 @@ for (let t of thresholds) {
 
     }
 
-
     saved.currentPkmn = spawnedPkmn
 
     if (areas[saved.currentArea].difficulty!=undefined) hpMultiplier = areas[saved.currentArea].difficulty
 
-
     //abilities
     if (testAbility(`active`,  ability.intimidate.id ) ) {wildBuffs.atkdown1 = 3; updateWildBuffs() }
     if (testAbility(`active`,  ability.dauntingLook.id ) ) {wildBuffs.satkdown1 = 3; updateWildBuffs() }
-
 
     document.getElementById("explore-wild-name").innerHTML = format(spawnedPkmn) + ` <span class="explore-pkmn-level" > lvl ${wildLevel} </span>`
     document.getElementById("explore-wild-sprite").src = `img/pkmn/sprite/${spawnedPkmn}.png`
@@ -573,15 +546,12 @@ for (let t of thresholds) {
     if (pkmn[spawnedPkmn].float) document.getElementById("explore-wild-sprite").classList.add(`floating-pkmn`)
     if (!pkmn[spawnedPkmn].float && document.getElementById("explore-wild-sprite").classList.contains(`floating-pkmn`)) document.getElementById("explore-wild-sprite").classList.remove(`floating-pkmn`)
 
-
     let hpStars = pkmn[spawnedPkmn].bst.hp
     if (saved.currentArea == areas.training.id) hpStars = returnDivisionStars(pkmn[spawnedPkmn])
     if (saved.currentArea == areas.training.id && pkmn[saved.trainingPokemon].type.includes("normal")) hpStars /= 1.5
     if (saved.currentArea == areas.training.id && pkmn[saved.trainingPokemon].type.includes("dragon")) hpStars /= 1.5
 
-
     if (  saved.gamemodHard == true && areas[saved.currentArea].type == "vs") hpMultiplier *= 2
-
 
     wildPkmnHp =
     (100 + (hpStars * 30)
@@ -598,7 +568,6 @@ for (let t of thresholds) {
         wildPkmnHp *= areas[saved.currentArea].legendHpMultiplier;
     }
 
-
     wildPkmnHpMax = wildPkmnHp
 
     if (pkmn[saved.currentPkmn].temporalType!=undefined) pkmn[saved.currentPkmn].temporalType = undefined
@@ -606,13 +575,11 @@ for (let t of thresholds) {
 
     document.getElementById("explore-header-moves-wild").innerHTML = ""
 
-
 // filtra undefined y los mueve al final
 randomMoves = randomMoves.filter(m => m !== undefined).concat(randomMoves.filter(m => m === undefined));
 
 // rellena hasta 4 movimientos
 while (randomMoves.length < 4) randomMoves.push(undefined);
-    //
 
     for (let index = 0; index < randomMoves.length; index++) {
     const i = randomMoves[index];
@@ -647,13 +614,9 @@ while (randomMoves.length < 4) randomMoves.push(undefined);
     document.getElementById("explore-header-moves-wild").appendChild(divMove);
     }
 
-
     voidAnimation(`explore-wild-sprite`,`wildPokemonSpawn 0.5s 1`)
     updateWildPkmn()
-
-
 }
-
 
 function updateItemsGot(){
 
@@ -1011,9 +974,7 @@ function leaveCombat(){
     }
 
     //new pokemon
-
-
-    let rarePkmnChance = 0.0007
+    let rarePkmnChance = 0.01
     let shinyPkmnChance = 1/4096
     let shinyPkmnChanceEncounter = 1/4096
     for (const slot in team) {
@@ -1144,9 +1105,9 @@ function leaveCombat(){
         divTag = `<span>New!</span>`
     }
         
-    // Define a chance: olha para o post-it do Pokémon. Se tiver fromGym, usa 1/1 (100%). Se não, usa o padrão.
+    // Define a chance: olha para o post-it do Pokémon. Se tiver fromGym, usa 5%. Se não, usa o padrão.
     // O jogo olha se o Pokémon tem o nosso carimbo
-    const chanceFinalShiny = pkmn[i].isGymReward ? (0.015) : shinyPkmnChanceEncounter;
+    const chanceFinalShiny = pkmn[i].isGymReward ? (0.05) : shinyPkmnChanceEncounter;
 
     // Roda a roleta
     if (rng(chanceFinalShiny) || pkmn[i].shiny === true){ 
