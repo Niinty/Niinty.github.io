@@ -10296,6 +10296,7 @@ pkmn.megaLucarioZ = {
         sdef: 70*1.2,
         spe: 207*1.2,
     },
+    hiddenAbility: ability.adaptability,
 }
 
 // 449 Hippopotas → Hippowdon
