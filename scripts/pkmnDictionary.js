@@ -3802,6 +3802,7 @@ pkmn.elekid = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.electabuzz, level: evolutionLevel2 } } },
     hiddenAbility: ability.voltAbsorb,
+    lore: ``,
 }
 
 pkmn.electabuzz = {
@@ -3816,6 +3817,7 @@ pkmn.electabuzz = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.electivire, item: item.linkStone } } },
     hiddenAbility: ability.voltAbsorb,
+    lore: ``,
 }
 
 pkmn.electivire = {
@@ -3829,6 +3831,7 @@ pkmn.electivire = {
         spe: 95,
     },
     hiddenAbility: ability.voltAbsorb,
+    lore: ``,
 }
 
 // 126 Magby → Magmar → Magmortar
@@ -3844,7 +3847,8 @@ pkmn.magby = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.magmar, level: evolutionLevel2 } } },
     hiddenAbility: ability.flareBoost,
-    eggMove : move.armorCannon
+    eggMove : move.armorCannon,
+    lore: ``,
 }
 
 pkmn.magmar = {
@@ -3859,7 +3863,8 @@ pkmn.magmar = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.magmortar, item: item.linkStone } } },
     hiddenAbility: ability.flareBoost,
-    eggMove : move.armorCannon
+    eggMove : move.armorCannon,
+    lore: ``,
 }
 
 pkmn.magmortar = {
@@ -3873,7 +3878,8 @@ pkmn.magmortar = {
         spe: 83,
     },
     hiddenAbility: ability.megaLauncher,
-    eggMove : move.armorCannon
+    eggMove : move.armorCannon,
+    lore: ``,
 }
 
 // 127 Pinsir
@@ -3889,7 +3895,8 @@ pkmn.pinsir = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaPinsir, item: item.pinsirite } } },
     hiddenAbility: ability.aerilate,
-    eggMove : move.cometPunch
+    eggMove : move.cometPunch,
+    lore: ``,
 }
 
 pkmn.megaPinsir = {
@@ -3903,7 +3910,8 @@ pkmn.megaPinsir = {
         spe: 105*1.2,
     },
     hiddenAbility: ability.aerilate,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: ``,
 }
 
 // 128 Tauros
@@ -3932,6 +3940,7 @@ pkmn.taurosCombat = {
         spe: 100,
     },
     hiddenAbility: ability.angerPoint,
+    lore: ``,
 }
 
 pkmn.taurosBlaze = {
@@ -3945,6 +3954,7 @@ pkmn.taurosBlaze = {
         spe: 100,
     },
     hiddenAbility: ability.angerPoint,
+    lore: ``,
 }
 
 pkmn.taurosAqua = {
@@ -3958,6 +3968,7 @@ pkmn.taurosAqua = {
         spe: 100,
     },
     hiddenAbility: ability.angerPoint,
+    lore: ``,
 }
 
 // 129 Magikarp → Gyarados
@@ -4003,7 +4014,8 @@ pkmn.magikarpKoi = {
         sdef: 80,
         spe: 80,
     },
-    signature : move.splash
+    signature : move.splash,
+    lore: ``,
 }
 
 pkmn.magikarpRegal = {
@@ -4016,7 +4028,8 @@ pkmn.magikarpRegal = {
         sdef: 80,
         spe: 80,
     },
-    signature : move.splash
+    signature : move.splash,
+    lore: ``,
 }
 
 pkmn.magikarpSakura = {
@@ -4029,7 +4042,8 @@ pkmn.magikarpSakura = {
         sdef: 80,
         spe: 80,
     },
-    signature : move.splash
+    signature : move.splash,
+    lore: ``,
 }
 
 pkmn.magikarpSkelly = {
@@ -4042,7 +4056,8 @@ pkmn.magikarpSkelly = {
         sdef: 80,
         spe: 80,
     },
-    signature : move.splash
+    signature : move.splash,
+    lore: ``,
 }
 
 pkmn.magikarpSoar = {
@@ -4055,7 +4070,8 @@ pkmn.magikarpSoar = {
         sdef: 80,
         spe: 80,
     },
-    signature : move.splash
+    signature : move.splash,
+    lore: ``,
 }
 
 pkmn.magikarpTiger = {
@@ -4068,7 +4084,8 @@ pkmn.magikarpTiger = {
         sdef: 80,
         spe: 80,
     },
-    signature : move.splash
+    signature : move.splash,
+    lore: ``,
 }
 
 pkmn.gyarados = {
@@ -4112,6 +4129,7 @@ pkmn.megaGyarados = {
         spe: 81*1.2,
     },
     hiddenAbility: ability.intimidate,
+    lore: ``,
 }
 
 // 131 Lapras
@@ -4126,7 +4144,8 @@ pkmn.lapras = {
         spe: 60,
     },
     hiddenAbility: ability.waterAbsorb,
-    eggMove : move.sparklingAria
+    eggMove : move.sparklingAria,
+    lore: ``,
 }
 
 pkmn.laprasGmax = {
@@ -4140,7 +4159,8 @@ pkmn.laprasGmax = {
         spe: 60*1.15,
     },
     hiddenAbility: ability.waterAbsorb,
-    eggMove : move.sparklingAria
+    eggMove : move.sparklingAria,
+    lore: ``,
 }
 
 // 132 Ditto
@@ -4224,7 +4244,8 @@ pkmn.eeveeGmax = {
         spe: 55*1.15,
     },
     hiddenAbility: ability.normalize,
-    signature : move.batonPass
+    signature : move.batonPass,
+    lore: ``,
 }
 
 pkmn.vaporeon = {
@@ -4238,6 +4259,7 @@ pkmn.vaporeon = {
         spe: 65,
     },
     hiddenAbility: ability.hydrolate,
+    lore: ``,
 }
 
 pkmn.jolteon = {
@@ -4251,6 +4273,7 @@ pkmn.jolteon = {
         spe: 130,
     },
     hiddenAbility: ability.galvanize,
+    lore: ``,
 }
 
 pkmn.flareon = {
@@ -4264,7 +4287,8 @@ pkmn.flareon = {
         spe: 65,
     },
     hiddenAbility: ability.pyrolate,
-    eggMove : move.sacredFire
+    eggMove : move.sacredFire,
+    lore: ``,
 }
 
 pkmn.espeon = {
@@ -4278,7 +4302,8 @@ pkmn.espeon = {
         spe: 110,
     },
     hiddenAbility: ability.espilate,
-    signature : move.morningSun
+    signature : move.morningSun,
+    lore: ``,
 }
 
 pkmn.umbreon = {
@@ -4292,6 +4317,7 @@ pkmn.umbreon = {
         spe: 65,
     },
     hiddenAbility: ability.gloomilate,
+    lore: ``,
 }
 
 pkmn.leafeon = {
@@ -4305,6 +4331,7 @@ pkmn.leafeon = {
         spe: 95,
     },
     hiddenAbility: ability.verdify,
+    lore: ``,
 }
 
 pkmn.glaceon = {
@@ -4318,7 +4345,8 @@ pkmn.glaceon = {
         spe: 65,
     },
     hiddenAbility: ability.glaciate,
-    eggMove : move.snowscape
+    eggMove : move.snowscape,
+    lore: ``,
 }
 
 pkmn.sylveon = {
@@ -4332,6 +4360,7 @@ pkmn.sylveon = {
     spe: 60,
   },
     hiddenAbility: ability.pixilate,
+    lore: ``,
 }
 
 // 137 Porygon → Porygon2 → Porygon-Z
@@ -4347,7 +4376,8 @@ pkmn.porygon = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.porygon2, level: evolutionLevel2 } } },
     hiddenAbility: ability.adaptability,
-    signature : move.conversion
+    signature : move.conversion,
+    lore: ``,
 }
 
 pkmn.porygon2 = {
@@ -4362,7 +4392,8 @@ pkmn.porygon2 = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.porygonZ, item: item.linkStone } } },
     hiddenAbility: ability.adaptability,
-    signature : move.conversion
+    signature : move.conversion,
+    lore: ``,
 }
 
 pkmn.porygonZ = {
@@ -4376,7 +4407,8 @@ pkmn.porygonZ = {
         spe: 90,
     },
     hiddenAbility: ability.adaptability,
-    signature : move.conversion
+    signature : move.conversion,
+    lore: ``,
 }
 
 // 138 Omanyte → Omastar
