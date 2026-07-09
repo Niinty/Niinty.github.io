@@ -10236,7 +10236,7 @@ pkmn.garchomp = {
     evolve: function() { 
         return { 
             1: { pkmn: pkmn.megaGarchomp, item: item.garchompite }, 
-            2: { pkmn: pkmn.megaGarchompZ, item: item.garchompiteZ }
+          //2: { pkmn: pkmn.megaGarchompZ, item: item.garchompiteZ }
         } 
     },
     hiddenAbility: ability.sandForce,
