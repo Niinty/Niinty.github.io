@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 18;
+const rotationWildMax = 19;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -1761,6 +1761,83 @@ areas.terminusCave = {
         common : [pkmn.shuckle,pkmn.aron],
         uncommon : [pkmn.durant,pkmn.pupitar],
         rare : [pkmn.sandslash]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 19
+areas.verdantCavern = {
+    rotation : 19,
+    name: `Verdant Cavern`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.alolanDiglett,
+    spawns: {
+        common : [pkmn.zubat,pkmn.alolanRattata],
+        uncommon : [pkmn.yungoos,pkmn.alolanDiglett],
+        rare : [pkmn.noibat]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.lushJungle = {
+    rotation : 19,
+    name: `Lush Jungle`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.bonsly,
+    spawns: {
+        common : [pkmn.bonsly,pkmn.fomantis],
+        uncommon : [pkmn.trumbeak,pkmn.morelull],
+        rare : [pkmn.oranguru]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsBug,
+        epic: epicItens
+    }
+}
+
+areas.mountLanakila = {
+    rotation : 19,
+    name: `Mount Lanakila`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `snow`,
+    icon: pkmn.alolanVulpix,
+    spawns: {
+        common : [pkmn.alolanVulpix,pkmn.alolanSandshrew],
+        uncommon : [pkmn.absol,pkmn.sneasel],
+        rare : [pkmn.drampa]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsNormal,
+        epic: epicItens
+    }
+}
+
+areas.resolutionCave = {
+    rotation : 19,
+    name: `Resolution Cave`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.noivern,
+    spawns: {
+        common : [pkmn.golbat],
+        uncommon : [pkmn.alolanDugtrio,pkmn.noivern],
+        rare : [pkmn.druddigon]
     },
     drops: {
         common : [item.mysteryEgg],
