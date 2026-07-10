@@ -299,7 +299,7 @@ const GYMS_LEADERS = [
         },
     },
     
-    /*{
+    {
         areaId: "vsGymLeaderJasmine",
         region: "johto",
         name: "Gym Leader Jasmine",
@@ -309,15 +309,23 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Aço.",
         team: {
-            slot1: pkmn.geodude, slot1Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot2: pkmn.geodude, slot2Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot3: pkmn.geodude, slot3Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot4: pkmn.geodude, slot4Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot5: pkmn.geodude, slot5Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot6: pkmn.geodude, slot6Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
+            slot1: pkmn.Steelix, slot1Moves: [move.anchorShot.id, move.earthquake.id, move.sunsteelStrike.id, move.dig.id],
+            slot2: pkmn.Scizor, slot2Moves: [move.xScissor.id, move.silverWind.id, move.bugBuzz.id, move.struggleBug.id],
+            slot3: pkmn.Skarmory, slot3Moves: [move.flyingPress.id, move.aeroblast.id, move.braveBird.id, move.hurricane.id],
+            slot4: pkmn.Forretress, slot4Moves: [move.quiverDance.id, move.xScissor.id, move.attackOrder.id, move.silverWind.id],
+            slot5: pkmn.Magneton, slot5Moves: [move.ionise.id, move.flashCannon.id, move.electroBall.id, move.thunder.id],
+            slot6: pkmn.Shuckle, slot6Moves: [move.struggleBug.id, move.powerGem.id, move.xScissor.id, move.earthquake.id],
         },
     },
-    {
+
+
+    
+
+
+
+
+
+    /*{
         areaId: "vsGymLeaderPryce",
         region: "johto",
         name: "Gym Leader Pryce",
