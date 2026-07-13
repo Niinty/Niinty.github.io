@@ -1820,6 +1820,87 @@ const LEGENDS_LIST = [
     },
 
     {
+        id: "okidogi",
+        region: "paldea",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "night",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "munkidori",
+        region: "paldea",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "night",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
+        id: "fezandipiti",
+        region: "paldea",
+        // Custo em Black Apricorns para desbloquear
+        unlockCost: 2,
+        // Duração da janela de batalha em ms (72h)
+        windowMs: 72 * 60 * 60 * 1000,
+        // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
+        hpMultiplier: 2.0,
+        damageMultiplier: 5.0,
+        // Nível com que o lendário aparece na batalha
+        battleLevel: 300,
+        // Dificuldade da área (usa constantes do areasDictionary)
+        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        // Taxa de captura ao vencer (1.0 = 100%)
+        catchRate: 0.01,
+        // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
+        drops: [
+            { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
+            { itemId: "blackApricorn", amount: 1, chance: 0.05 },
+        ],
+        // Background da área de batalha
+        background: "dimension1",
+        // Nível com que o Pokémon é dado ao jogador ao capturar
+        giveLevel: 1,
+    },
+
+    {
         id: "terapagos",
         region: "paldea",
         // Custo em Black Apricorns para desbloquear
