@@ -789,6 +789,8 @@ function leaveCombat(){
     if ((areas[saved.currentArea].type == "vs" || areas[saved.currentArea].type == "frontier") && areas[saved.currentArea].defeated) document.getElementById("area-rejoin").style.display = "none"
     if (areas[saved.currentArea].id == areas.training.id && (training[areas.training.currentTraining].condition && training[areas.training.currentTraining].condition()!=true) ) document.getElementById("area-rejoin").style.display = "none"
     if ( areas[saved.currentArea].unlockRequirement && !areas[saved.currentArea].unlockRequirement() ) document.getElementById("area-rejoin").style.display = "none"
+    //Remove o fight again do Gym
+    if ( areas[saved.currentArea].isGym ) document.getElementById("area-rejoin").style.display = "none"
 
     if (saved.tutorial && saved.tutorialStep === "battle") {saved.tutorialStep = "battleEnd"; openTutorial()}
 
