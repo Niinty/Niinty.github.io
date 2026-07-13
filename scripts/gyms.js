@@ -307,7 +307,7 @@ const GYMS_LEADERS = [
         sprite: "jasmine",
         background: "gym",
         level: 100,
-        description: "Especialista em Pokémon do tipo Aço.",
+        description: "Especialista em Pokémon do tipo Steel.",
         team: {
             slot1: pkmn.steelix, slot1Moves: [move.anchorShot.id, move.earthquake.id, move.sunsteelStrike.id, move.dig.id],
             slot2: pkmn.scizor, slot2Moves: [move.xScissor.id, move.silverWind.id, move.bugBuzz.id, move.struggleBug.id],
@@ -317,15 +317,8 @@ const GYMS_LEADERS = [
             slot6: pkmn.shuckle, slot6Moves: [move.struggleBug.id, move.powerGem.id, move.xScissor.id, move.earthquake.id],
         },
     },
-
-
     
-
-
-
-
-
-    /*{
+    {
         areaId: "vsGymLeaderPryce",
         region: "johto",
         name: "Gym Leader Pryce",
@@ -333,16 +326,17 @@ const GYMS_LEADERS = [
         sprite: "pryce",
         background: "gym",
         level: 100,
-        description: "Especialista em Pokémon do tipo Gelo.",
+        description: "Especialista em Pokémon do tipo Ice.",
         team: {
-            slot1: pkmn.geodude, slot1Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot2: pkmn.geodude, slot2Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot3: pkmn.geodude, slot3Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot4: pkmn.geodude, slot4Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot5: pkmn.geodude, slot5Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot6: pkmn.geodude, slot6Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
+            slot1: pkmn.Delibird, slot1Moves: [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
+            slot2: pkmn.Lapras, slot2Moves: [move.snowscape.id, move.tripleAxel.id, move.glaciate.id, move.surf.id],
+            slot3: pkmn.Cloyster, slot3Moves: [move.glaciate.id, move.iceHammer.id, move.mountainGale.id, move.freezeDry.id],
+            slot4: pkmn.Jynx, slot4Moves: [move.auroraPunch.id, move.iceBall.id, move.foamShot.id, move.tripleAxel.id],
+            slot5: pkmn.Piloswine, slot5Moves: [move.iceHammer.id, move.glaciate.id, move.freezeDry.id, move.foamShot.id],
+            slot6: pkmn.Dewgong, slot6Moves: [move.tripleAxel.id, move.surf.id, move.iceBall.id, move.auroraPunch.id],
         },
     },
+    
     {
         areaId: "vsGymLeaderClair",
         region: "johto",
@@ -351,20 +345,40 @@ const GYMS_LEADERS = [
         sprite: "clair",
         background: "gym",
         level: 100,
-        description: "Especialista em Pokémon do tipo Dragão.",
+        description: "Especialista em Pokémon do tipo Dragon.",
         team: {
-            slot1: pkmn.geodude, slot1Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot2: pkmn.geodude, slot2Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot3: pkmn.geodude, slot3Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot4: pkmn.geodude, slot4Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot5: pkmn.geodude, slot5Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
-            slot6: pkmn.geodude, slot6Moves: [move.surf.id, move.surf.id, move.surf.id, move.surf.id],
+            slot1: pkmn.Kingdra, slot1Moves: [move.dragonAscent.id, move.surf.id, move.spacialRend.id, move.scald.id],
+            slot2: pkmn.Charizard, slot2Moves: [move.dragonDarts.id, move.roarOfTime.id, move.torchSong.id, move.blueFlare.id],
+            slot3: pkmn.Gyarados, slot3Moves: [move.dragonAscent.id, move.dragonDarts.id, move.surf.id, move.surf.id],
+            slot4: pkmn.Dunsparce, slot4Moves: [move.surf.id, move.roarOfTime.id, move.surf.id, move.spacialRend.id],
+            slot5: pkmn.Tyranitar, slot5Moves: [move.clangingScales.id, move.ruination.id, move.fieryWrath.id, move.dragonDarts.id],
+            slot6: pkmn.Dragonite, slot6Moves: [move.dragonAscent.id, move.roarOfTime.id, move.spacialRend.id, move.fly.id],
         },
     },
-    
-    
-    
+
+
+  /*
+    {
+        areaId: "vsGymLeaderRoxanne",
+        region: "hoenn",
+        name: "Gym Leader Roxanne",
+        city: "Rustboro City",
+        sprite: "roxanne",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Rock.",
+        team: {
+            slot1: pkmn.Kingdra, slot1Moves: [move.dragonAscent.id, move.surf.id, move.spacialRend.id, move.scald.id],
+            slot2: pkmn.Charizard, slot2Moves: [move.dragonDarts.id, move.roarOfTime.id, move.torchSong.id, move.blueFlare.id],
+            slot3: pkmn.Gyarados, slot3Moves: [move.dragonAscent.id, move.dragonDarts.id, move.surf.id, move.surf.id],
+            slot4: pkmn.Dunsparce, slot4Moves: [move.surf.id, move.roarOfTime.id, move.surf.id, move.spacialRend.id],
+            slot5: pkmn.Tyranitar, slot5Moves: [move.clangingScales.id, move.ruination.id, move.fieryWrath.id, move.dragonDarts.id],
+            slot6: pkmn.Dragonite, slot6Moves: [move.dragonAscent.id, move.roarOfTime.id, move.spacialRend.id, move.fly.id],
+        },
+    },   
  */
+
+    
 ]
 
 function getGymMaxDifficulty() {
