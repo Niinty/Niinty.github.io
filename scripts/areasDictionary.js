@@ -1885,7 +1885,7 @@ areas.glimwoodTangle = {
     }
 }
 
-areas.LakeofOutrage = {
+areas.lakeOfOutrage = {
     rotation : 20,
     name: `Lake of Outrage`,
     level : wildAreaLevel4,
