@@ -362,7 +362,7 @@ const areas = {}
 //area 4 rs = pseudo-legendary
 
 
-const rotationWildMax = 19;
+const rotationWildMax = 21;
 
 const wildAreaLevel1 = 10
 const wildAreaLevel2 = 30
@@ -1842,6 +1842,160 @@ areas.resolutionCave = {
     drops: {
         common : [item.mysteryEgg],
         rare : wildRareItemsRock,
+        epic: epicItens
+    }
+}
+
+//Rotation 20
+areas.slumberingWeald = {
+    rotation : 20,
+    name: `Slumbering Weald`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.munna,
+    spawns: {
+        common : [pkmn.grubbin,pkmn.hoothoot],
+        uncommon : [pkmn.munna,pkmn.alolanWeezing],
+        rare : [pkmn.corviknight]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.glimwoodTangle = {
+    rotation : 20,
+    name: `Glimwood Tangle`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `exploreHead1`,
+    icon: pkmn.galarianPonyta,
+    spawns: {
+        common : [pkmn.spritzee,pkmn.swirlix],
+        uncommon : [pkmn.galarianPonyta,pkmn.phantump],
+        rare : [pkmn.morgrem]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.LakeofOutrage = {
+    rotation : 20,
+    name: `Lake of Outrage`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `cave`,
+    icon: pkmn.doublade,
+    spawns: {
+        common : [pkmn.deino,pkmn.jangmoo],
+        uncommon : [pkmn.doublade,pkmn.sliggoo],
+        rare : [pkmn.boltund]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.dustyBowl = {
+    rotation : 20,
+    name: `Dusty Bowl`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `exploreHead2`,
+    icon: pkmn.roselia,
+    spawns: {
+        common : [pkmn.qwilfish,pkmn.lanturn],
+        uncommon : [pkmn.roselia,pkmn.meowstic],
+        rare : [pkmn.ferrothorn]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+//Rotation 21
+areas.areaZero = {
+    rotation : 21,
+    name: `Area Zero`,
+    level : wildAreaLevel2,
+    type: `wild`,
+    background : `dimension`,
+    icon: pkmn.flamigo,
+    spawns: {
+        common : [pkmn.flamigo,pkmn.jumpluff],
+        uncommon : [pkmn.frosmoth,pkmn.farigiraf],
+        rare : [pkmn.braviary]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.tagtreeThicket = {
+    rotation : 21,
+    name: `Tagtree Thicket`,
+    level : wildAreaLevel3,
+    type: `wild`,
+    background : `exploreHead2`,
+    icon: pkmn.zorua,
+    spawns: {
+        common : [pkmn.zorua,pkmn.toedscool],
+        uncommon : [pkmn.misdreavus,pkmn.sunflora],
+        rare : [pkmn.mimikyu]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.dalizapaPassage = {
+    rotation : 21,
+    name: `Dalizapa Passage`,
+    level : wildAreaLevel4,
+    type: `wild`,
+    background : `exploreHead2`,
+    icon: pkmn.axew,
+    spawns: {
+        common : [pkmn.axew,pkmn.cubchoo],
+        uncommon : [pkmn.pawmo,pkmn.bagon],
+        rare : [pkmn.gogoat]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
+        epic: epicItens
+    }
+}
+
+areas.asadoDesert = {
+    rotation : 21,
+    name: `Asado Desert`,
+    level : wildAreaLevel5,
+    type: `wild`,
+    background : `desert`,
+    icon: pkmn.stonjourner,
+    spawns: {
+        common : [pkmn.marill,pkmn.larvesta],
+        uncommon : [pkmn.stonjourner,pkmn.cacnea],
+        rare : [pkmn.tinkatuff]
+    },
+    drops: {
+        common : [item.mysteryEgg],
+        rare : wildRareItemsGrass,
         epic: epicItens
     }
 }
