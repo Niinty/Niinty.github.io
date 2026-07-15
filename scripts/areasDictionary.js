@@ -2423,7 +2423,8 @@ const tier4difficulty = 600;
 
 
 
-
+//Rotation 1
+//Novice - Wild Area
 areas.cosplayConvention = {
     rotation: 1,
     type: `event`,
@@ -2441,7 +2442,7 @@ areas.cosplayConvention = {
     category: 1,
 }
 
-
+//Elite - Wild Area
 areas.suspiciousManor = {
     rotation: 1,
     type: `event`,
@@ -2459,8 +2460,7 @@ areas.suspiciousManor = {
     category: 2,
 }
 
-
-
+//Novice - Tier I e II
 areas.summitOfSeasons = {
     rotation: 1,
     type: `event`,
@@ -2480,6 +2480,7 @@ areas.summitOfSeasons = {
     category: 1,
 }
 
+//Elite Tier III e IV
 areas.ceruleanCave = {
     rotation: 1,
     type: `event`,
@@ -2500,6 +2501,152 @@ areas.ceruleanCave = {
     category: 2,
 }
 
+//Tier II
+areas.eventMegaCamerupt = {
+    rotation: 1,
+    type: `event`,
+    name: `Camerupt Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaCamerupt,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaCamerupt,
+        slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.numel, item.cameruptite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.numel, item.cameruptite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.numel);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.cameruptite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaManectric = {
+    rotation: 1,
+    type: `event`,
+    name: `Manectric Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaManectric,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaManectric,
+        slot1Moves : [move.electricTerrain.id,move.discharge.id, move.iceBeam.id, move.thunderFang.id],
+    },
+    //reward : [item.manectite, pkmn.electrike],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.electrike, item.manectite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.electrike, item.manectite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.electrike);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.manectite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaAbomasnow = {
+    rotation: 1,
+    type: `event`,
+    name: `Abomasnow Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAbomasnow,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAbomasnow,
+        slot1Moves : [move.hail.id,move.iceBeam.id, move.energyBall.id, move.surf.id],
+    },
+    //reward : [item.abomasite, pkmn.snover],
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.snover, item.abomasite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.snover, item.abomasite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.snover);
+        }
+
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.abomasite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier III
 areas.eventMegaBlastoise = {
     rotation: 1,
     type: `event`,
@@ -2692,215 +2839,7 @@ areas.eventMegaFeraligatr = {
     category: 2,
 }
 
-
-areas.articSummit = {
-    rotation: 1,
-    type: `event`,
-    background : `snow`,
-    uncatchable: true,
-    unlockDescription : `Defeat Elite Trainer Cynthia in VS to unlock`,
-    unlockRequirement : function() { return areas.vsEliteTrainerCynthia.defeated },
-    level : 90,
-    icon: pkmn.beartic,
-    spawns: {
-        common : [pkmn.beartic,pkmn.avalugg,pkmn.walrein,pkmn.vanilluxe],
-    },
-    drops: {
-        common : [item.nothing],
-        uncommon : [item.articRock]
-    },
-}
-
-
-areas.fierySummit = {
-    rotation: 1,
-    type: `event`,
-    background : `volcano`,
-    level : 90,
-    uncatchable: true,
-    unlockDescription : `Defeat Elite Trainer Cynthia in VS to unlock`,
-    unlockRequirement : function() { return areas.vsEliteTrainerCynthia.defeated },
-    icon: pkmn.houndoom,
-    spawns: {
-        common : [pkmn.houndoom,pkmn.darmanitan,pkmn.magmortar,pkmn.alolanMarowak],
-    },
-    drops: {
-        common : [item.nothing],
-        uncommon : [item.fieryRock]
-    },
-}
-
-/*areas.eventMegaCamerupt = {
-    rotation: 1,
-    type: `event`,
-    name: `Camerupt Mega-Showdown`,
-    background : `gym`,
-    icon: pkmn.megaCamerupt,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.megaCamerupt,
-        slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
-    },
-    // REMOVIDO: pkmn.numel
-    // ALTERADO: item.cameruptite agora tem 10% de chance (0.1) de vir no array
-    get reward() {
-        return Math.random() < 0.025 ? [item.cameruptite] : [];
-    },
-    category: 1,
-}*/
-
-areas.eventMegaCamerupt = {
-    rotation: 1,
-    type: `event`,
-    name: `Camerupt Mega-Showdown`,
-    background : `gym`,
-    icon: pkmn.megaCamerupt,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.megaCamerupt,
-        slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
-    },
-    
-        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
-    displayReward: [pkmn.numel, item.cameruptite],
-
-    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
-    get reward() {
-        const stack = new Error().stack || "";
-        
-        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
-        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.numel, item.cameruptite];
-        }
-        
-        // Sistema de loot real pós-batalha
-        const nishLoot = [];
-
-        // Aerodactyl: 2.5% de chance (0.025)
-        if (Math.random() < 0.025) {
-            nishLoot.push(pkmn.numel);
-        }
-
-        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
-            nishLoot.push(item.cameruptite);
-        }
-        
-        return nishLoot;
-    },
-    category: 1,
-}
-
-areas.eventMegaManectric = {
-    rotation: 1,
-    type: `event`,
-    name: `Manectric Mega-Showdown`,
-    background : `gym`,
-    icon: pkmn.megaManectric,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.megaManectric,
-        slot1Moves : [move.electricTerrain.id,move.discharge.id, move.iceBeam.id, move.thunderFang.id],
-    },
-    //reward : [item.manectite, pkmn.electrike],
-        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
-    displayReward: [pkmn.electrike, item.manectite],
-
-    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
-    get reward() {
-        const stack = new Error().stack || "";
-        
-        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
-        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.electrike, item.manectite];
-        }
-        
-        // Sistema de loot real pós-batalha
-        const nishLoot = [];
-
-        // Aerodactyl: 2.5% de chance (0.025)
-        if (Math.random() < 0.025) {
-            nishLoot.push(pkmn.electrike);
-        }
-
-        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
-            nishLoot.push(item.manectite);
-        }
-        
-        return nishLoot;
-    },
-    category: 1,
-}
-
-areas.eventMegaAbomasnow = {
-    rotation: 1,
-    type: `event`,
-    name: `Abomasnow Mega-Showdown`,
-    background : `gym`,
-    icon: pkmn.megaAbomasnow,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.megaAbomasnow,
-        slot1Moves : [move.hail.id,move.iceBeam.id, move.energyBall.id, move.surf.id],
-    },
-    //reward : [item.abomasite, pkmn.snover],
-        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
-    displayReward: [pkmn.snover, item.abomasite],
-
-    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
-    get reward() {
-        const stack = new Error().stack || "";
-        
-        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
-        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.snover, item.abomasite];
-        }
-        
-        // Sistema de loot real pós-batalha
-        const nishLoot = [];
-
-        // Aerodactyl: 2.5% de chance (0.025)
-        if (Math.random() < 0.025) {
-            nishLoot.push(pkmn.snover);
-        }
-
-        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
-            nishLoot.push(item.abomasite);
-        }
-        
-        return nishLoot;
-    },
-    category: 1,
-}
-
-
-
+//Tier IV
 areas.eventMegaRaichuX = {
     rotation: 1,
     type: `event`,
@@ -3045,9 +2984,44 @@ areas.eventMegaCharizardX = {
     category: 2,
 }
 
-//rotation 2
+areas.articSummit = {
+    rotation: 1,
+    type: `event`,
+    background : `snow`,
+    uncatchable: true,
+    unlockDescription : `Defeat Elite Trainer Cynthia in VS to unlock`,
+    unlockRequirement : function() { return areas.vsEliteTrainerCynthia.defeated },
+    level : 90,
+    icon: pkmn.beartic,
+    spawns: {
+        common : [pkmn.beartic,pkmn.avalugg,pkmn.walrein,pkmn.vanilluxe],
+    },
+    drops: {
+        common : [item.nothing],
+        uncommon : [item.articRock]
+    },
+}
 
+areas.fierySummit = {
+    rotation: 1,
+    type: `event`,
+    background : `volcano`,
+    level : 90,
+    uncatchable: true,
+    unlockDescription : `Defeat Elite Trainer Cynthia in VS to unlock`,
+    unlockRequirement : function() { return areas.vsEliteTrainerCynthia.defeated },
+    icon: pkmn.houndoom,
+    spawns: {
+        common : [pkmn.houndoom,pkmn.darmanitan,pkmn.magmortar,pkmn.alolanMarowak],
+    },
+    drops: {
+        common : [item.nothing],
+        uncommon : [item.fieryRock]
+    },
+}
 
+//Rotation 2
+//Novice Wild Area
 areas.lamodeDogwalk = {
     rotation: 2,
     type: `event`,
@@ -3065,8 +3039,7 @@ areas.lamodeDogwalk = {
     category: 1,
 }
 
-
-
+//Novice Tier I e II
 areas.primitiveGrove = {
     rotation: 2,
     type: `event`,
@@ -3086,14 +3059,7 @@ areas.primitiveGrove = {
     category: 1,
 }
 
-
-
-
-
-
-
-
-
+//Tier I
 areas.eventGreatTusk = {
     rotation: 2,
     type: `event`,
@@ -3254,16 +3220,6 @@ areas.eventBruteBonnet = {
     category: 1,
 }
 
-
-
-
-
-
-
-
-
-
-
 areas.eventFlutterMane = {
     rotation: 2,
     type: `event`,
@@ -3344,7 +3300,7 @@ areas.eventSandyShocks = {
     category: 1,
 }
 
-
+//Tier II
 areas.eventRoaringMoon = {
     rotation: 2,
     type: `event`,
@@ -3385,46 +3341,6 @@ areas.eventRoaringMoon = {
     category: 1,
 }
 
-
-/*areas.eventMegaAerodactly = {
-    rotation: 2,
-    type: `event`,
-    name: `Aerodactyl Mega-Showdown`,
-    background : `gym`,
-    icon: pkmn.megaAerodactyl,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.ancientOrchid.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/ancientOrchid.png"> Ancient Orchids to enter`,
-    unlockRequirement : function() { return item.ancientOrchid.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.megaAerodactyl,
-        slot1Moves : [move.accelerock.id,move.rockSlide.id, move.airShlash.id, move.earthquake.id],
-    },
-
-    //Para modificar copie daqui...
-    
-    // 1. Essa propriedade guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
-    displayReward: [pkmn.megaAerodactyl, item.aerodatite],
-
-    // 2. O reward real roda a chance de 10% apenas quando o código de vitória lê o prêmio
-    get reward() {
-        // Se quem estiver chamando for a função que desenha a interface do mapa (tooltip/menu), mostramos o item fixo
-        // Se for o sistema de loot pós-batalha, ele calcula a chance real de drop
-        const stack = new Error().stack || "";
-        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.megaAerodactyl];
-        }
-        
-        // Chance real de 10% na hora de ganhar o prêmio após a batalha
-        return Math.random() < 0.025 ? [pkmn.megaAerodactyl] : [];
-    },
-    //... até aqui
-    
-    category: 1,
-}*/
 areas.eventMegaAerodactly = {
     rotation: 2,
     type: `event`,
@@ -3473,9 +3389,7 @@ areas.eventMegaAerodactly = {
     
     category: 1,
 }
-
-
-                    
+              
 areas.eventMegaGyarados = {
     rotation: 2,
     type: `event`,
@@ -3525,8 +3439,7 @@ areas.eventMegaGyarados = {
     category: 1,
 }
 
-
-
+//Wild Area - Elite
 areas.zoologyLab = {
     rotation: 2,
     type: `event`,
@@ -3544,9 +3457,7 @@ areas.zoologyLab = {
     category: 2,
 }
 
-
-
-
+//Elite
 areas.primalFissure = {
     rotation: 2,
     type: `event`,
@@ -3567,7 +3478,7 @@ areas.primalFissure = {
     category: 2,
 }
 
-
+//Tier III
 areas.eventMegaGarchomp = {
     rotation: 2,
     type: `event`,
@@ -3667,29 +3578,7 @@ areas.eventMegaTyranitar = {
     category: 2,
 }
 
-/*areas.eventTapuBulu = {
-    rotation: 2,
-    type: `event`,
-    name: `Virgin Meadow`,
-    background : `forest`,
-    icon: pkmn.tapuBulu,
-    trainer: true,
-    encounter: true,
-    difficulty: tier3difficulty,
-    encounterEffect : function() {item.primalEarth.got--},
-    unlockDescription : `Requires a <img src="img/items/primalEarth.png"> Primal Earth to enter`,
-    unlockRequirement : function() { return item.primalEarth.got>0 },
-    level : 100,
-    team : {
-        slot1 : pkmn.tapuBulu,
-        slot1Moves : [move.grassyTerrain.id,move.playRough.id, move.seedBomb.id, move.earthquake.id],
-    },
-    //reward : [pkmn.tapuBulu],
-    category: 2,
-}*/
-
-
-
+//Tier IV
 areas.eventMegaPinsir = {
     rotation: 2,
     type: `event`,
@@ -3740,53 +3629,8 @@ areas.eventMegaPinsir = {
     category: 2,
 }
 
-/*areas.eventGalarianZapdos = {
-    rotation: 2,
-    type: `event`,
-    name: `Badlands Roost`,
-    background : `desert`,
-    icon: pkmn.galarianZapdos,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.primalEarth.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/primalEarth.png"> Primal Earths to enter`,
-    unlockRequirement : function() { return item.primalEarth.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.galarianZapdos,
-        slot1Moves : [move.featherDance.id,move.thunderousKick.id, move.fly.id, move.steelWing.id],
-    },
-    reward : [pkmn.galarianZapdos],
-    category: 2,
-}*/
-
-/*areas.eventTingLu = {
-    rotation: 2,
-    type: `event`,
-    name: `Groundblight Shrine`,
-    background : `cave`,
-    icon: pkmn.tingLu,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.primalEarth.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/primalEarth.png"> Primal Earths to enter`,
-    unlockRequirement : function() { return item.primalEarth.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.tingLu,
-        slot1Moves : [move.ruination.id,move.earthquake.id, move.toxic.id, move.stoneEdge.id],
-    },
-    reward : [pkmn.tingLu],
-    category: 2,
-}*/
-
-
-
-
-//rotation 3
-
+//Rotation 3
+//Wild Area - Novice
 areas.exoticPond = {
     rotation: 3,
     type: `event`,
@@ -3860,10 +3704,7 @@ areas.steelTomb = {
     category: 2,
 }
 
-
-
-
-
+//Tier III
 areas.eventMegaSceptile = {
     rotation: 3,
     type: `event`,
@@ -4009,11 +3850,7 @@ areas.eventMegaBlaziken = {
     category: 2,
 }
 
-/*
-
-
-
-areas.frozenTomb = {
+/*areas.frozenTomb = {
     rotation: 3,
     type: `event`,
     background : `snow`,
@@ -4029,71 +3866,6 @@ areas.frozenTomb = {
         common : [item.nothing],
         uncommon : [item.frozenKeystone]
     },
-}
-
-*/
-
-/*areas.eventRegirock = {
-    rotation: 3,
-    type: `event`,
-    name: `Regirock Tomb`,
-    background : `cave`,
-    icon: pkmn.regirock,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.ancientKeystone.got--},
-    unlockDescription : `Requires an <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
-    unlockRequirement : function() { return item.ancientKeystone.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.regirock,
-        slot1Moves : [move.zapCannon.id,move.ancientPower.id, move.earthquake.id, move.stoneEdge.id],
-    },
-    reward : [pkmn.regirock],
-    category: 1,
-}
-
-areas.eventRegisteel = {
-    rotation: 3,
-    type: `event`,
-    name: `Registeel Tomb`,
-    background : `cave`,
-    icon: pkmn.registeel,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.ancientKeystone.got--},
-    unlockDescription : `Requires an <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
-    unlockRequirement : function() { return item.ancientKeystone.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.registeel,
-        slot1Moves : [move.zapCannon.id,move.ancientPower.id, move.ironHead.id, move.rockPolish.id],
-    },
-    reward : [pkmn.registeel],
-    category: 1,
-}
-
-areas.eventRegice = {
-    rotation: 3,
-    type: `event`,
-    name: `Regice Tomb`,
-    background : `cave`,
-    icon: pkmn.regice,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.ancientKeystone.got--},
-    unlockDescription : `Requires an <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
-    unlockRequirement : function() { return item.ancientKeystone.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.regice,
-        slot1Moves : [move.zapCannon.id,move.ancientPower.id, move.iceBeam.id, move.blizzard.id],
-    },
-    reward : [pkmn.regice],
-    category: 1,
 }*/
 
 areas.eventMegaMawile = {
@@ -4240,50 +4012,6 @@ areas.eventMegaSteelix = {
     category: 1,
 }
 
-
-
-/*areas.eventRegieleki = {
-    rotation: 3,
-    type: `event`,
-    name: `Transistor Ruins`,
-    background : `plant`,
-    icon: pkmn.regieleki,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.steelKeystone.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Steel Keystones to enter`,
-    unlockRequirement : function() { return item.steelKeystone.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.regieleki,
-        slot1Moves : [move.thunderCage.id,move.thunderWave.id, move.iceBeam.id, move.bugBuzz.id],
-    },
-    reward : [pkmn.regieleki],
-    category: 2,
-}
-
-areas.eventRegidrago = {
-    rotation: 3,
-    type: `event`,
-    name: `Drago Ruins`,
-    background : `iceCave`,
-    icon: pkmn.regidrago,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.steelKeystone.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Steel Keystones to enter`,
-    unlockRequirement : function() { return item.steelKeystone.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.regidrago,
-        slot1Moves : [move.dragonEnergy.id,move.flashCannon.id, move.hyperBeam.id, move.fireBlast.id],
-    },
-    reward : [pkmn.regidrago],
-    category: 2,
-}*/
-
 areas.eventGougingFire = {
     rotation: 3,
     type: `event`,
@@ -4324,11 +4052,7 @@ areas.eventGougingFire = {
 }
 
 
-
-
-
 //rotation 4
-
 areas.paupauFestival = {
     rotation: 4,
     type: `event`,
@@ -4345,7 +4069,6 @@ areas.paupauFestival = {
     },
     category: 1,
 }
-
 
 areas.flowerMeadow = {
     rotation: 4,
@@ -4364,8 +4087,6 @@ areas.flowerMeadow = {
     },
     category: 2,
 }
-
-
 
 areas.aetherHeadquarters = {
     rotation: 4,
@@ -4811,8 +4532,7 @@ areas.eventMegaDragonite = {
 
 
 //rotation 5
-
-
+//Wild Zone
 areas.ecosphere = {
     rotation: 5,
     type: `event`,
@@ -4831,6 +4551,7 @@ areas.ecosphere = {
     category: 1,
 }
 
+//Novice - Tier I e II
 areas.protonCity = {
     rotation: 5,
     type: `event`,
@@ -4850,10 +4571,7 @@ areas.protonCity = {
     category: 1,
 }
 
-
-
-
-
+//Wild Zone
 areas.climatologyLab = {
     rotation: 5,
     type: `event`,
@@ -4872,11 +4590,7 @@ areas.climatologyLab = {
     category: 2,
 }
 
-
-
-
-
-
+//Elite - Tier III e IV
 areas.fusionPlant = {
     rotation: 5,
     type: `event`,
@@ -4896,103 +4610,6 @@ areas.fusionPlant = {
     },
     category: 2,
 }
-
-
-
-areas.eventMegaGengar = {
-    rotation: 5,
-    type: `event`,
-    name: `Gengar Mega-Showdown`,
-    background : `gym`,
-    icon: pkmn.megaGengar,
-    trainer: true,
-    encounter: true,
-    difficulty: tier3difficulty,
-    encounterEffect : function() {item.futureContraption.got--},
-    unlockDescription : `Requires a <img src="img/items/futureContraption.png"> Future Contraption to enter`,
-    unlockRequirement : function() { return item.futureContraption.got>0 },
-    level : 100,
-    team : {
-        slot1 : pkmn.megaGengar,
-        slot1Moves : [move.fog.id,move.shadowBall.id, move.darkPulse.id, move.sludgeWave.id],
-    },
-    //reward : [item.gengarite, pkmn.gastly],
-    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
-    displayReward: [pkmn.gastly, item.gengarite],
-
-    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
-    get reward() {
-        const stack = new Error().stack || "";
-        
-        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
-        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.gastly, item.gengarite];
-        }
-        
-        // Sistema de loot real pós-batalha
-        const nishLoot = [];
-
-        // Aerodactyl: 2.5% de chance (0.025)
-        if (Math.random() < 0.025) {
-            nishLoot.push(pkmn.gastly);
-        }
-
-        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
-            nishLoot.push(item.gengarite);
-        }
-        
-        return nishLoot;
-    },
-    category: 2,
-}
-
-
-
-/*areas.eventThundurusTherian = {
-    rotation: 5,
-    type: `event`,
-    name: `Far Cloudscape`,
-    background : `sea`,
-    icon: pkmn.thundurusTherian,
-    trainer: true,
-    encounter: true,
-    difficulty: tier3difficulty,
-    encounterEffect : function() {item.futureContraption.got--},
-    unlockDescription : `Requires a <img src="img/items/futureContraption.png"> Future Contraption to enter`,
-    unlockRequirement : function() { return item.futureContraption.got>0 },
-    level : 100,
-    team : {
-        slot1 : pkmn.thundurusTherian,
-        slot1Moves : [move.thunderWave.id,move.thunder.id, move.iceBeam.id, move.airShlash.id],
-    },
-    reward : [pkmn.thundurusTherian],
-    category: 2,
-}
-
-areas.eventTapuKoko = {
-    rotation: 5,
-    type: `event`,
-    name: `Capacitor Tower`,
-    background : `plant`,
-    icon: pkmn.tapuKoko,
-    trainer: true,
-    encounter: true,
-    difficulty: tier3difficulty,
-    encounterEffect : function() {item.futureContraption.got--},
-    unlockDescription : `Requires a <img src="img/items/futureContraption.png"> Future Contraption to enter`,
-    unlockRequirement : function() { return item.futureContraption.got>0 },
-    level : 100,
-    team : {
-        slot1 : pkmn.tapuKoko,
-        slot1Moves : [move.electricTerrain.id,move.thunderPunch.id, move.playRough.id, move.seedBomb.id],
-    },
-    reward : [pkmn.tapuKoko],
-    category: 2,
-}*/
-
-
-
 
 areas.eventIronThorns = {
     rotation: 5,
@@ -5150,7 +4767,6 @@ areas.eventIronTreads = {
     category: 1,
 }
 
-
 areas.eventIronBundle = {
     rotation: 5,
     type: `event`,
@@ -5229,7 +4845,6 @@ areas.eventIronMoth = {
     category: 1,
 }
 
-
 areas.eventIronValiant = {
     rotation: 5,
     type: `event`,
@@ -5268,8 +4883,6 @@ areas.eventIronValiant = {
     //... até aqui
     category: 1,
 }
-
-
 
 areas.eventMegaScizor = {
     rotation: 5,
@@ -5319,7 +4932,6 @@ areas.eventMegaScizor = {
     category: 1,
 }
 
-
 areas.eventMegaAggron = {
     rotation: 5,
     type: `event`,
@@ -5368,11 +4980,53 @@ areas.eventMegaAggron = {
     category: 1,
 }
 
+areas.eventMegaGengar = {
+    rotation: 5,
+    type: `event`,
+    name: `Gengar Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaGengar,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.futureContraption.got--},
+    unlockDescription : `Requires a <img src="img/items/futureContraption.png"> Future Contraption to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGengar,
+        slot1Moves : [move.fog.id,move.shadowBall.id, move.darkPulse.id, move.sludgeWave.id],
+    },
+    //reward : [item.gengarite, pkmn.gastly],
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.gastly, item.gengarite],
 
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gastly, item.gengarite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
 
+        // Aerodactyl: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.gastly);
+        }
 
-
-
+        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.gengarite);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
 
 areas.eventMegaBaxcalibur = {
     rotation: 5,
@@ -5423,54 +5077,8 @@ areas.eventMegaBaxcalibur = {
 }
 
 
-/*areas.eventChiYu = {
-    rotation: 5,
-    type: `event`,
-    name: `Firescourge Shrine`,
-    background : `volcano`,
-    icon: pkmn.chiYu,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.futureContraption.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Future Contraptions to enter`,
-    unlockRequirement : function() { return item.futureContraption.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.chiYu,
-        slot1Moves : [move.ruination.id,move.fireBlast.id, move.toxic.id, move.thunder.id],
-    },
-    reward : [pkmn.chiYu],
-    category: 2,
-}*/
-
-/*areas.eventGalarianArticuno = {
-    rotation: 5,
-    type: `event`,
-    name: `Frozen Roost`,
-    background : `snow`,
-    icon: pkmn.galarianArticuno,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.futureContraption.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Future Contraptions to enter`,
-    unlockRequirement : function() { return item.futureContraption.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.galarianArticuno,
-        slot1Moves : [move.featherDance.id,move.freezingGlare.id, move.blizzard.id, move.hurricane.id],
-    },
-    reward : [pkmn.galarianArticuno],
-    category: 2,
-}*/
-
-
 
 //rotation 6
-
-
-
 areas.alphaRuins = {
     rotation: 6,
     type: `event`,
