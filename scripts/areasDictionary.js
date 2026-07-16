@@ -3629,7 +3629,7 @@ areas.eventMegaPinsir = {
     category: 2,
 }
 
-//Rotation 3
+//RAID - Rotation 3
 //Wild Area - Novice
 areas.exoticPond = {
     rotation: 3,
@@ -4052,7 +4052,7 @@ areas.eventGougingFire = {
 }
 
 
-//rotation 4
+//RAID -Rotation 4
 areas.paupauFestival = {
     rotation: 4,
     type: `event`,
@@ -4107,221 +4107,6 @@ areas.aetherHeadquarters = {
     category: 1,
 }
 
-
-
-/*areas.eventNaganadel = {
-    rotation: 4,
-    type: `event`,
-    name: `Chamber-00`,
-    background : `lab`,
-    icon: pkmn.naganadel,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got--},
-    unlockDescription : `Requires an <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.naganadel,
-        slot1Moves : [move.acidArmor.id,move.dragonPulse.id, move.toxic.id, move.sludgeWave.id],
-    },
-    reward : [pkmn.poipole],
-    category: 1,
-}
-
-areas.eventSilvally = {
-    rotation: 4,
-    type: `event`,
-    name: `Experimental Lab`,
-    background : `lab`,
-    icon: pkmn.silvally,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got--},
-    unlockDescription : `Requires an <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.silvally,
-        slot1Moves : [move.swordsDance.id,move.fireFang.id, move.iceFang.id, move.thunderFang.id],
-    },
-    reward : [pkmn.typeNull],
-    category: 1,
-}
-
-areas.eventCosmoem = {
-    rotation: 4,
-    type: `event`,
-    name: `Distant Nebula`,
-    background : `space`,
-    icon: pkmn.cosmoem,
-    trainer: true,
-    encounter: true,
-    difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got--},
-    unlockDescription : `Requires an <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
-    level : 90,
-    team : {
-        slot1 : pkmn.cosmoem,
-        slot1Moves : [move.calmMind.id,move.shadowBall.id, move.psychic.id, move.extrasensory.id],
-    },
-    reward : [pkmn.cosmog],
-    category: 1,
-}
-
-areas.eventGuzzlord = {
-    rotation: 4,
-    type: `event`,
-    name: `Empty Reality`,
-    background : `plant`,
-    icon: pkmn.guzzlord,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.guzzlord,
-        slot1Moves : [move.hyperVoice.id,move.screech.id, move.crunch.id, move.alluringVoice.id],
-    },
-    reward : [pkmn.guzzlord],
-    category: 1,
-}
-
-areas.eventXurkitree = {
-    rotation: 4,
-    type: `event`,
-    name: `Glowing Reality`,
-    background : `night`,
-    icon: pkmn.xurkitree,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.xurkitree,
-        slot1Moves : [move.electricTerrain.id,move.thunderWave.id, move.thunder.id, move.iceBeam.id],
-    },
-    reward : [pkmn.xurkitree],
-    category: 1,
-}
-
-areas.eventNihilego = {
-    rotation: 4,
-    type: `event`,
-    name: `Chamber-01`,
-    background : `lab`,
-    icon: pkmn.nihilego,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.nihilego,
-        slot1Moves : [move.amnesia.id,move.sludgeWave.id, move.powerGem.id, move.earthPower.id],
-    },
-    reward : [pkmn.nihilego],
-    category: 1,
-}
-
-areas.eventKartana = {
-    rotation: 4,
-    type: `event`,
-    name: `Chamber-02`,
-    background : `lab`,
-    icon: pkmn.kartana,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.kartana,
-        slot1Moves : [move.screech.id,move.razorLeaf.id, move.ironHead.id, move.machPunk.id],
-    },
-    reward : [pkmn.kartana],
-    category: 1,
-}
-
-areas.eventBuzzwole = {
-    rotation: 4,
-    type: `event`,
-    name: `Tropical Reality`,
-    background : `lake`,
-    icon: pkmn.buzzwole,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.buzzwole,
-        slot1Moves : [move.bulkUp.id,move.closeCombat.id, move.xScissor.id, move.crossChop.id],
-    },
-    reward : [pkmn.buzzwole],
-    category: 1,
-}
-
-
-areas.eventPheromosa = {
-    rotation: 4,
-    type: `event`,
-    name: `Chamber-03`,
-    background : `lab`,
-    icon: pkmn.pheromosa,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.pheromosa,
-        slot1Moves : [move.agility.id,move.machPunk.id, move.uTurn.id, move.pounce.id],
-    },
-    reward : [pkmn.pheromosa],
-    category: 1,
-}
-
-areas.eventBlacephalon = {
-    rotation: 4,
-    type: `event`,
-    name: `Chamber-04`,
-    background : `lab`,
-    icon: pkmn.blacephalon,
-    trainer: true,
-    encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>2 },
-    level : 100,
-    team : {
-        slot1 : pkmn.blacephalon,
-        slot1Moves : [move.calmMind.id,move.mindBlown.id, move.shadowBall.id, move.confuseRay.id],
-    },
-    reward : [pkmn.blacephalon],
-    category: 1,
-}*/
-
-
-
 areas.wormholeSpace = {
     rotation: 4,
     type: `event`,
@@ -4341,8 +4126,6 @@ areas.wormholeSpace = {
     },
     category: 2,
 }
-
-
 
 areas.eventMegaMetagross = {
     rotation: 4,
@@ -4392,74 +4175,6 @@ areas.eventMegaMetagross = {
     category: 2,
 }
 
-
-/*areas.eventTapuFini = {
-    rotation: 4,
-    type: `event`,
-    name: `Tempest Trench`,
-    background : `trench`,
-    icon: pkmn.tapuFini,
-    trainer: true,
-    encounter: true,
-    difficulty: tier3difficulty,
-    encounterEffect : function() {item.wormholeResidue.got--},
-    unlockDescription : `Requires a <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
-    unlockRequirement : function() { return item.wormholeResidue.got>0 },
-    level : 100,
-    team : {
-        slot1 : pkmn.tapuFini,
-        slot1Moves : [move.rainDance.id,move.hydroPump.id, move.moonblast.id, move.flashCannon.id],
-    },
-    reward : [pkmn.tapuFini],
-    category: 2,
-}
-
-areas.eventTapuLele = {
-    rotation: 4,
-    type: `event`,
-    name: `Strange Space`,
-    background : `space`,
-    icon: pkmn.tapuLele,
-    trainer: true,
-    encounter: true,
-    difficulty: tier3difficulty,
-    encounterEffect : function() {item.wormholeResidue.got--},
-    unlockDescription : `Requires a <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
-    unlockRequirement : function() { return item.wormholeResidue.got>0 },
-    level : 100,
-    team : {
-        slot1 : pkmn.tapuLele,
-        slot1Moves : [move.mistBall.id,move.psychic.id, move.moonblast.id, move.fireBlast.id],
-    },
-    reward : [pkmn.tapuLele],
-    category: 2,
-}
-
-
-
-
-
-areas.eventChienPao = {
-    rotation: 4,
-    type: `event`,
-    name: `Icerend Shrine`,
-    background : `iceCave`,
-    icon: pkmn.chienPao,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.wormholeResidue.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Wormhole Residues to enter`,
-    unlockRequirement : function() { return item.wormholeResidue.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.chienPao,
-        slot1Moves : [move.ruination.id,move.icicleCrash.id, move.toxic.id, move.fireFang.id],
-    },
-    reward : [pkmn.chienPao],
-    category: 2,
-}*/
-
 areas.eventMegaDragonite = {
     rotation: 4,
     type: `event`,
@@ -4508,30 +4223,7 @@ areas.eventMegaDragonite = {
     category: 2,
 }
 
-/*areas.eventGalarianMoltres = {
-    rotation: 4,
-    type: `event`,
-    name: `Evil Roost`,
-    background : `iceCave`,
-    icon: pkmn.galarianMoltres,
-    trainer: true,
-    encounter: true,
-    difficulty: tier4difficulty,
-    encounterEffect : function() {item.wormholeResidue.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Wormhole Residues to enter`,
-    unlockRequirement : function() { return item.wormholeResidue.got>2 },
-    level : 110,
-    team : {
-        slot1 : pkmn.galarianMoltres,
-        slot1Moves : [move.featherDance.id,move.fieryWrath.id, move.fireBlast.id, move.hurricane.id],
-    },
-    reward : [pkmn.galarianMoltres],
-    category: 2,
-}*/
-
-
-
-//rotation 5
+//RAID - rotation 5
 //Wild Zone
 areas.ecosphere = {
     rotation: 5,
