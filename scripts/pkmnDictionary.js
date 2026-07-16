@@ -2810,6 +2810,7 @@ pkmn.megaGengar = {
         spe: 130*1.2,
     },
     hiddenAbility: ability.somberField,
+    signature : shadowForce,
     lore: `A megaevolução torna sua sombra ainda mais espessa e assustadora, permitindo que ele se funda completamente com a escuridão.`,
 }
 
@@ -3741,6 +3742,7 @@ pkmn.megaScizor = {
         spe: 75*1.2,
     },
     hiddenAbility: ability.technician,
+    signature : megahorn,
     lore: `A megaevolução torna seu exoesqueleto ainda mais denso e reforçado, permitindo voos e ataques em velocidades impressionantes.`,
 }
 
@@ -3911,7 +3913,7 @@ pkmn.megaPinsir = {
     },
     hiddenAbility: ability.aerilate,
     eggMove : move.camouflage,
-    lore: ``,
+    lore: `Após a Mega Evolução, ele torna-se capaz de voar. Talvez por estar tão feliz, ele raramente toca o chão.`,
 }
 
 // 128 Tauros
@@ -4496,6 +4498,8 @@ pkmn.megaAerodactyl = {
         spe: 150*1.2,
     },
     hiddenAbility: ability.toughClaws,
+    signature : flyingPress,
+    lore: `Parte de suas células de pedra se desprenderam, tornando-o mais rápido e capaz de voar com maior destreza. Sua natureza agressiva, contudo, tornou-se ainda mais cruel.`,
 }
 
 // 143 Munchlax → Snorlax
@@ -5230,7 +5234,8 @@ pkmn.megaAmpharos = {
         spe: 45*1.2,
     },
     hiddenAbility: ability.flashElectro,
-    eggMove : move.zapCannon
+    eggMove : move.zapCannon,
+    lore: `A energia da Mega Evolução estimulou seus genes, fazendo com que sua pelagem branca voltasse a crescer. Seus chifres também se tornaram mais longos.`,
 }
 
 // 182 Bellossom
@@ -6191,7 +6196,8 @@ pkmn.megaHeracross = {
         spe: 75*1.2,
     },
     hiddenAbility: ability.skillLink,
-    signature : move.megahorn
+    signature : move.megahorn,
+    lore: `A energia da Mega Evolução sobrecarrega seu corpo, fazendo com que seus músculos se contraiam excessivamente. Ele sente um desconforto constante, o que o torna extremamente irritado e agressivo em batalha.`,
 }
 
 // 215 Sneasel → Weavile / Hisuian Sneasel → Sneasler
@@ -6555,6 +6561,7 @@ pkmn.megaHoundoom = {
     },
     hiddenAbility: ability.solarPower,
     eggMove: move.howl,
+    lore: `Sua energia aumenta drasticamente devido à Mega Evolução, fazendo com que suas garras e rabo derretam devido ao calor intenso. As garras e partes da cauda que derreteram emitem uma fumaça tóxica que, ao ser inalada, causa queimaduras permanentes.`,
 }
 
 // 230 Kingdra
@@ -6757,6 +6764,8 @@ pkmn.megaTyranitar = {
         spe: 71*1.2,
     },
     hiddenAbility: ability.sandStream,
+    signature : ruination,
+    lore: `A energia da Mega Evolução forçou sua armadura a se romper. Ele ganhou um poder de destruição ainda maior, tornando-se uma força incontrolável da natureza que pode reduzir montanhas a escombros sem esforço.`,
 }
 
 // Lendário
