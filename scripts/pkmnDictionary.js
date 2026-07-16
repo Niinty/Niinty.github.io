@@ -470,7 +470,8 @@ pkmn.megaBeedrill = {
     },
     hiddenAbility: ability.adaptability,
     lore: `Suas patas se tornaram ferrões venenosos. Ele perfura sua presa repetidamente com os ferrões em seus membros, desferindo o golpe final com o ferrão em sua parte traseira.`,
-    eggMove : move.toxicThread
+    eggMove : move.toxicThread,
+    signature : move.tailGlow,
 }
 
 // 016 Pidgey → Pidgeotto → Pidgeot
@@ -534,7 +535,8 @@ pkmn.megaPidgeot = {
     },
     hiddenAbility: ability.noGuard,
     lore: `Com sua força muscular agora muito aumentada, ele consegue voar continuamente por duas semanas sem descansar.`,
-    eggMove : move.meFirst
+    eggMove : move.meFirst,
+    signature : move.braveBird,
 }
 
 // 019 Rattata → Raticate
@@ -2871,6 +2873,7 @@ pkmn.megaSteelix = {
     },
     hiddenAbility: ability.sheerForce,
     lore: `Sua megaevolução alonga ainda mais seu corpo metálico, capaz de perfurar através de camadas de rocha com facilidade extraordinária.`,
+    signature : move.boneRush,
 }
 
 // 096 Drowzee → Hypno
@@ -6936,6 +6939,7 @@ pkmn.megaBlaziken = {
     },
     signature : move.blazeKick,
     hiddenAbility: ability.speedBoost,
+    lore: `A energia da Mega Evolução estimulou seus músculos das pernas, conferindo-lhe uma força de salto incomparável. Ele luta utilizando chamas que exalam de seus punhos e pés, e quanto mais intensa a batalha, mais poderosas essas chamas se tornam.`,
 }
 
 // 258 Mudkip → Marshtomp → Swampert
@@ -7373,6 +7377,8 @@ pkmn.megaGardevoir = {
         spe: 110*1.2,
     },
     hiddenAbility: ability.pixilate,
+    signature : move.lovelyKiss,
+    lore: `Graças à energia da Mega Evolução, ela é capaz de liberar todo o seu poder psíquico. Dizem que, quando ele abre totalmente o coração, é capaz de conjurar uma energia devastadora a partir de suas emoções.`,
 }
 
 pkmn.gallade = {
@@ -7732,6 +7738,8 @@ pkmn.megaMawile = {
         spe: 50*1.2,
     },
     hiddenAbility: ability.strongJaw,
+    signature : move.shiftGear,
+    lore: `As mandíbulas em sua cabeça aumentaram e se dividiram em duas. Elas são controladas independentemente, permitindo que o Pokémon morda o inimigo por dois ângulos diferentes simultaneamente.`,
 }
 
 // 304 Aron → Lairon → Aggron
@@ -7791,7 +7799,9 @@ pkmn.megaAggron = {
         spe: 50*1.2,
     },
     hiddenAbility: ability.metalhead,
-    eggMove : move.noRetreat
+    eggMove : move.noRetreat,
+    signature : move.shiftGear,
+    lore: `A energia da Mega Evolução fez com que sua armadura de ferro se tornasse incrivelmente dura e resistente. Embora seja muito mais pesado, ele exibe um poder destrutivo maior, usando seus chifres gigantescos para perfurar aço como se fosse papel.`,
 }
 
 // 307 Meditite → Medicham
@@ -7836,7 +7846,8 @@ pkmn.megaMedicham = {
         spe: 100*1.2,
     },
     hiddenAbility: ability.hugePower,
-    signature : move.hiJumpKick
+    signature : move.hiJumpKick,
+    lore: `A energia da Mega Evolução despertou seus sentidos ocultos. Ao atingir um estado de concentração absoluta, ele consegue prever os movimentos do adversário e lutar com uma precisão técnica que parece sobrenatural.`,
 }
 
 // 309 Electrike → Manectric
@@ -7881,7 +7892,9 @@ pkmn.megaManectric = {
         spe: 135*1.2,
     },
     hiddenAbility: ability.intimidate,
-    eggMove : move.charge
+    eggMove : move.charge,
+    signature : move.boltStrike,
+    lore: `A energia da Mega Evolução é liberada através de seus pelos, gerando uma descarga elétrica tão intensa que cria nuvens de trovão. Ele é capaz de atingir velocidades extremas enquanto libera essas descargas para atordoar seus oponentes.`,
 }
 
 // 311 Plusle
@@ -8606,6 +8619,8 @@ pkmn.megaBanette = {
     },
     hiddenAbility: ability.prankster,
     eggMove : move.shadowForce,
+    signature : move.rageFist,
+    lore: `A energia da Mega Evolução liberou sua vontade amaldiçoada. Ele é movido por um ódio profundo e vingativo, e dizem que, ao abrir seus zíperes, ele libera uma força tão poderosa que pode transformar qualquer um em um boneco amaldiçoado.`,
 }
 
 // 355 Duskull → Dusclops → Dusknoir 
@@ -8738,6 +8753,8 @@ pkmn.megaAbsol = {
         spe: 115*1.2,
     },
     hiddenAbility: ability.sereneGrace,
+    signature : move.fieryWrath,
+    lore: `A energia da Mega Evolução liberou sua vitalidade oculta. As asas que brotaram de suas costas se parecem com uma aura aterrorizante, e ele as usa para afugentar seus oponentes, exibindo um aspecto que muitos descrevem como angelical ou demoníaco.`,
 }
 
 pkmn.megaAbsolZ = {
@@ -8749,7 +8766,10 @@ pkmn.megaAbsolZ = {
         satk: 125*1.2,
         sdef: 60*1.2,
         spe: 151*1.2,
-    }
+    },
+    hiddenAbility: ability.sereneGrace,
+    signature : move.ruination,
+    lore: `A garra em suas costas se formou pelo enrijecimento da energia, usada para abater inimigos com um único golpe rápido. A lenda diz que isso é, na verdade, um ato de misericórdia, projetado para evitar que seus oponentes sofram.`,
 }
 
 // 360 Wynaut
@@ -10264,6 +10284,8 @@ pkmn.megaGarchomp = {
     },
     hiddenAbility: ability.sandForce,
     eggMove: move.mudSport,
+    signature : move.roarOfTime,
+    lore: `A energia da Mega Evolução fez com que os ossos de seus braços derretessem e se transformassem em foices gigantescas. Ele se torna brutal e cruel, atacando seus inimigos impiedosamente com essas novas lâminas.`,
 }
 
 /*pkmn.megaGarchompZ = {
@@ -10325,6 +10347,8 @@ pkmn.megaLucario = {
         spe: 137*1.2,
     },
     hiddenAbility: ability.adaptability,
+    signature : move.thunderousKick,
+    lore: `A energia da Mega Evolução liberou o poder latente de seu corpo. Ele se tornou impiedoso em batalha, com uma aura que se manifesta de forma tão intensa que chega a queimar suas próprias patas. A partir do momento em que a batalha começa, ele não mostra qualquer hesitação ou piedade para com seu adversário.`,
 }
 
 pkmn.megaLucarioZ = {
@@ -10338,6 +10362,8 @@ pkmn.megaLucarioZ = {
         spe: 207*1.2,
     },
     hiddenAbility: ability.adaptability,
+    signature : move.dynamicPunch,
+    lore: `Ao se cobrir inteiramente com sua aura, o Mega Lucario Z consegue desviar de todos os tipos de ataques, lutando como se estivesse dançando graciosamente. Seus punhos e canelas são endurecidos com energia de aço, permitindo que ele desferir golpes tão rápidos que surpreendem os adversários.`,
 }
 
 // 449 Hippopotas → Hippowdon
@@ -10513,7 +10539,9 @@ pkmn.megaAbomasnow = {
         spe: 30*1.2,
     },
     hiddenAbility: ability.snowWarning,
-    eggMove : move.freezeDry
+    eggMove : move.freezeDry,
+    signature : move.tripleAxel,
+    lore: `A energia da Mega Evolução fez com que ele ficasse ainda maior e mais coberto de gelo. O gelo que cresce em suas costas é extremamente resistente, e ele é capaz de criar nevascas intensas, cobrindo vastas áreas com gelo e neve em questão de instantes.`,
 }
 
 // 461 Weavile
