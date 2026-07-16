@@ -2810,7 +2810,7 @@ pkmn.megaGengar = {
         spe: 130*1.2,
     },
     hiddenAbility: ability.somberField,
-    signature : shadowForce,
+    signature : move.shadowForce,
     lore: `A megaevolução torna sua sombra ainda mais espessa e assustadora, permitindo que ele se funda completamente com a escuridão.`,
 }
 
@@ -3742,7 +3742,7 @@ pkmn.megaScizor = {
         spe: 75*1.2,
     },
     hiddenAbility: ability.technician,
-    signature : megahorn,
+    signature : move.megahorn,
     lore: `A megaevolução torna seu exoesqueleto ainda mais denso e reforçado, permitindo voos e ataques em velocidades impressionantes.`,
 }
 
@@ -4498,7 +4498,7 @@ pkmn.megaAerodactyl = {
         spe: 150*1.2,
     },
     hiddenAbility: ability.toughClaws,
-    signature : flyingPress,
+    signature : move.flyingPress,
     lore: `Parte de suas células de pedra se desprenderam, tornando-o mais rápido e capaz de voar com maior destreza. Sua natureza agressiva, contudo, tornou-se ainda mais cruel.`,
 }
 
@@ -6764,7 +6764,7 @@ pkmn.megaTyranitar = {
         spe: 71*1.2,
     },
     hiddenAbility: ability.sandStream,
-    signature : ruination,
+    signature : move.ruination,
     lore: `A energia da Mega Evolução forçou sua armadura a se romper. Ele ganhou um poder de destruição ainda maior, tornando-se uma força incontrolável da natureza que pode reduzir montanhas a escombros sem esforço.`,
 }
 
