@@ -8887,6 +8887,7 @@ pkmn.froslass = {
     hiddenAbility: ability.iceBody,
 }
 
+//Sem pedra
 pkmn.megaFroslass = {
     type: ["ice","ghost"],
     bst: {
@@ -8896,7 +8897,10 @@ pkmn.megaFroslass = {
         satk: 140*1.2,
         sdef: 100*1.2,
         spe: 120*1.2,
-    }
+    },
+    hiddenAbility: ability.snowWarning,
+    signature : move.glaciate,
+    lore: `Este Pokémon pode usar um ar gélido e sinistro impregnado de energia fantasmagórica para congelar até mesmo coisas intangíveis, como chamas ou o vento.`,
 }
 
 // 363 Spheal → Sealeo → Walrein
@@ -11333,6 +11337,7 @@ pkmn.emboar = {
     signature : move.heatCrash
 }
 
+//Sem pedra
 pkmn.megaEmboar = {
     type: ["fire","fighting"],
     bst: {
@@ -11344,7 +11349,8 @@ pkmn.megaEmboar = {
         spe: 75*1.2,
     },
     hiddenAbility: ability.fieryPelt,
-    signature : move.heatCrash
+    signature : move.heatCrash,
+    lore: `Empunhando uma chama ardente em forma de lança serpentina, ele avança para resgatar seus aliados em perigo.`,
 }
 
 // 501 Oshawott → Dewott → Samurott
@@ -11789,6 +11795,7 @@ pkmn.excadrill = {
     hiddenAbility: ability.sandForce,
 }
 
+//Sem pedra
 pkmn.megaExcadrill = {
   type: ["ground","steel"],
   bst: {
@@ -11798,7 +11805,10 @@ pkmn.megaExcadrill = {
     satk: 65*1.2,
     sdef: 65*1.2,
     spe: 103*1.2,
-  }
+  },
+  hiddenAbility: ability.moody,
+  signature : move.sandsearStorm,
+  lore: `Sua velocidade de rotação aumentou drasticamente graças à Megaevolução. Ele atravessa qualquer obstáculo enquanto avança pelo solo, deixando para trás um enorme túnel.`,
 }
 
 // 531 Audino
@@ -12029,6 +12039,22 @@ pkmn.scolipede = {
     spe: 112,
   },
     hiddenAbility: ability.speedBoost,
+}
+
+//Sem pedra
+pkmn.megaScolipede = {
+  type: ["bug","poison"],
+  bst: {
+    hp: 60*1.2,
+    atk: 140*1.2,
+    def: 149*1.2,
+    satk: 75*1.2,
+    sdef: 99*1.2,
+    spe: 62*1.2,
+  },
+    hiddenAbility: ability.fullMetalBody,
+    signature : move.attackOrder,
+    lore: `Os espinhos que cobrem todo o seu corpo foram fortalecidos pela Megaevolução. Ao acelerar em alta velocidade, ele desfere investidas devastadoras que perfuram qualquer inimigo em seu caminho.`,
 }
 
 
