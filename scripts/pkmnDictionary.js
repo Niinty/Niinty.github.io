@@ -8745,6 +8745,7 @@ pkmn.chimecho = {
     eggMove: move.howl,
 }
 
+//Sem pedra
 pkmn.megaChimecho = {
     type: ["psychic", "steel"],
     bst: {
@@ -8757,6 +8758,8 @@ pkmn.megaChimecho = {
     },
     hiddenAbility: ability.cacophony,
     eggMove: move.howl,
+    signature : move.kinesis,
+    lore: `Ele faz seu corpo inteiro vibrar para atacar em todas as direções usando ondas sonoras. Aqueles que ouvem essas vibrações ficam tão confusos que esquecem quem são.`,
 }
 
 // 359 Absol
@@ -8789,6 +8792,7 @@ pkmn.megaAbsol = {
     lore: `A energia da Mega Evolução liberou sua vitalidade oculta. As asas que brotaram de suas costas se parecem com uma aura aterrorizante, e ele as usa para afugentar seus oponentes, exibindo um aspecto que muitos descrevem como angelical ou demoníaco.`,
 }
 
+//Sem pedra
 pkmn.megaAbsolZ = {
     type: ["dark", "ghost"],
     bst: {
@@ -13269,7 +13273,10 @@ pkmn.megaChandelure = {
     satk: 175*1.2,
     sdef: 110*1.2,
     spe: 90*1.2,
-  }
+  },
+    hiddenAbility: ability.moody,
+    signature : move.torchSong,
+    lore: `Um de seus olhos é uma janela que liga o nosso mundo ao além. Este Pokémon atrai o ódio e o converte em poder.`,
 }
 
 // 610 Axew → Fraxure → Haxorus
@@ -14141,6 +14148,9 @@ pkmn.megaChesnaught = {
     sdef: 115*1.2,
     spe: 44*1.2,
   },
+    hiddenAbility: ability.treasureOfRuin,
+    signature : move.seedFlare,
+    lore: `As espinhas de sua carapaça se alongaram e se tornaram como lanças. Ele encara qualquer adversário de frente para proteger aqueles que estão atrás dele.`,
 }
 
 // 653 Fennekin → Braixen → Delphox
@@ -15327,6 +15337,8 @@ pkmn.megaBarbaracle = {
     spe: 88*1.2,
   },
     hiddenAbility: ability.ambidextrous,
+    signature : move.rockWrecker,
+    lore: `Ele usa seus muitos braços para brincar com seus oponentes. Isso mantém sua cabeça extremamente ocupada.`,
 }
 
 // 690 Skrelp → Dragalge
@@ -20514,7 +20526,9 @@ pkmn.megaBaxcalibur = {
     spe: 87*1.2,
   },
     hiddenAbility: ability.sharpness,
-    eggMove : move.spacialRend
+    eggMove : move.spacialRend,
+    signature : move.tripleAxel,
+    lore: `A lâmina dorsal de Baxcalibur ficou ainda mais gigantesca graças à Megaevolução. Este Pokémon dispara feixes de energia a partir do punho localizado em seu plexo solar.`,
 }
 
 // 999 Gimmighoul → Gholdengo
