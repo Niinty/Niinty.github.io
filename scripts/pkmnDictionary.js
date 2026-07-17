@@ -6878,7 +6878,9 @@ pkmn.megaSceptile = {
         spe: 155*1.2,
     },
     hiddenAbility: ability.tintedLens,
-    eggMove : move.dragonDarts
+    eggMove : move.dragonDarts,
+    signature : move.seedFlare,
+    lore: `A energia da Mega Evolução faz com que parte de sua cauda cresça de forma explosiva, permitindo que ele a lance como um projétil contra seus inimigos. Ele é capaz de regenerar a cauda imediatamente após o disparo e possui uma agilidade ainda mais apurada para desviar de ataques.`,
 }
 
 // 255 Torchic → Combusken → Blaziken
@@ -6999,7 +7001,9 @@ pkmn.megaSwampert = {
         spe: 70*1.2,
     },
     hiddenAbility: ability.swiftSwim,
-    eggMove : move.crabhammer
+    eggMove : move.crabhammer,
+    signature : move.clamp,
+    lore: `A energia da Mega Evolução fortalece ainda mais seus músculos, conferindo-lhe uma força física avassaladora. Ele é capaz de nadar em velocidades extraordinárias, movendo-se com tanta destreza na água quanto na terra, tornando-se um predador implacável em ambos os ambientes.`,
 }
 
 // 261 Poochyena → Mightyena
@@ -7406,6 +7410,8 @@ pkmn.megaGallade = {
         spe: 110*1.2,
     },
     hiddenAbility: ability.supremeOverlord,
+    signature : move.meteorAssault,
+    lore: `A energia da Mega Evolução manifestou-se em uma habilidade de combate superior. Seus braços, agora capazes de se estender como lâminas, permitem que ele realize ataques rápidos e precisos. Ele é um mestre da esgrima que luta com uma elegância inigualável, antecipando os movimentos de seus oponentes com reflexos sobre-humanos.`,
 }
 
 // 283 Surskit → Masquerain
@@ -7710,6 +7716,8 @@ pkmn.megaSableye = {
     },
     hiddenAbility: ability.prankster,
     eggMove : move.trickOrTreat,
+    signature : move.darkestLariat,
+    lore: `A energia da Mega Evolução fez com que a joia em seu peito crescesse de forma descomunal, tornando-se tão grande que o Pokémon não consegue mais carregar o peso. Ele a utiliza como um escudo impenetrável, protegendo-se de qualquer ataque enquanto observa seus inimigos com astúcia.`,
 }
 
 // 303 Mawile
@@ -8029,6 +8037,8 @@ pkmn.megaSharpedo = {
         spe: 160*1.2,
     },
     hiddenAbility: ability.strongJaw,
+    signature : move.jetPunch,
+    lore: `A energia da Mega Evolução causou um crescimento excessivo em seu corpo, resultando em presas mais afiadas e em uma carapaça ainda mais dura. Suas cicatrizes de batalhas passadas servem como prova de sua ferocidade, e ele agora é capaz de destruir qualquer material, rasgando o aço com a facilidade de quem corta papel.`,
 }
 
 // 320 Wailmer → Wailord
@@ -8101,7 +8111,9 @@ pkmn.megaCamerupt = {
         spe: 20*1.2,
     },
     hiddenAbility: ability.sheerForce,
-    eggMove : move.sacredFire
+    eggMove : move.sacredFire,
+    signature : move.fieryDance,
+    lore: `A energia da Mega Evolução fez com que o vulcão em suas costas entrasse em erupção, liberando uma torrente de magma que transborda constantemente. Ele é capaz de disparar bolas de lava fervente de seu corpo e possui um temperamento extremamente explosivo, condizente com a montanha de fogo que carrega.`,
 }
 
 // 324 Torkoal
@@ -8280,6 +8292,8 @@ pkmn.megaAltaria = {
     },
     hiddenAbility: ability.pixilate,
     eggMove: move.aromaticMist,
+    signature : move.clangingScales,
+    lore: `A energia da Mega Evolução fez com que suas penas crescessem de forma exuberante, envolvendo seu corpo em uma camada de algodão tão densa que atua como um escudo. Ele é conhecido por ser um Pokémon extremamente carinhoso e protetor, mas, ao ser levado à batalha, demonstra uma confiança serena e uma força mágica que surpreende seus adversários.`,
 }
 
 // 335 Zangoose
@@ -8837,7 +8851,8 @@ pkmn.megaGlalie = {
         spe: 100*1.2,
     },
     hiddenAbility: ability.glaciate,
-    signature : move.snowscape
+    signature : move.snowscape,
+    lore: `A energia da Mega Evolução liberou uma força destrutiva contida em seu núcleo. Sua mandíbula ficou deformada e travada em uma posição de abertura permanente, permitindo que ele exale um ar congelante tão intenso que pode cristalizar instantaneamente qualquer coisa ao seu redor. Ele é incapaz de controlar a imensa energia que emana de seu corpo.`,
 }
 
 pkmn.froslass = {
@@ -9043,6 +9058,8 @@ pkmn.megaSalamence = {
         spe: 120*1.2,
     },
     hiddenAbility: ability.aerilate,
+    signature : move.dragonDarts,
+    lore: `A energia da Mega Evolução fez com que suas asas se fundissem em uma forma de crescente rígida e aerodinâmica. Esse formato de meia-lua funciona como uma lâmina gigantesca; ele corta o céu com tamanha velocidade e ferocidade que o solo abaixo de sua trajetória é esculpido pelo vento e pelo calor que emana de seu corpo.`,
 }
 
 // 374 Beldum → Metang → Metagross
@@ -9099,6 +9116,8 @@ pkmn.megaMetagross = {
         spe: 110*1.2,
     },
     hiddenAbility: ability.toughClaws,
+    signature : move.anchorShot,
+    lore: `A energia da Mega Evolução estimulou seus cérebros, unindo os quatro cérebros do Metagross original em uma supercomputação hiper-avançada. Ele analisa as batalhas com uma precisão fria e impiedosa, utilizando suas garras como ganchos para fixar o oponente antes de desferir ataques fatais com sua força sobre-humana.`,
 }
 
 // 377 Regirock
@@ -10098,7 +10117,9 @@ pkmn.megaLopunny = {
         spe: 135*1.2,
     },
     hiddenAbility: ability.scrappy,
-    eggMove: move.hiJumpKick
+    eggMove: move.hiJumpKick,
+    signature : move.crushGrip,
+    lore: `A energia da Mega Evolução liberou seu instinto selvagem. Ele se torna extremamente agressivo e combate com uma técnica de luta implacável, utilizando suas pernas poderosas para desferir chutes que podem pulverizar rochas. A pelagem que cresce em seu corpo atua como uma proteção contra o impacto de seus próprios golpes destrutivos.`,
 }
 
 // 429 Mismagius
@@ -11790,6 +11811,7 @@ pkmn.megaAudino = {
     },
     signature : move.acupressure,
     hiddenAbility: ability.sweetVeil,
+    lore: `A energia da Mega Evolução liberou um poder curativo latente. O Mega Audino emite pulsos de energia que acalmam a hostilidade de quem está ao seu redor. Sua presença é tão reconfortante que qualquer criatura que entre em contato com suas antenas entra em um estado de relaxamento profundo, tornando a batalha um ambiente de tranquilidade.`,
 }
 
 // 532 Timburr → Gurdurr → Conkeldurr
