@@ -12366,6 +12366,21 @@ pkmn.scrafty = {
     hiddenAbility: ability.moxie,
 }
 
+pkmn.megaScrafty = {
+  type: ["dark","fighting"],
+  bst: {
+    hp: 65*1.2,
+    atk: 130*1.2,
+    def: 135*1.2,
+    satk: 55*1.2,
+    sdef: 135*1.2,
+    spe: 68*1.2,
+  },
+    hiddenAbility: ability.moxie,
+    signature : move.meteorAssault,
+    lore: `A Megaevolução fez com que a pele que Scrafty troca se tornasse branca, ficando resistente e flexível. É claro que este Pokémon continua tão briguento quanto sempre foi.`,
+}
+
 // 561 Sigilyph
 pkmn.sigilyph = {
   type: ["psychic","flying"],
