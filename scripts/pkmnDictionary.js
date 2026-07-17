@@ -1218,6 +1218,7 @@ pkmn.clefable = {
     lore: `Sua audição é extremamente aguçada, permitindo-lhe ouvir um alfinete caindo a quilômetros de distância. Por isso, prefere viver em montanhas silenciosas e isoladas.`,
 }
 
+//Sem pedra
 pkmn.megaClefable = {
     type: ["fairy", "flying"],
     bst: {
@@ -1231,6 +1232,7 @@ pkmn.megaClefable = {
     hiddenAbility: ability.magicGuard,
     eggMove : move.lunarDance,
     lore: `A energia oculta da Pedra da Lua transbordou através da Mega Evolução. Suas asas cresceram tanto que ele agora consegue voar diretamente em direção ao espaço sideral.`,
+    signature : move.lightOfRuin,
 }
 
 // 037 Vulpix → Ninetales
@@ -2166,6 +2168,7 @@ pkmn.victreebel = {
     lore: `Sua boca aberta libera um aroma doce que atrai presas, engolindo-as inteiras. Já foi visto com pernas de esqueleto saindo de sua boca.`,
 }
 
+//Sem pedra
 pkmn.megaVictreebel = {
     type: ["grass","poison"],
     bst: {
@@ -2179,6 +2182,7 @@ pkmn.megaVictreebel = {
     hiddenAbility: ability.chlorophyll,
     eggMove : move.appleAcid,
     lore: `A megaevolução deixa suas raízes ainda mais profundas e sua boca gigantesca, capaz de engolir presas do tamanho de uma pessoa.`,
+    signature : move.barbBarrage,
 }
 
 // 072 Tentacool → Tentacruel
@@ -3611,6 +3615,7 @@ pkmn.starmie = {
     lore: `Seu núcleo misterioso brilha em sete cores. Alguns pesquisadores acreditam que este Pokémon veio do espaço sideral.`,
 }
 
+//Sem Pedra
 pkmn.megaStarmie = {
     type: ["water","psychic"],
     bst: {
@@ -3621,6 +3626,7 @@ pkmn.megaStarmie = {
         sdef: 105*1.2,
         spe: 120*1.2,
     },
+    hiddenAbility: ability.moxie,
     signature : move.camouflage,
     lore: `Sua megaevolução intensifica o brilho de seu núcleo central, que agora emite luzes ainda mais vibrantes em padrões complexos.`,
 }
@@ -4699,6 +4705,8 @@ pkmn.megaDragonite = {
         spe: 100*1.2,
     },
     hiddenAbility: ability.multiscale,
+    signature : move.clangingScales,
+    lore: `Para Mega Dragonite, terminar uma batalha rapidamente é um ato de gentileza com o adversário. Mesmo em combate, se perceber alguém em perigo, interromperá tudo para ajudá-lo imediatamente.`,
 }
 
 // Lendário
@@ -4825,6 +4833,7 @@ pkmn.meganium = {
     eggMove : move.floralHealing
 }
 
+//Sem pedra
 pkmn.megaMeganium = {
     type: ["grass", "fairy"],
     bst: {
@@ -4836,7 +4845,9 @@ pkmn.megaMeganium = {
         spe: 80*1.2,
     },
     hiddenAbility: ability.costar,
-    eggMove : move.floralHealing
+    eggMove : move.floralHealing,
+    signature : move.seedFlare,
+    lore: `Graças à energia acumulada, Mega Meganium dispara Raio Solar instantaneamente e também se tornou muito mais poderoso em combate físico, chegando a esmagar adversários resistentes aos seus ataques especiais.`,
 }
 
 // 155 Cyndaquil → Quilava → Typhlosion
@@ -4948,7 +4959,10 @@ pkmn.megaFeraligatr = {
         satk: 89*1.2,
         sdef: 93*1.2,
         spe: 78*1.2,
-    }
+    },
+    hiddenAbility: ability.thousandArms,
+    signature : move.clamp,
+    lore: `A Megaevolução fez com que a sua barbatana dorsal se tornasse gigantesca. Usando essa barbatana junto com a força de seus braços, ficou com uma 'mordida' pelo menos 10 vezes mais poderosa do que era antes de Megaevoluir. Até coisas que, antes, eram grandes demais para Feraligatr enfrentar, agora podem ser trituradas em pedacinhos.`,
 }
 
 // 161 Sentret → Furret
@@ -6509,6 +6523,7 @@ pkmn.skarmory = {
     }
 }
 
+//Sem pedra
 pkmn.megaSkarmory = {
     type: ["steel","flying"],
     bst: {
@@ -6518,7 +6533,10 @@ pkmn.megaSkarmory = {
         satk: 40*1.2,
         sdef: 100*1.2,
         spe: 110*1.2,
-    }
+    },
+    hiddenAbility: ability.wonderGuard,
+    signature : move.gearUp,
+    lore: `Ele voa mais rápido que a velocidade do som. Depois de criar ondas de choque para arremessar seus inimigos para longe, finaliza-os com suas garras afiadas.`,
 }
 
 // 228 Houndour → Houndoom
