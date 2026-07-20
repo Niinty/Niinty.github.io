@@ -356,6 +356,44 @@ const GYMS_LEADERS = [
         },
     },
 
+    //Hoenn
+    {
+        areaId: "vsGymLeaderRoxanne",
+        region: "hoenn",
+        name: "Gym Leader Roxanne",
+        city: "Rustboro City",
+        sprite: "roxanne",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Rock.",
+        team: {
+            slot1: pkmn.cradily, slot1Moves: [move.rockWrecker.id, move.barrage.id, move.stoneEdge.id, move.cottonGuard.id],
+            slot2: pkmn.aggron, slot2Moves: [move.rockPolish.id, move.gigatonHammer.id, move.stoneEdge.id, move.sunsteelStrike.id],
+            slot3: pkmn.armaldo, slot3Moves: [move.stoneEdge.id, move.megahorn.id, move.rockWrecker.id, move.stringShot.id],
+            slot4: pkmn.solrock, slot4Moves: [move.rockPolish.id, move.confusion.id, move.stoneEdge.id, move.extrasensory.id],
+            slot5: pkmn.lunatone, slot5Moves: [move.rockPolish.id, move.psychic.id, move.stoneEdge.id, move.ancientPower.id],
+            slot6: pkmn.relicanth, slot6Moves: [move.rockWrecker.id, move.tripleDive.id, move.stoneEdge.id, move.snipeShot.id],
+        },
+    }, 
+	
+	{
+        areaId: "vsGymLeaderBrawly",
+        region: "hoenn",
+        name: "Gym Leader Brawly",
+        city: "Dewford Town",
+        sprite: "brawly",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Lutador.",
+        team: {
+            slot1: pkmn.breloom, slot1Moves: [move.drumBeating.id, move.thunderousKick.id, move.tropKick.id, move.dynamicPunch.id],
+            slot2: pkmn.hariyama, slot2Moves: [move.meteorAssault.id, move.closeCombat.id, move.noRetreat.id, move.ironDefense.id],
+            slot3: pkmn.blaziken, slot3Moves: [move.bitterBlade.id, move.thunderousKick.id, move.vCreate.id, move.dynamicPunch.id],
+            slot4: pkmn.gallade, slot4Moves: [move.dynamicPunch.id, move.luminaCrash.id, move.closeCombat.id, move.noRetreat.id],
+            slot5: pkmn.slaking, slot5Moves: [move.beakBlast.id, move.relicSong.id, move.sketch.id, move.howl.id],
+            slot6: pkmn.medicham, slot6Moves: [move.mimic.id, move.meteorAssault.id, move.luminaCrash.id, move.thunderousKick.id],
+        },
+    }, 
 
   /*
     {
