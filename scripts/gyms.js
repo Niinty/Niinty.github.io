@@ -393,7 +393,45 @@ const GYMS_LEADERS = [
             slot5: pkmn.slaking, slot5Moves: [move.beakBlast.id, move.relicSong.id, move.sketch.id, move.howl.id],
             slot6: pkmn.medicham, slot6Moves: [move.mimic.id, move.meteorAssault.id, move.luminaCrash.id, move.thunderousKick.id],
         },
+    },
+
+	{
+        areaId: "vsGymLeaderWattson",
+        region: "hoenn",
+        name: "Gym Leader Wattson",
+        city: "Mauville City",
+        sprite: "wattson",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Electric.",
+        team: {
+            slot1: pkmn.manectric, slot1Moves: [move.zingZap.id, move.voltTackle.id, move.thunderCage.id, move.auraWheel.id],
+            slot2: pkmn.plusle, slot2Moves: [move.boltStrike.id, move.zapCannon.id, move.ionise.id, move.electroBall.id],
+            slot3: pkmn.minun, slot3Moves: [move.boltStrike.id, move.zapCannon.id, move.ionise.id, move.electroBall.id],
+            slot4: pkmn.magneton, slot4Moves: [move.voltTackle.id, move.zapCannon.id, move.smartStrike.id, move.magnetBomb.id],
+            slot5: pkmn.electabuzz, slot5Moves: [move.auraWheel.id, move.thunder.id, move.zingZap.id, move.thunderPunch.id],
+            slot6: pkmn.ampharos, slot6Moves: [move.ionise.id, move.voltTackle.id, move.boltStrike.id, move.auraWheel.id],
+        },
     }, 
+	
+	{
+        areaId: "vsGymLeaderFlannery",
+        region: "hoenn",
+        name: "Gym Leader Flannery",
+        city: "Lavaridge City",
+        sprite: "flannery",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Fire.",
+        team: {
+            slot1: pkmn.blaziken, slot1Moves: [move.bitterBlade.id, move.thunderousKick.id, move.vCreate.id, move.dynamicPunch.id],
+            slot2: pkmn.torkoal, slot2Moves: [move.willOWisp.id, move.pyroBall.id, move.mindBlown.id, move.inferno.id],
+            slot3: pkmn.camerupt, slot3Moves: [move.pyroBall.id, move.armorCannon.id, move.vCreate.id, move.burnUp.id],
+            slot4: pkmn.magcargo, slot4Moves: [move.burnUp.id, move.mindBlown.id, move.armorCannon.id, move.brutalClaw.id],
+            slot5: pkmn.castform, slot5Moves: [move.willOWisp.id, move.pyroBall.id, move.magmaStorm.id, move.blueFlare.id],
+            slot6: pkmn.groudon, slot6Moves: [move.vCreate.id, move.sacredFire.id, move.brutalClaw.id, move.mindBlown.id],
+        },
+    },
 
   /*
     {
