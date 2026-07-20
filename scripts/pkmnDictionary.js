@@ -10949,7 +10949,10 @@ pkmn.megaDarkrai = {
         satk: 165*1.5,
         sdef: 150*1.5,
         spe: 85*1.5,
-    }
+    },
+    hiddenAbility: ability.lightAbsorb,
+    signature : move.fieryWrath,
+    lore: `Ele cria um domínio de pesadelos do qual ninguém consegue escapar. Quanto mais profundo o medo de sua presa, mais poderoso Mega Darkrai se torna.`,
 }
 
 // 492 Shaymin
@@ -14209,7 +14212,8 @@ pkmn.megaDelphox = {
     spe: 134*1.2,
   },
     hiddenAbility: ability.fieryPelt,
-    signature : move.mysticalFire
+    signature : move.mysticalFire,
+    lore: `A Megaevolução ampliou ainda mais seus poderes psíquicos e suas chamas místicas. Ao girar seu cajado flamejante, Mega Delphox pode prever os movimentos do inimigo e envolvê-lo em um redemoinho de fogo.`,
 }
 
 // 656 Froakie → Frogadier → Greninja
@@ -15875,7 +15879,10 @@ pkmn.megaDiancie = {
         satk: 160*1.5,
         sdef: 110*1.5,
         spe: 110*1.5,
-    }
+    },
+    hiddenAbility: ability.thousandArms,
+    signature : move.lovelyKiss,
+    lore: `A compressão súbita do poder para criar diamantes empurra as impurezas para a superfície de seu corpo, onde elas se tornam diamantes.`,
 }
 
 // 720 Hoopa
@@ -16206,21 +16213,20 @@ pkmn.crabominable = {
     signature : move.iceHammer
 }
 
-/*
-
 pkmn.megaCrabominable = {
   type: ["fighting","ice"],
   bst: {
-    hp: 97,
-    atk: 157,
-    def: 122,
-    satk: 62,
-    sdef: 107,
-    spe: 33,
-  }
+    hp: 97*1.2,
+    atk: 157*1.2,
+    def: 122*1.2,
+    satk: 62*1.2,
+    sdef: 107*1.2,
+    spe: 33*1.2,
+  },
+    hiddenAbility: ability.refrigerate,
+    signature : move.glaciate,
+    lore: `Seus pelos cresceram por todo o corpo devido à Megaevolução. Ele usa os punhos gigantescos para esmagar qualquer obstáculo que encontre pelo caminho.`,
 }
-
-*/
 
 // 741 Oricorio
 pkmn.oricorioBaile = {
