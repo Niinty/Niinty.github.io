@@ -13196,7 +13196,8 @@ pkmn.megaEelektross = {
     spe: 80*1.2,
   },
     hiddenAbility: ability.levitate,
-    signature : move.zingZap
+    signature : move.zingZap,
+    lore: `A energia da Megaevolução estimulou seus órgãos elétricos ao limite. Ele envolve todo o seu corpo em eletricidade antes de atacar suas presas com uma mordida fulminante.`,
 }
 
 // 605 Elgyem → Beheeyem
@@ -15386,7 +15387,9 @@ pkmn.megaDragalge = {
     spe: 44*1.2,
   },
     hiddenAbility: ability.toxilate,
-    eggMove : move.snipeShot
+    eggMove : move.snipeShot,
+    signature : move.spacialRend,
+    lore: `As algas presas ao seu corpo se multiplicaram graças à Megaevolução. Ele libera um veneno altamente corrosivo que pode contaminar até mesmo vastas áreas do oceano.`,
 }
 
 // 692 Clauncher → Clawitzer
@@ -17016,6 +17019,9 @@ pkmn.megaDrampa = {
     sdef: 116*1.2,
     spe: 36*1.2,
   },
+    hiddenAbility: ability.gooey,
+    signature : move.spacialRend,
+    lore: `Quando alguém ameaça aqueles de quem gosta, a energia da Megaevolução desperta sua verdadeira fúria. Seu sopro de dragão é tão poderoso que pode varrer montanhas inteiras.`,
 }
 
 // 781 Dhelmise
