@@ -432,6 +432,42 @@ const GYMS_LEADERS = [
             slot6: pkmn.groudon, slot6Moves: [move.vCreate.id, move.sacredFire.id, move.brutalClaw.id, move.mindBlown.id],
         },
     },
+	{
+        areaId: "vsGymLeaderNorman",
+        region: "hoenn",
+        name: "Gym Leader Norman",
+        city: "Petalburg City",
+        sprite: "norman",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Normal.",
+        team: {
+            slot1: pkmn.slaking, slot1Moves: [move.howl.id, move.beakBlast.id, move.gigaImpact.id, move.meFirst.id],
+            slot2: pkmn.exploud, slot2Moves: [move.crushGrip.id, move.boomburst.id, move.headCharge.id, move.acupressure.id],
+            slot3: pkmn.zangoose, slot3Moves: [move.howl.id, move.hyperBeam.id, move.gigaImpact.id, move.bodyPress.id],
+            slot4: pkmn.swellow, slot4Moves: [move.headCharge.id, move.fly.id, move.meFirst.id, move.braveBird.id],
+            slot5: pkmn.vigoroth, slot5Moves: [move.howl.id, move.crushGrip.id, move.gigaImpact.id, move.beakBlast.id],
+            slot6: pkmn.spinda, slot6Moves: [move.boomburst.id, move.acupressure.id, move.crushGrip.id, move.headCharge.id],
+        },
+    }, 
+	{
+        areaId: "vsGymLeaderWinona",
+        region: "hoenn",
+        name: "Gym Leader Winona",
+        city: "Fortree City",
+        sprite: "winona",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Flying.",
+        team: {
+            slot1: pkmn.lugia, slot1Moves: [move.tripleDive.id, move.aeroblast.id, move.razorShell.id, move.chatter.id],
+            slot2: pkmn.swellow, slot2Moves: [move.headCharge.id, move.fly.id, move.meFirst.id, move.braveBird.id],
+            slot3: pkmn.salamence, slot3Moves: [move.hurricane.id, move.spacialRend.id, move.aeroblast.id, move.roarOfTime.id],
+            slot4: pkmn.altaria, slot4Moves: [move.dragonDarts.id, move.roarOfTime.id, move.chatter.id, move.dracoMeteor.id],
+            slot5: pkmn.tropius, slot5Moves: [move.cometPunch.id, move.aeroblast.id, move.trailblaze.id, move.hurricane.id],
+            slot6: pkmn.rayquaza, slot6Moves: [move.roarOfTime.id, move.aeroblast.id, move.spacialRend.id, move.chatter.id],
+        },
+    },
 
   /*
     {
