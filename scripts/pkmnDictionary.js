@@ -3813,7 +3813,7 @@ pkmn.elekid = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.electabuzz, level: evolutionLevel2 } } },
     hiddenAbility: ability.voltAbsorb,
-    lore: ``,
+    lore: `Sua movimentação faz seu corpo gerar eletricidade. Em noites de tempestade, este Pokémon é dito atrair raios.`,
 }
 
 pkmn.electabuzz = {
@@ -3859,7 +3859,7 @@ pkmn.magby = {
     evolve: function() { return { 1: { pkmn: pkmn.magmar, level: evolutionLevel2 } } },
     hiddenAbility: ability.flareBoost,
     eggMove : move.armorCannon,
-    lore: ``,
+    lore: `Seu corpo está sempre coberto de chamas. Se for pego por um humano, sua temperatura corporal sobe imediatamente.`,
 }
 
 pkmn.magmar = {
@@ -4314,7 +4314,7 @@ pkmn.espeon = {
     },
     hiddenAbility: ability.espilate,
     signature : move.morningSun,
-    lore: ``,
+    lore: `Um Pokémon extremamente sensível, ele usa o pelo em sua testa para captar padrões sutis no ar e prever o tempo e as ações do oponente.`,
 }
 
 pkmn.umbreon = {
@@ -4328,7 +4328,7 @@ pkmn.umbreon = {
         spe: 65,
     },
     hiddenAbility: ability.gloomilate,
-    lore: ``,
+    lore: `Quando a escuridão cai, os anéis amarelos em seu corpo brilham, permitindo que ele confunda inimigos enquanto se esconde nas sombras.`,
 }
 
 pkmn.leafeon = {
@@ -4404,7 +4404,7 @@ pkmn.porygon2 = {
     evolve: function() { return { 1: { pkmn: pkmn.porygonZ, item: item.linkStone } } },
     hiddenAbility: ability.adaptability,
     signature : move.conversion,
-    lore: ``,
+    lore: `Recebeu um programa de inteligência artificial atualizado, permitindo que se mova pelo ciberespaço com muito mais eficiência que o original.`,
 }
 
 pkmn.porygonZ = {
@@ -4801,7 +4801,8 @@ pkmn.chikorita = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.bayleef, level: evolutionLevel1 } } },
     hiddenAbility: ability.costar,
-    eggMove : move.floralHealing
+    eggMove : move.floralHealing,
+    lore: `A folha em sua cabeça libera um aroma agradável quando ela balança, o que acalma Pokémon próximos e reduz sua agressividade.`
 }
 
 pkmn.bayleef = {
@@ -4816,7 +4817,8 @@ pkmn.bayleef = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.meganium, level: evolutionLevel2 } } },
     hiddenAbility: ability.costar,
-    eggMove : move.floralHealing
+    eggMove : move.floralHealing,
+    lore: `O aroma que exala de sua folha de pescoço deixa quem o cheira com uma sensação de bem-estar, embora quem inale demais possa espirrar.`
 }
 
 pkmn.meganium = {
@@ -4830,7 +4832,8 @@ pkmn.meganium = {
         spe: 80,
     },
     hiddenAbility: ability.costar,
-    eggMove : move.floralHealing
+    eggMove : move.floralHealing,
+    lore: `Sua flor de pescoço libera um perfume calmante tão potente que pode curar sentimentos de raiva das pessoas ao redor.`
 }
 
 //Sem pedra
@@ -4863,7 +4866,8 @@ pkmn.cyndaquil = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.quilava, level: evolutionLevel1 } } },
     hiddenAbility: ability.flareBoost,
-    signature : move.inferno
+    signature : move.inferno,
+    lore: `Chamas saltam de suas costas quando ele está assustado ou animado. As chamas se tornam mais intensas conforme ele fica mais forte.`
 }
 
 pkmn.quilava = {
@@ -4878,7 +4882,8 @@ pkmn.quilava = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.typhlosion, level: evolutionLevel2 } } },
     hiddenAbility: ability.flareBoost,
-    signature : move.inferno
+    signature : move.inferno,
+    lore: `Se atacado, ele acende suas costas em chamas para intimidar o inimigo, embora seu corpo real seja bem menos assustador.`
 }
 
 pkmn.typhlosion = {
@@ -4892,7 +4897,8 @@ pkmn.typhlosion = {
         spe: 100,
     },
     hiddenAbility: ability.flareBoost,
-    signature : move.inferno
+    signature : move.inferno,
+    lore: `Ele cria ilusões de calor tremulante para esconder seus verdadeiros movimentos enquanto luta, confundindo o oponente.`
 }
 
 pkmn.hisuianTyphlosion = {
@@ -4904,7 +4910,8 @@ pkmn.hisuianTyphlosion = {
         satk: 119,
         sdef: 85,
         spe: 95,
-    }
+    },
+    lore: ``
 }
 
 // 158 Totodile → Croconaw → Feraligatr
@@ -4920,6 +4927,7 @@ pkmn.totodile = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.croconaw, level: evolutionLevel1 } } },
     hiddenAbility: ability.sheerForce,
+    lore: `Suas mandíbulas robustas parecem enormes demais para seu corpo, mas ele ainda não sabe controlar bem a força de sua mordida.`
 }
 
 pkmn.croconaw = {
@@ -4934,6 +4942,7 @@ pkmn.croconaw = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.feraligatr, level: evolutionLevel2 } } },
     hiddenAbility: ability.sheerForce,
+    lore: `Seus dentes são difíceis de arrancar quando cravados em algo, e ele frequentemente perde dentes em batalhas, sendo rapidamente substituídos.`
 }
 
 pkmn.feraligatr = {
@@ -4948,6 +4957,7 @@ pkmn.feraligatr = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaFeraligatr, item: item.feralitite } } },
     hiddenAbility: ability.sheerForce,
+    lore: `Ele intimida rivais escancarando a mandíbula, e o som de suas escamas raspando umas nas outras é um aviso claro para inimigos recuarem.`
 }
 
 pkmn.megaFeraligatr = {
@@ -4979,6 +4989,7 @@ pkmn.sentret = {
     evolve: function() { return { 1: { pkmn: pkmn.furret, level: evolutionLevel1 } } },
     signature : move.meFirst,
     hiddenAbility: ability.costar,
+    lore: `Ele fica de guarda usando sua cauda para se equilibrar em pé, observando os arredores enquanto o resto do grupo dorme.`
 }
 
 pkmn.furret = {
@@ -4993,6 +5004,7 @@ pkmn.furret = {
     },
     signature : move.meFirst,
     hiddenAbility: ability.costar,
+    lore: `Seu corpo longo e fino permite que ele se esgueire por buracos estreitos para escapar de predadores em terrenos rochosos.`
 }
 
 // 163 Hoothoot → Noctowl
@@ -5008,6 +5020,7 @@ pkmn.hoothoot = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.noctowl, level: evolutionLevel1 } } },
     hiddenAbility: ability.tintedLens,
+    lore: `Ele fica em pé sobre uma perna o dia inteiro, balançando o corpo em um ritmo constante, como se marcasse o tempo com precisão.`
 }
 
 pkmn.noctowl = {
@@ -5021,6 +5034,7 @@ pkmn.noctowl = {
         spe: 70,
     },
     hiddenAbility: ability.tintedLens,
+    lore: `Seus olhos conseguem captar até a menor quantidade de luz, e ele pode girar a cabeça 180 graus para observar o que está atrás dele.`
 }
 
 // 165 Ledyba → Ledian
@@ -5036,7 +5050,8 @@ pkmn.ledyba = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ledian, level: evolutionLevel1 } } },
     hiddenAbility: ability.ironFist,
-    signature : move.cometPunch
+    signature : move.cometPunch,
+    lore: `Ele se agrupa em grandes números quando está frio, e a comunicação entre eles ocorre através de sinais transmitidos por suas antenas.`
 }
 
 pkmn.ledian = {
@@ -5050,7 +5065,8 @@ pkmn.ledian = {
         spe: 85,
     },
     hiddenAbility: ability.ironFist,
-    signature : move.cometPunch
+    signature : move.cometPunch,
+    lore: `Diz-se que quanto mais estrelas brilham no céu noturno, mais poder ele reúne, aumentando sua energia durante noites claras.`
 }
 
 // 167 Spinarak → Ariados
@@ -5067,6 +5083,7 @@ pkmn.spinarak = {
     evolve: function() { return { 1: { pkmn: pkmn.ariados, level: evolutionLevel1 } } },
     signature : move.toxicThread,
     hiddenAbility: ability.moltShed,
+    lore: `Ele constrói teias que vibram de formas diferentes dependendo do que ficou preso, permitindo distinguir presas de intrusos.`
 }
 
 pkmn.ariados = {
@@ -5081,6 +5098,7 @@ pkmn.ariados = {
     },
     signature : move.toxicThread,
     hiddenAbility: ability.moltShed,
+    lore: `Ele dispara fios de teia de sua boca para prender presas à distância, e nunca esquece o rastro de uma vítima que escapou uma vez.`
 }
 
 // 169 Crobat
@@ -5098,7 +5116,8 @@ pkmn.chinchou = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.lanturn, level: evolutionLevel2 } } },
     hiddenAbility: ability.voltAbsorb,
-    eggMove : move.tailGlow
+    eggMove : move.tailGlow,
+    lore: `Suas duas antenas bioluminescentes funcionam de formas diferentes: uma emite fraco choque elétrico, a outra gera luz para atrair presas.`
 }
 
 pkmn.lanturn = {
@@ -5112,7 +5131,8 @@ pkmn.lanturn = {
         spe: 67,
     },
     hiddenAbility: ability.voltAbsorb,
-    eggMove : move.tailGlow
+    eggMove : move.tailGlow,
+    lore: `Sua luz forte pode iluminar o oceano profundo, mas às vezes brilha tanto que cega presas e as deixa desorientadas para serem capturadas.`
 }
 
 // 172 Pichu
@@ -5132,7 +5152,8 @@ pkmn.togepi = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.togetic, level: evolutionLevel2 } } },
     hiddenAbility: ability.sereneGrace,
-    signature : move.metronome
+    signature : move.metronome,
+    lore: `Sua casca está cheia de alegria escondida. Diz-se que ela compartilha felicidade com quem trata este Pokémon com gentileza.`
 }
 
 pkmn.togetic = {
@@ -5147,7 +5168,8 @@ pkmn.togetic = {
     },
   evolve: function() { return { 1: { pkmn: pkmn.togekiss, item: item.shinyStone /*o equivalente*/ } } },
     hiddenAbility: ability.sereneGrace,
-    signature : move.metronome
+    signature : move.metronome,
+    lore: `Ele só é visto por pessoas gentis e puras de coração, e voa até elas para trazer felicidade e boa sorte.`
 }
 
 pkmn.togekiss = {
@@ -5161,7 +5183,8 @@ pkmn.togekiss = {
         spe: 80,
     },
     hiddenAbility: ability.sereneGrace,
-    signature : move.metronome
+    signature : move.metronome,
+    lore: ``
 }
 
 // 177 Natu → Xatu
@@ -5178,6 +5201,7 @@ pkmn.natu = {
     evolve: function() { return { 1: { pkmn: pkmn.xatu, level: evolutionLevel2 } } },
     eggMove : move.aeroblast,
     hiddenAbility: ability.neuroforce,
+    lore: `Como suas asas ainda não estão desenvolvidas, ele pula ao invés de voar, e observa tudo com um olhar fixo e penetrante.`
 }
 
 pkmn.xatu = {
@@ -5192,6 +5216,7 @@ pkmn.xatu = {
     },
     eggMove : move.aeroblast,
     hiddenAbility: ability.neuroforce,
+    lore: `Diz-se que ele fica parado, imóvel, olhando fixamente para o sol, capaz de ver tanto o passado quanto o futuro.`
 }
 
 // 179 Mareep → Flaafy → Ampharos
@@ -5207,7 +5232,8 @@ pkmn.mareep = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.flaaffy, level: evolutionLevel1 } } },
     hiddenAbility: ability.flashElectro,
-    eggMove : move.zapCannon
+    eggMove : move.zapCannon,
+    lore: `Sua lã acumula eletricidade estática, e quanto mais carregada ela fica, mais os cachos se encrespam e brilham no escuro.`
 }
 
 pkmn.flaaffy = {
@@ -5222,7 +5248,8 @@ pkmn.flaaffy = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ampharos, level: evolutionLevel2 } } },
     hiddenAbility: ability.flashElectro,
-    eggMove : move.zapCannon
+    eggMove : move.zapCannon,
+    lore: `Partes de sua lã caem naturalmente, revelando uma pele lisa e semelhante à borracha, ideal para isolar a eletricidade que ele gera.`
 }
 
 pkmn.ampharos = {
@@ -5237,7 +5264,8 @@ pkmn.ampharos = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaAmpharos, item: item.ampharosite } } },
     hiddenAbility: ability.flashElectro,
-    eggMove : move.zapCannon
+    eggMove : move.zapCannon,
+    lore: `A luz que brilha na ponta de sua cauda pode ser vista de muito longe, e já foi usada como farol para guiar viajantes perdidos.`
 }
 
 pkmn.megaAmpharos = {
@@ -5270,6 +5298,7 @@ pkmn.azurill = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.marill, level: evolutionLevel1 } } },
     hiddenAbility: ability.hugePower,
+    lore: ``
 }
 
 pkmn.marill = {
@@ -5284,6 +5313,7 @@ pkmn.marill = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.azumarill, item: item.waterStone } } },
     hiddenAbility: ability.hugePower,
+    lore: `Sua cauda flutuante é cheia de óleo, e ele a usa como boia para nadar sem se afogar, mesmo não sendo um bom nadador.`
 }
 
 pkmn.azumarill = {
@@ -5297,6 +5327,7 @@ pkmn.azumarill = {
         spe: 50,
     },
     hiddenAbility: ability.hugePower,
+    lore: `Sua cauda grande e flutuante contém uma bolsa de ar que o ajuda a boiar, permitindo que ele resgate outros Pokémon que se afogam.`
 }
 
 // 185 Bonsly → Sudowoodo
@@ -5311,7 +5342,8 @@ pkmn.bonsly = {
         spe: 10,
     },
     evolve: function() { return { 1: { pkmn: pkmn.sudowoodo, level: evolutionLevel1 } } },
-    eggMove : move.mimic
+    eggMove : move.mimic,
+    lore: ``
 }
 
 pkmn.sudowoodo = {
@@ -5324,7 +5356,8 @@ pkmn.sudowoodo = {
         sdef: 65,
         spe: 30,
     },
-    eggMove : move.mimic
+    eggMove : move.mimic,
+    lore: `Ele se disfarça de árvore para evitar ser atacado, mas seu corpo verdadeiro odeia água, pois pode dissolver sua estrutura de madeira falsa.`
 }
 
 // 186 Politoed
@@ -5342,7 +5375,8 @@ pkmn.hoppip = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.skiploom, level: evolutionLevel1 } } },
     hiddenAbility: ability.windRider,
-    eggMove : move.aeroblast
+    eggMove : move.aeroblast,
+    lore: `Tão leve que o vento pode levá-lo embora facilmente. Em dias de vento forte, ele se agarra à grama para não voar para longe.`
 }
 
 pkmn.skiploom = {
@@ -5357,7 +5391,8 @@ pkmn.skiploom = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.jumpluff, level: evolutionLevel2 } } },
     hiddenAbility: ability.windRider,
-    eggMove : move.aeroblast
+    eggMove : move.aeroblast,
+    lore: `Sua flor se abre e fecha de acordo com a temperatura, e ela funciona como uma espécie de termômetro natural para os aldeões.`
 }
 
 pkmn.jumpluff = {
@@ -5371,7 +5406,8 @@ pkmn.jumpluff = {
         spe: 110,
     },
     hiddenAbility: ability.windRider,
-    eggMove : move.aeroblast
+    eggMove : move.aeroblast,
+    lore: `Ele monta correntes de vento quentes para viajar ao redor do mundo, soltando esporos algodoados que flutuam à distância.`
 }
 
 // 190 Aipom → Ambipom
@@ -5387,7 +5423,8 @@ pkmn.aipom = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ambipom, level: evolutionLevel2 } } },
     hiddenAbility: ability.skillLink,
-    eggMove : move.batonPass
+    eggMove : move.batonPass,
+    lore: `Sua cauda é mais hábil que suas próprias mãos, e ele a usa para tudo, desde pegar objetos até construir seu próprio ninho.`
 }
 
 pkmn.ambipom = {
@@ -5401,7 +5438,8 @@ pkmn.ambipom = {
         spe: 115,
     },
     hiddenAbility: ability.skillLink,
-    eggMove : move.batonPass
+    eggMove : move.batonPass,
+    lore: ``
 }
 
 // 191 Sunkern → Sunflora
@@ -5417,6 +5455,7 @@ pkmn.sunkern = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.sunflora, item: item.sunStone } } },
     hiddenAbility: ability.flowerVeil,
+    lore: `Ele tenta ficar completamente imóvel para economizar energia, já que só precisa de água para sobreviver por dias sem se mover.`
 }
 
 pkmn.sunflora = {
@@ -5430,6 +5469,7 @@ pkmn.sunflora = {
         spe: 30,
     },
     hiddenAbility: ability.flowerVeil,
+    lore: `Ela converte toda a luz solar absorvida em energia de movimento, ficando extremamente ativa em dias ensolarados.`
 }
 
 // 193 Yanma → Yanmega
@@ -5445,7 +5485,8 @@ pkmn.yanma = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.yanmega, level: evolutionLevel3 } } },
     hiddenAbility: ability.speedBoost,
-    eggMove : move.braveBird
+    eggMove : move.braveBird,
+    lore: `Seus grandes olhos podem enxergar 360 graus ao redor sem mover a cabeça, tornando quase impossível pegá-lo de surpresa.`
 }
 
 pkmn.yanmega = {
@@ -5459,7 +5500,8 @@ pkmn.yanmega = {
         spe: 95,
     },
     hiddenAbility: ability.speedBoost,
-    eggMove : move.braveBird
+    eggMove : move.braveBird,
+    lore: ``
 }
 
 // 194 Wooper → Quagsire / Paldean Wooper → Clodsire
@@ -5476,6 +5518,7 @@ pkmn.wooper = {
     evolve: function() { return { 1: { pkmn: pkmn.quagsire, level: evolutionLevel1 } } },
     signature : move.mudSport,
     hiddenAbility: ability.unaware,
+    lore: `Ele vive tanto na água quanto em terra, cobrindo o próprio corpo com uma camada viscosa de toxina para se proteger de predadores.`
 }
 
 pkmn.paldeanWooper = {
@@ -5490,6 +5533,7 @@ pkmn.paldeanWooper = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.clodsire, level: evolutionLevel2 } } },
     hiddenAbility: ability.gooey,
+    lore: ``
 }
 
 pkmn.quagsire = {
@@ -5504,6 +5548,7 @@ pkmn.quagsire = {
     },
     signature : move.mudSport,
     hiddenAbility: ability.unaware,
+    lore: `Distraído por natureza, ele bate a cabeça em pedras enquanto nada sem perceber, e não parece se importar nem um pouco com isso.`
 }
 
 pkmn.clodsire = {
@@ -5517,6 +5562,7 @@ pkmn.clodsire = {
     spe: 20,
   },
     hiddenAbility: ability.gooey,
+    lore: ``
 }
 
 // 196 Espeon
@@ -5535,6 +5581,7 @@ pkmn.murkrow = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.honchkrow, item: item.duskStone } } },
     hiddenAbility: ability.prankster,
+    lore: `Considerado um símbolo de má sorte por algumas culturas, ele adora coletar objetos brilhantes e é atraído por sinais de infortúnio.`
 }
 
 pkmn.honchkrow = {
@@ -5548,6 +5595,7 @@ pkmn.honchkrow = {
         spe: 71,
     },
     hiddenAbility: ability.prankster,
+    lore: ``
 }
 
 // 199 Slowking
@@ -5565,6 +5613,7 @@ pkmn.misdreavus = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.mismagius, item: item.duskStone } } },
     hiddenAbility: ability.levitate,
+    lore: `Ele adora assustar as pessoas soltando um grito arrepiante no meio da noite, alimentando-se do medo que provoca nos outros.`
 }
 
 pkmn.mismagius = {
@@ -5578,6 +5627,7 @@ pkmn.mismagius = {
         spe: 105,
     },
     hiddenAbility: ability.levitate,
+    lore: ``
 }
 
 // 201 Unown
@@ -5592,6 +5642,7 @@ pkmn.unownA = {
         spe: 48,
     },
     hiddenAbility: ability.adaptability,
+    lore: ``
 }
 
 pkmn.unownB = {
@@ -5967,6 +6018,7 @@ pkmn.wobbuffet = {
         spe: 33,
     },
     hiddenAbility: ability.unaware,
+    lore: ``,
 }
 
 // 203 Girafarig → Farigiraf
@@ -5982,8 +6034,8 @@ pkmn.girafarig = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.farigiraf, item: item.oddRock } } },
     hiddenAbility: ability.neuroforce,
-    eggMove : move.psyshieldBash
-
+    eggMove : move.psyshieldBash,
+    lore: `Sua cauda tem uma cabeça própria com cérebro rudimentar, capaz de morder por instinto mesmo enquanto a cabeça principal dorme.`,
 }
 
 pkmn.farigiraf = {
@@ -6011,6 +6063,7 @@ pkmn.pineco = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.forretress, level: evolutionLevel2 } } },
     hiddenAbility: ability.stamina,
+    lore: `Ele se pendura em galhos de árvores parecendo uma pinha comum, permanecendo completamente imóvel até que algo o perturbe.`,
 }
 
 pkmn.forretress = {
@@ -6024,6 +6077,7 @@ pkmn.forretress = {
         spe: 40,
     },
     hiddenAbility: ability.stamina,
+    lore: `Sua concha extremamente dura pode suportar até uma explosão de bomba, protegendo o corpo mole em seu interior.`,
 }
 
 // 206 Dunsparce → Dudunsparce
@@ -6038,7 +6092,8 @@ pkmn.dunsparce = {
         spe: 45,
     },
     hiddenAbility: ability.sereneGrace,
-    signature : move.hyperDrill
+    signature : move.hyperDrill,
+    lore: `Ele foge cavando no solo assim que percebe perigo, desaparecendo rapidamente com seu corpo em forma de tubo serpenteante.`,
 }
 
 pkmn.dudunsparce = {
@@ -6051,7 +6106,8 @@ pkmn.dudunsparce = {
     sdef: 75,
     spe: 55,
   },
-    signature : move.hyperDrill
+    signature : move.hyperDrill,
+    lore: ``,
 }
 
 pkmn.dududunsparce = {
@@ -6064,7 +6120,8 @@ pkmn.dududunsparce = {
     sdef: 75,
     spe: 55,
   },
-    signature : move.hyperDrill
+    signature : move.hyperDrill,
+    lore: ``,
 }
 
 // 207 Gligar → Gliscor
@@ -6080,6 +6137,7 @@ pkmn.gligar = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.gliscor, level: evolutionLevel3 } } },
     hiddenAbility: ability.toxicBoost,
+    lore: `Ele plana pelo ar usando suas asas em forma de morcego, agarrando-se à cabeça de vítimas desavisadas para picá-las com sua cauda.`,
 }
 
 pkmn.gliscor = {
@@ -6093,6 +6151,7 @@ pkmn.gliscor = {
         spe: 95,
     },
     hiddenAbility: ability.toxicBoost,
+    lore: ``,
 }
 
 // 208 Steelix
@@ -6110,6 +6169,7 @@ pkmn.snubbull = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.granbull, level: evolutionLevel1 } } },
     hiddenAbility: ability.pixiePelt,
+    lore: `Apesar de sua expressão assustadora, é um Pokémon extremamente afetuoso que adora ficar perto de seu treinador o tempo todo.`,
 }
 
 pkmn.granbull = {
@@ -6123,6 +6183,7 @@ pkmn.granbull = {
         spe: 45,
     },
     hiddenAbility: ability.pixiePelt,
+    lore: `Suas presas grandes cresceram tanto que atrapalham sua mordida, então ele prefere usar a cabeça para atacar de frente.`,
 }
 
 // 211 Qwilfish / Hisuian Qwilfish → Overqwil
@@ -6137,7 +6198,8 @@ pkmn.qwilfish = {
         spe: 85,
     },
     hiddenAbility: ability.intimidate,
-    signature : move.barbBarrage
+    signature : move.barbBarrage,
+    lore: `Ele engole água para inflar o próprio corpo, disparando os espinhos em suas costas como projéteis venenosos contra predadores.`,
 }
 
 pkmn.hisuianQwilfish = {
@@ -6153,6 +6215,7 @@ pkmn.hisuianQwilfish = {
     evolve: function() { return { 1: { pkmn: pkmn.overqwil, level: evolutionLevel2 } } },
     signature : move.barbBarrage,
     hiddenAbility: ability.merciless,
+    lore: ``,
 }
 
 pkmn.overqwil = {
@@ -6167,6 +6230,7 @@ pkmn.overqwil = {
     },
     signature : move.barbBarrage,
     hiddenAbility: ability.merciless,
+    lore: ``,
 }
 
 // 212 Scizor
@@ -6184,6 +6248,7 @@ pkmn.shuckle = {
     },
     hiddenAbility: ability.contrary,
     eggMove : move.batonPass,
+    lore: `Ele guarda frutas dentro de sua concha, onde elas se decompõem lentamente em um suco espesso e ácido usado como alimento.`,
 }
 
 // 214 Heracross
@@ -6199,7 +6264,8 @@ pkmn.heracross = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaHeracross, item: item.heracronite } } },
     hiddenAbility: ability.skillLink,
-    signature : move.megahorn
+    signature : move.megahorn,
+    lore: `Seu chifre poderoso pode arremessar objetos muito mais pesados que seu próprio corpo, usado tanto para lutar quanto para se alimentar de seiva de árvores.`,
 }
 
 pkmn.megaHeracross = {
@@ -6230,7 +6296,8 @@ pkmn.sneasel = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.weavile, item: item.duskStone} } },
     hiddenAbility: ability.sharpness,
-    signature : move.tripleAxel
+    signature : move.tripleAxel,
+    lore: `Suas garras afiadas são usadas para roubar ovos de ninhos de Pokémon Pássaro antes que os pais percebam.`,
 }
 
 pkmn.hisuianSneasel = {
@@ -6243,8 +6310,9 @@ pkmn.hisuianSneasel = {
         sdef: 75,
         spe: 115,
     },
-        evolve: function() { return { 1: { pkmn: pkmn.hisuianSneasler, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.hisuianSneasler, level: evolutionLevel2 } } },
     hiddenAbility: ability.merciless,
+    lore: ``,
 }
 
 pkmn.weavile = {
@@ -6258,7 +6326,8 @@ pkmn.weavile = {
         spe: 125,
     },
     hiddenAbility: ability.sharpness,
-    signature : move.tripleAxel
+    signature : move.tripleAxel,
+    lore: ``,
 }
 
 pkmn.hisuianSneasler = {
@@ -6273,6 +6342,7 @@ pkmn.hisuianSneasler = {
         spe: 125,
     },
     hiddenAbility: ability.merciless,
+    lore: ``,
 }
 
 // 216 Teddiursa → Ursaring → Ursaluna
@@ -6288,7 +6358,8 @@ pkmn.teddiursa = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ursaring, level: evolutionLevel2 } } },
     hiddenAbility: ability.guts,
-    signature : move.headlongRush
+    signature : move.headlongRush,
+    lore: `Ele lambe o mel que gruda em suas patas dianteiras, e a mistura com sua própria saliva cria um cheiro doce único de cada indivíduo.`,
 }
 
 pkmn.ursaring = {
@@ -6302,7 +6373,8 @@ pkmn.ursaring = {
         spe: 55,
     },
     hiddenAbility: ability.guts,
-    signature : move.headlongRush
+    signature : move.headlongRush,
+    lore: `Suas garras afiadas conseguem abrir troncos de árvores em busca de insetos, e seu olfato apurado o leva direto a fontes de mel.`,
 }
 
 pkmn.ursaluna = {
@@ -6315,6 +6387,7 @@ pkmn.ursaluna = {
         sdef: 80,
         spe: 50,
     },
+    lore: ``,
 }
 
 pkmn.ursalunaBloodmoon = {
@@ -6327,6 +6400,7 @@ pkmn.ursalunaBloodmoon = {
         sdef: 65,
         spe: 52,
     },
+    lore: ``,
 }
 
 // 218 Slugma → Magcargo
@@ -6342,6 +6416,7 @@ pkmn.slugma = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.magcargo, level: evolutionLevel2 } } },
     hiddenAbility: ability.flameBody,
+    lore: `Seu corpo é feito de magma fundido. Se ele parar de se mover, sua superfície esfria e endurece, e ele não consegue mais se locomover.`,
 }
 
 pkmn.magcargo = {
@@ -6355,6 +6430,7 @@ pkmn.magcargo = {
         spe: 30,
     },
     hiddenAbility: ability.flameBody,
+    lore: `Sua concha é feita de magma resfriado, tão frágil que uma leve pancada pode rachá-la, revelando o calor intenso por dentro.`,
 }
 
 // 220 Swinub → Piloswine → Mamoswine
@@ -6370,7 +6446,8 @@ pkmn.swinub = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.piloswine, level: evolutionLevel2 } } },
     hiddenAbility: ability.thickFat,
-    eggMove : move.highHorsepower
+    eggMove : move.highHorsepower,
+    lore: `Ele usa o focinho para farejar comida escondida sob a neve, embora seu olfato às vezes o leve direto a lixo em vez de comida.`,
 }
 
 pkmn.piloswine = {
@@ -6385,7 +6462,8 @@ pkmn.piloswine = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.mamoswine, item: item.iceStone } } },
     hiddenAbility: ability.thickFat,
-    eggMove : move.highHorsepower
+    eggMove : move.highHorsepower,
+    lore: `Sua pelagem grossa o protege de temperaturas extremas, e ele pode farejar comida enterrada sob metros de neve com grande precisão.`,
 }
 
 pkmn.mamoswine = {
@@ -6399,7 +6477,8 @@ pkmn.mamoswine = {
         spe: 80,
     },
     hiddenAbility: ability.thickFat,
-    eggMove : move.highHorsepower
+    eggMove : move.highHorsepower,
+    lore: ``,
 }
 
 // 222 Corsola / Galarian Corsola → Cursola
@@ -6414,6 +6493,7 @@ pkmn.corsola = {
         spe: 35,
     },
     hiddenAbility: ability.costar,
+    lore: `Seus galhos coralinos crescem continuamente e se regeneram rapidamente se forem quebrados, florescendo em águas quentes e limpas.`,
 }
 
 pkmn.galarianCorsola = {
@@ -6427,6 +6507,7 @@ pkmn.galarianCorsola = {
         spe: 30,
     },
     evolve: function() { return { 1: { pkmn: pkmn.cursola, level: evolutionLevel2 } } },
+    lore: ``,
 }
 
 pkmn.cursola = {
@@ -6439,6 +6520,7 @@ pkmn.cursola = {
     sdef: 130,
     spe: 30,
   },
+    lore: ``,
 }
 
 // 223 Remoraid → Octillery
@@ -6454,6 +6536,7 @@ pkmn.remoraid = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.octillery, level: evolutionLevel2 } } },
     hiddenAbility: ability.moody,
+    lore: `Ele dispara jatos de tinta com precisão impressionante, mirando presas a vários metros de distância usando sua boca em forma de bico.`,
 }
 
 pkmn.octillery = {
@@ -6467,6 +6550,7 @@ pkmn.octillery = {
         spe: 45,
     },
     hiddenAbility: ability.moody,
+    lore: `Ele se esconde dentro de conchas vazias ou buracos em rochas, disparando tinta contra qualquer coisa que se aproxime demais.`,
 }
 
 // 225 Delibird
@@ -6479,7 +6563,8 @@ pkmn.delibird = {
         satk: 65,
         sdef: 45,
         spe: 75,
-    }
+    },
+    lore: `Ele carrega comida em sua cauda peluda, generosamente entregando parte de seus suprimentos para viajantes perdidos nas montanhas nevadas.`,
 }
 
 // 226 Mantyke → Mantine
@@ -6495,6 +6580,7 @@ pkmn.mantyke = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.mantine, item: item.waterStone } } },
     hiddenAbility: ability.waterAbsorb,
+    lore: ``,
 }
 
 pkmn.mantine = {
@@ -6508,6 +6594,7 @@ pkmn.mantine = {
         spe: 70,
     },
     hiddenAbility: ability.waterAbsorb,
+    lore: `Ele nada graciosamente pelos oceanos, e pequenos Remoraid costumam nadar ao seu redor, alimentando-se dos restos de plâncton que escapam.`,
 }
 
 // 227 Skarmory
@@ -6520,7 +6607,8 @@ pkmn.skarmory = {
         satk: 40,
         sdef: 70,
         spe: 70,
-    }
+    },
+    lore: `Seu corpo é coberto por um exoesqueleto de aço afiado como lâmina, capaz de cortar árvores inteiras com um único bater de asas.`,
 }
 
 //Sem pedra
@@ -6553,6 +6641,7 @@ pkmn.houndour = {
     evolve: function() { return { 1: { pkmn: pkmn.houndoom, level: evolutionLevel2 } } },
     hiddenAbility: ability.solarPower,
     eggMove: move.howl,
+    lore: `Eles caçam em matilhas coordenadas, comunicando-se através de latidos que soam quase como uma linguagem complexa entre si.`,
 }
 
 pkmn.houndoom = {
@@ -6568,6 +6657,7 @@ pkmn.houndoom = {
     evolve: function() { return { 1: { pkmn: pkmn.megaHoundoom, item: item.houndoominite } } },
     hiddenAbility: ability.solarPower,
     eggMove: move.howl,
+    lore: `O formato de sua cauda lembra a ponta de uma lança, e diz-se que quem vê a Lua através de seus chifres retorcidos terá azar.`,
 }
 
 pkmn.megaHoundoom = {
@@ -6599,6 +6689,7 @@ pkmn.phanpy = {
         spe: 40,
     },
     evolve: function() { return { 1: { pkmn: pkmn.donphan, level: evolutionLevel2 } } },
+    lore: `Ele usa a tromba para carregar água e borrifar sobre si mesmo, e adora cavar buracos ao longo das margens de rios.`,
 }
 
 pkmn.donphan = {
@@ -6610,7 +6701,8 @@ pkmn.donphan = {
         satk: 60,
         sdef: 60,
         spe: 50,
-    }
+    },
+    lore: `Ele se enrola em uma bola e rola em alta velocidade para atacar, capaz de derrubar árvores grandes com o impacto.`,
 }
 
 // 233 Porygon2
@@ -6626,7 +6718,8 @@ pkmn.stantler = {
         sdef: 65,
         spe: 85,
     },
-    signature : move.psyshieldBash
+    signature : move.psyshieldBash,
+    lore: `Seus chifres imponentes têm o poder de distorcer o espaço ao redor, criando ilusões que confundem tanto predadores quanto presas.`,
 }
 
 pkmn.wyrdeer = {
@@ -6641,6 +6734,7 @@ pkmn.wyrdeer = {
     },
     signature : move.psyshieldBash,
     hiddenAbility: ability.pixiePelt,
+    lore: ``,
 }
 
 // 235 Smeargle
@@ -6655,7 +6749,8 @@ pkmn.smeargle = {
         spe: 75,
     },
     hiddenAbility: ability.moody,
-    signature : move.sketch
+    signature : move.sketch,
+    lore: `O fluido que secreta da ponta da cauda muda de composição a cada vez, permitindo que ele pinte marcas territoriais com cores únicas.`,
 }
 
 // 236 Tyrogue
@@ -6676,6 +6771,7 @@ pkmn.miltank = {
         spe: 100,
     },
     hiddenAbility: ability.stamina,
+    lore: `Seu leite nutritivo é uma bebida popular entre pessoas de todas as idades, e ela precisa ser ordenhada diariamente para se manter saudável.`,
 }
 
 // 242 Blissey
@@ -6744,6 +6840,7 @@ pkmn.larvitar = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.pupitar, level: evolutionLevel2 } } },
     hiddenAbility: ability.sandStream,
+    lore: `Ele nasce das profundezas da terra, e se alimenta de terra o suficiente para formar montanhas ao longo de décadas de crescimento.`,
 }
 
 pkmn.pupitar = {
@@ -6758,6 +6855,7 @@ pkmn.pupitar = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.tyranitar, level: evolutionLevel3 } } },
     hiddenAbility: ability.sandStream,
+    lore: `Dentro de sua carapaça extremamente dura, um processo intenso de mudança física ocorre, liberando energia suficiente para explodir uma montanha.`,
 }
 
 pkmn.tyranitar = {
@@ -6772,6 +6870,7 @@ pkmn.tyranitar = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaTyranitar, item: item.tyranitarite } } },
     hiddenAbility: ability.sandStream,
+    lore: `Tão poderoso que é capaz de causar terremotos apenas se movendo, ele destrói montanhas e altera paisagens inteiras sem esforço.`,
 }
 
 pkmn.megaTyranitar = {
@@ -6836,7 +6935,7 @@ pkmn.celebi = {
         spe: 100*1.5,
     },
     hiddenAbility: ability.grassySurge,
-    lore: `Traveling through time and appearing where the past and future meet, it preserves the natural order, ensuring that the cycles of life, growth, and seasons continue uninterrupted.`
+    lore: `Nas lendas, diz-se que ele apenas aparece em tempos de paz e sua presença é um sinal de que o futuro da humanidade está assegurado.`
 }
 
 // 252 Treecko → Grovyle → Sceptile
