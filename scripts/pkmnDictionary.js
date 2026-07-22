@@ -6951,7 +6951,8 @@ pkmn.treecko = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.grovyle, level: evolutionLevel1 } } },
     hiddenAbility: ability.tintedLens,
-    eggMove : move.dragonDarts
+    eggMove : move.dragonDarts,
+    lore: `Ele fica frio ao toque e prefere lugares sombreados e úmidos na floresta. Almofadas especiais em seus pés permitem que ele escale superfícies verticais sem esforço.`,
 }
 
 pkmn.grovyle = {
@@ -6966,7 +6967,8 @@ pkmn.grovyle = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.sceptile, level: evolutionLevel2 } } },
     hiddenAbility: ability.tintedLens,
-    eggMove : move.dragonDarts
+    eggMove : move.dragonDarts,
+    lore: `Ele é ágil, movendo-se pelas árvores e vinhas da floresta com uma agilidade que nenhum caçador consegue acompanhar.`,
 }
 
 pkmn.sceptile = {
@@ -6981,7 +6983,8 @@ pkmn.sceptile = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaSceptile, item: item.sceptilite } } },
     hiddenAbility: ability.tintedLens,
-    eggMove : move.dragonDarts
+    eggMove : move.dragonDarts,
+    lore: `As folhas afiadas em seus braços podem cortar árvores grossas. Nas profundezas da floresta, ele é o Pokémon mais rápido de todos.`,
 }
 
 pkmn.megaSceptile = {
@@ -7014,6 +7017,7 @@ pkmn.torchic = {
     evolve: function() { return { 1: { pkmn: pkmn.combusken, level: evolutionLevel1 } } },
     signature : move.blazeKick,
     hiddenAbility: ability.speedBoost,
+    lore: `Uma bolsa de fogo em seu interior mantém seu corpo aquecido. Quando abraçado, ele parece levemente mais quente que o normal.`,
 }
 
 pkmn.combusken = {
@@ -7029,6 +7033,7 @@ pkmn.combusken = {
     evolve: function() { return { 1: { pkmn: pkmn.blaziken, level: evolutionLevel2 } } },
     signature : move.blazeKick,
     hiddenAbility: ability.speedBoost,
+    lore: `Ele fica mais forte após cada batalha, e o fogo que ruge em sua garganta cresce em intensidade conforme sua experiência aumenta.`,
 }
 
 pkmn.blaziken = {
@@ -7044,6 +7049,7 @@ pkmn.blaziken = {
     evolve: function() { return { 1: { pkmn: pkmn.megaBlaziken, item: item.blazikenite } } },
     signature : move.blazeKick,
     hiddenAbility: ability.speedBoost,
+    lore: `Seus poderosos chutes flamejantes podem derrubar uma torre de concreto de uma só vez. Ele guerreia sem hesitação.`,
 }
 
 pkmn.megaBlaziken = {
@@ -7074,7 +7080,8 @@ pkmn.mudkip = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.marshtomp, level: evolutionLevel1 } } },
     hiddenAbility: ability.swiftSwim,
-    eggMove : move.crabhammer
+    eggMove : move.crabhammer,
+    lore: `As nadadeiras em sua cabeça funcionam como um radar, detectando movimentos de água e ar ao seu redor, mesmo em completa escuridão.`,
 }
 
 pkmn.marshtomp = {
@@ -7089,7 +7096,8 @@ pkmn.marshtomp = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.swampert, level: evolutionLevel2 } } },
     hiddenAbility: ability.swiftSwim,
-    eggMove : move.crabhammer
+    eggMove : move.crabhammer,
+    lore: `Seu corpo é envolto por uma camada de lama que o protege, e ele se move muito mais rápido em pântanos do que em terreno seco.`,
 }
 
 pkmn.swampert = {
@@ -7104,7 +7112,8 @@ pkmn.swampert = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaSwampert, item: item.swampertite } } },
     hiddenAbility: ability.swiftSwim,
-    eggMove : move.crabhammer
+    eggMove : move.crabhammer,
+    lore: `Seus braços musculosos permitem que ele avance contra correntes fortes, e é conhecido por prever tempestades antes que elas cheguem.`,
 }
 
 pkmn.megaSwampert = {
@@ -7136,7 +7145,8 @@ pkmn.poochyena = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.mightyena, level: evolutionLevel1 } } },
     hiddenAbility: ability.moxie,
-    signature : move.howl
+    signature : move.howl,
+    lore: `Ele persegue presas incansavelmente até que estejam completamente exaustas, um instinto de caça herdado de seus ancestrais selvagens.`,
 }
 
 pkmn.mightyena = {
@@ -7150,7 +7160,8 @@ pkmn.mightyena = {
         spe: 70,
     },
     hiddenAbility: ability.moxie,
-    signature : move.howl
+    signature : move.howl,
+    lore: `Eles se movem e caçam em matilhas coordenadas, obedecendo apenas a treinadores que provarem ser mais fortes e determinados que eles.`,
 }
 
 // 263 Zigzagoon → Linoone / Galarian Zigzagoon → Galarian Linoone → Obstagoon
@@ -7165,6 +7176,7 @@ pkmn.zigzagoon = {
         spe: 60,
     },
     evolve: function() { return { 1: { pkmn: pkmn.linoone, level: evolutionLevel1 } } },
+    lore: `Ele se move em um padrão de zigue-zague inconstante, tornando quase impossível prever para onde irá em seguida.`,
 }
 
 pkmn.galarianZigzagoon = {
@@ -7190,7 +7202,8 @@ pkmn.linoone = {
         satk: 50,
         sdef: 61,
         spe: 100,
-    }
+    },
+    lore: `Ele consegue correr em linha reta a mais de 100 quilômetros por hora, mas tem extrema dificuldade em fazer curvas.`,
 }
 
 pkmn.galarianLinoone = {
@@ -7238,6 +7251,7 @@ pkmn.wurmple = {
         } 
     },
     hiddenAbility: ability.rivalry,
+    lore: `Suas antenas conseguem detectar minerais no solo e, dependendo do ambiente onde vive, evolui de formas diferentes.`,
 }
 
 pkmn.silcoon = {
@@ -7252,6 +7266,7 @@ pkmn.silcoon = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.beautifly, level: evolutionLevel1 } } },
     hiddenAbility: ability.rivalry,
+    lore: `Ele se pendura silenciosamente de um galho, esperando pacientemente enquanto sua estrutura interna se prepara para a evolução final.`,
 }
 
 pkmn.beautifly = {
@@ -7265,6 +7280,7 @@ pkmn.beautifly = {
         spe: 65,
     },
     hiddenAbility: ability.galeWings,
+    lore: `Sua longa probóscide suga o néctar de flores, e suas asas coloridas com padrões únicos são admiradas em todo o mundo.`,
 }
 
 pkmn.cascoon = {
@@ -7279,6 +7295,7 @@ pkmn.cascoon = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.dustox, level: evolutionLevel1 } } },
     hiddenAbility: ability.moltShed,
+    lore: `Ele permanece completamente imóvel dentro de seu casulo áspero, aguardando o momento certo para emergir em sua forma adulta.`,
 }
 
 pkmn.dustox = {
@@ -7292,6 +7309,7 @@ pkmn.dustox = {
         spe: 65,
     },
     hiddenAbility: ability.moltShed,
+    lore: `As escamas venenosas em suas asas espalham um pó tóxico sempre que ele bate as asas, mantendo predadores à distância.`,
 }
 
 // 270 Lotad → Lombre → Ludicolo
@@ -7307,7 +7325,8 @@ pkmn.lotad = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.lombre, level: evolutionLevel1 } } },
     hiddenAbility: ability.drizzle,
-    eggMove : move.aquaStep
+    eggMove : move.aquaStep,
+    lore: `A folha em sua cabeça começa a murchar se ficar longe da água por muito tempo, então ele busca lugares úmidos para viver.`,
 }
 
 pkmn.lombre = {
@@ -7322,7 +7341,8 @@ pkmn.lombre = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.ludicolo, item: item.waterStone } } },
     hiddenAbility: ability.drizzle,
-    eggMove : move.aquaStep
+    eggMove : move.aquaStep,
+    lore: `Ele se alimenta de algas no fundo de lagos, e prefere viver em água fria a temperatura ambiente.`,
 }
 
 pkmn.ludicolo = {
@@ -7336,10 +7356,9 @@ pkmn.ludicolo = {
         spe: 70,
     },
     hiddenAbility: ability.drizzle,
-    eggMove : move.aquaStep
+    eggMove : move.aquaStep,
+    lore: `Ao ouvir música festiva ou tambores, ele começa a dançar de forma incontrolável, algo que parece acontecer de forma involuntária.`,
 }
-
-
 
 // 273 Seedot → Nuzleaf → Shiftry
 pkmn.seedot = {
@@ -7354,6 +7373,7 @@ pkmn.seedot = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.nuzleaf, level: evolutionLevel1 } } },
     hiddenAbility: ability.windRider,
+    lore: `Ele se pendura de galhos parecendo uma noz comum, e cai no chão quando maduro, rolando para encontrar solo fértil.`,
 }
 
 pkmn.nuzleaf = {
@@ -7368,6 +7388,7 @@ pkmn.nuzleaf = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.shiftry, item: item.leafStone } } },
     hiddenAbility: ability.windRider,
+    lore: `Ele vive nas profundezas da floresta e assusta caminhantes tocando uma melodia estranha e assustadora com a folha em seu nariz.`,
 }
 
 pkmn.shiftry = {
@@ -7381,6 +7402,7 @@ pkmn.shiftry = {
         spe: 80,
     },
     hiddenAbility: ability.windRider,
+    lore: `Diz-se que ele pode invocar rajadas de vento poderosas apenas abrindo seus leques feitos de folhas, capazes de derrubar uma casa.`,
 }
 
 // 276 Taillow → Swellow
@@ -7396,6 +7418,7 @@ pkmn.taillow = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.swellow, level: evolutionLevel1 } } },
     hiddenAbility: ability.guts,
+    lore: `Apesar de seu pequeno tamanho, ele é corajoso o suficiente para enfrentar inimigos muito maiores sem hesitar.`,
 }
 
 pkmn.swellow = {
@@ -7409,6 +7432,7 @@ pkmn.swellow = {
         spe: 125,
     },
     hiddenAbility: ability.guts,
+    lore: `Ele voa graciosamente pelo céu em busca de presas, e retorna sempre ao mesmo ninho, não importa a distância percorrida.`,
 }
 
 // 278 Wingull → Pelipper
@@ -7424,6 +7448,7 @@ pkmn.wingull = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.pelipper, level: evolutionLevel2 } } },
     hiddenAbility: ability.drizzle,
+    lore: `Ele plana sobre correntes de ar marítimo usando suas asas rígidas, e pousa na superfície da água para pescar.`,
 }
 
 pkmn.pelipper = {
@@ -7437,6 +7462,7 @@ pkmn.pelipper = {
         spe: 65,
     },
     hiddenAbility: ability.drizzle,
+    lore: `Ele carrega ovos e até pequenos Pokémon dentro de seu grande bico, protegendo-os enquanto voa sobre o oceano.`,
 }
 
 // 280 Ralts → Kirlia → Gardevoir / Gallade
@@ -7452,6 +7478,7 @@ pkmn.ralts = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.kirlia, level: evolutionLevel1 } } },
     hiddenAbility: ability.pixilate,
+    lore: `Ele se sente atraído por sentimentos positivos, e se aproxima de pessoas que estão felizes ou apaixonadas.`,
 }
 
 pkmn.kirlia = {
@@ -7471,6 +7498,7 @@ pkmn.kirlia = {
         } 
     },
     hiddenAbility: ability.pixilate,
+    lore: `Ela consegue perceber as emoções das pessoas ao seu redor, e quando seu treinador está feliz, ela dança de alegria.`,
 }
 
 pkmn.gardevoir = {
@@ -7485,6 +7513,7 @@ pkmn.gardevoir = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.megaGardevoir, item: item.gardevoirite } } },
     hiddenAbility: ability.pixilate,
+    lore: `Ela usa seus poderes psíquicos para proteger seu treinador, criando um campo de distorção capaz de desviar até ataques poderosos.`,
 }
 
 pkmn.megaGardevoir = {
@@ -7544,6 +7573,7 @@ pkmn.surskit = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.masquerain, level: evolutionLevel1 } } },
     hiddenAbility: ability.simple,
+    lore: `Suas pernas secretam um óleo que permite que ele deslize sobre a água sem afundar, movendo-se suavemente na superfície de lagoas.`,
 }
 
 pkmn.masquerain = {
@@ -7557,6 +7587,7 @@ pkmn.masquerain = {
         spe: 80,
     },
     hiddenAbility: ability.galeWings,
+    lore: `As grandes antenas em sua cabeça se assemelham a olhos, usadas para intimidar predadores e afastar ameaças.`,
 }
 
 // 285 Shroomish → Breloom
@@ -7572,6 +7603,7 @@ pkmn.shroomish = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.breloom, level: evolutionLevel1 } } },
     hiddenAbility: ability.colorSpore,
+    lore: `Ele libera esporos venenosos de seu corpo quando se sente ameaçado, causando espirros violentos em quem os inala.`,
 }
 
 pkmn.breloom = {
