@@ -272,12 +272,12 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Fantasma.",
         team: {
-            slot1: pkmn.Shedinja, slot1Moves: [move.shadowForce.id, move.moongeistBeam.id, move.spectralThief.id, move.phantomForce.id],
-            slot2: pkmn.Misdreavus, slot2Moves: [move.rageFist.id, move.shadowBall.id, move.trickOrTreat.id, move.mysticalPower.id],
-            slot3: pkmn.Xatu, slot3Moves: [move.shadowForce.id, move.hurricane.id, move.chatter.id, move.bounce.id], 
-            slot4: pkmn.Girafarig, slot4Moves: [move.moongeistBeam.id, move.spectralThief.id, move.phantomForce.id, move.mysticalPower.id],
-            slot5: pkmn.Murkrow, slot5Moves: [move.shadowForce.id, move.rageFist.id, move.trickOrTreat.id, move.shadowBall.id],
-            slot6: pkmn.Slowking, slot6Moves: [move.surf.id, move.moongeistBeam.id, move.scald.id, move.mysticalPower.id],
+            slot1: pkmn.shedinja, slot1Moves: [move.shadowForce.id, move.moongeistBeam.id, move.spectralThief.id, move.phantomForce.id],
+            slot2: pkmn.misdreavus, slot2Moves: [move.rageFist.id, move.shadowBall.id, move.trickOrTreat.id, move.mysticalPower.id],
+            slot3: pkmn.xatu, slot3Moves: [move.shadowForce.id, move.hurricane.id, move.chatter.id, move.bounce.id], 
+            slot4: pkmn.girafarig, slot4Moves: [move.moongeistBeam.id, move.spectralThief.id, move.phantomForce.id, move.mysticalPower.id],
+            slot5: pkmn.murkrow, slot5Moves: [move.shadowForce.id, move.rageFist.id, move.trickOrTreat.id, move.shadowBall.id],
+            slot6: pkmn.slowking, slot6Moves: [move.surf.id, move.moongeistBeam.id, move.scald.id, move.mysticalPower.id],
         },
     },    
     {
