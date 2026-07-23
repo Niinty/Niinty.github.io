@@ -91,7 +91,7 @@ const GYMS_LEADERS = [
         city: "Celadon City",
         sprite: "erika",
         background: "gym",
-        description: "Especialista em Pokémon do tipo Grama.",
+        description: "Especialista em Pokémon do tipo Grass.",
         team: {
             slot1 : pkmn.vileplume, slot1Moves : [move.trailblaze.id, move.sludge.id, move.razorLeaf.id, move.chloroblast.id],
             slot2 : pkmn.venusaur, slot2Moves : [move.seedFlare.id, move.toxic.id, move.cottonGuard.id, move.trailblaze.id],
@@ -522,6 +522,44 @@ const GYMS_LEADERS = [
             slot6: pkmn.whiscash, slot6Moves: [move.muddyWater.id, move.razorShell.id, move.boneRush.id, move.sparklingAria.id],
         },
     },
+
+	//Sinnoh
+	{
+        areaId: "vsGymLeaderRoark",
+        region: "sinnoh",
+        name: "Gym Leader Roark",
+        city: "Oreburgh City",
+        sprite: "roark",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Rock.",
+        team: {
+            slot1: pkmn.tyranitar, slot1Moves: [move.clangingScales.id, move.ruination.id, move.fieryWrath.id, move.dragonDarts.id],
+            slot2: pkmn.rhyperior, slot2Moves: [move.stoneEdge.id, move.rockTomb.id, move.thunder.id, move.earthquake.id],
+            slot3: pkmn.golem, slot3Moves: [move.meteorBeam.id, move.powerGem.id, move.rockSlide.id, move.smackDown.id],
+            slot4: pkmn.aerodactyl, slot4Moves: [move.rockPolish.id, move.smackDown.id, move.fly.id, move.ancientPower.id],
+            slot5: pkmn.rampardos, slot5Moves: [move.rockWrecker.id, move.stoneEdge.id, move.powerGem.id, move.rockSlide.id],
+            slot6: pkmn.armaldo, slot6Moves: [move.stoneEdge.id, move.megahorn.id, move.rockWrecker.id, move.stringShot.id],
+        },
+    },
+	{
+        areaId: "vsGymLeaderGardenia",
+        region: "sinnoh",
+        name: "Gym Leader Gardenia",
+        city: "Eterna City",
+        sprite: "gardenia",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Grass.",
+        team: {
+            slot1: pkmn.sceptile, slot1Moves: [move.barrage.id, move.tropKick.id, move.chloroblast.id, move.magicalLeaf.id],
+            slot2: pkmn.venusaur, slot2Moves: [move.seedFlare.id, move.toxic.id, move.cottonGuard.id, move.trailblaze.id],
+            slot3: pkmn.torterra, slot3Moves: [move.boneRush.id, move.solarBeam.id, move.headlongRush.id, move.barrage.id],
+            slot4: pkmn.celebi, slot4Moves: [move.seedFlare.id, move.tropKick.id, move.kinesis.id, move.chloroblast.id],
+            slot5: pkmn.roserade, slot5Moves: [move.grassyTerrain.id, move.solarBeam.id, move.leafStorm.id, move.magicalLeaf.id],
+            slot6: pkmn.exeggutor, slot6Moves: [move.barrage.id, move.tropKick.id, move.magicalLeaf.id, move.psybeam.id],
+        },
+    }, 
 
   /*
     {
