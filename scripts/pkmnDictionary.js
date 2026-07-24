@@ -15366,6 +15366,8 @@ pkmn.megaFloette = {
     spe: 102*1.2,
   },
     lore: `Uma variação rara ligada a uma flor eterna; dizem que ela nunca envelhece enquanto permanecer ao lado dessa flor especial.`,
+    hiddenAbility: ability.quarkDrive,
+    signature : move.cottonSpore,
 }
 
 pkmn.florges = {
@@ -17329,8 +17331,7 @@ pkmn.golisopod = {
     lore: `Sua armadura extremamente resistente pode suportar explosões de bombas, mas ele ainda prefere fugir a lutar sempre que possível.`,
 }
 
-/*
-
+//Sem Pedra
 pkmn.megaGolisopod = {
   type: ["bug","steel"],
   bst: {
@@ -17341,9 +17342,10 @@ pkmn.megaGolisopod = {
     sdef: 120*1.2,
     spe: 40*1.2,
   },
+    hiddenAbility: ability.chrysilate,
+    signature : move.tailGlow,
+    lore: `Usa quatro braços visíveis para investidas ferozes e guarda outros braços ocultos para desferir o golpe final quando o oponente está enfraquecido.`,
 }
-
-*/
 
 // 769 Sandygast → Palossand
 pkmn.sandygast = {
@@ -19242,7 +19244,8 @@ pkmn.megaFalinks = {
     spe: 100*1.2,
   },
     hiddenAbility: ability.reckless,
-    signature : move.noRetreat
+    signature : move.noRetreat,
+    lore: `Formado por um líquido metálico misterioso, ele consegue derreter e absorver metal de qualquer objeto que tocar.`,
 }
 
 // 871 Pincurchin
@@ -20776,6 +20779,8 @@ pkmn.megaGlimmora = {
     spe: 101*1.2,
   },
     hiddenAbility: ability.corrosion,
+    signature : move.toxicThread,
+    lore: `Apresenta um chifre central proeminente e pétalas cristalinas separadas do corpo que flutuam em círculo.`,
 }
 
 // 971 Greavard → Houndstone
