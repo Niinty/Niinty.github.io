@@ -1,30 +1,17 @@
 // PokeChill: Tooltip and UI hover helpers.
-
-
-
-
 function closePkmnEditor(){
 
     //setPkmnTeam()
     voidAnimation("pkmn-editor","tooltipBoxAppear 0.2s reverse 1 ease-in")
-
 
     setTimeout(() => {
     document.getElementById("pkmn-editor-movepool").innerHTML = ""
     document.getElementById("pkmn-editor-current-moves").innerHTML = ""
     document.getElementById("pkmn-editor").style.display = "none"
     }, 150);
-
-
-
-
 }
 
-
-
 function closeTooltip() {
-
-    
     //remove current stack
     tooltipStack.pop();
     
@@ -50,12 +37,10 @@ function closeTooltip() {
     }
 }
 
-
 function openTooltip(){
     voidAnimation("tooltipBackground","tooltipBoxAppear 0.2s 1")
     document.getElementById("tooltipBackground").style.display = "flex"
 }
-
 
 document.getElementById("tooltipBackground").addEventListener("click", (e) => {
     if (e.target.id === "tooltipBackground" && !document.getElementById("prevent-tooltip-exit")) {
@@ -69,22 +54,15 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-
-
-
 let moveSlotReplace = undefined 
 
 let tooltipStack = [];
 
 function tooltipData(category, ttdata){
 
-
     tooltipStack.push({ category, ttdata });
 
     if (category == "area") {
-
-
-
         document.getElementById("tooltipTop").style.display = "none";
         document.getElementById("tooltipTitle").style.display = "none";
         document.getElementById("tooltipMid").style.display = "none";
@@ -107,12 +85,9 @@ function tooltipData(category, ttdata){
 
         if (pkmn[item.id].shiny && areas[ttdata].uncatchable!=true && areas[ttdata].type != "dungeon") tag += `<div class="wild-shiny-tag">✦</div>`
 
-
-
         div.className = "area-preview";
         if (pkmn[item.id].caught===0 && areas[ttdata].type !== "dungeon" && areas[ttdata].uncatchable!=true) div.classList.add('hidden-pkmn')
         if (pkmn[item.id].caught>0 || areas[ttdata].type == "dungeon" || areas[ttdata].uncatchable) div.dataset.pkmn = item.id
-
 
         div.innerHTML = `<img class="sprite-trim" src="img/pkmn/sprite/${item.id}.png">` + tag;
         if (pkmn[item.id].shiny && areas[ttdata].uncatchable!=true && areas[ttdata].type != "dungeon") div.innerHTML = `<img class="sprite-trim" src="img/pkmn/shiny/${item.id}.png">` + tag;
@@ -120,8 +95,6 @@ function tooltipData(category, ttdata){
         }}
 
         if (areas[ttdata].drops !== undefined) {
-
-        
 
         document.getElementById("tooltipMid").innerHTML = `<div id="area-preview-items"><strong>Area Items</strong></div>`;
 
@@ -145,37 +118,22 @@ function tooltipData(category, ttdata){
         }}
 
         }
-
-
-
-
-
-
-
-        
+       
         if (ttdata == areas.wildlifePark.id) {
             document.getElementById("tooltipBottom").innerHTML += `Pokemon in the Wildlife Park rotate every 12 hours`
         }
         
-
-
         openTooltip()
-
-
-
 
     }
 
-
     if (category == "trainer") {
-
 
         document.getElementById("tooltipTop").style.display = "none";
         document.getElementById("tooltipTitle").style.display = "none";
         document.getElementById("tooltipMid").style.display = "none";
         document.getElementById("tooltipBottom").style.display = "inline";
         document.getElementById("tooltipBottom").innerHTML = `<div id="area-preview-spawns"><strong>Team Preview</strong></div><div id="preview-field-effects"></div>`;
-
 
         const spawns = [];
         if (areas[ttdata].team.slot1) spawns.push(areas[ttdata].team.slot1.id)
@@ -189,7 +147,6 @@ function tooltipData(category, ttdata){
 
         let tag = ""
         if (pkmn[item].shiny && areas[ttdata].type != "vs" && areas[ttdata].type != "frontier") tag += `<div class="wild-shiny-tag">✦</div>`
-
 
         const div = document.createElement("div");
         div.className = "area-preview";
@@ -216,7 +173,6 @@ function tooltipData(category, ttdata){
         }
         }
         
-
         if (areas[ttdata].itemReward) { //new reward function ill eventually have to convert the rest of the code but for now im quite lazy
             const tooltipMid = document.getElementById("tooltipMid");
             tooltipMid.innerHTML = `<div id="area-preview-items"><strong>Victory Rewards</strong></div>`;
@@ -252,7 +208,6 @@ function tooltipData(category, ttdata){
                 itemsContainer.appendChild(div);
             });
         }
-
 
 
         if (areas[ttdata].fieldEffect && areas[ttdata].type != "frontier") { 
@@ -327,23 +282,14 @@ function tooltipData(category, ttdata){
         //if (ttdata==="reflect") document.getElementById("tooltipBottom").innerHTML = `Decreases the damage dealt by physical attacks by 75%`
         if (ttdata==="lightScreen") document.getElementById("tooltipBottom").innerHTML = `Super-effective damage dealt to your team is reduced to neutral`
         if (ttdata==="safeguard") document.getElementById("tooltipBottom").innerHTML = `Protects your team from status effects and stat reductions`
-
-        
-        
+       
         openTooltip()
     }
-
-
-
-
 
     if (category == "seasonPreview") {
 
 
         if (saved.currentSeason == undefined) return
-
-
-
 
     document.getElementById("tooltipTop").style.display = `none`
     document.getElementById("tooltipTitle").style.display = `none`
@@ -434,8 +380,6 @@ function tooltipData(category, ttdata){
         </div>
     `;
 
-
-
     document.getElementById("season-list").appendChild(div);
 
 
@@ -456,46 +400,11 @@ function tooltipData(category, ttdata){
     })
     }
 
-
-
-
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
 
     if (category == "arenaPreview") {
-
 
     if (saved.arenaCurrentTrainer==6){
         document.getElementById("tooltipTop").style.display = `none`
@@ -505,9 +414,6 @@ function tooltipData(category, ttdata){
         openTooltip()
         return
     }
-
-
-
 
     document.getElementById("tooltipTop").style.display = `none`
     document.getElementById("tooltipTitle").style.display = `none`
