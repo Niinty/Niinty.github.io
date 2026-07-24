@@ -6005,6 +6005,7 @@ pkmn.wynaut = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.wobbuffet, level: evolutionLevel2 } } },
     hiddenAbility: ability.unaware,
+     lore: `A cauda preta indica o humor; se estiver irritado, ele bate a cauda com força no chão.`,
 }
 
 pkmn.wobbuffet = {
@@ -6018,7 +6019,7 @@ pkmn.wobbuffet = {
         spe: 33,
     },
     hiddenAbility: ability.unaware,
-    lore: ``,
+    lore: `A cauda preta possui marcas que parecem olhos. Se alguém atacar ou tocar na cauda dele, o Wobbuffet se torna extremamente feroz e agressivo.`,
 }
 
 // 203 Girafarig → Farigiraf
@@ -16498,8 +16499,9 @@ pkmn.rowlet = {
     sdef: 50,
     spe: 42,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.dartrix, level: evolutionLevel1 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.dartrix, level: evolutionLevel1 } } },
     hiddenAbility: ability.noGuard,
+    lore: `Ele voa silenciosamente através da noite, usando penas especiais que absorvem o som para se aproximar de presas sem ser detectado.`,
 }
 
 pkmn.dartrix = {
@@ -16512,8 +16514,9 @@ pkmn.dartrix = {
     sdef: 70,
     spe: 52,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.decidueye, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.decidueye, level: evolutionLevel2 } } },
     hiddenAbility: ability.noGuard,
+    lore: `Ele é extremamente vaidoso com sua aparência, alisando constantemente as penas com o bico para manter-se sempre elegante.`,
 }
 
 pkmn.decidueye = {
@@ -16527,6 +16530,7 @@ pkmn.decidueye = {
     spe: 70,
   },
     hiddenAbility: ability.noGuard,
+    lore: `Ele dispara flechas de penas com precisão mortal, escondendo-se nas sombras da floresta antes de atacar silenciosamente.`,
 }
 
 pkmn.hisuianDecidueye = {
@@ -16539,6 +16543,7 @@ pkmn.hisuianDecidueye = {
     sdef: 95,
     spe: 60,
   },
+    lore: `Uma forma antiga adaptada para batalhas diretas, disparando flechas em rajadas rápidas contra múltiplos alvos.`,
 }
 
 // 725 Litten → Torracat → Incineroar
@@ -16552,9 +16557,10 @@ pkmn.litten = {
     sdef: 40,
     spe: 70,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.torracat, level: evolutionLevel1 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.torracat, level: evolutionLevel1 } } },
     hiddenAbility: ability.intimidate,
-    signature : move.darkestLariat
+    signature : move.darkestLariat,
+    lore: `Ele lambe o próprio pelo constantemente, e as bolas de pelo que engole são combustível para as chamas que solta pela boca.`,
 }
 
 
@@ -16568,9 +16574,10 @@ pkmn.torracat = {
     sdef: 50,
     spe: 90,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.incineroar, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.incineroar, level: evolutionLevel2 } } },
     hiddenAbility: ability.intimidate,
-    signature : move.darkestLariat
+    signature : move.darkestLariat,
+    lore: `O sino em seu pescoço soa quando ele está animado, e suas chamas internas ficam mais intensas conforme ele se energiza.`,
 }
 
 pkmn.incineroar = {
@@ -16584,7 +16591,8 @@ pkmn.incineroar = {
     spe: 60,
   },
     hiddenAbility: ability.intimidate,
-    signature : move.darkestLariat
+    signature : move.darkestLariat,
+    lore: `Apesar de sua atitude arrogante em batalha, ele é extremamente gentil com Pokémon feridos, cuidando deles em segredo.`,
 }
 
 // 728 Popplio → Brionne → Primarina
@@ -16598,9 +16606,10 @@ pkmn.popplio = {
     sdef: 56,
     spe: 40,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.brionne, level: evolutionLevel1 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.brionne, level: evolutionLevel1 } } },
     hiddenAbility: ability.cacophony,
-    signature : move.sparklingAria
+    signature : move.sparklingAria,
+    lore: `Ele sopra bolhas da boca e as usa para realizar acrobacias impressionantes, praticando truques constantemente para se apresentar.`,
 }
 
 pkmn.brionne = {
@@ -16613,9 +16622,10 @@ pkmn.brionne = {
     sdef: 81,
     spe: 50,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.primarina, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.primarina, level: evolutionLevel2 } } },
     hiddenAbility: ability.cacophony,
-    signature : move.sparklingAria
+    signature : move.sparklingAria,
+    lore: `Ela dança graciosamente sobre bolhas que cria, e seu canto pode acalmar ou atordoar presas, dependendo da intenção.`,
 }
 
 pkmn.primarina = {
@@ -16629,7 +16639,8 @@ pkmn.primarina = {
     spe: 60,
   },
     hiddenAbility: ability.cacophony,
-    signature : move.sparklingAria
+    signature : move.sparklingAria,
+    lore: `Seu canto belíssimo pode criar bolhas com propriedades tóxicas, capazes de explodir com força suficiente para afundar um navio pequeno.`,
 }
 
 // 731 Pikipek → Trumbeak → Toucannon
@@ -16643,9 +16654,10 @@ pkmn.pikipek = {
     sdef: 30,
     spe: 65,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.trumbeak, level: evolutionLevel1 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.trumbeak, level: evolutionLevel1 } } },
     hiddenAbility: ability.skillLink,
-    signature : move.beakBlast
+    signature : move.beakBlast,
+    lore: `Ele bica árvores repetidamente a uma velocidade de até dezesseis vezes por segundo, armazenando comida dentro dos buracos que cria.`,
 }
 
 pkmn.trumbeak = {
@@ -16658,9 +16670,10 @@ pkmn.trumbeak = {
     sdef: 50,
     spe: 75,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.toucannon, level: evolutionLevel2 } } },
-  hiddenAbility: ability.skillLink,
-    signature : move.beakBlast
+    evolve: function() { return { 1: { pkmn: pkmn.toucannon, level: evolutionLevel2 } } },
+    hiddenAbility: ability.skillLink,
+    signature : move.beakBlast,
+    lore: `Ele armazena bagas dentro do bico, e as dispara com força suficiente para atordoar predadores maiores que ele.`,
 }
 
 pkmn.toucannon = {
@@ -16674,7 +16687,8 @@ pkmn.toucannon = {
     spe: 60,
   },
     hiddenAbility: ability.skillLink,
-    signature : move.beakBlast
+    signature : move.beakBlast,
+    lore: `Seu bico funciona como um canhão, disparando sementes em alta velocidade com uma força equivalente a uma bala de verdade.`,
 }
 
 // 734 Yungoos → Gumshoos
@@ -16688,8 +16702,9 @@ pkmn.yungoos = {
     sdef: 30,
     spe: 45,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.gumshoos, level: evolutionLevel1 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.gumshoos, level: evolutionLevel1 } } },
     hiddenAbility: ability.adaptability,
+    lore: `Seu metabolismo extremamente acelerado o faz precisar comer constantemente, e ele ataca qualquer coisa que pareça comestível.`,
 }
 
 pkmn.gumshoos = {
@@ -16703,6 +16718,7 @@ pkmn.gumshoos = {
     spe: 45,
   },
     hiddenAbility: ability.adaptability,
+    lore: `Ele espera pacientemente por horas em um só lugar, observando até que a presa perfeita passe por perto para atacar.`,
 }
 
 // 736 Grubbin → Charjabug → Vikavolt
@@ -16716,8 +16732,9 @@ pkmn.grubbin = {
     sdef: 45,
     spe: 46,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.charjabug, level: evolutionLevel2 } } },
-    eggMove : move.auraWheel
+    evolve: function() { return { 1: { pkmn: pkmn.charjabug, level: evolutionLevel2 } } },
+    eggMove : move.auraWheel,
+    lore: `Suas mandíbulas fortes conseguem morder através de galhos grossos, e ele se prende a árvores usando um fio pegajoso que produz.`,
 }
 
 pkmn.charjabug = {
@@ -16730,8 +16747,9 @@ pkmn.charjabug = {
     sdef: 75,
     spe: 36,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.vikavolt, item: item.thunderStone } } },
-    eggMove : move.auraWheel
+    evolve: function() { return { 1: { pkmn: pkmn.vikavolt, item: item.thunderStone } } },
+    eggMove : move.auraWheel,
+    lore: `Seu corpo funciona como uma bateria viva, armazenando eletricidade que outras pessoas usam para recarregar seus aparelhos eletrônicos.`,
 }
 
 pkmn.vikavolt = {
@@ -16744,7 +16762,8 @@ pkmn.vikavolt = {
     sdef: 75,
     spe: 43,
   },
-    eggMove : move.auraWheel
+    eggMove : move.auraWheel,
+    lore: `Suas mandíbulas em forma de chifre disparam raios elétricos poderosos, e ele voa usando um mecanismo similar a um jato.`,
 }
 
 // 739 Crabrawler → Crabominable
@@ -16758,9 +16777,10 @@ pkmn.crabrawler = {
     sdef: 47,
     spe: 63,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.crabominable, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.crabominable, level: evolutionLevel2 } } },
     hiddenAbility: ability.icyPelt,
-    signature : move.iceHammer
+    signature : move.iceHammer,
+    lore: `Ele soca tudo o que vê usando suas garras poderosas, treinando constantemente para se tornar ainda mais forte em combate.`,
 }
 
 pkmn.crabominable = {
@@ -16774,7 +16794,8 @@ pkmn.crabominable = {
     spe: 43,
   },
     hiddenAbility: ability.icyPelt,
-    signature : move.iceHammer
+    signature : move.iceHammer,
+    lore: `Vivendo em montanhas geladas, seus pelos grossos e garras congeladas podem esmagar gelo espesso com um único golpe.`,
 }
 
 pkmn.megaCrabominable = {
@@ -16860,8 +16881,9 @@ pkmn.cutiefly = {
     sdef: 40,
     spe: 84,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.ribombee, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.ribombee, level: evolutionLevel2 } } },
     hiddenAbility: ability.faeRush,
+    lore: `Ela consegue enxergar campos magnéticos, o que a ajuda a encontrar flores ricas em néctar mesmo à distância.`,
 }
 
 pkmn.ribombee = {
@@ -16875,6 +16897,7 @@ pkmn.ribombee = {
     spe: 124,
   },
     hiddenAbility: ability.faeRush,
+    lore: `Ela coleta pólen de várias flores para criar pós especiais com efeitos diferentes, usados tanto para curar quanto para atacar.`,
 }
 
 // 744 Rockruff → Lycanroc
@@ -16895,6 +16918,7 @@ pkmn.rockruff = {
         } 
     },
     hiddenAbility: ability.sandyPelt,
+    lore: `Ele late alegremente para seu treinador, e sua natureza amigável esconde um potencial de evolução que muda de acordo com o ambiente.`,
 }
 
 pkmn.lycanrocMidday = {
@@ -16921,6 +16945,7 @@ pkmn.lycanrocMidnight = {
         spe: 82,
     },
     hiddenAbility: ability.moody,
+    lore: `Sob a lua cheia, esta forma se torna mais selvagem e agressiva, atacando com força bruta ao invés de velocidade.`,
 }
 
 pkmn.lycanrocDusk = {
@@ -16932,7 +16957,8 @@ pkmn.lycanrocDusk = {
         satk: 55,
         sdef: 65,
         spe: 110,
-    }
+    },
+    lore: `Formado durante o crepúsculo, ele combina a lealdade de sua forma diurna com a ferocidade de sua forma noturna.`,
 }
 
 // 746 Wishiwashi
@@ -16945,7 +16971,8 @@ pkmn.wishiwashi = {
     satk: 25,
     sdef: 25,
     spe: 40,
-  }
+  },
+    lore: `Sozinho, ele é extremamente fraco e tímido, mas em grandes cardumes consegue formar um corpo gigante e intimidador.`,
 }
 
 pkmn.wishiwashiSchool = {
@@ -16957,7 +16984,8 @@ pkmn.wishiwashiSchool = {
     satk: 140,
     sdef: 135,
     spe: 30,
-  }
+  },
+    lore: `Quando ameaçado, centenas deles se reúnem formando um único peixe gigante, capaz de afugentar predadores muito maiores.`,
 }
 
 // 747 Mareanie → Toxapex
@@ -16971,7 +16999,8 @@ pkmn.mareanie = {
     sdef: 52,
     spe: 45,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.toxapex, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.toxapex, level: evolutionLevel2 } } },
+    lore: `Ela se alimenta mordiscando os tentáculos de Corsola, e é considerada uma praga por pescadores devido à sua natureza destrutiva.`,
 }
 
 pkmn.toxapex = {
@@ -16984,6 +17013,7 @@ pkmn.toxapex = {
     sdef: 142,
     spe: 35,
   },
+    lore: `Seus espinhos venenosos podem injetar toxinas suficientes para paralisar até uma baleia, e ela se protege girando dentro de sua concha.`,
 }
 
 // 749 Mudbray → Mudsdale
@@ -16997,9 +17027,10 @@ pkmn.mudbray = {
     sdef: 55,
     spe: 45,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.mudsdale, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.mudsdale, level: evolutionLevel2 } } },
     signature : move.highHorsepower,
     hiddenAbility: ability.stamina,
+    lore: `Ele come lama rica em minerais para fortalecer seus cascos, que se tornam duros o suficiente para quebrar rochas.`,
 }
 
 pkmn.mudsdale = {
@@ -17014,6 +17045,7 @@ pkmn.mudsdale = {
   },
     signature : move.highHorsepower,
     hiddenAbility: ability.stamina,
+    lore: `Seus cascos extremamente duros podem esmagar rochas com facilidade, e ele consegue puxar cargas de mais de dez toneladas.`,
 }
 
 // 751 Dewpider → Araquanid
@@ -17027,8 +17059,9 @@ pkmn.dewpider = {
     sdef: 72,
     spe: 27,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.araquanid, level: evolutionLevel1 } } },
-    eggMove : move.snipeShot
+    evolve: function() { return { 1: { pkmn: pkmn.araquanid, level: evolutionLevel1 } } },
+    eggMove : move.snipeShot,
+    lore: `Ele carrega uma bolha de ar sobre a cabeça para respirar em terra, e caça mergulhando na água quando precisa se alimentar.`,
 }
 
 pkmn.araquanid = {
@@ -17041,7 +17074,8 @@ pkmn.araquanid = {
     sdef: 132,
     spe: 42,
   },
-    eggMove : move.snipeShot
+    eggMove : move.snipeShot,
+    lore: `Sua bolha de água pode crescer o suficiente para envolver e sufocar presas muito maiores que seu próprio corpo.`,
 }
 
 // 753 Fomantis → Lurantis
@@ -17055,9 +17089,10 @@ pkmn.fomantis = {
     sdef: 35,
     spe: 35,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.lurantis, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.lurantis, level: evolutionLevel2 } } },
     hiddenAbility: ability.contrary,
-    eggMove : move.needleArm
+    eggMove : move.needleArm,
+    lore: `Ele se move em direção à luz solar durante o dia, e permanece completamente imóvel à noite para economizar energia.`,
 }
 
 pkmn.lurantis = {
@@ -17071,7 +17106,8 @@ pkmn.lurantis = {
     spe: 45,
   },
     hiddenAbility: ability.contrary,
-    eggMove : move.needleArm
+    eggMove : move.needleArm,
+    lore: `Suas pétalas em forma de foice podem cortar através de galhos grossos, e ela se camufla perfeitamente entre flores reais.`,
 }
 
 // 755 Morelull → Shiinotic
@@ -17085,8 +17121,9 @@ pkmn.morelull = {
     sdef: 75,
     spe: 15,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.shiinotic, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.shiinotic, level: evolutionLevel2 } } },
     hiddenAbility: ability.colorSpore,
+    lore: `Os esporos brilhantes que ele libera podem causar sono instantâneo em qualquer criatura que os respire.`,
 }
 
 pkmn.shiinotic = {
@@ -17100,6 +17137,7 @@ pkmn.shiinotic = {
     spe: 30,
   },
     hiddenAbility: ability.colorSpore,
+    lore: `Ele pisca luzes de seu corpo em padrões hipnóticos, atraindo presas curiosas para mais perto antes de atacar com esporos.`,
 }
 
 // 757 Salandit → Salazzle
@@ -17113,9 +17151,10 @@ pkmn.salandit = {
     sdef: 40,
     spe: 77,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.salazzle, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.salazzle, level: evolutionLevel2 } } },
     signature : move.fireLash,
     hiddenAbility: ability.corrosion,
+    lore: `A fumaça tóxica que ele libera de suas narinas é usada tanto para caçar quanto para se comunicar com outros de sua espécie.`,
 }
 
 pkmn.salazzle = {
@@ -17130,6 +17169,7 @@ pkmn.salazzle = {
   },
     signature : move.fireLash,
     hiddenAbility: ability.corrosion,
+    lore: `Ela secreta um veneno com feromônios poderosos, capazes de deixar até machos rivais completamente sob seu controle.`,
 }
 
 // 759 Stufful → Bewear
@@ -17143,8 +17183,9 @@ pkmn.stufful = {
     sdef: 50,
     spe: 50,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.bewear, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.bewear, level: evolutionLevel2 } } },
     hiddenAbility: ability.angerPoint,
+    lore: `Apesar de sua aparência fofa, ele é extremamente forte, e não gosta nem um pouco de ser tocado por estranhos.`,
 }
 
 pkmn.bewear = {
@@ -17158,6 +17199,7 @@ pkmn.bewear = {
     spe: 60,
   },
     hiddenAbility: ability.angerPoint,
+    lore: `Seu abraço pode esmagar ossos facilmente, mas ele demonstra afeto dessa forma sem perceber o quão perigoso isso realmente é.`,
 }
 
 // 761 Bounsweet → Steenee → Tsareena
@@ -17171,9 +17213,10 @@ pkmn.bounsweet = {
     sdef: 38,
     spe: 32,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.steenee, level: evolutionLevel1 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.steenee, level: evolutionLevel1 } } },
     signature : move.tropKick,
     hiddenAbility: ability.libero,
+    lore: `Seu aroma doce como fruta atrai predadores, então ela precisa correr constantemente para escapar de perigo.`,
 }
 
 pkmn.steenee = {
@@ -17186,9 +17229,10 @@ pkmn.steenee = {
     sdef: 48,
     spe: 62,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.tsareena, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.tsareena, level: evolutionLevel2 } } },
     signature : move.tropKick,
     hiddenAbility: ability.libero,
+    lore: `Ela balança o quadril para chicotear seu caule contra oponentes, uma técnica que aprimora constantemente através da prática.`,
 }
 
 pkmn.tsareena = {
@@ -17203,6 +17247,7 @@ pkmn.tsareena = {
   },
     signature : move.tropKick,
     hiddenAbility: ability.libero,
+    lore: `Seus chutes poderosos podem quebrar rochas com facilidade, e ela trata Pokémon mais fracos com desdém e superioridade.`,
 }
 
 // 764 Comfey
@@ -17218,6 +17263,7 @@ pkmn.comfey = {
   },
     signature : move.floralHealing,
     hiddenAbility: ability.purifyingSalt,
+    lore: `Ela usa as flores presas em sua guirlanda para curar ferimentos, e cada flor tem propriedades medicinais diferentes.`,
 }
 
 // 765 Oranguru
@@ -17232,7 +17278,8 @@ pkmn.oranguru = {
     spe: 60,
   },
     hiddenAbility: ability.strategist,
-    eggMove : move.storedPower
+    eggMove : move.storedPower,
+    lore: `Ele é considerado extremamente sábio, e observa cuidadosamente o comportamento humano antes de decidir como agir.`,
 }
 
 // 766 Passimian
@@ -17247,7 +17294,8 @@ pkmn.passimian = {
     spe: 80,
   },
     hiddenAbility: ability.gorillaTactics,
-    eggMove : move.hiJumpKick
+    eggMove : move.hiJumpKick,
+    lore: `Eles vivem em grupos organizados que se revezam guardando frutas, e lançam pedras com precisão impressionante contra intrusos.`,
 }
 
 // 767 Wimpod → Golisopod
@@ -17261,9 +17309,10 @@ pkmn.wimpod = {
     sdef: 30,
     spe: 80,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.golisopod, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.golisopod, level: evolutionLevel2 } } },
     hiddenAbility: ability.ambidextrous,
-    eggMove : move.razorShell
+    eggMove : move.razorShell,
+    lore: `Ele foge de qualquer sinal de perigo, mesmo que isso signifique perder partes do próprio corpo, que se regeneram rapidamente depois.`,
 }
 
 pkmn.golisopod = {
@@ -17277,7 +17326,8 @@ pkmn.golisopod = {
     spe: 40,
   },
     hiddenAbility: ability.ambidextrous,
-    eggMove : move.razorShell
+    eggMove : move.razorShell,
+    lore: `Sua armadura extremamente resistente pode suportar explosões de bombas, mas ele ainda prefere fugir a lutar sempre que possível.`,
 }
 
 /*
@@ -17307,7 +17357,8 @@ pkmn.sandygast = {
     sdef: 45,
     spe: 15,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.palossand, level: evolutionLevel3 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.palossand, level: evolutionLevel3 } } },
+    lore: `Formado por um espírito que possui um monte de areia, ele controla essa areia para atrair vítimas e sugar sua energia vital.`,
 }
 
 pkmn.palossand = {
@@ -17320,6 +17371,7 @@ pkmn.palossand = {
     sdef: 75,
     spe: 35,
   },
+    lore: `Ele suga a energia vital de qualquer coisa que afunde em sua areia, e sua fortaleza pode desmoronar sobre vítimas desavisadas.`,
 }
 
 // 771 Pyukumuku
@@ -17333,6 +17385,7 @@ pkmn.pyukumuku = {
     sdef: 130,
     spe: 5,
   },
+    lore: `Seus órgãos internos saem pela boca quando ele está estressado, mas ele consegue colocá-los de volta sem qualquer problema.`,
 }
 
 // 772 Type: Null → Silvally
@@ -17346,9 +17399,10 @@ pkmn.typeNull = {
     sdef: 95,
     spe: 59,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.silvally, level: evolutionLevel3 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.silvally, level: evolutionLevel3 } } },
     hiddenAbility: ability.adaptability,
-    eggMove : move.conversion
+    eggMove : move.conversion,
+    lore: `Foi construído com partes de diferentes criaturas para se adaptar a qualquer situação de batalha.`,
 }
 
 pkmn.silvally = {
@@ -17362,7 +17416,8 @@ pkmn.silvally = {
     spe: 95,
   },
     hiddenAbility: ability.adaptability,
-    eggMove : move.conversion
+    eggMove : move.conversion,
+    lore: `Criado para combater uma ameaça específica, ele pode mudar de tipo usando discos especiais equipados em seu corpo.`,
 }
 
 // 774 Minior
@@ -17377,8 +17432,8 @@ pkmn.minior = {
     spe: 60,
   },
     hiddenAbility: ability.shieldsDown,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo colorido é protegido por uma casca rochosa formada a partir de partículas atmosféricas durante sua queda do espaço.`,
 }
 
 pkmn.miniorBlue = {
@@ -17497,6 +17552,7 @@ pkmn.komala = {
     sdef: 95,
     spe: 65,
   },
+    lore: `Ele nunca acorda, passando toda a vida dormindo agarrado a um galho, e seus sonhos determinam seu humor durante o sono.`,
 }
 
 // 776 Turtonator
@@ -17511,7 +17567,8 @@ pkmn.turtonator = {
     spe: 36,
   },
     hiddenAbility: ability.megaLauncher,
-    eggMove : move.pyroBall
+    eggMove : move.pyroBall,
+    lore: `Sua concha é feita de material altamente explosivo, e ele evita atacar a barriga macia, seu único ponto verdadeiramente vulnerável.`,
 }
 
 // 777 Togedemaru
@@ -17526,6 +17583,7 @@ pkmn.togedemaru = {
     spe: 96,
   },
     signature : move.zingZap,
+    lore: `Suas agulhas afiadas armazenam eletricidade estática, e ele se enrola em uma bola espinhosa para se defender de predadores.`,
 }
 
 // 778 Mimikyu
@@ -17540,7 +17598,8 @@ pkmn.mimikyu = {
     spe: 96,
   },
     hiddenAbility: ability.imposter,
-    eggMove : move.mimic
+    eggMove : move.mimic,
+    lore: `Ele se disfarça de Pikachu na esperança de ser amado, mas sua verdadeira forma por baixo do disfarce é tão assustadora que pode causar desmaios em quem a vê.`,
 }
 
 // 779 Bruxish
@@ -17555,6 +17614,7 @@ pkmn.bruxish = {
     spe: 92,
   },
     hiddenAbility: ability.strongJaw,
+    lore: `Seus dentes afiados podem esmagar corais duros com facilidade, e ele emite ondas psíquicas através de sua íris colorida.`,
 }
 
 // 780 Drampa
@@ -17568,6 +17628,7 @@ pkmn.drampa = {
     sdef: 91,
     spe: 36,
   },
+    lore: `Apesar de sua aparência gentil, ele se torna extremamente violento se algum de seus filhotes for ameaçado por qualquer motivo.`,
 }
 
 pkmn.megaDrampa = {
@@ -17596,7 +17657,8 @@ pkmn.dhelmise = {
     sdef: 90,
     spe: 40,
   },
-    signature : move.anchorShot
+    signature : move.anchorShot,
+    lore: `Formado por algas marinhas que possuíram uma âncora afundada, ele arrasta destroços de navios usando sua corrente como uma arma.`,
 }
 
 // 782 Jangmo-o → Hakamo-o → Kommo-o
@@ -17610,9 +17672,10 @@ pkmn.jangmoo = {
     sdef: 45,
     spe: 45,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.hakamoo, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.hakamoo, level: evolutionLevel2 } } },
     signature : move.clangingScales,
     hiddenAbility: ability.cacophony,
+    lore: `Suas escamas produzem um som percussivo quando ele dança, um ritual tradicional passado de geração em geração entre sua espécie.`,
 }
 
 pkmn.hakamoo = {
@@ -17625,9 +17688,10 @@ pkmn.hakamoo = {
     sdef: 65,
     spe: 65,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.kommoo, level: evolutionLevel3 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.kommoo, level: evolutionLevel3 } } },
     signature : move.clangingScales,
     hiddenAbility: ability.cacophony,
+    lore: `Ele dança com movimentos ainda mais complexos, e suas escamas endurecidas podem cortar através de metal fino.`,
 }
 
 pkmn.kommoo = {
@@ -17642,6 +17706,7 @@ pkmn.kommoo = {
   },
     signature : move.clangingScales,
     hiddenAbility: ability.cacophony,
+    lore: `Sua dança de batalha é tão ritmada quanto mortal, e as escamas em seu pescoço podem gerar um som capaz de atordoar oponentes.`,
 }
 
 // 785 Tapu Koko
@@ -17657,6 +17722,7 @@ pkmn.tapuKoko = {
   },
     hiddenAbility: ability.electricSurge,
     eggMove: move.electrify,
+    lore: `Considerado a divindade guardiã de sua ilha, ele aparece durante tempestades, absorvendo eletricidade das nuvens ao seu redor.`,
 }
 
 // 786 Tapu Lele
@@ -17672,6 +17738,7 @@ pkmn.tapuLele = {
   },
     hiddenAbility: ability.mistySurge,
     eggMove: move.fairyLock,
+    lore: `Ela espalha pólen de cura de suas asas, embora esse mesmo pólen também possa causar confusão em quem o inala.`,
 }
 
 // 787 Tapu Bulu
@@ -17687,6 +17754,7 @@ pkmn.tapuBulu = {
   },
     hiddenAbility: ability.grassySurge,
     eggMove: move.forestCurse,
+    lore: `Ele usa o tronco em suas costas como uma arma, capaz de derrubar árvores inteiras com um único golpe poderoso.`,
 }
 
 // 788 Tapu Fini
@@ -17702,6 +17770,7 @@ pkmn.tapuFini = {
   },
     hiddenAbility: ability.mistySurge,
     eggMove: move.soak,
+    lore: `Ela cria uma névoa protetora que envolve sua ilha, purificando corrupção e mantendo o equilíbrio natural do ecossistema.`,
 }
 
 // 789 Cosmog → Cosmoem → Solgaleo / Lunala
@@ -17715,8 +17784,9 @@ pkmn.cosmog = {
     sdef: 31,
     spe: 37,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.cosmoem, level: evolutionLevel3 } } },
-    eggMove : move.kinesis
+    evolve: function() { return { 1: { pkmn: pkmn.cosmoem, level: evolutionLevel3 } } },
+    eggMove : move.kinesis,
+    lore: `Considerado o Pokémon mais fraco fisicamente, seu corpo esconde um poder cósmico imenso que ainda não consegue controlar.`,
 }
 
 pkmn.cosmoem = {
@@ -17729,7 +17799,8 @@ pkmn.cosmoem = {
     sdef: 161,
     spe: 37,
   },
-    eggMove : move.kinesis
+    eggMove : move.kinesis,
+    lore: `Seu núcleo denso pesa mais que qualquer estrela conhecida, contendo energia suficiente para criar um universo inteiro dentro dele.`,
 }
 
 pkmn.solgaleo = {
@@ -17743,7 +17814,8 @@ pkmn.solgaleo = {
     spe: 97*1.3,
   },
     hiddenAbility: ability.fullMetalBody,
-    signature : move.sunsteelStrike
+    signature : move.sunsteelStrike,
+    lore: `Diz-se que ele vem de outra dimensão, e sua juba brilhante como o sol pode cegar qualquer inimigo que olhe diretamente para ele.`,
 }
 
 pkmn.lunala = {
@@ -17756,7 +17828,8 @@ pkmn.lunala = {
     sdef: 107*1.3,
     spe: 97*1.3,
   },
-    signature : move.moongeistBeam
+    signature : move.moongeistBeam,
+    lore: `Suas asas absorvem luz completamente, e diz-se que ele pode abrir portais para outras dimensões usando esse poder único.`,
 }
 
 // 793 Nihilego
@@ -17771,7 +17844,8 @@ pkmn.nihilego = {
     spe: 103*1.25,
   },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.mimic
+    eggMove : move.mimic,
+    lore: `Um parasita alienígena que se prende ao cérebro de sua vítima, controlando seus movimentos através de neurotoxinas poderosas.`,
 }
 
 // 794 Buzzwole
@@ -17786,6 +17860,7 @@ pkmn.buzzwole = {
     spe: 79*1.25,
   },
     hiddenAbility: ability.beastBoost,
+    lore: `Seus músculos incrivelmente inchados podem se expandir ainda mais quando ele flexiona, aumentando drasticamente sua força física.`,
 }
 
 // 795 Pheromosa
@@ -17800,7 +17875,8 @@ pkmn.pheromosa = {
     spe: 161*1.25,
   },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.meFirst
+    eggMove : move.meFirst,
+    lore: `Extremamente veloz e ágil, ela evita qualquer tipo de sujeira, e seus chutes podem quebrar ossos com facilidade impressionante.`,
 }
 
 // 796 Xurkitree
@@ -17815,7 +17891,8 @@ pkmn.xurkitree = {
     spe: 100*1.25,
   },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.ionise
+    eggMove : move.ionise,
+    lore: `Seu corpo em forma de árvore absorve eletricidade de tempestades, canalizando-a através de seus galhos brilhantes.`,
 }
 
 // 797 Celesteela
@@ -17830,7 +17907,8 @@ pkmn.celesteela = {
     spe: 61*1.25,
   },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.anchorShot
+    eggMove : move.anchorShot,
+    lore: `Ela viaja através do espaço usando propulsores em seus braços, e sua altura pode ultrapassar a de um prédio inteiro.`,
 }
 
 // 798 Kartana
@@ -17845,6 +17923,7 @@ pkmn.kartana = {
     spe: 120*1.25,
   },
     hiddenAbility: ability.beastBoost,
+    lore: `Suas bordas são mais afiadas que qualquer lâmina feita por humanos, capazes de cortar através de aço grosso com facilidade.`,
 }
 
 // 799 Guzzlord
@@ -17859,6 +17938,7 @@ pkmn.guzzlord = {
     spe: 43*1.25,
   },
     hiddenAbility: ability.beastBoost,
+    lore: `Ele devora tudo o que encontra pela frente, incluindo montanhas inteiras, e nunca parece satisfeito, não importa quanto coma.`,
 }
 
 // 800 Necrozma
@@ -17873,7 +17953,8 @@ pkmn.necrozma = {
     spe: 79,
   },
     hiddenAbility: ability.lightAbsorb,
-    signature : move.prismaticLaser
+    signature : move.prismaticLaser,
+    lore: `Diz-se que ele já foi uma fonte de luz que perdeu sua energia, tornando-se uma criatura sombria em busca de recuperar seu brilho original.`,
 }
 
 pkmn.necrozmaDawnWings = {
@@ -17885,7 +17966,8 @@ pkmn.necrozmaDawnWings = {
         satk: 167,
         sdef: 127,
         spe: 77,
-    }
+    },
+    lore: `Ao se fundir com Lunala, ele ganha asas capazes de manipular a luz das estrelas com precisão devastadora.`,
 }
 
 pkmn.necrozmaDuskMane = {
@@ -17897,7 +17979,8 @@ pkmn.necrozmaDuskMane = {
         satk: 113,
         sdef: 109,
         spe: 77,
-    }
+    },
+    lore: `Ao se fundir com Solgaleo, ele ganha uma juba brilhante capaz de emitir rajadas de luz extremamente poderosas.`,
 }
 
 pkmn.ultraNecrozma = {
@@ -17924,7 +18007,8 @@ pkmn.magearna = {
         spe: 65*1.5,
     },
     // evolve: function() { return { 1: { pkmn: pkmn.megaMagearna, item: item.magearnite } } },
-    signature : move.gearUp
+    signature : move.gearUp,
+    lore: `Criada há 500 anos por um cientista brilhante, seu coração artificial é capaz de armazenar as emoções de Pokémon ao seu redor.`,
 }
 
 pkmn.magearnaOriginal = {
@@ -17966,8 +18050,6 @@ pkmn.megaMagearnaOriginal = {
     }
 }
 
-
-
 // 802 Marshadow
 pkmn.marshadow = {
     hidden:true,
@@ -17981,8 +18063,8 @@ pkmn.marshadow = {
         spe: 125*1.5,
     },
     hiddenAbility: ability.soulAsterism,
-    signature : move.spectralThief
-
+    signature : move.spectralThief,
+    lore: `Ele se esconde nas sombras de outros Pokémon, imitando seus movimentos e emergindo apenas durante a noite para lutar.`,
 }
 
 // 803 Poipole → Naganadel
@@ -17996,9 +18078,10 @@ pkmn.poipole = {
     sdef: 67*1.25,
     spe: 73*1.25,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.naganadel, level: evolutionLevel3 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.naganadel, level: evolutionLevel3 } } },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.toxicThread
+    eggMove : move.toxicThread,
+    lore: `Ele dispara agulhas venenosas de sua cabeça, e apesar de sua aparência agressiva, é extremamente amigável com quem confia.`,
 }
 
 pkmn.naganadel = {
@@ -18012,7 +18095,8 @@ pkmn.naganadel = {
     spe: 121*1.25,
   },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.toxicThread
+    eggMove : move.toxicThread,
+    lore: `Seu corpo produz um veneno tão potente que uma única gota pode ser fatal, armazenado em sacos especiais em suas costas.`,
 }
 
 // 805 Stakataka
@@ -18027,7 +18111,8 @@ pkmn.stakataka = {
     spe: 13*1.25,
   },
     hiddenAbility: ability.beastBoost,
-    eggMove : move.noRetreat
+    eggMove : move.noRetreat,
+    lore: `Formado por pedras empilhadas que ganharam vida misteriosamente, seu peso imenso pode esmagar qualquer coisa embaixo dele.`,
 }
 
 // 806 Blacephalon
@@ -18043,6 +18128,7 @@ pkmn.blacephalon = {
   },
     signature : move.mindBlown,
     hiddenAbility: ability.beastBoost,
+    lore: `Sua cabeça pode explodir repetidamente sem causar dano a si mesmo, um espetáculo usado para assustar e confundir inimigos.`,
 }
 
 // 807 Zeraora
@@ -18056,6 +18142,7 @@ pkmn.zeraora = {
     sdef: 80*1.5,
     spe: 153*1.5,
   },
+    lore: `Ele pode gerar eletricidade forte o suficiente para iluminar uma cidade inteira, e se move tão rápido que parece teletransportar.`,
 }
 
 
@@ -18085,9 +18172,10 @@ pkmn.meltan = {
     sdef: 35*1.5,
     spe: 34*1.5,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.melmetal, level: evolutionLevel3 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.melmetal, level: evolutionLevel3 } } },
     hiddenAbility: ability.ferrilate,
-    eggMove : move.gigatonHammer
+    eggMove : move.gigatonHammer,
+    lore: `Formado por um líquido metálico misterioso, ele consegue derreter e absorver metal de qualquer objeto que tocar.`,
 }
 
 pkmn.melmetal = {
@@ -18101,7 +18189,8 @@ pkmn.melmetal = {
     spe: 34*1.5,
   },
     hiddenAbility: ability.ferrilate,
-    eggMove : move.gigatonHammer
+    eggMove : move.gigatonHammer,
+    lore: `Seu corpo consegue se contrair e expandir livremente, e dizem que uma manada inteira já foi vista se fundindo em uma única entidade colossal.`,
 }
 
 pkmn.melmetalGmax = {
