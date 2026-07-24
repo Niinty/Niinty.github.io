@@ -3907,7 +3907,7 @@ pkmn.pinsir = {
     evolve: function() { return { 1: { pkmn: pkmn.megaPinsir, item: item.pinsirite } } },
     hiddenAbility: ability.aerilate,
     eggMove : move.cometPunch,
-    lore: ``,
+    lore: `Ele aperta o inimigo com força para dividi-lo ao meio ou arremessá-lo para longe.`,
 }
 
 pkmn.megaPinsir = {
@@ -4727,7 +4727,7 @@ pkmn.mewtwo = {
         2: { pkmn: pkmn.megaMewtwoY, item: item.mewtwoniteY } } },
     hiddenAbility: ability.aromaVeil,
     lore: `Mewtwo é um Pokémon criado por manipulação genética. No entanto, embora o poder científico dos humanos tenha criado o corpo desse Pokémon, eles falharam miseravelmente em conceder a Mewtwo um coração compassivo.`,
-    signature : move.kinesis
+    signature : move.kinesis,
 }
 
 pkmn.giovanniMewtwo = {
@@ -4756,6 +4756,7 @@ pkmn.megaMewtwoX = {
         spe: 130*1.4,
     },
     hiddenAbility: ability.parentalBond,
+    signature : move.psychoCut,
     lore: `O poder psíquico fortaleceu seus músculos. Ele possui uma força de preensão de uma tonelada e consegue percorrer 100 metros em exatos dois segundos!`
 }
 
@@ -4770,6 +4771,7 @@ pkmn.megaMewtwoY = {
         spe: 140*1.4,
     },
     hiddenAbility: ability.supremeOverlord,
+    signature : move.freezingGlare,
     lore: `Apesar de seu tamanho reduzido, seu poder mental cresceu de forma fenomenal. Com um simples pensamento, ele pode reduzir um arranha-céu a escombros.`
 }
 
@@ -9552,7 +9554,9 @@ pkmn.rayquaza = {
         sdef: 90*1.3,
         spe: 95*1.3,
     },
-    lore: `The force that watches over the world from above. It tempers the chaos of the seas and the land, acting as a mediator between Kyogre and Groudon. The winds and currents obey its passage, and it stands as guardian of the skies.`
+    hiddenAbility: ability.hugePower,
+    signature : move.clangingScales,
+    lore: `Ele come meteoroides enquanto viaja pelo céu. As pequenas pedras espaciais guardam a energia que ele precisa para fazer a Mega Evolução.`
 }
 
 pkmn.megaRayquaza = {
@@ -9565,7 +9569,9 @@ pkmn.megaRayquaza = {
         sdef: 120*1.4,
         spe: 115*1.4,
     },
-    lore: `Ascending the atmosphere, its reach extending into the upper skies. Protecting not only the world below but the space above, guarding against threats from beyond.`
+    hiddenAbility: ability.hugePower,
+    signature : move.dragonAscent,
+    lore: `Não precisa de uma Mega Pedra comum para evoluir, mas sim de absorver energia de meteoritos ao aprender o golpe Dragon Ascent (Ascensão do Dragão)`
 }
 
 // 385 Jirachi
