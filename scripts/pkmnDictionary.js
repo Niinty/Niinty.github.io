@@ -13950,7 +13950,7 @@ pkmn.golurk = {
     lore: `Diz-se que civilizações perdidas o usavam como arma de guerra, e ele ainda guarda segredos sobre tecnologias esquecidas.`,
 }
 
-/*
+//Sem pedra
 pkmn.megaGolurk = {
   type: ["ground","ghost"],
   bst: {
@@ -13962,8 +13962,9 @@ pkmn.megaGolurk = {
     spe: 55*1.2,
   },
   lore: `A megaevolução reativa antigos sistemas internos, tornando seus punhos capazes de golpes com força devastadora.`,
+  hiddenAbility: ability.soulAsterism,
+  signature : move.rageFist,
 }
-*/
 
 // 624 Pawniard → Bisharp → Kingambit
 pkmn.pawniard = {
