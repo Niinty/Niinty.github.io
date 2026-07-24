@@ -15352,7 +15352,6 @@ pkmn.floetteEternal = {
     sdef: 128,
     spe: 92,
   },
-  // evolve: function() { return { 1: { pkmn: pkmn.megaFloette, item: item.floettite } } },
   hiddenAbility: ability.naturalCure,
 }
 
@@ -18800,7 +18799,7 @@ pkmn.dipplin = {
         sdef: 80,
         spe: 40,
     },
-  // evolve: function() { return { 1: { pkmn: pkmn.hydrapple, level: evolutionLevel3 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.hydrapple, level: evolutionLevel3 } } },
 }
 
 pkmn.hydrapple = {
@@ -19361,7 +19360,7 @@ pkmn.cufant = {
     sdef: 49,
     spe: 40,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.copperajah, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.copperajah, level: evolutionLevel2 } } },
     hiddenAbility: ability.sheerForce,
 }
 
@@ -19462,7 +19461,8 @@ pkmn.duraludon = {
     spe: 85,
   },
     hiddenAbility: ability.stamina,
-    eggMove : move.kingsShield
+    eggMove : move.kingsShield,
+    evolve: function() { return { 1: { pkmn: pkmn.archaludon, item: item.metalCoat } } },
 }
 
 pkmn.duraludonGmax = {
