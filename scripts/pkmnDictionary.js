@@ -4140,7 +4140,8 @@ pkmn.megaGyarados = {
         spe: 81*1.2,
     },
     hiddenAbility: ability.intimidate,
-    lore: ``,
+    signature : move.clamp,
+    lore: `O estresse da Mega Evolução cessa quase todas as funções cerebrais, deixando apenas o impulso irrefreável de destruir tudo, embora ainda obedeça a Treinadores de muita confiança.`,
 }
 
 // 131 Lapras
@@ -14778,6 +14779,8 @@ pkmn.megaGreninja = {
     spe: 142*1.2,
   },
     lore: `A megaevolução aumenta sua velocidade a níveis extremos, criando uma espécie de aliado sombrio que aparece atrás dele em batalha.`,
+    hiddenAbility: ability.protean,
+    signature : move.fieryWrath,
 }
 
 // 659 Bunnelby → Diggersby
@@ -15651,8 +15654,7 @@ pkmn.meowstic = {
     lore: `Ele mantém as orelhas sempre abaixadas para conter seus poderes psíquicos, liberando-os apenas quando decide atacar de verdade.`,
 }
 
-/*
-
+//Sem pedra
 pkmn.megaMeowstic = {
   type: ["psychic"],
   bst: {
@@ -15664,9 +15666,9 @@ pkmn.megaMeowstic = {
     spe: 124,
   },
   lore: `A megaevolução libera completamente seus poderes psíquicos contidos, amplificando drasticamente sua força mental.`,
+  hiddenAbility: ability.stamina,
+  signature : move.freezingGlare,
 }
-
-*/
 
 // 679 Honedge → Doublade → Aegislash
 pkmn.honedge = {
@@ -15812,6 +15814,7 @@ pkmn.malamar = {
     lore: `Ele controla mentes usando padrões de luz hipnotizantes emitidos de seu corpo, manipulando até humanos para fazer sua vontade.`,
 }
 
+//Sem Pedra
 pkmn.megaMalamar = {
   type: ["dark","psychic"],
   bst: {
@@ -18026,8 +18029,6 @@ pkmn.magearnaOriginal = {
     signature : move.gearUp
 }
 
-
-
 pkmn.megaMagearna = {
     type: ["steel","fairy"],
     bst: {
@@ -18037,7 +18038,10 @@ pkmn.megaMagearna = {
         satk: 170*1.5,
         sdef: 115*1.5,
         spe: 95*1.5,
-    }
+    },
+    hiddenAbility: ability.parentalBond,
+    signature : move.aromaticMist,
+    lore: `As emoções que o Pokémon havia começado a sentir ficam escondidas enquanto ele elimina o oponente.`,
 }
 
 pkmn.megaMagearnaOriginal = {
