@@ -21011,6 +21011,8 @@ pkmn.greatTusk = {
         spe: 87*1.25,
     },
     hiddenAbility: ability.protosynthesis,
+    signature : move.sandsearStorm,
+    lore: `Registros antigos descrevem um Pokémon idêntico chamado de "A Fera de Terra", cuja simples passagem fazia o chão tremer como um terremoto. Embora sua origem permaneça envolta em mistério, acredita-se que seja um Pokémon de uma era pré-histórica preservada pelo fenômeno da Área Zero.`,
 }
 
 // 985 Scream Tail
@@ -21025,7 +21027,9 @@ pkmn.screamTail = {
         spe: 111*1.25,
     },
     hiddenAbility: ability.protosynthesis,
-    eggMove : move.boomburst
+    eggMove : move.boomburst,
+    signature : move.lovelyKiss,
+    lore: `Acredita-se que este Pokémon seja a forma ancestral de Jigglypuff, mencionada em um obscuro diário de expedição. Seu canto ecoa por grandes distâncias e é capaz de paralisar quem o escuta de medo.`,
 }
 
 // 986 Brute Bonnet
@@ -21040,7 +21044,9 @@ pkmn.bruteBonnet = {
         spe: 55*1.25,
     },
     hiddenAbility: ability.protosynthesis,
-    eggMove : move.cottonGuard
+    eggMove : move.cottonGuard,
+    signature : move.barrage,
+    lore: `Sua verdadeira origem permanece um enigma. Alguns pesquisadores acreditam que Brute Bonnet seja um Pokémon vindo de um passado remoto, enquanto outros afirmam que sua existência desafia todas as teorias evolutivas.`,
 }
 
 // 987 Flutter Mane
@@ -21055,6 +21061,8 @@ pkmn.flutterMane = {
         spe: 135*1.25,
     },
     hiddenAbility: ability.protosynthesis,
+    signature : move.shadowForce,
+    lore: `Relatos antigos descrevem esta criatura como um espírito que vagava pelas trevas muito antes da história registrada. Sua presença é acompanhada por um frio intenso e um silêncio inquietante.`,
 }
 
 // 988 Slither Wing
@@ -21069,6 +21077,8 @@ pkmn.slitherWing = {
         spe: 81*1.25,
     },
     hiddenAbility: ability.protosynthesis,
+    signature : move.attackOrder,
+    lore: `Este Pokémon aparece em antigos registros como uma gigantesca criatura alada que habitava florestas primitivas. Apesar de possuir asas desenvolvidas, acredita-se que preferia correr e atacar pelo solo.`,
 }
 
 // 989 Sandy Shocks
@@ -21083,7 +21093,9 @@ pkmn.sandyShocks = {
         spe: 101*1.25,
     },
     hiddenAbility: ability.protosynthesis,
-    eggMove : move.ionise
+    eggMove : move.ionise,
+    signature : move.boltStrike,
+    lore: `Antigos relatos descrevem esta criatura como um ser metálico que percorria desertos primitivos, envolto por intensos campos magnéticos. Sua presença fazia bússolas e outros instrumentos perderem completamente a direção.`,
 }
 
 // 990 Iron Treads
@@ -21098,6 +21110,8 @@ pkmn.ironTreads = {
         spe: 106*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.boneRush,
+    lore: `Este Pokémon se assemelha a uma criatura metálica descrita em antigos registros de uma expedição. Seu corpo circular e suas lâminas afiadas permitem que atravesse terrenos difíceis em alta velocidade.`,
 }
 
 // 991 Iron Bundle
@@ -21112,6 +21126,8 @@ pkmn.ironBundle = {
         spe: 136*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.iceBall,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos documentos como uma máquina capaz de atravessar regiões geladas. Seu corpo metálico e sua aparência lembram um Pokémon conhecido, mas sua verdadeira origem permanece desconhecida.`,
 }
 
 // 992 Iron Hands
@@ -21126,6 +21142,8 @@ pkmn.ironHands = {
         spe: 50*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.dynamicPunch,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como um poderoso lutador mecânico. Seus enormes braços parecem ter sido projetados para liberar golpes de força extraordinária.`,
 }
 
 // 993 Iron Jugulis
@@ -21140,6 +21158,8 @@ pkmn.ironJugulis = {
         spe: 108*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.ruination,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos documentos como um dragão mecânico de três cabeças. Sua estrutura artificial e seus movimentos precisos sugerem uma tecnologia muito além da compreensão humana.`,
 }
 
 // 994 Iron Moth
@@ -21154,7 +21174,8 @@ pkmn.ironMoth = {
         spe: 110*1.25,
     },
     hiddenAbility: ability.quarkDrive,
-    signature : move.fieryDance
+    signature : move.armorCannon,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como uma mariposa metálica vinda dos céus. Suas asas brilhantes emitem uma luz intensa que pode ser vista a grandes distâncias.`,
 }
 
 // 995 Iron Thorns
@@ -21169,6 +21190,8 @@ pkmn.ironThorns = {
         spe: 72*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.rockWrecker,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como um monstro mecânico de grande poder destrutivo. Seu corpo resistente e seus enormes espinhos parecem ter sido projetados para batalhas intensas.`,
 }
 
 // 996 Frigibax → Arctibax → Baxcalibur
@@ -21347,6 +21370,8 @@ pkmn.roaringMoon = {
         spe: 119*1.25,
     },
     hiddenAbility: ability.protosynthesis,
+    signature : move.darkestLariat,
+    lore: `Uma antiga publicação descreve este Pokémon como uma criatura que se assemelha a Salamence, mas com uma aparência muito mais selvagem e feroz. Sua simples presença é suficiente para fazer outros Pokémon fugirem.`,
 }
 
 // 1006 Iron Valiant
@@ -21361,6 +21386,8 @@ pkmn.ironValiant = {
         spe: 116*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.lovelyKiss,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como um guerreiro mecânico de aparência elegante. Sua combinação de lâminas e armadura sugere que foi criado para enfrentar os oponentes mais poderosos.`,
 }
 
 // 1010 Iron Leaves
@@ -21375,6 +21402,8 @@ pkmn.ironLeaves = {
         spe: 104*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.cottonGuard,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como um guerreiro veloz que atravessava florestas em um piscar de olhos. Suas lâminas em forma de folhas metálicas possuem uma beleza incomum e um poder cortante impressionante.`,
 }
 
 // 1022 Iron Boulder
@@ -21389,6 +21418,8 @@ pkmn.ironBoulder = {
         spe: 124*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.rockPolish,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como um guerreiro rochoso capaz de atravessar terrenos impossíveis. Suas lâminas cristalinas possuem um brilho metálico e uma resistência extraordinária.`,
 }
 
 // 1023 Iron Crown
@@ -21403,6 +21434,8 @@ pkmn.ironCrown = {
         spe: 98*1.25,
     },
     hiddenAbility: ability.quarkDrive,
+    signature : move.kingsShield,
+    lore: `Este Pokémon se assemelha a uma criatura descrita em antigos registros como um ser metálico de aparência nobre. Seu corpo possui uma estrutura semelhante a uma armadura, e sua coroa emite uma energia misteriosa.`,
 }
 
 // 1007 Koraidon
@@ -21443,6 +21476,8 @@ pkmn.walkingWake = {
     spe: 100*1.35,
   },
     hiddenAbility: ability.protosynthesis,
+    signature : move.sparklingAria,
+    lore: `Antigos documentos descrevem esta criatura como uma manifestação primordial dos mares. Seu rugido ecoa por grandes distâncias, anunciando a chegada de tempestades e chuvas torrenciais.`,
 }
 
 // 1020 Gouging Fire
@@ -21457,6 +21492,8 @@ pkmn.gougingFire = {
         spe: 91*1.35,
     },
     hiddenAbility: ability.protosynthesis,
+    signature : move.armorCannon,
+    lore: `Antigos registros descrevem esta criatura como um predador colossal envolto por chamas eternas. Sua simples passagem era suficiente para transformar florestas inteiras em mares de fogo.`,
 }
 
 // 1021 Raging Bolt
@@ -21471,9 +21508,9 @@ pkmn.ragingBolt = {
         spe: 75*1.35,
     },
     hiddenAbility: ability.protosynthesis,
+    signature : move.zingZap,
+    lore: `Antigos manuscritos retratam esta criatura como um dragão colossal que invocava tempestades ao atravessar planícies. O estrondo de seus trovões podia ser ouvido a quilômetros de distância.`,
 }
-
-
 
 // 1011 Dipplin
 
