@@ -16430,6 +16430,8 @@ pkmn.megaZygarde = {
         spe: 100*1.4,
     },
     lore: `Em sua forma completa, ele reúne todas as suas células dispersas para se tornar um guardião poderoso capaz de restaurar o equilíbrio do ecossistema.`,
+    hiddenAbility: ability.wonderGuard,
+    signature : move.roarOfTime,
 }
 
 // 719 Diancie
@@ -18161,8 +18163,6 @@ pkmn.zeraora = {
     lore: `Ele pode gerar eletricidade forte o suficiente para iluminar uma cidade inteira, e se move tão rápido que parece teletransportar.`,
 }
 
-
-
 pkmn.megaZeraora = {
   type: ["electric"],
   bst: {
@@ -18173,9 +18173,10 @@ pkmn.megaZeraora = {
     sdef: 80*1.65,
     spe: 153*1.65,
   },
+    hiddenAbility: ability.galvanize,
+    signature : move.zapCannon,
+    lore: `Sua velocidade supera os limites dos instrumentos de medição. Relatos afirmam que Mega Zeraora derrota seus adversários antes mesmo que o som de seu primeiro movimento possa ser ouvido.`,
 }
-
-
 
 // 808 Meltan → Melmetal
 pkmn.meltan = {
