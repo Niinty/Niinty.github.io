@@ -9826,6 +9826,7 @@ pkmn.staraptor = {
     lore: `Suas garras poderosas podem carregar uma presa do tamanho de um Bidoof adulto enquanto voa a grandes altitudes.`,
 }
 
+//Sem pedra
 pkmn.megaStaraptor = {
     type: ["fighting","flying"],
     bst: {
@@ -9836,6 +9837,8 @@ pkmn.megaStaraptor = {
         sdef: 90*1.2,
         spe: 110*1.2,
     },
+    hiddenAbility: ability.treasureOfRuin,
+    signature : move.braveBird,
     lore: `A megaevolução aumenta drasticamente sua envergadura e força nas garras, tornando-o um predador aéreo ainda mais formidável.`,
 }
 
@@ -12767,6 +12770,7 @@ pkmn.scrafty = {
     lore: `Sua pele endurecida ao redor da cintura funciona como uma armadura, e ele usa investidas de cabeça brutais em combate.`,
 }
 
+//Sem Pedra
 pkmn.megaScrafty = {
   type: ["dark","fighting"],
   bst: {
@@ -20477,7 +20481,6 @@ pkmn.capsakid = {
     eggMove : move.inferno,
 }
 
-
 pkmn.scovillain = {
   type: ["grass", "fire"],
   bst: {
@@ -20492,6 +20495,7 @@ pkmn.scovillain = {
     eggMove : move.inferno,
 }
 
+//Sem pedra
 pkmn.megaScovillain = {
   type: ["grass", "fire"],
   bst: {
@@ -20504,6 +20508,8 @@ pkmn.megaScovillain = {
   },
     hiddenAbility: ability.contrary,
     eggMove : move.inferno,
+    signature : move.torchSong,
+    lore: `Suas duas cabeças mantêm temperamentos diferentes, mas operam em harmonia absoluta para desferir golpes combinados.`,
 }
 
 // 953 Rellor → Rabsca
@@ -20929,8 +20935,7 @@ pkmn.tatsugiriStretchy = {
   // evolve: function() { return { 1: { pkmn: pkmn.megaTatsugiriStretchy, item: item.tatsugirinite } } }
 }
 
-/*
-
+//Sem pedra
 pkmn.megaTatsugiriCurly = {
   type: ["dragon", "water"],
   bst: {
@@ -20940,9 +20945,13 @@ pkmn.megaTatsugiriCurly = {
     satk: 135*1.2,
     sdef: 125*1.2,
     spe: 92*1.2,
-  }
+  },
+    hiddenAbility: ability.hydrolate,
+    signature : move.snipeShot,
+    lore: `Sua ligação mental com Dondozo torna-se perfeita durante a Mega Evolução. Os dois passam a agir como se compartilhassem uma única consciência, executando ataques impossíveis de serem interrompidos.`,
 }
 
+//Sem pedra
 pkmn.megaTatsugiriDroopy = {
   type: ["dragon", "water"],
   bst: {
@@ -20952,9 +20961,13 @@ pkmn.megaTatsugiriDroopy = {
     satk: 135*1.2,
     sdef: 125*1.2,
     spe: 92*1.2,
-  }
+  },
+    hiddenAbility: ability.hydrolate,
+    signature : move.snipeShot,
+    lore: `A energia da Mega Evolução amplifica sua mente calma e paciente. Ele permanece imóvel por horas, aguardando o instante perfeito para atacar com precisão devastadora.`,
 }
 
+//Sem pedra
 pkmn.megaTatsugiriStretchy = {
   type: ["dragon", "water"],
   bst: {
@@ -20964,10 +20977,11 @@ pkmn.megaTatsugiriStretchy = {
     satk: 135*1.2,
     sdef: 125*1.2,
     spe: 92*1.2,
-  }
+  },
+    hiddenAbility: ability.hydrolate,
+    signature : move.snipeShot,
+    lore: `Seu vínculo com Dondozo atinge o auge durante a Mega Evolução. A perfeita sintonia entre os dois permite que reajam instantaneamente a qualquer ameaça, como se compartilhassem os mesmos instintos.`,
 }
-
-*/
 
 // 979 Annihilape
 // 980 Clodsire
