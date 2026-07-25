@@ -17877,6 +17877,7 @@ pkmn.buzzwole = {
     spe: 79*1.25,
   },
     hiddenAbility: ability.beastBoost,
+    signature : move.attackOrder,
     lore: `Seus músculos incrivelmente inchados podem se expandir ainda mais quando ele flexiona, aumentando drasticamente sua força física.`,
 }
 
@@ -17893,6 +17894,7 @@ pkmn.pheromosa = {
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.meFirst,
+    signature : move.meteorAssault,
     lore: `Extremamente veloz e ágil, ela evita qualquer tipo de sujeira, e seus chutes podem quebrar ossos com facilidade impressionante.`,
 }
 
@@ -17909,6 +17911,7 @@ pkmn.xurkitree = {
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.ionise,
+    signature : move.zapCannon,
     lore: `Seu corpo em forma de árvore absorve eletricidade de tempestades, canalizando-a através de seus galhos brilhantes.`,
 }
 
@@ -17925,6 +17928,7 @@ pkmn.celesteela = {
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.anchorShot,
+    signature : move.gearUp,
     lore: `Ela viaja através do espaço usando propulsores em seus braços, e sua altura pode ultrapassar a de um prédio inteiro.`,
 }
 
@@ -17940,6 +17944,7 @@ pkmn.kartana = {
     spe: 120*1.25,
   },
     hiddenAbility: ability.beastBoost,
+    signature : move.seedFlare,
     lore: `Suas bordas são mais afiadas que qualquer lâmina feita por humanos, capazes de cortar através de aço grosso com facilidade.`,
 }
 
@@ -17955,6 +17960,7 @@ pkmn.guzzlord = {
     spe: 43*1.25,
   },
     hiddenAbility: ability.beastBoost,
+    signature : move.fieryWrath,
     lore: `Ele devora tudo o que encontra pela frente, incluindo montanhas inteiras, e nunca parece satisfeito, não importa quanto coma.`,
 }
 
@@ -18099,6 +18105,7 @@ pkmn.poipole = {
     evolve: function() { return { 1: { pkmn: pkmn.naganadel, level: evolutionLevel3 } } },
     hiddenAbility: ability.beastBoost,
     eggMove : move.toxicThread,
+    signature : move.fireLash,
     lore: `Ele dispara agulhas venenosas de sua cabeça, e apesar de sua aparência agressiva, é extremamente amigável com quem confia.`,
 }
 
@@ -18114,6 +18121,7 @@ pkmn.naganadel = {
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.toxicThread,
+    signature : move.fireLash,
     lore: `Seu corpo produz um veneno tão potente que uma única gota pode ser fatal, armazenado em sacos especiais em suas costas.`,
 }
 
@@ -18130,6 +18138,7 @@ pkmn.stakataka = {
   },
     hiddenAbility: ability.beastBoost,
     eggMove : move.noRetreat,
+    signature : move.rockWrecker,
     lore: `Formado por pedras empilhadas que ganharam vida misteriosamente, seu peso imenso pode esmagar qualquer coisa embaixo dele.`,
 }
 
