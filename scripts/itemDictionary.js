@@ -884,7 +884,7 @@ item.megaChunk = {
 
 item.megaCluster = {
     type: "key",
-    info: function() {return `Can be used to catch Pokemon in the Mega-Dimension. Expires after the current Mega-Dimension rotation ends`},
+    info: function() {return `Can be used to catch event Pokemon. Expires after event finishes`},
 }
 
 item.primalEarth = {
