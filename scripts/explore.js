@@ -1660,8 +1660,8 @@ function openMenu(){
 
     if (isDailyCatchAvailable()) {document.getElementById(`menu-daily-catch`).className = `menu-item`} else {document.getElementById(`menu-daily-catch`).className = `menu-item menu-item-locked`}
 
-    if (areas.vsLegendTrainerBrendan.defeated == false)  {document.getElementById(`menu-dimension`).className = `menu-item menu-item-locked`}
-    else {document.getElementById(`menu-dimension`).className = `menu-item`}
+    //if (areas.vsLegendTrainerBrendan.defeated == false)  {document.getElementById(`menu-dimension`).className = `menu-item menu-item-locked`}
+    //else {document.getElementById(`menu-dimension`).className = `menu-item`}
 
 
     if (areas.vsGymLeaderMisty.defeated == false)  {document.getElementById(`menu-item-training`).className = `menu-item menu-item-locked`}
