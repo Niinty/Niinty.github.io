@@ -3350,7 +3350,7 @@ areas.eventMegaGarchomp = {
         
         return nishLoot;
     },
-    category: 1,
+    category: 2,
 }
 
 
