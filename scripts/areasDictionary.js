@@ -6727,9 +6727,6 @@ areas.frontierBattleFactory = {
 
 let rotationDimensionMax = 1;
 
-
-
-
 /*areas.dimensionRift1 = {
     tier : 1,
     type: `dimension`,
@@ -6738,9 +6735,9 @@ let rotationDimensionMax = 1;
     level : 100,
     difficulty: 7,
     uncatchable: true,
-    icon: pkmn.magikarp,
+    icon: pkmn.zygarde10,
     spawns: {
-        common : [pkmn.magikarp],
+        common : [pkmn.zygarde10],
     },
     drops: {
         common : [item.nothing],
