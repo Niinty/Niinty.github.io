@@ -6727,7 +6727,7 @@ areas.frontierBattleFactory = {
 
 let rotationDimensionMax = 1;
 
-/*areas.dimensionRift1 = {
+areas.dimensionRift1 = {
     tier : 1,
     type: `dimension`,
     name: `Weak Dimensional Rift`,
@@ -6763,13 +6763,33 @@ areas.dimensionRaid1 = {
         slot1 : pkmn.nihilego,
         slot1Moves : [move.amnesia.id,move.sludgeWave.id, move.powerGem.id, move.earthPower.id],
     },
-    reward : [pkmn.nihilego],
+
+    // 1. Guarda o item fixo para a interface/tooltip ler e mostrar o ícone na tela
+    displayReward: [pkmn.nihilego],
+    // 2. O reward real calcula a chance na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+
+        // Se quem estiver chamando for a interface gráfica, mostra sempre o prêmio estável na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.nihilego];
+        }
+
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+        // nihilego: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.nihilego);
+        }
+
+        return nishLoot;
+    },
 }
 
 
 
 
-
+/*
 areas.dimensionRift2 = {
     tier : 2,
     type: `dimension`,
