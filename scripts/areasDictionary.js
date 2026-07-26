@@ -1,15 +1,6 @@
 // PokeChill: Area definitions, zone data and difficulty tiers.
 
-
-
-
-
-
 const field = {}
-
-
-
-
 
 //positive
 field.simpleAura = {
@@ -2499,6 +2490,135 @@ areas.ceruleanCave = {
         uncommon : [item.pokeflute]
     },
     category: 2,
+}
+
+//Tier I
+areas.eventMegaAbsolZ = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Absol Z Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAbsolZ,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAbsolZ,
+        slot1Moves : [move.fieryWrath.id,move.ruination.id, move.darkestLariat.id, move.falseSurrender.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaAbsolZ],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAbsolZ];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaAbsolZ: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaAbsolZ);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaCrabominable = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Crabominable Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaCrabominable,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaCrabominable,
+        slot1Moves : [move.meteorAssault.id,move.iceBall.id, move.thunderousKick.id, move.tripleAxel.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaCrabominable],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaCrabominable];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaCrabominable: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaCrabominable);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaEmboar = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Emboar Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaEmboar,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaEmboar,
+        slot1Moves : [move.noRetreat.id,move.torchSong.id, move.hiJumpKick.id, move.fieryDance.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaEmboar],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaEmboar];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaEmboar: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaEmboar);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
 }
 
 //Tier II
