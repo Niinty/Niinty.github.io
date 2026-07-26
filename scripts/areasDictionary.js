@@ -2968,6 +2968,344 @@ areas.eventMegaScizor = {
     category: 1,
 }
 
+areas.eventMegaCharizardX = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Charizard X Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaCharizardX,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaCharizardX,
+        slot1Moves : [move.torchSong.id, move.dragonEnergy.id, move.fireLash.id, move.dragonDarts.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaCharizardX, item.charizarditeX],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaCharizardX, item.charizarditeX];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Charizard X: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaCharizardX);
+        }
+
+        // charizarditeX (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.charizarditeX);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaGallade = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Gallade Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaGallade,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGallade,
+        slot1Moves : [move.freezingGlare.id, move.dynamicPunch.id, move.lusterPurge.id, move.flyingPress.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaGallade, item.galladite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaGallade, item.galladite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Gallade: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaGallade);
+        }
+
+        // galladite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.galladite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaGyarados = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Gyarados Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaGyarados,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGyarados,
+        slot1Moves : [move.clamp.id, move.ruination.id, move.fishiousRend.id, move.darkestLariat.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaGyarados, item.gyaradosite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaGyarados, item.gyaradosite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Gyarados: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaGyarados);
+        }
+
+        // gyaradosite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.gyaradosite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaLopunny = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Lopunny Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaLopunny,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaLopunny,
+        slot1Moves : [move.conversion.id, move.thunderousKick.id, move.hyperDrill.id, move.dynamicPunch.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaLopunny, item.lopunnite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaLopunny, item.lopunnite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Lopunny: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaLopunny);
+        }
+
+        // lopunnite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.lopunnite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaMedicham = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Medicham Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaMedicham,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaMedicham,
+        slot1Moves : [move.luminaCrash.id, move.thunderousKick.id, move.storedPower.id, move.dynamicPunch.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaMedicham, item.medichamite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaMedicham, item.medichamite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Medicham: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaMedicham);
+        }
+
+        // medichamite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.medichamite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaRaichuX = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Raichu X Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaRaichuX,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaRaichuX,
+        slot1Moves : [move.boltStrike.id, move.zingZap.id, move.voltTackle.id, move.thunderCage.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaRaichuX, item.raichutiteX],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaRaichuX, item.raichutiteX];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Raichu X: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaRaichuX);
+        }
+
+        // raichutiteX (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.raichutiteX);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaSteelix = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Steelix Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaSteelix,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaSteelix,
+        slot1Moves : [move.doomDesire.id, move.boneRush.id, move.anchorShot.id, move.sandsearStorm.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaSteelix, item.steelixite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaSteelix, item.steelixite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Steelix: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaSteelix);
+        }
+
+        // steelixite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.steelixite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier III
+
 
 
 
