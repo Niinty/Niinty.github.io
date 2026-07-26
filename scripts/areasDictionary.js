@@ -2401,6 +2401,7 @@ const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
 const tier4difficulty = 600;
+const tier5difficulty = 800;
 
 //Rotation 1
 //Novice - Wild Area
@@ -2475,7 +2476,8 @@ areas.ceruleanCave = {
     },
     drops: {
         common : [item.nothing],
-        uncommon : [item.pokeflute]
+        uncommon : [item.pokeflute],
+        rare : [item.megaShard],
     },
     category: 2,
 }
@@ -4726,6 +4728,50 @@ areas.eventIronValiant = {
         // Mega Tyranitar: 2% de chance (0.02)
         if (Math.random() < 0.02) {
             nishLoot.push(pkmn.ironValiant);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier V
+areas.eventKyogrePrimal = {
+    rotation: 2,
+    type: `event`,
+    name: `Kyogre Primal Showdown`,
+    background : `gym`,
+    icon: pkmn.kyogrePrimal,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=4},
+    unlockDescription : `Requires x2 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.kyogrePrimal,
+        slot1Moves : [move.lovelyKiss.id, move.meteorAssault.id, move.moonblast.id, move.dynamicPunch.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.kyogrePrimal],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.kyogrePrimal];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.kyogrePrimal);
         }
         
         return nishLoot;
