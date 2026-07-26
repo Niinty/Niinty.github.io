@@ -3452,7 +3452,7 @@ areas.eventKartana = {
     icon: pkmn.kartana,
     trainer: true,
     encounter: true,
-    difficulty: tier4difficulty,
+    difficulty: tier3difficulty,
     encounterEffect : function() {item.pokeflute.got-=3},
     unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
     unlockRequirement : function() { return item.pokeflute.got>2 },
@@ -3524,6 +3524,135 @@ areas.eventGreatTusk = {
         // Mega Tyranitar: 2% de chance (0.02)
         if (Math.random() < 0.02) {
             nishLoot.push(pkmn.greatTusk);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventSandyShocks = {
+    rotation: 1,
+    type: `event`,
+    name: `Sandy Shocks Showdown`,
+    background : `gym`,
+    icon: pkmn.sandyShocks,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.pokeflute.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.sandyShocks,
+        slot1Moves : [move.zapCannon.id, move.boneRush.id, move.boltStrike.id, move.headlongRush.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.sandyShocks],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.sandyShocks];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.sandyShocks);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventIronTreads = {
+    rotation: 1,
+    type: `event`,
+    name: `Iron Treads Showdown`,
+    background : `gym`,
+    icon: pkmn.ironTreads,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.pokeflute.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironTreads,
+        slot1Moves : [move.gearUp.id, move.boneRush.id, move.sunsteelStrike.id, move.headlongRush.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironTreads],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironTreads];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.ironTreads);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventIronThorns = {
+    rotation: 1,
+    type: `event`,
+    name: `Iron Thorns Showdown`,
+    background : `gym`,
+    icon: pkmn.ironThorns,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.pokeflute.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironThorns,
+        slot1Moves : [move.rockWrecker.id, move.electroBall.id, move.wrathOfTheLand.id, move.boltStrike.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironThorns],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironThorns];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.ironThorns);
         }
         
         return nishLoot;
