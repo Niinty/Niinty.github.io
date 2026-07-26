@@ -2396,7 +2396,7 @@ areas.sunkenTempleIII = {
     },
 }
 
-const rotationEventMax = 1;
+const rotationEventMax = 2;
 const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
@@ -3702,7 +3702,7 @@ areas.fierySummit = {
 }
 
 //*************************************************************************************************************************************************************
-/*
+
 //Rotation 2
 //Novice Wild Area
 areas.lamodeDogwalk = {
@@ -3769,8 +3769,8 @@ areas.primalFissure = {
     icon: pkmn.salamence,
     difficulty: 5,
     uncatchable: true,
-    unlockDescription : `Defeat Master Trainer Geeta in VS to unlock`,
-    unlockRequirement : function() { return areas.vsMasterTrainerGeeta.defeated },
+    unlockDescription : `Defeat Team Leader Giovanni in VS to unlock`,
+    unlockRequirement : function() { return areas.vsTeamLeaderGiovanni.defeated },
     spawns: {
         common : [pkmn.tyranitar,pkmn.salamence,pkmn.garchomp,pkmn.heatran],
     },
@@ -3780,7 +3780,136 @@ areas.primalFissure = {
     },
     category: 2,
 }
-*/
+
+areas.eventMegaChandelure = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Chandelure Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaChandelure,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaChandelure,
+        slot1Moves : [move.rageFist.id, move.blueFlare.id, move.shadowForce.id, move.bitterBlade.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaChandelure],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaChandelure];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaChandelure: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaChandelure);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaDelphox = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Delphox Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaDelphox,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaDelphox,
+        slot1Moves : [move.kinesis.id, move.bitterBlade.id, move.freezingGlare.id, move.blueFlare.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaDelphox],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaDelphox];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaDelphox: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaDelphox);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaExcadrill = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Excadrill Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaExcadrill,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaExcadrill,
+        slot1Moves : [move.sandsearStorm.id, move.gearUp.id, move.headlongRush.id, move.doomDesire.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaExcadrill],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaExcadrill];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaExcadrill: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaExcadrill);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
 //**************************************************************************************************************************************************************
 /*
 //Rotation 3
