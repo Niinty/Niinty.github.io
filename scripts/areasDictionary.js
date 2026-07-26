@@ -6786,7 +6786,7 @@ areas.dimensionRaid1 = {
     },
 }
 
-areas.dimensionRift2 = {
+/*areas.dimensionRift2 = {
     tier : 2,
     type: `dimension`,
     name: `Dimensional Rift`,
@@ -6912,7 +6912,7 @@ t2: noMercy + stealth rocks + unerve/curse
 t3: noMercy + stealth rocks + pledge
 t4: omniboost + wonder guard
 
-
+*/
 
 
 
