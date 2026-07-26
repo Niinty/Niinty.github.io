@@ -6786,10 +6786,6 @@ areas.dimensionRaid1 = {
     },
 }
 
-
-
-
-/*
 areas.dimensionRift2 = {
     tier : 2,
     type: `dimension`,
@@ -6906,10 +6902,10 @@ areas.dimensionRaid4 = {
     },
     reward : [pkmn.nihilego],
 }
-*/
 
 
-/*
+
+
 field effects:
 t1: noMercy + stealth rocks + thematic
 t2: noMercy + stealth rocks + unerve/curse
@@ -6919,7 +6915,7 @@ t4: omniboost + wonder guard
 
 
 
-*/
+
 
 
 //rotation 1
