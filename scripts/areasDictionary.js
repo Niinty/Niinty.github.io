@@ -3452,7 +3452,7 @@ areas.eventKartana = {
     icon: pkmn.kartana,
     trainer: true,
     encounter: true,
-    difficulty: tier3difficulty,
+    difficulty: tier4difficulty,
     encounterEffect : function() {item.pokeflute.got-=3},
     unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
     unlockRequirement : function() { return item.pokeflute.got>2 },
