@@ -2492,7 +2492,7 @@ areas.eventMegaAbsolZ = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaAbsolZ,
@@ -2535,7 +2535,7 @@ areas.eventMegaCrabominable = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaCrabominable,
@@ -2577,7 +2577,7 @@ areas.eventMegaEmboar = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaEmboar,
@@ -2619,7 +2619,7 @@ areas.eventMegaGolisopod = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaGolisopod,
@@ -2662,7 +2662,7 @@ areas.eventMegaMeowstic = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaMeowstic,
@@ -2705,7 +2705,7 @@ areas.eventMegaScolipede = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaScolipede,
@@ -2748,7 +2748,7 @@ areas.eventMegaScolipede = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaScolipede,
@@ -2791,7 +2791,7 @@ areas.eventMegaVictreebel = {
     difficulty: tier1difficulty,
     encounterEffect : function() {item.epochFeather.got-=1},
     unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>1 },
+    unlockRequirement : function() { return item.epochFeather.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaVictreebel,
@@ -2835,7 +2835,7 @@ areas.eventMegaAbomasnow = {
     difficulty: tier2difficulty,
     encounterEffect : function() {item.epochFeather.got-=2},
     unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaAbomasnow,
@@ -2883,7 +2883,7 @@ areas.eventMegaAltaria = {
     difficulty: tier2difficulty,
     encounterEffect : function() {item.epochFeather.got-=2},
     unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaAltaria,
@@ -2931,7 +2931,7 @@ areas.eventMegaScizor = {
     difficulty: tier2difficulty,
     encounterEffect : function() {item.epochFeather.got-=2},
     unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaScizor,
