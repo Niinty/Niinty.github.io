@@ -952,7 +952,7 @@ const LEGENDS_LIST = [
     },
 
     {
-        id: "zygarde",
+        id: "zygarde10",
         region: "kalos",
         // Custo em Black Apricorns para desbloquear
         unlockCost: 2,
