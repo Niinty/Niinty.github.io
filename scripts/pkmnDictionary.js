@@ -9511,7 +9511,9 @@ pkmn.kyogrePrimal = {
         sdef: 160*1.4,
         spe: 90*1.4,
     },
-    lore: `The oceans made visible, and the force that first shaped the seas across the world. Waves rise and storms gather at its will.`
+    hiddenAbility: ability.hydrolate,
+    signature : move.clamp,
+    lore: `A energia primordial desperta seu verdadeiro poder, permitindo-lhe controlar chuvas torrenciais e oceanos inteiros. Sua simples presença é suficiente para alterar o clima em escala continental.`
 }
 
 // 383 Groudon
@@ -18541,6 +18543,9 @@ pkmn.orbeetleGmax = {
     sdef: 120*1.15,
     spe: 90*1.15,
   },
+    hiddenAbility: ability.imposter,
+    signature : move.attackOrder,
+    lore: `Seu corpo assume a forma de um gigantesco disco semelhante a uma nave espacial. As ondas psíquicas emitidas por seu cérebro são capazes de distorcer o espaço ao redor do campo de batalha.`,
     eggMove: move.magicPowder,
 }
 
