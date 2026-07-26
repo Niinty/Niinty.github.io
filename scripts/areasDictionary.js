@@ -2608,13 +2608,12 @@ areas.eventMegaEmboar = {
     },
     category: 1,
 }
-
-areas.eventMegaGolisop = {
+areas.eventMegaGolisopod = {
     rotation: 1,
     type: `event`,
     name: `Mega Golisopod Mega-Showdown`,
     background : `gym`,
-    icon: pkmn.megaGolisop,
+    icon: pkmn.megaGolisopod,
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
@@ -2623,12 +2622,12 @@ areas.eventMegaGolisop = {
     unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
-        slot1 : pkmn.megaGolisop,
+        slot1 : pkmn.megaGolisopod,
         slot1Moves : [move.attackOrder.id,move.doomDesire.id, move.tailGlow.id, move.anchorShot.id],
     },
     
         // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
-    displayReward: [pkmn.megaGolisop],
+    displayReward: [pkmn.megaGolisopod],
 
     // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
     get reward() {
@@ -2636,15 +2635,15 @@ areas.eventMegaGolisop = {
         
         // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
         if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.megaGolisop];
+            return [pkmn.megaGolisopod];
         }
         
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // megaGolisop: 2.5% de chance (0.025)
+        // Mega Golisopod: 2.5% de chance (0.025)
         if (Math.random() < 0.025) {
-            nishLoot.push(pkmn.megaGolisop);
+            nishLoot.push(pkmn.megaGolisopod);
         }
         
         return nishLoot;
