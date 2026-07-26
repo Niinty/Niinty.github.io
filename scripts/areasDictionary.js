@@ -2490,9 +2490,9 @@ areas.eventMegaAbsolZ = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaAbsolZ,
@@ -2533,9 +2533,9 @@ areas.eventMegaCrabominable = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaCrabominable,
@@ -2575,9 +2575,9 @@ areas.eventMegaEmboar = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaEmboar,
@@ -2609,27 +2609,26 @@ areas.eventMegaEmboar = {
     category: 1,
 }
 
-//Tier II
-areas.eventMegaCamerupt = {
+areas.eventMegaGolisop = {
     rotation: 1,
     type: `event`,
-    name: `Camerupt Mega-Showdown`,
+    name: `Mega Golisopod Mega-Showdown`,
     background : `gym`,
-    icon: pkmn.megaCamerupt,
+    icon: pkmn.megaGolisop,
     trainer: true,
     encounter: true,
-    difficulty: tier2difficulty,
-    encounterEffect : function() {item.epochFeather.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
-    unlockRequirement : function() { return item.epochFeather.got>2 },
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
     level : 100,
     team : {
-        slot1 : pkmn.megaCamerupt,
-        slot1Moves : [move.sunnyDay.id,move.flamethrower.id, move.flameBurst.id, move.earthquake.id],
+        slot1 : pkmn.megaGolisop,
+        slot1Moves : [move.attackOrder.id,move.doomDesire.id, move.tailGlow.id, move.anchorShot.id],
     },
     
         // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
-    displayReward: [pkmn.numel, item.cameruptite],
+    displayReward: [pkmn.megaGolisop],
 
     // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
     get reward() {
@@ -2637,26 +2636,341 @@ areas.eventMegaCamerupt = {
         
         // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
         if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
-            return [pkmn.numel, item.cameruptite];
+            return [pkmn.megaGolisop];
         }
         
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Aerodactyl: 2.5% de chance (0.025)
+        // megaGolisop: 2.5% de chance (0.025)
         if (Math.random() < 0.025) {
-            nishLoot.push(pkmn.numel);
-        }
-
-        // Aerodactylite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
-            nishLoot.push(item.cameruptite);
+            nishLoot.push(pkmn.megaGolisop);
         }
         
         return nishLoot;
     },
     category: 1,
 }
+
+areas.eventMegaMeowstic = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Meowstic Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaMeowstic,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaMeowstic,
+        slot1Moves : [move.kinesis.id, move.freezingGlare.id, move.mistBall.id, move.lusterPurge.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaMeowstic],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaMeowstic];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaMeowstic: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaMeowstic);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaScolipede = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Scolipede Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaScolipede,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaScolipede,
+        slot1Moves : [move.kinesis.id, move.freezingGlare.id, move.mistBall.id, move.lusterPurge.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaScolipede],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaScolipede];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaScolipede: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaScolipede);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaScolipede = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Scolipede Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaScolipede,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaScolipede,
+        slot1Moves : [move.tailGlow.id, move.poisonTail.id, move.megahorn.id, move.barbBarrage.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaScolipede],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaScolipede];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaScolipede: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaScolipede);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaVictreebel = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Victreebel Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaVictreebel,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.epochFeather.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaVictreebel,
+        slot1Moves : [move.seedFlare.id, move.poisonTail.id, move.drumBeating.id, move.barbBarrage.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaVictreebel],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaVictreebel];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaVictreebel: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaVictreebel);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier II
+areas.eventMegaAbomasnow = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Abomasnow Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAbomasnow,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAbomasnow,
+        slot1Moves : [move.seedFlare.id, move.tripleAxel.id, move.drumBeating.id, move.iceBall.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaAbomasnow, item.abomasite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAbomasnow, item.abomasite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Abomasnow: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaAbomasnow);
+        }
+
+        // Abomasite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.abomasite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaAltaria = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Altaria Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAltaria,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAltaria,
+        slot1Moves : [move.roarOfTime.id, move.lightOfRuin.id, move.dragonEnergy.id, move.mistyTerrain.id],
+    },
+    
+        // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaAltaria, item.altarianite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAltaria, item.altarianite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Altaria: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaAltaria);
+        }
+
+        // Altarianite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.altarianite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaScizor = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Scizor Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaScizor,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.epochFeather.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/epochFeather.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.epochFeather.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaScizor,
+        slot1Moves : [move.attackOrder.id, move.gearUp.id, move.megahorn.id, move.kingsShield.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaScizor, item.scizorite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaScizor, item.scizorite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Scizor: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaScizor);
+        }
+
+        // scizorite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.scizorite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+
+
 
 areas.articSummit = {
     rotation: 1,
@@ -2695,7 +3009,7 @@ areas.fierySummit = {
 }
 
 //*************************************************************************************************************************************************************
-
+/*
 //Rotation 2
 //Novice Wild Area
 areas.lamodeDogwalk = {
@@ -2773,9 +3087,9 @@ areas.primalFissure = {
     },
     category: 2,
 }
-
+*/
 //**************************************************************************************************************************************************************
-
+/*
 //Rotation 3
 //Wild Area - Novice
 areas.exoticPond = {
@@ -2853,9 +3167,9 @@ areas.steelTomb = {
     },
     category: 2,
 }
-
+*/
 //*************************************************************************************************************************************************************
-
+/*
 //RAID -Rotation 4
 areas.paupauFestival = {
     rotation: 4,
@@ -2930,9 +3244,9 @@ areas.wormholeSpace = {
     },
     category: 2,
 }
-
+*/
 //*************************************************************************************************************************************************************
-
+/*
 //Rotation 5
 //Wild Zone
 areas.ecosphere = {
@@ -3012,7 +3326,7 @@ areas.fusionPlant = {
     },
     category: 2,
 }
-
+*/
 //************************************************************************************************************************************************************
 
 
