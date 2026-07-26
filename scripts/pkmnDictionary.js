@@ -9542,7 +9542,9 @@ pkmn.groudonPrimal = {
         sdef: 90*1.4,
         spe: 90*1.4,
     },
-    lore: `The continents made whole, and the force that first shaped the land across the world. Mountains rise and deserts stretch at its will.`
+    hiddenAbility: ability.hugePower,
+    signature : move.boneRush,
+    lore: `Envolto por magma incandescente, Primal Groudon libera uma energia tão intensa que transforma o ambiente ao seu redor em um deserto escaldante. Diz-se que nenhuma chuva comum é capaz de apagar seu calor primordial.`
 }
 
 // 384 Rayquaza
