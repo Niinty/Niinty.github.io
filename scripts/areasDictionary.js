@@ -3353,6 +3353,186 @@ areas.eventMegaGarchomp = {
     category: 2,
 }
 
+areas.eventMegaTyranitar = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Tyranitar Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaTyranitar,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.pokeflute.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaTyranitar,
+        slot1Moves : [move.rockWrecker.id, move.darkPulse.id, move.wrathOfTheLand.id, move.embargo.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaTyranitar, item.tyranitarite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaTyranitar, item.tyranitarite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaTyranitar);
+        }
+
+        // tyranitarite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.tyranitarite);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventNihilego = {
+    rotation: 1,
+    type: `event`,
+    name: `Nihilego Showdown`,
+    background : `gym`,
+    icon: pkmn.nihilego,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.pokeflute.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.nihilego,
+        slot1Moves : [move.rockWrecker.id, move.barbBarrage.id, move.wrathOfTheLand.id, move.poisonTail.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.nihilego],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.nihilego];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.nihilego);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventKartana = {
+    rotation: 1,
+    type: `event`,
+    name: `Kartana Showdown`,
+    background : `gym`,
+    icon: pkmn.kartana,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.pokeflute.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.kartana,
+        slot1Moves : [move.seedFlare.id, move.anchorShot.id, move.needleArm.id, move.sunsteelStrike.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.kartana],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.kartana];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.kartana);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier IV
+areas.eventGreatTusk = {
+    rotation: 1,
+    type: `event`,
+    name: `Great Tusk Showdown`,
+    background : `gym`,
+    icon: pkmn.greatTusk,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.pokeflute.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.greatTusk,
+        slot1Moves : [move.sandsearStorm.id, move.meteorAssault.id, move.headlongRush.id, move.noRetreat.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.greatTusk],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.greatTusk];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.greatTusk);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+
+
 
 
 
