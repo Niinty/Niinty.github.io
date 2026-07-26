@@ -3662,6 +3662,50 @@ areas.eventIronThorns = {
     category: 2,
 }
 
+//Tier V
+areas.eventGroudonPrimal = {
+    rotation: 1,
+    type: `event`,
+    name: `Groudon Primal Showdown`,
+    background : `gym`,
+    icon: pkmn.groudonPrimal,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=4},
+    unlockDescription : `Requires x2 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.groudonPrimal,
+        slot1Moves : [move.boneRush.id, move.bitterBlade.id, move.highHorsepower.id, move.brutalClaw.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.groudonPrimal],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.groudonPrimal];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.groudonPrimal);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
 
 
 
