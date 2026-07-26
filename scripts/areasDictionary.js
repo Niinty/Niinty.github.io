@@ -3781,6 +3781,7 @@ areas.primalFissure = {
     category: 2,
 }
 
+//Tier I
 areas.eventMegaChandelure = {
     rotation: 2,
     type: `event`,
@@ -3908,6 +3909,828 @@ areas.eventMegaExcadrill = {
         return nishLoot;
     },
     category: 1,
+}
+
+areas.eventMegaGolurk = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Golurk Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaGolurk,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGolurk,
+        slot1Moves : [move.headlongRush.id, move.shadowForce.id, move.sandsearStorm.id, move.spectralThief.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaGolurk],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaGolurk];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaGolurk: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaGolurk);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaScovillain = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Scovillain Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaScovillain,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaScovillain,
+        slot1Moves : [move.seedFlare.id, move.fireLash.id, move.cottonGuard.id, move.brutalClaw.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaScovillain],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaScovillain];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaScovillain: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaScovillain);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaStarmie = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Starmie Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaStarmie,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaStarmie,
+        slot1Moves : [move.waterShuriken.id, move.psyshieldBash.id, move.clamp.id, move.luminaCrash.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaStarmie],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaStarmie];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // megaStarmie: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaStarmie);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier II
+areas.eventMegaAbsol = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Absol Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAbsol,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAbsol,
+        slot1Moves : [move.fieryWrath.id, move.ruination.id, move.darkestLariat.id, move.falseSurrender.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaAbsol, item.absolite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAbsol, item.absolite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Absol: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaAbsol);
+        }
+
+        // absolite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.absolite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaAmpharos = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Ampharos Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaAmpharos,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAmpharos,
+        slot1Moves : [move.boltStrike.id, move.spacialRend.id, move.zingZap.id, move.dragonEnergy.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaAmpharos, item.ampharosite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAmpharos, item.ampharosite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Ampharos: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaAmpharos);
+        }
+
+        // ampharosite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.ampharosite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaBeedrill = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Beedrill Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaBeedrill,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaBeedrill,
+        slot1Moves : [move.attackOrder.id, move.barbBarrage.id, move.tailGlow.id, move.toxicThread.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaBeedrill, item.beedrillite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaBeedrill, item.beedrillite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Beedrill: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaBeedrill);
+        }
+
+        // beedrillite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.beedrillite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaCharizardY = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Charizard Y Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaCharizardY,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaCharizardY,
+        slot1Moves : [move.torchSong.id, move.dragonAscent.id, move.vCreate.id, move.flyingPress.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaCharizardY, item.charizarditeY],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaCharizardY, item.charizarditeY];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Beedrill: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaCharizardY);
+        }
+
+        // charizarditeY (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.charizarditeY);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaRaichuY = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Raichu Y Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaRaichuY,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaRaichuY,
+        slot1Moves : [move.thunderCage.id, move.zapCannon.id, move.zingZap.id, move.boltStrike.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaRaichuY, item.raichutiteY],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaRaichuY, item.raichutiteY];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Raichu Y: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaRaichuY);
+        }
+
+        // raichutiteY (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.raichutiteY);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaHawlucha = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Hawlucha Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaHawlucha,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaHawlucha,
+        slot1Moves : [move.meteorAssault.id, move.dragonAscent.id, move.thunderousKick.id, move.flyingPress.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaHawlucha, item.hawluchanite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaHawlucha, item.hawluchanite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Hawlucha: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaHawlucha);
+        }
+
+        // hawluchanite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.hawluchanite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaLucario = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Lucario Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaLucario,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaLucario,
+        slot1Moves : [move.meteorAssault.id, move.gearUp.id, move.thunderousKick.id, move.shiftGear.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaLucario, item.lucarionite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaLucario, item.lucarionite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Lucario: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaLucario);
+        }
+
+        // lucarionite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.lucarionite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+areas.eventMegaSwampert = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Swampert Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaSwampert,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.ancientOrchid.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/ancientOrchid.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.ancientOrchid.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaSwampert,
+        slot1Moves : [move.clamp.id, move.boneRush.id, move.jetPunch.id, move.highHorsepower.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaSwampert, item.swampertite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaSwampert, item.swampertite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Lucario: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaSwampert);
+        }
+
+        // swampertite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.swampertite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier III
+areas.eventMegaMetagross = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Metagross Showdown`,
+    background : `gym`,
+    icon: pkmn.megaMetagross,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.primalEarth.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaMetagross,
+        slot1Moves : [move.gearUp.id, move.luminaCrash.id, move.doomDesire.id, move.mimic.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaMetagross, item.metagrossite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaMetagross, item.metagrossite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Metagross: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaMetagross);
+        }
+
+        // metagrossite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.metagrossite);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventBuzzwole = {
+    rotation: 2,
+    type: `event`,
+    name: `Buzzwole Showdown`,
+    background : `gym`,
+    icon: pkmn.buzzwole,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.primalEarth.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.buzzwole,
+        slot1Moves : [move.attackOrder.id, move.noRetreat.id, move.megahorn.id, move.hiJumpKick.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.buzzwole],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.buzzwole];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Buzzwole: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.buzzwole);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventGuzzlord = {
+    rotation: 2,
+    type: `event`,
+    name: `Guzzlord Showdown`,
+    background : `gym`,
+    icon: pkmn.guzzlord,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.primalEarth.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.guzzlord,
+        slot1Moves : [move.fieryWrath.id, move.spacialRend.id, move.ruination.id, move.dragonEnergy.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.guzzlord],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.guzzlord];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Guzzlord: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.guzzlord);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier IV
+areas.eventScreamTail = {
+    rotation: 2,
+    type: `event`,
+    name: `Scream Tail Showdown`,
+    background : `gym`,
+    icon: pkmn.screamTail,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.primalEarth.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.screamTail,
+        slot1Moves : [move.kinesis.id, move.lovelyKiss.id, move.freezingGlare.id, move.lightOfRuin.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.screamTail],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.screamTail];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.screamTail);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventRoaringMoon = {
+    rotation: 2,
+    type: `event`,
+    name: `Roaring Moon Showdown`,
+    background : `gym`,
+    icon: pkmn.roaringMoon,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.primalEarth.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.roaringMoon,
+        slot1Moves : [move.clangingScales.id, move.fieryWrath.id, move.roarOfTime.id, move.ruination.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.roaringMoon],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.roaringMoon];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.roaringMoon);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventIronBundle = {
+    rotation: 2,
+    type: `event`,
+    name: `Iron Bundle Showdown`,
+    background : `gym`,
+    icon: pkmn.ironBundle,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.primalEarth.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironBundle,
+        slot1Moves : [move.tripleAxel.id, move.clamp.id, move.iceBall.id, move.waterShuriken.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironBundle],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironBundle];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.ironBundle);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+areas.eventIronValiant = {
+    rotation: 2,
+    type: `event`,
+    name: `Iron Valiant Showdown`,
+    background : `gym`,
+    icon: pkmn.ironValiant,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.primalEarth.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/primalEarth.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.primalEarth.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironValiant,
+        slot1Moves : [move.lovelyKiss.id, move.meteorAssault.id, move.moonblast.id, move.dynamicPunch.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironValiant],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironValiant];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.ironValiant);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
 }
 
 //**************************************************************************************************************************************************************
