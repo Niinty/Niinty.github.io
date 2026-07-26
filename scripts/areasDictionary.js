@@ -3305,6 +3305,53 @@ areas.eventMegaSteelix = {
 }
 
 //Tier III
+areas.eventMegaGarchomp = {
+    rotation: 1,
+    type: `event`,
+    name: `Mega Garchomp Mega-Showdown`,
+    background : `gym`,
+    icon: pkmn.megaGarchomp,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.pokeflute.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockRequirement : function() { return item.pokeflute.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGarchomp,
+        slot1Moves : [move.clangingScales.id, move.boneRush.id, move.dragonDarts.id, move.sandsearStorm.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaGarchomp, item.garchompite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaGarchomp, item.garchompite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Garchomp: 2.5% de chance (0.025)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaGarchomp);
+        }
+
+        // garchompite (Pedra Mega): 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.garchompite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
 
 
 
