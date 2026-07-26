@@ -1703,13 +1703,13 @@ function openMenu(){
         document.getElementById(`menu-item-gyms`).style.filter = "brightness(0.6)"
         document.getElementById(`menu-item-team`).style.filter = "brightness(0.6)"
         document.getElementById(`menu-item-training`).style.filter = "brightness(0.6)"
-        document.getElementById(`menu-dimension`).style.filter = "brightness(0.6)"
+       // document.getElementById(`menu-dimension`).style.filter = "brightness(0.6)"
     } else {
         document.getElementById(`menu-item-vs`).style.filter = "brightness(1)"
         document.getElementById(`menu-item-gyms`).style.filter = "brightness(1)"
         document.getElementById(`menu-item-team`).style.filter = "brightness(1)"
         document.getElementById(`menu-item-training`).style.filter = "brightness(1)"
-        document.getElementById(`menu-dimension`).style.filter = "brightness(1)"
+        //document.getElementById(`menu-dimension`).style.filter = "brightness(1)"
     }
 
     if (saved.currentArea == areas.training.id) {
