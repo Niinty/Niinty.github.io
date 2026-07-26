@@ -6929,7 +6929,7 @@ t4: omniboost + wonder guard
 //t3: mega legends, primals, dawn wings, etc
 //t4: u necrozam
 
-/*areas.dimensionPalkia = {
+areas.dimensionPalkia = {
     type: `dimensionBlueprint`,
     icon: pkmn.palkia,
     tier: 1,
@@ -6943,9 +6943,9 @@ t4: omniboost + wonder guard
     reward : [pkmn.palkia, item.whiteApricorn],
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.reverseField.id],
     skills : {3 : skill.ironSpirit.id}
-}*/
+}
 
-/*areas.dimensionPikachuGmax = {
+areas.dimensionPikachuGmax = {
     type: `dimensionBlueprint`,
     icon: pkmn.pikachuGmax,
     tier: 2,
@@ -6959,9 +6959,9 @@ t4: omniboost + wonder guard
     reward : [pkmn.pikachuGmax, item.whiteApricorn],
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.weakeningCurse.id ],
     skills : {3 : skill.ironWill.id, 2 : skill.electroblast.id}
-}*/
+}
 
-/*areas.dimensionPikachuGmax = {
+areas.dimensionPikachuGmax = {
     type: `dimensionBlueprint`,
     icon: pkmn.pikachuGmax,
     tier: 2,
@@ -6980,7 +6980,7 @@ t4: omniboost + wonder guard
     },
     fieldEffect : [field.noMercy.id, field.stealthRocks.id, field.harshSun.id],
     skills : {3 : skill.ironWill.id, 2 : skill.pyroblast.id}
-}*/
+}
 
 /*areas.dimensionKyuremWhite = {
     type: `dimensionBlueprint`,
