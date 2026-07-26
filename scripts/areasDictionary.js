@@ -2468,8 +2468,8 @@ areas.ceruleanCave = {
     icon: pkmn.golem,
     difficulty: 5,
     uncatchable: true,
-    unlockDescription : `Defeat Master Trainer Geeta in VS to unlock`,
-    unlockRequirement : function() { return areas.vsMasterTrainerGeeta.defeated },
+    unlockDescription : `Defeat Team Leader Giovanni in VS to unlock`,
+    unlockRequirement : function() { return areas.vsTeamLeaderGiovanni.defeated },
     spawns: {
         common : [pkmn.golem,pkmn.megaGarchomp,pkmn.crobat,pkmn.chansey],
     },
