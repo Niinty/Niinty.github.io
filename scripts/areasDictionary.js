@@ -2477,7 +2477,7 @@ areas.ceruleanCave = {
     drops: {
         common : [item.nothing],
         uncommon : [item.pokeflute],
-        rare : [item.megaShard],
+        rare : [item.megaCluster],
     },
     category: 2,
 }
@@ -3778,7 +3778,8 @@ areas.primalFissure = {
     },
     drops: {
         common : [item.nothing],
-        uncommon : [item.primalEarth]
+        uncommon : [item.primalEarth],
+        rare : [item.megaCluster],
     },
     category: 2,
 }
@@ -4745,13 +4746,13 @@ areas.eventKyogrePrimal = {
     trainer: true,
     encounter: true,
     difficulty: tier5difficulty,
-    encounterEffect : function() {item.megaShard.got-=4},
-    unlockDescription : `Requires x2 <img src="img/items/megaShard.png"> Mega Shard to enter`,
-    unlockRequirement : function() { return item.megaShard.got>3 },
+    encounterEffect : function() {item.megaCluster.got-=4},
+    unlockDescription : `Requires x2 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.kyogrePrimal,
-        slot1Moves : [move.lovelyKiss.id, move.meteorAssault.id, move.moonblast.id, move.dynamicPunch.id],
+        slot1Moves : [move.waterShuriken.id, move.clamp.id, move.jetPunch.id, move.fishiousRend.id],
     },
     
     // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
