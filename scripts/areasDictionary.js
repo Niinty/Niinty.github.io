@@ -2396,7 +2396,7 @@ areas.sunkenTempleIII = {
     },
 }
 
-const rotationEventMax = 5;
+const rotationEventMax = 1;
 const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
