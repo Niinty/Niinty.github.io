@@ -669,6 +669,62 @@ const GYMS_LEADERS = [
         },
     }, 
 
+	//Unova
+	{
+        areaId: "vsGymLeaderCilan",
+        region: "unova",
+        name: "Gym Leader Cilan",
+        city: "Striaton City",
+        sprite: "cilan",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Grass.",
+        team: {
+            slot1: pkmn.leafeon, slot1Moves: [move.seedFlare.id, move.tropKick.id, move.kinesis.id, move.chloroblast.id],
+            slot2: pkmn.sceptile, slot2Moves: [move.barrage.id, move.tropKick.id, move.chloroblast.id, move.magicalLeaf.id],
+            slot3: pkmn.venusaur, slot3Moves: [move.seedFlare.id, move.toxic.id, move.cottonGuard.id, move.trailblaze.id],
+            slot4: pkmn.torterra, slot4Moves: [move.boneRush.id, move.solarBeam.id, move.headlongRush.id, move.barrage.id],
+            slot5: pkmn.breloom, slot5Moves: [move.drumBeating.id, move.thunderousKick.id, move.tropKick.id, move.dynamicPunch.id],
+            slot6: pkmn.ferrothorn, slot6Moves: [move.barrage.id, move.kingsShield.id, move.magicalLeaf.id, move.shiftGear.id],
+        },
+    }, 
+	{
+        areaId: "vsGymLeaderChili",
+        region: "unova",
+        name: "Gym Leader Chili",
+        city: "Striaton City",
+        sprite: "chili",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Fire.",
+        team: {
+            slot1: pkmn.volcarona, slot1Moves: [move.xScissor.id, move.flamethrower.id, move.bugBuzz.id, move.brutalClaw.id],
+            slot2: pkmn.blaziken, slot2Moves: [move.bitterBlade.id, move.thunderousKick.id, move.vCreate.id, move.dynamicPunch.id],
+            slot3: pkmn.infernape, slot3Moves: [move.noRetreat.id, move.hiJumpKick.id, move.brutalClaw.id, move.bitterBlade.id],
+            slot4: pkmn.arcanine, slot4Moves: [move.fireFang.id, move.fireSpin.id, move.flamethrower.id, move.flareBlitz.id],
+            slot5: pkmn.chandelure, slot5Moves: [move.flamethrower.id, move.fireFang.id, move.fireBlast.id, move.fireSpin.id],
+            slot6: pkmn.reshiram, slot6Moves: [move.fireBlast.id, move.flameBurst.id, move.vCreate.id, move.flamethrower.id],
+        },
+    }, 
+	{
+        areaId: "vsGymLeaderCress",
+        region: "unova",
+        name: "Gym Leader Cress",
+        city: "Rustboro City",
+        sprite: "cress",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Water.",
+        team: {
+            slot1: pkmn.kyogre, slot1Moves: [move.sparklingAria.id, move.snipeShot.id, move.tripleDive.id, move.razorShell.id],
+            slot2: pkmn.sharpedo, slot2Moves: [move.fieryWrath.id, move.snipeShot.id, move.darkestLariat.id, move.razorShell.id],
+            slot3: pkmn.milotic, slot3Moves: [move.hydroCannon.id, move.scald.id, move.snipeShot.id, move.razorShell.id],
+            slot4: pkmn.swampert, slot4Moves: [move.boneRush.id, move.sparklingAria.id, move.sandsearStorm.id, move.tripleDive.id],
+            slot5: pkmn.starmie, slot5Moves: [move.waterShuriken.id, move.aquaStep.id, move.surf.id, move.sparklingAria.id],
+            slot6: pkmn.palkia, slot6Moves: [move.dragonAscent.id, move.snipeShot.id, move.spacialRend.id, move.hydroCannon.id],
+        },
+    },
+
   /*
     {
         areaId: "vsGymLeaderRoxanne",
