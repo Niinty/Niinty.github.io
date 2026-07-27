@@ -4745,6 +4745,21 @@ pkmn.giovanniMewtwo = {
     signature : move.kinesis
 }
 
+pkmn.shadowMewtwo = {
+    type: ["psychic"],
+    bst: {
+        hp: 106*1.5,
+        atk: 110*1.5,
+        def: 90*1.5,
+        satk: 154*1.5,
+        sdef: 90*1.5,
+        spe: 130*1.5,
+    },
+    hiddenAbility: ability.darkAura,
+    lore: `Dizem que sua energia sombria eclipsa até mesmo sua genialidade. Quando seus olhos brilham em púrpura, sua mente entra em um estado de destruição absoluta, onde nada além do silêncio permanece após seu ataque.`,
+    signature : move.ruination,
+}
+
 pkmn.megaMewtwoX = {
     type: ["psychic","fighting"],
     bst: {
@@ -6907,6 +6922,21 @@ pkmn.lugia = {
     signature: move.aeroblast,
     hiddenAbility: ability.hydrolate,
     lore: `As asas de Lugia possuem um poder devastador — um simples bater de asas pode destruir casas comuns. Por isso, este Pokémon escolhe viver longe da vista de todos, nas profundezas do mar.`,
+}
+
+pkmn.shadowLugia = {
+    type: ["dark","flying"],
+    bst: {
+        hp: 106*1.5,
+        atk: 90*1.5,
+        def: 130*1.5,
+        satk: 90*1.5,
+        sdef: 154*1.5,
+        spe: 110*1.5,
+    },
+    signature: move.fieryWrath,
+    hiddenAbility: ability.gloomilate,
+    lore: `Seu coração foi selado por uma energia obscura criada artificialmente. Dominado por instintos destrutivos, ele espalha uma aura sombria que faz até os mares e os ventos perderem sua tranquilidade.`,
 }
 
 // Lendário
