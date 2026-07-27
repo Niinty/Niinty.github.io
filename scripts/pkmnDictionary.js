@@ -14321,6 +14321,8 @@ pkmn.tornadusTherian = {
         sdef: 90*1.3,
         spe: 121*1.3,
     },
+    hiddenAbility: ability.multiscale,
+    signature : move.dragonAscent,
     lore: `Nesta forma, ele assume uma aparência mais robusta, controlando tornados poderosos com força física ainda maior.`,
 }
 
@@ -14351,6 +14353,7 @@ pkmn.thundurusTherian = {
         spe: 121*1.3,
     },
     hiddenAbility: ability.prankster,
+    signature : move.zapCannon,
     lore: `Nesta forma, seu corpo se torna mais alongado, permitindo que ele controle relâmpagos com precisão devastadora.`,
 }
 
@@ -14380,6 +14383,8 @@ pkmn.landorusTherian = {
         sdef: 110*1.3,
         spe: 91*1.3,
     },
+    hiddenAbility: ability.multiscale,
+    signature : move.boneRush,
     lore: `Nesta forma, ele adquire uma aparência mais terrena, capaz de fertilizar solos áridos com sua energia natural.`,
 }
 
