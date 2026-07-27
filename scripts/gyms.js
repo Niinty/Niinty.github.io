@@ -360,7 +360,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderRoxanne",
         region: "hoenn",
-        name: "Gym Leader Roxanne",
+        name: "Leader Roxanne",
         city: "Rustboro City",
         sprite: "roxanne",
         background: "gym",
@@ -379,7 +379,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderBrawly",
         region: "hoenn",
-        name: "Gym Leader Brawly",
+        name: "Leader Brawly",
         city: "Dewford Town",
         sprite: "brawly",
         background: "gym",
@@ -398,7 +398,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderWattson",
         region: "hoenn",
-        name: "Gym Leader Wattson",
+        name: "Leader Wattson",
         city: "Mauville City",
         sprite: "wattson",
         background: "gym",
@@ -417,7 +417,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderFlannery",
         region: "hoenn",
-        name: "Gym Leader Flannery",
+        name: "Leader Flannery",
         city: "Lavaridge City",
         sprite: "flannery",
         background: "gym",
@@ -435,7 +435,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderNorman",
         region: "hoenn",
-        name: "Gym Leader Norman",
+        name: "Leader Norman",
         city: "Petalburg City",
         sprite: "norman",
         background: "gym",
@@ -453,7 +453,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderWinona",
         region: "hoenn",
-        name: "Gym Leader Winona",
+        name: "Leader Winona",
         city: "Fortree City",
         sprite: "winona",
         background: "gym",
@@ -471,7 +471,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderTate&Liza",
         region: "hoenn",
-        name: "Gym Leader Tate & Liza",
+        name: "Leader Tate & Liza",
         city: "Mossdeep City",
         sprite: "tateandliza",
         background: "gym",
@@ -489,7 +489,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderWallace",
         region: "hoenn",
-        name: "Gym Leader Wallace",
+        name: "Leader Wallace",
         city: "Sootopolis City",
         sprite: "wallace",
         background: "gym",
@@ -507,7 +507,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderJuan",
         region: "hoenn",
-        name: "Gym Leader Juan",
+        name: "Leader Juan",
         city: "Rustboro City",
         sprite: "juan",
         background: "gym",
@@ -527,7 +527,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderRoark",
         region: "sinnoh",
-        name: "Gym Leader Roark",
+        name: "Leader Roark",
         city: "Oreburgh City",
         sprite: "roark",
         background: "gym",
@@ -545,7 +545,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderGardenia",
         region: "sinnoh",
-        name: "Gym Leader Gardenia",
+        name: "Leader Gardenia",
         city: "Eterna City",
         sprite: "gardenia",
         background: "gym",
@@ -563,7 +563,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderMaylene",
         region: "sinnoh",
-        name: "Gym Leader Maylene",
+        name: "Leader Maylene",
         city: "Veilstone City",
         sprite: "maylene",
         background: "gym",
@@ -581,7 +581,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderCrasherWake",
         region: "sinnoh",
-        name: "Gym Leader Crasher Wake",
+        name: "Leader Crasher Wake",
         city: "Pastoria City",
         sprite: "crasherWake",
         background: "gym",
@@ -599,7 +599,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderFantina",
         region: "sinnoh",
-        name: "Gym Leader Fantina",
+        name: "Leader Fantina",
         city: "Hearthome City",
         sprite: "fantina",
         background: "gym",
@@ -617,7 +617,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderByron",
         region: "sinnoh",
-        name: "Gym Leader Byron",
+        name: "Leader Byron",
         city: "Canalave City",
         sprite: "byron",
         background: "gym",
@@ -635,7 +635,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderCandice",
         region: "sinnoh",
-        name: "Gym Leader Candice",
+        name: "Leader Candice",
         city: "Snowpoint City",
         sprite: "candice",
         background: "gym",
@@ -653,7 +653,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderVolkner",
         region: "sinnoh",
-        name: "Gym Leader Volkner",
+        name: "Leader Volkner",
         city: "Sunyshore City",
         sprite: "volkner",
         background: "gym",
@@ -673,7 +673,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderCilan",
         region: "unova",
-        name: "Gym Leader Cilan",
+        name: "Leader Cilan",
         city: "Striaton City",
         sprite: "cilan",
         background: "gym",
@@ -691,7 +691,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderChili",
         region: "unova",
-        name: "Gym Leader Chili",
+        name: "Leader Chili",
         city: "Striaton City",
         sprite: "chili",
         background: "gym",
@@ -709,7 +709,7 @@ const GYMS_LEADERS = [
 	{
         areaId: "vsGymLeaderCress",
         region: "unova",
-        name: "Gym Leader Cress",
+        name: "Leader Cress",
         city: "Rustboro City",
         sprite: "cress",
         background: "gym",
