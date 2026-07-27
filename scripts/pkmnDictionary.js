@@ -6125,7 +6125,7 @@ pkmn.dududunsparce = {
     spe: 55,
   },
     signature : move.hyperDrill,
-    lore: ``,
+    lore: `Uma variação extremamente rara com três segmentos em vez de dois, considerada um símbolo raro de sorte extrema por quem a encontra.`,
 }
 
 // 207 Gligar → Gliscor
@@ -6219,7 +6219,7 @@ pkmn.hisuianQwilfish = {
     evolve: function() { return { 1: { pkmn: pkmn.overqwil, level: evolutionLevel2 } } },
     signature : move.barbBarrage,
     hiddenAbility: ability.merciless,
-    lore: ``,
+    lore: `Uma forma antiga com espinhos mais duros e afiados, adaptada para nadar contra correntes fortes de rios turbulentos.`,
 }
 
 pkmn.overqwil = {
@@ -6511,7 +6511,7 @@ pkmn.galarianCorsola = {
         spe: 30,
     },
     evolve: function() { return { 1: { pkmn: pkmn.cursola, level: evolutionLevel2 } } },
-    lore: ``,
+    lore: `Corrompida pela poluição que destruiu seu recife original, ela agora vaga como um espírito rancoroso preso entre a vida e a morte.`,
 }
 
 pkmn.cursola = {
@@ -7195,6 +7195,7 @@ pkmn.galarianZigzagoon = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.galarianLinoone, level: evolutionLevel1 } } },
     hiddenAbility: ability.blackPelt,
+    lore: `Uma forma ancestral mais selvagem e agressiva, movendo-se em padrões erráticos difíceis de prever mesmo para predadores experientes.`,
 }
 
 pkmn.linoone = {
@@ -7222,6 +7223,7 @@ pkmn.galarianLinoone = {
     },
     evolve: function() { return { 1: { pkmn: pkmn.obstagoon, level: evolutionLevel3 } } },
     hiddenAbility: ability.blackPelt,
+    lore: `Esta forma ancestral é extremamente rápida e implacável, atacando com investidas diretas sem qualquer hesitação.`,
 }
 
 pkmn.obstagoon = {
@@ -9060,6 +9062,7 @@ pkmn.snoruntEvent = {
     },
     hiddenAbility: ability.moody,
     signature : move.snowscape,
+    lore: `Uma variação especial vista apenas em ocasiões raras, com um brilho sutil diferente do habitual em seu capuz de neve.`,
 }
 
 pkmn.glalie = {
@@ -10104,6 +10107,7 @@ pkmn.burmySandy = {
         } 
     },
     eggMove: move.mudSport,
+    lore: `Esta forma constrói sua casca usando areia e terra, tornando-se mais resistente a ataques físicos do que as outras variantes.`,
 }
 
 pkmn.burmyTrash = {
@@ -10122,6 +10126,7 @@ pkmn.burmyTrash = {
             2: { pkmn: pkmn.mothim, item: item.shinyStone }
         } 
     },
+    lore: `Esta forma constrói sua casca usando restos metálicos e lixo, adaptando-se a ambientes urbanos poluídos.`,
 }
 
 pkmn.wormadam = {
@@ -10365,6 +10370,7 @@ pkmn.gastrodonEast = {
         spe: 39,
     },
     hiddenAbility: ability.gooey,
+    lore: `Esta variante costeira desenvolveu um corpo mais viscoso e resistente, adaptado às correntes mais fortes do lado leste.`,
 }
 
 // 424 Ambipom
@@ -12569,6 +12575,7 @@ pkmn.basculinWhite = {
     }
   },
   hiddenAbility: ability.adaptability,
+  lore: `Uma variação rara e pacífica desta espécie, raramente vista brigando com as formas rivais mais comuns.`,
 }
 
 pkmn.basculegionM = {
@@ -12972,6 +12979,7 @@ pkmn.garbodorGmax = {
     spe: 75*1.15,
   },
     hiddenAbility: ability.toxicBoost,
+    lore: `A energia Dynamax faz seu corpo de lixo compactado crescer a proporções monumentais, liberando toxinas em uma escala alarmante.`,
 }
 
 // 570 Zorua → Zoroark
@@ -13257,9 +13265,10 @@ pkmn.deerlingAutumn = {
     sdef: 50,
     spe: 75,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.sawsbuckAutumn, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.sawsbuckAutumn, level: evolutionLevel2 } } },
     hiddenAbility: ability.sereneGrace,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: `Durante o outono, sua pelagem assume tons alaranjados que se misturam perfeitamente com as folhas caídas ao redor.`,
 }
 
 pkmn.deerlingSpring = {
@@ -13272,9 +13281,10 @@ pkmn.deerlingSpring = {
     sdef: 50,
     spe: 75,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.sawsbuckSpring, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.sawsbuckSpring, level: evolutionLevel2 } } },
     hiddenAbility: ability.sereneGrace,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: `Durante a primavera, sua pelagem floresce em tons verdes vibrantes, refletindo o renascimento da vegetação ao seu redor.`,
 }
 
 pkmn.deerlingWinter = {
@@ -13287,9 +13297,10 @@ pkmn.deerlingWinter = {
     sdef: 50,
     spe: 75,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.sawsbuckWinter, level: evolutionLevel2 } } },
+    evolve: function() { return { 1: { pkmn: pkmn.sawsbuckWinter, level: evolutionLevel2 } } },
     hiddenAbility: ability.sereneGrace,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: `Durante o inverno, sua pelagem se torna branca como a neve, permitindo camuflagem perfeita em paisagens congeladas.`,
 }
 
 pkmn.sawsbuck = {
@@ -13318,7 +13329,8 @@ pkmn.sawsbuckAutumn = {
     spe: 95,
   },
     hiddenAbility: ability.sereneGrace,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: `No outono, seus chifres florescem em tons dourados e alaranjados, e ele migra em busca de território mais quente.`,
 }
 
 pkmn.sawsbuckSpring = {
@@ -13332,7 +13344,8 @@ pkmn.sawsbuckSpring = {
     spe: 95,
   },
     hiddenAbility: ability.sereneGrace,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: `Na primavera, seus chifres florescem com flores vibrantes, atraindo parceiros durante a época de acasalamento.`,
 }
 
 pkmn.sawsbuckWinter = {
@@ -13346,7 +13359,8 @@ pkmn.sawsbuckWinter = {
     spe: 95,
   },
     hiddenAbility: ability.sereneGrace,
-    eggMove : move.camouflage
+    eggMove : move.camouflage,
+    lore: `No inverno, seus chifres perdem as flores, tornando-se galhos nus adaptados para sobreviver ao frio intenso.`,
 }
 
 // 587 Emolga
@@ -13376,6 +13390,7 @@ pkmn.emolgaEvent = {
     sdef: 60,
     spe: 103,
   },
+    lore: `Uma variação especial vista apenas em eventos raros, com uma membrana de planeio que brilha sutilmente sob a luz do sol.`,
 }
 
 // 588 Karrablast → Escavalier
@@ -14392,7 +14407,8 @@ pkmn.enamorusTherian = {
         satk: 135*1.3,
         sdef: 140*1.3,
         spe: 46*1.3,
-    }
+    },
+    lore: `Nesta forma, seu corpo se torna mais robusto e guerreiro, controlando emoções com uma intensidade quase avassaladora.`,
 }
 
 // 643 Reshiram
@@ -14561,6 +14577,7 @@ pkmn.genesectDouse = {
     spe: 99,
   },
     hiddenAbility: ability.megaLauncher,
+    lore: `Equipado com um Disco de Água, seu canhão nas costas dispara jatos pressurizados capazes de perfurar metal grosso.`,
 }
 
 pkmn.genesectShock = {
@@ -14574,6 +14591,7 @@ pkmn.genesectShock = {
     spe: 99,
   },
     hiddenAbility: ability.megaLauncher,
+    lore: `Equipado com um Disco Elétrico, seu canhão nas costas dispara descargas elétricas capazes de paralisar instantaneamente.`,
 }
 
 pkmn.genesectBurn = {
@@ -14587,6 +14605,7 @@ pkmn.genesectBurn = {
     spe: 99,
   },
     hiddenAbility: ability.megaLauncher,
+    lore: `Equipado com um Disco de Fogo, seu canhão nas costas dispara rajadas de chamas capazes de incinerar qualquer coisa em seu caminho.`,
 }
 
 pkmn.genesectChill = {
@@ -14600,6 +14619,7 @@ pkmn.genesectChill = {
     spe: 99,
   },
     hiddenAbility: ability.megaLauncher,
+    lore: `Equipado com um Disco de Gelo, seu canhão nas costas dispara rajadas geladas capazes de congelar instantaneamente qualquer alvo.`,
 }
 
 */
@@ -14784,7 +14804,8 @@ pkmn.greninjaAsh = {
     spe: 142,
   },
     hiddenAbility: ability.protean,
-    signature : move.waterShuriken
+    signature : move.waterShuriken,
+    lore: `Formado por um vínculo profundo com seu treinador, esta forma libera uma energia especial que o torna praticamente invisível em combate.`,
 }
 
 pkmn.megaGreninja = {
@@ -14938,6 +14959,7 @@ pkmn.vivillonArchipelago = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão encontrado em regiões de arquipélagos isolados, com manchas que lembram ilhas dispersas pelo oceano.`,
 }
 
 pkmn.vivillonContinental = {
@@ -14951,6 +14973,7 @@ pkmn.vivillonContinental = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão típico de vastas regiões continentais, com listras que remetem a extensas cadeias montanhosas.`,
 }
 
 pkmn.vivillonElegant = {
@@ -14964,6 +14987,7 @@ pkmn.vivillonElegant = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão refinado tradicionalmente associado a cerimônias formais em regiões urbanas antigas.`,
 }
 
 pkmn.vivillonFancy = {
@@ -14977,6 +15001,7 @@ pkmn.vivillonFancy = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão extremamente raro e vibrante, muito procurado por colecionadores ao redor do mundo.`,
 }
 
 pkmn.vivillonGarden = {
@@ -14990,6 +15015,7 @@ pkmn.vivillonGarden = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão floral delicado, comum em regiões com clima temperado e jardins bem cuidados.`,
 }
 
 pkmn.vivillonHighPlains = {
@@ -15003,6 +15029,7 @@ pkmn.vivillonHighPlains = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão árido, adaptado a regiões de planaltos elevados com pouca vegetação.`,
 }
 
 pkmn.vivillonIcySnow = {
@@ -15016,6 +15043,7 @@ pkmn.vivillonIcySnow = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão cristalino que reflete o brilho da neve em regiões extremamente frias.`,
 }
 
 pkmn.vivillonJungle = {
@@ -15029,6 +15057,7 @@ pkmn.vivillonJungle = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão vibrante de folhagem densa, comum em regiões tropicais úmidas e florestas fechadas.`,
 }
 
 pkmn.vivillonMarine = {
@@ -15042,6 +15071,7 @@ pkmn.vivillonMarine = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão azul profundo, associado a regiões costeiras próximas a grandes corpos d'água.`,
 }
 
 pkmn.vivillonModern = {
@@ -15055,6 +15085,7 @@ pkmn.vivillonModern = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão geométrico contemporâneo, encontrado em regiões urbanas altamente desenvolvidas.`,
 }
 
 pkmn.vivillonMonsoon = {
@@ -15068,6 +15099,7 @@ pkmn.vivillonMonsoon = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão que remete a fortes chuvas sazonais, comum em regiões tropicais com estações bem definidas.`,
 }
 
 pkmn.vivillonOcean = {
@@ -15081,6 +15113,7 @@ pkmn.vivillonOcean = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão ondulado que lembra correntes marítimas, encontrado em regiões costeiras abertas.`,
 }
 
 pkmn.vivillonPokeball = {
@@ -15094,6 +15127,7 @@ pkmn.vivillonPokeball = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão extremamente raro que lembra uma Poké Bola, avistado apenas em circunstâncias muito específicas.`,
 }
 
 pkmn.vivillonPolar = {
@@ -15107,6 +15141,7 @@ pkmn.vivillonPolar = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão branco quase uniforme, perfeito para camuflagem em regiões polares congeladas.`,
 }
 
 pkmn.vivillonRiver = {
@@ -15120,6 +15155,7 @@ pkmn.vivillonRiver = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão fluido que lembra o curso sinuoso de grandes rios, comum em regiões ribeirinhas.`,
 }
 
 pkmn.vivillonSandstorm = {
@@ -15133,6 +15169,7 @@ pkmn.vivillonSandstorm = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão amarelado que remete a tempestades de areia, comum em regiões desérticas áridas.`,
 }
 
 pkmn.vivillonSavanna = {
@@ -15146,6 +15183,7 @@ pkmn.vivillonSavanna = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão que lembra vastas planícies douradas, comum em regiões de savana com poucas árvores.`,
 }
 
 pkmn.vivillonSun = {
@@ -15159,6 +15197,7 @@ pkmn.vivillonSun = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão vibrante inspirado no sol, comum em regiões de clima extremamente quente e ensolarado.`,
 }
 
 pkmn.vivillonTundra = {
@@ -15172,6 +15211,7 @@ pkmn.vivillonTundra = {
     spe: 100,
   },
     hiddenAbility: ability.tintedLens,
+    lore: `Suas asas exibem um padrão pálido adaptado a regiões geladas e desprovidas de vegetação densa.`,
 }
 
 // 667 Litleo → Pyroar
@@ -15248,8 +15288,9 @@ pkmn.flabebeBlue = {
     sdef: 79,
     spe: 42,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.floetteBlue, level: evolutionLevel1 } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.floetteBlue, level: evolutionLevel1 } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Esta variação se liga a uma flor azul, canalizando uma energia mais calma e serena que as demais cores.`,
 }
 
 pkmn.flabebeOrange = {
@@ -15262,8 +15303,9 @@ pkmn.flabebeOrange = {
     sdef: 79,
     spe: 42,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.floetteOrange, level: evolutionLevel1 } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.floetteOrange, level: evolutionLevel1 } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Esta variação se liga a uma flor laranja, canalizando uma energia vibrante e enérgica através de sua conexão floral.`,
 }
 
 pkmn.flabebeWhite = {
@@ -15276,8 +15318,9 @@ pkmn.flabebeWhite = {
     sdef: 79,
     spe: 42,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.floetteWhite, level: evolutionLevel1 } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.floetteWhite, level: evolutionLevel1 } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Esta variação se liga a uma flor branca, considerada a mais rara e pura entre todas as cores conhecidas.`,
 }
 
 pkmn.flabebeYellow = {
@@ -15290,8 +15333,9 @@ pkmn.flabebeYellow = {
     sdef: 79,
     spe: 42,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.floetteYellow, level: evolutionLevel1 } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.floetteYellow, level: evolutionLevel1 } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Esta variação se liga a uma flor amarela, canalizando uma energia radiante que lembra os raios de sol.`,
 }
 
 pkmn.floette = {
@@ -15319,8 +15363,9 @@ pkmn.floetteBlue = {
     sdef: 98,
     spe: 52,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.florgesBlue, item: item.shinyStone } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.florgesBlue, item: item.shinyStone } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Ligada a uma flor azul, ela voa suavemente enquanto protege sua flor com extremo cuidado e dedicação.`,
 }
 
 pkmn.floetteOrange = {
@@ -15333,8 +15378,9 @@ pkmn.floetteOrange = {
     sdef: 98,
     spe: 52,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.florgesOrange, item: item.shinyStone } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.florgesOrange, item: item.shinyStone } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Ligada a uma flor laranja, ela dança suavemente no ar sempre que sua flor floresce completamente.`,
 }
 
 pkmn.floetteWhite = {
@@ -15347,8 +15393,9 @@ pkmn.floetteWhite = {
     sdef: 98,
     spe: 52,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.florgesWhite, item: item.shinyStone } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.florgesWhite, item: item.shinyStone } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Ligada a uma flor branca rara, ela é considerada um símbolo de pureza em muitas culturas florestais.`,
 }
 
 pkmn.floetteYellow = {
@@ -15361,8 +15408,9 @@ pkmn.floetteYellow = {
     sdef: 98,
     spe: 52,
   },
-  evolve: function() { return { 1: { pkmn: pkmn.florgesYellow, item: item.shinyStone } } },
-  hiddenAbility: ability.naturalCure,
+    evolve: function() { return { 1: { pkmn: pkmn.florgesYellow, item: item.shinyStone } } },
+    hiddenAbility: ability.naturalCure,
+    lore: `Ligada a uma flor amarela, ela irradia uma energia calorosa que atrai outros Pokémon pacíficos.`,
 }
 
 pkmn.floetteEternal = {
@@ -15375,7 +15423,8 @@ pkmn.floetteEternal = {
     sdef: 128,
     spe: 92,
   },
-  hiddenAbility: ability.naturalCure,
+    hiddenAbility: ability.naturalCure,
+    lore: `Ligada a uma flor lendária que nunca murcha, dizem que ela permanece eternamente jovem enquanto a flor viver.`,
 }
 
 pkmn.megaFloette = {
@@ -15418,6 +15467,7 @@ pkmn.florgesBlue = {
     spe: 75,
   },
     hiddenAbility: ability.naturalCure,
+    lore: `Guardiã de jardins com flores azuis, sua energia calmante acalma até os visitantes mais agitados.`,
 }
 
 pkmn.florgesOrange = {
@@ -15431,6 +15481,7 @@ pkmn.florgesOrange = {
     spe: 75,
   },
     hiddenAbility: ability.naturalCure,
+    lore: `Guardiã de jardins com flores laranjas, sua presença energiza plantas e Pokémon ao seu redor.`,
 }
 
 pkmn.florgesWhite = {
@@ -15444,6 +15495,7 @@ pkmn.florgesWhite = {
     spe: 75,
   },
     hiddenAbility: ability.naturalCure,
+    lore: `Guardiã de jardins com flores brancas raras, considerada uma bênção por quem cuida de jardins tradicionais.`,
 }
 
 pkmn.florgesYellow = {
@@ -15457,6 +15509,7 @@ pkmn.florgesYellow = {
     spe: 75,
   },
     hiddenAbility: ability.naturalCure,
+    lore: `Guardiã de jardins com flores amarelas, sua energia radiante mantém a vegetação sempre saudável e florescente.`,
 }
 
 // 672 Skiddo → Gogoat
@@ -15545,6 +15598,7 @@ pkmn.furfrouHeart = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo elegante em forma de coração, uma moda popular entre nobres apaixonados.`,
 }
 
 pkmn.furfrouStar = {
@@ -15557,6 +15611,7 @@ pkmn.furfrouStar = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo pontiagudo que lembra estrelas, popular entre artistas e performers.`,
 }
 
 pkmn.furfrouDiamond = {
@@ -15569,6 +15624,7 @@ pkmn.furfrouDiamond = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um padrão geométrico refinado, associado tradicionalmente à realeza antiga.`,
 }
 
 pkmn.furfrouDebutante = {
@@ -15581,6 +15637,7 @@ pkmn.furfrouDebutante = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo extravagante, tradicionalmente usado em celebrações de apresentação social.`,
 }
 
 pkmn.furfrouMatron = {
@@ -15593,6 +15650,7 @@ pkmn.furfrouMatron = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo maduro e sofisticado, associado a figuras de autoridade e sabedoria.`,
 }
 
 pkmn.furfrouDandy = {
@@ -15605,6 +15663,7 @@ pkmn.furfrouDandy = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo elegante e refinado, popular entre a alta sociedade urbana.`,
 }
 
 pkmn.furfrouReine = {
@@ -15617,6 +15676,7 @@ pkmn.furfrouReine = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo majestoso digno de realeza, reservado para ocasiões extremamente formais.`,
 }
 
 pkmn.furfrouKabuki = {
@@ -15629,6 +15689,7 @@ pkmn.furfrouKabuki = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo dramático inspirado no teatro tradicional, com padrões ousados e expressivos.`,
 }
 
 pkmn.furfrouPharaoh = {
@@ -15641,6 +15702,7 @@ pkmn.furfrouPharaoh = {
     sdef: 90,
     spe: 102,
   },
+    lore: `Seu pelo foi cortado em um estilo que lembra ornamentos egípcios antigos, associado a realeza de eras esquecidas.`,
 }
 
 // 677 Espurr → Meowstic
@@ -16411,7 +16473,8 @@ pkmn.zygarde50 = {
         satk: 81,
         sdef: 95,
         spe: 95,
-    }
+    },
+    lore: `Sua forma padrão de 50% reúne uma quantidade moderada de células, equilibrando força e mobilidade durante o combate.`,
 }
 
 pkmn.zygarde100 = {
@@ -16426,6 +16489,7 @@ pkmn.zygarde100 = {
         spe: 85*1.35,
     },
     // evolve: function() { return { 1: { pkmn: pkmn.megaZygarde, item: item.zygardite } } },
+    lore: `Nesta forma completa, ele reúne a totalidade de suas células dispersas, tornando-se um guardião extremamente poderoso do ecossistema.`,
 }
 
 pkmn.megaZygarde = {
@@ -16852,6 +16916,7 @@ pkmn.oricorioBaile = {
   },
     signature : move.revelationDance,
     hiddenAbility: ability.dancer,
+    lore: `Ao absorver néctar de flores vermelhas, ela dança um estilo apaixonado inspirado em tradições flamencas.`,
 }
 
 pkmn.oricorioPomPom = {
@@ -16866,6 +16931,7 @@ pkmn.oricorioPomPom = {
   },
     signature : move.revelationDance,
     hiddenAbility: ability.dancer,
+    lore: `Ao absorver néctar de flores amarelas, ela dança um estilo animado e energético que contagia qualquer plateia.`,
 }
 
 pkmn.oricorioPau = {
@@ -16880,6 +16946,7 @@ pkmn.oricorioPau = {
   },
     signature : move.revelationDance,
     hiddenAbility: ability.dancer,
+    lore: `Ao absorver néctar de flores rosas, ela dança um estilo relaxado e tropical típico de ilhas paradisíacas.`,
 }
 
 pkmn.oricorioSensu = {
@@ -16894,6 +16961,7 @@ pkmn.oricorioSensu = {
   },
     signature : move.revelationDance,
     hiddenAbility: ability.dancer,
+    lore: `Ao absorver néctar de flores roxas, ela dança um estilo tradicional e solene inspirado em danças cerimoniais antigas.`,
 }
 
 // 742 Cutiefly → Ribombee
@@ -16958,6 +17026,7 @@ pkmn.lycanrocMidday = {
         spe: 112,
     },
     hiddenAbility: ability.sandyPelt,
+    lore: `Sob a luz do sol, esta forma se torna mais leal e ágil, preferindo caçar em matilhas organizadas durante o dia.`,
 }
 
 pkmn.lycanrocMidnight = {
@@ -17473,8 +17542,8 @@ pkmn.miniorBlue = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo azul brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 pkmn.miniorGreen = {
@@ -17488,8 +17557,8 @@ pkmn.miniorGreen = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo verde brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 pkmn.miniorIndigo = {
@@ -17503,8 +17572,8 @@ pkmn.miniorIndigo = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo índigo brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 pkmn.miniorOrange = {
@@ -17518,8 +17587,8 @@ pkmn.miniorOrange = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo laranja brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 pkmn.miniorRed = {
@@ -17533,8 +17602,8 @@ pkmn.miniorRed = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo vermelho brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 pkmn.miniorViolet = {
@@ -17548,8 +17617,8 @@ pkmn.miniorViolet = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo violeta brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 pkmn.miniorYellow = {
@@ -17563,8 +17632,8 @@ pkmn.miniorYellow = {
     spe: 60,
   },
     hiddenAbility: ability.brittleArmor,
-    eggMove : move.lunarDance
-
+    eggMove : move.lunarDance,
+    lore: `Seu núcleo amarelo brilha intensamente quando sua casca rochosa se quebra, revelando sua verdadeira forma cristalina.`,
 }
 
 // 775 Komala
@@ -18024,7 +18093,8 @@ pkmn.ultraNecrozma = {
         satk: 197*1.35,
         sdef: 97*1.35,
         spe: 159*1.35,
-    }
+    },
+    lore: `Ao absorver luz em excesso, ele se torna instável e extremamente poderoso, quase impossível de conter ou controlar.`,
 }
 
 // 801 Magearna
@@ -18053,7 +18123,8 @@ pkmn.magearnaOriginal = {
         sdef: 115*1.5,
         spe: 65*1.5,
     },
-    signature : move.gearUp
+    signature : move.gearUp,
+    lore: `Sua forma original de 500 anos atrás, antes de qualquer modificação, guarda memórias intactas de uma era muito antiga.`,
 }
 
 pkmn.megaMagearna = {
@@ -18080,7 +18151,8 @@ pkmn.megaMagearnaOriginal = {
         satk: 170*1.5,
         sdef: 115*1.5,
         spe: 95*1.5,
-    }
+    },
+    lore: `Sua forma original megaevoluída revela um poder ainda mais antigo, quase esquecido pela civilização moderna.`,
 }
 
 // 802 Marshadow
@@ -18239,7 +18311,8 @@ pkmn.melmetalGmax = {
     spe: 34*1.15,
   },
     hiddenAbility: ability.ferrilate,
-    eggMove : move.gigatonHammer
+    eggMove : move.gigatonHammer,
+    lore: `A energia Dynamax faz seu corpo de metal líquido crescer a proporções colossais, capaz de esmagar prédios inteiros com um soco.`,
 }
 
 // 810 Grookey → Thwackey → Rillaboom
@@ -18301,7 +18374,8 @@ pkmn.rillaboomGmax = {
     spe: 85*1.15,
   },
     hiddenAbility: ability.grassySurge,
-    signature : move.drumBeating
+    signature : move.drumBeating,
+    lore: `A energia Dynamax faz seu tambor de raízes crescer imensamente, gerando ondas sonoras capazes de derrubar florestas inteiras.`,
 }
 
 // 813 Scorbunny → Raboot → Cinderace
@@ -18364,6 +18438,7 @@ pkmn.cinderaceGmax = {
   },
     signature : move.pyroBall,
     hiddenAbility: ability.libero,
+    lore: `A energia Dynamax intensifica sua bola de fogo, tornando-a capaz de incinerar um estádio inteiro com um único chute.`,
 }
 
 // 816 Sobble → Drizzile → Inteleon
@@ -18421,7 +18496,8 @@ pkmn.inteleonGmax = {
     sdef: 65*1.15,
     spe: 120*1.15,
   },
-    signature : move.snipeShot
+    signature : move.snipeShot,
+    lore: `A energia Dynamax alonga seu corpo dramaticamente, permitindo disparos de água com alcance e precisão extraordinários.`,
 }
 
 // 819 Skwovet → Greedent
@@ -18510,6 +18586,7 @@ pkmn.corviknightGmax = {
     sdef: 85*1.15,
     spe: 67*1.15,
   },
+    lore: `A energia Dynamax expande suas asas de aço a proporções gigantescas, permitindo que carregue cargas imensas pelo céu.`,
 }
 
 // 824 Blipbug → Dottler → Orbeetle
@@ -18702,6 +18779,7 @@ pkmn.drednawGmax = {
     spe: 60*1.15,
   },
     hiddenAbility: ability.strongJaw,
+    lore: `A energia Dynamax reforça sua concha, tornando suas mordidas capazes de esmagar rochas do tamanho de prédios.`,
 }
 
 // 835 Yamper → Boltund
@@ -18792,6 +18870,7 @@ pkmn.coalossalGmax = {
     spe: 30*1.15,
   },
     hiddenAbility: ability.solarPower,
+    lore: `A energia Dynamax faz sua montanha de carvão nas costas crescer imensamente, liberando fumaça visível a quilômetros.`,
 }
 
 // 840 Applin → Flapple / Appletun
@@ -18858,7 +18937,8 @@ pkmn.appletunGmax = {
     spe: 30*1.15,
   },
     hiddenAbility: ability.dragonGuard,
-    signature : move.appleAcid
+    signature : move.appleAcid,
+    lore: `A energia Dynamax faz sua maçã crescer a proporções gigantescas, atraindo Pokémon de toda a região com seu doce aroma.`,
 }
 
 pkmn.dipplin = {
@@ -18927,6 +19007,7 @@ pkmn.sandacondaGmax = {
     spe: 71*1.15,
   },
     hiddenAbility: ability.sandyPelt,
+    lore: `A energia Dynamax expande seu corpo dramaticamente, permitindo que ele dispare tempestades de areia capazes de cobrir cidades inteiras.`,
 }
 
 // 845 Cramorant
@@ -19016,7 +19097,8 @@ pkmn.toxtricityGmax = {
     spe: 75*1.15,
   },
     hiddenAbility: ability.galvanize,
-    eggMove : move.boomburst
+    eggMove : move.boomburst,
+    lore: `A energia Dynamax amplifica seus órgãos geradores de eletricidade, transformando sua música em ondas de choque devastadoras.`,
 }
 
 // 850 Sizzlipede → Centiskorch
@@ -19063,6 +19145,7 @@ pkmn.centiskorchGmax = {
   },
     signature : move.burnUp,
     hiddenAbility: ability.scorch,
+    lore: `A energia Dynamax alonga seu corpo flamejante dramaticamente, permitindo que ele incinere áreas inteiras com uma única passada.`,
 }
 
 // 852 Clobbopus → Grapploct
@@ -19186,8 +19269,8 @@ pkmn.hattereneGmax = {
     spe: 29*1.15,
   },
     signature : move.magicPowder,
-        hiddenAbility: ability.neuroforce,
-
+    hiddenAbility: ability.neuroforce,
+    lore: `A energia Dynamax expande seus poderes psíquicos a um nível capaz de distorcer a realidade de uma região inteira.`,
 }
 
 // 859 Impidimp → Morgrem → Grimmsnarl
@@ -19249,7 +19332,8 @@ pkmn.grimmsnarlGmax = {
     spe: 60*1.15,
   },
     hiddenAbility: ability.prankster,
-    signature : move.falseSurrender
+    signature : move.falseSurrender,
+    lore: `A energia Dynamax faz seus cabelos em forma de vinha crescerem imensamente, capazes de prender exércitos inteiros.`,
 }
 
 // 862 Obstagoon
@@ -19302,7 +19386,8 @@ pkmn.alcremieGmax = {
     spe: 64*1.15,
   },
     hiddenAbility: ability.mistySurge,
-    eggMove : move.teatime
+    eggMove : move.teatime,
+    lore: `A energia Dynamax faz seu creme decorativo crescer a proporções monumentais, criando uma sobremesa gigante e deliciosa.`,
 }
 
 // 870 Falinks
@@ -19489,7 +19574,7 @@ pkmn.copperajahGmax = {
     spe: 30*1.15,
   },
     hiddenAbility: ability.sheerForce,
-    lore: ``,
+    lore: `A energia Dynamax expande sua tromba de metal, tornando-a capaz de escavar túneis através de montanhas inteiras.`,
 }
 
 // 880 Dracozolt
@@ -19583,7 +19668,8 @@ pkmn.duraludonGmax = {
     spe: 85*1.15,
   },
     hiddenAbility: ability.stamina,
-    eggMove : move.kingsShield
+    eggMove : move.kingsShield,
+    lore: `A energia Dynamax faz seu corpo metálico crescer imensamente, refletindo luz em um espetáculo prismático visível à distância.`,
 }
 
 pkmn.archaludon = {
@@ -19819,6 +19905,7 @@ pkmn.zarudeDada = {
     sdef: 95*1.5,
     spe: 105*1.5,
   },
+    lore: `Esta forma especial demonstra um cuidado paternal extremo, protegendo ferozmente qualquer filhote sob sua proteção.`,
 }
 
 // 894 Regieleki
@@ -20806,7 +20893,8 @@ pkmn.palafinHero = {
     satk: 106,
     sdef: 87,
     spe: 100,
-  }
+  },
+  lore: `Ao mergulhar em água profunda, sua verdadeira forma heroica emerge, revelando uma força capaz de proteger toda uma costa.`,
 }
 
 */
@@ -21028,7 +21116,8 @@ pkmn.tatsugiriDroopy = {
     sdef: 95,
     spe: 82,
   },
-  // evolve: function() { return { 1: { pkmn: pkmn.megaTatsugiriDroopy, item: item.tatsugirinite } } }
+  // evolve: function() { return { 1: { pkmn: pkmn.megaTatsugiriDroopy, item: item.tatsugirinite } } },
+    lore: `Uma variação de personalidade mais melancólica, que se move lentamente dentro da boca de seu parceiro Dondozo.`,
 }
 
 pkmn.tatsugiriStretchy = {
@@ -21041,7 +21130,8 @@ pkmn.tatsugiriStretchy = {
     sdef: 95,
     spe: 82,
   },
-  // evolve: function() { return { 1: { pkmn: pkmn.megaTatsugiriStretchy, item: item.tatsugirinite } } }
+  // evolve: function() { return { 1: { pkmn: pkmn.megaTatsugiriStretchy, item: item.tatsugirinite } } },
+    lore: `Uma variação de personalidade mais confiante e expressiva, que se estica orgulhosamente para fora da boca de Dondozo.`,
 }
 
 //Sem pedra
@@ -21336,7 +21426,8 @@ pkmn.baxcalibur = {
   },
     hiddenAbility: ability.sharpness,
     evolve: function() { return { 1: { pkmn: pkmn.megaBaxcalibur, item: item.baxcaliburite } } },
-    eggMove : move.spacialRend
+    eggMove : move.spacialRend,
+    lore: `A megaevolução intensifica sua lâmina de gelo, tornando-a capaz de cortar através de qualquer material conhecido instantaneamente.`,
 }
 
 pkmn.megaBaxcalibur = {
@@ -21380,7 +21471,8 @@ pkmn.gimmighoulRoaming = {
     sdef: 45,
     spe: 80,
   },
-    eggMove : move.payDay
+    eggMove : move.payDay,
+    lore: `Esta forma andante carrega um baú com pernas, vagando por estradas em busca de mais moedas para absorver.`
 }
 
 pkmn.gholdengo = {
@@ -21394,7 +21486,7 @@ pkmn.gholdengo = {
     spe: 84,
   },
     hiddenAbility: ability.goodAsGold,
-    eggMove : move.payDay
+    eggMove : move.payDay,
 }
 
 // 1001 Wo-Chien
@@ -21409,7 +21501,7 @@ pkmn.woChien = {
     spe: 50*1.3,
   },
     hiddenAbility: ability.treasureOfRuin,
-    signature : move.ruination
+    signature : move.ruination,
 }
 
 // 1002 Chien-Pao
@@ -21424,7 +21516,7 @@ pkmn.chienPao = {
     spe: 110*1.3,
   },
     hiddenAbility: ability.treasureOfRuin,
-    signature : move.ruination
+    signature : move.ruination,
 }
 
 // 1003 Ting-Lu
@@ -21439,7 +21531,7 @@ pkmn.tingLu = {
     spe: 85*1.3,
   },
     hiddenAbility: ability.treasureOfRuin,
-    signature : move.ruination
+    signature : move.ruination,
 }
 
 // 1004 Chi-Yu
@@ -21454,7 +21546,7 @@ pkmn.chiYu = {
     spe: 135*1.3,
   },
     hiddenAbility: ability.treasureOfRuin,
-    signature : move.ruination
+    signature : move.ruination,
 }
 
 // 1005 Roaring Moon
