@@ -36,7 +36,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderBrock",
         region: "kanto",
-        name: "Gym Leader Brock",
+        name: "Leader Brock",
         city: "Pewter City",
         sprite: "brock",
         background: "gym",
@@ -53,7 +53,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderMisty",
         region: "kanto",
-        name: "Gym Leader Misty",
+        name: "Leader Misty",
         city: "Cerulean City",
         sprite: "misty",
         background: "gym",
@@ -70,7 +70,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderLtsurge",
         region: "kanto",
-        name: "Gym Leader Lt. Surge",
+        name: "Leader Lt. Surge",
         city: "Vermilion City",
         sprite: "ltsurge",
         background: "gym",
@@ -87,7 +87,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderErika",
         region: "kanto",
-        name: "Gym Leader Erika",
+        name: "Leader Erika",
         city: "Celadon City",
         sprite: "erika",
         background: "gym",
@@ -104,7 +104,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderKoga",
         region: "kanto",
-        name: "Gym Leader Koga",
+        name: "Leader Koga",
         city: "Fuchsia City",
         sprite: "koga",
         background: "gym",
@@ -121,7 +121,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderJanine",
         region: "kanto",
-        name: "Gym Leader Janine",
+        name: "Leader Janine",
         city: "Fuchsia City",
         sprite: "janine",
         background: "gym",
@@ -138,7 +138,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderSabrina",
         region: "kanto",
-        name: "Gym Leader Sabrina",
+        name: "Leader Sabrina",
         city: "Saffron City",
         sprite: "sabrina",
         background: "gym",
@@ -155,7 +155,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderBlaine",
         region: "kanto",
-        name: "Gym Leader Blaine",
+        name: "Leader Blaine",
         city: "Cinnabar City",
         sprite: "blaine",
         background: "gym",
@@ -172,7 +172,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderGiovanni",
         region: "kanto",
-        name: "Gym Leader Giovanni",
+        name: "Leader Giovanni",
         city: "Viridian City",
         sprite: "giovanni",
         background: "gym",
@@ -191,12 +191,12 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderCissy",
         region: "johto",
-        name: "Gym Leader Cissy",
+        name: "Leader Cissy",
         city: "Mikan Island",
         sprite: "cissy",
         background: "gym",
         level: 100,
-        description: "Especialista em Pokémon do tipo Agua.",
+        description: "Especialista em Pokémon do tipo Water.",
         team: {
             slot1 : pkmn.lapras, slot1Moves : [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
             slot2 : pkmn.cloyster, slot2Moves : [move.glaciate.id, move.mountainGale.id, move.snipeShot.id, move.tripleAxel.id],
@@ -211,7 +211,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderFalkner",
         region: "johto",
-        name: "Gym Leader Falkner",
+        name: "Leader Falkner",
         city: "Violet City",
         sprite: "falkner",
         background: "gym",
@@ -229,7 +229,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderBugsy",
         region: "johto",
-        name: "Gym Leader Bugsy",
+        name: "Leader Bugsy",
         city: "Azalea City",
         sprite: "bugsy",
         background: "gym",
@@ -247,7 +247,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderWhitney",
         region: "johto",
-        name: "Gym Leader Whitney",
+        name: "Leader Whitney",
         city: "Goldenrod City",
         sprite: "whitney",
         background: "gym",
@@ -265,7 +265,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderMorty",
         region: "johto",
-        name: "Gym Leader Morty",
+        name: "Leader Morty",
         city: "Ecruteak City",
         sprite: "morty",
         background: "gym",
@@ -283,7 +283,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderChuck",
         region: "johto",
-        name: "Gym Leader Chuck",
+        name: "Leader Chuck",
         city: "Cianwood City",
         sprite: "chuck",
         background: "gym",
@@ -302,7 +302,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderJasmine",
         region: "johto",
-        name: "Gym Leader Jasmine",
+        name: "Leader Jasmine",
         city: "Olivine City",
         sprite: "jasmine",
         background: "gym",
@@ -321,7 +321,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderPryce",
         region: "johto",
-        name: "Gym Leader Pryce",
+        name: "Leader Pryce",
         city: "Mahogany City",
         sprite: "pryce",
         background: "gym",
@@ -340,7 +340,7 @@ const GYMS_LEADERS = [
     {
         areaId: "vsGymLeaderClair",
         region: "johto",
-        name: "Gym Leader Clair",
+        name: "Leader Clair",
         city: "Blackthorn City",
         sprite: "clair",
         background: "gym",
