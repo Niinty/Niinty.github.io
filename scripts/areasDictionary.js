@@ -3722,7 +3722,7 @@ areas.eventLandorusTherian = {
     level : 100,
     team : {
         slot1 : pkmn.landorusTherian,
-        slot1Moves : [move.headlongRush.id, move.flyingGuard.id, move.boneRush.id, move.dragonAscent.id],
+        slot1Moves : [move.headlongRush.id, move.flyingPress.id, move.boneRush.id, move.dragonAscent.id],
     },
     
     // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
