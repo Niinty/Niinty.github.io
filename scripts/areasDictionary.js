@@ -3707,6 +3707,49 @@ areas.eventGroudonPrimal = {
     category: 2,
 }
 
+areas.eventLandorusTherian = {
+    rotation: 1,
+    type: `event`,
+    name: `Landorus Therian`,
+    background : `mountain`,
+    icon: pkmn.landorusTherian,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.landorusTherian,
+        slot1Moves : [move.headlongRush.id, move.flyingGuard.id, move.boneRush.id, move.dragonAscent.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.landorusTherian],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.landorusTherian];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.landorusTherian);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
 //Tier VI
 areas.eventMegaDiancie = {
     rotation: 1,
