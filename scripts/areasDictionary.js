@@ -2400,8 +2400,9 @@ const rotationEventMax = 2;
 const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
-const tier4difficulty = 600;
-const tier5difficulty = 800;
+const tier4difficulty = 450;
+const tier5difficulty = 600;
+const tier6difficulty = 700;
 
 //Rotation 1
 //Novice - Wild Area
