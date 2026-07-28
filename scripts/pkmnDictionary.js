@@ -14471,6 +14471,7 @@ pkmn.enamorus = {
     spe: 106*1.3,
   },
     hiddenAbility: ability.contrary,
+    signature : move.lightOfRuin,
     lore: `Ela pode induzir sentimentos de afeto ou aversão em quem observa suas asas brilhantes, controlando emoções à distância.`,
 }
 
@@ -14484,6 +14485,8 @@ pkmn.enamorusTherian = {
         sdef: 140*1.3,
         spe: 46*1.3,
     },
+    hiddenAbility: ability.contrary,
+    signature : move.lightOfRuin,
     lore: `Nesta forma, seu corpo se torna mais robusto e guerreiro, controlando emoções com uma intensidade quase avassaladora.`,
 }
 
@@ -16550,6 +16553,8 @@ pkmn.zygarde50 = {
         sdef: 95,
         spe: 95,
     },
+    hiddenAbility: ability.moody,
+    signature : move.roarOfTime,
     lore: `Sua forma padrão de 50% reúne uma quantidade moderada de células, equilibrando força e mobilidade durante o combate.`,
 }
 
