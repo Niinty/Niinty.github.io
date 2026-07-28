@@ -807,9 +807,9 @@ const GYMS_LEADERS = [
         description: "Especialista em Pokémon do tipo Flying.",
         team: {
             slot1: pkmn.rayquaza, slot1Moves: [move.roarOfTime.id, move.aeroblast.id, move.spacialRend.id, move.chatter.id],
-            slot2: pkmn.tornadus, slot2Moves: [move.flyingPress.id, move.flying.id, move.dragonAscent.id, move.aeroblast.id],
+            slot2: pkmn.tornadus, slot2Moves: [move.flyingPress.id, move.fly.id, move.dragonAscent.id, move.aeroblast.id],
             slot3: pkmn.salamence, slot3Moves: [move.hurricane.id, move.spacialRend.id, move.aeroblast.id, move.roarOfTime.id],
-            slot4: pkmn.gliscor, slot4Moves: [move.sandsearStorm.id, move.flying.id, move.boneRush.id, move.aeroblast.id],
+            slot4: pkmn.gliscor, slot4Moves: [move.sandsearStorm.id, move.fly.id, move.boneRush.id, move.aeroblast.id],
             slot5: pkmn.dragonite, slot5Moves: [move.dragonAscent.id, move.roarOfTime.id, move.spacialRend.id, move.fly.id],
             slot6: pkmn.lugia, slot6Moves: [move.tripleDive.id, move.aeroblast.id, move.razorShell.id, move.chatter.id],
         },
