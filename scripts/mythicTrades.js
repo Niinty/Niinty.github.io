@@ -31,7 +31,8 @@ const MYTHIC_TRADES = [
     { ball: "luxuryball", ballLabel: "Luxury Ball", pkmnId: "magearna", name: "Magearna" },
     { ball: "leadenball", ballLabel: "Leaden Ball", pkmnId: "marshadow", name: "Marshadow" },
     { ball: "quickball", ballLabel: "Quick Ball", pkmnId: "zeraora", name: "Zeraora" },
-    { ball: "heavyball", ballLabel: "Heavy Ball", pkmnId: "meltan", name: "Meltan" },
+    //{ ball: "heavyball", ballLabel: "Heavy Ball", pkmnId: "meltan", name: "Meltan" },
+    { ball: "heavyball", ballLabel: "Heavy Ball", pkmnId: "melmetalGmax", name: "MelmetalGmax" },
     { ball: "duskball", ballLabel: "Dusk Ball", pkmnId: "zarude", name: "Zarude" },
     { ball: "wingball", ballLabel: "Wing Ball", pkmnId: "pecharunt", name: "Pecharunt" },
 ]
