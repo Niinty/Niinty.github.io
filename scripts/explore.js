@@ -7706,7 +7706,7 @@ function updateFamilyStarsign() {
 
 }*/
 
-function exitPkmnTeam(){
+/*function exitPkmnTeam(){
     const area = areas[saved.currentAreaBuffer]
 
     document.getElementById(`team-menu`).style.zIndex = `30`
@@ -7715,6 +7715,33 @@ function exitPkmnTeam(){
 
     if (saved.currentAreaBuffer == areas.training.id) {
         document.getElementById(`training-menu`).style.display = `flex`
+    } else if (area?.type == "vs" || area?.type == "frontier") {
+        if (area?.isGym) {
+            document.getElementById(`gyms-menu`).style.display = `flex`
+        } else {
+            document.getElementById(`vs-menu`).style.display = `flex`
+        }
+    } else {
+        document.getElementById(`explore-menu`).style.display = `flex`
+    }
+
+    saved.currentArea = undefined
+    saved.currentAreaBuffer = undefined
+}*/
+
+function exitPkmnTeam(){
+    const area = areas[saved.currentAreaBuffer]
+
+    document.getElementById(`team-menu`).style.zIndex = `30`
+    document.getElementById(`team-menu`).style.display = `none`
+    document.getElementById("menu-button-parent").style.display = "flex"
+
+    const isLegendsArea = saved.currentAreaBuffer && saved.currentAreaBuffer.indexOf(LEGENDS_AREA_PREFIX) === 0
+
+    if (saved.currentAreaBuffer == areas.training.id) {
+        document.getElementById(`training-menu`).style.display = `flex`
+    } else if (isLegendsArea) {
+        openLegendsMenu()
     } else if (area?.type == "vs" || area?.type == "frontier") {
         if (area?.isGym) {
             document.getElementById(`gyms-menu`).style.display = `flex`
