@@ -16570,6 +16570,8 @@ pkmn.zygarde100 = {
         spe: 85*1.35,
     },
     // evolve: function() { return { 1: { pkmn: pkmn.megaZygarde, item: item.zygardite } } },
+    hiddenAbility: ability.moody,
+    signature : move.roarOfTime,
     lore: `Nesta forma completa, ele reúne a totalidade de suas células dispersas, tornando-se um guardião extremamente poderoso do ecossistema.`,
 }
 
@@ -18149,6 +18151,8 @@ pkmn.necrozmaDawnWings = {
         sdef: 127,
         spe: 77,
     },
+    hiddenAbility: ability.moody,
+    signature : move.rageFist,
     lore: `Ao se fundir com Lunala, ele ganha asas capazes de manipular a luz das estrelas com precisão devastadora.`,
 }
 
@@ -18162,6 +18166,8 @@ pkmn.necrozmaDuskMane = {
         sdef: 109,
         spe: 77,
     },
+    hiddenAbility: ability.moody,
+    signature : move.kingsShield,
     lore: `Ao se fundir com Solgaleo, ele ganha uma juba brilhante capaz de emitir rajadas de luz extremamente poderosas.`,
 }
 
@@ -18175,6 +18181,8 @@ pkmn.ultraNecrozma = {
         sdef: 97*1.35,
         spe: 159*1.35,
     },
+    hiddenAbility: ability.sereneGrace,
+    signature : move.dragonAscent,
     lore: `Ao absorver luz em excesso, ele se torna instável e extremamente poderoso, quase impossível de conter ou controlar.`,
 }
 
@@ -19829,7 +19837,8 @@ pkmn.zacian = {
     sdef: 115*1.3,
     spe: 138*1.3,
   },
-    hiddenAbility: ability.iaido,
+    hiddenAbility: ability.neuroforce,
+    signature : move.aromaticMist,
     lore: `Ela empunha uma espada lendária capaz de cortar qualquer coisa, e liderou um reino antigo através de uma era de conflitos.`,
 }
 
@@ -19843,6 +19852,8 @@ pkmn.zacianCrowned = {
         sdef: 115*1.3,
         spe: 148*1.3,
     },
+    hiddenAbility: ability.neuroforce,
+    signature : move.aromaticMist,
     lore: `Ao empunhar a espada verdadeira, seu poder aumenta drasticamente, tornando-se capaz de cortar através de qualquer material conhecido.`,
 }
 
