@@ -120,7 +120,7 @@ pkmn.venusaurGmax = {
     },
     hiddenAbility: ability.thickFat,
     lore: `Há uma grande flor nas costas do Venusaur. Diz-se que a flor assume cores vivas se receber bastante nutrição e luz solar. O aroma da flor acalma as emoções das pessoas.`,
-    signature : move.frenzyPlant
+    signature : move.frenzyPlant,
 }
 
 // 004 Charmander → Charmeleon → Charizard
@@ -234,7 +234,7 @@ pkmn.charizardGmax = {
     },
     hiddenAbility: ability.drought,
     lore: `Esta figura colossal de Charizard, com asas flamejantes, foi criada pela energia Gigantamax.`,
-    signature : move.flameBurst
+    signature : move.flameBurst,
 }
 
 // 007 Squirtle → Wartortle → Blastoise
@@ -313,7 +313,7 @@ pkmn.megaBlastoise = {
     },
     signature : move.hydroCannon,
     lore: `O canhão em suas costas é tão potente quanto o de um tanque. Suas pernas e costas robustas permitem que ele suporte o recuo do disparo.`,
-    hiddenAbility: ability.megaLauncher
+    hiddenAbility: ability.megaLauncher,
 }
 
 pkmn.blastoiseGmax = {
@@ -328,7 +328,7 @@ pkmn.blastoiseGmax = {
     },
     signature : move.hydroCannon,
     lore: `Seu casco cresceu para acompanhar seu corpo maciço, apresentando 31 canhões — 12 grandes e um canhão central principal que pode ser apontado independentemente.`,
-    hiddenAbility: ability.megaLauncher
+    hiddenAbility: ability.megaLauncher,
 }
 
 // 010 Caterpie → Metapod → Butterfree
@@ -407,6 +407,7 @@ pkmn.butterfreeGmax = {
     },
     lore: `Depois de prender seus oponentes em um tornado capaz de arremessar um caminhão de 10 toneladas, ele os finaliza com suas escamas venenosas.`,
     hiddenAbility: ability.tintedLens,
+    signature : move.attackOrder,
 }
 
 // 013 Weedle → Kakuna → Beedrill
@@ -1673,7 +1674,7 @@ pkmn.meowthGmax = {
     },
     hiddenAbility: ability.technician,
     signature : move.payDay,
-    lore: `"O seu desejo por objetos brilhantes aumenta a tal ponto que ele causa danos às janelas de arranha-céus e paredes externas para afiar as suas garras. A moeda gigante na sua cabeça emite tanto poder que envolve toda a área num brilho dourado`,
+    lore: `O seu desejo por objetos brilhantes aumenta a tal ponto que ele causa danos às janelas de arranha-céus e paredes externas para afiar as suas garras. A moeda gigante na sua cabeça emite tanto poder que envolve toda a área num brilho dourado`,
 }
 
 pkmn.alolanMeowth = {
@@ -2831,6 +2832,7 @@ pkmn.gengarGmax = {
         spe: 90*1.15,
     },
     hiddenAbility: ability.somberField,
+    signature : move.shadowForce,
     lore: `Sua boca se torna enorme o suficiente para engolir cidades inteiras. Diz-se que ele nunca sacia sua fome insaciável por almas.`,
 }
 
@@ -19915,12 +19917,14 @@ pkmn.kubfu = {
     sdef: 50*1.3,
     spe: 72*1.3,
   },
-  evolve: function() {
+  /*evolve: function() {
     return {
       1: { pkmn: pkmn.urshifuSingle, item: item.blackBelt },
       2: { pkmn: pkmn.urshifuRapid, item: item.waterStone },
     }
-  },
+  },*/
+  hiddenAbility: ability.parentalBond,
+  signature : move.meteorAssault,
   lore: `Ele treina incansavelmente em uma torre antiga, aprendendo técnicas de combate transmitidas por gerações de mestres.`,
 }
 
@@ -19935,6 +19939,8 @@ pkmn.urshifuSingle = {
     sdef: 60*1.3,
     spe: 97*1.3,
   },
+    hiddenAbility: ability.parentalBond,
+    signature : move.fieryWrath,
     lore: `Após completar seu treinamento com golpes únicos poderosos, ele se torna um mestre de ataques diretos e decisivos.`,
 }
 
@@ -19963,6 +19969,8 @@ pkmn.urshifuRapid = {
     sdef: 60*1.3,
     spe: 97*1.3,
   },
+    hiddenAbility: ability.parentalBond,
+    signature : move.clamp,
     lore: `Após completar seu treinamento com uma sequência rápida de golpes, ele se torna um mestre de combos fluidos e contínuos.`,
 }
 
@@ -20091,6 +20099,8 @@ pkmn.calyrexIce = {
     sdef: 130*1.3,
     spe: 50*1.3,
   },
+    hiddenAbility: ability.thickFat,
+    signature : move.tripleAxel,
     lore: `Montado em Glastrier, ele ganha o poder de congelar tudo ao seu redor, comandando com uma autoridade gélida e implacável.`,
 }
 
@@ -20104,6 +20114,8 @@ pkmn.calyrexShadow = {
     sdef: 100*1.3,
     spe: 150*1.3,
   },
+    hiddenAbility: ability.adaptability,
+    signature : move.rageFist,
     lore: `Montado em Spectrier, ele ganha o poder de se mover através de sombras, comandando com uma velocidade assombrosa e implacável.`,
 }
 
@@ -22028,6 +22040,8 @@ pkmn.terapagos = {
         sdef: 85*1.3,
         spe: 60*1.3,
     },
+    hiddenAbility: ability.adaptability,
+    signature : move.judgment,
     lore: `Considerado a forma original de todos os Pokémon capazes de se cristalizar, ele guarda segredos antigos sobre o fenômeno Terastal.`,
 }
 
@@ -22041,6 +22055,8 @@ pkmn.terapagosTerastal = {
         sdef: 110*1.3,
         spe: 85*1.3,
     },
+    hiddenAbility: ability.adaptability,
+    signature : move.judgment,
     lore: `Nesta forma, seu corpo se cristaliza completamente, revelando uma armadura brilhante capaz de canalizar energia Terastal pura.`,
 }
 
@@ -22054,6 +22070,8 @@ pkmn.terapagosStellar = {
         sdef: 110*1.3,
         spe: 85*1.3,
     },
+    hiddenAbility: ability.adaptability,
+    signature : move.judgment,
     lore: `Em sua forma mais poderosa, ele emite uma energia estelar capaz de ressoar com qualquer tipo de cristalização Terastal.`,
 }
 
@@ -22068,6 +22086,8 @@ pkmn.pecharunt = {
     sdef: 88*1.5,
     spe: 88*1.5,
   },
+    hiddenAbility: ability.gorillaTactics,
+    signature : move.rageFist,
     lore: `Ele oferece poções misteriosas para atrair aliados, embora ninguém saiba ao certo se seus presentes trazem bênçãos ou maldições.`,
 }
 
