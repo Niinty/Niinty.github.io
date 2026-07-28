@@ -19869,6 +19869,8 @@ pkmn.zamazenta = {
     spe: 138*1.3,
   },
     eggMove: move.howl,
+    hiddenAbility: ability.shieldsDown,
+    signature : move.thunderousKick,
     lore: `Ele carrega um escudo lendário capaz de bloquear qualquer ataque, protegendo um reino antigo de invasões devastadoras.`,
 }
 
@@ -19882,6 +19884,8 @@ pkmn.zamazentaCrowned = {
         sdef: 165*1.3,
         spe: 128*1.3,
     },
+    hiddenAbility: ability.shieldsDown,
+    signature : move.thunderousKick,
     lore: `Ao empunhar o escudo verdadeiro, sua defesa se torna praticamente impenetrável contra qualquer forma de ataque conhecida.`,
 }
 
