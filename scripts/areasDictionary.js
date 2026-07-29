@@ -2404,7 +2404,7 @@ const tier4difficulty = 450;
 const tier5difficulty = 600;
 const tier6difficulty = 700;
 
-//Rotation 1
+//Rotation I
 //Novice - Wild Area
 areas.cosplayConvention = {
     rotation: 1,
@@ -3917,7 +3917,7 @@ areas.fierySummit = {
 
 //*************************************************************************************************************************************************************
 
-//Rotation 2
+//Rotation II
 //Novice Wild Area
 areas.lamodeDogwalk = {
     rotation: 2,
@@ -4994,7 +4994,7 @@ areas.eventKyogrePrimal = {
 
 //**************************************************************************************************************************************************************
 /*
-//Rotation 3
+//Rotation III
 //Wild Area - Novice
 areas.exoticPond = {
     rotation: 3,
@@ -5067,14 +5067,15 @@ areas.steelTomb = {
     },
     drops: {
         common : [item.nothing],
-        uncommon : [item.steelKeystone]
+        uncommon : [item.steelKeystone],
+        rare : [item.megaCluster],
     },
     category: 2,
 }
 */
 //*************************************************************************************************************************************************************
 /*
-//RAID -Rotation 4
+//Rotation IV
 areas.paupauFestival = {
     rotation: 4,
     type: `event`,
@@ -5144,14 +5145,15 @@ areas.wormholeSpace = {
     },
     drops: {
         common : [item.nothing],
-        uncommon : [item.wormholeResidue]
+        uncommon : [item.wormholeResidue],
+        rare : [item.megaCluster],
     },
     category: 2,
 }
 */
 //*************************************************************************************************************************************************************
 /*
-//Rotation 5
+//Rotation V
 //Wild Zone
 areas.ecosphere = {
     rotation: 5,
@@ -5226,7 +5228,8 @@ areas.fusionPlant = {
     },
     drops: {
         common : [item.nothing],
-        uncommon : [item.futureContraption]
+        uncommon : [item.futureContraption],
+        rare : [item.megaCluster],
     },
     category: 2,
 }
