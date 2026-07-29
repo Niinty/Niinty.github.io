@@ -3749,6 +3749,90 @@ areas.eventLandorusTherian = {
     },
     category: 2,
 }
+areas.eventZygarde100 = {
+    rotation: 1,
+    type: `event`,
+    name: `Zygarde 100`,
+    background : `trench`,
+    icon: pkmn.zygarde100,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.zygarde100,
+        slot1Moves : [move.dragonAscent.id, move.boneRush.id, move.roarOfTime.id, move.headlongRush.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.zygarde100],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.zygarde100];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.zygarde100);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventZamazentaCrowned = {
+    rotation: 1,
+    type: `event`,
+    name: `Zamazenta Crowned`,
+    background : `cave`,
+    icon: pkmn.zamazentaCrowned,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.zamazentaCrowned,
+        slot1Moves : [move.gearUp.id, move.meteorAssault.id, move.kingsShield.id, move.noRetreat.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.zamazentaCrowned],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.zamazentaCrowned];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.zamazentaCrowned);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
 
 //Tier VI
 areas.eventMegaDiancie = {
