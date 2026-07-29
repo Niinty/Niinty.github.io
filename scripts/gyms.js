@@ -887,9 +887,26 @@ const GYMS_LEADERS = [
             slot5: pkmn.aerodactyl, slot5Moves: [move.rockPolish.id, move.smackDown.id, move.fly.id, move.ancientPower.id],
             slot6: pkmn.gigalith, slot6Moves: [move.stoneEdge.id, move.megahorn.id, move.rockWrecker.id, move.stringShot.id],
         },
+    },
+	{
+        areaId: "vsGymLeaderKorrina",
+        region: "kalos",
+        name: "Leader Korrina",
+        city: "Shalour City",
+        sprite: "korrina",
+        background: "gym",
+        level: 100,
+        description: "Especialista em Pokémon do tipo Fighting.",
+        team: {
+            slot1: pkmn.lucario, slot1Moves: [move.hiJumpKick.id, move.anchorShot.id, move.flyingPress.id, move.dynamicPunch.id],
+            slot2: pkmn.infernape, slot2Moves: [move.noRetreat.id, move.hiJumpKick.id, move.brutalClaw.id, move.bitterBlade.id],
+            slot3: pkmn.machamp, slot3Moves: [move.dynamicPunch.id, move.hiJumpKick.id, move.thunderousKick.id, move.focusBlast.id],
+            slot4: pkmn.conkeldurr, slot4Moves: [move.dynamicPunch.id, move.hiJumpKick.id, move.zenHeadbut.id, move.flyingPress.id],
+            slot5: pkmn.terrakion, slot5Moves: [move.rockWrecker.id, move.noRetreat.id, move.wrathOfTheLand.id, move.thunderousKick.id],
+            slot6: pkmn.hawlucha, slot6Moves: [move.noRetreat.id, move.dragonAscent.id, move.dynamicPunch.id, move.chatter.id],
+        },
     }, 
 	
-
   /*
     {
         areaId: "vsGymLeaderRoxanne",
