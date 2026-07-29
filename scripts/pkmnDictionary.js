@@ -13051,6 +13051,7 @@ pkmn.garbodorGmax = {
     spe: 75*1.15,
   },
     hiddenAbility: ability.toxicBoost,
+    signature : move.barbBarrage,
     lore: `A energia Dynamax faz seu corpo de lixo compactado crescer a proporções monumentais, liberando toxinas em uma escala alarmante.`,
 }
 
@@ -18573,6 +18574,7 @@ pkmn.inteleon = {
     sdef: 65,
     spe: 120,
   },
+    hiddenAbility: ability.moody,
     signature : move.snipeShot,
     lore: `Ele dispara jatos de água com a precisão de um sniper, usando o dedo como mira antes de atacar de longas distâncias.`,
 }
@@ -18587,6 +18589,7 @@ pkmn.inteleonGmax = {
     sdef: 65*1.15,
     spe: 120*1.15,
   },
+    hiddenAbility: ability.moody,
     signature : move.snipeShot,
     lore: `A energia Dynamax alonga seu corpo dramaticamente, permitindo disparos de água com alcance e precisão extraordinários.`,
 }
@@ -18677,6 +18680,8 @@ pkmn.corviknightGmax = {
     sdef: 85*1.15,
     spe: 67*1.15,
   },
+    hiddenAbility: ability.parentalBond,
+    signature : move.braveBird,
     lore: `A energia Dynamax expande suas asas de aço a proporções gigantescas, permitindo que carregue cargas imensas pelo céu.`,
 }
 
@@ -18855,6 +18860,7 @@ pkmn.drednaw = {
     sdef: 68,
     spe: 60,
   },
+    signature : move.snipeShot,
     hiddenAbility: ability.strongJaw,
     lore: `Sua mordida pode esmagar rochas facilmente, e ele desafia qualquer rival que considere mais forte que ele em seu território.`,
 }
@@ -18869,6 +18875,7 @@ pkmn.drednawGmax = {
     sdef: 68*1.15,
     spe: 60*1.15,
   },
+    signature : move.snipeShot,
     hiddenAbility: ability.strongJaw,
     lore: `A energia Dynamax reforça sua concha, tornando suas mordidas capazes de esmagar rochas do tamanho de prédios.`,
 }
@@ -18946,6 +18953,7 @@ pkmn.coalossal = {
     sdef: 90,
     spe: 30,
   },
+    signature : move.mindBlown,
     hiddenAbility: ability.solarPower,
     lore: `Ele carrega uma montanha de carvão nas costas, e a fumaça liberada pode ser vista a quilômetros de distância como uma coluna negra.`,
 }
@@ -18960,6 +18968,7 @@ pkmn.coalossalGmax = {
     sdef: 90*1.15,
     spe: 30*1.15,
   },
+    signature : move.mindBlown,
     hiddenAbility: ability.solarPower,
     lore: `A energia Dynamax faz sua montanha de carvão nas costas crescer imensamente, liberando fumaça visível a quilômetros.`,
 }
@@ -19086,6 +19095,7 @@ pkmn.sandaconda = {
     spe: 71,
   },
     hiddenAbility: ability.sandyPelt,
+    signature : move.boneRush,
     lore: `A areia armazenada em seu corpo pode ser disparada com força suficiente para formar uma tempestade de areia instantânea.`,
 }
 
@@ -19099,6 +19109,7 @@ pkmn.sandacondaGmax = {
     sdef: 70*1.15,
     spe: 71*1.15,
   },
+    signature : move.boneRush,
     hiddenAbility: ability.sandyPelt,
     lore: `A energia Dynamax expande seu corpo dramaticamente, permitindo que ele dispare tempestades de areia capazes de cobrir cidades inteiras.`,
 }
@@ -19653,6 +19664,7 @@ pkmn.copperajah = {
     spe: 30,
   },
     hiddenAbility: ability.sheerForce,
+    signature : move.doomDesire,
     lore: `Sua tromba pode esmagar rochas com facilidade, e ela é treinada para trabalhos de construção pesada em minas subterrâneas.`,
 }
 
@@ -19667,6 +19679,7 @@ pkmn.copperajahGmax = {
     spe: 30*1.15,
   },
     hiddenAbility: ability.sheerForce,
+    signature : move.doomDesire,
     lore: `A energia Dynamax expande sua tromba de metal, tornando-a capaz de escavar túneis através de montanhas inteiras.`,
 }
 
@@ -19955,6 +19968,8 @@ pkmn.urshifuSingleGmax = {
     sdef: 60*1.15,
     spe: 97*1.15,
   },
+    hiddenAbility: ability.moody,
+    signature : move.fieryWrath,
     lore: `A energia Dynamax amplia seu golpe único a proporções gigantescas, capaz de atravessar montanhas inteiras com um só ataque.`,
 }
 
@@ -19985,6 +20000,8 @@ pkmn.urshifuRapidGmax = {
     sdef: 60*1.15,
     spe: 97*1.15,
   },
+    hiddenAbility: ability.parentalBond,
+    signature : move.clamp,
     lore: `A energia Dynamax intensifica sua sequência de golpes, criando uma rajada de ataques rápidos capazes de derrubar qualquer defesa.`,
 }
 
