@@ -5327,6 +5327,342 @@ areas.eventKyogrePrimal = {
     },
     category: 2,
 }
+areas.eventThundurusTherian = {
+    rotation: 2,
+    type: `event`,
+    name: `Thundurus Therian`,
+    background : `dimension1`,
+    icon: pkmn.thundurusTherian,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.thundurusTherian,
+        slot1Moves : [move.zapCannon.id, move.dragonAscent.id, move.boltStrike.id, move.flyingPress.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.thundurusTherian],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.thundurusTherian];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.thundurusTherian);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventNecrozmaDawnWings = {
+    rotation: 2,
+    type: `event`,
+    name: `Thundurus Therian`,
+    background : `night`,
+    icon: pkmn.necrozmaDawnWings,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.necrozmaDawnWings,
+        slot1Moves : [move.luminaCrash.id, move.moongeistBeam.id, move.mysticalPower.id, move.shadowForce.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.necrozmaDawnWings],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.necrozmaDawnWings];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.necrozmaDawnWings);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventUrshifuRapid = {
+    rotation: 2,
+    type: `event`,
+    name: `Urshifu Rapid`,
+    background : `gym`,
+    icon: pkmn.urshifuRapid,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.urshifuRapid,
+        slot1Moves : [move.fieryWrath.id, move.noRetreat.id, move.ruination.id, move.hiJumpKick.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.urshifuRapid],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.urshifuRapid];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.urshifuRapid);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventMegaLatios = {
+    rotation: 2,
+    type: `event`,
+    name: `Mega Latios`,
+    background : `trench`,
+    icon: pkmn.megaLatios,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaLatios,
+        slot1Moves : [move.dragonAscent.id, move.kinesis.id, move.clangingScales.id, move.freezingGlare.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaLatios],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaLatios];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.megaLatios);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventBlastoiseGmax = {
+    rotation: 2,
+    type: `event`,
+    name: `Blastoise Gmax`,
+    background : `sea`,
+    icon: pkmn.blastoiseGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.blastoiseGmax,
+        slot1Moves : [move.clamp.id, move.jetPunch.id, move.fishiousRend.id, move.sparklingAria.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.blastoiseGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.blastoiseGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.blastoiseGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+    areas.eventGengarGmax = {
+    rotation: 2,
+    type: `event`,
+    name: `Gengar Gmax`,
+    background : `night`,
+    icon: pkmn.gengarGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.gengarGmax,
+        slot1Moves : [move.rageFist.id, move.barbBarrage.id, move.shadowForce.id, move.poisonTail.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.gengarGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gengarGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.gengarGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventGarbodorGmax = {
+    rotation: 2,
+    type: `event`,
+    name: `Garbodor Gmax`,
+    background : `town`,
+    icon: pkmn.garbodorGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.garbodorGmax,
+        slot1Moves : [move.toxicThread.id, move.barbBarrage.id, move.venoshock.id, move.poisonTail.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.garbodorGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.garbodorGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.garbodorGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+    areas.eventOrbeetleGmax = {
+    rotation: 2,
+    type: `event`,
+    name: `Orbeetle Gmax`,
+    background : `night`,
+    icon: pkmn.orbeetleGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaShard.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaShard.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaShard.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.orbeetleGmax,
+        slot1Moves : [move.attackOrder.id, move.mysticalPower.id, move.megahorn.id, move.psyshieldBash.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.orbeetleGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.orbeetleGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2% de chance (0.02)
+        if (Math.random() < 0.02) {
+            nishLoot.push(pkmn.orbeetleGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
 
 //**************************************************************************************************************************************************************
 /*
