@@ -59,8 +59,6 @@ field.electricField = {
 }
 
 
-
-
 //neutral, can be both negative, or positive depending on the user
 field.trickField = {
     info : function() { return `Slower Pokemon become faster, faster Pokemon become slower`},
@@ -3437,8 +3435,8 @@ areas.eventNihilego = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.nihilego);
         }
         
@@ -3480,8 +3478,8 @@ areas.eventKartana = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.kartana);
         }
         
@@ -3524,8 +3522,8 @@ areas.eventGreatTusk = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.greatTusk);
         }
         
@@ -3567,8 +3565,8 @@ areas.eventSandyShocks = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.sandyShocks);
         }
         
@@ -3610,8 +3608,8 @@ areas.eventIronTreads = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.ironTreads);
         }
         
@@ -3653,8 +3651,8 @@ areas.eventIronThorns = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.ironThorns);
         }
         
@@ -3697,8 +3695,8 @@ areas.eventGroudonPrimal = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.groudonPrimal);
         }
         
@@ -3740,8 +3738,8 @@ areas.eventLandorusTherian = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.landorusTherian);
         }
         
@@ -3782,8 +3780,8 @@ areas.eventZygarde100 = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.zygarde100);
         }
         
@@ -3824,8 +3822,8 @@ areas.eventZamazentaCrowned = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.zamazentaCrowned);
         }
         
@@ -3866,8 +3864,8 @@ areas.eventTerapagosTerastal = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.terapagosTerastal);
         }
         
@@ -3908,8 +3906,8 @@ areas.eventCharizardGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.charizardGmax);
         }
         
@@ -3950,8 +3948,8 @@ areas.eventMachampGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.machampGmax);
         }
         
@@ -3992,8 +3990,8 @@ areas.eventSnorlaxGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.snorlaxGmax);
         }
         
@@ -4034,8 +4032,8 @@ areas.eventCorviknightGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.corviknightGmax);
         }
         
@@ -4076,8 +4074,8 @@ areas.eventSandacondaGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.sandacondaGmax);
         }
         
@@ -4118,8 +4116,8 @@ areas.eventAlcremieGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.alcremieGmax);
         }
         
@@ -4162,8 +4160,8 @@ areas.eventMegaDiancie = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.diancite);
         }
         
@@ -4204,8 +4202,8 @@ areas.eventTerapagosStellar = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.terapagosStellar);
         }
         
@@ -5058,8 +5056,8 @@ areas.eventBuzzwole = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Buzzwole: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Buzzwole: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.buzzwole);
         }
         
@@ -5101,8 +5099,8 @@ areas.eventGuzzlord = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Guzzlord: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Guzzlord: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.guzzlord);
         }
         
@@ -5145,8 +5143,8 @@ areas.eventScreamTail = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.screamTail);
         }
         
@@ -5188,8 +5186,8 @@ areas.eventRoaringMoon = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.roaringMoon);
         }
         
@@ -5231,8 +5229,8 @@ areas.eventIronBundle = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.ironBundle);
         }
         
@@ -5274,8 +5272,8 @@ areas.eventIronValiant = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.ironValiant);
         }
         
@@ -5318,8 +5316,8 @@ areas.eventKyogrePrimal = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Mega Tyranitar: 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Mega Tyranitar: 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.kyogrePrimal);
         }
         
@@ -5360,8 +5358,8 @@ areas.eventThundurusTherian = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.thundurusTherian);
         }
         
@@ -5402,8 +5400,8 @@ areas.eventNecrozmaDawnWings = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.necrozmaDawnWings);
         }
         
@@ -5444,8 +5442,8 @@ areas.eventUrshifuRapid = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.urshifuRapid);
         }
         
@@ -5486,8 +5484,8 @@ areas.eventMegaLatios = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.megaLatios);
         }
         
@@ -5528,8 +5526,8 @@ areas.eventBlastoiseGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.blastoiseGmax);
         }
         
@@ -5570,8 +5568,8 @@ areas.eventBlastoiseGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.gengarGmax);
         }
         
@@ -5612,8 +5610,8 @@ areas.eventGarbodorGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.garbodorGmax);
         }
         
@@ -5654,8 +5652,8 @@ areas.eventGarbodorGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.orbeetleGmax);
         }
         
@@ -5696,8 +5694,8 @@ areas.eventToxtricityGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.toxtricityGmax);
         }
         
@@ -5738,8 +5736,8 @@ areas.eventCopperajahGmax = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.copperajahGmax);
         }
         
@@ -5782,8 +5780,8 @@ areas.eventEternatus = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.eternatus);
         }
         
@@ -5824,8 +5822,8 @@ areas.eventMegaZygarde = {
         // Sistema de loot real pós-batalha
         const nishLoot = [];
 
-        // Pokemon Drop Chance 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.megaZygarde);
         }
         
@@ -5835,7 +5833,7 @@ areas.eventMegaZygarde = {
 }
 
 //**************************************************************************************************************************************************************
-/*
+
 //Rotation III
 //Wild Area - Novice
 areas.exoticPond = {
@@ -5914,7 +5912,94 @@ areas.steelTomb = {
     },
     category: 2,
 }
-*/
+
+areas.eventMegaChesnaught = {
+    rotation: 3,
+    type: `event`,
+    name: `Mega Chesnaught`,
+    background : `exploreHead1`,
+    icon: pkmn.megaChesnaught,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientKeystone.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.ancientKeystone.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaChesnaught,
+        slot1Moves : [move.seedFlare.id, move.meteorAssault.id, move.tropKick.id, move.thunderousKick.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaChesnaught],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaChesnaught];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaChesnaught);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaDragalge = {
+    rotation: 3,
+    type: `event`,
+    name: `Mega Dragalge`,
+    background : `exploreHead1`,
+    icon: pkmn.megaDragalge,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.ancientKeystone.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.ancientKeystone.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaDragalge,
+        slot1Moves : [move.barbBarrage.id, move.dragonAscent.id, move.poisonTail.id, move.clangingScales.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaDragalge],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaDragalge];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaDragalge);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+
+
 //*************************************************************************************************************************************************************
 /*
 //Rotation IV
