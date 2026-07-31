@@ -278,13 +278,13 @@ ability.voltage = {
 ability.hyperCutter = {
     type: [`bug`],
     rarity: 1,
-    info: function() {return `Previne a redução de status de Attack e Special Attack`},
+    info: function() {return `Previne a redução do status de Attack e Special Attack`},
 }
 
 ability.bigPecks = {
     type: [`flying`],
     rarity: 1,
-    info: function() {return `Previne a redução de status de Defense e Special Defense`},
+    info: function() {return `Previne a redução do status de Defense e Special Defense`},
 }
 
 ability.wonderSkin = {
@@ -299,7 +299,7 @@ ability.wonderSkin = {
 ability.synchronize = {
     type: [`psychic`, `all`],
     rarity: 2,
-    info: function() {return `Também aplica efeitos de status ativos ao atacante no momento da aplicação.`},
+    info: function() {return `Os efeitos de status aplicados também afetam o atacante.`},
 }
 
 ability.solarPower = {  
@@ -374,8 +374,6 @@ ability.technician = {
     info: function() {return `Golpes com 60 ou menos poder de ataque são 50% mais fortes`},
 }
 
-
-
 ability.scrappy = {
     type: [`fighting` , `normal`],
     rarity: 2,
@@ -448,9 +446,6 @@ ability.growthAbsorb = {
     info: function() {return `Anula o dano do tipo Grass`},
 }
 
-
-
-
 ability.strongJaw = {
     type: [`dark`],
     rarity: 2,
@@ -474,20 +469,20 @@ ability.ironFist = {
 ability.rivalry = {
     type: [`dragon`, `dark`],
     rarity: 2,
-    info: function() {return `Multiplies the damage by x1.5 when the opposite Pokemon shares a type`},
+    info: function() {return `Aumenta o dano em 50% se o Pokémon adversário tiver pelo menos um tipo em comum com o usuário`},
 }
 
 ability.pickPocket = {
     type: [`dark`, `flying`, `normal`],
     rarity: 2,
-    info: function() {return `Increases the weight of rare item drops by 1% (Can stack). Works always for everyone regardless of the user`},
+    info: function() {return `Aumenta em 1% a chance de itens raros aparecerem. O efeito é cumulativo e se aplica globalmente.`},
 }
 
 
 ability.brittleArmor = {
     type: [`ice`,`rock`],
     rarity: 2,
-    info: function() {return `Increases Special Attack by 50% if afflicted with a status effect`},
+    info: function() {return `Aumenta o Ataque Especial em 50% enquanto estiver sob efeito de debuffs.`},
 }
 
 
@@ -495,7 +490,7 @@ ability.brittleArmor = {
 ability.chlorophyll  = {  
     type: [`grass`],
     rarity: 2,
-    info: function() {return `Increases Speed by 50% on ${tagSunny} weather`},
+    info: function() {return `Aumenta o Speed em 50% no clima ${tagSunny}`},
 }
 
 
@@ -510,170 +505,170 @@ ability.chlorophyll  = {
 ability.grassyPelt = {  
     type: [`grass`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagGrassyTerrain} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o terreno ${tagGrassyTerrain} estiver ativo`},
 }
 
 ability.sandyPelt = {  
     type: [`rock`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagSandstorm} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o clima ${tagSandstorm} estiver ativo`},
 }
 
 ability.icyPelt = {  
     type: [`ice`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagHail} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o clima ${tagHail} estiver ativo`},
 }
 
 ability.moistPelt = {  
     type: [`water`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagRainy} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o clima ${tagRainy} estiver ativo`},
 }
 
 ability.fieryPelt = {  
     type: [`fire`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagSunny} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o clima ${tagSunny} estiver ativo`},
 }
 
 ability.pixiePelt = {  
     rename: `fuzzyPelt`,
     type: [`psychic`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagMistyTerrain} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o terreno ${tagMistyTerrain} estiver ativo`},
 }
 
 ability.blackPelt = {  
     type: [`ghost`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagFoggy} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o clima ${tagFoggy} estiver ativo`},
 }
 
 ability.spikyPelt = {  
     type: [`electric`],
     rarity: 3,
-    info: function() {return `Prevents negative stat changes and status effects while on ${tagElectricTerrain} weather`},
+    info: function() {return `Impede a redução de atributos e problemas de status enquanto o terreno ${tagElectricTerrain} estiver ativo`},
 }
 
 ability.climaTact  = {  
     type: [`fairy`],
     rarity: 3,
-    info: function() {return `Weather changed by the user is extended by 15 turns`},
+    info: function() {return `As condições climáticas invocadas por este Pokémon duram 15 turnos a mais.`},
 }
 
 ability.intangible  = {  
     type: [`dark`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagFoggy} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em clima ${tagFoggy}`},
 }
 
 ability.hyperconductor  = {  
     type: [`steel`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagElectricTerrain} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em terreno ${tagElectricTerrain}`},
 }
 
 ability.faeRush  = {  
     type: [`fairy`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagMistyTerrain} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em terreno ${tagMistyTerrain}`},
 }
 
 ability.moltShed  = {  
     type: [`bug`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagGrassyTerrain} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em terreno ${tagGrassyTerrain}`},
 }
 
 ability.slushRush  = { 
     type: [`ice`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagHail} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em clima ${tagHail}`},
 }
 
 ability.swiftSwim  = { 
     type: [`water`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagRainy} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em clima ${tagRainy}`},
 }
 
 ability.sandRush  = { 
     type: [`ground`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% on ${tagSandstorm} weather`},
+    info: function() {return `Aumenta o Speed em 50% quando em clima ${tagSandstorm}`},
 }
 
 ability.intimidate = {
     type: [`dragon`, `ghost`],
     rarity: 3,
-    info: function() {return `Decreases enemy Attack by 50% when the opposing Pokemon enters the battle`},
+    info: function() {return `Reduz o Attack do Pokémon adversário em 50% quando ele entra em batalha.`},
 }
 
 ability.dauntingLook = {
     type: [`bug`, `fire`, `fighting`],
     rarity: 3,
-    info: function() {return `Decreases enemy Special Attack by 50% when the opposing Pokemon enters the battle`},
+    info: function() {return `Reduz o Special Attack do Pokémon adversário em 50% quando ele entra em batalha.`},
 }
 
 ability.unburden = {
     type: [`normal`, `fighting`, `flying`],
     rarity: 3,
-    info: function() {return `Increases Speed by 50% if no item is being held`},
+    info: function() {return `Aumenta a Velocidade em 50% se o Pokémon não estiver segurando nenhum item.`},
 }
 
 ability.moxie = {
     type: [`dark`],
     rarity: 3,
-    info: function() {return `Increases Attack by 50% when defeating a Pokemon`},
+    info: function() {return `Aumenta o Attack em 50% ao derrotar um Pokémon.`},
 }
 
 ability.strategist = {
     type: [`psychic`],
     rarity: 3,
-    info: function() {return `Increases Special Attack by 50% when defeating a Pokemon`},
+    info: function() {return `Aumenta o Special Attack em 50% ao derrotar um Pokémon`},
 }
 
 ability.sheerForce = {
     type: [`ground`, `steel`, `rock`],
     rarity: 3,
-    info: function() {return `Positive secondary effect of damaging moves are removed, and their damage is multiplied by x1.25`},
+    info: function() {return `Os efeitos secundários positivos de golpes causadores de dano são removidos, mas o dano deles é multiplicado por x1.25.`},
 }
 
 ability.levitate = {
     type: [`electric`, `steel`],
     rarity: 3,
-    info: function() {return `Grants immunity to Ground-type moves`},
+    info: function() {return `Concede imunidade a golpes do tipo Ground`},
 }
 
 ability.thickFat = {
     type: [`normal`, `ice`],
     rarity: 3,
-    info: function() {return `Halves damage received from Fire and Ice-type moves`},
+    info: function() {return `Reduz pela metade o dano recebido de golpes dos tipos Fire e Ice.`},
 }
 
 ability.adaptability = {
     type: [`all`],
     rarity: 3,
-    info: function() {return `Increases Same-Type-Attack-Bonus by +0.2`},
+    info: function() {return `Aumenta o bônus de STAB em 20%`},
 }
 
 ability.ambidextrous = {
     type: [`all`],
     rarity: 3,
-    info: function() {return `Increases Cross-Power by +0.3`},
+    info: function() {return `Aumenta o Cross-Power em 30%`},
 }
 
 ability.noGuard = {
     type: [`all`],
     rarity: 3,
-    info: function() {return `Moves always hit regardless of the type`},
+    info: function() {return `Os golpes sempre acertam, independentemente do tipo.`},
 }
 
 ability.multiscale = {
     type: [`water`],
     rarity: 3,
-    info: function() {return `Damage received is halved when over 50% HP`},
+    info: function() {return `O dano recebido por este Pokémon será reduzido pela metade enquanto ele estiver com mais de 50% de HP.`},
 }
 
 ability.guts = {
@@ -697,7 +692,7 @@ ability.sharpness = {
 ability.angerPoint = {
     type: [`fire`],
     rarity: 3,
-    info: function() {return `Increase Attack by 100% when hit with a super-effective move`},
+    info: function() {return `Aumenta o Attack em 100% quando for atingido por um golpe super efetivo.`},
 }
 
 ability.justified = {
