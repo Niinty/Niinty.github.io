@@ -6899,7 +6899,135 @@ areas.eventWalkingWake = {
     },
     category: 2,
 }
+areas.eventIronHands = {
+    rotation: 3,
+    type: `event`,
+    name: `Iron Hands`,
+    background : `gym`,
+    icon: pkmn.ironHands,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.steelKeystone.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.steelKeystone.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironHands,
+        slot1Moves : [move.zapCannon.id, move.hiJumpKick.id, move.thunderPunch.id, move.flyingPress.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironHands],
 
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironHands];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ironHands);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventIronLeaves = {
+    rotation: 3,
+    type: `event`,
+    name: `Iron Leaves`,
+    background : `exploreHead1`,
+    icon: pkmn.ironLeaves,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.steelKeystone.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.steelKeystone.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironLeaves,
+        slot1Moves : [move.trailblaze.id, move.psychic.id, move.razorLeaf.id, move.psybeam.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironLeaves],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironLeaves];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Mega Tyranitar: 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ironLeaves);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier V
+areas.eventDialgaOrigin = {
+    rotation: 3,
+    type: `event`,
+    name: `Dialga Origin`,
+    background : `space`,
+    icon: pkmn.dialgaOrigin,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.dialgaOrigin,
+        slot1Moves : [move.anchorShot.id, move.roarOfTime.id, move.ionise.id, move.spacialRend.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.dialgaOrigin],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.dialgaOrigin];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.dialgaOrigin);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+    
 //*************************************************************************************************************************************************************
 /*
 //Rotation IV
