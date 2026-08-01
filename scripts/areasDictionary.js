@@ -1845,7 +1845,7 @@ areas.slumberingWeald = {
     icon: pkmn.munna,
     spawns: {
         common : [pkmn.grubbin,pkmn.hoothoot],
-        uncommon : [pkmn.munna,pkmn.alolanWeezing],
+        uncommon : [pkmn.munna,pkmn.galarianWeezing],
         rare : [pkmn.corviknight]
     },
     drops: {
