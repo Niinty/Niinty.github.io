@@ -9134,6 +9134,176 @@ areas.fusionPlant = {
     category: 2,
 }
 
+//Tier I
+areas.eventMegaClefable = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Clefable`,
+    background : `forest`,
+    icon: pkmn.megaClefable,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaClefable,
+        slot1Moves : [move.aeroblast.id, move.moonblast.id, move.chatter.id, move.playRough.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaClefable],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaClefable];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        //// Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaClefable);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaEelektross = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Eelektross`,
+    background : `sea`,
+    icon: pkmn.megaEelektross,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaEelektross,
+        slot1Moves : [move.thunder.id, move.boltStrike.id, move.thunderPunch.id, move.wildCharge.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaEelektross],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaEelektross];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        //// Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaEelektross);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaGlimmora = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Glimmora`,
+    background : `cave`,
+    icon: pkmn.megaGlimmora,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGlimmora,
+        slot1Moves : [move.rockWrecker.id, move.sludge.id, move.rockSlide.id, move.crossPoison.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaGlimmora],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaGlimmora];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        //// Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaGlimmora);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaMeganium = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Meganium`,
+    background : `exploreHead1`,
+    icon: pkmn.megaMeganium,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaMeganium,
+        slot1Moves : [move.trailblaze.id, move.moonblast.id, move.chloroblast.id, move.playRough.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaMeganium],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaMeganium];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        //// Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaMeganium);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
 //************************************************************************************************************************************************************
 
 
