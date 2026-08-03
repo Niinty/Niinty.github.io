@@ -1335,7 +1335,7 @@ const GYMS_LEADERS = [
         description: "Especialista em Pokémon do tipo Ice.",
         team: {
             slot1: pkmn.kyurem, slot1Moves: [move.glaciate.id, move.dragonAscent.id, move.tripleAxel.id, move.clangingScales.id],
-            slot2: pkmn.calyrexIce, slot2Moves: [move.tripleAxel.id, move.amnesia.id, move.glaciate.id, move.psybeam.id],
+            slot2: pkmn.dewgong, slot2Moves: [move.tripleAxel.id, move.surf.id, move.iceBall.id, move.auroraPunch.id],
             slot3: pkmn.mamoswine, slot3Moves: [move.iceHammer.id, move.glaciate.id, move.freezeDry.id, move.foamShot.id],
             slot4: pkmn.weavile, slot4Moves: [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
             slot5: pkmn.lapras, slot5Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
@@ -1535,7 +1535,7 @@ const GYMS_LEADERS = [
         description: "Especialista em Pokémon do tipo Ice.",
         team: {
             slot1: pkmn.kyurem, slot1Moves: [move.glaciate.id, move.dragonAscent.id, move.tripleAxel.id, move.clangingScales.id],
-            slot2: pkmn.calyrexIce, slot2Moves: [move.tripleAxel.id, move.amnesia.id, move.glaciate.id, move.psybeam.id],
+            slot2: pkmn.dewgong, slot2Moves: [move.tripleAxel.id, move.surf.id, move.iceBall.id, move.auroraPunch.id],
             slot3: pkmn.chienPao, slot3Moves: [move.glaciate.id, move.iceHammer.id, move.mountainGale.id, move.freezeDry.id],
             slot4: pkmn.mamoswine, slot4Moves: [move.iceHammer.id, move.glaciate.id, move.freezeDry.id, move.foamShot.id],
             slot5: pkmn.weavile, slot5Moves: [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
