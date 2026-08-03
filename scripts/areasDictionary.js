@@ -2387,7 +2387,7 @@ areas.sunkenTempleIII = {
     },
 }
 
-const rotationEventMax = 4;
+const rotationEventMax = 5;
 const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
@@ -8966,9 +8966,93 @@ areas.eventUrshifuSingleGmax = {
     },
     category: 2,
 }
+areas.eventUrshifuRapidGmax = {
+    rotation: 4,
+    type: `event`,
+    name: `Urshifu Rapid Gmax`,
+    background : `gym`,
+    icon: pkmn.urshifuRapidGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.urshifuRapidGmax,
+        slot1Moves : [move.clamp.id, move.hiJumpKick.id, move.scald.id, move.dynamicPunch.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.urshifuRapidGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.urshifuRapidGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.urshifuRapidGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventUltraNecrozma = {
+    rotation: 4,
+    type: `event`,
+    name: `Ultra Necrozma`,
+    background : `space`,
+    icon: pkmn.ultraNecrozma,
+    trainer: true,
+    encounter: true,
+    difficulty: tier6difficulty,
+    encounterEffect : function() {item.megaCluster.got-=6},
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>5 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ultraNecrozma,
+        slot1Moves : [move.psychic.id, move.anchorShot.id, move.psybeam.id, move.sunsteelStrike.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ultraNecrozma],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ultraNecrozma];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance (0.02)
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ultraNecrozma);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
     
 //*************************************************************************************************************************************************************
-/*
+
 //Rotation V
 //Wild Zone
 areas.ecosphere = {
@@ -9049,7 +9133,7 @@ areas.fusionPlant = {
     },
     category: 2,
 }
-*/
+
 //************************************************************************************************************************************************************
 
 
