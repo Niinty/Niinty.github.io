@@ -1262,7 +1262,7 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Fighting.",
         team: {
-            slot1: pkmn.urshifu, slot1Moves: [move.thunderousKick.id, move.noRetreat.id, move.dynamicPunch.id, move.flyingPress.id],
+            slot1: pkmn.gallade, slot1Moves: [move.dynamicPunch.id, move.hiJumpKick.id, move.zenHeadbut.id, move.flyingPress.id],
             slot2: pkmn.lucario, slot2Moves: [move.hiJumpKick.id, move.anchorShot.id, move.flyingPress.id, move.dynamicPunch.id],
             slot3: pkmn.conkeldurr, slot3Moves: [move.dynamicPunch.id, move.hiJumpKick.id, move.zenHeadbut.id, move.flyingPress.id],
             slot4: pkmn.terrakion, slot4Moves: [move.rockWrecker.id, move.noRetreat.id, move.wrathOfTheLand.id, move.thunderousKick.id],
@@ -1354,7 +1354,7 @@ const GYMS_LEADERS = [
         team: {
             slot1: pkmn.hydreigon, slot1Moves: [move.fieryWrath.id, move.dragonEnergy.id, move.darkestLariat.id, move.dragonDarts.id],
             slot2: pkmn.tyranitar, slot2Moves: [move.clangingScales.id, move.ruination.id, move.fieryWrath.id, move.dragonDarts.id],
-            slot3: pkmn.urshifuSingle, slot3Moves: [move.fieryWrath.id, move.hiJumpKick.id, move.darkestLariat.id, move.dynamicPunch.id],
+            slot3: pkmn.gallade, slot3Moves: [move.dynamicPunch.id, move.hiJumpKick.id, move.zenHeadbut.id, move.flyingPress.id],
             slot4: pkmn.weavile, slot4Moves: [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
             slot5: pkmn.absol, slot5Moves: [move.embargo.id, move.fieryWrath.id, move.falseSurrender.id, move.darkestLariat.id],
             slot6: pkmn.yveltal, slot6Moves: [move.fieryWrath.id, move.darkestLariat.id, move.ruination.id, move.falseSurrender.id],
