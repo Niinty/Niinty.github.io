@@ -81,14 +81,7 @@ field.noMercy = {
     tier: 2
 }
 
-
-
-
-
-
-
-
-//negative, but not maiming enough to consider using other pokemon
+//Negative, but not maiming enough to consider using other pokemon
 
 field.deltaStream = {
     info : function() { return `Weather changes are disabled`},
@@ -2864,7 +2857,7 @@ areas.eventMegaAbomasnow = {
         }
 
         // Abomasite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.abomasite);
         }
         
@@ -2912,7 +2905,7 @@ areas.eventMegaAltaria = {
         }
 
         // Altarianite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.altarianite);
         }
         
@@ -2960,7 +2953,7 @@ areas.eventMegaScizor = {
         }
 
         // scizorite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.scizorite);
         }
         
@@ -3008,7 +3001,7 @@ areas.eventMegaCharizardX = {
         }
 
         // charizarditeX (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.charizarditeX);
         }
         
@@ -3056,7 +3049,7 @@ areas.eventMegaGallade = {
         }
 
         // galladite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.galladite);
         }
         
@@ -3104,7 +3097,7 @@ areas.eventMegaGyarados = {
         }
 
         // gyaradosite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.gyaradosite);
         }
         
@@ -3152,7 +3145,7 @@ areas.eventMegaLopunny = {
         }
 
         // lopunnite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.lopunnite);
         }
         
@@ -3200,7 +3193,7 @@ areas.eventMegaMedicham = {
         }
 
         // medichamite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.medichamite);
         }
         
@@ -3248,7 +3241,7 @@ areas.eventMegaRaichuX = {
         }
 
         // raichutiteX (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.raichutiteX);
         }
         
@@ -3296,7 +3289,7 @@ areas.eventMegaSteelix = {
         }
 
         // steelixite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.steelixite);
         }
         
@@ -3345,7 +3338,7 @@ areas.eventMegaGarchomp = {
         }
 
         // garchompite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.garchompite);
         }
         
@@ -3393,7 +3386,7 @@ areas.eventMegaTyranitar = {
         }
 
         // tyranitarite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.tyranitarite);
         }
         
@@ -4629,7 +4622,7 @@ areas.eventMegaAbsol = {
         }
 
         // absolite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.absolite);
         }
         
@@ -4677,7 +4670,7 @@ areas.eventMegaAmpharos = {
         }
 
         // ampharosite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.ampharosite);
         }
         
@@ -4725,7 +4718,7 @@ areas.eventMegaBeedrill = {
         }
 
         // beedrillite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.beedrillite);
         }
         
@@ -4773,7 +4766,7 @@ areas.eventMegaCharizardY = {
         }
 
         // charizarditeY (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.charizarditeY);
         }
         
@@ -4821,7 +4814,7 @@ areas.eventMegaRaichuY = {
         }
 
         // raichutiteY (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.raichutiteY);
         }
         
@@ -4869,7 +4862,7 @@ areas.eventMegaHawlucha = {
         }
 
         // hawluchanite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.hawluchanite);
         }
         
@@ -4917,7 +4910,7 @@ areas.eventMegaLucario = {
         }
 
         // lucarionite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.lucarionite);
         }
         
@@ -4965,7 +4958,7 @@ areas.eventMegaSwampert = {
         }
 
         // swampertite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.swampertite);
         }
         
@@ -5014,7 +5007,7 @@ areas.eventMegaMetagross = {
         }
 
         // metagrossite (Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.metagrossite);
         }
         
@@ -6207,7 +6200,7 @@ areas.eventMegaAerodactyl = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.aerodactylite);
         }
         
@@ -6254,7 +6247,7 @@ areas.eventMegaAudino = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.audinite);
         }
         
@@ -6301,7 +6294,7 @@ areas.eventMegaBlastoise = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.blastoisinite);
         }
         
@@ -6348,7 +6341,7 @@ areas.eventMegaSceptile = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.sceptilite);
         }
         
@@ -6395,7 +6388,7 @@ areas.eventMegaGardevoir = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.gardevoirite);
         }
         
@@ -6442,7 +6435,7 @@ areas.eventMegaHeracross = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.heracronite);
         }
         
@@ -6489,7 +6482,7 @@ areas.eventMegaHeracross = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.lucarioniteZ);
         }
         
@@ -6536,7 +6529,7 @@ areas.eventMegaPidgeot = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.pidgeotite);
         }
         
@@ -6583,7 +6576,7 @@ areas.eventMegaSableye = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.sablenite);
         }
         
@@ -6630,7 +6623,7 @@ areas.eventMegaVenusaur = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.venusaurite);
         }
         
@@ -6679,7 +6672,7 @@ areas.eventMegaSalamence = {
         }
 
         //(Pedra Mega): 2% de chance (0.02)
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.salamencite);
         }
         
@@ -7906,7 +7899,7 @@ areas.eventMegaAggron = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.aggronite);
         }
         
@@ -7953,7 +7946,7 @@ areas.eventMegaBanette = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.banettite);
         }
         
@@ -8000,7 +7993,7 @@ areas.eventMegaBlaziken = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.blazikenite);
         }
         
@@ -8047,7 +8040,7 @@ areas.eventMegaFalinks = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.falinksite);
         }
         
@@ -8094,7 +8087,7 @@ areas.eventMegaGengar = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.gengarite);
         }
         
@@ -8141,7 +8134,7 @@ areas.eventMegaHoundoom = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.houndoominite);
         }
         
@@ -8188,7 +8181,7 @@ areas.eventMegaManectric = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.manectite);
         }
         
@@ -8235,7 +8228,7 @@ areas.eventMegaPinsir = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.pinsirite);
         }
         
@@ -8282,7 +8275,7 @@ areas.eventMegaSharpedo = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.sharpedonite);
         }
         
@@ -8331,7 +8324,7 @@ areas.eventMegaDragonite = {
         }
 
         //(Pedra Mega): 2% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(item.dragonitite);
         }
         
@@ -8373,8 +8366,390 @@ areas.eventXurkitree = {
         const nishLoot = [];
 
         // Pokemon Drop Chance 2,5% de chance
-        if (Math.random() < 0.02) {
+        if (Math.random() < 0.025) {
             nishLoot.push(pkmn.xurkitree);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventNaganadel = {
+    rotation: 4,
+    type: `event`,
+    name: `U.B. Naganadel`,
+    background : `space`,
+    icon: pkmn.naganadel,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.wormholeResidue.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.wormholeResidue.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.naganadel,
+        slot1Moves : [move.crossPoison.id, move.dragonDarts.id, move.sludgeBomb.id, move.spacialRend.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.naganadel],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.naganadel];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.naganadel);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier IV
+areas.eventFlutterMane = {
+    rotation: 4,
+    type: `event`,
+    name: `Flutter Mane Showdown`,
+    background : `night`,
+    icon: pkmn.flutterMane,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.wormholeResidue.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.wormholeResidue.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.flutterMane,
+        slot1Moves : [move.lovelyKiss.id, move.shadowForce.id, move.moonblast.id, move.spectralThief.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.flutterMane],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.flutterMane];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.flutterMane);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventRagingBolt = {
+    rotation: 4,
+    type: `event`,
+    name: `Raging Bolt Showdown`,
+    background : `cave`,
+    icon: pkmn.ragingBolt,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.wormholeResidue.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.wormholeResidue.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ragingBolt,
+        slot1Moves : [move.boltStrike.id, move.dragonAscent.id, move.wildCharge.id, move.dragonDarts.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ragingBolt],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ragingBolt];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ragingBolt);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventIronJugulis = {
+    rotation: 4,
+    type: `event`,
+    name: `Iron Jugulis Showdown`,
+    background : `night`,
+    icon: pkmn.ironJugulis,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.wormholeResidue.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.wormholeResidue.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironJugulis,
+        slot1Moves : [move.darkestLariat.id, move.aeroblast.id, move.fieryWrath.id, move.chatter.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironJugulis],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironJugulis];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ironJugulis);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventIronCrown = {
+    rotation: 4,
+    type: `event`,
+    name: `Iron Crown Showdown`,
+    background : `space`,
+    icon: pkmn.ironCrown,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.wormholeResidue.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.wormholeResidue.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironCrown,
+        slot1Moves : [move.psychic.id, move.kingsShield.id, move.zenHeadbut.id, move.shiftGear.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironCrown],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironCrown];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ironCrown);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier V
+areas.eventKyuremWhite = {
+    rotation: 4,
+    type: `event`,
+    name: `Kyurem White`,
+    background : `iceCave`,
+    icon: pkmn.kyuremWhite,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.kyuremWhite,
+        slot1Moves : [move.glaciate.id, move.dragonAscent.id, move.tripleAxel.id, move.clangingScales.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.kyuremWhite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.kyuremWhite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.kyuremWhite);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventEnamorusTherian = {
+    rotation: 4,
+    type: `event`,
+    name: `Enamorus Therian`,
+    background : `forest`,
+    icon: pkmn.enamorusTherian,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.enamorusTherian,
+        slot1Moves : [move.moonblast.id, move.hurricane.id, move.lightOfRuin.id, move.aeroblast.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.enamorusTherian],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.enamorusTherian];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.enamorusTherian);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventCalyrexIce = {
+    rotation: 4,
+    type: `event`,
+    name: `Calyrex Ice`,
+    background : `iceCave`,
+    icon: pkmn.calyrexIce,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.calyrexIce,
+        slot1Moves : [move.tripleAxel.id, move.amnesia.id, move.glaciate.id, move.psybeam.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.calyrexIce],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.calyrexIce];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.calyrexIce);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventHattereneGmax = {
+    rotation: 4,
+    type: `event`,
+    name: `Hatterene Gmax`,
+    background : `forest`,
+    icon: pkmn.hattereneGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.hattereneGmax,
+        slot1Moves : [move.kinesis.id, move.mistBall.id, move.luminaCrash.id, move.lunarDance.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.hattereneGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.hattereneGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.hattereneGmax);
         }
         
         return nishLoot;
@@ -10220,7 +10595,7 @@ areas.frontierBattleFactory = {
 
 let rotationDimensionMax = 1;
 
-areas.dimensionRift1 = {
+/*areas.dimensionRift1 = {
     tier : 1,
     type: `dimension`,
     name: `Weak Dimensional Rift`,
@@ -10278,6 +10653,7 @@ areas.dimensionRaid1 = {
         return nishLoot;
     },
 }
+*/
 
 /*areas.dimensionRift2 = {
     tier : 2,
