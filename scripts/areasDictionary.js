@@ -2391,9 +2391,9 @@ const rotationEventMax = 5;
 const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
-const tier4difficulty = 450;
-const tier5difficulty = 600;
-const tier6difficulty = 700;
+const tier4difficulty = 400;
+const tier5difficulty = 450;
+const tier6difficulty = 500;
 
 //Rotation I
 //Novice - Wild Area
@@ -9302,6 +9302,1284 @@ areas.eventMegaMeganium = {
         return nishLoot;
     },
     category: 1,
+}
+areas.eventMegaStaraptor = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Staraptor`,
+    background : `forest`,
+    icon: pkmn.megaStaraptor,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaStaraptor,
+        slot1Moves : [move.braveBird.id, move.hiJumpKick.id, move.fly.id, move.noRetreat.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaStaraptor],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaStaraptor];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        //// Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaStaraptor);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaTatsugiriStretchy = {
+    rotation: 5,
+    type: `event`,
+    name: `M. Tatsugiri Stretchy`,
+    background : `sea`,
+    icon: pkmn.megaTatsugiriStretchy,
+    trainer: true,
+    encounter: true,
+    difficulty: tier1difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaTatsugiriStretchy,
+        slot1Moves : [move.dragonAscent.id, move.snipeShot.id, move.spacialRend.id, move.hydroCannon.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaTatsugiriStretchy],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaTatsugiriStretchy];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        //// Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaTatsugiriStretchy);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier II
+areas.eventMegaAlakazam = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Alakazam`,
+    background : `space`,
+    icon: pkmn.megaAlakazam,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaAlakazam,
+        slot1Moves : [move.amnesia.id, move.psychic.id, move.twinBeam.id, move.kinesis.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaAlakazam, item.alakazite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaAlakazam, item.alakazite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaAlakazam);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.alakazite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaBarbaracle = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Barbaracle`,
+    background : `cave`,
+    icon: pkmn.megaBarbaracle,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaBarbaracle,
+        slot1Moves : [move.meteorBeam.id, move.powerGem.id, move.rockSlide.id, move.smackDown.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaBarbaracle, item.barbaracite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaBarbaracle, item.barbaracite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaBarbaracle);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.barbaracite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaCamerupt = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Camerupt`,
+    background : `volcano`,
+    icon: pkmn.megaCamerupt,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaCamerupt,
+        slot1Moves : [move.pyroBall.id, move.armorCannon.id, move.vCreate.id, move.burnUp.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaCamerupt, item.cameruptite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaCamerupt, item.cameruptite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaCamerupt);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.cameruptite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaFeraligatr = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Feraligatr`,
+    background : `sea`,
+    icon: pkmn.megaFeraligatr,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaFeraligatr,
+        slot1Moves : [move.surf.id, move.fishiousRend.id, move.sparklingAria.id, move.hydroCannon.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaFeraligatr, item.feralitite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaFeraligatr, item.feralitite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaFeraligatr);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.feralitite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaGlalie = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Glalie`,
+    background : `iceCave`,
+    icon: pkmn.megaGlalie,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaGlalie,
+        slot1Moves : [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaGlalie, item.glalitite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaGlalie, item.glalitite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaGlalie);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.glalitite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaKangaskhan = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Kangaskhan`,
+    background : `forest`,
+    icon: pkmn.megaKangaskhan,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaKangaskhan,
+        slot1Moves : [move.howl.id, move.crushGrip.id, move.gigaImpact.id, move.beakBlast.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaKangaskhan, item.kangaskhanite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaKangaskhan, item.kangaskhanite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaKangaskhan);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.kangaskhanite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaMawile = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Mawile`,
+    background : `night`,
+    icon: pkmn.megaMawile,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaMawile,
+        slot1Moves : [move.dazzlingGleam.id, move.anchorShot.id, move.moonblast.id, move.ionise.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaMawile, item.mawilite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaMawile, item.mawilite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaMawile);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.mawilite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaPyroar = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Pyroar`,
+    background : `volcano`,
+    icon: pkmn.megaPyroar,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaPyroar,
+        slot1Moves : [move.willOWisp.id, move.pyroBall.id, move.mindBlown.id, move.inferno.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaPyroar, item.pyroarite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaPyroar, item.pyroarite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaPyroar);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.pyroarite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+areas.eventMegaSlowbro = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Slowbro`,
+    background : `space`,
+    icon: pkmn.megaSlowbro,
+    trainer: true,
+    encounter: true,
+    difficulty: tier2difficulty,
+    encounterEffect : function() {item.aetherKeycard.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaSlowbro,
+        slot1Moves : [move.jetPunch.id, move.snipeShot.id, move.fishiousRend.id, move.tripleDive.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaSlowbro, item.slowbronite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaSlowbro, item.slowbronite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaSlowbro);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.slowbronite);
+        }
+        
+        return nishLoot;
+    },
+    category: 1,
+}
+
+//Tier III
+areas.eventMegaBaxcalibur = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Baxcalibur`,
+    background : `trench`,
+    icon: pkmn.megaBaxcalibur,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.futureContraption.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaBaxcalibur,
+        slot1Moves : [move.dragonAscent.id, move.iceBall.id, move.spacialRend.id, move.glaciate.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaBaxcalibur, item.baxcaliburite],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaBaxcalibur, item.baxcaliburite];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaBaxcalibur);
+        }
+
+        //(Pedra Mega): 2% de chance
+        if (Math.random() < 0.02) {
+            nishLoot.push(item.baxcaliburite);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventCelesteela = {
+    rotation: 5,
+    type: `event`,
+    name: `U.B. Celesteela`,
+    background : `space`,
+    icon: pkmn.celesteela,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.futureContraption.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.celesteela,
+        slot1Moves : [move.anchorShot.id, move.aeroblast.id, move.ionise.id, move.hurricane.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.celesteela],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.celesteela];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.celesteela);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventStakataka = {
+    rotation: 5,
+    type: `event`,
+    name: `U.B. Stakataka`,
+    background : `space`,
+    icon: pkmn.stakataka,
+    trainer: true,
+    encounter: true,
+    difficulty: tier3difficulty,
+    encounterEffect : function() {item.futureContraption.got-=3},
+    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>2 },
+    level : 100,
+    team : {
+        slot1 : pkmn.stakataka,
+        slot1Moves : [move.anchorShot.id, move.rockWrecker.id, move.ionise.id, move.rockSlide.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.stakataka],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.stakataka];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.stakataka);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier IV
+areas.eventSlitherWing = {
+    rotation: 5,
+    type: `event`,
+    name: `Slither Wing Showdown`,
+    background : `space`,
+    icon: pkmn.slitherWing,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.futureContraption.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.slitherWing,
+        slot1Moves : [move.xScissor.id, move.hiJumpKick.id, move.bugBuzz.id, move.dynamicPunch.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.slitherWing],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.slitherWing];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.slitherWing);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventGougingFire = {
+    rotation: 5,
+    type: `event`,
+    name: `Gouging Fire Showdown`,
+    background : `volcano`,
+    icon: pkmn.gougingFire,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.futureContraption.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.gougingFire,
+        slot1Moves : [move.flamethrower.id, move.dragonAscent.id, move.fireFang.id, move.dragonDarts.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.gougingFire],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.gougingFire];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.gougingFire);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventIronMoth = {
+    rotation: 5,
+    type: `event`,
+    name: `Iron Moth Showdown`,
+    background : `volcano`,
+    icon: pkmn.ironMoth,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.futureContraption.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironMoth,
+        slot1Moves : [move.flamethrower.id, move.bugBuzz.id, move.fireFang.id, move.megahorn.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironMoth],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironMoth];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ironMoth);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventIronBoulder = {
+    rotation: 5,
+    type: `event`,
+    name: `Iron Boulder Showdown`,
+    background : `cave`,
+    icon: pkmn.ironBoulder,
+    trainer: true,
+    encounter: true,
+    difficulty: tier4difficulty,
+    encounterEffect : function() {item.futureContraption.got-=4},
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockRequirement : function() { return item.futureContraption.got>3 },
+    level : 100,
+    team : {
+        slot1 : pkmn.ironBoulder,
+        slot1Moves : [move.rockPolish.id, move.psychic.id, move.stoneEdge.id, move.ancientPower.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.ironBoulder],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.ironBoulder];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.ironBoulder);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier V
+areas.eventKyuremBlack = {
+    rotation: 5,
+    type: `event`,
+    name: `Kyurem Black`,
+    background : `space`,
+    icon: pkmn.kyuremBlack,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.kyuremBlack,
+        slot1Moves : [move.glaciate.id, move.dragonAscent.id, move.tripleAxel.id, move.clangingScales.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.kyuremBlack],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.kyuremBlack];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.kyuremBlack);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventZygarde50 = {
+    rotation: 5,
+    type: `event`,
+    name: `Zygarde 50`,
+    background : `space`,
+    icon: pkmn.zygarde50,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.zygarde50,
+        slot1Moves : [move.boneRush.id, move.dragonAscent.id, move.earthquake.id, move.earthPower.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.zygarde50],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.zygarde50];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.zygarde50);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventZacianCrowned = {
+    rotation: 5,
+    type: `event`,
+    name: `Zacian Crowned`,
+    background : `forest`,
+    icon: pkmn.zacianCrowned,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.zacianCrowned,
+        slot1Moves : [move.dazzlingGleam.id, move.anchorShot.id, move.moonblast.id, move.ionise.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.zacianCrowned],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.zacianCrowned];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.zacianCrowned);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventCalyrexShadow = {
+    rotation: 5,
+    type: `event`,
+    name: `Calyrex Shadow`,
+    background : `night`,
+    icon: pkmn.calyrexShadow,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.calyrexShadow,
+        slot1Moves : [move.psychic.id, move.shadowForce.id, move.kinesis.id, move.phantomForce.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.calyrexShadow],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.calyrexShadow];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.calyrexShadow);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventVenusaurGmax = {
+    rotation: 5,
+    type: `event`,
+    name: `Venusaur Gmax`,
+    background : `exploreHead1`,
+    icon: pkmn.venusaurGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.venusaurGmax,
+        slot1Moves : [move.seedFlare.id, move.toxic.id, move.cottonGuard.id, move.trailblaze.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.venusaurGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.venusaurGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.venusaurGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventMeowthGmax = {
+    rotation: 5,
+    type: `event`,
+    name: `Meowth Gmax`,
+    background : `forest`,
+    icon: pkmn.meowthGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.meowthGmax,
+        slot1Moves : [move.hyperDrill.id, move.triAttack.id, move.relicSong.id, move.howl.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.meowthGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.meowthGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.meowthGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventEeveeGmax = {
+    rotation: 5,
+    type: `event`,
+    name: `Eevee Gmax`,
+    background : `forest`,
+    icon: pkmn.eeveeGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.eeveeGmax,
+        slot1Moves : [move.relicSong.id, move.hyperDrill.id, move.beakBlast.id, move.crushGrip.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.eeveeGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.eeveeGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.eeveeGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventInteleonGmax = {
+    rotation: 5,
+    type: `event`,
+    name: `Inteleon Gmax`,
+    background : `sea`,
+    icon: pkmn.inteleonGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.inteleonGmax,
+        slot1Moves : [move.surf.id, move.fishiousRend.id, move.sparklingAria.id, move.hydroCannon.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.inteleonGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.inteleonGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.inteleonGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventAppletunGmax = {
+    rotation: 5,
+    type: `event`,
+    name: `Appletun Gmax`,
+    background : `exploreHead1`,
+    icon: pkmn.appletunGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.appletunGmax,
+        slot1Moves : [move.trailblaze.id, move.dragonAscent.id, move.razorLeaf.id, move.dragonDarts.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.appletunGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.appletunGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.appletunGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+areas.eventGrimmsnarlGmax = {
+    rotation: 5,
+    type: `event`,
+    name: `Grimmsnarl Gmax`,
+    background : `night`,
+    icon: pkmn.grimmsnarlGmax,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.grimmsnarlGmax,
+        slot1Moves : [move.darkestLariat.id, move.dazzlingGleam.id, move.fieryWrath.id, move.moonblast.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.grimmsnarlGmax],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.grimmsnarlGmax];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.grimmsnarlGmax);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
+}
+
+//Tier VI
+areas.eventMegaRayquaza = {
+    rotation: 5,
+    type: `event`,
+    name: `Mega Rayquaza`,
+    background : `trench`,
+    icon: pkmn.megaRayquaza,
+    trainer: true,
+    encounter: true,
+    difficulty: tier5difficulty,
+    encounterEffect : function() {item.megaCluster.got-=5},
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>4 },
+    level : 100,
+    team : {
+        slot1 : pkmn.megaRayquaza,
+        slot1Moves : [move.dragonAscent.id, move.roarOfTime.id, move.spacialRend.id, move.fly.id],
+    },
+    
+    // 1. Guarda os itens fixos para a interface/tooltip ler e mostrar ambos os ícones na tela
+    displayReward: [pkmn.megaRayquaza],
+
+    // 2. O reward real calcula as chances separadas na hora do loot pós-batalha
+    get reward() {
+        const stack = new Error().stack || "";
+        
+        // Se quem estiver chamando for a interface gráfica, mostra sempre os dois prêmios estáveis na tela
+        if (stack.includes("tooltip") || stack.includes("draw") || stack.includes("menu") || stack.includes("display")) {
+            return [pkmn.megaRayquaza];
+        }
+        
+        // Sistema de loot real pós-batalha
+        const nishLoot = [];
+
+        // Pokemon Drop Chance 2,5% de chance
+        if (Math.random() < 0.025) {
+            nishLoot.push(pkmn.megaRayquaza);
+        }
+        
+        return nishLoot;
+    },
+    category: 2,
 }
 
 //************************************************************************************************************************************************************
