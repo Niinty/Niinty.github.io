@@ -2391,9 +2391,9 @@ const rotationEventMax = 5;
 const tier1difficulty = 25;
 const tier2difficulty = 70;
 const tier3difficulty = 200;
-const tier4difficulty = 400;
-const tier5difficulty = 450;
-const tier6difficulty = 500;
+const tier4difficulty = 250;
+const tier5difficulty = 300;
+const tier6difficulty = 400;
 
 //Rotation I
 //Novice - Wild Area
@@ -9101,9 +9101,9 @@ areas.eventMegaClefable = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    encounterEffect : function() {item.futureDisk.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaClefable,
@@ -9143,9 +9143,9 @@ areas.eventMegaEelektross = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    encounterEffect : function() {item.futureDisk.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaEelektross,
@@ -9185,9 +9185,9 @@ areas.eventMegaGlimmora = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    encounterEffect : function() {item.futureDisk.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaGlimmora,
@@ -9227,9 +9227,9 @@ areas.eventMegaMeganium = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    encounterEffect : function() {item.futureDisk.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaMeganium,
@@ -9269,9 +9269,9 @@ areas.eventMegaStaraptor = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    encounterEffect : function() {item.futureDisk.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaStaraptor,
@@ -9311,9 +9311,9 @@ areas.eventMegaTatsugiriStretchy = {
     trainer: true,
     encounter: true,
     difficulty: tier1difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>0 },
+    encounterEffect : function() {item.futureDisk.got-=1},
+    unlockDescription : `Requires x1 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>0 },
     level : 100,
     team : {
         slot1 : pkmn.megaTatsugiriStretchy,
@@ -9355,9 +9355,9 @@ areas.eventMegaAlakazam = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaAlakazam,
@@ -9402,9 +9402,9 @@ areas.eventMegaBarbaracle = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaBarbaracle,
@@ -9449,9 +9449,9 @@ areas.eventMegaCamerupt = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaCamerupt,
@@ -9496,9 +9496,9 @@ areas.eventMegaFeraligatr = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaFeraligatr,
@@ -9543,9 +9543,9 @@ areas.eventMegaGlalie = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaGlalie,
@@ -9590,9 +9590,9 @@ areas.eventMegaKangaskhan = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaKangaskhan,
@@ -9637,9 +9637,9 @@ areas.eventMegaMawile = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaMawile,
@@ -9684,9 +9684,9 @@ areas.eventMegaPyroar = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaPyroar,
@@ -9731,9 +9731,9 @@ areas.eventMegaSlowbro = {
     trainer: true,
     encounter: true,
     difficulty: tier2difficulty,
-    encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
-    unlockRequirement : function() { return item.aetherKeycard.got>1 },
+    encounterEffect : function() {item.futureDisk.got-=2},
+    unlockDescription : `Requires x2 <img src="img/items/futureDisk.png"> Future Disk to enter`,
+    unlockRequirement : function() { return item.futureDisk.got>1 },
     level : 100,
     team : {
         slot1 : pkmn.megaSlowbro,
@@ -10504,10 +10504,10 @@ areas.eventMegaRayquaza = {
     icon: pkmn.megaRayquaza,
     trainer: true,
     encounter: true,
-    difficulty: tier5difficulty,
-    encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
-    unlockRequirement : function() { return item.megaCluster.got>4 },
+    difficulty: tier6difficulty,
+    encounterEffect : function() {item.megaCluster.got-=6},
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
         slot1 : pkmn.megaRayquaza,
