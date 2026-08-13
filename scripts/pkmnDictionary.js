@@ -21837,7 +21837,7 @@ pkmn.baxcalibur = {
     hiddenAbility: ability.sharpness,
     evolve: function() { return { 1: { pkmn: pkmn.megaBaxcalibur, item: item.baxcaliburite } } },
     eggMove : move.spacialRend,
-    lore: `A megaevolução intensifica sua lâmina de gelo, tornando-a capaz de cortar através de qualquer material conhecido instantaneamente.`,
+    lore: `Exala um ar tão frio que consegue congelar lava em segundos, pulverizando os inimigos em seguida com golpes da cauda.`,
 }
 
 pkmn.megaBaxcalibur = {
