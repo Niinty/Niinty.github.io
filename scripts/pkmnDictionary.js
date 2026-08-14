@@ -11422,6 +11422,7 @@ pkmn.darkrai = {
         spe: 155*1.5,
     },
     hiddenAbility: ability.lightAbsorb,
+    signature: move.darkestLariat,
     lore: `The embodiment of night shadow. From the earliest ages, it has been bound to dreams, drawing forth fear and unrest where its presence lingers. Nightmares follow in its wake, not by intent, but as a reflection of its nature.`
 }
 
@@ -16657,6 +16658,7 @@ pkmn.yveltal = {
         spe: 99*1.3,
     },
     hiddenAbility: ability.flashUmbra,
+    signature: move.darkestLariat,
     lore: `Quando sua vida chega ao fim, ele absorve a energia vital de tudo ao redor antes de entrar em um sono de mil anos.`,
 }
 
