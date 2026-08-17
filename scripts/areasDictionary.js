@@ -2521,7 +2521,7 @@ areas.eventMegaAbsolZ = {
 areas.eventMegaCrabominable = {
     rotation: 1,
     type: `event`,
-    name: `Mega Crabominable Mega-Showdown`,
+    name: `Mega Crabominable`,
     background : `snow`,
     icon: pkmn.megaCrabominable,
     trainer: true,
@@ -2563,7 +2563,7 @@ areas.eventMegaCrabominable = {
 areas.eventMegaEmboar = {
     rotation: 1,
     type: `event`,
-    name: `Mega Emboar Mega-Showdown`,
+    name: `Mega Emboar`,
     background : `volcano`,
     icon: pkmn.megaEmboar,
     trainer: true,
@@ -2605,7 +2605,7 @@ areas.eventMegaEmboar = {
 areas.eventMegaGolisopod = {
     rotation: 1,
     type: `event`,
-    name: `Mega Golisopod Mega-Showdown`,
+    name: `Mega Golisopod`,
     background : `exploreHead1`,
     icon: pkmn.megaGolisopod,
     trainer: true,
@@ -2648,7 +2648,7 @@ areas.eventMegaGolisopod = {
 areas.eventMegaMeowstic = {
     rotation: 1,
     type: `event`,
-    name: `Mega Meowstic Mega-Showdown`,
+    name: `Mega Meowstic`,
     background : `forest`,
     icon: pkmn.megaMeowstic,
     trainer: true,
@@ -2691,7 +2691,7 @@ areas.eventMegaMeowstic = {
 areas.eventMegaScolipede = {
     rotation: 1,
     type: `event`,
-    name: `Mega Scolipede Mega-Showdown`,
+    name: `Mega Scolipede`,
     background : `exploreHead1`,
     icon: pkmn.megaScolipede,
     trainer: true,
@@ -2734,7 +2734,7 @@ areas.eventMegaScolipede = {
 areas.eventMegaVictreebel = {
     rotation: 1,
     type: `event`,
-    name: `Mega Victreebel Mega-Showdown`,
+    name: `Mega Victreebel`,
     background : `exploreHead1`,
     icon: pkmn.megaVictreebel,
     trainer: true,
@@ -2778,7 +2778,7 @@ areas.eventMegaVictreebel = {
 areas.eventMegaAbomasnow = {
     rotation: 1,
     type: `event`,
-    name: `Mega Abomasnow Mega-Showdown`,
+    name: `Mega Abomasnow`,
     background : `snow`,
     icon: pkmn.megaAbomasnow,
     trainer: true,
@@ -2826,7 +2826,7 @@ areas.eventMegaAbomasnow = {
 areas.eventMegaAltaria = {
     rotation: 1,
     type: `event`,
-    name: `Mega Altaria Mega-Showdown`,
+    name: `Mega Altaria`,
     background : `trench`,
     icon: pkmn.megaAltaria,
     trainer: true,
@@ -2874,7 +2874,7 @@ areas.eventMegaAltaria = {
 areas.eventMegaScizor = {
     rotation: 1,
     type: `event`,
-    name: `Mega Scizor Mega-Showdown`,
+    name: `Mega Scizor`,
     background : `exploreHead1`,
     icon: pkmn.megaScizor,
     trainer: true,
@@ -2922,7 +2922,7 @@ areas.eventMegaScizor = {
 areas.eventMegaCharizardX = {
     rotation: 1,
     type: `event`,
-    name: `Mega Charizard X Mega-Showdown`,
+    name: `Mega Charizard X`,
     background : `volcano`,
     icon: pkmn.megaCharizardX,
     trainer: true,
@@ -2970,7 +2970,7 @@ areas.eventMegaCharizardX = {
 areas.eventMegaGallade = {
     rotation: 1,
     type: `event`,
-    name: `Mega Gallade Mega-Showdown`,
+    name: `Mega Gallade`,
     background : `gym`,
     icon: pkmn.megaGallade,
     trainer: true,
@@ -3018,7 +3018,7 @@ areas.eventMegaGallade = {
 areas.eventMegaGyarados = {
     rotation: 1,
     type: `event`,
-    name: `Mega Gyarados Mega-Showdown`,
+    name: `Mega Gyarados`,
     background : `sea`,
     icon: pkmn.megaGyarados,
     trainer: true,
@@ -3066,7 +3066,7 @@ areas.eventMegaGyarados = {
 areas.eventMegaLopunny = {
     rotation: 1,
     type: `event`,
-    name: `Mega Lopunny Mega-Showdown`,
+    name: `Mega Lopunny`,
     background : `gym`,
     icon: pkmn.megaLopunny,
     trainer: true,
@@ -3114,7 +3114,7 @@ areas.eventMegaLopunny = {
 areas.eventMegaMedicham = {
     rotation: 1,
     type: `event`,
-    name: `Mega Medicham Mega-Showdown`,
+    name: `Mega Medicham`,
     background : `gym`,
     icon: pkmn.megaMedicham,
     trainer: true,
@@ -3162,7 +3162,7 @@ areas.eventMegaMedicham = {
 areas.eventMegaRaichuX = {
     rotation: 1,
     type: `event`,
-    name: `Mega Raichu X Mega-Showdown`,
+    name: `Mega Raichu X`,
     background : `trench`,
     icon: pkmn.megaRaichuX,
     trainer: true,
@@ -3210,7 +3210,7 @@ areas.eventMegaRaichuX = {
 areas.eventMegaSteelix = {
     rotation: 1,
     type: `event`,
-    name: `Mega Steelix Mega-Showdown`,
+    name: `Mega Steelix`,
     background : `cave`,
     icon: pkmn.megaSteelix,
     trainer: true,
@@ -3259,7 +3259,7 @@ areas.eventMegaSteelix = {
 areas.eventMegaGarchomp = {
     rotation: 1,
     type: `event`,
-    name: `Mega Garchomp Mega-Showdown`,
+    name: `Mega Garchomp`,
     background : `trench`,
     icon: pkmn.megaGarchomp,
     trainer: true,
@@ -3307,7 +3307,7 @@ areas.eventMegaGarchomp = {
 areas.eventMegaTyranitar = {
     rotation: 1,
     type: `event`,
-    name: `Mega Tyranitar Mega-Showdown`,
+    name: `Mega Tyranitar`,
     background : `cave`,
     icon: pkmn.megaTyranitar,
     trainer: true,
@@ -4284,7 +4284,7 @@ areas.primalFissure = {
 areas.eventMegaChandelure = {
     rotation: 2,
     type: `event`,
-    name: `Mega Chandelure Mega-Showdown`,
+    name: `Mega Chandelure`,
     background : `gym`,
     icon: pkmn.megaChandelure,
     trainer: true,
@@ -4327,7 +4327,7 @@ areas.eventMegaChandelure = {
 areas.eventMegaDelphox = {
     rotation: 2,
     type: `event`,
-    name: `Mega Delphox Mega-Showdown`,
+    name: `Mega Delphox`,
     background : `gym`,
     icon: pkmn.megaDelphox,
     trainer: true,
@@ -4370,7 +4370,7 @@ areas.eventMegaDelphox = {
 areas.eventMegaExcadrill = {
     rotation: 2,
     type: `event`,
-    name: `Mega Excadrill Mega-Showdown`,
+    name: `Mega Excadrill`,
     background : `gym`,
     icon: pkmn.megaExcadrill,
     trainer: true,
@@ -4413,7 +4413,7 @@ areas.eventMegaExcadrill = {
 areas.eventMegaGolurk = {
     rotation: 2,
     type: `event`,
-    name: `Mega Golurk Mega-Showdown`,
+    name: `Mega Golurk`,
     background : `gym`,
     icon: pkmn.megaGolurk,
     trainer: true,
@@ -4456,7 +4456,7 @@ areas.eventMegaGolurk = {
 areas.eventMegaScovillain = {
     rotation: 2,
     type: `event`,
-    name: `Mega Scovillain Mega-Showdown`,
+    name: `Mega Scovillain`,
     background : `gym`,
     icon: pkmn.megaScovillain,
     trainer: true,
@@ -4499,7 +4499,7 @@ areas.eventMegaScovillain = {
 areas.eventMegaStarmie = {
     rotation: 2,
     type: `event`,
-    name: `Mega Starmie Mega-Showdown`,
+    name: `Mega Starmie`,
     background : `gym`,
     icon: pkmn.megaStarmie,
     trainer: true,
@@ -4543,7 +4543,7 @@ areas.eventMegaStarmie = {
 areas.eventMegaAbsol = {
     rotation: 2,
     type: `event`,
-    name: `Mega Absol Mega-Showdown`,
+    name: `Mega Absol`,
     background : `gym`,
     icon: pkmn.megaAbsol,
     trainer: true,
@@ -4591,7 +4591,7 @@ areas.eventMegaAbsol = {
 areas.eventMegaAmpharos = {
     rotation: 2,
     type: `event`,
-    name: `Mega Ampharos Mega-Showdown`,
+    name: `Mega Ampharos`,
     background : `gym`,
     icon: pkmn.megaAmpharos,
     trainer: true,
@@ -4639,7 +4639,7 @@ areas.eventMegaAmpharos = {
 areas.eventMegaBeedrill = {
     rotation: 2,
     type: `event`,
-    name: `Mega Beedrill Mega-Showdown`,
+    name: `Mega Beedrill`,
     background : `gym`,
     icon: pkmn.megaBeedrill,
     trainer: true,
@@ -4687,7 +4687,7 @@ areas.eventMegaBeedrill = {
 areas.eventMegaCharizardY = {
     rotation: 2,
     type: `event`,
-    name: `Mega Charizard Y Mega-Showdown`,
+    name: `Mega Charizard Y`,
     background : `gym`,
     icon: pkmn.megaCharizardY,
     trainer: true,
@@ -4735,7 +4735,7 @@ areas.eventMegaCharizardY = {
 areas.eventMegaRaichuY = {
     rotation: 2,
     type: `event`,
-    name: `Mega Raichu Y Mega-Showdown`,
+    name: `Mega Raichu Y`,
     background : `gym`,
     icon: pkmn.megaRaichuY,
     trainer: true,
@@ -4783,7 +4783,7 @@ areas.eventMegaRaichuY = {
 areas.eventMegaHawlucha = {
     rotation: 2,
     type: `event`,
-    name: `Mega Hawlucha Mega-Showdown`,
+    name: `Mega Hawlucha`,
     background : `gym`,
     icon: pkmn.megaHawlucha,
     trainer: true,
@@ -4831,7 +4831,7 @@ areas.eventMegaHawlucha = {
 areas.eventMegaLucario = {
     rotation: 2,
     type: `event`,
-    name: `Mega Lucario Mega-Showdown`,
+    name: `Mega Lucario`,
     background : `gym`,
     icon: pkmn.megaLucario,
     trainer: true,
@@ -4879,7 +4879,7 @@ areas.eventMegaLucario = {
 areas.eventMegaSwampert = {
     rotation: 2,
     type: `event`,
-    name: `Mega Swampert Mega-Showdown`,
+    name: `Mega Swampert`,
     background : `gym`,
     icon: pkmn.megaSwampert,
     trainer: true,
@@ -4928,7 +4928,7 @@ areas.eventMegaSwampert = {
 areas.eventMegaMetagross = {
     rotation: 2,
     type: `event`,
-    name: `Mega Metagross Showdown`,
+    name: `Mega Metagross`,
     background : `gym`,
     icon: pkmn.megaMetagross,
     trainer: true,
