@@ -2287,7 +2287,7 @@ function makeCurry(){
         document.getElementById(`curry-pot`).style.animation = ``
         document.getElementById("tooltipTop").style.display = `none`
         document.getElementById("tooltipTitle").style.display = `none`
-        document.getElementById("tooltipMid").innerHTML = `During raids: Temporarily gained the next abilities for everyone in your team:`
+        document.getElementById("tooltipMid").innerHTML = `Temporariamente ganhe as seguintes habilidades para todos os Pokémon em seu time:`
         document.getElementById("tooltipBottom").innerHTML = joinWithAnd(curryAbilities)
         openTooltip()
         item.goldenBottleCap.got -= totalPrice
