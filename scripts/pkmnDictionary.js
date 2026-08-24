@@ -6771,8 +6771,9 @@ pkmn.megaHoundoom = {
         sdef: 90*1.2,
         spe: 115*1.2,
     },
-    hiddenAbility: ability.solarPower,
+    hiddenAbility: ability.treasureOfRuin,
     eggMove: move.howl,
+    signature : move.blueFlare,
     lore: `Sua energia aumenta drasticamente devido à Mega Evolução, fazendo com que suas garras e rabo derretam devido ao calor intenso. As garras e partes da cauda que derreteram emitem uma fumaça tóxica que, ao ser inalada, causa queimaduras permanentes.`,
 }
 
@@ -16657,7 +16658,7 @@ pkmn.yveltal = {
         sdef: 98*1.3,
         spe: 99*1.3,
     },
-    hiddenAbility: ability.flashUmbra,
+    hiddenAbility: ability.gloomilate,
     signature: move.darkestLariat,
     lore: `Quando sua vida chega ao fim, ele absorve a energia vital de tudo ao redor antes de entrar em um sono de mil anos.`,
 }
