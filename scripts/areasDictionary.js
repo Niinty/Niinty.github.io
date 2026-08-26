@@ -3266,7 +3266,7 @@ areas.eventMegaGarchomp = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.pokeflute.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
     unlockRequirement : function() { return item.pokeflute.got>2 },
     level : 100,
     team : {
@@ -3314,7 +3314,7 @@ areas.eventMegaTyranitar = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.pokeflute.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
     unlockRequirement : function() { return item.pokeflute.got>2 },
     level : 100,
     team : {
@@ -3362,7 +3362,7 @@ areas.eventNihilego = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.pokeflute.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
     unlockRequirement : function() { return item.pokeflute.got>2 },
     level : 100,
     team : {
@@ -3405,7 +3405,7 @@ areas.eventKartana = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.pokeflute.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
     unlockRequirement : function() { return item.pokeflute.got>2 },
     level : 100,
     team : {
@@ -3449,7 +3449,7 @@ areas.eventGreatTusk = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.pokeflute.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/pokeflute.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/pokeflute.png"> Poke Flute to enter`,
     unlockRequirement : function() { return item.pokeflute.got>3 },
     level : 100,
     team : {
@@ -3622,7 +3622,7 @@ areas.eventGroudonPrimal = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3665,7 +3665,7 @@ areas.eventLandorusTherian = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3707,7 +3707,7 @@ areas.eventZygarde100 = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3749,7 +3749,7 @@ areas.eventZamazentaCrowned = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3791,7 +3791,7 @@ areas.eventTerapagosTerastal = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3833,7 +3833,7 @@ areas.eventCharizardGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3875,7 +3875,7 @@ areas.eventMachampGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3917,7 +3917,7 @@ areas.eventSnorlaxGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -3959,7 +3959,7 @@ areas.eventCorviknightGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -4001,7 +4001,7 @@ areas.eventSandacondaGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -4043,7 +4043,7 @@ areas.eventAlcremieGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -4087,7 +4087,7 @@ areas.eventMegaDiancie = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -4129,7 +4129,7 @@ areas.eventTerapagosStellar = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -5243,7 +5243,7 @@ areas.eventKyogrePrimal = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5285,7 +5285,7 @@ areas.eventThundurusTherian = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5327,7 +5327,7 @@ areas.eventNecrozmaDawnWings = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5369,7 +5369,7 @@ areas.eventUrshifuRapid = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5411,7 +5411,7 @@ areas.eventMegaLatios = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5453,7 +5453,7 @@ areas.eventBlastoiseGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5495,7 +5495,7 @@ areas.eventBlastoiseGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5537,7 +5537,7 @@ areas.eventGarbodorGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5579,7 +5579,7 @@ areas.eventGarbodorGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5621,7 +5621,7 @@ areas.eventToxtricityGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5663,7 +5663,7 @@ areas.eventCopperajahGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -5707,7 +5707,7 @@ areas.eventEternatus = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -5749,7 +5749,7 @@ areas.eventMegaZygarde = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -5873,7 +5873,7 @@ areas.eventMegaChesnaught = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>0 },
     level : 100,
     team : {
@@ -5915,7 +5915,7 @@ areas.eventMegaDragalge = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>0 },
     level : 100,
     team : {
@@ -5958,7 +5958,7 @@ areas.eventMegaDragalge = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>0 },
     level : 100,
     team : {
@@ -6000,7 +6000,7 @@ areas.eventMegaGreninja = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>0 },
     level : 100,
     team : {
@@ -6042,7 +6042,7 @@ areas.eventMegaScrafty = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>0 },
     level : 100,
     team : {
@@ -6084,7 +6084,7 @@ areas.eventMegaTatsugiriCurly = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>0 },
     level : 100,
     team : {
@@ -6128,7 +6128,7 @@ areas.eventMegaAerodactyl = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6175,7 +6175,7 @@ areas.eventMegaAudino = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6222,7 +6222,7 @@ areas.eventMegaBlastoise = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6269,7 +6269,7 @@ areas.eventMegaSceptile = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6316,7 +6316,7 @@ areas.eventMegaGardevoir = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6363,7 +6363,7 @@ areas.eventMegaHeracross = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6410,7 +6410,7 @@ areas.eventMegaHeracross = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6457,7 +6457,7 @@ areas.eventMegaPidgeot = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6504,7 +6504,7 @@ areas.eventMegaSableye = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6551,7 +6551,7 @@ areas.eventMegaVenusaur = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.ancientKeystone.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Epoch Feathers to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/ancientKeystone.png"> Ancient Keystone to enter`,
     unlockRequirement : function() { return item.ancientKeystone.got>1 },
     level : 100,
     team : {
@@ -6600,7 +6600,7 @@ areas.eventMegaSalamence = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.steelKeystone.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>2 },
     level : 100,
     team : {
@@ -6647,7 +6647,7 @@ areas.eventPheromosa = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.steelKeystone.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>2 },
     level : 100,
     team : {
@@ -6689,7 +6689,7 @@ areas.eventPoipole = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.steelKeystone.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>2 },
     level : 100,
     team : {
@@ -6731,7 +6731,7 @@ areas.eventBlacephalon = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.steelKeystone.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>2 },
     level : 100,
     team : {
@@ -6775,7 +6775,7 @@ areas.eventBruteBonnet = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.steelKeystone.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>3 },
     level : 100,
     team : {
@@ -6817,7 +6817,7 @@ areas.eventWalkingWake = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.steelKeystone.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>3 },
     level : 100,
     team : {
@@ -6859,7 +6859,7 @@ areas.eventIronHands = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.steelKeystone.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>3 },
     level : 100,
     team : {
@@ -6901,7 +6901,7 @@ areas.eventIronLeaves = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.steelKeystone.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/steelKeystone.png"> Steel Keystone to enter`,
     unlockRequirement : function() { return item.steelKeystone.got>3 },
     level : 100,
     team : {
@@ -6945,7 +6945,7 @@ areas.eventDialgaOrigin = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -6987,7 +6987,7 @@ areas.eventTornadusTherian = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7029,7 +7029,7 @@ areas.eventNecrozmaDuskMane = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7071,7 +7071,7 @@ areas.eventUrshifuSingle = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7113,7 +7113,7 @@ areas.eventMegaLatias = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7155,7 +7155,7 @@ areas.eventButterfreeGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7197,7 +7197,7 @@ areas.eventKinglerGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7239,7 +7239,7 @@ areas.eventRillaboomGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7281,7 +7281,7 @@ areas.eventDrednawGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7323,7 +7323,7 @@ areas.eventCentiskorchGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7365,7 +7365,7 @@ areas.eventDuraludonGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -7409,7 +7409,7 @@ areas.eventShadowMewtwo = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -7451,7 +7451,7 @@ areas.eventShadowLugia = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -7573,7 +7573,7 @@ areas.eventMegaChimecho = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>0 },
     level : 100,
     team : {
@@ -7615,7 +7615,7 @@ areas.eventMegaDrampa = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>0 },
     level : 100,
     team : {
@@ -7657,7 +7657,7 @@ areas.eventMegaFroslass = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>0 },
     level : 100,
     team : {
@@ -7699,7 +7699,7 @@ areas.eventMegaMalamar = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>0 },
     level : 100,
     team : {
@@ -7741,7 +7741,7 @@ areas.eventMegaSkarmory = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>0 },
     level : 100,
     team : {
@@ -7783,7 +7783,7 @@ areas.eventMegaTatsugiriDroopy = {
     encounter: true,
     difficulty: tier1difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=1},
-    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x1 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>0 },
     level : 100,
     team : {
@@ -7827,7 +7827,7 @@ areas.eventMegaAggron = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -7874,7 +7874,7 @@ areas.eventMegaBanette = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -7921,7 +7921,7 @@ areas.eventMegaBlaziken = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -7968,7 +7968,7 @@ areas.eventMegaFalinks = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -8015,7 +8015,7 @@ areas.eventMegaGengar = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -8062,7 +8062,7 @@ areas.eventMegaHoundoom = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -8109,7 +8109,7 @@ areas.eventMegaManectric = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -8156,7 +8156,7 @@ areas.eventMegaPinsir = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -8203,7 +8203,7 @@ areas.eventMegaSharpedo = {
     encounter: true,
     difficulty: tier2difficulty,
     encounterEffect : function() {item.aetherKeycard.got-=2},
-    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Ancient Orchid to enter`,
+    unlockDescription : `Requires x2 <img src="img/items/aetherKeycard.png"> Aether Keycard to enter`,
     unlockRequirement : function() { return item.aetherKeycard.got>1 },
     level : 100,
     team : {
@@ -8252,7 +8252,7 @@ areas.eventMegaDragonite = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>2 },
     level : 100,
     team : {
@@ -8299,7 +8299,7 @@ areas.eventXurkitree = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>2 },
     level : 100,
     team : {
@@ -8341,7 +8341,7 @@ areas.eventNaganadel = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>2 },
     level : 100,
     team : {
@@ -8385,7 +8385,7 @@ areas.eventFlutterMane = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>3 },
     level : 100,
     team : {
@@ -8427,7 +8427,7 @@ areas.eventRagingBolt = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>3 },
     level : 100,
     team : {
@@ -8469,7 +8469,7 @@ areas.eventIronJugulis = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>3 },
     level : 100,
     team : {
@@ -8511,7 +8511,7 @@ areas.eventIronCrown = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.wormholeResidue.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/wormholeResidue.png"> Wormhole Residue to enter`,
     unlockRequirement : function() { return item.wormholeResidue.got>3 },
     level : 100,
     team : {
@@ -8555,7 +8555,7 @@ areas.eventKyuremWhite = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8597,7 +8597,7 @@ areas.eventEnamorusTherian = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8639,7 +8639,7 @@ areas.eventCalyrexIce = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8681,7 +8681,7 @@ areas.eventHattereneGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8723,7 +8723,7 @@ areas.eventCoalossalGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8765,7 +8765,7 @@ areas.eventPikachuGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8807,7 +8807,7 @@ areas.eventLaprasGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8849,7 +8849,7 @@ areas.eventCinderaceGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8891,7 +8891,7 @@ areas.eventUrshifuSingleGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8933,7 +8933,7 @@ areas.eventUrshifuRapidGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -8975,7 +8975,7 @@ areas.eventUltraNecrozma = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
@@ -9781,7 +9781,7 @@ areas.eventMegaBaxcalibur = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.futureContraption.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>2 },
     level : 100,
     team : {
@@ -9828,7 +9828,7 @@ areas.eventCelesteela = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.futureContraption.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>2 },
     level : 100,
     team : {
@@ -9870,7 +9870,7 @@ areas.eventStakataka = {
     encounter: true,
     difficulty: tier3difficulty,
     encounterEffect : function() {item.futureContraption.got-=3},
-    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x3 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>2 },
     level : 100,
     team : {
@@ -9914,7 +9914,7 @@ areas.eventSlitherWing = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.futureContraption.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>3 },
     level : 100,
     team : {
@@ -9956,7 +9956,7 @@ areas.eventGougingFire = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.futureContraption.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>3 },
     level : 100,
     team : {
@@ -9998,7 +9998,7 @@ areas.eventIronMoth = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.futureContraption.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>3 },
     level : 100,
     team : {
@@ -10040,7 +10040,7 @@ areas.eventIronBoulder = {
     encounter: true,
     difficulty: tier4difficulty,
     encounterEffect : function() {item.futureContraption.got-=4},
-    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Primal Earth to enter`,
+    unlockDescription : `Requires x4 <img src="img/items/futureContraption.png"> Future Contraption to enter`,
     unlockRequirement : function() { return item.futureContraption.got>3 },
     level : 100,
     team : {
@@ -10084,7 +10084,7 @@ areas.eventKyuremBlack = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10126,7 +10126,7 @@ areas.eventZygarde50 = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10168,7 +10168,7 @@ areas.eventZacianCrowned = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10210,7 +10210,7 @@ areas.eventCalyrexShadow = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10252,7 +10252,7 @@ areas.eventVenusaurGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10294,7 +10294,7 @@ areas.eventMeowthGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10336,7 +10336,7 @@ areas.eventEeveeGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10378,7 +10378,7 @@ areas.eventInteleonGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10420,7 +10420,7 @@ areas.eventAppletunGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10462,7 +10462,7 @@ areas.eventGrimmsnarlGmax = {
     encounter: true,
     difficulty: tier5difficulty,
     encounterEffect : function() {item.megaCluster.got-=5},
-    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x5 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>4 },
     level : 100,
     team : {
@@ -10506,7 +10506,7 @@ areas.eventMegaRayquaza = {
     encounter: true,
     difficulty: tier6difficulty,
     encounterEffect : function() {item.megaCluster.got-=6},
-    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Shard to enter`,
+    unlockDescription : `Requires x6 <img src="img/items/megaCluster.png"> Mega Cluster to enter`,
     unlockRequirement : function() { return item.megaCluster.got>5 },
     level : 100,
     team : {
