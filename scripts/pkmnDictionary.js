@@ -16798,7 +16798,8 @@ pkmn.volcanion = {
         sdef: 90*1.5,
         spe: 70*1.5,
     },
-    hiddenAbility: ability.ambidextrous,
+    hiddenAbility: ability.thousandArms,
+    signature : move.torchSong,
     lore: `Ele expele vapor superaquecido de seus braços com força suficiente para explodir uma montanha, e vive isolado longe de humanos.`,
 }
 
@@ -18343,8 +18344,8 @@ pkmn.ultraNecrozma = {
         sdef: 97*1.35,
         spe: 159*1.35,
     },
-    hiddenAbility: ability.sereneGrace,
-    signature : move.dragonAscent,
+    hiddenAbility: ability.parentalBond,
+    signature : move.clangingScales,
     lore: `Ao absorver luz em excesso, ele se torna instável e extremamente poderoso, quase impossível de conter ou controlar.`,
 }
 
