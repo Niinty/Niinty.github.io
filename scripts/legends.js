@@ -188,7 +188,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
         hpMultiplier: 1.5,
-        damageMultiplier: 4.0,
+        damageMultiplier: 3.0,
         // Nível com que o lendário aparece na batalha
         battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
