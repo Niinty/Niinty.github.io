@@ -22,7 +22,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 4.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -50,7 +50,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -78,7 +78,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -106,7 +106,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -136,7 +136,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -163,7 +163,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -190,7 +190,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -217,7 +217,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -244,7 +244,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -273,7 +273,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -300,7 +300,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -327,7 +327,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -354,7 +354,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -381,7 +381,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -408,7 +408,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -435,7 +435,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -462,7 +462,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -491,7 +491,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -518,7 +518,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -545,7 +545,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -572,7 +572,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -599,7 +599,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -626,7 +626,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -653,7 +653,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -681,7 +681,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -708,7 +708,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -736,7 +736,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -759,7 +759,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -777,7 +777,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -795,7 +795,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -813,7 +813,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -831,7 +831,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -849,7 +849,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -867,7 +867,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -885,7 +885,7 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
-        battleLevel: 250,
+        battleLevel: 200,
         difficulty: 500,
         catchRate: 0.01,
         drops: [
@@ -908,7 +908,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -935,7 +935,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -962,7 +962,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -988,7 +988,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1016,7 +1016,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1043,7 +1043,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1070,7 +1070,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1097,7 +1097,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1124,7 +1124,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1151,7 +1151,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1178,7 +1178,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1205,7 +1205,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1232,7 +1232,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1260,7 +1260,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1287,7 +1287,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1314,7 +1314,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1341,7 +1341,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1368,7 +1368,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1395,7 +1395,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1422,7 +1422,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1449,7 +1449,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1476,7 +1476,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1503,7 +1503,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1530,7 +1530,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1557,7 +1557,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1585,7 +1585,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1613,7 +1613,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1640,7 +1640,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1667,7 +1667,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1694,7 +1694,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1721,7 +1721,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1748,7 +1748,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1775,7 +1775,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1802,7 +1802,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1829,7 +1829,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1856,7 +1856,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1883,7 +1883,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1910,7 +1910,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1937,7 +1937,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
@@ -1964,7 +1964,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 250,
+        battleLevel: 200,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
