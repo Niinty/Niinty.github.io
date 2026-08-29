@@ -22,9 +22,9 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 4.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -47,12 +47,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -75,12 +75,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -103,12 +103,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -133,12 +133,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -160,12 +160,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -188,11 +188,11 @@ const LEGENDS_LIST = [
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
         hpMultiplier: 1.5,
-        damageMultiplier: 3.0,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
         battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -214,12 +214,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -241,12 +241,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -270,12 +270,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -297,12 +297,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -324,12 +324,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -351,12 +351,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -378,12 +378,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -405,12 +405,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -432,12 +432,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -459,12 +459,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -488,12 +488,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -515,12 +515,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -542,12 +542,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -569,12 +569,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -596,12 +596,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -623,12 +623,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -650,12 +650,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -678,12 +678,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -705,12 +705,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -733,12 +733,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -757,10 +757,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -775,10 +775,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -793,10 +793,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -811,10 +811,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -829,10 +829,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -847,10 +847,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -865,10 +865,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -883,10 +883,10 @@ const LEGENDS_LIST = [
         region: "unova",
         unlockCost: 2,
         windowMs: 72 * 60 * 60 * 1000,
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
-        battleLevel: 300,
-        difficulty: 600,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
+        battleLevel: 250,
+        difficulty: 500,
         catchRate: 0.01,
         drops: [
             { itemId: "goldenBottleCap", amount: 1, chance: 0.75 },
@@ -905,12 +905,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -932,12 +932,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -959,12 +959,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -985,12 +985,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1013,12 +1013,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1040,12 +1040,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1067,12 +1067,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1094,12 +1094,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1121,12 +1121,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1148,12 +1148,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1175,12 +1175,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1202,12 +1202,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1229,12 +1229,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1257,12 +1257,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1284,12 +1284,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1311,12 +1311,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1338,12 +1338,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1365,12 +1365,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1392,12 +1392,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1419,12 +1419,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1446,12 +1446,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1473,12 +1473,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1500,12 +1500,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1527,12 +1527,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1554,12 +1554,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1582,12 +1582,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1610,12 +1610,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1637,12 +1637,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1664,12 +1664,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1691,12 +1691,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1718,12 +1718,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1745,12 +1745,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1772,12 +1772,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1799,12 +1799,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1826,12 +1826,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1853,12 +1853,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1880,12 +1880,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1907,12 +1907,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1934,12 +1934,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1961,12 +1961,12 @@ const LEGENDS_LIST = [
         // Duração da janela de batalha em ms (72h)
         windowMs: 72 * 60 * 60 * 1000,
         // Multiplicadores de batalha (apenas durante a luta, não altera pkmn permanentemente)
-        hpMultiplier: 2.0,
-        damageMultiplier: 5.0,
+        hpMultiplier: 1.5,
+        damageMultiplier: 2.5,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
-        difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
+        difficulty: 500, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
         catchRate: 0.01,
         // Drops ao vencer: [{ itemId, amount, chance }] (chance 1.0 = sempre)
@@ -1985,7 +1985,7 @@ const LEGENDS_LIST = [
     //     id: "lugia",
     //     unlockCost: 3,
     //     windowMs: 72 * 60 * 60 * 1000,
-    //     hpMultiplier: 2.0,
+    //     hpMultiplier: 1.5,
     //     damageMultiplier: 2.0,
     //     battleLevel: 70,
     //     difficulty: 200,
