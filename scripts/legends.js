@@ -190,7 +190,7 @@ const LEGENDS_LIST = [
         hpMultiplier: 1.5,
         damageMultiplier: 4.0,
         // Nível com que o lendário aparece na batalha
-        battleLevel: 300,
+        battleLevel: 250,
         // Dificuldade da área (usa constantes do areasDictionary)
         difficulty: 600, // tier4difficulty — será sobrescrito se as constantes estiverem disponíveis
         // Taxa de captura ao vencer (1.0 = 100%)
