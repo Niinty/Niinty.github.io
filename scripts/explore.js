@@ -1890,7 +1890,7 @@ function updateTeamPkmn(){
         leaveCombat();
 
         if (saved.autoRefight == true) {
-            if (areas[saved.currentArea].encounter!=true && saved.currentArea != areas.training.id) item.autoRefightTicket.got--
+            if (areas[saved.currentArea].encounter!=true && saved.currentArea != areas.training.id && item.autoRefightTicket.got>0) item.autoRefightTicket.got--
             if (areas[saved.currentArea].encounter!=true && saved.currentArea != areas.training.id && item.autoRefightTicket.got<1) saved.autoRefight = false
         }
 
@@ -4484,7 +4484,7 @@ function updateRaidTimer(){
         leaveCombat();
 
         if (saved.autoRefight == true) {
-            if (areas[saved.currentArea].encounter!=true && saved.currentArea != areas.training.id) item.autoRefightTicket.got--
+            if (areas[saved.currentArea].encounter!=true && saved.currentArea != areas.training.id && item.autoRefightTicket.got>0) item.autoRefightTicket.got--
             if (areas[saved.currentArea].encounter!=true && saved.currentArea != areas.training.id && item.autoRefightTicket.got<1) saved.autoRefight = false
         }
 
