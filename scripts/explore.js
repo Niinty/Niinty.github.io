@@ -4888,18 +4888,29 @@ function updatePokedex(){
     const sort = document.getElementById("pokedex-sort-filter").value
 if (sort !== "default") {
     sortedPokemon.sort((b, a) => {
+        
         if (sort === "level")
             return a.level - b.level
+        
+        if (sort === "overall") {
+        const statList = ["hp", "atk", "def", "satk", "sdef", "spe"]
+        const aTotal = statList.reduce((sum, stat) => sum + ((a.bst[stat] * 30) * Math.pow(1.1, a.ivs[stat])), 0)
+        const bTotal = statList.reduce((sum, stat) => sum + ((b.bst[stat] * 30) * Math.pow(1.1, b.ivs[stat])), 0)
+        return aTotal - bTotal
+        }
+        
         if (sort.endsWith("Total")) {
             const stat = sort.replace("Total", "")
             const aTotal = ((a.bst[stat] * 30) * Math.pow(1.1, a.ivs[stat]))
             const bTotal = ((b.bst[stat] * 30) * Math.pow(1.1, b.ivs[stat]))
             return aTotal - bTotal
         }
+        
         if (sort.endsWith("Bst")) {
             const stat = sort.replace("Bst", "")
             return a.bst[stat] - b.bst[stat]
         }
+        
         if (sort.endsWith("Iv")) {
             const stat = sort.replace("Iv", "")
             return a.ivs[stat] - b.ivs[stat]
