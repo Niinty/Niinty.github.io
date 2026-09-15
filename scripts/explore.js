@@ -9178,12 +9178,13 @@ function wonderTrade() {
 
         let systemPool = [];
         for (const i in pkmn) {
-            if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer) {
+            const div = returnPkmnDivision(pkmn[i]);
+            if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer && div !== "SS" && div !== "SSS") {
                 systemPool.push(i);
-            }
         }
+        
         systemOffer = arrayPick(systemPool) || "magikarp";
-        chosenShiny = rng(0.025);
+        chosenShiny = rng(0.05);
 
         saved.wonderTradeOffered = true;
         saved.wonderTradePlayerPkmn = playerOffer;
