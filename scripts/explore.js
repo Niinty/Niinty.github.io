@@ -6,9 +6,9 @@ saved.overrideBattleTimer = defaultPlayerMoveTimer
 
 saved.currentSeason = undefined
 
-// Default fatigue multiplier: reduce fatigue by 25% (0.75)
+// Default fatigue multiplier: reduce fatigue by 15% (0.85)
 // To change for testing, edit this value here.
-let testFatigueMultiplier = 0.75
+let testFatigueMultiplier = 0.85
 
 let team = {}
 
