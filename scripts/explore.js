@@ -9067,10 +9067,12 @@ function claimWonderTrade() {
     // Sorteia um Pokémon do sistema (sem míticos/inobteníveis)
     let systemPool = [];
     for (const i in pkmn) {
-        if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer) {
+        const div = returnPkmnDivision(pkmn[i]);
+        if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer && div !== "SS" && div !== "SSS") {
             systemPool.push(i);
         }
     }
+    
     let systemOffer = arrayPick(systemPool) || "magikarp";
 
     document.getElementById("tooltipTop").style.display = "none";
