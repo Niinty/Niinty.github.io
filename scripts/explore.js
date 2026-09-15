@@ -9183,6 +9183,7 @@ function wonderTrade() {
             const div = returnPkmnDivision(pkmn[i]);
             if (!pkmn[i].hidden && pkmn[i].tagObtainedIn !== "unobtainable" && i !== playerOffer && div !== "SS" && div !== "SSS") {
                 systemPool.push(i);
+            }
         }
         
         systemOffer = arrayPick(systemPool) || "magikarp";
