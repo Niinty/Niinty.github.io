@@ -465,7 +465,7 @@ const GYMS_LEADERS = [
             slot3: pkmn.salamence, slot3Moves: [move.hurricane.id, move.spacialRend.id, move.aeroblast.id, move.roarOfTime.id],
             slot4: pkmn.altaria, slot4Moves: [move.dragonDarts.id, move.roarOfTime.id, move.chatter.id, move.dracoMeteor.id],
             slot5: pkmn.tropius, slot5Moves: [move.cometPunch.id, move.aeroblast.id, move.trailblaze.id, move.hurricane.id],
-            slot6: pkmn.beautifly, slot6Moves: [move.xScissor.id, move.aeroblast.id, move.megaHorn.id, move.chatter.id],
+            slot6: pkmn.beautifly, slot6Moves: [move.xScissor.id, move.aeroblast.id, move.megahorn.id, move.chatter.id],
         },
     },
 	{
