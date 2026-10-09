@@ -347,7 +347,7 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Dragon.",
         team: {
-            slot1: pkmn.kingdra, slot1Moves: [move.dragonAscent.id, move.surf.id, move.spacialRend.id, move.scald.id],
+            slot1: pkmn.kingdra, slot1Moves: [move.hydroCannon.id, move.surf.id, move.spacialRend.id, move.scald.id],
             slot2: pkmn.charizard, slot2Moves: [move.dragonDarts.id, move.roarOfTime.id, move.torchSong.id, move.blueFlare.id],
             slot3: pkmn.gyarados, slot3Moves: [move.dragonAscent.id, move.dragonDarts.id, move.surf.id, move.surf.id],
             slot4: pkmn.aerodactyl, slot4Moves: [move.rockPolish.id, move.smackDown.id, move.fly.id, move.ancientPower.id],
@@ -988,10 +988,10 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Ice.",
         team: {
-            slot1: pkmn.aurorus, slot1Moves: [move.glaciate.id, move.dragonAscent.id, move.tripleAxel.id, move.clangingScales.id],
+            slot1: pkmn.aurorus, slot1Moves: [move.glaciate.id, move.freezeDry.id, move.tripleAxel.id, move.clangingScales.id],
             slot2: pkmn.mamoswine, slot2Moves: [move.iceHammer.id, move.glaciate.id, move.freezeDry.id, move.foamShot.id],
             slot3: pkmn.weavile, slot3Moves: [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
-            slot4: pkmn.amaura, slot4Moves: [move.iceBall.id, move.glaciate.id, move.acrobatics.id, move.freezeDry.id],
+            slot4: pkmn.dewgong, slot4Moves: [move.iceBall.id, move.glaciate.id, move.surf.id, move.freezeDry.id],
             slot5: pkmn.glaceon, slot5Moves: [move.glaciate.id, move.iceHammer.id, move.mountainGale.id, move.freezeDry.id],
             slot6: pkmn.avalugg, slot6Moves: [move.iceBall.id, move.surf.id, move.glaciate.id, move.scald.id],
         },
@@ -1298,12 +1298,12 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Fairy.",
         team: {
-            slot1: pkmn.zacian, slot1Moves: [move.lightOfRuin.id, move.auroraPunch.id, move.dazzlingGleam.id, move.moonblast.id],
+            slot1: pkmn.wigglytuff, slot1Moves: [move.lightOfRuin.id, move.auroraPunch.id, move.dazzlingGleam.id, move.moonblast.id],
             slot2: pkmn.togekiss, slot2Moves: [move.charm.id, move.dazzlingGleam.id, move.chatter.id, move.dragonAscent.id],
             slot3: pkmn.gardevoir, slot3Moves: [move.lightScreen.id, move.sweetKiss.id, move.moonblast.id, move.auroraPunch.id],
             slot4: pkmn.clefable, slot4Moves: [move.sweetKiss.id, move.lightOfRuin.id, move.moonblast.id, move.auroraPunch.id],
             slot5: pkmn.sylveon, slot5Moves: [move.charm.id, move.lightOfRuin.id, move.playRough.id, move.dazzlingGleam.id],
-            slot6: pkmn.xerneas, slot6Moves: [move.lightOfRuin.id, move.dazzlingGleam.id, move.moonblast.id, move.playRough.id],
+            slot6: pkmn.mimikyu , slot6Moves: [move.lightOfRuin.id, move.dazzlingGleam.id, move.moonblast.id, move.playRough.id],
         },
     }, 
 	{
@@ -1334,7 +1334,7 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Ice.",
         team: {
-            slot1: pkmn.frosmoth, slot1Moves: [move.glaciate.id, move.dragonAscent.id, move.tripleAxel.id, move.clangingScales.id],
+            slot1: pkmn.frosmoth, slot1Moves: [move.glaciate.id, move.iceHammer.id, move.tripleAxel.id, move.clangingScales.id],
             slot2: pkmn.dewgong, slot2Moves: [move.tripleAxel.id, move.surf.id, move.iceBall.id, move.auroraPunch.id],
             slot3: pkmn.mamoswine, slot3Moves: [move.iceHammer.id, move.glaciate.id, move.freezeDry.id, move.foamShot.id],
             slot4: pkmn.weavile, slot4Moves: [move.iceBall.id, move.glaciate.id, move.iceHammer.id, move.freezeDry.id],
@@ -1370,7 +1370,7 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Dragon.",
         team: {
-            slot1: pkmn.dragapult, slot1Moves: [move.shadowForce.id, move.dragonAscent.id, move.spectralThief.id, move.spacialRend.id],
+            slot1: pkmn.dragapult, slot1Moves: [move.shadowForce.id, move.dragonEnergy.id, move.spectralThief.id, move.spacialRend.id],
             slot2: pkmn.garchomp, slot2Moves: [move.boneRush.id, move.sandsearStorm.id, move.earthquake.id, move.earthPower.id],
             slot3: pkmn.dragonite, slot3Moves: [move.dragonAscent.id, move.roarOfTime.id, move.spacialRend.id, move.fly.id],
             slot4: pkmn.salamence, slot4Moves: [move.hurricane.id, move.spacialRend.id, move.aeroblast.id, move.roarOfTime.id],
@@ -1408,7 +1408,7 @@ const GYMS_LEADERS = [
         level: 100,
         description: "Especialista em Pokémon do tipo Bug.",
         team: {
-            slot1: pkmn.slitherWing, slot1Moves: [move.megahorn.id, move.bite.id, move.signalBeam.id, move.bugBuzz.id],
+            slot1: pkmn.parasect, slot1Moves: [move.megahorn.id, move.bite.id, move.signalBeam.id, move.bugBuzz.id],
             slot2: pkmn.volcarona, slot2Moves: [move.xScissor.id, move.flamethrower.id, move.bugBuzz.id, move.brutalClaw.id],
             slot3: pkmn.scolipede, slot3Moves: [move.megahorn.id, move.quiverDance.id, move.xScissor.id, move.silverWind.id],
             slot4: pkmn.scizor, slot4Moves: [move.xScissor.id, move.silverWind.id, move.bugBuzz.id, move.struggleBug.id],
@@ -1463,7 +1463,7 @@ const GYMS_LEADERS = [
         description: "Especialista em Pokémon do tipo Ground.",
         team: {
             slot1: pkmn.sandaconda, slot1Moves: [move.sparklingAria.id, move.snipeShot.id, move.tripleDive.id, move.razorShell.id],
-            slot2: pkmn.runerigus, slot2Moves: [move.dragonAscent.id, move.snipeShot.id, move.spacialRend.id, move.hydroCannon.id],
+            slot2: pkmn.runerigus, slot2Moves: [move.earthquake.id, move.shadowBall.id, move.dig.id, move.phantomForce.id],
             slot3: pkmn.greninja, slot3Moves: [move.waterShuriken.id, move.ruination.id, move.clamp.id, move.darkestLariat.id],
             slot4: pkmn.swampert, slot4Moves: [move.boneRush.id, move.sparklingAria.id, move.sandsearStorm.id, move.tripleDive.id],
             slot5: pkmn.dondozo, slot5Moves: [move.hydroCannon.id, move.scald.id, move.snipeShot.id, move.razorShell.id],
@@ -1502,7 +1502,7 @@ const GYMS_LEADERS = [
             slot2: pkmn.gengar, slot2Moves: [move.moongeistBeam.id, move.toxic.id, move.phantomForce.id, move.venoshock.id],
             slot3: pkmn.aegislash, slot3Moves: [move.gearUp.id, move.phantomForce.id, move.rageFist.id, move.shiftGear.id],
             slot4: pkmn.chandelure, slot4Moves: [move.flamethrower.id, move.fireFang.id, move.fireBlast.id, move.fireSpin.id],
-            slot5: pkmn.dragapult, slot5Moves: [move.shadowForce.id, move.dragonAscent.id, move.spectralThief.id, move.spacialRend.id],
+            slot5: pkmn.dragapult, slot5Moves: [move.shadowForce.id, move.dragonEnergy.id, move.spectralThief.id, move.spacialRend.id],
             slot6: pkmn.cursola, slot6Moves: [move.rageFist.id, move.shadowBall.id, move.trickOrTreat.id, move.mysticalPower.id],
         },
     },
