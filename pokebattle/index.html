@@ -599,6 +599,16 @@ button.mpic { border: 0; }
 .dcfilt p { margin: 0; font-size: 13px; }
 .dcf-row { display: grid; gap: 6px; font-size: 13px; } .dcf-v { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; } .dcf-v .abtn { padding: 6px 0; justify-content: center; text-align: center; display: flex; }
 .dcf-sum { background: var(--line); padding: 6px 10px; border-radius: 10px; }
+/* Mapa mais leve: lendários numa faixa fina e regiões numa linha que rola de lado */
+.legrow.slim { padding: 9px 12px; gap: 10px; margin: 0 0 8px; border-radius: 14px; }
+.legrow.slim .lico { width: 30px; height: 30px; font-size: 17px; border-radius: 9px; }
+.legrow.slim .ri { flex-direction: row; align-items: baseline; gap: 8px; } .legrow.slim .ri b { font-size: 15px; white-space: nowrap; } .legrow.slim .ri small { font-weight: 800; opacity: .75; }
+.legrow.slim .legnew { font-size: 11px; font-weight: 900; color: #2a2050; background: #ffd86a; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.legrow.slim .lgo { font-size: 22px; font-weight: 900; opacity: .8; margin-left: auto; }
+.rgtabs { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 8px !important; padding: 2px 16px 4px; scroll-padding-inline: 16px; }
+.rgtabs::-webkit-scrollbar { display: none; }
+.rgtabs button { flex: none; white-space: nowrap; padding: 7px 13px; }
+.rgtabs button.rglock:not([aria-pressed="true"]) { opacity: .5; font-weight: 700; }
 .capbtn.on { background: #ffe680 !important; color: #23324a !important; font-weight: 900 !important; box-shadow: 0 0 0 2px #e8b400 inset; }
 .pmodal { position: fixed; inset: 0; z-index: 120; background: rgba(10,14,22,.55); display: grid; place-items: center; padding: 16px; animation: fadein .15s; }
 .pmodal-in { width: 100%; max-width: 360px; background: var(--card); color: var(--ink); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; justify-items: center; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
@@ -921,7 +931,7 @@ button, .drop, .bitem { -webkit-touch-callout: none; }
 
 <script>
 // ---------- versão do jogo (a cada atualização: sobe o número e anota no CHANGELOG) ----------
-const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.3';
+const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.3.1';
 addEventListener('DOMContentLoaded', () => { for (const id of ['gVer', 'gVer2']) { const e = document.getElementById(id); if (e) e.textContent = (id === 'gVer2' ? 'Versão ' : 'v') + GAME_VERSION; } });
 // modo leve (celulares mais fracos): menos efeitos, sem músicas, 30 quadros por segundo
 var LITE = false; try { LITE = localStorage.getItem('arena-leve') === 'on'; } catch (e) {}
@@ -9528,7 +9538,7 @@ function advMap() {
     const dots = Array.from({ length: R.battles }, (_, j) => `<i class="${j < rs.wins ? 'on' : ''}"></i>`).join('') + `<i class="boss ${rs.beaten ? 'on' : ''}"></i>`;
     return `<button class="aroute ${open ? '' : 'locked'} ${rs.beaten ? 'done' : ''}" ${open ? `data-act="route" data-arg="${i}"` : 'disabled'}>
       <span class="rn" ${open ? `data-thumb="${R.arena}"` : ''}>${open ? '' : '?'}</span>
-      <span class="ri"><b>${open ? R.name : 'Rota ' + (i + 1)}</b><small>${open ? `${ARENAS[R.arena].name} · Nv. ${R.lv[0]}–${R.lv[1]} · ${R.boss.legend ? 'Lendário: ' + R.boss.name : R.boss.title}` : (i > 0 && storyBlocks(ADV, i - 1) ? (storyBlocks(ADV, i - 1).league ? 'Vença a Liga Pokémon' : 'Vença o ginásio ' + storyBlocks(ADV, i - 1).city) : 'Vença o chefe da rota anterior')}</small></span>
+      <span class="ri"><b>${open ? R.name : 'Rota ' + (i + 1)}</b><small>${open ? `${ARENAS[R.arena].name} · Nv. ${R.lv[0]}–${R.lv[1]} · ${R.boss.legend ? 'Lendário: ' + R.boss.name : R.boss.title}` : (i > 0 && storyBlocks(ADV, i - 1) ? (storyBlocks(ADV, i - 1).league ? 'Vença a Liga Pokémon' : 'Vença o Ginásio de ' + storyBlocks(ADV, i - 1).city.replace(/ (City|Island)$/, '')) : 'Vença o chefe da rota anterior')}</small></span>
       <span class="rc">${open ? `<span class="dots">${dots}</span><span class="badge">${d.got}/${d.tot} capturados</span>` : ''}</span></button>`;
   };
   const mreg = typeof rgMapReg === 'function' ? rgMapReg() : 'kanto';
@@ -10204,7 +10214,7 @@ function legNext(enc) {
 }
 function legendsRow() {
   const got = LEGENDS.filter(L => legDone(ADV, L.key)).length, open = LEGENDS.filter(L => !legDone(ADV, L.key) && !legMissing(ADV, L).length).length;
-  return `<button class="acard legrow" data-act="legends"><span class="lico">✦</span><span class="ri"><b>Expedições Lendárias</b><small>${got}/${LEGENDS.length} capturados${open ? ` · <b>${open} disponíve${open === 1 ? 'l' : 'is'} agora</b>` : ''}</small></span><span class="badge new">Ver</span></button>`;
+  return `<button class="acard legrow slim" data-act="legends"><span class="lico">✦</span><span class="ri"><b>Expedições Lendárias</b><small>${got}/${LEGENDS.length}</small></span>${open ? `<span class="legnew">${open} disponíve${open === 1 ? 'l' : 'is'}</span>` : ''}<span class="lgo">›</span></button>`;
 }
 function legendsHTML() {
   upgradeStory(ADV);
@@ -11211,7 +11221,7 @@ const rgMapReg = () => (ADV && ADV.mapReg && RG[ADV.mapReg]) ? ADV.mapReg : 'kan
 function regionTabs() {
   const cur = rgMapReg();
   return `<div class="dexfilters rgtabs">${REGIONS.map(r => { const open = regionOpen(ADV, r.id), s = r.id === 'kanto' ? null : rgState(ADV, r.id);
-    return `<button data-act="mapReg" data-arg="${r.id}" aria-pressed="${r.id === cur}" style="--rc:${r.col}">${open ? '' : '🔒 '}${r.name}${s && open ? ` <small>${s.badges.length}/8${s.champ ? ' 🏆' : ''}</small>` : ''}</button>`; }).join('')}</div>`;
+    return `<button class="${open ? '' : 'rglock'}" data-act="mapReg" data-arg="${r.id}" aria-pressed="${r.id === cur}" style="--rc:${r.col}">${open ? '' : '🔒 '}${r.name}${s && open ? ` <small>${s.badges.length}/8${s.champ ? ' 🏆' : ''}</small>` : ''}</button>`; }).join('')}</div>`;
 }
 function rgAreaRow(i) {
   const R = ROUTES[i], reg = RG[R.region], rs = ADV.routes[R.id] || { wins: 0, beaten: false }, open = routeOpen(ADV, i), d = routeDex(i);
