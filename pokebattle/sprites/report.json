@@ -1,0 +1,294 @@
+{
+ "none": [
+  "simisear",
+  "simipour",
+  "tranquill",
+  "blitzle",
+  "zebstrika",
+  "throh",
+  "crustle",
+  "tirtouga",
+  "carracosta",
+  "amoonguss",
+  "frillish",
+  "shelmet",
+  "bouffalant",
+  "trumbeak",
+  "gumshoos",
+  "shiinotic",
+  "oranguru",
+  "carkol",
+  "coalossal",
+  "mrrime",
+  "cufant",
+  "zarude",
+  "squawkabilly",
+  "maschiff",
+  "mabosstiff",
+  "shroodle",
+  "brambleghast",
+  "toedscruel",
+  "klawf",
+  "rabsca",
+  "espathra",
+  "bombirdier",
+  "flamigo",
+  "brutebonnet",
+  "ironjugulis",
+  "wochien",
+  "chienpao",
+  "okidogi",
+  "ironboulder",
+  "ironcrown"
+ ],
+ "empty": [
+  "pyroar",
+  "falinks",
+  "gimmighoul",
+  "miraidon"
+ ],
+ "partial": {
+  "clefairy": [
+   "Shoot"
+  ],
+  "clefable": [
+   "Shoot"
+  ],
+  "pichu": [
+   "Shoot"
+  ],
+  "togepi": [
+   "Shoot"
+  ],
+  "togetic": [
+   "Shoot"
+  ],
+  "riolu": [
+   "Shoot"
+  ],
+  "lucario": [
+   "Shoot"
+  ],
+  "timburr": [
+   "Shoot"
+  ],
+  "darumaka": [
+   "Shoot"
+  ],
+  "minccino": [
+   "Shoot"
+  ],
+  "jellicent": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot"
+  ],
+  "stunfisk": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "mienfoo": [
+   "Shoot"
+  ],
+  "espurr": [
+   "Shoot"
+  ],
+  "meowstic": [
+   "Shoot"
+  ],
+  "aromatisse": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "dedenne": [
+   "Shoot"
+  ],
+  "carbink": [
+   "Shoot"
+  ],
+  "klefki": [
+   "Shoot"
+  ],
+  "incineroar": [
+   "Shoot"
+  ],
+  "toucannon": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "komala": [
+   "Shoot"
+  ],
+  "togedemaru": [
+   "Shoot"
+  ],
+  "tapulele": [
+   "Shoot"
+  ],
+  "cosmog": [
+   "Shoot"
+  ],
+  "solgaleo": [
+   "Shoot"
+  ],
+  "zeraora": [
+   "Shoot"
+  ],
+  "sirfetchd": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep"
+  ],
+  "milcery": [
+   "Charge"
+  ],
+  "stonjourner": [
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep"
+  ],
+  "copperajah": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep"
+  ],
+  "arctovish": [
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep"
+  ],
+  "regieleki": [
+   "Shoot"
+  ],
+  "floragato": [
+   "Shoot"
+  ],
+  "tarountula": [
+   "Charge",
+   "Hop",
+   "Shoot"
+  ],
+  "dolliv": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "grafaiai": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "toedscool": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot"
+  ],
+  "rellor": [
+   "Shoot"
+  ],
+  "orthworm": [
+   "Hurt"
+  ],
+  "irontreads": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Walk"
+  ],
+  "tinglu": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "ironvaliant": [
+   "Shoot"
+  ],
+  "fezandipiti": [
+   "Shoot"
+  ],
+  "gougingfire": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Sleep",
+   "Walk"
+  ],
+  "ragingbolt": [
+   "Attack",
+   "Charge",
+   "Hop",
+   "Hurt",
+   "Shoot",
+   "Walk"
+  ],
+  "pecharunt": [
+   "Attack",
+   "Hop"
+  ]
+ },
+ "noshiny": [
+  "dewott",
+  "venipede",
+  "archen",
+  "karrablast",
+  "reshiram",
+  "dedenne",
+  "incineroar",
+  "minior",
+  "necrozma",
+  "marshadow",
+  "greedent",
+  "rolycoly",
+  "milcery",
+  "glastrier",
+  "oinkologne",
+  "naclstack",
+  "koraidon",
+  "pecharunt"
+ ]
+}
