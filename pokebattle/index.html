@@ -636,6 +636,12 @@ button.mpic { border: 0; }
 .tu-n { min-width: 0; display: grid; } .tu-n b { font-size: 14.5px; } .tu-n small { color: var(--mute); font-size: 11.5px; } .tu-egg { font-style: normal; color: #b07a2a; font-weight: 800; }
 .tubtns { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
 .tuslots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; } .tuslots .abtn { display: grid; gap: 2px; padding: 10px; border-left: 5px solid var(--tc, #ffd24a); } .tuslots small { font-size: 11px; opacity: .7; }
+/* notas de atualização */
+.notes { width: 100%; display: grid; gap: 10px; text-align: left; max-height: 60vh; overflow-y: auto; }
+.note { padding: 10px 12px; border-radius: 12px; background: var(--card-2, #eef2f6); }
+.note.cur { box-shadow: 0 0 0 2px #ffd24a inset; }
+.note .nh { display: flex; align-items: baseline; gap: 8px; } .note .nh b { font-size: 16px; } .note .nh small { color: var(--mute); font-weight: 700; }
+.note ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; } .note li { font-size: 13px; line-height: 1.4; font-weight: 600; }
 .capbtn.on { background: #ffe680 !important; color: #23324a !important; font-weight: 900 !important; box-shadow: 0 0 0 2px #e8b400 inset; }
 .pmodal { position: fixed; inset: 0; z-index: 120; background: rgba(10,14,22,.55); display: grid; place-items: center; padding: 16px; animation: fadein .15s; }
 .pmodal-in { width: 100%; max-width: 360px; background: var(--card); color: var(--ink); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; justify-items: center; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
@@ -958,7 +964,8 @@ button, .drop, .bitem { -webkit-touch-callout: none; }
 
 <script>
 // ---------- versão do jogo (a cada atualização: sobe o número e anota no CHANGELOG) ----------
-const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.5';
+const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.5.1';
+const CHANGELOG = [{"v": "1.5.1", "d": "01/11/2026", "i": ["📜 Novidades: as notas de cada atualização ficam nas Configurações, e o jogo mostra o que mudou na primeira vez que você abre uma versão nova."]}, {"v": "1.5", "d": "01/11/2026", "i": ["🎓 Tutor de golpes (na ficha de cada Pokémon): relembrar golpes já conhecidos/por nível/de ovo por 1 Heart Scale; golpes de tutor (não-TM) por PB ou ₽.", "Golpes de ovo: o filhote herda até 2 golpes que os pais sabem e que ele pode usar.", "Item novo: Heart Scale (Loja, Loja PB e queda nas batalhas). Presente de 3 Heart Scales para quem já joga."]}, {"v": "1.4", "d": "01/11/2026", "i": ["Shiny Charm agora sai ao ter um shiny de cada uma das 9 regiões (a espécie tem que ser da região). Completar a Pokédex continua valendo.", "Aviso a cada região nova conquistada e progresso no Cartão de Treinador."]}, {"v": "1.3.2", "d": "31/10/2026", "i": ["Tela da rota mais compacta: o time inteiro numa fileira só, o botão do chefe trancado numa linha e o aviso do horário numa linha."]}, {"v": "1.3.1", "d": "31/10/2026", "i": ["Mapa mais leve: Expedições Lendárias numa faixa fina e as regiões numa linha só, que rola para o lado.", "App instalável (GitHub Pages) que funciona offline."]}, {"v": "1.3", "d": "31/10/2026", "i": ["Creche: 🧹 Filtro de filhotes. Guarda só shinies e filhotes com o mínimo de IVs perfeitos escolhido (1V a 6V) e, se quiser, uma natureza. Os outros são soltos ao chocar.", "Botão para aplicar o filtro nos filhotes que já estão na caixa de Chocados.", "Gengar, Spiritomb e Runerigus agora andam no chão (antes flutuavam)."]}, {"v": "1.2.1", "d": "31/10/2026", "i": ["Tela pós-batalha: saiu o botão \"Explorar sem curar\"; fica só \"💗 Curar e explorar\" (ou \"🔁 Explorar de novo\" quando o time está inteiro)."]}, {"v": "1.2", "d": "31/10/2026", "i": ["PC com duas caixas: 📦 Capturados e 🥚 Chocados (Pokémon que nasceram dos ovos da Creche).", "Na caixa de Chocados, cada Pokémon mostra quantos IVs perfeitos tem (3V, 4V, 5V, 6V).", "Botão na ficha para mover um Pokémon entre as caixas. Saves antigos: os Pokémon de nível 1 foram para Chocados automaticamente."]}, {"v": "1.1.1", "d": "30/10/2026", "i": ["Tela pós-batalha: botão \"💗 Curar e explorar\" (cura o time e já começa a próxima luta) quando alguém do time está machucado."]}, {"v": "1.1", "d": "30/10/2026", "i": ["Lendários errantes, como nos jogos oficiais: Raikou, Entei e Suicune (Johto), Latias e Latios (Hoenn), Mesprit e Cresselia (Sinnoh), Tornadus e Thundurus (Unova), Articuno, Zapdos e Moltres (Kalos).", "Aparecem de surpresa nas batalhas selvagens da região (cerca de 1 em 22), com entrada de susto (alerta, coração batendo, silhueta correndo).", "Fogem depois de 30 s de batalha; a vida que perderam continua perdida no próximo encontro. O shiny é sorteado uma vez só.", "Nas Expedições, os errantes aparecem como \"🌀 Vagando\"."]}, {"v": "1.0", "d": "30/10/2026 (lançamento)", "i": ["🎉 Nasce o <b>PokéBATTLE</b>! Batalhas em tempo real, estilo anime: seu Pokémon se move e desvia sozinho, e você grita o golpe.", "Aventura por <b>9 regiões</b> (Kanto a Paldea) com as áreas oficiais, Líderes de Ginásio, Elite dos Quatro e Campeões, todos com sprites.", "<b>Campeões épicos:</b> entrada de cinema, música própria, o Ás com aura dourada e o <b>Hall da Fama</b> na vitória. Líderes alternativos a cada temporada da Liga.", "<b>Lendários e Míticos:</b> encontro de cinema (silhueta, clarão e revelação), aura na batalha, rugidos de fúria e cartão de captura.", "<b>Creche</b> com ovos, IVs e EVs oficiais, Pokérus e shinies com as chances oficiais (Ditto shiny vale como Método Masuda).", "Efeitos de luz nos golpes e partículas de ambiente em cada arena.", "Saves do antigo \"Poké Paradise\" continuam funcionando."]}];
 addEventListener('DOMContentLoaded', () => { for (const id of ['gVer', 'gVer2']) { const e = document.getElementById(id); if (e) e.textContent = (id === 'gVer2' ? 'Versão ' : 'v') + GAME_VERSION; } });
 // modo leve (celulares mais fracos): menos efeitos, sem músicas, 30 quadros por segundo
 var LITE = false; try { LITE = localStorage.getItem('arena-leve') === 'on'; } catch (e) {}
@@ -9349,6 +9356,17 @@ async function readCode(txt) {
 }
 function backupInfo(st) { return st ? `${st.team.length + st.box.length} Pokémon · ${Object.keys(st.caught || {}).length} na Pokédex · ${(st.badges || []).length} insígnias · ₽ ${(st.money || 0).toLocaleString('pt-BR')}` : ''; }
 function markBackup() { if (ADV) { ADV.lastBackup = Date.now(); saveAdv(ADV); } }
+// ---------- notas de atualização ----------
+function openNotes(onlyNew) {
+  let seen = ''; try { seen = localStorage.getItem('pb-notes') || ''; } catch (e) {}
+  const list = onlyNew && seen ? CHANGELOG.slice(0, Math.max(1, CHANGELOG.findIndex(c => c.v === seen))) : CHANGELOG;
+  const ov = modal(`<div class="pm-ic">📜</div><h2>${onlyNew ? 'Novidades no PokéBATTLE!' : 'Notas de atualização'}</h2><div class="notes">${list.map((c, i) => `<div class="note ${i === 0 ? 'cur' : ''}"><div class="nh"><b>v${c.v}</b><small>${c.d}</small></div><ul>${c.i.map(t => `<li>${t}</li>`).join('')}</ul></div>`).join('')}</div>
+    ${onlyNew ? '<button class="abtn" data-all>Ver todas as versões</button>' : ''}<button class="abtn big1 gold" data-x>Fechar</button>`, ov => { ov.querySelector('[data-x]').onclick = () => ov.remove(); const a = ov.querySelector('[data-all]'); if (a) a.onclick = () => { ov.remove(); openNotes(false); }; });
+  ov.querySelector('.pmodal-in').classList.add('cfg');
+  try { localStorage.setItem('pb-notes', GAME_VERSION); } catch (e) {}
+}
+// abre sozinho uma vez quando o jogo foi atualizado (quem está começando agora não vê)
+setTimeout(() => { try { const seen = localStorage.getItem('pb-notes'); if (seen === GAME_VERSION) return; const has = typeof loadAdv === 'function' && loadAdv(); if (!has) { localStorage.setItem('pb-notes', GAME_VERSION); return; } openNotes(true); } catch (e) {} }, 1500);
 function openSettings(tab) {
   const st = ADV || loadAdv(), lb = st && st.lastBackup ? new Date(st.lastBackup).toLocaleDateString('pt-BR') : 'nunca';
   const ov = modal(`<div class="pm-ic">⚙️</div><h2>Configurações</h2>
@@ -9360,6 +9378,7 @@ function openSettings(tab) {
       <textarea class="cfgcode" placeholder="Para recuperar: cole aqui o código do backup" rows="3"></textarea>
       <div class="cfgbtns"><button class="abtn red" data-c="load">Recuperar do código</button><label class="abtn">Abrir arquivo<input type="file" accept=".txt,.json,text/plain,application/json" hidden></label></div>
       <p class="cfgmsg" hidden></p></div>
+    <div class="cfgsec"><b>📜 Novidades</b><p>Você está na versão <b>${GAME_VERSION}</b>. Veja tudo o que mudou em cada atualização.</p><div class="cfgbtns"><button class="abtn gold" data-c="notes">Ver as notas de atualização</button></div></div>
     <div class="cfgsec"><b>🪶 Modo leve</b>
       <p>Para celulares mais fracos ou quando o jogo fecha sozinho: menos efeitos, imagem mais simples, sem músicas e 30 quadros por segundo.</p>
       <label class="cfgsw"><input type="checkbox" ${LITE ? 'checked' : ''}> <span>${LITE ? 'Ligado' : 'Desligado'}</span></label></div>
@@ -9367,6 +9386,7 @@ function openSettings(tab) {
     <button class="abtn" data-c="credits">⭐ Créditos</button>
     <button class="abtn big1" data-x>Fechar</button>`, ov => {
     ov.querySelector('[data-c=credits]').onclick = () => { ov.remove(); openCredits(); };
+    ov.querySelector('[data-c=notes]').onclick = () => { ov.remove(); openNotes(false); };
     if (ov.querySelector('[data-c=tips]')) ov.querySelector('[data-c=tips]').onclick = () => { const s2 = ADV || loadAdv(); if (s2) { s2.tips = {}; saveAdv(s2); if (ADV) ADV.tips = {}; } ov.remove(); if (typeof advRender === 'function' && ADV && mode === 'adv') advRender(); };
     const msg = (t, bad) => { const p = ov.querySelector('.cfgmsg'); p.hidden = false; p.textContent = t; p.classList.toggle('bad', !!bad); };
     const code = ov.querySelector('.cfgcode');
