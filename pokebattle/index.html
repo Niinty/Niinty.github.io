@@ -621,6 +621,12 @@ button.mpic { border: 0; }
 .tstrip .tmini canvas.advspr { width: 36px; height: 36px; }
 .tstrip .tmini .abar { height: 5px; }
 .tstrip .tmini.first { outline-width: 2px; }
+/* Cartão de Treinador: progresso do Shiny Charm */
+.tc-charm { display: grid; gap: 4px; margin: 10px 0 4px; padding: 10px 12px; border-radius: 14px; background: var(--card-2, #f4f8fb); }
+.tc-charm.on { background: linear-gradient(90deg, #fff3b0, #ffd6f4); color: #3a2400; } [data-theme="dark"] .tc-charm.on { background: linear-gradient(90deg, #4a3e18, #4a2a44); color: #ffe8a0; }
+.tc-regs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.tc-regs span { font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 999px; background: var(--line); color: var(--mute); }
+.tc-regs span.ok { background: var(--rc); color: #fff; }
 .capbtn.on { background: #ffe680 !important; color: #23324a !important; font-weight: 900 !important; box-shadow: 0 0 0 2px #e8b400 inset; }
 .pmodal { position: fixed; inset: 0; z-index: 120; background: rgba(10,14,22,.55); display: grid; place-items: center; padding: 16px; animation: fadein .15s; }
 .pmodal-in { width: 100%; max-width: 360px; background: var(--card); color: var(--ink); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; justify-items: center; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
@@ -943,7 +949,7 @@ button, .drop, .bitem { -webkit-touch-callout: none; }
 
 <script>
 // ---------- versão do jogo (a cada atualização: sobe o número e anota no CHANGELOG) ----------
-const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.3.2';
+const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.4';
 addEventListener('DOMContentLoaded', () => { for (const id of ['gVer', 'gVer2']) { const e = document.getElementById(id); if (e) e.textContent = (id === 'gVer2' ? 'Versão ' : 'v') + GAME_VERSION; } });
 // modo leve (celulares mais fracos): menos efeitos, sem músicas, 30 quadros por segundo
 var LITE = false; try { LITE = localStorage.getItem('arena-leve') === 'on'; } catch (e) {}
@@ -2773,7 +2779,7 @@ Object.assign(ITEMS, {
   goldcap:     { name: 'Gold Bottle Cap', cat: 'held', price: 80000, held: { lure: true }, color: '#ffc93c', desc: 'Atrai a família de quem segura: Pokémon da mesma linha evolutiva aparecem muito mais nas rotas onde vivem. Só um por time.' },
   luckyegg:    { name: 'Lucky Egg',     cat: 'held', price: 0, held: { xp: 1.5 }, color: '#f0f0e0', desc: '+50% de experiência para quem segura.' },
   lightball:   { name: 'Light Ball',    cat: 'held', price: 0, held: { light: 1.6 }, color: '#f5d23a', desc: 'Só para Pikachu: dano 60% maior.' },
-  shinycharm:  { name: 'Shiny Charm',   cat: 'special', price: 0, color: '#ffe680', desc: 'Prêmio por completar a Pokédex: Pokémon shiny aparecem 3 vezes mais.' },
+  shinycharm:  { name: 'Shiny Charm',   cat: 'special', price: 0, color: '#ffe680', desc: 'Prêmio por ter um shiny de cada uma das 9 regiões (ou completar a Pokédex): Pokémon shiny aparecem 3 vezes mais.' },
 });
 // evoluções por pedra: oficiais + extras do Eevee (no jogo elas são por amizade/horário)
 const STONES = Object.assign({}, GEN.STONES_GEN || {});
@@ -5251,6 +5257,13 @@ function upgradeStory(st) {
   st.legends = st.legends || {}; st.rocket = st.rocket || {}; st.tower = st.tower || { streak: 0, best: 0 }; st.cups = st.cups || {}; st.daily = st.daily || {}; st.hall = st.hall || [];
   return st;
 }
+// regiões em que o jogador já teve um shiny de uma espécie daquela região (pela faixa da Pokédex nacional)
+function shinyRegions(st) {
+  const keys = new Set(Object.keys(st.shinies || {})); for (const m of [...(st.team || []), ...(st.box || [])]) if (m.shiny) keys.add(m.key);
+  const all = REGIONS.map(r => ({ id: r.id, name: r.name, col: r.col, gen: r.gen }));
+  const done = all.filter(r => [...keys].some(k => SPECIES[k] && SPECIES[k].dex >= r.gen[0] && SPECIES[k].dex <= r.gen[1]));
+  return { all, done, has: id => done.some(r => r.id === id) };
+}
 // novas medalhas e prêmios da Pokédex; devolve mensagens
 function storyCheck(st) {
   upgradeStory(st); const out = [];
@@ -5262,7 +5275,10 @@ function storyCheck(st) {
     out.push(`Prêmio da Pokédex (${st.dexPrizes * 100} espécies): ${Object.entries(P).map(([k, q]) => ITEMS[k].name + ' ×' + q).join(', ')}!`);
   }
   const tot = Object.keys(SPECIES).filter(k => !SPECIES[k].event && !SPECIES[k].off).length;
-  if (n >= tot && !st.bag.shinycharm) { st.bag.shinycharm = 1; out.push('Pokédex completa! Você ganhou o <b>Shiny Charm</b>!'); }
+  // Shiny Charm: um shiny de cada região (a espécie tem que ser daquela região) — ou a Pokédex completa
+  const sr = shinyRegions(st), seen = st.shinyRegs || (st.shinyRegs = []);
+  for (const r of sr.done) if (!seen.includes(r.id)) { seen.push(r.id); if (!st.bag.shinycharm) out.push(`✦ Primeiro shiny de <b>${r.name}</b>! (${seen.filter(id => sr.has(id)).length}/${sr.all.length} regiões para o Shiny Charm)`); }
+  if (!st.bag.shinycharm && (sr.done.length === sr.all.length || n >= tot)) { st.bag.shinycharm = 1; out.push(n >= tot && sr.done.length < sr.all.length ? 'Pokédex completa! Você ganhou o <b>Shiny Charm</b>!' : '✨ Você tem um shiny de cada região! Ganhou o <b>Shiny Charm</b>: shinies aparecem 3 vezes mais!'); }
   return out;
 }
 
@@ -10677,6 +10693,8 @@ function trainerCardHTML() {
         <div><span class="tcl">Lendários</span><b>${legGot}<small>/${LEGENDS.length}</small></b>${hpBarRatio(legGot / LEGENDS.length)}<small class="mute">Expedições Lendárias</small></div>
         <div><span class="tcl">Medalhas</span><b>${medals}<small>/${MEDALS.length}</small></b>${hpBarRatio(medals / MEDALS.length)}<small class="mute">${S('shinies')} shin${S('shinies') === 1 ? 'y' : 'ies'} ✦</small></div>
       </div>
+      ${(() => { const sr = shinyRegions(st); return `<div class="tc-charm ${st.bag.shinycharm ? 'on' : ''}"><b>✦ Shiny Charm ${st.bag.shinycharm ? '· conquistado!' : `· ${sr.done.length}/${sr.all.length} regiões`}</b><small class="mute">${st.bag.shinycharm ? 'Shinies aparecem 3 vezes mais.' : 'Tenha um shiny de cada região (a espécie precisa ser daquela região).'}</small>
+        <div class="tc-regs">${sr.all.map(r => `<span class="${sr.has(r.id) ? 'ok' : ''}" style="--rc:${r.col}">${sr.has(r.id) ? '✦' : '·'} ${r.name}</span>`).join('')}</div></div>`; })()}
       <h3 class="tc-h">Destaques</h3>
       <div class="tc-hl">${trHighlights(st).map(monTile).join('')}</div>
       <h3 class="tc-h">Números da jornada</h3>
