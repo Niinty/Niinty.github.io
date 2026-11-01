@@ -627,6 +627,15 @@ button.mpic { border: 0; }
 .tc-regs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
 .tc-regs span { font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 999px; background: var(--line); color: var(--mute); }
 .tc-regs span.ok { background: var(--rc); color: #fff; }
+/* Tutor de golpes */
+.tuhead { display: flex; gap: 12px; align-items: center; } .tuhead b { font-size: 18px; }
+.tucur { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; } .tucur span { font-size: 11.5px; font-weight: 800; padding: 3px 8px; border-radius: 999px; color: #fff; background: var(--tc); }
+.tuh { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; } .tuh b { font-size: 16px; }
+.turow { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+.tu-t { font-size: 10.5px; font-weight: 900; text-transform: uppercase; color: #fff; background: var(--tc); border-radius: 8px; padding: 4px 0; text-align: center; }
+.tu-n { min-width: 0; display: grid; } .tu-n b { font-size: 14.5px; } .tu-n small { color: var(--mute); font-size: 11.5px; } .tu-egg { font-style: normal; color: #b07a2a; font-weight: 800; }
+.tubtns { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.tuslots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; } .tuslots .abtn { display: grid; gap: 2px; padding: 10px; border-left: 5px solid var(--tc, #ffd24a); } .tuslots small { font-size: 11px; opacity: .7; }
 .capbtn.on { background: #ffe680 !important; color: #23324a !important; font-weight: 900 !important; box-shadow: 0 0 0 2px #e8b400 inset; }
 .pmodal { position: fixed; inset: 0; z-index: 120; background: rgba(10,14,22,.55); display: grid; place-items: center; padding: 16px; animation: fadein .15s; }
 .pmodal-in { width: 100%; max-width: 360px; background: var(--card); color: var(--ink); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; justify-items: center; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
@@ -949,7 +958,7 @@ button, .drop, .bitem { -webkit-touch-callout: none; }
 
 <script>
 // ---------- versão do jogo (a cada atualização: sobe o número e anota no CHANGELOG) ----------
-const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.4';
+const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.5';
 addEventListener('DOMContentLoaded', () => { for (const id of ['gVer', 'gVer2']) { const e = document.getElementById(id); if (e) e.textContent = (id === 'gVer2' ? 'Versão ' : 'v') + GAME_VERSION; } });
 // modo leve (celulares mais fracos): menos efeitos, sem músicas, 30 quadros por segundo
 var LITE = false; try { LITE = localStorage.getItem('arena-leve') === 'on'; } catch (e) {}
@@ -2779,6 +2788,7 @@ Object.assign(ITEMS, {
   goldcap:     { name: 'Gold Bottle Cap', cat: 'held', price: 80000, held: { lure: true }, color: '#ffc93c', desc: 'Atrai a família de quem segura: Pokémon da mesma linha evolutiva aparecem muito mais nas rotas onde vivem. Só um por time.' },
   luckyegg:    { name: 'Lucky Egg',     cat: 'held', price: 0, held: { xp: 1.5 }, color: '#f0f0e0', desc: '+50% de experiência para quem segura.' },
   lightball:   { name: 'Light Ball',    cat: 'held', price: 0, held: { light: 1.6 }, color: '#f5d23a', desc: 'Só para Pikachu: dano 60% maior.' },
+  heartscale:  { name: 'Heart Scale',   cat: 'special', price: 1000, color: '#ff9ac0', desc: 'O Tutor de golpes troca uma Heart Scale por um golpe que o Pokémon já conheceu (ou que aprendeu no ovo).' },
   shinycharm:  { name: 'Shiny Charm',   cat: 'special', price: 0, color: '#ffe680', desc: 'Prêmio por ter um shiny de cada uma das 9 regiões (ou completar a Pokédex): Pokémon shiny aparecem 3 vezes mais.' },
 });
 // evoluções por pedra: oficiais + extras do Eevee (no jogo elas são por amizade/horário)
@@ -2787,7 +2797,7 @@ STONES.eevee = Object.assign({}, STONES.eevee, { pedraSol: 'espeon', pedraLua: '
 // chance de cada item cair numa vitória (a partir da rota indicada)
 const DROPS = [
   ['pokebola', 0.45, 0], ['pocao', 0.3, 0], ['grandebola', 0.14, 2], ['superpocao', 0.12, 2],
-  ['reviver', 0.06, 1], ['doce', 0.05, 1], ['ultrabola', 0.06, 4], ['hiperpocao', 0.05, 6],
+  ['reviver', 0.06, 1], ['doce', 0.05, 1], ['ultrabola', 0.06, 4], ['hiperpocao', 0.05, 6], ['heartscale', 0.05, 1],
 ];
 // itens segurados que só caem de certos Pokémon selvagens: [chance, item]
 const HELD_DROPS = {
@@ -2882,6 +2892,7 @@ const CATCH_RATE = { cosmog: 45, poipole: 45, phione: 30, nihilego: 45, buzzwole
 const catchRate = sp => CATCH_RATE[sp.key] || (sp.legend ? 3 : sp.event ? 45 : 0);
 function shopList(unlocked, badges) {
   const out = ['pokebola', 'pocao'];
+  if (unlocked >= 2) out.push('heartscale');
   if (unlocked >= 2) out.push('superpocao', 'reviver', 'pedraFogo', 'pedraAgua', 'pedraTrovao', 'pedraFolha');
   if (unlocked >= 3) out.push('healball', 'netball', 'nestball');
   if (unlocked >= 4) out.push('repeatball', 'diveball');
@@ -5207,7 +5218,7 @@ function dailyEnc(st) {
     team: D.team.map((k, i) => storyMon(st, k, lv, { hpMul: 1.15, held: i === 2 ? typeBooster(D.type) : 'sitrusberry' })) }, 0.65);
 }
 // loja de Pontos de Batalha
-const BP_SHOP = [['doce', 2], ['destinyknot', 15], ['everstone', 3], ['maxreviver', 4], ['ultrabola', 1], ['pedraBrilho', 4], ['pedraNoite', 4], ['pedraAlvorada', 4], ['pedraGelo', 4], ['focussash', 12], ['leftovers', 12],
+const BP_SHOP = [['heartscale', 1], ['doce', 2], ['destinyknot', 15], ['everstone', 3], ['maxreviver', 4], ['ultrabola', 1], ['pedraBrilho', 4], ['pedraNoite', 4], ['pedraAlvorada', 4], ['pedraGelo', 4], ['focussash', 12], ['leftovers', 12],
   ['expertbelt', 10], ['rockyhelmet', 10], ['eviolite', 12], ['assaultvest', 14], ['lifeorb', 16], ['choiceband', 16], ['choicespecs', 16], ['choicescarf', 16], ['luckyegg', 20], ['amuletcoin', 20], ['masterbola', 60]];
 
 // ---------- medalhas ----------
@@ -9692,7 +9703,7 @@ function monSheetHTML() {
     const acts = ti >= 0 ? `${ti > 0 ? `<button class="abtn sm" data-act="lead" data-arg="${ti}">Colocar na frente</button>` : ''}${ADV.team.length > 1 ? `<button class="abtn sm" data-act="toBox" data-arg="${ti}">Mandar para o PC</button>` : ''}`
       : (ADV.team.length < TEAM_MAX ? `<button class="abtn sm" data-act="fromBox" data-arg="${bi}">Levar para o time</button>` : '<small class="mute">Time cheio: mande alguém para o PC antes.</small>')
         + `<button class="abtn sm" data-act="pcEggTog" data-arg="${m.uid}">${m.egg ? '📦 Mover para Capturados' : '🥚 Mover para Chocados'}</button>`;
-    sheet = `<div class="msheet" data-act="monClose"><div class="msheet-in" onclick="event.stopPropagation()"><button class="mclose" data-act="monClose" aria-label="Fechar">✕</button>${monCard(m, ti, { team: ti >= 0, actions: `<div class="mact">${acts}</div>` })}</div></div>`;
+    sheet = `<div class="msheet" data-act="monClose"><div class="msheet-in" onclick="event.stopPropagation()"><button class="mclose" data-act="monClose" aria-label="Fechar">✕</button>${monCard(m, ti, { team: ti >= 0, actions: `<div class="mact">${acts}<button class="abtn sm" data-act="tutor" data-arg="${m.uid}">🎓 Tutor de golpes</button></div>` })}</div></div>`;
   }
   return sheet;
 }
@@ -11833,6 +11844,101 @@ advFinish = function (r) {
   }
   return _roamFin(r);
 };
+
+// =====================================================================
+//  TUTOR DE GOLPES — como o Move Reminder e os Move Tutors dos jogos:
+//  · Relembrar: qualquer golpe que o Pokémon (ou a forma anterior dele) já
+//    aprendeu por nível, que já conheceu ou que veio no ovo. Custa 1 Heart Scale.
+//  · Tutor: golpes especiais que não existem em TM. Custam PB (ou ₽).
+//  · Golpes de ovo: o filhote herda golpes que os pais sabem e que ele pode usar.
+// =====================================================================
+const TUTOR_MOVES = ['ceu', 'joelhada', 'gigadrain', 'aurasphere', 'expandingforce', 'psyshock', 'suckerpunch', 'crosspoison', 'pollenpuff', 'uturn', 'tesoura', 'freezedry', 'machpunch'].filter(k => MOVES[k]);
+const tutorPB = k => { const p = MOVES[k].power || 0; return MOVES[k].kind === 'ray' || MOVES[k].kind === 'stream' ? (p * 8 >= 40 ? 12 : 8) : p >= 40 ? 12 : p >= 20 ? 8 : 4; };
+// formas anteriores (para relembrar golpes de quando ele era menor)
+let _prevMap = null;
+const prevOf = k => { if (!_prevMap) { _prevMap = {}; for (const [a, e] of Object.entries(EVOS)) if (e && e.to) _prevMap[e.to] = a; for (const [a, st] of Object.entries(STONES || {})) for (const t of Object.values(st)) _prevMap[t] = _prevMap[t] || a; } return _prevMap[k]; };
+// o que ele já conheceu: guardado a cada vez que o jogo salva
+function knownSync(m) { const cur = monMoves(m); m.known = m.known || []; for (const k of cur) if (!m.known.includes(k)) m.known.push(k); }
+const _tuSave = saveAdv; saveAdv = function (st) { try { if (st) for (const m of [...(st.team || []), ...(st.box || [])]) knownSync(m); } catch (e) {} return _tuSave.apply(this, arguments); };
+function rememberList(m) {
+  const cur = monMoves(m), out = new Set();
+  let k = m.key; for (let i = 0; k && i < 4; i++, k = prevOf(k)) if (SPECIES[k]) learnedMoves(k, m.level).forEach(x => out.add(x));
+  (m.known || []).forEach(x => out.add(x)); (m.eggMoves || []).forEach(x => out.add(x));
+  return [...out].filter(x => MOVES[x] && !cur.includes(x));
+}
+const tutorList = m => TUTOR_MOVES.filter(k => !monMoves(m).includes(k) && tmCompatible(m.key, k));
+// troca o golpe da posição slot por mv (se mv for o golpe de nível daquela posição, só tira a troca)
+function setMoveAt(m, slot, mv) {
+  m.tm = m.tm || {}; for (const s of Object.keys(m.tm)) if (m.tm[s] === mv) delete m.tm[s];
+  const lv = learnedMoves(m.key, m.level);
+  if (lv[slot] === mv) delete m.tm[slot]; else m.tm[slot] = mv;
+  m.moves = monMoves(m); knownSync(m);
+  return m.moves.includes(mv);
+}
+const tuMon = () => { const u = advCtx && advCtx.tuUid; return ADV.team.find(m => m.uid === u) || ADV.box.find(m => m.uid === u); };
+function moveRow(k, btn) {
+  const M = MOVES[k], T = TYPES[M.type];
+  return `<div class="turow" style="--tc:${T.color}"><span class="tu-t">${T.name}</span><span class="tu-n"><b data-move="${k}">${M.name}</b><small>${typeof catPill === 'function' ? catPill(k) : ''} ${KIND_NAME[M.kind] || ''}${M.power ? ` · poder ${String(M.power).replace('.', ',')}` : ''}${(m => m && m.eggMoves && m.eggMoves.includes(k) ? ' · <i class="tu-egg">🥚 de ovo</i>' : '')(tuMon())}</small></span>${btn}</div>`;
+}
+function tutorHTML() {
+  const m = tuMon(); if (!m) return advShow('team');
+  const cur = monMoves(m), pick = advCtx.tuPick, hs = ADV.bag.heartscale || 0;
+  const head = `<div class="acard tuhead">${spr(m.key, 64, '', m.shiny)}<div><b>${nm(m.key)} <span class="mute">Nv.${m.level}</span></b><div class="tucur">${cur.map(k => `<span style="--tc:${TYPES[MOVES[k].type].color}">${MOVES[k].name}</span>`).join('')}</div></div></div>`;
+  if (pick) {   // passo 2: qual golpe esquecer
+    const pay = pick.how === 'hs' ? '1 Heart Scale' : pick.how === 'pb' ? `${tutorPB(pick.mv)} PB` : `₽ ${(tutorPB(pick.mv) * 1000).toLocaleString('pt-BR')}`;
+    return topBar('Tutor de golpes', 'tutorBack') + head + `<div class="acard"><b>Aprender ${MOVES[pick.mv].name}</b><p class="mute">Qual golpe ${nm(m.key)} vai esquecer? (custa ${pay})</p>
+      <div class="tuslots">${[0, 1, 2, 3].map(i => cur[i] ? `<button class="abtn" data-act="tuSlot" data-arg="${i}" style="--tc:${TYPES[MOVES[cur[i]].type].color}"><b>${MOVES[cur[i]].name}</b><small>${TYPES[MOVES[cur[i]].type].name}</small></button>` : `<button class="abtn gold" data-act="tuSlot" data-arg="${i}"><b>Posição livre</b><small>não esquece nada</small></button>`).join('')}</div>
+      <div class="abtns center"><button class="abtn" data-act="tuCancel">Cancelar</button></div></div>`;
+  }
+  const rem = rememberList(m), tut = tutorList(m);
+  return topBar('Tutor de golpes', 'tutorBack') + head
+    + `<div class="acard"><div class="tuh"><b>🔁 Relembrar golpes</b><span class="pill">${iconHTML('heartscale')} Heart Scale: <b>${hs}</b></span></div>
+      <p class="mute">Golpes que ${nm(m.key)} já conheceu, que aprende por nível (inclusive antes de evoluir) ou que veio do ovo. Cada um custa 1 Heart Scale (vende na Loja, cai das batalhas e sai na Loja PB).</p>
+      ${rem.length ? rem.map(k => moveRow(k, `<button class="abtn sm ${hs ? 'gold' : ''}" data-act="tuPick" data-arg="hs:${k}" ${hs ? '' : 'disabled'}>Relembrar</button>`)).join('') : '<p class="mute">Nenhum golpe para relembrar agora.</p>'}</div>`
+    + `<div class="acard"><div class="tuh"><b>🎓 Golpes de tutor</b><span class="pill">PB: <b>${ADV.bp || 0}</b></span></div>
+      <p class="mute">Golpes especiais que não existem em TM. Só aparecem os que combinam com ${nm(m.key)}.</p>
+      ${tut.length ? tut.map(k => { const pb = tutorPB(k), rs = pb * 1000; return moveRow(k, `<span class="tubtns"><button class="abtn sm ${ADV.bp >= pb ? 'gold' : ''}" data-act="tuPick" data-arg="pb:${k}" ${ADV.bp >= pb ? '' : 'disabled'}>${pb} PB</button><button class="abtn sm" data-act="tuPick" data-arg="rs:${k}" ${ADV.money >= rs ? '' : 'disabled'}>₽ ${rs.toLocaleString('pt-BR')}</button></span>`); }).join('') : `<p class="mute">Nenhum golpe de tutor combina com ${nm(m.key)}.</p>`}</div>`;
+}
+const _tuRender = advRender;
+advRender = function () {
+  if (advScreen === 'tutor') { const el = advEl(); el.innerHTML = tutorHTML(); try { fillItemIcons(el); drawVisible(0, 'canvas.advspr'); } catch (e) {} el.querySelectorAll('canvas.advspr').forEach(c => { try { drawFrame(c, c.dataset.key, 'S', 0, !!c.dataset.shiny); } catch (e) {} }); return; }
+  return _tuRender.apply(this, arguments);
+};
+const _tuAction = advAction;
+advAction = function (act, arg) {
+  if (act === 'tutor') { advCtx = Object.assign(advCtx || {}, { tuUid: arg, tuPick: null, tuFrom: advScreen, monView: null }); advScreen = 'tutor'; return advRender(); }
+  if (act === 'tutorBack') { const back = (advCtx && advCtx.tuFrom) || 'team'; advCtx.tuPick = null; advCtx.monView = advCtx.tuUid; return advShow(back === 'tutor' ? 'team' : back); }
+  if (act === 'tuCancel') { advCtx.tuPick = null; return advRender(); }
+  if (act === 'tuPick') { const [how, mv] = arg.split(':'); if (!MOVES[mv]) return advRender(); advCtx.tuPick = { how, mv }; window.scrollTo({ top: 0 }); return advRender(); }
+  if (act === 'tuSlot') {
+    const m = tuMon(), P = advCtx.tuPick; if (!m || !P) return advRender();
+    const cost = tutorPB(P.mv);
+    if (P.how === 'hs') { if (!(ADV.bag.heartscale > 0)) return advRender(); ADV.bag.heartscale--; }
+    else if (P.how === 'pb') { if (ADV.bp < cost) return advRender(); ADV.bp -= cost; }
+    else { if (ADV.money < cost * 1000) return advRender(); ADV.money -= cost * 1000; }
+    const old = monMoves(m)[+arg]; setMoveAt(m, +arg, P.mv); saveAdv(ADV);
+    advMsg = `${nm(m.key)} ${old ? `esqueceu ${MOVES[old].name} e ` : ''}aprendeu <b>${MOVES[P.mv].name}</b>!`; advCtx.tuPick = null; return advRender();
+  }
+  return _tuAction(act, arg);
+};
+// ---------- golpes de ovo: o filhote herda golpes que os pais sabem e que ele pode aprender ----------
+const _tuMakeEgg = makeEgg;
+makeEgg = function (st, a, b, info) {
+  const e = _tuMakeEgg.apply(this, arguments);
+  const base = new Set(SPECIES[e.key].moves), pool = [...new Set([a, b].filter(p => p.key !== 'ditto').flatMap(p => monMoves(p)))]
+    .filter(k => MOVES[k] && !base.has(k) && MOVES[k].kind !== 'status' && tmCompatible(e.key, k));
+  pool.sort(() => Math.random() - 0.5); e.eggMoves = pool.slice(0, 2);
+  return e;
+};
+const _tuHatch = hatchEgg;
+hatchEgg = function (st, id) {
+  const e = st.eggs.find(x => x.id === id), em = e && e.eggMoves ? e.eggMoves.slice() : [];
+  const r = _tuHatch.apply(this, arguments);
+  if (r && em.length) { const m = r.m; m.eggMoves = em; em.forEach((k, i) => { m.tm = m.tm || {}; m.tm[2 + i] = k; }); m.moves = monMoves(m); knownSync(m); }
+  return r;
+};
+// presente de boas-vindas para quem já joga: 3 Heart Scales
+(function () { const _e = advEnter; advEnter = function () { const r = _e.apply(this, arguments); try { if (ADV && !ADV.tuGift) { ADV.tuGift = 1; ADV.bag.heartscale = (ADV.bag.heartscale || 0) + 3; saveAdv(ADV); } } catch (e) {} return r; }; })();
 
 // =====================================================================
 //  SOM (TESTE) — trilhas 8 bits, efeitos e gritos sintetizados no navegador
