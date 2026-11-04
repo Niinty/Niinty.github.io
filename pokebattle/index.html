@@ -1078,8 +1078,8 @@ button, .drop, .bitem { -webkit-touch-callout: none; }
 
 <script>
 // ---------- versão do jogo (a cada atualização: sobe o número e anota no CHANGELOG) ----------
-const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.6.7';
-const CHANGELOG = [{"v": "1.6.7", "d": "04/11/2026", "i": ["💿 <b>Filtro de TMs por tipo</b> na Loja e na Mochila: toque no tipo (Fogo, Água, Pedra...) para ver só os TMs daquele tipo, com a quantidade de cada um. Na Mochila os TMs ficam em ordem de número.", "💾 <b>Filtros salvos:</b> as abas e os filtros que você escolhe (abas da Loja e da Mochila, tipo dos TMs, caixa e filtros do PC e os filtros da Pokédex) ficam guardados e voltam iguais quando você abre o jogo de novo."]}, {"v": "1.6.6", "d": "04/11/2026", "i": ["💻 <b>PC reorganizado:</b> as caixas Capturados e Chocados ficam no topo, e a busca e o botão <b>Filtros</b> ficam numa linha só. Tipo, ordem e \"só shinies\" agora abrem num painel e só aparecem quando você quer; os filtros ligados ficam visíveis como etiquetas, com \"limpar\". A troca de caixa (‹ ›) foi para baixo da grade. Os Pokémon aparecem bem mais acima na tela.", "✋ <b>Segure um Pokémon do PC para selecionar:</b> ele entra marcado e você toca nos outros para marcar mais. A barra de seleção fica presa no topo, com Soltar, marcar a caixa, marcar todos e desmarcar.", "🗑️ O card de um Pokémon do PC agora tem o botão <b>Soltar</b> (com confirmação), além de Levar para o time e Mover para Chocados/Capturados."]}, {"v": "1.6.5", "d": "04/11/2026", "i": ["🔴 Pokébolas com os desenhos oficiais de novo, agora incluindo a Poké Ball e as novas Lure, Heavy, Friend e Luxury Ball."]}, {"v": "1.6.4", "d": "04/11/2026", "i": ["⚪ 4 Pokébolas novas na Loja (a partir da 7ª rota): <b>Lure Ball</b> (×4 em Pokémon de Água), <b>Heavy Ball</b> (melhor quanto maior o Pokémon, até ×4), <b>Friend Ball</b> (o Pokémon chega com bastante amizade) e <b>Luxury Ball</b> (a amizade cresce em dobro depois)."]}, {"v": "1.6.3", "d": "04/11/2026", "i": ["🔴 A Poké Ball agora usa o desenho oficial nos menus, na mochila, na loja, nos botões da batalha e nas marcações de captura das rotas. O desenho pixelado ficou só na animação da bola sendo arremessada."]}, {"v": "1.6.2", "d": "04/11/2026", "i": ["🏁 Corrigido: com o time cheio, a tela depois da batalha ficava torta e cortada nas laterais. Agora os Pokémon aparecem em duas colunas e tudo cabe na tela."]}, {"v": "1.6.1", "d": "03/11/2026", "i": ["🌙 Corrigido: no modo escuro, a vitrine de Ribbons, o aviso de Ribbon nova depois da batalha e a faixa de Ribbons no card do Pokémon ficavam ilegíveis. Agora têm cores próprias para o modo escuro.", "🏁 Tela depois da batalha mais compacta: tudo aparece numa tela só, sem precisar rolar. As Ribbons novas aparecem em duas colunas."]}, {"v": "1.6", "d": "03/11/2026", "i": ["⛓ <b>Chains com o DexNav</b> (novo item na Loja PB, 20 PB): derrote o mesmo Pokémon selvagem 2 vezes seguidas para começar uma chain. Cada ponto deixa a espécie mais comum (até 70% dos encontros).", "✨ Shiny pela chain: a partir da chain 49 a espécie tem <b>30% de chance de ser shiny</b>, e a partir da 99, <b>70%</b>. Vale para formas iniciais (quem não é evolução de outro), lendários (30% na chain 99 e 70% na 199) e míticos (15% na chain 199). Com chain ativa, dá para enfrentar o lendário de novo sem seguir rastros.", "A chain quebra ao derrotar outra espécie. Fugir, capturar outro Pokémon ou lutar com treinadores não quebra; capturar a própria espécie da chain conta +1. A chain aparece na placa da batalha e na tela da rota.", "🖼️ <b>Retratos novos com expressões:</b> a foto ao lado da barra de vida agora é um retrato desenhado de cada Pokémon (normal e shiny) que reage à luta: dor ao levar dano, determinado ou gritando ao atacar, inspirado com golpes de status, feliz ao ficar mais forte, olhos fechados dormindo, tonto quando confuso, com lágrimas com pouca vida, chorando ao desmaiar e comemorando ao vencer.", "✨ <b>Habilidades revisadas:</b> agora <b>todos</b> os Pokémon têm habilidade (o Gengar ganhou Cursed Body, por exemplo). São mais de 130 habilidades novas funcionando de verdade: Disguise, Stance Change (Aegislash vira Forma Lâmina ao atacar), Schooling, Protean, Beast Boost, as Ruínas, Shadow Tag (não deixa fugir), Magic Bounce, Moxie, Imposter, Trace e muitas outras. Quem estava sem habilidade recebe uma automaticamente.", "⚔️ <b>Mais de 160 golpes novos</b>, com animações próprias: Fire Punch, Ice Fang, Knock Off, Drain Punch, Leaf Blade, Scald, Shadow Sneak, Bullet Punch, Dragon Darts, Explosion, Quiver Dance, Shell Smash, Defog e muito mais. Muitos viraram TMs novos (agora são 199) e outros estão no Tutor de golpes. A numeração dos TMs mudou, mas os que você já tem continuam valendo.", "🌟 <b>Golpes-assinatura:</b> cerca de 50 Pokémon famosos ganharam o golpe próprio deles, como V-create (Victini), Pyro Ball (Cinderace), Dragon Ascent (Rayquaza), Thousand Arrows (Zygarde), Make It Rain (Gholdengo), Psycho Boost (Deoxys), Spectral Thief (Marshadow) e Sacred Sword (Gallade e os Espadachins).", "🎲 <b>Golpes mais variados:</b> os Pokémon selvagens e de treinadores também aprendem os golpes novos por nível. Cerca de 800 espécies ganharam listas de golpes diferentes, sempre com golpes do próprio tipo. Os seus Pokémon também passam a usar a lista nova (golpes ensinados por TM ou Tutor continuam onde estão).", "🎀 <b>Ribbons!</b> São 107 fitas de conquista, e cada Pokémon tem a própria coleção. Abra pelo botão <b>🎀 Ribbons</b> no card do Pokémon. Lá dá para ver o que falta para cada uma (com barra de progresso) e escolher uma para exibir ao lado do nome, no card e na batalha.", "🎀 Tipos de Ribbon: <b>Batalhas</b> (100, 500 e 1.000 vitórias, sequências sem desmaiar, vencer quem tinha vantagem de tipo, derrotar os 18 tipos, lendários...), <b>Campeões</b> (uma por Liga, mais as de 5 e 9 regiões), <b>Estilo de luta</b> (as fitas de concurso Cool, Beauty, Cute, Smart e Tough, em 4 níveis cada), <b>Mundo</b> (regiões, arenas, sol e chuva), <b>Vida com você</b> (inicial, nascido de ovo, nível 100, EVs completos, 30 dias juntos...), <b>Eventos</b> (Carnaval, Festa Junina, Halloween, Natal e Ano Novo) e <b>Loja</b> (Gorgeous, Royal e Gorgeous Royal).", "🎒 <b>Ícones novos dos itens:</b> todos os itens agora usam os desenhos oficiais.", "🍓 <b>Mais de 150 itens novos, com os efeitos oficiais:</b> frutas (as que enfraquecem golpes super efetivos, as de pouca vida como Liechi e Salac, as que curam status, Oran, Figy, Enigma, Jaboca, Kee...) e itens segurados (Black Sludge, Flame Orb, Toxic Orb, White Herb, Mental Herb, Power Herb, Weakness Policy, Focus Band, Big Root, Light Clay, pedras de clima, Terrain Extender, Protective Pads, Safety Goggles, Smoke Ball, Soothe Bell, Razor Claw, Wide Lens, Thick Club, Soul Dew e as Orbs de Dialga, Palkia e Giratina).", "🗿 <b>Plates, Memories e Gems:</b> com uma Plate, o Arceus vira do tipo dela (e o Judgment também). As Memories fazem o mesmo com o Silvally. As Gems fortalecem o primeiro golpe do tipo delas.", "💊 <b>Remédios e itens de batalha:</b> Full Restore, bebidas (Fresh Water, Soda Pop, Lemonade e Moomoo Milk), Sacred Ash, Full Heal, Antidote, Burn Heal, Ice Heal, Awakening, Paralyze Heal, X Attack, X Defense, X Sp. Atk, X Sp. Def, X Speed, Dire Hit e Guard Spec. Na luta, use pelo novo botão <b>🎒 Itens</b>.", "💰 <b>Tesouros:</b> Nugget, Pearl, Star Piece, Comet Shard, cogumelos e outros aparecem às vezes depois das batalhas e vendem na nova aba <b>💰 Vender</b> da Pokémart.", "💎 <b>Loja PB:</b> Ability Capsule (troca a habilidade pela outra da espécie), Bottle Cap (leva o IV mais baixo a 31), Oval Charm (mais ovos na Creche), Soul Dew e as Orbs lendárias.", "🧢 <b>Treinadores com visual:</b> nas batalhas contra treinadores comuns, um dos 253 treinadores novos é sorteado e fica no canto da arena durante a luta.", "🔴 <b>Raio de recolha refeito:</b> a Pokébola aparece aberta, o raio vermelho sai ondulando com energia correndo por ele, o Pokémon vira luz e encolhe numa esfera, volta pelo raio até a bola, e ela se fecha com um estalo.", "📋 <b>Ficha do Pokémon mais compacta:</b> cabe inteira na tela do celular, sem rolar, e mostra o número da Pokédex (Nº 006).", "🎓 Corrigido: o Tutor de golpes às vezes gastava a Heart Scale e o golpe não voltava."]}, {"v": "1.5.5", "d": "01/11/2026", "i": ["Voadores que têm pernas agora andam no chão em vez de voar: Charizard, Dragonite, Salamence, Togetic, Tropius, Emolga e Celesteela."]}, {"v": "1.5.4", "d": "01/11/2026", "i": ["Visual: o nível dos Pokémon (Nv.) agora usa uma fonte mais grossa, maior e mais clara, fácil de ler no time, no PC e nas placas de batalha."]}, {"v": "1.5.3", "d": "01/11/2026", "i": ["Corrigido: os botões da tela do Tutor de golpes (Voltar, Relembrar, comprar e escolher o golpe) não respondiam ao toque."]}, {"v": "1.5.2", "d": "01/11/2026", "i": ["Item novo: <b>Fresh-Start Mochi</b>. Zera todos os EVs do Pokémon de uma vez para recomeçar o treino. Na Loja (₽ 8.000, a partir da 5ª rota) e na Loja PB (4 PB)."]}, {"v": "1.5.1", "d": "01/11/2026", "i": ["📜 Novidades: as notas de cada atualização ficam nas Configurações, e o jogo mostra o que mudou na primeira vez que você abre uma versão nova."]}, {"v": "1.5", "d": "01/11/2026", "i": ["🎓 Tutor de golpes (na ficha de cada Pokémon): relembrar golpes já conhecidos/por nível/de ovo por 1 Heart Scale; golpes de tutor (não-TM) por PB ou ₽.", "Golpes de ovo: o filhote herda até 2 golpes que os pais sabem e que ele pode usar.", "Item novo: Heart Scale (Loja, Loja PB e queda nas batalhas). Presente de 3 Heart Scales para quem já joga."]}, {"v": "1.4", "d": "01/11/2026", "i": ["Shiny Charm agora sai ao ter um shiny de cada uma das 9 regiões (a espécie tem que ser da região). Completar a Pokédex continua valendo.", "Aviso a cada região nova conquistada e progresso no Cartão de Treinador."]}, {"v": "1.3.2", "d": "31/10/2026", "i": ["Tela da rota mais compacta: o time inteiro numa fileira só, o botão do chefe trancado numa linha e o aviso do horário numa linha."]}, {"v": "1.3.1", "d": "31/10/2026", "i": ["Mapa mais leve: Expedições Lendárias numa faixa fina e as regiões numa linha só, que rola para o lado.", "App instalável (GitHub Pages) que funciona offline."]}, {"v": "1.3", "d": "31/10/2026", "i": ["Creche: 🧹 Filtro de filhotes. Guarda só shinies e filhotes com o mínimo de IVs perfeitos escolhido (1V a 6V) e, se quiser, uma natureza. Os outros são soltos ao chocar.", "Botão para aplicar o filtro nos filhotes que já estão na caixa de Chocados.", "Gengar, Spiritomb e Runerigus agora andam no chão (antes flutuavam)."]}, {"v": "1.2.1", "d": "31/10/2026", "i": ["Tela pós-batalha: saiu o botão \"Explorar sem curar\"; fica só \"💗 Curar e explorar\" (ou \"🔁 Explorar de novo\" quando o time está inteiro)."]}, {"v": "1.2", "d": "31/10/2026", "i": ["PC com duas caixas: 📦 Capturados e 🥚 Chocados (Pokémon que nasceram dos ovos da Creche).", "Na caixa de Chocados, cada Pokémon mostra quantos IVs perfeitos tem (3V, 4V, 5V, 6V).", "Botão na ficha para mover um Pokémon entre as caixas. Saves antigos: os Pokémon de nível 1 foram para Chocados automaticamente."]}, {"v": "1.1.1", "d": "30/10/2026", "i": ["Tela pós-batalha: botão \"💗 Curar e explorar\" (cura o time e já começa a próxima luta) quando alguém do time está machucado."]}, {"v": "1.1", "d": "30/10/2026", "i": ["Lendários errantes, como nos jogos oficiais: Raikou, Entei e Suicune (Johto), Latias e Latios (Hoenn), Mesprit e Cresselia (Sinnoh), Tornadus e Thundurus (Unova), Articuno, Zapdos e Moltres (Kalos).", "Aparecem de surpresa nas batalhas selvagens da região (cerca de 1 em 22), com entrada de susto (alerta, coração batendo, silhueta correndo).", "Fogem depois de 30 s de batalha; a vida que perderam continua perdida no próximo encontro. O shiny é sorteado uma vez só.", "Nas Expedições, os errantes aparecem como \"🌀 Vagando\"."]}, {"v": "1.0", "d": "30/10/2026 (lançamento)", "i": ["🎉 Nasce o <b>PokéBATTLE</b>! Batalhas em tempo real, estilo anime: seu Pokémon se move e desvia sozinho, e você grita o golpe.", "Aventura por <b>9 regiões</b> (Kanto a Paldea) com as áreas oficiais, Líderes de Ginásio, Elite dos Quatro e Campeões, todos com sprites.", "<b>Campeões épicos:</b> entrada de cinema, música própria, o Ás com aura dourada e o <b>Hall da Fama</b> na vitória. Líderes alternativos a cada temporada da Liga.", "<b>Lendários e Míticos:</b> encontro de cinema (silhueta, clarão e revelação), aura na batalha, rugidos de fúria e cartão de captura.", "<b>Creche</b> com ovos, IVs e EVs oficiais, Pokérus e shinies com as chances oficiais (Ditto shiny vale como Método Masuda).", "Efeitos de luz nos golpes e partículas de ambiente em cada arena.", "Saves do antigo \"Poké Paradise\" continuam funcionando."]}];
+const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.7';
+const CHANGELOG = [{"v": "1.7", "d": "04/11/2026", "i": ["🎨 <b>Cenários remasterizados:</b> o chão de todas as arenas foi redesenhado com formas mais definidas, contorno, luz e sombra, no mesmo estilo dos sprites dos Pokémon. O tamanho das arenas e o lugar dos obstáculos continuam iguais.", "🌿 Campo com clareiras de terra, trevos, tufos de grama e flores em grupinhos; Selva com samambaias, cogumelos, folhas caídas e poças de lama com reflexo.", "🪨 Pedreira com lajes de pedra e pedrinhas brilhando; Montanha com neve que faz sombra; Geleira com placas de gelo liso, rachaduras e montes de neve.", "🌊 Lago com cristas de onda, vitórias-régias com flor e taboas nas beiradas; Vulcão com placas de basalto e lava pulsando nas frestas; Ruínas com ladrilhos chanfrados, musgo nas juntas e runas no círculo do centro.", "🌳 <b>Obstáculos novos no visual:</b> rochas lapidadas com faces de luz e sombra, árvores e arbustos feitos de tufos de folhas (com cipós na Selva), cristais de gelo com três faces e colunas com base em degraus, capitel e trepadeiras. Eles continuam rachando em etapas quando levam golpes.", "🌵 <b>Arena nova: Deserto</b>, com dunas, cactos e mesas de arenito ao fundo.", "💎 <b>Arena nova: Caverna</b>, com paredão de rocha e cristais roxos que cintilam durante a luta.", "🏆 As arenas novas aparecem nas lutas com arena sorteada: Torre, Copa, Desafio do dia, batalhas com amigos e o Campeão da Liga."]}, {"v": "1.6.7", "d": "04/11/2026", "i": ["💿 <b>Filtro de TMs por tipo</b> na Loja e na Mochila: toque no tipo (Fogo, Água, Pedra...) para ver só os TMs daquele tipo, com a quantidade de cada um. Na Mochila os TMs ficam em ordem de número.", "💾 <b>Filtros salvos:</b> as abas e os filtros que você escolhe (abas da Loja e da Mochila, tipo dos TMs, caixa e filtros do PC e os filtros da Pokédex) ficam guardados e voltam iguais quando você abre o jogo de novo."]}, {"v": "1.6.6", "d": "04/11/2026", "i": ["💻 <b>PC reorganizado:</b> as caixas Capturados e Chocados ficam no topo, e a busca e o botão <b>Filtros</b> ficam numa linha só. Tipo, ordem e \"só shinies\" agora abrem num painel e só aparecem quando você quer; os filtros ligados ficam visíveis como etiquetas, com \"limpar\". A troca de caixa (‹ ›) foi para baixo da grade. Os Pokémon aparecem bem mais acima na tela.", "✋ <b>Segure um Pokémon do PC para selecionar:</b> ele entra marcado e você toca nos outros para marcar mais. A barra de seleção fica presa no topo, com Soltar, marcar a caixa, marcar todos e desmarcar.", "🗑️ O card de um Pokémon do PC agora tem o botão <b>Soltar</b> (com confirmação), além de Levar para o time e Mover para Chocados/Capturados."]}, {"v": "1.6.5", "d": "04/11/2026", "i": ["🔴 Pokébolas com os desenhos oficiais de novo, agora incluindo a Poké Ball e as novas Lure, Heavy, Friend e Luxury Ball."]}, {"v": "1.6.4", "d": "04/11/2026", "i": ["⚪ 4 Pokébolas novas na Loja (a partir da 7ª rota): <b>Lure Ball</b> (×4 em Pokémon de Água), <b>Heavy Ball</b> (melhor quanto maior o Pokémon, até ×4), <b>Friend Ball</b> (o Pokémon chega com bastante amizade) e <b>Luxury Ball</b> (a amizade cresce em dobro depois)."]}, {"v": "1.6.3", "d": "04/11/2026", "i": ["🔴 A Poké Ball agora usa o desenho oficial nos menus, na mochila, na loja, nos botões da batalha e nas marcações de captura das rotas. O desenho pixelado ficou só na animação da bola sendo arremessada."]}, {"v": "1.6.2", "d": "04/11/2026", "i": ["🏁 Corrigido: com o time cheio, a tela depois da batalha ficava torta e cortada nas laterais. Agora os Pokémon aparecem em duas colunas e tudo cabe na tela."]}, {"v": "1.6.1", "d": "03/11/2026", "i": ["🌙 Corrigido: no modo escuro, a vitrine de Ribbons, o aviso de Ribbon nova depois da batalha e a faixa de Ribbons no card do Pokémon ficavam ilegíveis. Agora têm cores próprias para o modo escuro.", "🏁 Tela depois da batalha mais compacta: tudo aparece numa tela só, sem precisar rolar. As Ribbons novas aparecem em duas colunas."]}, {"v": "1.6", "d": "03/11/2026", "i": ["⛓ <b>Chains com o DexNav</b> (novo item na Loja PB, 20 PB): derrote o mesmo Pokémon selvagem 2 vezes seguidas para começar uma chain. Cada ponto deixa a espécie mais comum (até 70% dos encontros).", "✨ Shiny pela chain: a partir da chain 49 a espécie tem <b>30% de chance de ser shiny</b>, e a partir da 99, <b>70%</b>. Vale para formas iniciais (quem não é evolução de outro), lendários (30% na chain 99 e 70% na 199) e míticos (15% na chain 199). Com chain ativa, dá para enfrentar o lendário de novo sem seguir rastros.", "A chain quebra ao derrotar outra espécie. Fugir, capturar outro Pokémon ou lutar com treinadores não quebra; capturar a própria espécie da chain conta +1. A chain aparece na placa da batalha e na tela da rota.", "🖼️ <b>Retratos novos com expressões:</b> a foto ao lado da barra de vida agora é um retrato desenhado de cada Pokémon (normal e shiny) que reage à luta: dor ao levar dano, determinado ou gritando ao atacar, inspirado com golpes de status, feliz ao ficar mais forte, olhos fechados dormindo, tonto quando confuso, com lágrimas com pouca vida, chorando ao desmaiar e comemorando ao vencer.", "✨ <b>Habilidades revisadas:</b> agora <b>todos</b> os Pokémon têm habilidade (o Gengar ganhou Cursed Body, por exemplo). São mais de 130 habilidades novas funcionando de verdade: Disguise, Stance Change (Aegislash vira Forma Lâmina ao atacar), Schooling, Protean, Beast Boost, as Ruínas, Shadow Tag (não deixa fugir), Magic Bounce, Moxie, Imposter, Trace e muitas outras. Quem estava sem habilidade recebe uma automaticamente.", "⚔️ <b>Mais de 160 golpes novos</b>, com animações próprias: Fire Punch, Ice Fang, Knock Off, Drain Punch, Leaf Blade, Scald, Shadow Sneak, Bullet Punch, Dragon Darts, Explosion, Quiver Dance, Shell Smash, Defog e muito mais. Muitos viraram TMs novos (agora são 199) e outros estão no Tutor de golpes. A numeração dos TMs mudou, mas os que você já tem continuam valendo.", "🌟 <b>Golpes-assinatura:</b> cerca de 50 Pokémon famosos ganharam o golpe próprio deles, como V-create (Victini), Pyro Ball (Cinderace), Dragon Ascent (Rayquaza), Thousand Arrows (Zygarde), Make It Rain (Gholdengo), Psycho Boost (Deoxys), Spectral Thief (Marshadow) e Sacred Sword (Gallade e os Espadachins).", "🎲 <b>Golpes mais variados:</b> os Pokémon selvagens e de treinadores também aprendem os golpes novos por nível. Cerca de 800 espécies ganharam listas de golpes diferentes, sempre com golpes do próprio tipo. Os seus Pokémon também passam a usar a lista nova (golpes ensinados por TM ou Tutor continuam onde estão).", "🎀 <b>Ribbons!</b> São 107 fitas de conquista, e cada Pokémon tem a própria coleção. Abra pelo botão <b>🎀 Ribbons</b> no card do Pokémon. Lá dá para ver o que falta para cada uma (com barra de progresso) e escolher uma para exibir ao lado do nome, no card e na batalha.", "🎀 Tipos de Ribbon: <b>Batalhas</b> (100, 500 e 1.000 vitórias, sequências sem desmaiar, vencer quem tinha vantagem de tipo, derrotar os 18 tipos, lendários...), <b>Campeões</b> (uma por Liga, mais as de 5 e 9 regiões), <b>Estilo de luta</b> (as fitas de concurso Cool, Beauty, Cute, Smart e Tough, em 4 níveis cada), <b>Mundo</b> (regiões, arenas, sol e chuva), <b>Vida com você</b> (inicial, nascido de ovo, nível 100, EVs completos, 30 dias juntos...), <b>Eventos</b> (Carnaval, Festa Junina, Halloween, Natal e Ano Novo) e <b>Loja</b> (Gorgeous, Royal e Gorgeous Royal).", "🎒 <b>Ícones novos dos itens:</b> todos os itens agora usam os desenhos oficiais.", "🍓 <b>Mais de 150 itens novos, com os efeitos oficiais:</b> frutas (as que enfraquecem golpes super efetivos, as de pouca vida como Liechi e Salac, as que curam status, Oran, Figy, Enigma, Jaboca, Kee...) e itens segurados (Black Sludge, Flame Orb, Toxic Orb, White Herb, Mental Herb, Power Herb, Weakness Policy, Focus Band, Big Root, Light Clay, pedras de clima, Terrain Extender, Protective Pads, Safety Goggles, Smoke Ball, Soothe Bell, Razor Claw, Wide Lens, Thick Club, Soul Dew e as Orbs de Dialga, Palkia e Giratina).", "🗿 <b>Plates, Memories e Gems:</b> com uma Plate, o Arceus vira do tipo dela (e o Judgment também). As Memories fazem o mesmo com o Silvally. As Gems fortalecem o primeiro golpe do tipo delas.", "💊 <b>Remédios e itens de batalha:</b> Full Restore, bebidas (Fresh Water, Soda Pop, Lemonade e Moomoo Milk), Sacred Ash, Full Heal, Antidote, Burn Heal, Ice Heal, Awakening, Paralyze Heal, X Attack, X Defense, X Sp. Atk, X Sp. Def, X Speed, Dire Hit e Guard Spec. Na luta, use pelo novo botão <b>🎒 Itens</b>.", "💰 <b>Tesouros:</b> Nugget, Pearl, Star Piece, Comet Shard, cogumelos e outros aparecem às vezes depois das batalhas e vendem na nova aba <b>💰 Vender</b> da Pokémart.", "💎 <b>Loja PB:</b> Ability Capsule (troca a habilidade pela outra da espécie), Bottle Cap (leva o IV mais baixo a 31), Oval Charm (mais ovos na Creche), Soul Dew e as Orbs lendárias.", "🧢 <b>Treinadores com visual:</b> nas batalhas contra treinadores comuns, um dos 253 treinadores novos é sorteado e fica no canto da arena durante a luta.", "🔴 <b>Raio de recolha refeito:</b> a Pokébola aparece aberta, o raio vermelho sai ondulando com energia correndo por ele, o Pokémon vira luz e encolhe numa esfera, volta pelo raio até a bola, e ela se fecha com um estalo.", "📋 <b>Ficha do Pokémon mais compacta:</b> cabe inteira na tela do celular, sem rolar, e mostra o número da Pokédex (Nº 006).", "🎓 Corrigido: o Tutor de golpes às vezes gastava a Heart Scale e o golpe não voltava."]}, {"v": "1.5.5", "d": "01/11/2026", "i": ["Voadores que têm pernas agora andam no chão em vez de voar: Charizard, Dragonite, Salamence, Togetic, Tropius, Emolga e Celesteela."]}, {"v": "1.5.4", "d": "01/11/2026", "i": ["Visual: o nível dos Pokémon (Nv.) agora usa uma fonte mais grossa, maior e mais clara, fácil de ler no time, no PC e nas placas de batalha."]}, {"v": "1.5.3", "d": "01/11/2026", "i": ["Corrigido: os botões da tela do Tutor de golpes (Voltar, Relembrar, comprar e escolher o golpe) não respondiam ao toque."]}, {"v": "1.5.2", "d": "01/11/2026", "i": ["Item novo: <b>Fresh-Start Mochi</b>. Zera todos os EVs do Pokémon de uma vez para recomeçar o treino. Na Loja (₽ 8.000, a partir da 5ª rota) e na Loja PB (4 PB)."]}, {"v": "1.5.1", "d": "01/11/2026", "i": ["📜 Novidades: as notas de cada atualização ficam nas Configurações, e o jogo mostra o que mudou na primeira vez que você abre uma versão nova."]}, {"v": "1.5", "d": "01/11/2026", "i": ["🎓 Tutor de golpes (na ficha de cada Pokémon): relembrar golpes já conhecidos/por nível/de ovo por 1 Heart Scale; golpes de tutor (não-TM) por PB ou ₽.", "Golpes de ovo: o filhote herda até 2 golpes que os pais sabem e que ele pode usar.", "Item novo: Heart Scale (Loja, Loja PB e queda nas batalhas). Presente de 3 Heart Scales para quem já joga."]}, {"v": "1.4", "d": "01/11/2026", "i": ["Shiny Charm agora sai ao ter um shiny de cada uma das 9 regiões (a espécie tem que ser da região). Completar a Pokédex continua valendo.", "Aviso a cada região nova conquistada e progresso no Cartão de Treinador."]}, {"v": "1.3.2", "d": "31/10/2026", "i": ["Tela da rota mais compacta: o time inteiro numa fileira só, o botão do chefe trancado numa linha e o aviso do horário numa linha."]}, {"v": "1.3.1", "d": "31/10/2026", "i": ["Mapa mais leve: Expedições Lendárias numa faixa fina e as regiões numa linha só, que rola para o lado.", "App instalável (GitHub Pages) que funciona offline."]}, {"v": "1.3", "d": "31/10/2026", "i": ["Creche: 🧹 Filtro de filhotes. Guarda só shinies e filhotes com o mínimo de IVs perfeitos escolhido (1V a 6V) e, se quiser, uma natureza. Os outros são soltos ao chocar.", "Botão para aplicar o filtro nos filhotes que já estão na caixa de Chocados.", "Gengar, Spiritomb e Runerigus agora andam no chão (antes flutuavam)."]}, {"v": "1.2.1", "d": "31/10/2026", "i": ["Tela pós-batalha: saiu o botão \"Explorar sem curar\"; fica só \"💗 Curar e explorar\" (ou \"🔁 Explorar de novo\" quando o time está inteiro)."]}, {"v": "1.2", "d": "31/10/2026", "i": ["PC com duas caixas: 📦 Capturados e 🥚 Chocados (Pokémon que nasceram dos ovos da Creche).", "Na caixa de Chocados, cada Pokémon mostra quantos IVs perfeitos tem (3V, 4V, 5V, 6V).", "Botão na ficha para mover um Pokémon entre as caixas. Saves antigos: os Pokémon de nível 1 foram para Chocados automaticamente."]}, {"v": "1.1.1", "d": "30/10/2026", "i": ["Tela pós-batalha: botão \"💗 Curar e explorar\" (cura o time e já começa a próxima luta) quando alguém do time está machucado."]}, {"v": "1.1", "d": "30/10/2026", "i": ["Lendários errantes, como nos jogos oficiais: Raikou, Entei e Suicune (Johto), Latias e Latios (Hoenn), Mesprit e Cresselia (Sinnoh), Tornadus e Thundurus (Unova), Articuno, Zapdos e Moltres (Kalos).", "Aparecem de surpresa nas batalhas selvagens da região (cerca de 1 em 22), com entrada de susto (alerta, coração batendo, silhueta correndo).", "Fogem depois de 30 s de batalha; a vida que perderam continua perdida no próximo encontro. O shiny é sorteado uma vez só.", "Nas Expedições, os errantes aparecem como \"🌀 Vagando\"."]}, {"v": "1.0", "d": "30/10/2026 (lançamento)", "i": ["🎉 Nasce o <b>PokéBATTLE</b>! Batalhas em tempo real, estilo anime: seu Pokémon se move e desvia sozinho, e você grita o golpe.", "Aventura por <b>9 regiões</b> (Kanto a Paldea) com as áreas oficiais, Líderes de Ginásio, Elite dos Quatro e Campeões, todos com sprites.", "<b>Campeões épicos:</b> entrada de cinema, música própria, o Ás com aura dourada e o <b>Hall da Fama</b> na vitória. Líderes alternativos a cada temporada da Liga.", "<b>Lendários e Míticos:</b> encontro de cinema (silhueta, clarão e revelação), aura na batalha, rugidos de fúria e cartão de captura.", "<b>Creche</b> com ovos, IVs e EVs oficiais, Pokérus e shinies com as chances oficiais (Ditto shiny vale como Método Masuda).", "Efeitos de luz nos golpes e partículas de ambiente em cada arena.", "Saves do antigo \"Poké Paradise\" continuam funcionando."]}];
 addEventListener('DOMContentLoaded', () => { for (const id of ['gVer', 'gVer2']) { const e = document.getElementById(id); if (e) e.textContent = (id === 'gVer2' ? 'Versão ' : 'v') + GAME_VERSION; } });
 // modo leve (celulares mais fracos): menos efeitos, sem músicas, 30 quadros por segundo
 var LITE = false; try { LITE = localStorage.getItem('arena-leve') === 'on'; } catch (e) {}
@@ -3052,6 +3052,8 @@ const ARENAS = {
   montanha: { name: 'Montanha', ground: 'mountain', obstacle: 'boulder',   rocks: [6, 8], rockR: [24, 38] },
   vulcao:   { name: 'Vulcão',   ground: 'volcano',  obstacle: 'obsidian',  rocks: [6, 8], rockR: [20, 32] },
   ruinas:   { name: 'Ruínas',   ground: 'ruins',    obstacle: 'pillar',    rocks: [6, 8], rockR: [18, 26] },
+  deserto:  { name: 'Deserto',  ground: 'desert',   obstacle: 'cactus',    rocks: [6, 8], rockR: [20, 30] },
+  caverna:  { name: 'Caverna',  ground: 'cave',     obstacle: 'crystal',   rocks: [6, 8], rockR: [18, 28] },
 };
 // obstáculos: resistência e fraquezas por tipo de golpe
 const OBSTACLES = {
@@ -3063,6 +3065,8 @@ const OBSTACLES = {
   islet:     { name: 'ilhota',       hp: 3.6, weak: { agua: 0.4 } },
   obsidian:  { name: 'obsidiana',    hp: 3.4, weak: { agua: 1.8, gelo: 1.5, fogo: 0.4 } },
   pillar:    { name: 'coluna',       hp: 2.8, weak: { lutador: 1.6, terra: 1.4 } },
+  cactus:    { name: 'cacto',        hp: 2.2, weak: { fogo: 2.2, lutador: 1.3, planta: 0.4 } },
+  crystal:   { name: 'cristal',      hp: 3.0, weak: { lutador: 1.6, terra: 1.5, aco: 1.4 } },
 };
 
 // quanto cada jeito de atacar machuca as rochas (multiplica o poder do golpe)
@@ -7744,16 +7748,20 @@ const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map(v => v 
 //  "parede" no fundo (paredão, mata, montanhas...) e um tipo de obstáculo.
 // =====================================================================
 let GROUND = 'quarry';
+// rampas de 8 tons (escuro → claro); os tons das pontas puxam um pouco para outra cor, como nos sprites
 const GROUNDS = {
-  quarry:   { ramp: [[44, 38, 35], [54, 46, 41], [64, 55, 48], [75, 64, 55], [87, 75, 64], [99, 86, 73]], dust: ['#4a3f36', '#76685a', '#9b8b79', '#c2b4a0'], line: 'rgba(25,20,17,.75)' },
-  grass:    { ramp: [[40, 74, 36], [50, 88, 42], [60, 102, 48], [72, 116, 54], [86, 130, 60], [104, 146, 70]], dust: ['#4a4a2c', '#7a7a4a', '#a0a070', '#c8c8a0'], line: 'rgba(30,52,24,.6)' },
-  jungle:   { ramp: [[26, 40, 24], [32, 50, 28], [40, 60, 32], [48, 72, 36], [58, 84, 42], [70, 96, 48]], dust: ['#3a3424', '#64583a', '#8a7c56', '#b0a47c'], line: 'rgba(20,24,12,.7)' },
-  ice:      { ramp: [[136, 168, 196], [154, 186, 212], [172, 202, 226], [190, 216, 236], [210, 230, 244], [232, 244, 252]], dust: ['#8fb6d8', '#bcdaf0', '#e2f1fb', '#ffffff'], line: 'rgba(70,120,170,.55)' },
-  water:    { ramp: [[26, 62, 100], [32, 76, 118], [38, 90, 134], [46, 104, 150], [58, 120, 166], [76, 140, 182]], dust: ['#6d8db5', '#b9d4ee', '#eaf4ff', '#ffffff'], line: 'rgba(140,200,240,.35)' },
-  volcano:  { ramp: [[18, 16, 20], [28, 24, 28], [38, 32, 36], [50, 42, 44], [64, 54, 54], [80, 68, 66]], dust: ['#2a2224', '#4a3c3c', '#6a5856', '#8a7672'], line: 'rgba(12,8,8,.8)' },
-  ruins:    { ramp: [[72, 70, 76], [86, 84, 88], [100, 98, 102], [114, 112, 114], [128, 126, 126], [144, 142, 140]], dust: ['#4a4846', '#76726c', '#9e9a92', '#c8c4ba'], line: 'rgba(30,28,34,.7)' },
-  mountain: { ramp: [[52, 52, 58], [64, 64, 70], [78, 76, 82], [92, 90, 94], [108, 104, 106], [126, 122, 120]], dust: ['#4a4a4e', '#76767a', '#9e9ea0', '#c8c8ca'], line: 'rgba(24,24,28,.7)' },
+  quarry:   { ramp: [[36, 30, 30], [48, 40, 37], [60, 50, 44], [72, 61, 52], [85, 72, 60], [98, 84, 69], [114, 98, 80], [134, 117, 96]], dust: ['#4a3f36', '#76685a', '#9b8b79', '#c2b4a0'], line: 'rgba(25,20,17,.75)' },
+  grass:    { ramp: [[28, 58, 40], [36, 74, 44], [46, 90, 46], [58, 106, 50], [72, 122, 54], [88, 138, 58], [108, 154, 64], [134, 172, 76]], dust: ['#4a4a2c', '#7a7a4a', '#a0a070', '#c8c8a0'], line: 'rgba(30,52,24,.6)' },
+  jungle:   { ramp: [[18, 30, 24], [24, 40, 28], [31, 50, 31], [39, 61, 35], [48, 72, 39], [58, 84, 43], [70, 96, 48], [86, 110, 56]], dust: ['#3a3424', '#64583a', '#8a7c56', '#b0a47c'], line: 'rgba(20,24,12,.7)' },
+  ice:      { ramp: [[116, 150, 190], [134, 168, 204], [152, 186, 218], [170, 202, 230], [188, 217, 239], [206, 230, 246], [224, 240, 251], [242, 249, 255]], dust: ['#8fb6d8', '#bcdaf0', '#e2f1fb', '#ffffff'], line: 'rgba(70,120,170,.55)' },
+  water:    { ramp: [[16, 44, 86], [20, 56, 102], [26, 70, 118], [32, 84, 134], [40, 99, 149], [50, 115, 163], [64, 133, 178], [84, 154, 193]], dust: ['#6d8db5', '#b9d4ee', '#eaf6ff', '#ffffff'], line: 'rgba(140,200,240,.35)' },
+  volcano:  { ramp: [[14, 11, 16], [22, 17, 22], [30, 24, 28], [40, 32, 35], [51, 41, 43], [63, 51, 52], [77, 62, 61], [94, 76, 72]], dust: ['#2a2224', '#4a3c3c', '#6a5856', '#8a7672'], line: 'rgba(12,8,8,.8)' },
+  ruins:    { ramp: [[58, 56, 68], [70, 68, 79], [83, 81, 90], [96, 94, 101], [109, 107, 112], [122, 120, 122], [137, 135, 134], [156, 153, 149]], dust: ['#4a4846', '#76726c', '#9e9a92', '#c8c4ba'], line: 'rgba(30,28,34,.7)' },
+  mountain: { ramp: [[42, 44, 56], [53, 55, 66], [65, 66, 77], [78, 78, 88], [92, 91, 98], [107, 105, 109], [123, 120, 121], [142, 138, 136]], dust: ['#4a4a4e', '#76767a', '#9e9ea0', '#c8c8ca'], line: 'rgba(24,24,28,.7)' },
+  desert:   { ramp: [[138, 92, 58], [156, 106, 64], [172, 120, 72], [187, 135, 82], [200, 150, 94], [212, 165, 108], [224, 181, 125], [236, 199, 147]], dust: ['#8a6a40', '#b89060', '#d8b27e', '#f0d6a6'], line: 'rgba(90,56,30,.6)' },
+  cave:     { ramp: [[18, 17, 28], [25, 23, 37], [33, 30, 47], [41, 37, 57], [50, 45, 67], [60, 53, 78], [72, 63, 90], [87, 76, 104]], dust: ['#2a2638', '#4a4460', '#6e6688', '#9a90b4'], line: 'rgba(10,8,18,.8)' },
 };
+
 
 const bgCache = {};
 // ---------- quando o celular apaga os desenhos guardados (falta de memória de vídeo) ----------
@@ -7762,7 +7770,7 @@ let canvasEpoch = 0;
 function canvasLost() {
   canvasEpoch++;
   for (const k in bgCache) delete bgCache[k];
-  discCache.clear(); ellCache.clear();
+  discCache.clear(); ellCache.clear(); blobCache.clear(); rockSprites.clear();
   try { dc.setTransform(1, 0, 0, 1, 0, 0); dc.clearRect(0, 0, BW, BH); } catch (e) {}
   if (typeof SPRITES !== 'undefined') for (const s of Object.values(SPRITES)) { if (s._tinted) dropTints(s); delete s.shinyImg; }
   setTimeout(() => {
@@ -7790,130 +7798,315 @@ document.addEventListener('visibilitychange', () => { if (!document.hidden) setT
 function getBg() { const k = game.arena.ground; return bgCache[k] || (bgCache[k] = buildBg(k)); }
 function setGround(k) { GROUND = k; PALS.dust = GROUNDS[k].dust; }
 
+
+// ---------- ajudantes do cenário ----------
+// células de pedra (placas, lajes, ladrilhos irregulares): diz em qual célula o ponto está e quão perto da borda
+const VOR = { d1: 0, e: 0, id: 0, sx: 0, sy: 0 };
+function vor(x, y, cs, s, sq = 1.25) {
+  const gx0 = Math.floor(x / cs), gy0 = Math.floor(y / cs); let d1 = 1e9, d2 = 1e9, id = 0, sx = 0, sy = 0;
+  for (let j = -1; j <= 1; j++) for (let i = -1; i <= 1; i++) {
+    const gx = gx0 + i, gy = gy0 + j, qx = (gx + 0.15 + hash(gx, gy, s) * 0.7) * cs, qy = (gy + 0.15 + hash(gx, gy, s + 1) * 0.7) * cs, d = Math.hypot(x - qx, (y - qy) * sq);
+    if (d < d1) { d2 = d1; d1 = d; id = (gx * 7919 + gy * 104729) | 0; sx = qx; sy = qy; } else if (d < d2) d2 = d;
+  }
+  VOR.d1 = d1; VOR.e = d2 - d1; VOR.id = id; VOR.sx = sx; VOR.sy = sy; return VOR;
+}
+// pedrinha/monte com contorno, luz de cima à esquerda e sombra embaixo (guardado para reaproveitar)
+const blobCache = new Map();
+function shadedBlob(rx, ry, pal, seed = 0, wob = 0.18) {
+  const k = rx + ',' + ry + ',' + pal.join('') + ',' + seed + ',' + wob;
+  let c = blobCache.get(k); if (c) return c;
+  const W = rx * 2 + 2, H = ry * 2 + 2, cx = W / 2, cy = H / 2, n = pal.length;
+  c = mkCanvas(W, H); const g = c.getContext('2d');
+  const ins = (x, y) => { if (x < 0 || y < 0 || x >= W || y >= H) return false; const nx = (x + 0.5 - cx) / rx, ny = (y + 0.5 - cy) / ry, a = Math.atan2(ny, nx); return nx * nx + ny * ny <= 1 + (vnoise(Math.cos(a) * 1.6 + 4, Math.sin(a) * 1.6 + 4, seed) - 0.5) * wob * 2; };
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    if (!ins(x, y)) continue;
+    let col;
+    if (!ins(x - 1, y) || !ins(x + 1, y) || !ins(x, y - 1) || !ins(x, y + 1)) col = pal[0];
+    else { const nx = (x + 0.5 - cx) / rx, ny = (y + 0.5 - cy) / ry, l = 0.62 - nx * 0.42 - ny * 0.6; col = pal[Math.max(1, Math.min(n - 1, Math.round(1 + l * (n - 2) + BAYER[(y & 3) * 4 + (x & 3)] * 0.5)))]; }
+    g.fillStyle = col; g.fillRect(x, y, 1, 1);
+  }
+  blobCache.set(k, c); return c;
+}
+const rgbS = a => `rgb(${a[0]},${a[1]},${a[2]})`;
+const STONE_PAL = { quarry: ['#1d1814', '#4e4338', '#6e604f', '#8e7d68', '#b2a088', '#d0c0a4'], mountain: ['#1a1b20', '#44464e', '#62646c', '#82848c', '#a4a6ac', '#c8cace'],
+  ruins: ['#22202a', '#55535d', '#75737b', '#95939a', '#b5b3b8', '#d6d4d6'], desert: ['#4a2c18', '#7a4c2a', '#9a6436', '#b8804a', '#d49c62', '#ecbe86'], cave: ['#0c0a14', '#2a263a', '#3e3852', '#544c6a', '#6c6284', '#8a80a2'],
+  grass: ['#1e1a16', '#4e463c', '#6e6454', '#8e826e', '#b0a48c', '#d0c6ae'], jungle: ['#141210', '#3a342a', '#544c3e', '#6e6452', '#8a806a', '#a89e86'] };
+const GLOW = [];
+
 function buildBg(kind) {
   const G = GROUNDS[kind], c = mkCanvas(BW, BH), g = c.getContext('2d');
-  const img = g.createImageData(BW, BH), data = img.data, ramp = G.ramp;
+  const img = g.createImageData(BW, BH), data = img.data, ramp = G.ramp, K = ramp.length;
   const wallY = Math.round((ARENA.y0 - 70) / PX);
+  if (kind === 'volcano') { LAVA.length = 0; LAVAPOOL.length = 0; }
+  if (kind === 'cave') GLOW.length = 0;
+  const lavaPts = [];
   for (let y = 0; y < BH; y++) for (let x = 0; x < BW; x++) {
-    let n = vnoise(x / 26, y / 18, 1) * 0.55 + vnoise(x / 9, y / 7, 2) * 0.3 + vnoise(x / 3, y / 3, 3) * 0.15;
-    if (kind === 'water') n = 0.45 + Math.sin(y * 0.9 + vnoise(x / 18, y / 6, 4) * 6) * 0.12 + vnoise(x / 30, y / 20, 1) * 0.35;
-    if (kind === 'ruins') {   // ladrilhos grandes de pedra, cada um com um tom
-      const T = 22, tx = Math.floor(x / T), ty = Math.floor((y + (tx % 2) * 11) / T), lx = x - tx * T, ly = (y + (tx % 2) * 11) - ty * T;
-      n = 0.42 + (hash(tx, ty, 41) - 0.5) * 0.35 + vnoise(x / 5, y / 5, 3) * 0.18;
-      if (lx === 0 || ly === 0) n = 0.05; else if (lx === 1 || ly === 1) n += 0.22; else if (lx === T - 1 || ly === T - 1) n -= 0.2;
-      if (hash(tx, ty, 77) < 0.06) n = 0.12 + vnoise(x / 3, y / 3, 9) * 0.15;   // ladrilho faltando
+    const B = BAYER[(y & 3) * 4 + (x & 3)];
+    const n = vnoise(x / 34, y / 22, 1) * 0.58 + vnoise(x / 12, y / 9, 2) * 0.3 + vnoise(x / 4, y / 4, 3) * 0.12;
+    let lv = 0.16 + n * 0.6, dith = 0.55, lava = false;
+    if (kind === 'quarry' || kind === 'mountain' || kind === 'cave') {   // lajes de pedra enterradas no chão
+      const cs = kind === 'cave' ? 26 : kind === 'quarry' ? 30 : 34, V = vor(x, y, cs, 5 + kind.length);
+      const slab = kind === 'cave' ? true : hash(V.id, 3, 9) < (kind === 'quarry' ? 0.16 : 0.14);
+      if (slab) {
+        if (V.e < 1.3) lv = 0.03;
+        else {
+          lv = (kind === 'cave' ? 0.26 : 0.42) + hash(V.id, 5, 9) * 0.16 + (vnoise(x / 5, y / 5, 7) - 0.5) * 0.1;
+          if (V.e < 3.4) lv += ((x - V.sx) * -0.6 + (y - V.sy) * -0.8 > 0 ? 0.13 : -0.11);   // chanfro: borda de cima clara, de baixo escura
+        }
+      } else if (kind === 'quarry' && vnoise(x / 40, y / 26, 8) > 0.64) lv += 0.08;   // areia mais clara
     }
-    if (kind === 'ice') n = n * 0.7 + 0.3 * (vnoise(x / 40, y / 25, 7) > 0.55 ? 0.2 : 0.8);
-    const ex = Math.min(x, BW - x) / 40, ey = (BH - y) / 30;
-    n -= Math.max(0, 1 - Math.min(ex, ey)) * 0.3;
-    const v = Math.max(0, Math.min(ramp.length - 1, Math.floor(n * ramp.length * 1.25 - 0.6 + BAYER[(y & 3) * 4 + (x & 3)] * 0.9)));
+    if (kind === 'grass') { lv = 0.2 + n * 0.55; if (vnoise(x / 8, y / 5, 6) > 0.7) lv += 0.1; }
+    if (kind === 'jungle') { lv = 0.12 + n * 0.55; if (vnoise(x / 20, y / 14, 6) > 0.62) lv += 0.14; }
+    if (kind === 'ice') {   // placas de gelo lisas, com rachaduras entre elas
+      const V = vor(x, y, 46, 7, 1.4);
+      lv = 0.42 + hash(V.id, 1, 3) * 0.26 + (n - 0.5) * 0.18; dith = 0.3;
+      if (V.e < 1.2) lv = 0.24; else if (V.e < 2.6) lv += ((x - V.sx) * -0.6 + (y - V.sy) * -0.8 > 0 ? 0.16 : -0.08);
+    }
+    if (kind === 'water') {
+      const w = Math.sin(y * 0.55 + vnoise(x / 22, y / 8, 4) * 7 + x * 0.02);
+      lv = 0.18 + n * 0.32 + Math.max(0, 1 - (y - wallY) / 60) * 0.32;   // mais raso perto da margem
+      if (w > 0.84) lv += 0.15; else if (w < -0.88) lv -= 0.08;
+    }
+    if (kind === 'volcano') {   // placas de basalto; algumas frestas com lava
+      const V = vor(x, y, 22, 11);
+      lv = 0.3 + hash(V.id, 2, 4) * 0.24 + (n - 0.5) * 0.14;
+      if (V.e < 1.3) { lv = 0.0; if (vnoise(x / 34, y / 30, 12) > 0.7) lava = true; }
+      else if (V.e < 3.2) lv += ((x - V.sx) * -0.6 + (y - V.sy) * -0.8 > 0 ? 0.12 : -0.1);
+    }
+    if (kind === 'ruins') {   // ladrilhos grandes com chanfro, cada um com um tom
+      const T = 22, tx = Math.floor(x / T), ty = Math.floor((y + (tx % 2) * 11) / T), lx = x - tx * T, ly = (y + (tx % 2) * 11) - ty * T;
+      lv = 0.38 + (hash(tx, ty, 41) - 0.5) * 0.3 + (vnoise(x / 5, y / 5, 3) - 0.5) * 0.14; dith = 0.45;
+      if (lx === 0 || ly === 0) lv = 0.04; else if (lx === 1 || ly === 1) lv += 0.17; else if (lx === T - 1 || ly === T - 1) lv -= 0.16;
+      if (hash(tx, ty, 77) < 0.06) lv = 0.1 + vnoise(x / 3, y / 3, 9) * 0.14;   // ladrilho faltando
+    }
+    if (kind === 'desert') {   // dunas com marolas de vento
+      const r = Math.sin(y * 0.7 + x * 0.08 + vnoise(x / 30, y / 18, 4) * 8);
+      lv = 0.3 + n * 0.38; if (r > 0.78) lv -= 0.17; else if (r > 0.42) lv += 0.1;
+    }
+    const ex = Math.min(x, BW - x) / 50, ey = (BH - y) / 36;
+    lv -= Math.max(0, 1 - Math.min(ex, ey, 1)) * 0.24;
+    const v = Math.max(0, Math.min(K - 1, Math.floor(lv * (K - 1) + 0.5 + B * dith)));
     const col = ramp[v], i = (y * BW + x) * 4; data[i] = col[0]; data[i + 1] = col[1]; data[i + 2] = col[2]; data[i + 3] = 255;
+    if (lava && y > wallY + 6) { data[i] = 200; data[i + 1] = 64; data[i + 2] = 26; lavaPts.push([x, y]); }
   }
   g.putImageData(img, 0, 0);
   let seed = 11 + kind.length * 7; const r2 = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
   const P = (col, x, y, w = 1, h = 1) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), w, h); };
   const field = () => [Math.floor(r2() * BW), wallY + 8 + Math.floor(r2() * (BH - wallY - 8))];
-  const crack = (n, col, len) => { for (let k = 0; k < n; k++) { let [x, y] = field(), a = r2() * 6.28; for (let i = 0; i < len + r2() * len; i++) { P(col, x, y); a += (r2() - 0.5) * 0.9; x += Math.cos(a); y += Math.sin(a) * 0.6; } } };
+  const crack = (n, col, len, hi) => { for (let k = 0; k < n; k++) { let [x, y] = field(), a = r2() * 6.28; for (let i = 0; i < len + r2() * len; i++) { P(col, x, y); if (hi) P(hi, x, y + 1); a += (r2() - 0.5) * 0.9; x += Math.cos(a); y += Math.sin(a) * 0.6; } } };
   const blob = (x, y, r, col) => { g.drawImage(disc(col, r), Math.round(x - r), Math.round(y - r)); };
+  const sb = (x, y, rx, ry, pal, s, wob) => { const b = shadedBlob(rx, ry, pal, s, wob); g.drawImage(b, Math.round(x - b.width / 2), Math.round(y - b.height / 2)); };
+  const shadow = (x, y, w) => P('rgba(0,0,0,.22)', x, y, w, 1);
+  const pebble = (x, y, pal) => { const s = r2(); if (s < 0.55) { P(pal[0], x, y + 1, 2, 1); P(pal[3], x, y, 2, 1); P(pal[5], x, y); } else { const rx = s < 0.85 ? 2 : 3; shadow(x - rx + 1, y + 2, rx * 2); sb(x, y, rx, Math.max(1, rx - 1), pal, Math.floor(s * 9), 0.3); } };
+  const tuft = (x, y, d, m, l) => { shadow(x - 2, y + 1, 5); P(d, x - 2, y, 5, 1); P(m, x - 2, y - 1); P(l, x - 3, y - 2); P(m, x, y - 1); P(m, x, y - 2); P(l, x, y - 3); P(m, x + 2, y - 1); P(l, x + 3, y - 2); P(d, x - 1, y - 1); P(d, x + 1, y - 1); };
+  const flower = (x, y, pc, pd, stem) => { P('rgba(0,0,0,.2)', x, y + 2, 2, 1); P(stem, x, y + 1); P(pc, x - 1, y); P(pc, x, y - 1); P(pd, x + 1, y); P(pd, x, y + 1); P('#ffe066', x, y); };
+  const sparkle = (x, y, c1, c2) => { P(c2, x - 1, y); P(c2, x + 1, y); P(c2, x, y - 1); P(c2, x, y + 1); P(c1, x, y); };
+  const SP = STONE_PAL[kind] || STONE_PAL.quarry;
 
   // ---------- detalhes do chão ----------
   if (kind === 'quarry') {
-    for (let i = 0; i < 420; i++) { const [x, y] = field(), s = r2() < 0.2 ? 2 : 1; P(ROCK[0], x, y + s, s + 1, 1); P(ROCK[2 + Math.floor(r2() * 3)], x, y, s, s); if (s === 2) P(ROCK[5], x, y); }
-    crack(26, G.line, 10);
-    for (let i = 0; i < 40; i++) { const [x, y] = field(); for (let j = 0; j < 4; j++) P(r2() < .5 ? '#5d6a3a' : '#7c7f45', x + j - 1, y - Math.floor(r2() * 3), 1, 2); }
+    for (let i = 0; i < 300; i++) { const [x, y] = field(); pebble(x, y, SP); }
+    crack(24, 'rgba(22,17,15,.8)', 10, 'rgba(160,140,115,.35)');
+    for (let i = 0; i < 46; i++) { const [x, y] = field(); tuft(x, y, '#3a4424', '#5d6a3a', '#8a9450'); }
+    for (let i = 0; i < 14; i++) { const [x, y] = field(); P('#3a4a66', x, y + 1, 2, 1); sparkle(x, y, '#ffffff', '#a8c8f0'); }   // pedras da lua cintilando
   }
   if (kind === 'grass') {
-    for (let i = 0; i < 14; i++) { const [x, y] = field(); for (let k = 0; k < 4; k++) blob(x + (r2() - .5) * 16, y + (r2() - .5) * 6, 3 + r2() * 4, '#6a5a3a'); }   // terra batida
-    for (let i = 0; i < 2200; i++) { const [x, y] = field(); P(r2() < .5 ? '#2c5424' : '#8cba5a', x, y - 1, 1, 2); }   // capim
-    for (let i = 0; i < 160; i++) { const [x, y] = field(), c2 = ['#ffffff', '#ffe45a', '#f39ac8', '#c8a8ff'][Math.floor(r2() * 4)]; P('#2c5424', x, y + 1); P(c2, x - 1, y); P(c2, x + 1, y); P(c2, x, y - 1); P('#ffd23a', x, y); }   // flores
-    for (let i = 0; i < 60; i++) { const [x, y] = field(); P(ROCK[0], x, y + 1, 2, 1); P(ROCK[4], x, y); }
+    const dirt = ['#3e2e20', '#5a4430', '#76593c', '#90724a', '#a88a5c'];
+    for (let i = 0; i < 9; i++) {   // clareiras de terra com borda de grama
+      const [x0, y0] = field(), R = 9 + r2() * 12, S = Math.floor(r2() * 999), m = (x, y) => { const d = Math.hypot(x - x0, (y - y0) * 1.8) / R; return d + (vnoise(x / 4, y / 4, S) - 0.5) * 0.55 < 0.75; };
+      for (let y = Math.floor(y0 - R); y < y0 + R; y++) for (let x = Math.floor(x0 - R * 1.3); x < x0 + R * 1.3; x++) {
+        if (!m(x, y)) continue;
+        const v = !m(x, y - 1) ? 0 : !m(x, y + 1) ? 4 : 1 + Math.min(2, Math.floor(vnoise(x / 3, y / 2, S + 1) * 3.2 + BAYER[(y & 3) * 4 + (x & 3)] * 0.5));
+        P(dirt[v], x, y); if (!m(x, y - 1) && r2() < 0.5) P(rgbS(ramp[2]), x, y);
+      }
+      for (let k = 0; k < 4; k++) pebble(x0 + (r2() - 0.5) * R * 1.4, y0 + (r2() - 0.5) * R * 0.6, SP);
+    }
+    for (let i = 0; i < 1400; i++) { const [x, y] = field(); P(r2() < 0.55 ? rgbS(ramp[2]) : rgbS(ramp[6]), x, y - 1, 1, 2); }   // capim
+    for (let i = 0; i < 40; i++) { const [x, y] = field(); for (const [dx, dy] of [[-1, 0], [1, 0], [0, -1]]) { P(rgbS(ramp[2]), x + dx * 2, y + dy * 2 + 1, 2, 1); P(rgbS(ramp[5]), x + dx * 2, y + dy * 2, 2, 1); } P(rgbS(ramp[7]), x - 2, y - 2); }   // trevos
+    for (let i = 0; i < 240; i++) { const [x, y] = field(); tuft(x, y, rgbS(ramp[1]), rgbS(ramp[4]), rgbS(ramp[7])); }
+    const FL = [['#ffffff', '#c8d0e0'], ['#ffe45a', '#d89a20'], ['#ff9ac8', '#c85a90'], ['#c8a8ff', '#8a6ad0'], ['#ff7a5a', '#b83a3a']];
+    for (let i = 0; i < 26; i++) { const [x0, y0] = field(), f = FL[Math.floor(r2() * FL.length)], n2 = 3 + Math.floor(r2() * 4); for (let k = 0; k < n2; k++) flower(x0 + Math.round((r2() - 0.5) * 16), y0 + Math.round((r2() - 0.5) * 7), f[0], f[1], rgbS(ramp[1])); }
+    for (let i = 0; i < 26; i++) { const [x, y] = field(); pebble(x, y, SP); }
   }
   if (kind === 'jungle') {
-    for (let i = 0; i < 10; i++) { const [x, y] = field(); for (let k = 0; k < 3; k++) blob(x + (r2() - .5) * 18, y + (r2() - .5) * 6, 4 + r2() * 5, '#2a2216'); P('#5a6a58', x - 2, y - 1, 3, 1); }   // poças de lama
-    for (let k = 0; k < 22; k++) { let [x, y] = field(), a = r2() * 6.28; for (let i = 0; i < 18 + r2() * 20; i++) { P('#3a2a1a', x, y + 1); P('#6a4a2a', x, y); a += (r2() - 0.5) * 0.6; x += Math.cos(a); y += Math.sin(a) * 0.5; } }   // raízes
-    for (let i = 0; i < 900; i++) { const [x, y] = field(); P(['#8a5a2a', '#b07a2a', '#c8a03a', '#6a3a1a', '#4a6a2a'][Math.floor(r2() * 5)], x, y, r2() < .3 ? 2 : 1, 1); }   // folhas caídas
-    for (let i = 0; i < 70; i++) { const [x, y] = field(); for (let j = -3; j <= 3; j++) { P('#3a7a2a', x + j, y - Math.abs(j) * 0.6 - 1); P('#5aa03a', x + j, y - Math.abs(j) * 0.6 - 2); } }   // samambaias
-    for (let i = 0; i < 30; i++) { const [x, y] = field(); P('#e8e0d0', x, y + 1); P('#c83a2a', x - 1, y, 3, 1); P('#ffffff', x, y); }   // cogumelos
+    for (let i = 0; i < 9; i++) {   // poças de lama com reflexo
+      const [x, y] = field(), rx = 6 + Math.floor(r2() * 7), ry = Math.max(2, Math.round(rx * 0.42));
+      g.drawImage(ellipseStamp('#120e08', rx + 1, ry + 1, false), x - rx - 1, y - ry - 1);
+      g.drawImage(ellipseStamp('#2e2418', rx, ry, false), x - rx, y - ry);
+      g.drawImage(ellipseStamp('#3c3426', Math.max(1, rx - 2), Math.max(1, ry - 1), false), x - rx + 2, y - ry + 1);
+      P('#7a8a78', x - rx + 3, y - ry + 1, Math.max(2, Math.round(rx * 0.6)), 1); P('#a8b8a4', x - rx + 3, y - ry + 1);
+    }
+    for (let k = 0; k < 20; k++) {   // raízes saindo da terra
+      let [x, y] = field(), a = r2() * 6.28;
+      for (let i = 0; i < 16 + r2() * 20; i++) { P('#120c08', x, y + 2); P('#3a2616', x, y + 1); P('#7a5434', x, y); a += (r2() - 0.5) * 0.6; x += Math.cos(a); y += Math.sin(a) * 0.5; }
+    }
+    const LT = [['#8a5a2a', '#b07a3a'], ['#b07a2a', '#d8a048'], ['#6a3a1a', '#8a4e26'], ['#4a6a2a', '#6a8a3a'], ['#a04a24', '#c86a34']];
+    for (let i = 0; i < 520; i++) { const [x, y] = field(), t = LT[Math.floor(r2() * LT.length)]; P(t[0], x, y, 2, 1); P(t[1], x, y - 1); }   // folhas caídas
+    for (let i = 0; i < 56; i++) {   // samambaias em leque
+      const [x, y] = field(), F = ['#163a18', '#2a6224', '#4a9038', '#7ac04a'];
+      P('rgba(0,0,0,.25)', x - 4, y + 1, 9, 1);
+      for (let f = -2; f <= 2; f++) { const a = -Math.PI / 2 + f * 0.55, L = 5 + (2 - Math.abs(f)) * 2; for (let j = 1; j <= L; j++) { const px2 = x + Math.cos(a) * j, py2 = y + Math.sin(a) * j * 0.8; P(F[1], px2, py2); if (j % 2 === 0) { P(F[2], px2 - 1, py2); P(F[0], px2 + 1, py2 + 1); } if (j === L) P(F[3], px2, py2); } }
+    }
+    for (let i = 0; i < 26; i++) {   // cogumelos
+      const [x, y] = field(); P('rgba(0,0,0,.25)', x - 1, y + 2, 5, 1);
+      P('#e8e0d0', x, y, 2, 2); P('#b8ae9c', x + 1, y + 1);
+      P('#5a1a14', x - 1, y - 1, 4, 1); P('#a02a22', x - 1, y - 2, 4, 1); P('#e04a3a', x, y - 3, 2, 1); P('#e04a3a', x - 1, y - 2, 2, 1); P('#ffffff', x, y - 2); P('#ff8a6a', x, y - 3);
+    }
   }
   if (kind === 'ice') {
-    for (let i = 0; i < 12; i++) { const [x, y] = field(); for (let k = 0; k < 4; k++) blob(x + (r2() - .5) * 24, y + (r2() - .5) * 8, 4 + r2() * 6, '#f4faff'); }   // montes de neve
-    crack(34, 'rgba(60,110,170,.6)', 14); crack(20, 'rgba(255,255,255,.8)', 8);
-    for (let i = 0; i < 300; i++) { const [x, y] = field(); P(r2() < .7 ? '#ffffff' : '#bfe4ff', x, y); }   // brilho do gelo
+    const SN = ['#7c9ec4', '#b4cce4', '#d6e6f4', '#ecf4fb', '#ffffff'];
+    for (let i = 0; i < 13; i++) { const [x, y] = field(); for (let k = 0; k < 4; k++) { const rx = 4 + Math.floor(r2() * 8); sb(x + (r2() - .5) * 24, y + (r2() - .5) * 7, rx, Math.max(2, Math.round(rx * 0.45)), SN, k + i, 0.3); } }   // montes de neve
+    crack(26, 'rgba(56,100,160,.65)', 12, 'rgba(255,255,255,.7)');
+    for (let i = 0; i < 70; i++) { const [x, y] = field(), L = 3 + Math.floor(r2() * 5); for (let j = 0; j < L; j++) { P('rgba(255,255,255,.75)', x + j, y - j); if (j < L - 2) P('rgba(255,255,255,.45)', x + j + 3, y - j); } }   // brilho de gelo polido
+    for (let i = 0; i < 22; i++) { const [x, y] = field(); g.drawImage(ellipseStamp('#e8f6ff', 2, 1, true), x - 2, y - 1); P('#ffffff', x - 1, y - 1); }   // bolhas presas no gelo
+    for (let i = 0; i < 46; i++) { const [x, y] = field(); if (r2() < 0.4) sparkle(x, y, '#ffffff', 'rgba(255,255,255,.6)'); else P('#ffffff', x, y); }
   }
   if (kind === 'water') {
-    for (let i = 0; i < 260; i++) { const [x, y] = field(); P('rgba(170,220,255,.5)', x, y, 3 + Math.floor(r2() * 4), 1); }   // reflexos
-    for (let i = 0; i < 16; i++) {   // vitórias-régias
-      const [x, y] = field(), r = 3 + Math.floor(r2() * 3);
-      g.drawImage(ellipseStamp('#1e4a24', r + 1, Math.round(r * 0.55) + 1, false), x - r - 1, y - Math.round(r * .55) - 1);
-      g.drawImage(ellipseStamp('#4a9a3a', r, Math.round(r * 0.55), false), x - r, y - Math.round(r * .55));
-      P('#2a6a2a', x, y - 1, r, 1); if (r2() < .4) { P('#f39ac8', x - 1, y - 2, 2, 2); P('#ffffff', x - 1, y - 2); }
+    for (let gy = wallY + 6; gy < BH; gy += 10) for (let gx = 0; gx < BW; gx += 16) {   // cristas de onda
+      if (r2() > 0.62) continue;
+      const x0 = gx + Math.floor(r2() * 10), y0 = gy + Math.floor(r2() * 6), L = 5 + Math.floor(r2() * 6);
+      for (let j = 0; j < L; j++) { const yy = y0 - Math.round(Math.sin(j / (L - 1) * Math.PI) * 1.5); P(rgbS(ramp[7]), x0 + j, yy); P(rgbS(ramp[1]), x0 + j, yy + 2); }
+      P('#eaf6ff', x0 + Math.floor(L / 2), y0 - 2 + (L < 7 ? 1 : 0));
     }
-    for (let i = 0; i < 40; i++) { const x = r2() < .5 ? r2() * 30 : BW - r2() * 30, y = wallY + 10 + r2() * (BH - wallY - 10); for (let j = 0; j < 6; j++) { P('#2a4a1a', x, y - j); } P('#8a5a2a', x, y - 7, 1, 2); }   // juncos nas bordas
+    const PAD = ['#123a1a', '#2a6a2a', '#3e8a34', '#5aa83e', '#80c652'];
+    for (let i = 0; i < 16; i++) {   // vitórias-régias com o recorte
+      const [x0, y0] = field(), rx = 4 + Math.floor(r2() * 3), ry = Math.max(2, Math.round(rx * 0.55)), na = r2() * 6.28;
+      g.fillStyle = 'rgba(8,24,48,.35)'; g.fillRect(x0 - rx + 1, y0 + ry, rx * 2, 1);
+      const ins = (x, y) => { const dx = (x - x0) / rx, dy = (y - y0) / ry; if (dx * dx + dy * dy > 1) return false; let a = Math.atan2(dy, dx) - na; a = Math.atan2(Math.sin(a), Math.cos(a)); return !(Math.abs(a) < 0.32 && dx * dx + dy * dy > 0.05); };
+      for (let y = y0 - ry; y <= y0 + ry; y++) for (let x = x0 - rx; x <= x0 + rx; x++) {
+        if (!ins(x, y)) continue;
+        const e = !ins(x - 1, y) || !ins(x + 1, y) || !ins(x, y - 1) || !ins(x, y + 1), l = 0.6 - (x - x0) / rx * 0.4 - (y - y0) / ry * 0.5;
+        P(e ? PAD[0] : PAD[Math.max(1, Math.min(4, Math.round(1 + l * 3)))], x, y);
+      }
+      if (r2() < 0.45) { P('#c85a90', x0 - 1, y0, 3, 1); P('#ff9ac8', x0 - 1, y0 - 1); P('#ff9ac8', x0 + 1, y0 - 1); P('#ffd0e6', x0, y0 - 2); P('#ffe45a', x0, y0 - 1); }
+    }
+    for (let i = 0; i < 18; i++) {   // juncos e taboas nas bordas
+      const x0 = r2() < .5 ? 4 + r2() * 34 : BW - 4 - r2() * 34, y0 = wallY + 16 + r2() * (BH - wallY - 22);
+      for (let k = 0; k < 4 + Math.floor(r2() * 3); k++) {
+        const x = Math.round(x0 + (r2() - 0.5) * 9), H = 7 + Math.floor(r2() * 8), bend = (r2() - 0.5) * 2;
+        P('rgba(170,220,255,.45)', x - 2, y0 + 1, 5, 1);
+        for (let j = 0; j < H; j++) { const xx = x + Math.round(bend * (j / H) ** 2); P(j < H * 0.4 ? '#1e3a16' : '#2e5a1e', xx, y0 - j); if (j > H * 0.5) P('#4a7a2a', xx - 1, y0 - j); }
+        if (r2() < 0.6) { const xx = x + Math.round(bend); P('#3e2210', xx, y0 - H - 3, 2, 4); P('#7a4a22', xx, y0 - H - 3, 1, 3); P('#2e5a1e', xx, y0 - H - 4); }
+      }
+    }
   }
   if (kind === 'volcano') {
     for (let i = 0; i < 6; i++) {   // poças de lava com crosta
       const [x, y] = field(), r = 6 + r2() * 6;
-      g.drawImage(ellipseStamp('#0a0404', Math.round(r) + 2, Math.round(r * 0.5) + 1, false), Math.round(x - r - 2), Math.round(y - r * 0.5 - 1));
-      g.drawImage(ellipseStamp('#c8401a', Math.round(r), Math.round(r * 0.5), false), Math.round(x - r), Math.round(y - r * 0.5));
-      g.drawImage(ellipseStamp('#ff9a2a', Math.round(r * 0.6), Math.max(1, Math.round(r * 0.28)), false), Math.round(x - r * 0.6), Math.round(y - r * 0.28));
+      g.drawImage(ellipseStamp('#060303', Math.round(r) + 3, Math.round(r * 0.5) + 2, false), Math.round(x - r - 3), Math.round(y - r * 0.5 - 2));
+      g.drawImage(ellipseStamp('#3a1c14', Math.round(r) + 2, Math.round(r * 0.5) + 1, false), Math.round(x - r - 2), Math.round(y - r * 0.5 - 1));
+      g.drawImage(ellipseStamp('#b83614', Math.round(r), Math.round(r * 0.5), false), Math.round(x - r), Math.round(y - r * 0.5));
+      g.drawImage(ellipseStamp('#ff7a2a', Math.round(r * 0.72), Math.max(1, Math.round(r * 0.34)), false), Math.round(x - r * 0.72), Math.round(y - r * 0.34));
+      g.drawImage(ellipseStamp('#ffc24a', Math.round(r * 0.4), Math.max(1, Math.round(r * 0.18)), false), Math.round(x - r * 0.4), Math.round(y - r * 0.18));
+      for (let k = 0; k < 3; k++) P('#2a120c', x + (r2() - 0.5) * r, y + (r2() - 0.5) * r * 0.4, 2, 1);   // pedacinhos de crosta boiando
       LAVAPOOL.push([x, y, r]);
     }
-    LAVA.length = 0; LAVAPOOL.length = 0;
-    for (let k = 0; k < 18; k++) {   // rachaduras de lava (guardadas para brilhar a cada quadro)
-      let [x, y] = field(), a = r2() * 6.28; const pts = [];
-      for (let i = 0; i < 24 + r2() * 40; i++) { P('#0a0404', x - 1, y + 1, 3, 1); P('#7a200c', x - 1, y, 3, 1); P('#e8501a', x, y); pts.push([Math.round(x), Math.round(y)]); a += (r2() - 0.5) * 0.9; x += Math.cos(a); y += Math.sin(a) * 0.6; }
-      LAVA.push(pts);
-    }
-    for (let i = 0; i < 600; i++) { const [x, y] = field(); P(r2() < .7 ? '#6a6060' : '#a09890', x, y); }   // cinzas
+    lavaPts.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    const lp = lavaPts.filter((p, i) => i % 2 === 0);
+    for (const [x, y] of lp) { P('#7a200c', x, y + 1); if (r2() < 0.3) P('#ff8a2a', x, y); }
+    for (let i = 0; i < lp.length; i += 26) LAVA.push(lp.slice(i, i + 26));
+    for (let i = 0; i < 14; i++) { const [x, y] = field(); g.drawImage(ellipseStamp('#0a0606', 3, 2, false), x - 3, y - 2); P('#3a1c14', x - 2, y - 2, 4, 1); P('#ff7a2a', x, y); }   // respiros
+    for (let i = 0; i < 420; i++) { const [x, y] = field(); P(r2() < .7 ? '#6a6060' : '#a09890', x, y); }   // cinzas
   }
   if (kind === 'ruins') {
-    for (let i = 0; i < 160; i++) { const [x, y] = field(); P(r2() < .5 ? '#4a6a3a' : '#6a8a4a', x, y, 1 + Math.floor(r2() * 2), 1); }   // musgo nas juntas
-    crack(30, 'rgba(30,28,34,.75)', 12);
-    // círculo gravado no centro
+    for (let i = 0; i < 320; i++) {   // musgo nas juntas
+      const tx = Math.floor(r2() * BW / 22), x = tx * 22 + (r2() < 0.5 ? 0 : Math.floor(r2() * 22)), y0 = Math.floor(r2() * BH / 22) * 22 - (tx % 2) * 11;
+      const y = x % 22 === 0 ? y0 + Math.floor(r2() * 22) : y0; if (y < wallY + 10) continue;
+      P(r2() < .5 ? '#3e5a2e' : '#5e7e3e', x, y, 1 + Math.floor(r2() * 2), 1); if (r2() < 0.3) P('#86a85a', x, y - 1);
+    }
+    crack(28, 'rgba(26,24,32,.8)', 12, 'rgba(200,196,206,.3)');
+    for (let i = 0; i < 30; i++) { const [x, y] = field(); tuft(x, y, '#2e4a24', '#4e7a34', '#7aa84a'); }
+    for (let i = 0; i < 40; i++) { const [x, y] = field(); pebble(x, y, SP); }
+    // círculo gravado no centro, com runas
     const cx = BW / 2, cy = (ARENA.y0 + ARENA.y1) / 2 / PX;
-    for (const R of [70, 62, 22]) for (let i = 0; i < R * 7; i++) { const an = i / (R * 7) * 6.283; P('rgba(40,36,48,.55)', cx + Math.cos(an) * R, cy + Math.sin(an) * R * 0.55); P('rgba(190,186,200,.25)', cx + Math.cos(an) * R, cy + Math.sin(an) * R * 0.55 - 1); }
-    for (let k = 0; k < 8; k++) { const an = k / 8 * 6.283; for (let d = 24; d < 62; d++) P('rgba(40,36,48,.45)', cx + Math.cos(an) * d, cy + Math.sin(an) * d * 0.55); }
+    for (const R of [70, 62, 22]) for (let i = 0; i < R * 7; i++) { const an = i / (R * 7) * 6.283; P('rgba(34,30,44,.6)', cx + Math.cos(an) * R, cy + Math.sin(an) * R * 0.55); P('rgba(200,196,214,.28)', cx + Math.cos(an) * R, cy + Math.sin(an) * R * 0.55 + 1); }
+    for (let k = 0; k < 8; k++) { const an = k / 8 * 6.283; for (let d = 24; d < 62; d++) P('rgba(34,30,44,.5)', cx + Math.cos(an) * d, cy + Math.sin(an) * d * 0.55); }
+    for (let k = 0; k < 16; k++) {
+      const an = (k + 0.5) / 16 * 6.283, rx = Math.round(cx + Math.cos(an) * 66), ry = Math.round(cy + Math.sin(an) * 66 * 0.55);
+      for (let j = 0; j < 9; j++) if (hash(k, j, 88) < 0.5) { P('rgba(30,26,42,.7)', rx - 1 + (j % 3), ry - 1 + Math.floor(j / 3)); P('rgba(176,160,230,.22)', rx - 1 + (j % 3), ry + Math.floor(j / 3)); }
+    }
   }
   if (kind === 'mountain') {
-    for (let y = wallY; y < BH; y++) for (let x = 0; x < BW; x++) {   // neve em manchas pequenas, com borda pontilhada
-      const n2 = vnoise(x / 13, y / 8, 13) * 0.75 + vnoise(x / 4, y / 3, 15) * 0.25, th = 0.74 + (y - wallY) / BH * 0.08;
-      if (n2 > th + 0.03 || (n2 > th && BAYER[(y & 3) * 4 + (x & 3)] > 0)) P(vnoise(x / 3, y / 3, 14) > 0.55 ? '#eef3f8' : '#cfdbe8', x, y);
+    for (let y = wallY; y < BH; y++) for (let x = 0; x < BW; x++) {   // neve em manchas, com sombra embaixo
+      const sn = (xx, yy) => { const n2 = vnoise(xx / 13, yy / 8, 13) * 0.75 + vnoise(xx / 4, yy / 3, 15) * 0.25, th = 0.74 + (yy - wallY) / BH * 0.08; return n2 > th + 0.03 || (n2 > th && BAYER[(yy & 3) * 4 + (xx & 3)] > 0.2); };
+      if (!sn(x, y)) { if (sn(x, y - 1) && sn(x, y - 2)) P('rgba(20,24,40,.28)', x, y); continue; }
+      P(!sn(x, y - 1) ? '#ffffff' : !sn(x, y + 1) ? '#a8bcd2' : vnoise(x / 3, y / 3, 14) > 0.6 ? '#f2f7fb' : '#dbe6f1', x, y);
     }
-    for (let i = 0; i < 500; i++) { const [x, y] = field(), s = r2() < .2 ? 2 : 1; P('#2a2a2e', x, y + s, s + 1, 1); P(['#7a7a80', '#9a9aa0', '#b8b8bc'][Math.floor(r2() * 3)], x, y, s, s); }   // cascalho
-    crack(30, G.line, 14);
+    for (let i = 0; i < 360; i++) { const [x, y] = field(); pebble(x, y, SP); }
+    crack(26, 'rgba(20,20,26,.75)', 14, 'rgba(170,170,180,.3)');
+    for (let i = 0; i < 40; i++) { const [x, y] = field(); tuft(x, y, '#2e3828', '#4e5a3e', '#7a8460'); if (r2() < 0.25) P('#b89ae8', x + 1, y - 3); }
+  }
+  if (kind === 'desert') {
+    for (let i = 0; i < 5; i++) {   // terra rachada de seca
+      const [x0, y0] = field(), R = 14 + r2() * 12;
+      for (let y = Math.floor(y0 - R * 0.6); y < y0 + R * 0.6; y++) for (let x = Math.floor(x0 - R); x < x0 + R; x++) {
+        const d = Math.hypot(x - x0, (y - y0) * 1.7) / R + (vnoise(x / 4, y / 4, i + 50) - 0.5) * 0.4; if (d > 0.85) continue;
+        const V = vor(x, y, 7, 60 + i); P(V.e < 1 ? '#7a4a26' : V.e < 2 && (x - V.sx) + (y - V.sy) > 0 ? '#b07a48' : '#c89462', x, y);
+      }
+    }
+    for (let i = 0; i < 160; i++) { const [x, y] = field(); pebble(x, y, SP); }
+    for (let i = 0; i < 60; i++) { const [x, y] = field(); tuft(x, y, '#6a5226', '#9a8040', '#cab468'); }
+    for (let i = 0; i < 12; i++) { const [x, y] = field(); flower(x, y, r2() < 0.5 ? '#ff6a5a' : '#ffd23a', '#b83a3a', '#6a5226'); }
+    for (let i = 0; i < 4; i++) {   // ossinhos
+      const [x, y] = field(); P('rgba(0,0,0,.2)', x - 3, y + 2, 8, 1); P('#e8e0cc', x - 2, y, 6, 1); P('#fff8e8', x - 3, y - 1, 2, 2); P('#fff8e8', x + 3, y - 1, 2, 2); P('#b8ac94', x - 3, y + 1, 2, 1); P('#b8ac94', x + 3, y + 1, 2, 1);
+    }
+  }
+  if (kind === 'cave') {
+    for (let i = 0; i < 8; i++) {   // poças escuras
+      const [x, y] = field(), rx = 5 + Math.floor(r2() * 7), ry = Math.max(2, Math.round(rx * 0.42));
+      g.drawImage(ellipseStamp('#08070e', rx + 1, ry + 1, false), x - rx - 1, y - ry - 1); g.drawImage(ellipseStamp('#1a2438', rx, ry, false), x - rx, y - ry);
+      P('#4a6a9a', x - rx + 2, y - ry + 1, Math.max(2, Math.round(rx * 0.7)), 1); P('#8ab0e0', x - rx + 2, y - ry + 1);
+    }
+    for (let i = 0; i < 220; i++) { const [x, y] = field(); pebble(x, y, SP); }
+    crack(24, 'rgba(8,6,14,.85)', 12, 'rgba(140,130,170,.25)');
+    const CR = [['#3a1a6a', '#8e52cc', '#e2c4ff'], ['#0e3a5a', '#3aa0d8', '#c4f0ff'], ['#4a1450', '#c04ac8', '#ffc4f6']];
+    for (let i = 0; i < 34; i++) {   // lasquinhas de cristal
+      const [x, y] = field(), C = CR[Math.floor(r2() * CR.length)], H = 2 + Math.floor(r2() * 3);
+      P('rgba(0,0,0,.35)', x - 1, y + 1, 4, 1);
+      for (let j = 0; j < H; j++) { P(C[1], x, y - j); P(j === H - 1 ? C[2] : C[0], x + 1, y - j); }
+      P(C[2], x, y - H); if (r2() < 0.5) { P(C[1], x - 1, y); P(C[2], x - 1, y - 1); }
+      GLOW.push([x, y - H, C[2]]);
+    }
+    for (let i = 0; i < 12; i++) {   // cogumelos que brilham
+      const [x, y] = field(); P('rgba(0,0,0,.3)', x - 1, y + 2, 4, 1); P('#b8c8d0', x, y, 1, 2);
+      P('#1a7a8a', x - 1, y - 1, 3, 1); P('#5ae0e0', x - 1, y - 2, 3, 1); P('#bff8f8', x, y - 2); GLOW.push([x, y - 2, '#e8ffff']);
+    }
   }
 
   // ---------- parede do fundo ----------
   const edge = x => Math.round(wallY + vnoise(x / 14, 0, 9) * 10);
+  let shadowOf = null;   // onde a parede joga sombra no chão
   if (kind === 'quarry') {
     for (let x = 0; x < BW; x++) for (let y = 0; y < edge(x); y++) {
       const strata = Math.sin(y * 0.55 + vnoise(x / 30, y / 10, 4) * 4) * 0.5 + 0.5, n = 0.15 + strata * 0.35 + vnoise(x / 5, y / 5, 5) * 0.2 - (wallY - y) / wallY * 0.25;
-      P(`rgb(${ramp[Math.max(0, Math.min(5, Math.floor(n * 7.5 + BAYER[(y & 3) * 4 + (x & 3)] * 0.9)))].join(',')})`, x, y);
+      P(rgbS(ramp[Math.max(0, Math.min(K - 1, Math.floor(n * 9.5 + BAYER[(y & 3) * 4 + (x & 3)] * 0.9)))]), x, y);
     }
-    for (let x = 0; x < BW; x++) { P('#211b18', x, edge(x), 1, 2); P('#7d6c5c', x, edge(x) - 1); }
+    for (let x = 0; x < BW; x++) { P('#211b18', x, edge(x), 1, 2); P('#8d7c6a', x, edge(x) - 1); }
+    shadowOf = x => edge(x) + 2;
   }
   if (kind === 'grass' || kind === 'jungle') {   // linha de árvores / mata fechada
-    const dark = kind === 'jungle' ? ['#0c1a0c', '#16301a', '#22441e', '#305a24', '#3e7028'] : ['#14301a', '#1e4a22', '#2a6028', '#3a7a30', '#5a9a3a'];
+    const dark = kind === 'jungle' ? ['#081410', '#10241a', '#183a1e', '#225024', '#30682a', '#428032'] : ['#0e2416', '#16381c', '#204e22', '#2c6628', '#3e7e30', '#5a9a3a'];
     for (let x = 0; x < BW; x++) for (let y = 0; y < edge(x) + 2; y++) P(dark[0], x, y);
-    for (let layer = 0; layer < 3; layer++) for (let i = 0; i < 70; i++) {
-      const x = r2() * BW, y = edge(Math.round(x)) - 4 - layer * 12 - r2() * 10, r = 7 + r2() * 9;
-      blob(x, y, r + 1, dark[0]); blob(x, y, r, dark[1 + layer]); blob(x - r * 0.3, y - r * 0.35, r * 0.55, dark[2 + layer] || dark[4]);
+    for (let layer = 0; layer < 3; layer++) for (let i = 0; i < 64; i++) {
+      const x = r2() * BW, r = 7 + Math.floor(r2() * 9), y = edge(Math.round(x)) - 4 - layer * 12 - r2() * 10;
+      sb(x, y, r, Math.round(r * 0.85), [dark[0], dark[1], dark[1 + layer], dark[2 + layer], dark[3 + layer] || dark[5]], Math.floor(r2() * 50), 0.35);
     }
     if (kind === 'jungle') for (let i = 0; i < 26; i++) { const x = Math.floor(r2() * BW); let y = edge(x) - 2; const L = 8 + r2() * 26; for (let j = 0; j < L; j++) { P(j % 5 === 0 ? '#5aa03a' : '#2a6a22', x + Math.round(Math.sin(j / 4) * 1.2), y + j); } }   // cipós
-    for (let x = 0; x < BW; x++) P('rgba(0,0,0,.35)', x, edge(x) + 1, 1, 3);
+    shadowOf = x => edge(x) + 2;
   }
   if (kind === 'ice') {
     for (let x = 0; x < BW; x++) for (let y = 0; y < edge(x); y++) {
       const st = Math.sin(y * 0.4 + vnoise(x / 25, y / 9, 4) * 5) * 0.5 + 0.5, v = Math.floor(st * 3 + vnoise(x / 6, y / 6, 5) * 2);
       P(['#3a6a9a', '#5a8aba', '#7aaad4', '#9ac6e8', '#c4e2f6'][Math.max(0, Math.min(4, v))], x, y);
     }
-    for (let i = 0; i < 60; i++) { const x = Math.floor(r2() * BW), y = edge(x), L = 3 + Math.floor(r2() * 9); for (let j = 0; j < L; j++) { const w = Math.max(0, Math.round((L - j) / L * 1.5)); P('#d6efff', x - w, y + j, w * 2 + 1, 1); } P('#ffffff', x, y, 1, 2); }   // pingentes
+    for (let i = 0; i < 60; i++) { const x = Math.floor(r2() * BW), y = edge(x), L = 3 + Math.floor(r2() * 9); for (let j = 0; j < L; j++) { const w = Math.max(0, Math.round((L - j) / L * 1.5)); P('#d6efff', x - w, y + j, w * 2 + 1, 1); P('#8ab8e0', x + w, y + j); } P('#ffffff', x, y, 1, 2); }   // pingentes
     for (let x = 0; x < BW; x++) P('#ffffff', x, edge(x));
+    shadowOf = x => edge(x) + 1;
   }
   if (kind === 'water') {   // margem de areia com pedras
     for (let x = 0; x < BW; x++) for (let y = 0; y < edge(x); y++) { const n2 = vnoise(x / 6, y / 4, 21); P(n2 > 0.7 ? '#b89a6a' : n2 > 0.4 ? '#c8aa78' : '#d6ba88', x, y); }
-    for (let i = 0; i < 26; i++) { const x = r2() * BW, y = edge(Math.round(x)) - 4 - r2() * 20, r = 2 + r2() * 5; blob(x, y, r + 1, ROCK[0]); blob(x, y, r, ROCK[3]); blob(x - r * .3, y - r * .3, r * .5, ROCK[5]); }
-    for (let x = 0; x < BW; x++) { P('#eaf6ff', x, edge(x), 1, 2); P('rgba(255,255,255,.5)', x, edge(x) + 3 + Math.round(Math.sin(x / 7) * 1.5)); }
+    for (let i = 0; i < 26; i++) { const x = r2() * BW, r = 2 + Math.floor(r2() * 5), y = edge(Math.round(x)) - 4 - r2() * 20; sb(x, y, r, Math.max(1, Math.round(r * 0.75)), STONE_PAL.quarry, i, 0.25); }
+    for (let x = 0; x < BW; x++) { P('#c8ac7c', x, edge(x) - 1); P('#eaf6ff', x, edge(x), 1, 2); P('rgba(255,255,255,.5)', x, edge(x) + 3 + Math.round(Math.sin(x / 7) * 1.5)); }
   }
   if (kind === 'mountain') {   // céu com picos nevados
     for (let y = 0; y < wallY + 12; y++) for (let x = 0; x < BW; x++) { const t = y / (wallY + 12); P(`rgb(${Math.round(110 + t * 60)},${Math.round(150 + t * 50)},${Math.round(200 + t * 30)})`, x, y); }
@@ -7921,25 +8114,58 @@ function buildBg(kind) {
     ridge(wallY, 46, 60, 31, ['#8a96b0', '#dfe8f4', '#ffffff']);
     ridge(wallY + 8, 30, 34, 33, ['#5a5a66', '#c8d4e2', '#f4f8fc']);
     for (let x = 0; x < BW; x++) P('#2a2a30', x, edge(x) + 10, 1, 2);
+    shadowOf = x => edge(x) + 12;
   }
   if (kind === 'volcano') {   // encostas escuras com rios de lava e céu avermelhado
     for (let y = 0; y < wallY + 12; y++) for (let x = 0; x < BW; x++) { const t = y / (wallY + 12); P(`rgb(${Math.round(90 - t * 40)},${Math.round(36 - t * 14)},${Math.round(34 - t * 12)})`, x, y); }
-    for (let x = 0; x < BW; x++) { const h = wallY + 4 - (vnoise(x / 50, 0, 51) * 40 + vnoise(x / 12, 0, 52) * 8); for (let y = Math.round(h); y < wallY + 12; y++) P(vnoise(x / 4, y / 4, 53) > 0.6 ? '#2e2224' : '#1e1618', x, y); }
+    for (let x = 0; x < BW; x++) { const h = wallY + 4 - (vnoise(x / 50, 0, 51) * 40 + vnoise(x / 12, 0, 52) * 8); for (let y = Math.round(h); y < wallY + 12; y++) P(y - h < 1.5 ? '#3e2e2e' : vnoise(x / 4, y / 4, 53) > 0.6 ? '#2e2224' : '#1e1618', x, y); }
     for (let k = 0; k < 7; k++) { let x = r2() * BW, y = wallY - 30 - r2() * 10; for (let i = 0; i < 60 && y < wallY + 10; i++) { P('#ff9a2a', x, y); P('#c8401a', x + 1, y); P('#ffd25a', x, y - 1); x += (r2() - 0.5) * 1.6; y += 0.8; } }
     for (let x = 0; x < BW; x++) { P('#0e0808', x, edge(x) + 10, 1, 2); }
+    shadowOf = x => edge(x) + 12;
   }
-  if (kind === 'ruins') {   // muro antigo com arcos e colunas quebradas
+  if (kind === 'ruins') {   // muro antigo com arcos e trepadeiras
     for (let x = 0; x < BW; x++) for (let y = 0; y < wallY + 10; y++) {
       const by = Math.floor(y / 7), bx = Math.floor((x + (by % 2) * 6) / 13), lx = (x + (by % 2) * 6) % 13, ly = y % 7;
-      let v = 2 + Math.floor(hash(bx, by, 61) * 2); if (lx === 0 || ly === 0) v = 0; else if (ly === 1) v += 1;
-      P(`rgb(${ramp[v].join(',')})`, x, y);
+      let v = 2 + Math.floor(hash(bx, by, 61) * 3); if (lx === 0 || ly === 0) v = 0; else if (ly === 1) v += 2; else if (ly === 6 || lx === 12) v -= 1;
+      P(rgbS(ramp[Math.max(0, Math.min(K - 1, v))]), x, y);
     }
     for (let k = 0; k < 5; k++) {   // arcos escuros
       const ax = 40 + k * (BW - 80) / 4, w = 22, top = wallY - 34;
       for (let y = top; y < wallY + 10; y++) for (let x = -w; x <= w; x++) { const inArch = y > top + w * 0.6 ? Math.abs(x) < w - 4 : (x * x + (y - top - w * 0.6) ** 2 * 2.5) < (w - 4) ** 2; if (inArch) P(y > top + 6 ? '#16141c' : '#24222a', ax + x, y); }
     }
-    for (let i = 0; i < 30; i++) { const x = Math.floor(r2() * BW); let y = 0; const L = 6 + r2() * 30; for (let j = 0; j < L; j++) P(j % 4 ? '#3a6a2a' : '#5aa03a', x + Math.round(Math.sin(j / 3)), y + j); }   // trepadeiras
-    for (let x = 0; x < BW; x++) { P('#1a1820', x, wallY + 10, 1, 2); P('#9a96a0', x, wallY + 9); }
+    for (let i = 0; i < 30; i++) { const x = Math.floor(r2() * BW); const L = 6 + r2() * 30; for (let j = 0; j < L; j++) { P(j % 4 ? '#3a6a2a' : '#5aa03a', x + Math.round(Math.sin(j / 3)), j); if (j % 4 === 0) P('#7ac04a', x + Math.round(Math.sin(j / 3)) + 1, j); } }   // trepadeiras
+    for (let x = 0; x < BW; x++) { P('#1a1820', x, wallY + 10, 1, 2); P('#a8a4ac', x, wallY + 9); }
+    shadowOf = () => wallY + 12;
+  }
+  if (kind === 'desert') {   // céu quente e mesas de arenito em camadas
+    for (let y = 0; y < wallY + 12; y++) for (let x = 0; x < BW; x++) { const t = y / (wallY + 12); P(`rgb(${Math.round(120 + t * 110)},${Math.round(170 + t * 40)},${Math.round(220 - t * 40)})`, x, y); }
+    const mesa = (base, amp, sc, s, cols) => {
+      for (let x = 0; x < BW; x++) {
+        const v = vnoise(x / sc, 0, s), h = base - (v > 0.5 ? amp : amp * 0.35) - vnoise(x / 6, 0, s + 1) * 3;
+        for (let y = Math.round(h); y < wallY + 12; y++) { const band = Math.floor((y + vnoise(x / 20, 0, s + 2) * 3) / 4) % 3; P(y - h < 1 ? cols[3] : x % 37 < 1 ? cols[0] : cols[band], x, y); }
+      }
+    };
+    mesa(wallY + 2, 34, 40, 71, ['#a86a40', '#b87a4a', '#c48a56', '#e8b480']);
+    mesa(wallY + 10, 16, 22, 73, ['#8a4e2a', '#9a5a32', '#aa683a', '#d0945e']);
+    for (let x = 0; x < BW; x++) P('#5a3018', x, edge(x) + 10, 1, 2);
+    shadowOf = x => edge(x) + 12;
+  }
+  if (kind === 'cave') {   // paredão de rocha com cristais
+    for (let x = 0; x < BW; x++) for (let y = 0; y < edge(x) + 4; y++) {
+      const V = vor(x, y, 14, 91, 0.8), n = 0.2 + hash(V.id, 1, 2) * 0.3 - (wallY - y) / wallY * 0.25 + (V.e < 1.2 ? -0.2 : V.e < 2.5 && y < V.sy ? 0.12 : 0);
+      P(rgbS(ramp[Math.max(0, Math.min(K - 1, Math.floor(n * 8 + BAYER[(y & 3) * 4 + (x & 3)] * 0.7)))]), x, y);
+    }
+    const CR = [['#2e1652', '#8e52cc', '#e2c4ff'], ['#0e3a5a', '#3aa0d8', '#c4f0ff']];
+    for (let i = 0; i < 16; i++) {
+      const x = Math.floor(r2() * BW), y = edge(x) + 2, C = CR[i % 2];
+      for (let k = 0; k < 3; k++) { const xx = x + (k - 1) * 3, H = 4 + Math.floor(r2() * 6) + (k === 1 ? 4 : 0); for (let j = 0; j < H; j++) { const w = j > H - 3 ? 0 : 1; P(C[0], xx - w - 1, y - j); P(C[1], xx - w, y - j, w + 1, 1); P(C[2], xx + w, y - j); } P(C[2], xx, y - H); GLOW.push([xx, y - H, '#ffffff']); }
+    }
+    for (let x = 0; x < BW; x++) { P('#08070c', x, edge(x) + 4, 1, 2); P(rgbS(ramp[6]), x, edge(x) + 3); }
+    shadowOf = x => edge(x) + 6;
+  }
+  if (shadowOf) for (let x = 0; x < BW; x++) {   // sombra suave que a parede joga no chão
+    const y0 = shadowOf(x);
+    for (let k = 0; k < 7; k++) if (k < 2 || (k < 4 && ((x + k) & 1) === 0) || (k < 7 && (x + k * 2) % 4 === 0)) P('rgba(0,0,0,.18)', x, y0 + k);
   }
   return c;
 }
@@ -7957,9 +8183,13 @@ function lavaGlow() {
   fx.globalAlpha = 1;
   if (Math.random() < 0.15) { const k = Math.floor(Math.random() * LAVA.length), p = LAVA[k] && LAVA[k][Math.floor(Math.random() * LAVA[k].length)]; if (p) spawn({ kind: 'spark', color: '#ffb34a', x: p[0] * PX, y: p[1] * PX, vy: -60, life: 0.5 }); }
 }
-// água: brilhos que piscam a cada quadro
+// água: brilhos que piscam a cada quadro (e os cristais da caverna)
 function waterShimmer() {
   lavaGlow();
+  if (GROUND === 'cave') {
+    for (let i = 0; i < GLOW.length; i++) { const [x, y, c] = GLOW[i], v = Math.sin(game.time * 2.2 + i * 1.7); if (v > 0.55) { fx.globalAlpha = (v - 0.55) * 2; px(c, x, y); if (v > 0.9) { px(c, x - 1, y); px(c, x + 1, y); px(c, x, y - 1); px(c, x, y + 1); } } }
+    fx.globalAlpha = 1; return;
+  }
   if (GROUND !== 'water') return;
   const t = Math.floor(game.time * 6);
   for (let i = 0; i < 70; i++) {
@@ -7970,18 +8200,23 @@ function waterShimmer() {
 }
 
 // ---------- obstáculos ----------
+// paletas de 8 tons: [contorno, sombra funda ... luz, brilho]
 const OB_PAL = {
-  rock:      ROCK,
-  islet:     ['#1d1916', '#4a4038', '#665a4c', '#857662', '#a69476', '#c8b896'],
-  boulder:   ['#1b1c1f', '#3c3d42', '#56575d', '#717278', '#8e8f94', '#b0b1b5'],
-  icepillar: ['#12305a', '#1d4f8f', '#3d8dd8', '#8fd0ff', '#d6efff', '#ffffff'],
-  tree:      ['#1a120c', '#3a2616', '#5a3c22', '#7a5430', '#9a6c40', '#b88a56'],
-  bush:      ['#0e200e', '#1e4a1e', '#2e6a28', '#468a34', '#64a844', '#8cc85a'],
-  obsidian:  ['#06040a', '#16101e', '#241a30', '#342644', '#4a3a60', '#8a78b0'],
-  pillar:    ['#2a2832', '#5a5864', '#7a7884', '#9a98a2', '#b8b6be', '#dcdae0'],
+  rock:      ['#1a1512', '#3a302a', '#51453b', '#695a4c', '#82705d', '#9c8870', '#b7a287', '#d6c4a6'],
+  islet:     ['#191512', '#3c332b', '#54483c', '#6c5d4c', '#86745e', '#a08c71', '#bba686', '#d8c6a4'],
+  boulder:   ['#16171c', '#33353d', '#4a4d56', '#62656f', '#7b7e88', '#9599a2', '#b2b5bc', '#d2d4d9'],
+  icepillar: ['#0f2a52', '#1a4580', '#2a66b0', '#4a8fd8', '#78b6ee', '#a8d6fa', '#d2ecff', '#ffffff'],
+  tree:      ['#1a110b', '#311f13', '#4a301c', '#634226', '#7c5531', '#966a3e', '#b0824f', '#c99c66'],
+  bush:      ['#0b1d10', '#16361a', '#215022', '#2f6a2a', '#438434', '#5c9e40', '#7ab84e', '#a0d264'],
+  obsidian:  ['#050308', '#130d1a', '#1f1629', '#2c2039', '#3b2c4c', '#4f3d64', '#6e5a8a', '#a898cc'],
+  pillar:    ['#24222c', '#3e3c48', '#57555f', '#706e78', '#8a8890', '#a4a2a8', '#bebcc0', '#dedcde'],
+  cactus:    ['#0e2414', '#18401f', '#245a2a', '#317436', '#428e42', '#58a64e', '#76be60', '#9cd47a'],
+  crystal:   ['#1a0c30', '#2e1652', '#48227a', '#6a34a6', '#8e52cc', '#b47ce6', '#d8acf6', '#f6e6ff'],
 };
-const LEAF = ['#0e200e', '#1e4a1e', '#2e6a28', '#468a34', '#64a844', '#8cc85a'];
+const CANOPY = ['#0a1a0e', '#12301a', '#1c4822', '#28622a', '#367c32', '#4a963a', '#64ae46', '#88c858'];
+const LEAF = OB_PAL.bush;
 const rockSprites = new Map();
+const LIGHT = (() => { const l = [-0.5, -0.75, 0.62], m = Math.hypot(...l); return l.map(v => v / m); })();
 function obstacleStyle() { return (game && game.arena && game.arena.obstacle) || 'rock'; }
 function finishSprite(entry, stage, c, base) {
   const Wd = c.width, Hd = c.height;
@@ -7989,6 +8224,8 @@ function finishSprite(entry, stage, c, base) {
   const purple = mkCanvas(Wd, Hd), pg = purple.getContext('2d'); pg.drawImage(c, 0, 0); pg.globalCompositeOperation = 'source-in'; pg.fillStyle = '#e070e0'; pg.fillRect(0, 0, Wd, Hd);
   return (entry.stages[stage] = { c, white, purple, w: Wd, h: Hd, ax: Math.round(Wd / 2), ay: base });
 }
+const rngOf = S => { let s2 = (Math.abs(S | 0) % 2147483646) + 1; return () => (s2 = (s2 * 16807) % 2147483647) / 2147483647; };
+const clampT = (v, K) => Math.max(1, Math.min(K - 1, Math.round(v)));
 function rockSprite(rock) {
   const stage = rock.hp > rock.maxHp * 0.6 ? 0 : rock.hp > rock.maxHp * 0.3 ? 1 : 2;
   let entry = rockSprites.get(rock.id);
@@ -7996,112 +8233,269 @@ function rockSprite(rock) {
   if (entry.stages[stage]) return entry.stages[stage];
   const style = obstacleStyle();
   if (style === 'tree') return treeSprite(rock, stage, entry);
-  if (style === 'icepillar') return icePillarSprite(rock, stage, entry);
+  if (style === 'bush') return bushSprite(rock, stage, entry);
+  if (style === 'icepillar' || style === 'crystal') return crystalSprite(rock, stage, entry, style);
   if (style === 'pillar') return columnSprite(rock, stage, entry);
-  const PAL = OB_PAL[style] || ROCK, bush = style === 'bush';
-  const rw = Math.round(rock.r / PX), rh = Math.round(rw * (bush ? 0.8 : 0.95)), Wd = rw * 2 + 4, Hd = Math.round(rh * 1.75) + 6;
+  if (style === 'cactus') return cactusSprite(rock, stage, entry);
+  return facetSprite(rock, stage, entry, style);
+}
+// rocha lapidada: silhueta em polígono e faces planas, cada uma iluminada de um jeito
+function facetSprite(rock, stage, entry, style) {
+  const PAL = OB_PAL[style] || OB_PAL.rock, K = PAL.length, S = rock.seed, r3 = rngOf(S);
+  const tall = style === 'obsidian' ? 1.12 : style === 'islet' ? 0.8 : 0.95;
+  const rw = Math.round(rock.r / PX), rh = Math.round(rw * tall), Wd = rw * 2 + 4, Hd = Math.round(rh * 1.75) + 6;
   const c = mkCanvas(Wd, Hd), g = c.getContext('2d'), cx = Wd / 2, base = Hd - 4, cy = base - rh * 0.72;
-  const S = rock.seed, inside = (x, y) => {
-    const nx = (x - cx) / rw, ny = (y - cy) / rh, ang = Math.atan2(ny, nx);
-    const wob = vnoise(Math.cos(ang) * 2 + 5, Math.sin(ang) * 2 + 5, S) * (bush ? 0.5 : 0.32) - 0.12 + (bush ? (vnoise(x / 2.5, y / 2.5, S + 9) - 0.5) * 0.35 : 0);
+  const NV = style === 'boulder' ? 11 : 8, amp = style === 'obsidian' ? 0.26 : style === 'boulder' ? 0.1 : 0.17, verts = [];
+  for (let i = 0; i < NV; i++) verts.push(1 - amp * 0.5 + r3() * amp);
+  const radAt = ang => { const t = ((ang / 6.2832) % 1 + 1) % 1 * NV, i = Math.floor(t), f = t - i; return verts[i % NV] * (1 - f) + verts[(i + 1) % NV] * f; };
+  const inside = (x, y) => {
+    if (y > base) return false;
+    const nx = (x + 0.5 - cx) / rw, ny = (y + 0.5 - cy) / rh, R = radAt(Math.atan2(ny, nx)) + (vnoise(x / 2, y / 2, S + 8) - 0.5) * 0.06;
     if (stage === 2 && nx > 0.25 && ny < -0.15 && vnoise(x / 3, y / 3, S + 7) > 0.45) return false;
-    if (bush && stage >= 1 && vnoise(x / 2, y / 2, S + 11) > (stage === 1 ? 0.82 : 0.62)) return false;   // arbusto perdendo folhas
-    return nx * nx + ny * ny <= 1 + wob && y <= base;
+    return nx * nx + ny * ny <= R * R;
   };
-  const shadeAt = (x, y) => {
-    const nx = (x - cx) / rw, ny = (y - cy) / rh;
-    let l = 0.55 - nx * 0.38 - ny * 0.5 + (vnoise(x / (bush ? 2 : 4), y / (bush ? 2 : 3), S + 1) - 0.5) * (bush ? 0.7 : 0.45);
-    l += Math.floor(vnoise(x / 7, y / 6, S + 2) * 3) * 0.07;
-    return Math.max(1, Math.min(5, Math.round(l * 4.2 + 0.3 + BAYER[(y & 3) * 4 + (x & 3)] * 0.6)));
+  const seeds = [], NS = 6 + Math.floor(rw / 5);
+  for (let i = 0; i < NS; i++) {
+    const a = r3() * 6.2832, d = Math.sqrt(r3()) * 0.92, u = Math.cos(a) * d, v = Math.sin(a) * d - 0.08, nz = Math.sqrt(Math.max(0.06, 1 - u * u - v * v));
+    const n = [u * 1.15 + (r3() - 0.5) * 0.35, v * 1.15 + (r3() - 0.5) * 0.35, nz], m = Math.hypot(...n);
+    seeds.push([u, v, n[0] / m, n[1] / m, n[2] / m]);
+  }
+  const contrast = style === 'obsidian' ? 1.45 : 1.1;
+  const toneAt = (x, y) => {
+    const nx = (x + 0.5 - cx) / rw, ny = (y + 0.5 - cy) / rh;
+    let d1 = 9, d2 = 9, sI = 0;
+    for (let i = 0; i < seeds.length; i++) { const d = Math.hypot(nx - seeds[i][0], ny - seeds[i][1]); if (d < d1) { d2 = d1; d1 = d; sI = i; } else if (d < d2) d2 = d; }
+    const sn = seeds[sI], nz0 = Math.sqrt(Math.max(0, 1 - nx * nx - ny * ny));
+    const N = [sn[2] * 0.72 + nx * 0.28, sn[3] * 0.72 + ny * 0.28, sn[4] * 0.72 + nz0 * 0.28], m = Math.hypot(...N);
+    let l = (N[0] * LIGHT[0] + N[1] * LIGHT[1] + N[2] * LIGHT[2]) / m;
+    l = (l - 0.45) * contrast + 0.5;
+    if (ny > 0.4) l -= (ny - 0.4) * 0.45;
+    let t = 1 + l * (K - 2.4) + BAYER[(y & 3) * 4 + (x & 3)] * 0.35;
+    if (d2 - d1 < 0.065) t += l > 0.5 ? 1 : -1;   // aresta entre faces
+    if (vnoise(x / 1.7, y / 1.7, S + 3) > 0.8) t -= 1;   // poros
+    return { t: clampT(t, K), l, nx, ny, edge: d2 - d1 < 0.065 };
   };
   for (let y = 0; y < Hd; y++) for (let x = 0; x < Wd; x++) {
     if (!inside(x, y)) continue;
-    const e = !inside(x - 1, y) || !inside(x + 1, y) || !inside(x, y - 1) || !inside(x, y + 1), ny = (y - cy) / rh;
-    g.fillStyle = e ? PAL[0] : PAL[shadeAt(x, y)]; g.fillRect(x, y, 1, 1);
-    if (e) continue;
-    if (style === 'rock' && ny < -0.55 && vnoise(x / 2, y / 2, S + 3) > 0.72) { g.fillStyle = vnoise(x, y, S) > 0.5 ? '#5f6f3c' : '#7b8a48'; g.fillRect(x, y, 1, 1); }   // musgo
-    if (style === 'boulder' && ny < -0.35 + (vnoise(x / 3, 0, S + 4) - 0.5) * 0.4) { g.fillStyle = ny < -0.6 ? '#ffffff' : '#dfe8f2'; g.fillRect(x, y, 1, 1); }   // neve no topo
-    if (bush && vnoise(x / 1.5, y / 1.5, S + 5) > 0.86) { g.fillStyle = (S % 2) ? '#e83a5a' : '#f2f2f2'; g.fillRect(x, y, 1, 1); }   // frutinhas / flores
+    const ext = !inside(x - 1, y) || !inside(x + 1, y) || !inside(x, y - 1) || !inside(x, y + 1);
+    if (ext) { g.fillStyle = PAL[0]; g.fillRect(x, y, 1, 1); continue; }
+    const T = toneAt(x, y); let col = PAL[T.t];
+    if ((!inside(x - 1, y - 1) || !inside(x, y - 2)) && T.nx < 0.15 && T.ny < 0.1) col = PAL[K - 1];   // luz na borda
+    if (y >= base - 1) col = PAL[Math.max(1, T.t - 2)];
+    if (style === 'rock' && T.ny < -0.42 && vnoise(x / 3, y / 3, S + 3) > 0.56) col = ['#3e4a22', '#5d6a32', '#7b8a42', '#9aaa58'][Math.max(0, Math.min(3, Math.round(T.l * 3.4)))];   // musgo
+    if (style === 'islet' && T.ny < -0.5 + (vnoise(x / 3, 0, S + 4) - 0.5) * 0.3) col = ['#1e4a1e', '#2e6a28', '#4a8a34', '#6aaa44'][Math.max(0, Math.min(3, Math.round(T.l * 3.4)))];   // capim no topo
+    if (style === 'islet' && y > base - 5) col = ['#2a2a2e', '#3a3a40', '#4a4a52', '#5a5a64'][Math.max(0, Math.min(3, T.t - 3))];   // pedra molhada
+    if (style === 'boulder' && T.ny < -0.28 + (vnoise(x / 4, 0, S + 4) - 0.5) * 0.5) {   // neve no topo
+      const below = (vnoise(x / 4, 0, S + 4) - 0.5) * 0.5 - 0.28;
+      col = (y + 1 - cy) / rh >= below ? '#8aa0b8' : ['#9fb2c8', '#cdd9e6', '#e8eff6', '#ffffff'][Math.max(0, Math.min(3, Math.round(T.l * 3.6)))];
+    }
+    if (style === 'obsidian' && T.edge && T.l > 0.6) col = '#e8e0ff';   // fio das lascas brilhando
+    g.fillStyle = col; g.fillRect(x, y, 1, 1);
   }
-  if (!bush) {
-    const cracks = stage === 0 ? 0 : stage === 1 ? 2 : 5;
-    let s2 = S; const r3 = () => (s2 = (s2 * 16807) % 2147483647) / 2147483647;
-    for (let k = 0; k < cracks; k++) {
-      let x = cx + (r3() - 0.5) * rw, y = cy - rh * 0.6 + r3() * rh * 0.4, a = 1.2 + (r3() - 0.5) * 1.5;
-      for (let i = 0; i < rh * 1.3; i++) {
-        if (inside(Math.round(x), Math.round(y))) { g.fillStyle = PAL[0]; g.fillRect(Math.round(x), Math.round(y), 1, 1); g.fillStyle = PAL[4]; if (inside(Math.round(x) + 1, Math.round(y))) g.fillRect(Math.round(x) + 1, Math.round(y), 1, 1); }
-        a += (r3() - 0.5) * 0.8; x += Math.cos(a) * 0.8; y += Math.sin(a);
-      }
+  if (style === 'obsidian') for (let k = 0; k < 3; k++) { const x0 = cx - rw * 0.4 + r3() * rw * 0.4, y0 = cy - rh * 0.5 + r3() * rh * 0.4; for (let j = 0; j < 4; j++) if (inside(Math.round(x0 + j), Math.round(y0 + j))) { g.fillStyle = j ? '#c8b8f0' : '#ffffff'; g.fillRect(Math.round(x0 + j), Math.round(y0 + j), 1, 1); } }   // reflexo de vidro
+  const cracks = stage === 0 ? 0 : stage === 1 ? 2 : 5;
+  for (let k = 0; k < cracks; k++) {
+    let x = cx + (r3() - 0.5) * rw, y = cy - rh * 0.6 + r3() * rh * 0.4, a = 1.2 + (r3() - 0.5) * 1.5;
+    for (let i = 0; i < rh * 1.3; i++) {
+      const X = Math.round(x), Y = Math.round(y);
+      if (inside(X, Y)) { g.fillStyle = PAL[0]; g.fillRect(X, Y, 1, 1); if (inside(X + 1, Y)) { g.fillStyle = PAL[K - 2]; g.fillRect(X + 1, Y, 1, 1); } }
+      a += (r3() - 0.5) * 0.8; x += Math.cos(a) * 0.8; y += Math.sin(a);
     }
   }
-  if (style === 'obsidian') {   // facetas brilhantes e veios de magma quando racha
-    for (let y = 0; y < Hd; y++) for (let x = 0; x < Wd; x++) if (inside(x, y) && vnoise(x / 3, y / 2, S + 21) > 0.82) { g.fillStyle = '#b0a0e0'; g.fillRect(x, y, 1, 1); }
-    if (stage > 0) { let x = cx, y = cy; for (let i = 0; i < rh * (stage + 1); i++) { if (inside(Math.round(x), Math.round(y))) { g.fillStyle = i % 3 ? '#ff7a2a' : '#ffd25a'; g.fillRect(Math.round(x), Math.round(y), 1, 1); } x += (vnoise(i, 0, S) - 0.5) * 2; y += 0.7; } }
-  }
-  if (style === 'islet') {   // espuma da água em volta da ilhota
+  if (style === 'obsidian' && stage > 0) { let x = cx, y = cy - rh * 0.3; for (let i = 0; i < rh * (stage + 1); i++) { const X = Math.round(x), Y = Math.round(y); if (inside(X, Y) && inside(X + 1, Y)) { g.fillStyle = '#3a0a04'; g.fillRect(X - 1, Y, 1, 1); g.fillStyle = i % 3 ? '#ff7a2a' : '#ffd25a'; g.fillRect(X, Y, 1, 1); } x += (vnoise(i, 0, S) - 0.5) * 2; y += 0.7; } }   // magma por dentro
+  if (style === 'islet') {   // espuma em volta da ilhota
     for (let x = 0; x < Wd; x++) { const yy = base - 1 + Math.round(Math.sin(x * 0.7 + S) * 1); if (inside(x, base - 2)) { g.fillStyle = '#eaf6ff'; g.fillRect(x, yy, 1, 1); g.fillStyle = '#9fd0f0'; g.fillRect(x, yy + 1, 1, 1); } }
+    for (let k = 0; k < 5; k++) { const x = Math.round(cx + (r3() - 0.5) * rw * 2), y = base - 1; if (inside(x, base - 2)) { g.fillStyle = '#ffffff'; g.fillRect(x, y - 1, 2, 1); } }
+  }
+  return finishSprite(entry, stage, c, base);
+}
+// copa de folhas feita de vários tufos redondos, cada um com sua luz e sombra
+function drawClumps(g, Wd, Hd, clumps, PAL, S, holes) {
+  const K = PAL.length, own = new Int16Array(Wd * Hd).fill(-1);
+  for (let i = 0; i < clumps.length; i++) {
+    const [qx, qy, qr] = clumps[i];
+    for (let y = Math.max(0, Math.floor(qy - qr - 2)); y < Math.min(Hd, qy + qr + 2); y++) for (let x = Math.max(0, Math.floor(qx - qr - 2)); x < Math.min(Wd, qx + qr + 2); x++) {
+      const dx = (x + 0.5 - qx) / qr, dy = (y + 0.5 - qy) / (qr * 0.9), a = Math.atan2(dy, dx);
+      const rr = 1 + (vnoise(Math.cos(a) * 2 + i * 3, Math.sin(a) * 2, S + i) - 0.5) * 0.3 + (vnoise(x / 1.4, y / 1.4, S + 40) - 0.5) * 0.22;
+      if (dx * dx + dy * dy <= rr * rr) own[y * Wd + x] = i;
+    }
+  }
+  if (holes) for (let i = 0; i < own.length; i++) if (own[i] >= 0 && vnoise((i % Wd) / 2, Math.floor(i / Wd) / 2, S + 11) > holes) own[i] = -1;
+  const O = (x, y) => (x < 0 || y < 0 || x >= Wd || y >= Hd) ? -1 : own[y * Wd + x];
+  let top = Hd, bot = 0; for (let i = 0; i < own.length; i++) if (own[i] >= 0) { const y = Math.floor(i / Wd); if (y < top) top = y; if (y > bot) bot = y; }
+  for (let y = 0; y < Hd; y++) for (let x = 0; x < Wd; x++) {
+    const i = O(x, y); if (i < 0) continue;
+    let col;
+    if (O(x - 1, y) < 0 || O(x + 1, y) < 0 || O(x, y - 1) < 0 || O(x, y + 1) < 0) col = PAL[0];
+    else {
+      const [qx, qy, qr] = clumps[i], nx = (x + 0.5 - qx) / qr, ny = (y + 0.5 - qy) / qr, gy = (y - top) / Math.max(1, bot - top);
+      let t = 1 + (0.62 - nx * 0.36 - ny * 0.46 - gy * 0.3 + (vnoise(x / 1.6, y / 1.6, S + 5) - 0.5) * 0.36) * (K - 2) + BAYER[(y & 3) * 4 + (x & 3)] * 0.4;
+      if (O(x, y - 1) > i || O(x - 1, y) > i) t -= 2.2; else if (O(x, y + 1) > i || O(x + 1, y) > i) t -= 1;   // sombra do tufo da frente
+      col = PAL[clampT(t, K)];
+    }
+    g.fillStyle = col; g.fillRect(x, y, 1, 1);
+  }
+  return own;
+}
+function bushSprite(rock, stage, entry) {
+  const PAL = OB_PAL.bush, S = rock.seed, r3 = rngOf(S);
+  const rw = Math.round(rock.r / PX), rh = Math.round(rw * 0.8), Wd = rw * 2 + 6, Hd = Math.round(rh * 1.9) + 6, cx = Wd / 2, base = Hd - 4;
+  const c = mkCanvas(Wd, Hd), g = c.getContext('2d');
+  const n = 8 + Math.round(rw / 4); let clumps = [];
+  for (let i = 0; i < n; i++) {
+    const u = (r3() * 2 - 1) * 0.8, v = r3(), qr = rw * (0.33 + r3() * 0.12);
+    clumps.push([cx + u * rw * 0.8, Math.max(qr + 1, base - qr * 0.8 - (1 - v) * rh * 1.05 * Math.sqrt(1 - u * u * 0.6)), qr]);
+  }
+  for (const u of [-0.55, 0, 0.55]) { const qr = rw * 0.42; clumps.push([cx + u * rw, base - qr * 0.85, qr]); }
+  clumps.push([cx, base - rh * 1.25, rw * 0.42]);
+  clumps.sort((a, b) => a[1] - b[1]);
+  if (stage >= 1) clumps = clumps.filter((q, i) => hash(i, S, 31) > (stage === 1 ? 0.2 : 0.42) || q[1] > base - rw * 0.5);
+  if (stage >= 1) { g.fillStyle = OB_PAL.tree[2]; for (let k = 0; k < 4; k++) { let x = cx + (k - 1.5) * 2, y = base - 1; for (let j = 0; j < rh; j++) { g.fillRect(Math.round(x), Math.round(y), 1, 1); x += (k - 1.5) * 0.35; y -= 1; } } }   // galhos aparecendo
+  drawClumps(g, Wd, Hd, clumps, PAL, S, stage === 0 ? 0 : stage === 1 ? 0.86 : 0.72);
+  const flowers = S % 3 === 0;
+  for (let i = 0; i < clumps.length; i++) {   // frutinhas / flores
+    if (hash(i, S, 7) > 0.45) continue;
+    const [qx, qy, qr] = clumps[i], x = Math.round(qx - qr * 0.2 + (hash(i, S, 8) - 0.5) * qr * 0.6), y = Math.round(qy - qr * 0.1);
+    if (flowers) { g.fillStyle = '#f2e6a0'; g.fillRect(x, y, 1, 1); g.fillStyle = '#ffffff'; g.fillRect(x - 1, y, 1, 1); g.fillRect(x + 1, y, 1, 1); g.fillRect(x, y - 1, 1, 1); }
+    else { g.fillStyle = '#7a1428'; g.fillRect(x, y, 2, 2); g.fillStyle = '#d8344a'; g.fillRect(x, y, 1, 1); g.fillStyle = '#ff9aa8'; g.fillRect(x, y - 0, 1, 1); g.fillStyle = '#d8344a'; g.fillRect(x + 1, y, 1, 1); }
   }
   return finishSprite(entry, stage, c, base);
 }
 function treeSprite(rock, stage, entry) {
-  const rw = Math.round(rock.r / PX), trunkW = Math.max(3, Math.round(rw * 0.42)), canR = Math.round(rw * 1.25);
-  const Wd = canR * 2 + 8, Hd = Math.round(rw * 3.4) + 6, c = mkCanvas(Wd, Hd), g = c.getContext('2d'), cx = Wd / 2, base = Hd - 3, S = rock.seed;
+  const rw = Math.round(rock.r / PX), trunkW = Math.max(3, Math.round(rw * 0.42)), canR = Math.round(rw * 1.25), S = rock.seed, r3 = rngOf(S);
+  const Wd = canR * 2 + 8, Hd = Math.round(rw * 3.4) + 6, c = mkCanvas(Wd, Hd), g = c.getContext('2d'), cx = Wd / 2, base = Hd - 3;
   const P = (col, x, y, w = 1, h = 1) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), w, h); };
-  const W8 = OB_PAL.tree, trunkTop = base - Math.round(rw * 1.6);
-  for (let y = trunkTop; y <= base; y++) for (let x = -trunkW; x <= trunkW; x++) {   // tronco com raízes
-    const spread = y > base - 3 ? (base - y === 0 ? 2 : 1) : 0, w = trunkW + spread;
-    if (Math.abs(x) > w) continue;
-    const e = Math.abs(x) === w, v = e ? 0 : Math.max(1, Math.min(5, Math.round(3 - x / trunkW * 1.6 + (vnoise(x, y / 3, S) - 0.5) * 2)));
-    P(W8[v], cx + x, y);
+  const W8 = OB_PAL.tree, K = W8.length, trunkTop = base - Math.round(rw * 1.6);
+  const tIns = (x, y) => { if (y < trunkTop || y > base) return false; const sp = y > base - 4 ? (4 - (base - y)) * (Math.abs(x) > trunkW * 0.3 ? 0.9 : 0.4) : 0; return Math.abs(x) <= trunkW + sp; };
+  for (let y = trunkTop; y <= base; y++) for (let x = -trunkW - 4; x <= trunkW + 4; x++) {   // tronco com raízes
+    if (!tIns(x, y)) continue;
+    let col;
+    if (!tIns(x - 1, y) || !tIns(x + 1, y) || y === base) col = W8[0];
+    else {
+      const t = Math.max(-1, Math.min(1, x / (trunkW + 0.5)));
+      let v = 1 + (0.5 - t * 0.42 + Math.sqrt(1 - t * t) * 0.18) * (K - 2) + BAYER[(y & 3) * 4 + ((x + 8) & 3)] * 0.4;
+      if (vnoise(x * 0.9, y / 5, S) > 0.62) v -= 2; else if (vnoise((x - 1) * 0.9, y / 5, S) > 0.62) v += 1;   // casca com sulcos
+      if (y < trunkTop + 4) v -= 2;   // sombra da copa
+      col = W8[clampT(v, K)];
+    }
+    P(col, cx + x, y);
   }
-  if (stage === 2) for (let i = 0; i < 4; i++) P(W8[0], cx + (i % 2 ? 1 : -1), trunkTop + 3 + i * 3, 1, 2);   // tronco rachado
-  // copa: vários círculos de folhas
-  const holes = stage === 0 ? 1.1 : stage === 1 ? 0.78 : 0.6, cy = trunkTop - canR * 0.45;
-  const blobs = [[0, 0, 1], [-0.55, 0.25, 0.7], [0.55, 0.25, 0.7], [-0.3, -0.45, 0.65], [0.35, -0.4, 0.62], [0, 0.45, 0.6]];
-  const inside = (x, y) => blobs.some(([bx, by, br]) => { const dx = (x - cx - bx * canR) / (canR * br), dy = (y - cy - by * canR) / (canR * br * 0.85); return dx * dx + dy * dy <= 1; }) && vnoise(x / 2.2, y / 2.2, S + 6) < holes;
-  for (let y = 0; y < trunkTop + 4; y++) for (let x = 0; x < Wd; x++) {
-    if (!inside(x, y)) continue;
-    const e = !inside(x - 1, y) || !inside(x + 1, y) || !inside(x, y - 1) || !inside(x, y + 1);
-    const nx = (x - cx) / canR, ny = (y - cy) / canR;
-    const l = 0.55 - nx * 0.35 - ny * 0.45 + (vnoise(x / 2, y / 2, S + 1) - 0.5) * 0.7;
-    P(e ? LEAF[0] : LEAF[Math.max(1, Math.min(5, Math.round(l * 4.2 + BAYER[(y & 3) * 4 + (x & 3)] * 0.7)))], x, y);
+  if (S % 3 === 0) { const ky = trunkTop + Math.round((base - trunkTop) * 0.45); P(W8[0], cx - 1, ky, 2, 3); P(W8[1], cx - 1, ky + 2, 2, 1); }   // buraco no tronco
+  if (stage === 2) for (let i = 0; i < 5; i++) { P(W8[0], cx + (i % 2 ? 1 : 0), trunkTop + 3 + i * 2, 1, 2); P(W8[6], cx + (i % 2 ? 2 : 1), trunkTop + 3 + i * 2); }   // tronco rachado
+  const cy = trunkTop - canR * 0.45; let clumps = [];
+  const n = 10 + Math.round(canR / 4);
+  for (let i = 0; i < n; i++) { const a = r3() * 6.2832, d = Math.sqrt(r3()) * 0.62, qr = canR * (0.36 + r3() * 0.14); clumps.push([cx + Math.cos(a) * d * canR, cy + Math.sin(a) * d * canR * 0.8, qr]); }
+  for (const u of [-0.62, 0, 0.62]) clumps.push([cx + u * canR, cy + canR * 0.42, canR * 0.42]);
+  clumps.sort((a, b) => a[1] - b[1]);
+  if (stage >= 1) {
+    clumps = clumps.filter((q, i) => hash(i, S, 33) > (stage === 1 ? 0.22 : 0.45));
+    for (const [qx, qy] of clumps.slice(0, 5)) { let x = cx, y = trunkTop + 2; for (let j = 0; j < 30 && y > qy; j++) { P(W8[1], x, y); P(W8[3], x - 1, y); x += (qx - cx) / 12; y += (qy - trunkTop - 2) / 12; } }   // galhos à mostra
+  }
+  drawClumps(g, Wd, Hd, clumps, CANOPY, S, stage === 0 ? 0 : stage === 1 ? 0.88 : 0.74);
+  if (game && game.arena && game.arena.ground === 'jungle') for (let k = 0; k < 2 + (S % 2); k++) {   // cipós pendurados
+    const x = Math.round(cx + (hash(k, S, 5) - 0.5) * canR * 1.3); let y = Math.round(cy + canR * 0.5); const L = 5 + Math.floor(hash(k, S, 6) * 8);
+    for (let j = 0; j < L; j++) { P('#1e4a1a', x, y + j); if (j % 3 === 1) P('#5aa03a', x + 1, y + j); }
   }
   return finishSprite(entry, stage, c, base);
 }
-function icePillarSprite(rock, stage, entry) {
-  const rw = Math.round(rock.r / PX), Wd = rw * 2 + 6, Hd = Math.round(rw * 3) + 6, c = mkCanvas(Wd, Hd), g = c.getContext('2d'), base = Hd - 3, S = rock.seed, I = OB_PAL.icepillar;
-  const P = (col, x, y) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), 1, 1); };
-  let s2 = S; const r3 = () => (s2 = (s2 * 16807) % 2147483647) / 2147483647;
-  const crystals = [[0, 1, 0.42], [-0.55, 0.62, 0.3], [0.55, 0.72, 0.3]];   // [posição x, altura, largura]
-  for (const [ox, hh, ww] of crystals.sort((a, b) => a[1] - b[1])) {
-    const w = Math.max(2, Math.round(rw * ww)), h = Math.round((Hd - 8) * hh * (stage === 2 && ox === 0 ? 0.6 : 1)), cx = Math.round(Wd / 2 + ox * rw * 0.75), tip = Math.round(w * 1.2);
+// cristais (pilar de gelo e cristal da caverna): prismas com três faces e ponta lapidada
+function crystalSprite(rock, stage, entry, style) {
+  const I = OB_PAL[style], K = I.length, cave = style === 'crystal', S = rock.seed, r3 = rngOf(S);
+  const rw = Math.round(rock.r / PX), Wd = rw * 2 + 10, Hd = Math.round(rw * 3) + 8, c = mkCanvas(Wd, Hd), g = c.getContext('2d'), base = Hd - 4;
+  const P = (col, x, y, w = 1, h = 1) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), w, h); };
+  if (cave) { g.globalAlpha = 0.16; g.drawImage(ellipseStamp(I[5], rw + 4, Math.round(rw * 1.3), false), Wd / 2 - rw - 4, base - rw * 2.2); g.globalAlpha = 0.25; g.drawImage(ellipseStamp(I[6], rw + 3, 3, false), Wd / 2 - rw - 3, base - 3); g.globalAlpha = 1; }
+  const crystals = [[0, 1, 0.42, 0, 0], [-0.62, 0.6, 0.3, -0.18, 1], [0.6, 0.7, 0.3, 0.15, 1], [-0.15, 0.34, 0.2, -0.05, 2]];   // [x, altura, largura, inclinação, à frente]
+  for (const [ox, hh, ww, lean, front] of crystals) {
+    const w = Math.max(2, Math.round(rw * ww)), broken = stage === 2 && ox === 0, h = Math.round((Hd - 10) * hh * (broken ? 0.62 : 1)), cx0 = Math.round(Wd / 2 + ox * rw * 0.78), tip = broken ? 0 : Math.round(w * 1.5), b0 = base + front;
+    const half = y => y > h - tip ? Math.max(0, Math.round(w * (h - y) / tip)) : w, xc = y => cx0 + Math.round(lean * y);
     for (let y = 0; y < h; y++) {
-      const yy = base - y, half = y > h - tip ? Math.round(w * (h - y) / tip) : w;
-      for (let x = -half; x <= half; x++) {
-        const e = Math.abs(x) === half || y === h - 1;
-        P(e ? I[0] : x < -half * 0.2 ? I[4] : x > half * 0.4 ? I[2] : I[3], cx + x, yy);
+      const hw = half(y), X = xc(y), yy = b0 - y, inTip = y > h - tip;
+      for (let x = -hw; x <= hw; x++) {
+        const t = hw ? x / hw : 0;
+        let v;
+        if (x === -hw) v = 1; else if (x === hw) v = 0; else if (y === h - 1 && !broken) v = 1;
+        else {
+          v = t < -0.34 ? 6 : t > 0.3 ? 2.6 : 4.4;
+          if (Math.abs(t + 0.34) * hw < 0.7) v = 7; else if (Math.abs(t - 0.3) * hw < 0.7) v = 3;
+          if (inTip) v += t < -0.34 ? 1 : t > 0.3 ? 0.5 : 0.8;
+          if (!inTip && t > -0.34 && t < 0.3 && vnoise(x / 2, y / 4, S + 2) > 0.62) v -= 1;   // miolo turvo
+          if (y < 3) v -= 1;
+        }
+        P(I[Math.max(0, Math.min(K - 1, Math.round(v)))], X + x, yy);
       }
-      if (y < h - tip && y % 7 === 3) P(I[5], cx - Math.round(half * 0.5), yy);
     }
-    for (let y = 2; y < h - tip; y++) P(I[5], cx - Math.round(w * 0.45), base - y);   // reflexo
+    if (broken) for (let x = -w; x <= w; x++) { const jy = Math.round(vnoise(x / 1.5, 0, S) * 3); P(I[0], xc(h) + x, b0 - h - jy); for (let j = 0; j < jy + 1; j++) P(I[6], xc(h) + x, b0 - h + 1 - j); }   // quebrado: topo exposto
+    if (!broken && h > 8) { const sy = b0 - Math.round(h * 0.62), sx = xc(Math.round(h * 0.62)) - Math.round(w * 0.34); P('#ffffff', sx, sy); P(I[7], sx - 1, sy); P(I[7], sx + 1, sy); P(I[7], sx, sy - 1); P(I[7], sx, sy + 1); }   // brilho
   }
   const cracks = stage === 0 ? 0 : stage === 1 ? 2 : 4;
-  for (let k = 0; k < cracks; k++) { let x = Wd / 2 + (r3() - 0.5) * rw, y = base - r3() * (Hd - 12); for (let i = 0; i < 10; i++) { P('#ffffff', x, y); x += r3() < .5 ? 1 : -1; y += 1; } }
+  for (let k = 0; k < cracks; k++) { let x = Wd / 2 + (r3() - 0.5) * rw, y = base - 4 - r3() * (Hd - 16); for (let i = 0; i < 9; i++) { const d = g.getImageData(Math.round(x), Math.round(y), 1, 1).data[3]; if (d) { P('#ffffff', x, y); } x += r3() < .5 ? 1 : -1; y += 1; } }
+  if (cave) { const RK = ['#0c0a14', '#2a263a', '#3e3852', '#544c6a', '#6c6284']; for (let k = 0; k < 4; k++) { const rx = 2 + Math.floor(r3() * 3), b = shadedBlob(rx, Math.max(1, rx - 1), RK, k + S % 7, 0.3); g.drawImage(b, Math.round(Wd / 2 + (r3() - 0.5) * rw * 1.6 - b.width / 2), base - b.height + 3); } }
+  else { const SN = ['#7c9ec4', '#b4cce4', '#d6e6f4', '#ecf4fb', '#ffffff']; for (let k = 0; k < 3; k++) { const rx = 3 + Math.floor(r3() * 3), b = shadedBlob(rx, 2, SN, k + S % 5, 0.35); g.drawImage(b, Math.round(Wd / 2 + (k - 1) * rw * 0.7 - b.width / 2), base - 3); } }   // neve na base
+  return finishSprite(entry, stage, c, base + 1);
+}
+function columnSprite(rock, stage, entry) {   // coluna antiga com caneluras
+  const rw = Math.max(5, Math.round(rock.r / PX * 0.75)), Wd = rw * 2 + 10, Hd = Math.round(rw * 5.2) + 10, c = mkCanvas(Wd, Hd), g = c.getContext('2d'), cx = Math.round(Wd / 2), base = Hd - 3, S = rock.seed, C = OB_PAL.pillar, K = C.length;
+  const P = (col, x, y, w = 1, h = 1) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), w, h); };
+  const box = (hw, y0, y1) => { for (let y = y0; y <= y1; y++) for (let x = -hw; x <= hw; x++) { const e = Math.abs(x) === hw || y === y1, top = y === y0; P(e ? C[0] : top ? C[7] : C[clampT(5 - x / hw * 1.6 + BAYER[(y & 3) * 4 + ((x + 8) & 3)] * 0.5, K)], cx + x, y); } };
+  box(rw + 4, base - 3, base); box(rw + 2, base - 6, base - 4);   // base em degraus
+  const top = base - Math.round((Hd - 10) * [1, 0.72, 0.48][stage]), sh0 = stage === 0 ? top + 6 : top, sh1 = base - 7;
+  for (let y = sh0; y <= sh1; y++) {
+    const hw = rw - (y < sh0 + (sh1 - sh0) * 0.35 ? 1 : 0), jag = stage > 0 && y < sh0 + 5 ? vnoise(0, y, S) : 0;
+    for (let x = -hw; x <= hw; x++) {
+      if (stage > 0 && y < sh0 + vnoise(x / 1.5, 0, S) * 5) continue;
+      const t = x / hw, fl = (x + hw) % 3;
+      let v = 1 + (0.55 - t * 0.36 + Math.sqrt(Math.max(0, 1 - t * t)) * 0.16) * (K - 2) + BAYER[(y & 3) * 4 + ((x + 8) & 3)] * 0.45;
+      if (fl === 0) v -= 1.4; else if (fl === 1 && t < 0.4) v += 0.7;
+      if (stage === 0 && y < sh0 + 2) v -= 2;
+      if (vnoise(x / 2, y / 3, S + 9) > 0.8) v -= 1;   // manchas de tempo
+      P(Math.abs(x) === hw ? C[0] : C[clampT(v, K)], cx + x, y);
+    }
+    void jag;
+  }
+  if (stage > 0) for (let x = -rw; x <= rw; x++) { const jy = sh0 + vnoise(x / 1.5, 0, S) * 5; P(C[0], cx + x, jy - 1); P(C[7], cx + x, jy); P(C[6], cx + x, jy + 1); }   // topo quebrado
+  else {   // capitel
+    for (let y = top + 3; y <= top + 5; y++) { const hw = rw + (top + 5 - y); for (let x = -hw; x <= hw; x++) P(Math.abs(x) === hw || y === top + 5 ? C[0] : C[clampT(5.5 - x / hw * 1.8 - (y - top - 3) * 0.6, K)], cx + x, y); }
+    box(rw + 3, top, top + 2);
+  }
+  const r3 = rngOf(S);
+  for (let k = 0; k < stage * 2; k++) { let x = cx + (r3() - 0.5) * rw, y = sh0 + 4 + r3() * (sh1 - sh0) * 0.6; for (let i = 0; i < 9; i++) { P(C[0], x, y); P(C[6], x + 1, y); x += r3() < .5 ? 1 : -1; y += 1; } }
+  for (let i = 0; i < 16; i++) { const x = cx + Math.round((vnoise(i, 2, S) - 0.5) * (rw * 2 + 6)), y = base - 7 + Math.round(vnoise(i, 1, S) * 3) - (i % 3 === 0 ? 1 : 0); P(vnoise(i, 3, S) > 0.5 ? '#3e5a2e' : '#5e7e3e', x, y); if (i % 4 === 0) P('#86a85a', x, y - 1); }   // musgo na base
+  if (S % 2) { let x = cx - rw + 1; for (let y = sh1; y > sh0 + (sh1 - sh0) * 0.35; y--) { const xx = cx + Math.round(Math.sin(y / 4 + S) * rw * 0.8); P('#2a4a1e', xx, y); if (y % 3 === 0) { P('#5a8a3a', xx + 1, y); P('#86b04e', xx + 1, y - 1); } x = xx; } void x; }   // trepadeira
   return finishSprite(entry, stage, c, base);
 }
-function columnSprite(rock, stage, entry) {   // coluna antiga com caneluras, topo quebrado
-  const rw = Math.max(5, Math.round(rock.r / PX * 0.75)), Wd = rw * 2 + 8, Hd = Math.round(rw * 5.2) + 8, c = mkCanvas(Wd, Hd), g = c.getContext('2d'), cx = Math.round(Wd / 2), base = Hd - 3, S = rock.seed, C = OB_PAL.pillar;
-  const P = (col, x, y, w = 1, h = 1) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), w, h); };
-  const top = base - Math.round((Hd - 8) * [1, 0.72, 0.48][stage]);
-  for (let x = -rw - 3; x <= rw + 3; x++) { P(C[0], cx + x, base - 3, 1, 4); P(x < 0 ? C[4] : C[3], cx + x, base - 3, 1, 3); }   // base
-  for (let y = top; y < base - 3; y++) for (let x = -rw; x <= rw; x++) {
-    const jag = y < top + 4 ? vnoise(x / 1.5, 0, S) * 5 : 0; if (y < top + jag) continue;
-    const e = Math.abs(x) === rw, flute = ((x + rw) % 3) === 0, lv = 3.2 - x / rw * 1.6 + (flute ? -0.8 : 0);
-    P(e ? C[0] : C[Math.max(1, Math.min(5, Math.round(lv + BAYER[(y & 3) * 4 + (x & 3)] * 0.6)))], cx + x, y);
+function cactusSprite(rock, stage, entry) {
+  const rw = Math.round(rock.r / PX), w = Math.max(3, Math.round(rw * 0.4)), H = Math.round(rw * 2.6), Wd = rw * 2 + 12, Hd = H + 12, cx = Math.round(Wd / 2), base = Hd - 3, S = rock.seed, C = OB_PAL.cactus, K = C.length;
+  const c = mkCanvas(Wd, Hd), g = c.getContext('2d'), P = (col, x, y, ww = 1, hh = 1) => { g.fillStyle = col; g.fillRect(Math.round(x), Math.round(y), ww, hh); };
+  const topH = stage === 2 ? Math.round(H * 0.68) : H, wa = Math.max(2, w - 1), reach = Math.round(rw * 0.62);
+  const parts = [[cx, base - topH, base, w]];   // [centro x, topo, fundo, meia-largura]
+  const armL = stage < 1, armR = S % 2 === 0 || stage === 0;
+  if (armL) parts.push([cx - w - reach + wa, base - Math.round(H * 0.78), base - Math.round(H * 0.42), wa]);
+  if (armR && stage < 2) parts.push([cx + w + reach - wa, base - Math.round(H * 0.9), base - Math.round(H * 0.56), wa]);
+  const elbows = [];
+  if (armL) elbows.push([cx - w - reach + wa, cx, base - Math.round(H * 0.42), wa]);
+  if (armR && stage < 2) elbows.push([cx, cx + w + reach - wa, base - Math.round(H * 0.56), wa]);
+  const partAt = (x, y) => {
+    for (let i = parts.length - 1; i >= 0; i--) { const [px0, t0, b0, hw] = parts[i], round = i === 0 && stage === 2 ? 0 : hw; if (Math.abs(x - px0) <= hw && y <= b0 && (y >= t0 + round || (x - px0) ** 2 + (y - t0 - round) ** 2 <= hw * hw + hw)) return i; }
+    for (const [x0, x1, yy, hw] of elbows) if (x >= x0 && x <= x1 && Math.abs(y - yy) <= hw) return 9;
+    return -1;
+  };
+  for (let y = 0; y < Hd; y++) for (let x = 0; x < Wd; x++) {
+    const p = partAt(x, y); if (p < 0) continue;
+    let col;
+    if (partAt(x - 1, y) < 0 || partAt(x + 1, y) < 0 || partAt(x, y - 1) < 0 || partAt(x, y + 1) < 0) col = C[0];
+    else {
+      let t, v;
+      if (p === 9) { const [, , yy, hw] = elbows.find(e => x >= e[0] && x <= e[1]) || elbows[0]; t = (y - yy) / hw; v = 1 + (0.55 - t * 0.45) * (K - 2); }
+      else { const [px0, , , hw] = parts[p]; t = (x - px0) / hw; v = 1 + (0.56 - t * 0.4 + Math.sqrt(Math.max(0, 1 - t * t)) * 0.18) * (K - 2); if (Math.abs(Math.round(t * 2) - t * 2) < 0.5 / hw * 2 && Math.abs(t) < 0.9) v += 1.2; }   // gomos
+      if (p === 0 && stage === 2 && y < base - topH + 2) v = 7;
+      col = C[clampT(v + BAYER[(y & 3) * 4 + (x & 3)] * 0.4, K)];
+    }
+    P(col, x, y);
   }
-  for (let x = -rw; x <= rw; x++) { const jag = vnoise(x / 1.5, 0, S) * 5; P(C[5], cx + x, top + jag, 1, 1); }
-  if (stage === 0) for (let x = -rw - 2; x <= rw + 2; x++) { P(C[0], cx + x, top - 3, 1, 1); P(C[4], cx + x, top - 2, 1, 2); }   // capitel
-  for (let i = 0; i < 18; i++) { const y = top + 4 + Math.floor(vnoise(i, 1, S) * (base - top - 8)), x = cx + Math.round((vnoise(i, 2, S) - 0.5) * rw * 2); P(vnoise(i, 3, S) > 0.5 ? '#4a6a3a' : '#6a8a4a', x, y); }   // musgo
+  for (let i = 0; i < 30; i++) { const x = Math.round(cx + (hash(i, S, 1) - 0.5) * (w + reach) * 2.2), y = Math.round(base - hash(i, S, 2) * H); if (partAt(x, y) >= 0 && partAt(x + 1, y) < 0) P('#f4ecc8', x + 1, y); else if (partAt(x, y) >= 0 && partAt(x - 1, y) < 0) P('#f4ecc8', x - 1, y); }   // espinhos
+  if (stage === 2) for (let x = -w + 1; x < w; x++) P(x % 2 ? '#c8d890' : '#a8c070', cx + x, base - topH + 1);   // miolo exposto
+  else if (S % 3 === 0) { const y = base - topH - 1; P('#c83a6a', cx - 1, y, 3, 1); P('#ff7aa8', cx - 1, y - 1, 3, 1); P('#ffc0d6', cx, y - 2); }   // flor no topo
+  const SD = ['#8a5a32', '#c89462', '#dcaa74', '#ecc292']; const b = shadedBlob(w + 3, 2, SD, S % 5, 0.3); g.drawImage(b, cx - b.width / 2, base - 2);   // areia na base
   return finishSprite(entry, stage, c, base);
 }
 function drawRock(r) {
