@@ -381,6 +381,11 @@ button.mpic { border: 0; }
 .pmodal-in.tcimg { max-height: calc(100vh - 32px); overflow-y: auto; } .tc-img { width: 100%; height: auto; border-radius: 14px; -webkit-touch-callout: default; user-select: auto; pointer-events: auto; } .tc-tip { font-size: 12px !important; } .pmodal-in.tcimg .cfgbtns { width: 100%; }
 .fcard { display: grid; gap: 8px; margin-bottom: 10px; } .fhead { display: flex; align-items: center; gap: 10px; } .fhead > div { display: flex; flex-direction: column; } .fhead canvas.tspr, .frow canvas.tspr { image-rendering: pixelated; flex: none; }
 .fprev { border-top: 2px dashed var(--tc); padding-top: 10px; display: grid; gap: 8px; }
+.oncode { display: flex; justify-content: center; gap: 6px; margin: 4px 0; } .oncode i { font-style: normal; font: 800 26px/1 ui-monospace, Menlo, Consolas, monospace; width: 38px; padding: 10px 0; text-align: center; border-radius: 10px; background: var(--card-2, #eef2f6); color: var(--ink, #23324a); box-shadow: inset 0 -3px 0 rgba(0,0,0,.08); }
+.onadd { display: flex; gap: 8px; min-width: 0; } .onadd .abtn { flex: none; } .onadd input { flex: 1; min-width: 0; font: 800 17px ui-monospace, Menlo, Consolas, monospace; letter-spacing: 2px; width: 100%; text-transform: uppercase; padding: 10px 12px; border-radius: 12px; border: 2px solid var(--line, #d8e0ea); background: var(--card); color: inherit; }
+.onrow { cursor: pointer; } .onachs { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 3px; font-size: 12px; } .onach b { font-weight: 800; } .onachs.big { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 14px; } .onachs.big .onach { padding: 7px 9px; border-radius: 10px; background: var(--card-2, #eef2f6); } .onachs.big small { opacity: .75; }
+.onprof { display: grid; gap: 10px; padding: 18px 16px 16px; background: var(--card); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.25); position: relative; } .onprof .mclose { position: absolute; top: 10px; right: 10px; } .onprof .fhead { padding-right: 36px; } .onprof .fhead small { display: block; } .onoldt { width: 100%; margin: 14px 0 8px; }
+[data-theme="dark"] .oncode i, [data-theme="dark"] .onachs.big .onach { background: #2a3448; color: #eef2f6; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oncode i, :root:not([data-theme="light"]) .onachs.big .onach { background: #2a3448; color: #eef2f6; } }
 .flist { display: flex; flex-direction: column; gap: 8px; } .frow { display: flex; align-items: center; gap: 10px; margin: 0; padding: 8px 10px; }
 .frow .fi { flex: 1; min-width: 0; display: flex; flex-direction: column; } .fmini { display: flex; flex-wrap: wrap; } .fbtns { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: none; }
 .bpicks { display: grid; gap: 6px; max-height: 52vh; overflow-y: auto; width: 100%; max-width: 420px; margin: 0 auto; }
@@ -1142,8 +1147,8 @@ button, .drop, .bitem { -webkit-touch-callout: none; }
 
 <script>
 // ---------- versão do jogo (a cada atualização: sobe o número e anota no CHANGELOG) ----------
-const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.13.1';
-const CHANGELOG = [{"v": "1.13.1", "d": "05/11/2026", "i": ["🗂️ <b>Escolher o par na Creche ficou separado por abas:</b> Time, Capturados, Chocados e Pessoal, como no PC, em vez de tudo misturado numa lista só.", "A Creche abre direto no <b>Pessoal</b> quando você tem Pokémon lá (senão, em Capturados) e lembra a aba escolhida."]}, {"v": "1.13", "d": "05/11/2026", "i": ["🔍 <b>Card na Creche:</b> segure o dedo num Pokémon da Creche para abrir o card completo dele, com atributos, IVs, natureza, habilidade e golpes. Assim dá para decidir se vale trocar por outro.", "Funciona nos dois que estão cruzando e também nos Pokémon da lista de escolha. Para comparar, segure um candidato e veja o card antes de colocá-lo.", "No card aberto pela Creche há os botões \"Retirar da Creche\" ou \"Deixar na Creche\". O toque rápido continua funcionando como antes."]}, {"v": "1.12.2", "d": "05/11/2026", "i": ["🔧 <b>Corrigido: Quick Ball voltando a valer depois de trocar de Pokémon.</b> Antes, cada troca recomeçava o relógio da batalha, e a Quick Ball ganhava o bônus de ×5 de novo. Agora o tempo continua contando com o mesmo selvagem, e o bônus vale só nos primeiros 6 segundos do encontro.", "A Timer Ball também deixou de perder o bônus quando você troca de Pokémon."]}, {"v": "1.12.1", "d": "05/11/2026", "i": ["🔥 <b>Flame Body e Magma Armor na Creche:</b> agora também valem com o Pokémon deixado na Creche, e não só no time.", "O efeito muda na hora também os ovos que já estão na incubadora (antes só valia para os ovos que entravam depois).", "A incubadora mostra o aviso \"🔥 2× mais rápido\" com o nome de quem está ajudando."]}, {"v": "1.12", "d": "05/11/2026", "i": ["✨ <b>Chain ajuda a achar habilidade oculta:</b> a chance normal de um selvagem vir com a habilidade oculta é 5%. Com a chain ela sobe para <b>10%</b> a partir da chain 10, <b>15%</b> a partir da 20 e <b>20%</b> a partir da 30.", "A mensagem da chain avisa quando a chance da habilidade oculta sobe.", "A Creche continua sendo o caminho mais garantido (até 60% com a mãe de habilidade oculta)."]}, {"v": "1.11.2", "d": "04/11/2026", "i": ["🔧 <b>Corrigido: Pokémon presos com 3 golpes.</b> Quando um Pokémon aprendia um golpe que ele também aprende por nível (por exemplo, uma Roselia com Giga Drain que evoluiu para Roserade), um golpe sumia e o 4º espaço não enchia mais: ensinar um golpe novo ali trocava outro golpe. Agora o espaço vazio enche normalmente, em todos os Pokémon.", "Os Pokémon que já estavam presos com 3 golpes são arrumados sozinhos ao abrir o jogo; alguns recuperam na hora o golpe que tinha sumido.", "O TM não deixa mais ensinar um golpe que o Pokémon já sabe (antes isso fazia ele ficar com um golpe a menos)."]}, {"v": "1.11.1", "d": "04/11/2026", "i": ["❤️ <b>Curar na barra de baixo:</b> o botão de curar o time (Centro Pokémon) agora fica na barra de baixo, no lugar da Loja.", "🛒 A <b>Loja</b> foi para o menu \"Mais\" (os três pontinhos)."]}, {"v": "1.11", "d": "04/11/2026", "i": ["🌟 <b>Ribbon do Pokémon perfeito:</b> a <b>Battle Royal Master Ribbon</b> agora é reservada ao Pokémon completamente treinado: <b>6 IVs perfeitos</b>, <b>EVs no máximo (510)</b> e <b>shiny</b>. Ela fica numa seção nova, \"🌟 Pokémon perfeito\", no topo da vitrine de Ribbons.", "Ao tocar nela, a vitrine mostra o que já foi cumprido e o que falta (IVs, EVs e shiny).", "Quando o Pokémon conquista essa fita, ela vai automaticamente para o lado do nome dele.", "Quem tinha essa fita pela regra antiga (derrotar os 18 tipos) e não é perfeito perde a fita; ela fica só com os Pokémon perfeitos."]}, {"v": "1.10.1", "d": "04/11/2026", "i": ["🧢 <b>O rival Kai agora tem um visual só dele:</b> nas batalhas contra ele aparece sempre o mesmo treinador (cabelo castanho espetado e jaqueta vermelha), em vez de um treinador sorteado.", "Kai também chega andando antes da luta, como os Líderes, e aparece na tela de convite para a batalha e na Liga quando ele é o Campeão."]}, {"v": "1.10", "d": "04/11/2026", "i": ["⚖️ <b>Chain e Creche, cada uma com o seu papel:</b> a chain é o caminho para achar <b>shinies</b>; a Creche é o caminho para deixar um Pokémon <b>forte de verdade</b>. Quem quer um time competitivo vai usar as duas.", "✦ <b>Herança de shiny na Creche:</b> com um dos pais shiny, a chance de ovo shiny vai para <b>1 em 64</b>; com os dois pais shiny, <b>1 em 16</b> (antes era 1 em 4.096). Use os shinies da chain como pais!", "🧬 <b>Itens Power na Creche, como nos jogos:</b> quem segura um item Power (Power Bracer, Power Lens, Power Weight…) passa aquele IV para o filhote com certeza. Junto com a Destiny Knot (5 IVs herdados), é o caminho para os 5 ou 6 IVs perfeitos.", "✨ <b>Habilidade oculta por ovo:</b> o filhote tem 20% de chance de nascer com a habilidade oculta da espécie (60% se a mãe já tiver a oculta). Na natureza ela continua rara.", "⚔️ <b>Golpes de ovo à mostra:</b> a Creche agora mostra quais golpes dos pais o filhote pode herdar (até 2).", "🔥 <b>Ovos mais rápidos:</b> com um Pokémon de <b>Flame Body</b> ou <b>Magma Armor</b> no time, os ovos chocam 2× mais rápido. E cada vitória em batalha adianta os ovos da incubadora.", "🥚 Quem nasceu na Creche ganha o selo <b>\"Nascido de ovo\"</b> no card.", "⛓ <b>Chain com IVs garantidos:</b> a partir da chain 10, o Pokémon da chain vem com <b>1 IV perfeito garantido</b>; a partir da chain 20, com <b>2</b>. Mais que isso, só pela Creche.", "📈 Subir IVs capturando outro da mesma família agora vai até <b>3 IVs perfeitos</b> (os outros chegam no máximo a 30). Para mais, use a Creche ou a Bottle Cap."]}, {"v": "1.9.7", "d": "04/11/2026", "i": ["⚡ <b>PC bem mais leve:</b> as miniaturas dos Pokémon agora só são redesenhadas quando a animação muda de quadro (antes eram redesenhadas 60 a 120 vezes por segundo) e ficam paradas enquanto você rola a tela.", "✨ <b>Shinies sem travar:</b> a miniatura shiny recolore só o desenho que aparece, em vez da folha inteira de animações. Com muitos shinies no PC, o trabalho caiu pela metade.", "🖼️ Os desenhos dos Pokémon são preparados em segundo plano antes de aparecer, e a próxima página do PC já vai sendo carregada enquanto você olha a atual.", "🌿 <b>Moradores da rota e Pokédex sem engasgos:</b> nessas listas grandes os desenhos ficam parados (são desenhados uma vez só) e os pacotes de desenhos são carregados um de cada vez, com uma pausinha entre eles, então rolar a página não trava mais em rotas com muitos Pokémon.", "🪶 No <b>Modo leve</b>, as miniaturas ficam paradas (ainda mais leve para celulares mais fracos)."]}, {"v": "1.9.6", "d": "04/11/2026", "i": ["🧹 <b>Revisão geral do jogo:</b> todas as telas foram conferidas, no tema claro e no escuro, e mais de mil botões foram testados.", "✏️ Textos atualizados: o aviso de time desmaiado agora manda tocar em <b>❤️ Curar, no topo</b> (o Centro saiu da barra de baixo), o Cartão de Treinador mostra <b>PokéBATTLE</b> (estava com o nome antigo) e a dica dos Desafios fala também do PvP em tempo real.", "🥚 O ícone da Creche na barra de baixo voltou a mostrar as manchinhas do ovo no tema claro.", "🔝 Títulos inteiros no topo: o dinheiro aparece só onde importa (Mapa, Loja, Mochila, Treinador e Tutor) e o ícone de dia/noite só no Mapa e na Rota. Antes, títulos como \"Nugget Bridge\" e \"Expedições Lendárias\" ficavam cortados.", "▶ Depois de vencer uma região, o botão <b>Continuar</b> do Mapa leva direto para a próxima região.", "🗑️ \"Recomeçar aventura do zero\" saiu do fim do Mapa e foi para as <b>Configurações</b> (com confirmação), para não ser tocado sem querer.", "🎀 A Ribbon na placa da batalha ficou menor, para o nome do Pokémon caber.", "❤️ Na Rota fica só um botão de curar (antes apareciam dois iguais).", "🛒 A Loja ficou mais limpa (saiu uma frase repetida).", "🪶 Os últimos restos escondidos da Batalha livre saíram do jogo, que ficou mais leve."]}, {"v": "1.9.5", "d": "04/11/2026", "i": ["⭐ <b>Pessoal também para o time:</b> no card de um Pokémon do time agora tem <b>Mandar para o Pessoal</b>, que leva ele direto para a caixa Pessoal do PC.", "🥚 <b>Chocados só para ovos:</b> o botão de mover para Chocados saiu. Os Pokémon que nascem dos ovos vão sempre para a caixa Chocados do PC, mesmo que o time tenha menos de 6.", "🗑️ <b>Soltar com confirmação:</b> o botão Soltar ficou por último no card e agora abre uma janela perguntando se você tem certeza (avisa também se ele é shiny, lendário ou se está segurando um item).", "✏️ Textos da caixa Pessoal arrumados (os espaços estavam errados)."]}, {"v": "1.9.4", "d": "04/11/2026", "i": ["🃏 <b>Card do Pokémon:</b> a caixa de Treino (EVs) saiu, porque os EVs já aparecem na coluna EV dos Atributos. Experiência de batalha, Habilidade e Item segurado agora ficam lado a lado numa linha só."]}, {"v": "1.9.3", "d": "04/11/2026", "i": ["🃏 <b>Card do Pokémon mais limpo:</b> a Natureza (com o atributo que ela sobe ▲ e o que ela desce ▼) e a nota dos IVs saíram de dentro do quadro de Atributos e ganharam caixinhas próprias, logo acima dele.", "⭐ <b>Experiência de batalha:</b> agora mostra só as estrelas. Segure o dedo em cima para ver o nível e o número de batalhas.", "✨ <b>Habilidade:</b> mostra só o nome. Segure o dedo em cima para ler o que ela faz.", "🧬 <b>Evolução:</b> a caixa ocupa a largura toda do card, com o texto numa linha (sem aquela coluna alta)."]}, {"v": "1.9.2", "d": "04/11/2026", "i": ["⭐ <b>Caixa Pessoal no PC:</b> uma terceira caixa, ao lado de Capturados e Chocados, para guardar os Pokémon que você quer treinar e não perder eles no meio dos outros.", "⭐ Para mandar um Pokémon para lá, abra ele no PC e toque em <b>Mover para Pessoal</b>. Para mandar vários, segure um, marque os outros e toque em <b>⭐ Pessoal</b>.", "↩ Para tirar, use <b>Voltar para Capturados</b> (ou Chocados) no card, ou selecione vários dentro da caixa Pessoal e toque em <b>Tirar do Pessoal</b>.", "Quem vai para o time e volta para o PC continua na caixa Pessoal."]}, {"v": "1.9.1", "d": "04/11/2026", "i": ["🎀 <b>Ribbons consertadas:</b> os desenhos das Ribbons voltaram a aparecer em todas as telas (no card do Pokémon, na vitrine de Ribbons e no resultado das batalhas).", "🎀 A Ribbon em exibição agora aparece na frente do nome também na lista do Time e na placa da batalha."]}, {"v": "1.9", "d": "04/11/2026", "i": ["✨ <b>Interface nova, mais leve:</b> menos informação na tela e tudo a um toque, pensada para o celular.", "🧭 <b>Barra de baixo numa linha só:</b> Mapa, Time, PC, Mochila, Loja, Creche e <b>Mais</b>. O \"Mais\" abre Desafios, Pokédex, Treinador e Centro. Quando algo lá dentro tem novidade, a bolinha vermelha aparece no \"Mais\".", "🔝 <b>Topo e cabeçalhos enxutos:</b> cada tela mostra só voltar, o título, o dinheiro e o ícone de dia/noite. A Pokédex aparece no Mapa e na própria Pokédex.", "❤️ <b>Botão Curar no topo:</b> aparece no Mapa, na Rota e no Time quando algum Pokémon está ferido.", "🗺️ <b>Mapa mais limpo:</b> cada rota mostra só o nível, o progresso e as capturas; o que ainda está bloqueado fica recolhido em \"Ver o que vem depois\". O aviso de ovo da Creche virou só a bolinha vermelha no ícone.", "💡 <b>Dicas menores:</b> viraram uma faixa fina que fecha no ✕.", "🧹 <b>A Batalha livre saiu do jogo:</b> agora o PokéBATTLE é só a Aventura, o que libera espaço no topo e deixa o jogo abrir mais rápido."]}, {"v": "1.8", "d": "04/11/2026", "i": ["⚡ <b>PvP em tempo real</b> (no app do site): lute ao vivo contra um amigo, cada um no seu aparelho. Em Desafios › Amigos, um jogador toca em <b>Criar sala</b> e manda o convite; o outro toca em <b>Entrar com convite</b>, cola e devolve a resposta. Pronto: os dois entram na mesma luta.", "🎮 <b>Regras do tempo real:</b> sem itens. Cada jogador escolhe os golpes (ou deixa no automático) e pode <b>trocar de Pokémon 1 vez contra cada Pokémon do adversário</b>. Quando um Pokémon desmaia, o dono escolhe o próximo. Vale o time de PvP escolhido e a opção \"Nivelar no 50\" de quem criou a sala.", "🔒 <b>Segurança:</b> a ligação é direta entre os dois aparelhos, protegida pelo navegador, sem servidores nem programas de fora no meio. Só o time e o nome de treinador são enviados (nada do save, da mochila ou do dinheiro), e tudo que chega do outro aparelho é conferido. A luta não dá nem tira itens ou dinheiro: só conta vitórias e derrotas.", "📊 Histórico de vitórias e derrotas no tempo real, no card do PvP.", "ℹ️ Aqui no Claude o PvP por código continua igual; o tempo real fica no app do site."]}, {"v": "1.7.2", "d": "04/11/2026", "i": ["💊 <b>Revive na batalha:</b> Revive, Max Revive e Sacred Ash agora podem ser usados durante a luta, pelo botão 🎒 Itens. Escolha quem do time desmaiado vai voltar; depois é só usar ⇄ Trocar para chamá-lo.", "🆘 <b>Última chance:</b> se todo o seu time desmaiar e você tiver um Revive na mochila, o jogo pergunta se você quer reviver alguém (até quem acabou de cair) e continuar a luta, em vez de perder na hora.", "🟣 <b>Master Ball com confirmação:</b> antes de jogar, o jogo pergunta se você quer mesmo usar a Master Ball, para ela não ser gasta por um toque sem querer."]}, {"v": "1.7.1", "d": "04/11/2026", "i": ["📚 <b>Guia de itens:</b> uma biblioteca com todos os itens do jogo, o que cada um faz e <b>onde comprar ou encontrar</b>: Pokémart (a partir de qual rota e por quanto), troca por PB, prêmios de batalha (com a chance), Pokémon selvagens que carregam o item, Ginásios, Rival, Liga, Equipe Rocket, Copas, Desafio do dia e prêmios da Pokédex. Abra pelo botão 📚 na Mochila ou na Loja.", "🔎 <b>Busca completa no guia:</b> procure pelo nome do item (em inglês ou pelo jeito que o jogo chama), pelo efeito (\"cura\", \"vender\") ou pelo <b>nome de um Pokémon</b> (ex.: \"Feebas\" mostra a Prism Scale). A busca aceita erros de digitação. Tem filtro por tipo de item e a opção \"Só os que eu tenho\".", "🧬 Os itens de evolução mostram no guia quais Pokémon fazem evoluir.", "🔗 O Cabo de Ligação ganhou um ícone novo (a Link Stone).", "🌙 Modo escuro: os times de PvP na aba Amigos agora ficam legíveis."]}, {"v": "1.7", "d": "04/11/2026", "i": ["🎨 <b>Cenários remasterizados:</b> o chão de todas as arenas foi redesenhado com formas mais definidas, contorno, luz e sombra, no mesmo estilo dos sprites dos Pokémon. O tamanho das arenas e o lugar dos obstáculos continuam iguais.", "🌿 Campo com clareiras de terra, trevos, tufos de grama e flores em grupinhos; Selva com samambaias, cogumelos, folhas caídas e poças de lama com reflexo.", "🪨 Pedreira com lajes de pedra e pedrinhas brilhando; Montanha com neve que faz sombra; Geleira com placas de gelo liso, rachaduras e montes de neve.", "🌊 Lago com cristas de onda, vitórias-régias com flor e taboas nas beiradas; Vulcão com placas de basalto e lava pulsando nas frestas; Ruínas com ladrilhos chanfrados, musgo nas juntas e runas no círculo do centro.", "🌳 <b>Obstáculos novos no visual:</b> rochas lapidadas com faces de luz e sombra, árvores e arbustos feitos de tufos de folhas (com cipós na Selva), cristais de gelo com três faces e colunas com base em degraus, capitel e trepadeiras. Eles continuam rachando em etapas quando levam golpes.", "🌵 <b>Arena nova: Deserto</b>, com dunas, cactos e mesas de arenito ao fundo.", "💎 <b>Arena nova: Caverna</b>, com paredão de rocha e cristais roxos que cintilam durante a luta.", "🏆 As arenas novas aparecem nas lutas com arena sorteada: Torre, Copa, Desafio do dia, batalhas com amigos e o Campeão da Liga."]}, {"v": "1.6.7", "d": "04/11/2026", "i": ["💿 <b>Filtro de TMs por tipo</b> na Loja e na Mochila: toque no tipo (Fogo, Água, Pedra...) para ver só os TMs daquele tipo, com a quantidade de cada um. Na Mochila os TMs ficam em ordem de número.", "💾 <b>Filtros salvos:</b> as abas e os filtros que você escolhe (abas da Loja e da Mochila, tipo dos TMs, caixa e filtros do PC e os filtros da Pokédex) ficam guardados e voltam iguais quando você abre o jogo de novo."]}, {"v": "1.6.6", "d": "04/11/2026", "i": ["💻 <b>PC reorganizado:</b> as caixas Capturados e Chocados ficam no topo, e a busca e o botão <b>Filtros</b> ficam numa linha só. Tipo, ordem e \"só shinies\" agora abrem num painel e só aparecem quando você quer; os filtros ligados ficam visíveis como etiquetas, com \"limpar\". A troca de caixa (‹ ›) foi para baixo da grade. Os Pokémon aparecem bem mais acima na tela.", "✋ <b>Segure um Pokémon do PC para selecionar:</b> ele entra marcado e você toca nos outros para marcar mais. A barra de seleção fica presa no topo, com Soltar, marcar a caixa, marcar todos e desmarcar.", "🗑️ O card de um Pokémon do PC agora tem o botão <b>Soltar</b> (com confirmação), além de Levar para o time e Mover para Chocados/Capturados."]}, {"v": "1.6.5", "d": "04/11/2026", "i": ["🔴 Pokébolas com os desenhos oficiais de novo, agora incluindo a Poké Ball e as novas Lure, Heavy, Friend e Luxury Ball."]}, {"v": "1.6.4", "d": "04/11/2026", "i": ["⚪ 4 Pokébolas novas na Loja (a partir da 7ª rota): <b>Lure Ball</b> (×4 em Pokémon de Água), <b>Heavy Ball</b> (melhor quanto maior o Pokémon, até ×4), <b>Friend Ball</b> (o Pokémon chega com bastante amizade) e <b>Luxury Ball</b> (a amizade cresce em dobro depois)."]}, {"v": "1.6.3", "d": "04/11/2026", "i": ["🔴 A Poké Ball agora usa o desenho oficial nos menus, na mochila, na loja, nos botões da batalha e nas marcações de captura das rotas. O desenho pixelado ficou só na animação da bola sendo arremessada."]}, {"v": "1.6.2", "d": "04/11/2026", "i": ["🏁 Corrigido: com o time cheio, a tela depois da batalha ficava torta e cortada nas laterais. Agora os Pokémon aparecem em duas colunas e tudo cabe na tela."]}, {"v": "1.6.1", "d": "03/11/2026", "i": ["🌙 Corrigido: no modo escuro, a vitrine de Ribbons, o aviso de Ribbon nova depois da batalha e a faixa de Ribbons no card do Pokémon ficavam ilegíveis. Agora têm cores próprias para o modo escuro.", "🏁 Tela depois da batalha mais compacta: tudo aparece numa tela só, sem precisar rolar. As Ribbons novas aparecem em duas colunas."]}, {"v": "1.6", "d": "03/11/2026", "i": ["⛓ <b>Chains com o DexNav</b> (novo item na Loja PB, 20 PB): derrote o mesmo Pokémon selvagem 2 vezes seguidas para começar uma chain. Cada ponto deixa a espécie mais comum (até 70% dos encontros).", "✨ Shiny pela chain: a partir da chain 49 a espécie tem <b>30% de chance de ser shiny</b>, e a partir da 99, <b>70%</b>. Vale para formas iniciais (quem não é evolução de outro), lendários (30% na chain 99 e 70% na 199) e míticos (15% na chain 199). Com chain ativa, dá para enfrentar o lendário de novo sem seguir rastros.", "A chain quebra ao derrotar outra espécie. Fugir, capturar outro Pokémon ou lutar com treinadores não quebra; capturar a própria espécie da chain conta +1. A chain aparece na placa da batalha e na tela da rota.", "🖼️ <b>Retratos novos com expressões:</b> a foto ao lado da barra de vida agora é um retrato desenhado de cada Pokémon (normal e shiny) que reage à luta: dor ao levar dano, determinado ou gritando ao atacar, inspirado com golpes de status, feliz ao ficar mais forte, olhos fechados dormindo, tonto quando confuso, com lágrimas com pouca vida, chorando ao desmaiar e comemorando ao vencer.", "✨ <b>Habilidades revisadas:</b> agora <b>todos</b> os Pokémon têm habilidade (o Gengar ganhou Cursed Body, por exemplo). São mais de 130 habilidades novas funcionando de verdade: Disguise, Stance Change (Aegislash vira Forma Lâmina ao atacar), Schooling, Protean, Beast Boost, as Ruínas, Shadow Tag (não deixa fugir), Magic Bounce, Moxie, Imposter, Trace e muitas outras. Quem estava sem habilidade recebe uma automaticamente.", "⚔️ <b>Mais de 160 golpes novos</b>, com animações próprias: Fire Punch, Ice Fang, Knock Off, Drain Punch, Leaf Blade, Scald, Shadow Sneak, Bullet Punch, Dragon Darts, Explosion, Quiver Dance, Shell Smash, Defog e muito mais. Muitos viraram TMs novos (agora são 199) e outros estão no Tutor de golpes. A numeração dos TMs mudou, mas os que você já tem continuam valendo.", "🌟 <b>Golpes-assinatura:</b> cerca de 50 Pokémon famosos ganharam o golpe próprio deles, como V-create (Victini), Pyro Ball (Cinderace), Dragon Ascent (Rayquaza), Thousand Arrows (Zygarde), Make It Rain (Gholdengo), Psycho Boost (Deoxys), Spectral Thief (Marshadow) e Sacred Sword (Gallade e os Espadachins).", "🎲 <b>Golpes mais variados:</b> os Pokémon selvagens e de treinadores também aprendem os golpes novos por nível. Cerca de 800 espécies ganharam listas de golpes diferentes, sempre com golpes do próprio tipo. Os seus Pokémon também passam a usar a lista nova (golpes ensinados por TM ou Tutor continuam onde estão).", "🎀 <b>Ribbons!</b> São 107 fitas de conquista, e cada Pokémon tem a própria coleção. Abra pelo botão <b>🎀 Ribbons</b> no card do Pokémon. Lá dá para ver o que falta para cada uma (com barra de progresso) e escolher uma para exibir ao lado do nome, no card e na batalha.", "🎀 Tipos de Ribbon: <b>Batalhas</b> (100, 500 e 1.000 vitórias, sequências sem desmaiar, vencer quem tinha vantagem de tipo, derrotar os 18 tipos, lendários...), <b>Campeões</b> (uma por Liga, mais as de 5 e 9 regiões), <b>Estilo de luta</b> (as fitas de concurso Cool, Beauty, Cute, Smart e Tough, em 4 níveis cada), <b>Mundo</b> (regiões, arenas, sol e chuva), <b>Vida com você</b> (inicial, nascido de ovo, nível 100, EVs completos, 30 dias juntos...), <b>Eventos</b> (Carnaval, Festa Junina, Halloween, Natal e Ano Novo) e <b>Loja</b> (Gorgeous, Royal e Gorgeous Royal).", "🎒 <b>Ícones novos dos itens:</b> todos os itens agora usam os desenhos oficiais.", "🍓 <b>Mais de 150 itens novos, com os efeitos oficiais:</b> frutas (as que enfraquecem golpes super efetivos, as de pouca vida como Liechi e Salac, as que curam status, Oran, Figy, Enigma, Jaboca, Kee...) e itens segurados (Black Sludge, Flame Orb, Toxic Orb, White Herb, Mental Herb, Power Herb, Weakness Policy, Focus Band, Big Root, Light Clay, pedras de clima, Terrain Extender, Protective Pads, Safety Goggles, Smoke Ball, Soothe Bell, Razor Claw, Wide Lens, Thick Club, Soul Dew e as Orbs de Dialga, Palkia e Giratina).", "🗿 <b>Plates, Memories e Gems:</b> com uma Plate, o Arceus vira do tipo dela (e o Judgment também). As Memories fazem o mesmo com o Silvally. As Gems fortalecem o primeiro golpe do tipo delas.", "💊 <b>Remédios e itens de batalha:</b> Full Restore, bebidas (Fresh Water, Soda Pop, Lemonade e Moomoo Milk), Sacred Ash, Full Heal, Antidote, Burn Heal, Ice Heal, Awakening, Paralyze Heal, X Attack, X Defense, X Sp. Atk, X Sp. Def, X Speed, Dire Hit e Guard Spec. Na luta, use pelo novo botão <b>🎒 Itens</b>.", "💰 <b>Tesouros:</b> Nugget, Pearl, Star Piece, Comet Shard, cogumelos e outros aparecem às vezes depois das batalhas e vendem na nova aba <b>💰 Vender</b> da Pokémart.", "💎 <b>Loja PB:</b> Ability Capsule (troca a habilidade pela outra da espécie), Bottle Cap (leva o IV mais baixo a 31), Oval Charm (mais ovos na Creche), Soul Dew e as Orbs lendárias.", "🧢 <b>Treinadores com visual:</b> nas batalhas contra treinadores comuns, um dos 253 treinadores novos é sorteado e fica no canto da arena durante a luta.", "🔴 <b>Raio de recolha refeito:</b> a Pokébola aparece aberta, o raio vermelho sai ondulando com energia correndo por ele, o Pokémon vira luz e encolhe numa esfera, volta pelo raio até a bola, e ela se fecha com um estalo.", "📋 <b>Ficha do Pokémon mais compacta:</b> cabe inteira na tela do celular, sem rolar, e mostra o número da Pokédex (Nº 006).", "🎓 Corrigido: o Tutor de golpes às vezes gastava a Heart Scale e o golpe não voltava."]}, {"v": "1.5.5", "d": "01/11/2026", "i": ["Voadores que têm pernas agora andam no chão em vez de voar: Charizard, Dragonite, Salamence, Togetic, Tropius, Emolga e Celesteela."]}, {"v": "1.5.4", "d": "01/11/2026", "i": ["Visual: o nível dos Pokémon (Nv.) agora usa uma fonte mais grossa, maior e mais clara, fácil de ler no time, no PC e nas placas de batalha."]}, {"v": "1.5.3", "d": "01/11/2026", "i": ["Corrigido: os botões da tela do Tutor de golpes (Voltar, Relembrar, comprar e escolher o golpe) não respondiam ao toque."]}, {"v": "1.5.2", "d": "01/11/2026", "i": ["Item novo: <b>Fresh-Start Mochi</b>. Zera todos os EVs do Pokémon de uma vez para recomeçar o treino. Na Loja (₽ 8.000, a partir da 5ª rota) e na Loja PB (4 PB)."]}, {"v": "1.5.1", "d": "01/11/2026", "i": ["📜 Novidades: as notas de cada atualização ficam nas Configurações, e o jogo mostra o que mudou na primeira vez que você abre uma versão nova."]}, {"v": "1.5", "d": "01/11/2026", "i": ["🎓 Tutor de golpes (na ficha de cada Pokémon): relembrar golpes já conhecidos/por nível/de ovo por 1 Heart Scale; golpes de tutor (não-TM) por PB ou ₽.", "Golpes de ovo: o filhote herda até 2 golpes que os pais sabem e que ele pode usar.", "Item novo: Heart Scale (Loja, Loja PB e queda nas batalhas). Presente de 3 Heart Scales para quem já joga."]}, {"v": "1.4", "d": "01/11/2026", "i": ["Shiny Charm agora sai ao ter um shiny de cada uma das 9 regiões (a espécie tem que ser da região). Completar a Pokédex continua valendo.", "Aviso a cada região nova conquistada e progresso no Cartão de Treinador."]}, {"v": "1.3.2", "d": "31/10/2026", "i": ["Tela da rota mais compacta: o time inteiro numa fileira só, o botão do chefe trancado numa linha e o aviso do horário numa linha."]}, {"v": "1.3.1", "d": "31/10/2026", "i": ["Mapa mais leve: Expedições Lendárias numa faixa fina e as regiões numa linha só, que rola para o lado.", "App instalável (GitHub Pages) que funciona offline."]}, {"v": "1.3", "d": "31/10/2026", "i": ["Creche: 🧹 Filtro de filhotes. Guarda só shinies e filhotes com o mínimo de IVs perfeitos escolhido (1V a 6V) e, se quiser, uma natureza. Os outros são soltos ao chocar.", "Botão para aplicar o filtro nos filhotes que já estão na caixa de Chocados.", "Gengar, Spiritomb e Runerigus agora andam no chão (antes flutuavam)."]}, {"v": "1.2.1", "d": "31/10/2026", "i": ["Tela pós-batalha: saiu o botão \"Explorar sem curar\"; fica só \"💗 Curar e explorar\" (ou \"🔁 Explorar de novo\" quando o time está inteiro)."]}, {"v": "1.2", "d": "31/10/2026", "i": ["PC com duas caixas: 📦 Capturados e 🥚 Chocados (Pokémon que nasceram dos ovos da Creche).", "Na caixa de Chocados, cada Pokémon mostra quantos IVs perfeitos tem (3V, 4V, 5V, 6V).", "Botão na ficha para mover um Pokémon entre as caixas. Saves antigos: os Pokémon de nível 1 foram para Chocados automaticamente."]}, {"v": "1.1.1", "d": "30/10/2026", "i": ["Tela pós-batalha: botão \"💗 Curar e explorar\" (cura o time e já começa a próxima luta) quando alguém do time está machucado."]}, {"v": "1.1", "d": "30/10/2026", "i": ["Lendários errantes, como nos jogos oficiais: Raikou, Entei e Suicune (Johto), Latias e Latios (Hoenn), Mesprit e Cresselia (Sinnoh), Tornadus e Thundurus (Unova), Articuno, Zapdos e Moltres (Kalos).", "Aparecem de surpresa nas batalhas selvagens da região (cerca de 1 em 22), com entrada de susto (alerta, coração batendo, silhueta correndo).", "Fogem depois de 30 s de batalha; a vida que perderam continua perdida no próximo encontro. O shiny é sorteado uma vez só.", "Nas Expedições, os errantes aparecem como \"🌀 Vagando\"."]}, {"v": "1.0", "d": "30/10/2026 (lançamento)", "i": ["🎉 Nasce o <b>PokéBATTLE</b>! Batalhas em tempo real, estilo anime: seu Pokémon se move e desvia sozinho, e você grita o golpe.", "Aventura por <b>9 regiões</b> (Kanto a Paldea) com as áreas oficiais, Líderes de Ginásio, Elite dos Quatro e Campeões, todos com sprites.", "<b>Campeões épicos:</b> entrada de cinema, música própria, o Ás com aura dourada e o <b>Hall da Fama</b> na vitória. Líderes alternativos a cada temporada da Liga.", "<b>Lendários e Míticos:</b> encontro de cinema (silhueta, clarão e revelação), aura na batalha, rugidos de fúria e cartão de captura.", "<b>Creche</b> com ovos, IVs e EVs oficiais, Pokérus e shinies com as chances oficiais (Ditto shiny vale como Método Masuda).", "Efeitos de luz nos golpes e partículas de ambiente em cada arena.", "Saves do antigo \"Poké Paradise\" continuam funcionando."]}];
+const GAME_NAME = 'PokéBATTLE', GAME_VERSION = '1.14';
+const CHANGELOG = [{"v": "1.14", "d": "05/11/2026", "i": ["🌐 <b>Amigos online:</b> cada jogador ganha um <b>código de 6 letras</b> (ex.: K7Q2MX), que é o mesmo para sempre. Adicione um amigo uma vez pelo código e o jogo sempre mostra o <b>time mais recente</b> e as <b>conquistas</b> dele.", "Para lutar, é só tocar em <b>Batalhar</b> no amigo: o jogo carrega o último time salvo dele. O placar de vocês continua contando.", "O seu time e as suas conquistas são enviados sozinhos quando mudam. Ao abrir a aba Amigos, os times dos amigos são atualizados (ou toque em 🔄 Atualizar).", "Perfil do amigo com insígnias, regiões campeãs, Pokédex, shinies, ribbons, recorde da Torre, títulos da Liga, medalhas e Pokémon perfeitos.", "Segurança: os dados ficam no Firebase com regras que deixam cada jogador mexer só no próprio perfil, e ninguém consegue pegar o código de outro. Guardamos só dados do jogo, sem e-mail nem login.", "Os Amigos online funcionam no app (niinty.github.io/pokebattle). O código longo continua disponível, recolhido no fim da aba Amigos, junto com os times de PvP.", "❌ <b>O PvP em tempo real foi removido</b> do jogo, substituído pelos Amigos online."]}, {"v": "1.13.1", "d": "05/11/2026", "i": ["🗂️ <b>Escolher o par na Creche ficou separado por abas:</b> Time, Capturados, Chocados e Pessoal, como no PC, em vez de tudo misturado numa lista só.", "A Creche abre direto no <b>Pessoal</b> quando você tem Pokémon lá (senão, em Capturados) e lembra a aba escolhida."]}, {"v": "1.13", "d": "05/11/2026", "i": ["🔍 <b>Card na Creche:</b> segure o dedo num Pokémon da Creche para abrir o card completo dele, com atributos, IVs, natureza, habilidade e golpes. Assim dá para decidir se vale trocar por outro.", "Funciona nos dois que estão cruzando e também nos Pokémon da lista de escolha. Para comparar, segure um candidato e veja o card antes de colocá-lo.", "No card aberto pela Creche há os botões \"Retirar da Creche\" ou \"Deixar na Creche\". O toque rápido continua funcionando como antes."]}, {"v": "1.12.2", "d": "05/11/2026", "i": ["🔧 <b>Corrigido: Quick Ball voltando a valer depois de trocar de Pokémon.</b> Antes, cada troca recomeçava o relógio da batalha, e a Quick Ball ganhava o bônus de ×5 de novo. Agora o tempo continua contando com o mesmo selvagem, e o bônus vale só nos primeiros 6 segundos do encontro.", "A Timer Ball também deixou de perder o bônus quando você troca de Pokémon."]}, {"v": "1.12.1", "d": "05/11/2026", "i": ["🔥 <b>Flame Body e Magma Armor na Creche:</b> agora também valem com o Pokémon deixado na Creche, e não só no time.", "O efeito muda na hora também os ovos que já estão na incubadora (antes só valia para os ovos que entravam depois).", "A incubadora mostra o aviso \"🔥 2× mais rápido\" com o nome de quem está ajudando."]}, {"v": "1.12", "d": "05/11/2026", "i": ["✨ <b>Chain ajuda a achar habilidade oculta:</b> a chance normal de um selvagem vir com a habilidade oculta é 5%. Com a chain ela sobe para <b>10%</b> a partir da chain 10, <b>15%</b> a partir da 20 e <b>20%</b> a partir da 30.", "A mensagem da chain avisa quando a chance da habilidade oculta sobe.", "A Creche continua sendo o caminho mais garantido (até 60% com a mãe de habilidade oculta)."]}, {"v": "1.11.2", "d": "04/11/2026", "i": ["🔧 <b>Corrigido: Pokémon presos com 3 golpes.</b> Quando um Pokémon aprendia um golpe que ele também aprende por nível (por exemplo, uma Roselia com Giga Drain que evoluiu para Roserade), um golpe sumia e o 4º espaço não enchia mais: ensinar um golpe novo ali trocava outro golpe. Agora o espaço vazio enche normalmente, em todos os Pokémon.", "Os Pokémon que já estavam presos com 3 golpes são arrumados sozinhos ao abrir o jogo; alguns recuperam na hora o golpe que tinha sumido.", "O TM não deixa mais ensinar um golpe que o Pokémon já sabe (antes isso fazia ele ficar com um golpe a menos)."]}, {"v": "1.11.1", "d": "04/11/2026", "i": ["❤️ <b>Curar na barra de baixo:</b> o botão de curar o time (Centro Pokémon) agora fica na barra de baixo, no lugar da Loja.", "🛒 A <b>Loja</b> foi para o menu \"Mais\" (os três pontinhos)."]}, {"v": "1.11", "d": "04/11/2026", "i": ["🌟 <b>Ribbon do Pokémon perfeito:</b> a <b>Battle Royal Master Ribbon</b> agora é reservada ao Pokémon completamente treinado: <b>6 IVs perfeitos</b>, <b>EVs no máximo (510)</b> e <b>shiny</b>. Ela fica numa seção nova, \"🌟 Pokémon perfeito\", no topo da vitrine de Ribbons.", "Ao tocar nela, a vitrine mostra o que já foi cumprido e o que falta (IVs, EVs e shiny).", "Quando o Pokémon conquista essa fita, ela vai automaticamente para o lado do nome dele.", "Quem tinha essa fita pela regra antiga (derrotar os 18 tipos) e não é perfeito perde a fita; ela fica só com os Pokémon perfeitos."]}, {"v": "1.10.1", "d": "04/11/2026", "i": ["🧢 <b>O rival Kai agora tem um visual só dele:</b> nas batalhas contra ele aparece sempre o mesmo treinador (cabelo castanho espetado e jaqueta vermelha), em vez de um treinador sorteado.", "Kai também chega andando antes da luta, como os Líderes, e aparece na tela de convite para a batalha e na Liga quando ele é o Campeão."]}, {"v": "1.10", "d": "04/11/2026", "i": ["⚖️ <b>Chain e Creche, cada uma com o seu papel:</b> a chain é o caminho para achar <b>shinies</b>; a Creche é o caminho para deixar um Pokémon <b>forte de verdade</b>. Quem quer um time competitivo vai usar as duas.", "✦ <b>Herança de shiny na Creche:</b> com um dos pais shiny, a chance de ovo shiny vai para <b>1 em 64</b>; com os dois pais shiny, <b>1 em 16</b> (antes era 1 em 4.096). Use os shinies da chain como pais!", "🧬 <b>Itens Power na Creche, como nos jogos:</b> quem segura um item Power (Power Bracer, Power Lens, Power Weight…) passa aquele IV para o filhote com certeza. Junto com a Destiny Knot (5 IVs herdados), é o caminho para os 5 ou 6 IVs perfeitos.", "✨ <b>Habilidade oculta por ovo:</b> o filhote tem 20% de chance de nascer com a habilidade oculta da espécie (60% se a mãe já tiver a oculta). Na natureza ela continua rara.", "⚔️ <b>Golpes de ovo à mostra:</b> a Creche agora mostra quais golpes dos pais o filhote pode herdar (até 2).", "🔥 <b>Ovos mais rápidos:</b> com um Pokémon de <b>Flame Body</b> ou <b>Magma Armor</b> no time, os ovos chocam 2× mais rápido. E cada vitória em batalha adianta os ovos da incubadora.", "🥚 Quem nasceu na Creche ganha o selo <b>\"Nascido de ovo\"</b> no card.", "⛓ <b>Chain com IVs garantidos:</b> a partir da chain 10, o Pokémon da chain vem com <b>1 IV perfeito garantido</b>; a partir da chain 20, com <b>2</b>. Mais que isso, só pela Creche.", "📈 Subir IVs capturando outro da mesma família agora vai até <b>3 IVs perfeitos</b> (os outros chegam no máximo a 30). Para mais, use a Creche ou a Bottle Cap."]}, {"v": "1.9.7", "d": "04/11/2026", "i": ["⚡ <b>PC bem mais leve:</b> as miniaturas dos Pokémon agora só são redesenhadas quando a animação muda de quadro (antes eram redesenhadas 60 a 120 vezes por segundo) e ficam paradas enquanto você rola a tela.", "✨ <b>Shinies sem travar:</b> a miniatura shiny recolore só o desenho que aparece, em vez da folha inteira de animações. Com muitos shinies no PC, o trabalho caiu pela metade.", "🖼️ Os desenhos dos Pokémon são preparados em segundo plano antes de aparecer, e a próxima página do PC já vai sendo carregada enquanto você olha a atual.", "🌿 <b>Moradores da rota e Pokédex sem engasgos:</b> nessas listas grandes os desenhos ficam parados (são desenhados uma vez só) e os pacotes de desenhos são carregados um de cada vez, com uma pausinha entre eles, então rolar a página não trava mais em rotas com muitos Pokémon.", "🪶 No <b>Modo leve</b>, as miniaturas ficam paradas (ainda mais leve para celulares mais fracos)."]}, {"v": "1.9.6", "d": "04/11/2026", "i": ["🧹 <b>Revisão geral do jogo:</b> todas as telas foram conferidas, no tema claro e no escuro, e mais de mil botões foram testados.", "✏️ Textos atualizados: o aviso de time desmaiado agora manda tocar em <b>❤️ Curar, no topo</b> (o Centro saiu da barra de baixo), o Cartão de Treinador mostra <b>PokéBATTLE</b> (estava com o nome antigo) e a dica dos Desafios fala também do PvP em tempo real.", "🥚 O ícone da Creche na barra de baixo voltou a mostrar as manchinhas do ovo no tema claro.", "🔝 Títulos inteiros no topo: o dinheiro aparece só onde importa (Mapa, Loja, Mochila, Treinador e Tutor) e o ícone de dia/noite só no Mapa e na Rota. Antes, títulos como \"Nugget Bridge\" e \"Expedições Lendárias\" ficavam cortados.", "▶ Depois de vencer uma região, o botão <b>Continuar</b> do Mapa leva direto para a próxima região.", "🗑️ \"Recomeçar aventura do zero\" saiu do fim do Mapa e foi para as <b>Configurações</b> (com confirmação), para não ser tocado sem querer.", "🎀 A Ribbon na placa da batalha ficou menor, para o nome do Pokémon caber.", "❤️ Na Rota fica só um botão de curar (antes apareciam dois iguais).", "🛒 A Loja ficou mais limpa (saiu uma frase repetida).", "🪶 Os últimos restos escondidos da Batalha livre saíram do jogo, que ficou mais leve."]}, {"v": "1.9.5", "d": "04/11/2026", "i": ["⭐ <b>Pessoal também para o time:</b> no card de um Pokémon do time agora tem <b>Mandar para o Pessoal</b>, que leva ele direto para a caixa Pessoal do PC.", "🥚 <b>Chocados só para ovos:</b> o botão de mover para Chocados saiu. Os Pokémon que nascem dos ovos vão sempre para a caixa Chocados do PC, mesmo que o time tenha menos de 6.", "🗑️ <b>Soltar com confirmação:</b> o botão Soltar ficou por último no card e agora abre uma janela perguntando se você tem certeza (avisa também se ele é shiny, lendário ou se está segurando um item).", "✏️ Textos da caixa Pessoal arrumados (os espaços estavam errados)."]}, {"v": "1.9.4", "d": "04/11/2026", "i": ["🃏 <b>Card do Pokémon:</b> a caixa de Treino (EVs) saiu, porque os EVs já aparecem na coluna EV dos Atributos. Experiência de batalha, Habilidade e Item segurado agora ficam lado a lado numa linha só."]}, {"v": "1.9.3", "d": "04/11/2026", "i": ["🃏 <b>Card do Pokémon mais limpo:</b> a Natureza (com o atributo que ela sobe ▲ e o que ela desce ▼) e a nota dos IVs saíram de dentro do quadro de Atributos e ganharam caixinhas próprias, logo acima dele.", "⭐ <b>Experiência de batalha:</b> agora mostra só as estrelas. Segure o dedo em cima para ver o nível e o número de batalhas.", "✨ <b>Habilidade:</b> mostra só o nome. Segure o dedo em cima para ler o que ela faz.", "🧬 <b>Evolução:</b> a caixa ocupa a largura toda do card, com o texto numa linha (sem aquela coluna alta)."]}, {"v": "1.9.2", "d": "04/11/2026", "i": ["⭐ <b>Caixa Pessoal no PC:</b> uma terceira caixa, ao lado de Capturados e Chocados, para guardar os Pokémon que você quer treinar e não perder eles no meio dos outros.", "⭐ Para mandar um Pokémon para lá, abra ele no PC e toque em <b>Mover para Pessoal</b>. Para mandar vários, segure um, marque os outros e toque em <b>⭐ Pessoal</b>.", "↩ Para tirar, use <b>Voltar para Capturados</b> (ou Chocados) no card, ou selecione vários dentro da caixa Pessoal e toque em <b>Tirar do Pessoal</b>.", "Quem vai para o time e volta para o PC continua na caixa Pessoal."]}, {"v": "1.9.1", "d": "04/11/2026", "i": ["🎀 <b>Ribbons consertadas:</b> os desenhos das Ribbons voltaram a aparecer em todas as telas (no card do Pokémon, na vitrine de Ribbons e no resultado das batalhas).", "🎀 A Ribbon em exibição agora aparece na frente do nome também na lista do Time e na placa da batalha."]}, {"v": "1.9", "d": "04/11/2026", "i": ["✨ <b>Interface nova, mais leve:</b> menos informação na tela e tudo a um toque, pensada para o celular.", "🧭 <b>Barra de baixo numa linha só:</b> Mapa, Time, PC, Mochila, Loja, Creche e <b>Mais</b>. O \"Mais\" abre Desafios, Pokédex, Treinador e Centro. Quando algo lá dentro tem novidade, a bolinha vermelha aparece no \"Mais\".", "🔝 <b>Topo e cabeçalhos enxutos:</b> cada tela mostra só voltar, o título, o dinheiro e o ícone de dia/noite. A Pokédex aparece no Mapa e na própria Pokédex.", "❤️ <b>Botão Curar no topo:</b> aparece no Mapa, na Rota e no Time quando algum Pokémon está ferido.", "🗺️ <b>Mapa mais limpo:</b> cada rota mostra só o nível, o progresso e as capturas; o que ainda está bloqueado fica recolhido em \"Ver o que vem depois\". O aviso de ovo da Creche virou só a bolinha vermelha no ícone.", "💡 <b>Dicas menores:</b> viraram uma faixa fina que fecha no ✕.", "🧹 <b>A Batalha livre saiu do jogo:</b> agora o PokéBATTLE é só a Aventura, o que libera espaço no topo e deixa o jogo abrir mais rápido."]}, {"v": "1.8", "d": "04/11/2026", "i": ["⚡ <b>PvP em tempo real</b> (no app do site): lute ao vivo contra um amigo, cada um no seu aparelho. Em Desafios › Amigos, um jogador toca em <b>Criar sala</b> e manda o convite; o outro toca em <b>Entrar com convite</b>, cola e devolve a resposta. Pronto: os dois entram na mesma luta.", "🎮 <b>Regras do tempo real:</b> sem itens. Cada jogador escolhe os golpes (ou deixa no automático) e pode <b>trocar de Pokémon 1 vez contra cada Pokémon do adversário</b>. Quando um Pokémon desmaia, o dono escolhe o próximo. Vale o time de PvP escolhido e a opção \"Nivelar no 50\" de quem criou a sala.", "🔒 <b>Segurança:</b> a ligação é direta entre os dois aparelhos, protegida pelo navegador, sem servidores nem programas de fora no meio. Só o time e o nome de treinador são enviados (nada do save, da mochila ou do dinheiro), e tudo que chega do outro aparelho é conferido. A luta não dá nem tira itens ou dinheiro: só conta vitórias e derrotas.", "📊 Histórico de vitórias e derrotas no tempo real, no card do PvP.", "ℹ️ Aqui no Claude o PvP por código continua igual; o tempo real fica no app do site."]}, {"v": "1.7.2", "d": "04/11/2026", "i": ["💊 <b>Revive na batalha:</b> Revive, Max Revive e Sacred Ash agora podem ser usados durante a luta, pelo botão 🎒 Itens. Escolha quem do time desmaiado vai voltar; depois é só usar ⇄ Trocar para chamá-lo.", "🆘 <b>Última chance:</b> se todo o seu time desmaiar e você tiver um Revive na mochila, o jogo pergunta se você quer reviver alguém (até quem acabou de cair) e continuar a luta, em vez de perder na hora.", "🟣 <b>Master Ball com confirmação:</b> antes de jogar, o jogo pergunta se você quer mesmo usar a Master Ball, para ela não ser gasta por um toque sem querer."]}, {"v": "1.7.1", "d": "04/11/2026", "i": ["📚 <b>Guia de itens:</b> uma biblioteca com todos os itens do jogo, o que cada um faz e <b>onde comprar ou encontrar</b>: Pokémart (a partir de qual rota e por quanto), troca por PB, prêmios de batalha (com a chance), Pokémon selvagens que carregam o item, Ginásios, Rival, Liga, Equipe Rocket, Copas, Desafio do dia e prêmios da Pokédex. Abra pelo botão 📚 na Mochila ou na Loja.", "🔎 <b>Busca completa no guia:</b> procure pelo nome do item (em inglês ou pelo jeito que o jogo chama), pelo efeito (\"cura\", \"vender\") ou pelo <b>nome de um Pokémon</b> (ex.: \"Feebas\" mostra a Prism Scale). A busca aceita erros de digitação. Tem filtro por tipo de item e a opção \"Só os que eu tenho\".", "🧬 Os itens de evolução mostram no guia quais Pokémon fazem evoluir.", "🔗 O Cabo de Ligação ganhou um ícone novo (a Link Stone).", "🌙 Modo escuro: os times de PvP na aba Amigos agora ficam legíveis."]}, {"v": "1.7", "d": "04/11/2026", "i": ["🎨 <b>Cenários remasterizados:</b> o chão de todas as arenas foi redesenhado com formas mais definidas, contorno, luz e sombra, no mesmo estilo dos sprites dos Pokémon. O tamanho das arenas e o lugar dos obstáculos continuam iguais.", "🌿 Campo com clareiras de terra, trevos, tufos de grama e flores em grupinhos; Selva com samambaias, cogumelos, folhas caídas e poças de lama com reflexo.", "🪨 Pedreira com lajes de pedra e pedrinhas brilhando; Montanha com neve que faz sombra; Geleira com placas de gelo liso, rachaduras e montes de neve.", "🌊 Lago com cristas de onda, vitórias-régias com flor e taboas nas beiradas; Vulcão com placas de basalto e lava pulsando nas frestas; Ruínas com ladrilhos chanfrados, musgo nas juntas e runas no círculo do centro.", "🌳 <b>Obstáculos novos no visual:</b> rochas lapidadas com faces de luz e sombra, árvores e arbustos feitos de tufos de folhas (com cipós na Selva), cristais de gelo com três faces e colunas com base em degraus, capitel e trepadeiras. Eles continuam rachando em etapas quando levam golpes.", "🌵 <b>Arena nova: Deserto</b>, com dunas, cactos e mesas de arenito ao fundo.", "💎 <b>Arena nova: Caverna</b>, com paredão de rocha e cristais roxos que cintilam durante a luta.", "🏆 As arenas novas aparecem nas lutas com arena sorteada: Torre, Copa, Desafio do dia, batalhas com amigos e o Campeão da Liga."]}, {"v": "1.6.7", "d": "04/11/2026", "i": ["💿 <b>Filtro de TMs por tipo</b> na Loja e na Mochila: toque no tipo (Fogo, Água, Pedra...) para ver só os TMs daquele tipo, com a quantidade de cada um. Na Mochila os TMs ficam em ordem de número.", "💾 <b>Filtros salvos:</b> as abas e os filtros que você escolhe (abas da Loja e da Mochila, tipo dos TMs, caixa e filtros do PC e os filtros da Pokédex) ficam guardados e voltam iguais quando você abre o jogo de novo."]}, {"v": "1.6.6", "d": "04/11/2026", "i": ["💻 <b>PC reorganizado:</b> as caixas Capturados e Chocados ficam no topo, e a busca e o botão <b>Filtros</b> ficam numa linha só. Tipo, ordem e \"só shinies\" agora abrem num painel e só aparecem quando você quer; os filtros ligados ficam visíveis como etiquetas, com \"limpar\". A troca de caixa (‹ ›) foi para baixo da grade. Os Pokémon aparecem bem mais acima na tela.", "✋ <b>Segure um Pokémon do PC para selecionar:</b> ele entra marcado e você toca nos outros para marcar mais. A barra de seleção fica presa no topo, com Soltar, marcar a caixa, marcar todos e desmarcar.", "🗑️ O card de um Pokémon do PC agora tem o botão <b>Soltar</b> (com confirmação), além de Levar para o time e Mover para Chocados/Capturados."]}, {"v": "1.6.5", "d": "04/11/2026", "i": ["🔴 Pokébolas com os desenhos oficiais de novo, agora incluindo a Poké Ball e as novas Lure, Heavy, Friend e Luxury Ball."]}, {"v": "1.6.4", "d": "04/11/2026", "i": ["⚪ 4 Pokébolas novas na Loja (a partir da 7ª rota): <b>Lure Ball</b> (×4 em Pokémon de Água), <b>Heavy Ball</b> (melhor quanto maior o Pokémon, até ×4), <b>Friend Ball</b> (o Pokémon chega com bastante amizade) e <b>Luxury Ball</b> (a amizade cresce em dobro depois)."]}, {"v": "1.6.3", "d": "04/11/2026", "i": ["🔴 A Poké Ball agora usa o desenho oficial nos menus, na mochila, na loja, nos botões da batalha e nas marcações de captura das rotas. O desenho pixelado ficou só na animação da bola sendo arremessada."]}, {"v": "1.6.2", "d": "04/11/2026", "i": ["🏁 Corrigido: com o time cheio, a tela depois da batalha ficava torta e cortada nas laterais. Agora os Pokémon aparecem em duas colunas e tudo cabe na tela."]}, {"v": "1.6.1", "d": "03/11/2026", "i": ["🌙 Corrigido: no modo escuro, a vitrine de Ribbons, o aviso de Ribbon nova depois da batalha e a faixa de Ribbons no card do Pokémon ficavam ilegíveis. Agora têm cores próprias para o modo escuro.", "🏁 Tela depois da batalha mais compacta: tudo aparece numa tela só, sem precisar rolar. As Ribbons novas aparecem em duas colunas."]}, {"v": "1.6", "d": "03/11/2026", "i": ["⛓ <b>Chains com o DexNav</b> (novo item na Loja PB, 20 PB): derrote o mesmo Pokémon selvagem 2 vezes seguidas para começar uma chain. Cada ponto deixa a espécie mais comum (até 70% dos encontros).", "✨ Shiny pela chain: a partir da chain 49 a espécie tem <b>30% de chance de ser shiny</b>, e a partir da 99, <b>70%</b>. Vale para formas iniciais (quem não é evolução de outro), lendários (30% na chain 99 e 70% na 199) e míticos (15% na chain 199). Com chain ativa, dá para enfrentar o lendário de novo sem seguir rastros.", "A chain quebra ao derrotar outra espécie. Fugir, capturar outro Pokémon ou lutar com treinadores não quebra; capturar a própria espécie da chain conta +1. A chain aparece na placa da batalha e na tela da rota.", "🖼️ <b>Retratos novos com expressões:</b> a foto ao lado da barra de vida agora é um retrato desenhado de cada Pokémon (normal e shiny) que reage à luta: dor ao levar dano, determinado ou gritando ao atacar, inspirado com golpes de status, feliz ao ficar mais forte, olhos fechados dormindo, tonto quando confuso, com lágrimas com pouca vida, chorando ao desmaiar e comemorando ao vencer.", "✨ <b>Habilidades revisadas:</b> agora <b>todos</b> os Pokémon têm habilidade (o Gengar ganhou Cursed Body, por exemplo). São mais de 130 habilidades novas funcionando de verdade: Disguise, Stance Change (Aegislash vira Forma Lâmina ao atacar), Schooling, Protean, Beast Boost, as Ruínas, Shadow Tag (não deixa fugir), Magic Bounce, Moxie, Imposter, Trace e muitas outras. Quem estava sem habilidade recebe uma automaticamente.", "⚔️ <b>Mais de 160 golpes novos</b>, com animações próprias: Fire Punch, Ice Fang, Knock Off, Drain Punch, Leaf Blade, Scald, Shadow Sneak, Bullet Punch, Dragon Darts, Explosion, Quiver Dance, Shell Smash, Defog e muito mais. Muitos viraram TMs novos (agora são 199) e outros estão no Tutor de golpes. A numeração dos TMs mudou, mas os que você já tem continuam valendo.", "🌟 <b>Golpes-assinatura:</b> cerca de 50 Pokémon famosos ganharam o golpe próprio deles, como V-create (Victini), Pyro Ball (Cinderace), Dragon Ascent (Rayquaza), Thousand Arrows (Zygarde), Make It Rain (Gholdengo), Psycho Boost (Deoxys), Spectral Thief (Marshadow) e Sacred Sword (Gallade e os Espadachins).", "🎲 <b>Golpes mais variados:</b> os Pokémon selvagens e de treinadores também aprendem os golpes novos por nível. Cerca de 800 espécies ganharam listas de golpes diferentes, sempre com golpes do próprio tipo. Os seus Pokémon também passam a usar a lista nova (golpes ensinados por TM ou Tutor continuam onde estão).", "🎀 <b>Ribbons!</b> São 107 fitas de conquista, e cada Pokémon tem a própria coleção. Abra pelo botão <b>🎀 Ribbons</b> no card do Pokémon. Lá dá para ver o que falta para cada uma (com barra de progresso) e escolher uma para exibir ao lado do nome, no card e na batalha.", "🎀 Tipos de Ribbon: <b>Batalhas</b> (100, 500 e 1.000 vitórias, sequências sem desmaiar, vencer quem tinha vantagem de tipo, derrotar os 18 tipos, lendários...), <b>Campeões</b> (uma por Liga, mais as de 5 e 9 regiões), <b>Estilo de luta</b> (as fitas de concurso Cool, Beauty, Cute, Smart e Tough, em 4 níveis cada), <b>Mundo</b> (regiões, arenas, sol e chuva), <b>Vida com você</b> (inicial, nascido de ovo, nível 100, EVs completos, 30 dias juntos...), <b>Eventos</b> (Carnaval, Festa Junina, Halloween, Natal e Ano Novo) e <b>Loja</b> (Gorgeous, Royal e Gorgeous Royal).", "🎒 <b>Ícones novos dos itens:</b> todos os itens agora usam os desenhos oficiais.", "🍓 <b>Mais de 150 itens novos, com os efeitos oficiais:</b> frutas (as que enfraquecem golpes super efetivos, as de pouca vida como Liechi e Salac, as que curam status, Oran, Figy, Enigma, Jaboca, Kee...) e itens segurados (Black Sludge, Flame Orb, Toxic Orb, White Herb, Mental Herb, Power Herb, Weakness Policy, Focus Band, Big Root, Light Clay, pedras de clima, Terrain Extender, Protective Pads, Safety Goggles, Smoke Ball, Soothe Bell, Razor Claw, Wide Lens, Thick Club, Soul Dew e as Orbs de Dialga, Palkia e Giratina).", "🗿 <b>Plates, Memories e Gems:</b> com uma Plate, o Arceus vira do tipo dela (e o Judgment também). As Memories fazem o mesmo com o Silvally. As Gems fortalecem o primeiro golpe do tipo delas.", "💊 <b>Remédios e itens de batalha:</b> Full Restore, bebidas (Fresh Water, Soda Pop, Lemonade e Moomoo Milk), Sacred Ash, Full Heal, Antidote, Burn Heal, Ice Heal, Awakening, Paralyze Heal, X Attack, X Defense, X Sp. Atk, X Sp. Def, X Speed, Dire Hit e Guard Spec. Na luta, use pelo novo botão <b>🎒 Itens</b>.", "💰 <b>Tesouros:</b> Nugget, Pearl, Star Piece, Comet Shard, cogumelos e outros aparecem às vezes depois das batalhas e vendem na nova aba <b>💰 Vender</b> da Pokémart.", "💎 <b>Loja PB:</b> Ability Capsule (troca a habilidade pela outra da espécie), Bottle Cap (leva o IV mais baixo a 31), Oval Charm (mais ovos na Creche), Soul Dew e as Orbs lendárias.", "🧢 <b>Treinadores com visual:</b> nas batalhas contra treinadores comuns, um dos 253 treinadores novos é sorteado e fica no canto da arena durante a luta.", "🔴 <b>Raio de recolha refeito:</b> a Pokébola aparece aberta, o raio vermelho sai ondulando com energia correndo por ele, o Pokémon vira luz e encolhe numa esfera, volta pelo raio até a bola, e ela se fecha com um estalo.", "📋 <b>Ficha do Pokémon mais compacta:</b> cabe inteira na tela do celular, sem rolar, e mostra o número da Pokédex (Nº 006).", "🎓 Corrigido: o Tutor de golpes às vezes gastava a Heart Scale e o golpe não voltava."]}, {"v": "1.5.5", "d": "01/11/2026", "i": ["Voadores que têm pernas agora andam no chão em vez de voar: Charizard, Dragonite, Salamence, Togetic, Tropius, Emolga e Celesteela."]}, {"v": "1.5.4", "d": "01/11/2026", "i": ["Visual: o nível dos Pokémon (Nv.) agora usa uma fonte mais grossa, maior e mais clara, fácil de ler no time, no PC e nas placas de batalha."]}, {"v": "1.5.3", "d": "01/11/2026", "i": ["Corrigido: os botões da tela do Tutor de golpes (Voltar, Relembrar, comprar e escolher o golpe) não respondiam ao toque."]}, {"v": "1.5.2", "d": "01/11/2026", "i": ["Item novo: <b>Fresh-Start Mochi</b>. Zera todos os EVs do Pokémon de uma vez para recomeçar o treino. Na Loja (₽ 8.000, a partir da 5ª rota) e na Loja PB (4 PB)."]}, {"v": "1.5.1", "d": "01/11/2026", "i": ["📜 Novidades: as notas de cada atualização ficam nas Configurações, e o jogo mostra o que mudou na primeira vez que você abre uma versão nova."]}, {"v": "1.5", "d": "01/11/2026", "i": ["🎓 Tutor de golpes (na ficha de cada Pokémon): relembrar golpes já conhecidos/por nível/de ovo por 1 Heart Scale; golpes de tutor (não-TM) por PB ou ₽.", "Golpes de ovo: o filhote herda até 2 golpes que os pais sabem e que ele pode usar.", "Item novo: Heart Scale (Loja, Loja PB e queda nas batalhas). Presente de 3 Heart Scales para quem já joga."]}, {"v": "1.4", "d": "01/11/2026", "i": ["Shiny Charm agora sai ao ter um shiny de cada uma das 9 regiões (a espécie tem que ser da região). Completar a Pokédex continua valendo.", "Aviso a cada região nova conquistada e progresso no Cartão de Treinador."]}, {"v": "1.3.2", "d": "31/10/2026", "i": ["Tela da rota mais compacta: o time inteiro numa fileira só, o botão do chefe trancado numa linha e o aviso do horário numa linha."]}, {"v": "1.3.1", "d": "31/10/2026", "i": ["Mapa mais leve: Expedições Lendárias numa faixa fina e as regiões numa linha só, que rola para o lado.", "App instalável (GitHub Pages) que funciona offline."]}, {"v": "1.3", "d": "31/10/2026", "i": ["Creche: 🧹 Filtro de filhotes. Guarda só shinies e filhotes com o mínimo de IVs perfeitos escolhido (1V a 6V) e, se quiser, uma natureza. Os outros são soltos ao chocar.", "Botão para aplicar o filtro nos filhotes que já estão na caixa de Chocados.", "Gengar, Spiritomb e Runerigus agora andam no chão (antes flutuavam)."]}, {"v": "1.2.1", "d": "31/10/2026", "i": ["Tela pós-batalha: saiu o botão \"Explorar sem curar\"; fica só \"💗 Curar e explorar\" (ou \"🔁 Explorar de novo\" quando o time está inteiro)."]}, {"v": "1.2", "d": "31/10/2026", "i": ["PC com duas caixas: 📦 Capturados e 🥚 Chocados (Pokémon que nasceram dos ovos da Creche).", "Na caixa de Chocados, cada Pokémon mostra quantos IVs perfeitos tem (3V, 4V, 5V, 6V).", "Botão na ficha para mover um Pokémon entre as caixas. Saves antigos: os Pokémon de nível 1 foram para Chocados automaticamente."]}, {"v": "1.1.1", "d": "30/10/2026", "i": ["Tela pós-batalha: botão \"💗 Curar e explorar\" (cura o time e já começa a próxima luta) quando alguém do time está machucado."]}, {"v": "1.1", "d": "30/10/2026", "i": ["Lendários errantes, como nos jogos oficiais: Raikou, Entei e Suicune (Johto), Latias e Latios (Hoenn), Mesprit e Cresselia (Sinnoh), Tornadus e Thundurus (Unova), Articuno, Zapdos e Moltres (Kalos).", "Aparecem de surpresa nas batalhas selvagens da região (cerca de 1 em 22), com entrada de susto (alerta, coração batendo, silhueta correndo).", "Fogem depois de 30 s de batalha; a vida que perderam continua perdida no próximo encontro. O shiny é sorteado uma vez só.", "Nas Expedições, os errantes aparecem como \"🌀 Vagando\"."]}, {"v": "1.0", "d": "30/10/2026 (lançamento)", "i": ["🎉 Nasce o <b>PokéBATTLE</b>! Batalhas em tempo real, estilo anime: seu Pokémon se move e desvia sozinho, e você grita o golpe.", "Aventura por <b>9 regiões</b> (Kanto a Paldea) com as áreas oficiais, Líderes de Ginásio, Elite dos Quatro e Campeões, todos com sprites.", "<b>Campeões épicos:</b> entrada de cinema, música própria, o Ás com aura dourada e o <b>Hall da Fama</b> na vitória. Líderes alternativos a cada temporada da Liga.", "<b>Lendários e Míticos:</b> encontro de cinema (silhueta, clarão e revelação), aura na batalha, rugidos de fúria e cartão de captura.", "<b>Creche</b> com ovos, IVs e EVs oficiais, Pokérus e shinies com as chances oficiais (Ditto shiny vale como Método Masuda).", "Efeitos de luz nos golpes e partículas de ambiente em cada arena.", "Saves do antigo \"Poké Paradise\" continuam funcionando."]}];
 addEventListener('DOMContentLoaded', () => { for (const id of ['gVer', 'gVer2']) { const e = document.getElementById(id); if (e) e.textContent = (id === 'gVer2' ? 'Versão ' : 'v') + GAME_VERSION; } });
 // modo leve (celulares mais fracos): menos efeitos, sem músicas, 30 quadros por segundo
 var LITE = false; try { LITE = localStorage.getItem('arena-leve') === 'on'; } catch (e) {}
@@ -10861,7 +10866,6 @@ function buildMoves() {
   });
 }
 function use(k) {
-  if (game && game.rt) { if (!rtUse(k)) { const b = $('mv-' + k); if (b) { b.classList.remove('nope'); void b.offsetWidth; b.classList.add('nope'); } } return; }
   if (!game || demo || paused || game.countdown > 0) return;
   if (game.clash) { game.pushClash(); return; }
   if (!game.command(k)) { const b = $('mv-' + k); b.classList.remove('nope'); void b.offsetWidth; b.classList.add('nope'); }
@@ -10889,8 +10893,8 @@ function updMoves() {
 }
 
 // (v1.9.6) a Batalha livre saiu: o jogo é só a Aventura
-function setPause(v) { if (v && game && game.rt) return; paused = v; $('tPause').setAttribute('aria-pressed', v); }
-function setAuto(v) { autoOn = v; if (game && game.rt) { if (typeof rtAuto === 'function') rtAuto(v); } else if (game && !demo) game.p.auto = v; $('tAuto').setAttribute('aria-pressed', v); }
+function setPause(v) { paused = v; $('tPause').setAttribute('aria-pressed', v); }
+function setAuto(v) { autoOn = v; if (game && !demo) game.p.auto = v; $('tAuto').setAttribute('aria-pressed', v); }
 
 cv.addEventListener('pointerdown', ev => {
   if (!game || demo) return;
@@ -13238,7 +13242,7 @@ const TIPS = {
   bag: ['👜 Mochila', 'Aqui você usa itens fora da batalha: poções, pedras de evolução, o Cabo de Ligação e os TMs (golpes novos).'],
   shop: ['🛒 Loja', 'A Loja ganha itens novos conforme você avança na história. Dinheiro vem das batalhas.'],
   dex: ['📕 Pokédex', 'Toque num Pokémon para ver onde ele mora. Cada região tem os seus moradores; os de outras regiões aparecem às vezes como visitantes raros.'],
-  center: ['🏆 Desafios', 'Torre de Batalha, Copas, Desafio do dia e batalhas com amigos (por código ou em tempo real, no app do site). Aqui você ganha PB para trocar por prêmios.'],
+  center: ['🏆 Desafios', 'Torre de Batalha, Copas, Desafio do dia e batalhas com amigos (Amigos online com código de 6 letras, no app do site). Aqui você ganha PB para trocar por prêmios.'],
   story: ['🏟️ Líderes de Ginásio', 'Cada Líder usa Pokémon de um tipo só. Leve golpes fortes contra esse tipo e cure o time antes no Centro.'],
   regions: ['🌍 Novas regiões!', 'Você é Campeão de Kanto! A aba <b>Johto</b> no Mapa foi liberada. Cada região abre quando você vira Campeão da anterior, e tudo lá acompanha o nível do seu time.'],
 };
@@ -14622,565 +14626,6 @@ const _idxBag = advBag; advBag = function () { return _idxBag.apply(this, argume
 const _idxShop = advShop; advShop = function () { return _idxShop.apply(this, arguments).replace('<div class="dexfilters">', IDX_BTN('shop') + '<div class="dexfilters">'); };
 
 // =====================================================================
-//  PvP EM TEMPO REAL (v1.8) — dois jogadores, cada um no seu aparelho
-//
-//  Conexão: direta entre os dois aparelhos (WebRTC, já vem no navegador,
-//  com criptografia). Não usamos nenhum servidor nem biblioteca de fora:
-//  os próprios jogadores trocam um "convite" e uma "resposta" (pelo
-//  WhatsApp, por exemplo). Os servidores STUN só dizem a cada aparelho
-//  qual é o endereço dele na internet; nenhuma informação do jogo passa
-//  por eles.
-//
-//  Luta: o anfitrião é o juiz. Os dois aparelhos rodam a MESMA batalha,
-//  passo a passo (60 passos por segundo, com o mesmo sorteio), e o
-//  anfitrião manda a lista de passos com as ordens dos dois jogadores e,
-//  de tempos em tempos, uma conferência (vida, posição...). Quem desmaia
-//  e quem vence é sempre o anfitrião que decide.
-//
-//  Segurança: tudo que chega do outro aparelho é conferido (tamanho, tipo,
-//  valores) e nada é colocado na tela como código. Só o time (código do
-//  time) e o nome do treinador são enviados: nada do save, da mochila ou
-//  do dinheiro. A luta não dá nem tira itens ou dinheiro.
-//  Regras: sem itens; só golpes (ou automático) e 1 troca por Pokémon
-//  adversário enfrentado.
-// =====================================================================
-const RT_PROTO = 1, RT_STEP = 1 / 60, RT_MAXMSG = 16384, RT_SYNC_EVERY = 30;
-const RT_ICE = [{ urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:stun.cloudflare.com:3478' }];
-const RT_OK = typeof RTCPeerConnection !== 'undefined' && typeof location !== 'undefined' && location.protocol !== 'file:' && (/\.github\.io$/i.test(location.hostname) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname));
-const RT_SITE = 'niinty.github.io/pokebattle';
-let RT = null;   // a conexão atual (só existe uma por vez)
-
-// ---------- sorteio igual nos dois aparelhos ----------
-function rtRng(seed) { const R = { s: seed >>> 0 }; R.f = () => { R.s = (R.s + 0x6D2B79F5) >>> 0; let t = R.s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; return R; }
-function rtSeeded(R, fn) { const saved = Math.random; Math.random = R.f; try { return fn(); } finally { Math.random = saved; } }
-
-// ---------- conferência dos dados que chegam ----------
-const rtInt = (v, a, b) => Number.isInteger(v) && v >= a && v <= b;
-const rtNum = (v, lim = 1e7) => typeof v === 'number' && Number.isFinite(v) && Math.abs(v) <= lim;
-const rtStr = (v, max) => typeof v === 'string' && v.length <= max;
-const RT_STATES = new Set(['fly', 'hurt', 'faint', 'idle', 'walk', 'act']);
-
-// ---------- convite e resposta (compactados) ----------
-async function rtZip(bytes, back) {
-  const S = back ? new DecompressionStream('deflate-raw') : new CompressionStream('deflate-raw');
-  const reader = new Blob([bytes]).stream().pipeThrough(S).getReader(), out = []; let n = 0;
-  for (;;) { const { done, value } = await reader.read(); if (done) break; n += value.length; if (n > 40000) { try { reader.cancel(); } catch (e) {} throw new Error('grande'); } out.push(value); }
-  const u = new Uint8Array(n); let p = 0; for (const c of out) { u.set(c, p); p += c.length; } return u;
-}
-async function rtPack(kind, obj) {
-  const raw = new TextEncoder().encode(JSON.stringify(obj));
-  if (typeof CompressionStream !== 'undefined') { try { return 'PBR' + kind + 'z' + b64u(await rtZip(raw)); } catch (e) {} }
-  return 'PBR' + kind + 'p' + b64u(raw);
-}
-async function rtUnpack(kind, txt) {
-  txt = String(txt || '').replace(/\s+/g, '');
-  if (txt.length < 20 || txt.length > 9000 || !txt.startsWith('PBR' + kind) || !/^[A-Za-z0-9_-]+$/.test(txt.slice(5))) throw new Error('código');
-  let bytes = b64uD(txt.slice(5));
-  if (txt[4] === 'z') { if (typeof DecompressionStream === 'undefined') throw new Error('navegador'); bytes = await rtZip(bytes, true); }
-  else if (txt[4] !== 'p') throw new Error('código');
-  const o = JSON.parse(new TextDecoder().decode(bytes));
-  if (!o || o.v !== RT_PROTO || !rtStr(o.sdp, 20000) || !o.sdp.startsWith('v=0') || !/^[0-9a-f]{16}$/.test(o.id || '')) throw new Error('código');
-  if (o.gv !== GAME_VERSION) throw new Error('versão:' + (rtStr(o.gv, 12) ? o.gv : '?'));
-  return o;
-}
-const rtSdp = sdp => sdp.split(/\r?\n/).filter(l => l && !(l.startsWith('a=candidate') && / tcp /i.test(l))).join('\r\n') + '\r\n';   // tira os caminhos TCP (não usamos)
-function rtGather(pc) {
-  return new Promise(res => {
-    if (pc.iceGatheringState === 'complete') return res();
-    const t = setTimeout(res, 4000);
-    pc.addEventListener('icegatheringstatechange', () => { if (pc.iceGatheringState === 'complete') { clearTimeout(t); res(); } });
-  });
-}
-const rtNonce = () => Array.from(crypto.getRandomValues(new Uint8Array(8)), b => b.toString(16).padStart(2, '0')).join('');
-
-// ---------- conexão ----------
-function rtNew(role) {
-  rtClose(true);
-  RT = { role, side: role === 'host' ? 0 : 1, step: 'start', id: role === 'host' ? rtNonce() : null, pc: null, dc: null, me: null, foe: null, msg: '', lastIn: Date.now(), bucket: 30, drops: 0, q: [], M: null, running: false, pend: [] };
-  return RT;
-}
-function rtClose(silent) {
-  const R = RT; if (!R) return;
-  R.closed = true; clearInterval(R.ping); clearTimeout(R.connT); clearTimeout(R.pickT);
-  try { R.dc && R.dc.close(); } catch (e) {} try { R.pc && R.pc.close(); } catch (e) {}
-  RT = null;
-  if (!silent && game && game.rt) rtLeaveBattle();
-}
-function rtSend(o) { const R = RT; if (!R || !R.dc || R.dc.readyState !== 'open') return; try { R.dc.send(JSON.stringify(o)); } catch (e) {} }
-function rtFail(text) {
-  const R = RT; if (!R) return;
-  const inBattle = game && game.rt;
-  rtClose(true);
-  RT = { role: R.role, side: R.side, step: 'error', msg: text, closed: true };
-  if (inBattle) { game = null; $('advBar').hidden = true; $('ovAdv').hidden = true; document.querySelector('.app').classList.remove('rt-on'); }
-  if (typeof advShow === 'function' && mode === 'adv' && ADV) advShow('rt');
-}
-function rtWire(dc) {
-  const R = RT; R.dc = dc;
-  dc.onopen = () => { if (RT !== R) return; clearTimeout(R.connT); R.step = 'hello'; R.lastIn = Date.now(); rtHello(); R.ping = setInterval(() => { if (RT !== R) return; rtSend({ t: 'ping' }); if (Date.now() - R.lastIn > 15000) rtFail('A conexão com o outro jogador caiu.'); }, 2000); rtRefresh(); };
-  dc.onclose = () => { if (RT === R && !R.closed && R.step !== 'over') rtFail('O outro jogador saiu ou a conexão caiu.'); };
-  dc.onmessage = ev => {
-    if (RT !== R) return;
-    if (typeof ev.data !== 'string' || ev.data.length > RT_MAXMSG) return rtFail('Chegou uma mensagem estranha do outro aparelho. A conexão foi fechada por segurança.');
-    if (R.role === 'host') {   // o convidado só manda ordens: limite de mensagens por segundo
-      const now = Date.now(); R.bucket = Math.min(30, R.bucket + (now - (R.bt || now)) / 1000 * 20); R.bt = now;
-      if (R.bucket < 1) { if (++R.drops > 200) rtFail('O outro aparelho mandou mensagens demais. A conexão foi fechada por segurança.'); return; }
-      R.bucket--;
-    }
-    let m; try { m = JSON.parse(ev.data); } catch (e) { return rtFail('Chegou uma mensagem estranha do outro aparelho. A conexão foi fechada por segurança.'); }
-    if (!m || typeof m !== 'object' || Array.isArray(m) || !rtStr(m.t, 8)) return rtFail('Chegou uma mensagem estranha do outro aparelho. A conexão foi fechada por segurança.');
-    R.lastIn = Date.now();
-    try { rtRecv(m); } catch (e) { rtFail('Chegou uma mensagem estranha do outro aparelho. A conexão foi fechada por segurança.'); }
-  };
-}
-function rtPeer() {
-  const R = RT, pc = new RTCPeerConnection({ iceServers: RT_ICE }); R.pc = pc;
-  pc.onconnectionstatechange = () => { if (RT === R && (pc.connectionState === 'failed')) rtFail('Não deu para ligar os dois aparelhos. Tente com os dois no mesmo Wi-Fi, ou troque de rede (algumas redes de celular bloqueiam a ligação direta).'); };
-  return pc;
-}
-async function rtHostStart() {
-  const R = rtNew('host'); R.step = 'making'; rtRefresh();
-  try {
-    const pc = rtPeer(), dc = pc.createDataChannel('pb', { ordered: true }); rtWire(dc);
-    await pc.setLocalDescription(await pc.createOffer()); await rtGather(pc);
-    if (RT !== R) return;
-    R.invite = await rtPack('C', { v: RT_PROTO, gv: GAME_VERSION, id: R.id, sdp: rtSdp(pc.localDescription.sdp) });
-    R.step = 'offer'; rtRefresh();
-  } catch (e) { rtFail('Este navegador não conseguiu criar a sala. Atualize o navegador e tente de novo.'); }
-}
-async function rtHostAnswer(txt) {
-  const R = RT; if (!R || R.role !== 'host' || R.step !== 'offer') return;
-  let o; try { o = await rtUnpack('R', txt); } catch (e) { R.msg = rtCodeErr(e, 'resposta'); return rtRefresh(); }
-  if (o.id !== R.id) { R.msg = 'Essa resposta é de outro convite. Peça para o amigo colar o convite mais novo e mandar a resposta de novo.'; return rtRefresh(); }
-  try { await R.pc.setRemoteDescription({ type: 'answer', sdp: o.sdp }); } catch (e) { R.msg = 'Essa resposta não é válida.'; return rtRefresh(); }
-  R.step = 'connecting'; R.msg = ''; rtRefresh();
-  R.connT = setTimeout(() => { if (RT === R && R.step === 'connecting') rtFail('Não deu para ligar os dois aparelhos. Tente com os dois no mesmo Wi-Fi, ou troque de rede (algumas redes de celular bloqueiam a ligação direta).'); }, 25000);
-}
-async function rtGuestJoin(txt) {
-  let o; try { o = await rtUnpack('C', txt); } catch (e) { if (!RT || RT.role !== 'guest') rtNew('guest'); RT.step = 'paste'; RT.msg = rtCodeErr(e, 'convite'); return rtRefresh(); }
-  const R = rtNew('guest'); R.id = o.id; R.step = 'making'; rtRefresh();
-  try {
-    const pc = rtPeer(); pc.ondatachannel = ev => { if (RT === R && ev.channel.label === 'pb' && !R.dc) rtWire(ev.channel); };
-    await pc.setRemoteDescription({ type: 'offer', sdp: o.sdp }); await pc.setLocalDescription(await pc.createAnswer()); await rtGather(pc);
-    if (RT !== R) return;
-    R.answer = await rtPack('R', { v: RT_PROTO, gv: GAME_VERSION, id: R.id, sdp: rtSdp(pc.localDescription.sdp) });
-    R.step = 'answer'; rtRefresh();
-    R.connT = setTimeout(() => { if (RT === R && R.step === 'answer') rtFail('O anfitrião não conectou a tempo. Comecem de novo: ele cria um convite novo.'); }, 5 * 60000);
-  } catch (e) { rtFail('Esse convite não funcionou. Peça um convite novo.'); }
-}
-function rtCodeErr(e, what) {
-  const m = String(e && e.message || '');
-  if (m.startsWith('versão:')) return `O outro jogador está numa versão diferente do jogo (${esc(m.slice(7))}; a sua é ${GAME_VERSION}). Os dois precisam abrir o app atualizado.`;
-  if (m === 'navegador') return 'Este navegador é antigo demais para o PvP em tempo real. Atualize o navegador.';
-  return `Esse ${what} não é válido. Confira se copiou o texto inteiro.`;
-}
-
-// ---------- apresentação: nome e time ----------
-async function rtHello() {
-  const T = trainerOf(ADV); let code = '';
-  try { code = await teamCode(); } catch (e) {}
-  const R = RT; if (!R) return;
-  let me; try { me = await rtTeam(code); } catch (e) { return rtFail('Não deu para preparar o seu time de PvP. Confira o time escolhido em Desafios › Amigos.'); }
-  if (RT !== R) return;
-  R.me = me; void T;
-  rtSend({ t: 'hi', v: RT_PROTO, gv: GAME_VERSION, code, auto: !!autoOn, lv50: R.role === 'host' ? !!ADV.pvpLv50 : false });
-  rtRefresh();
-}
-// lê o código do time com as mesmas regras do desafio por código, e confere mais um pouco
-async function rtTeam(code) {
-  if (!rtStr(code, 1200) || !code.startsWith('PP')) throw new Error('time');
-  const F = await readTeamCode(code);
-  const team = F.team.slice(0, 6).map(m => {
-    const ev = {}; let tot = 0; for (const k of IV_STATS) { const v = Math.min(EV_MAX, m.ev[k] || 0); if (tot + v > EV_TOTAL) break; if (v) ev[k] = v; tot += v; }
-    return Object.assign({}, m, { ability: m.ability && typeof ABILITIES !== 'undefined' && ABILITIES[m.ability] ? m.ability : null, moves: [...new Set(m.moves)].slice(0, 4), ev, nature: NATURES[m.nature] ? m.nature : 'Hardy' });
-  });
-  if (!team.length) throw new Error('time');
-  return { name: String(F.name || 'Treinador').slice(0, 16), t: F.t, color: F.color, team };
-}
-async function rtGotHello(m) {
-  const R = RT;
-  if (R.foe || m.v !== RT_PROTO) throw new Error('hi');
-  if (m.gv !== GAME_VERSION) return rtFail(`O outro jogador está numa versão diferente do jogo. Os dois precisam abrir o app atualizado (versão ${GAME_VERSION}).`);
-  let F; try { F = await rtTeam(m.code); } catch (e) { return rtFail('O time do outro jogador não é válido.'); }
-  if (RT !== R) return;
-  R.foe = F; R.foeAuto = !!m.auto; R.foeCode = m.code;
-  if (R.role === 'guest') R.lv50 = !!m.lv50; else R.lv50 = !!ADV.pvpLv50;
-  R.step = 'lobby'; rtRefresh();
-}
-
-// ---------- mensagens ----------
-function rtRecv(m) {
-  const R = RT;
-  if (m.t === 'ping') return rtSend({ t: 'pong' });
-  if (m.t === 'pong') return;
-  if (m.t === 'hi') return void rtGotHello(m).catch(() => rtFail('O time do outro jogador não é válido.'));
-  if (m.t === 'bye') { if (R.role === 'host' && R.M && !R.M.over) return rtHostOver(0, 'desistiu'); return rtFail('O outro jogador saiu da sala.'); }
-  if (R.role === 'host') {
-    if (!R.M || R.M.over) return;
-    if (m.t === 'ready') { if (m.n === R.M.n && !R.running) { R.guestReady = true; rtHostMaybeGo(); } return; }
-    if (m.t === 'in') return rtHostGuestInput(m);
-    if (m.t === 'pk') return rtHostPick(1, m.i);
-    return;   // outros tipos são ignorados
-  }
-  // convidado: tudo que vem do anfitrião entra na fila, na ordem
-  if (m.t === 'tk') return rtGuestTicks(m);
-  if (['round', 'end', 'pick', 'over'].includes(m.t)) { R.q.push({ bar: m }); if (!(game && game.rt)) rtGuestRun(0); }
-}
-
-// =====================================================================
-//  A LUTA
-// =====================================================================
-const rtTeams = () => RT.side === 0 ? [RT.me.team, RT.foe.team] : [RT.foe.team, RT.me.team];
-function rtMonOpts(m, hp, lv50) {
-  const lv = lv50 ? 50 : m.level, hpMul = ivMul(m.iv, 'hp') * trainMul(m.ev, 'hp');
-  return { skill: Math.max(0.35, m.skill || 0), ability: m.ability, level: lv, hp: Math.max(1, Math.round(hp)), hpMul, moves: m.moves, shiny: m.shiny, nature: m.nature, held: m.held, iv: m.iv, ev: m.ev, gender: m.gender };
-}
-const rtMaxHp = (m, lv50) => Math.round(monMaxHp(m.key, lv50 ? 50 : m.level) * ivMul(m.iv, 'hp') * trainMul(m.ev, 'hp'));
-function rtBuild(Rd) {   // monta a batalha igualzinha nos dois aparelhos
-  const R = RT, T = rtTeams(), a = T[0][Rd.cur[0]], b = T[1][Rd.cur[1]], rng = rtRng(Rd.seed);
-  UID = Rd.uid;
-  const g = rtSeeded(rng, () => new Game(a.key, b.key, { auto: true, arena: Rd.arena, noIntro: Rd.n > 1,
-    rocks: Rd.rocks ? Rd.rocks.map(r => ({ id: r.id, x: r.x, y: r.y, r: r.r, hp: r.hp, maxHp: r.maxHp, seed: r.seed, dead: !!r.dead, flash: 0, tick: {} })) : null,
-    p: rtMonOpts(a, Rd.hp[0][Rd.cur[0]], R.lv50), e: rtMonOpts(b, Rd.hp[1][Rd.cur[1]], R.lv50) }));
-  g.rt = { rng, side: R.side, n: Rd.n, tick: 0, faints: [], allowFaint: false };
-  g.viewSwap = R.side === 1;
-  if (Rd.n > 1) g.countdown = 1.4;
-  g.p.auto = g.e.auto = true; g.p.rtManual = !Rd.auto[0]; g.e.rtManual = !Rd.auto[1];
-  return g;
-}
-function rtApply(g, s, k, a) {   // uma ordem de jogador, aplicada no mesmo passo nos dois aparelhos
-  const m = s ? g.e : g.p;
-  if (k === 'mv') {
-    if (g.over || g.countdown > 0 || m.hp <= 0 || m.state === 'faint' || !m.moves.includes(a) || m.cd[a] > 0) return;
-    m.queued = a; m.queuedT = 0; g.say(`${m.name}, use ${MOVES[a].name}!`, s === g.rt.side ? '#ffe680' : '#ffb3b3');
-  } else if (k === 'auto') m.rtManual = !a;
-}
-function rtTick(g, ins) {
-  for (const [s, k, a] of ins) rtApply(g, s, k, a);
-  rtSeeded(g.rt.rng, () => g.update(RT_STEP));
-  g.rt.tick++;
-}
-// regras da luta em tempo real dentro da simulação
-(() => {
-  const P = Game.prototype, _faint = P.faint, _ai = P.aiThink, _clash = P.startClash;
-  P.faint = function (m) {
-    if (this.rt && this.rt.side === 1 && !this.rt.allowFaint) { if (m.hp <= 0) m.hp = 1; return; }   // no convidado, só o anfitrião decide quem desmaia
-    const was = m.state, r = _faint.call(this, m);
-    if (this.rt && this.rt.side === 0 && m.state === 'faint' && was !== 'faint') this.rt.faints.push(m.side);
-    return r;
-  };
-  P.aiThink = function (m, dt) { if (this.rt && m.rtManual) return; return _ai.call(this, m, dt); };
-  if (_clash) P.startClash = function () { if (this.rt) return; return _clash.apply(this, arguments); };
-})();
-// conferência: o anfitrião manda, o convidado corrige se algo saiu diferente
-const RT_SYNC_F = ['x', 'y', 'vx', 'vy', 'alt', 'hp', 'fx', 'fy', 'burnT', 'poisonT', 'paraT', 'sleepT', 'freezeT', 'confT', 'slowT', 'seedT', 'toxic', 'rechargeT', 'heldT', 'hurtT', 'protectT', 'think', 'queuedT', 'dodgeCd', 'hurtImmune', 'flash'];
-function rtSnap(g) {
-  const mon = m => { const o = { st: m.state, q: m.queued || null, cd: {}, sg: {}, sgT: {} }; for (const f of RT_SYNC_F) if (typeof m[f] === 'number') o[f] = m[f]; for (const k of m.moves) o.cd[k] = m.cd[k] || 0; for (const k in m.stages) o.sg[k] = m.stages[k]; for (const k in m.stageT) o.sgT[k] = m.stageT[k]; return o; };
-  return { k: g.rt.tick, rs: g.rt.rng.s, tm: g.time, m: [mon(g.p), mon(g.e)], r: g.rocks.map(r => [r.hp, r.dead ? 1 : 0]) };
-}
-const RT_STAGE_KEYS = new Set(['atk', 'def', 'spa', 'spd', 'spe', 'acc', 'eva']);
-function rtFix(g, S) {
-  if (!S || typeof S !== 'object' || !rtInt(S.rs, 0, 4294967295) || !rtNum(S.tm) || !Array.isArray(S.m) || S.m.length !== 2 || !Array.isArray(S.r) || S.r.length !== g.rocks.length) throw new Error('sync');
-  g.rt.rng.s = S.rs; g.time = S.tm;
-  [g.p, g.e].forEach((m, i) => {
-    const o = S.m[i]; if (!o || typeof o !== 'object') throw new Error('sync');
-    for (const f of RT_SYNC_F) if (f in o) { if (!rtNum(o[f])) throw new Error('sync'); if (f === 'hp') m.hp = Math.max(0, Math.min(m.maxHp, o.hp)); else m[f] = o[f]; }
-    if (rtStr(o.st, 8) && RT_STATES.has(o.st) && o.st !== 'faint' && m.state !== 'faint') m.state = o.st;
-    if (o.q === null || (rtStr(o.q, 30) && m.moves.includes(o.q))) m.queued = o.q;
-    if (o.cd && typeof o.cd === 'object') for (const k of m.moves) if (rtNum(o.cd[k])) m.cd[k] = o.cd[k];
-    if (o.sg && typeof o.sg === 'object') for (const k in o.sg) if (RT_STAGE_KEYS.has(k) && rtInt(o.sg[k], -6, 6)) m.stages[k] = o.sg[k];
-    if (o.sgT && typeof o.sgT === 'object') { for (const k of Object.keys(m.stageT)) if (!(k in o.sgT)) delete m.stageT[k]; for (const k in o.sgT) if (RT_STAGE_KEYS.has(k) && rtNum(o.sgT[k])) m.stageT[k] = o.sgT[k]; }
-  });
-  S.r.forEach((x, i) => { if (!Array.isArray(x) || !rtNum(x[0])) throw new Error('sync'); const r = g.rocks[i]; r.hp = x[0]; if (x[1] && !r.dead) { r.dead = true; } });
-}
-
-// ---------- anfitrião ----------
-function rtHostStartMatch() {
-  const R = RT; if (!R || R.role !== 'host' || R.step !== 'lobby' || !R.me || !R.foe) return;
-  const T = rtTeams();
-  R.M = { n: 0, cur: [0, 0], hp: T.map(t => t.map(m => rtMaxHp(m, R.lv50))), swaps: [new Set(), new Set()], auto: [!!autoOn, !!R.foeAuto], arena: pickR(Object.keys(ARENAS)), rocks: null, over: false };
-  R.step = 'battle'; rtHostRound();
-}
-async function rtHostRound() {
-  const R = RT, M = R.M; M.n++;
-  const Rd = { t: 'round', n: M.n, arena: M.arena, seed: (Math.random() * 4294967296) >>> 0, uid: 100000 * M.n, cur: M.cur.slice(), hp: M.hp.map(h => h.slice()), auto: M.auto.slice(), rocks: M.rocks };
-  R.guestReady = false; R.hostReady = false; R.running = false; R.pend = [];
-  rtSend(Rd);
-  await rtShowRound(Rd);
-  if (RT !== R) return;
-  R.hostReady = true; rtHostMaybeGo();
-}
-function rtHostMaybeGo() { const R = RT; if (R.hostReady && R.guestReady && game && game.rt && !R.running) { R.running = true; R.acc = 0; R.out = { a: 0, i: [], f: [] }; } }
-function rtHostGuestInput(m) {
-  const R = RT, g = game;
-  if (!rtStr(m.k, 6)) throw new Error('in');
-  if (m.k === 'mv') { if (!rtStr(m.a, 30) || !MOVES[m.a] || !g || !g.rt || !g.e.moves.includes(m.a)) return; R.pend.push([1, 'mv', m.a]); }
-  else if (m.k === 'auto') { if (typeof m.a !== 'boolean') throw new Error('in'); R.M.auto[1] = m.a; R.pend.push([1, 'auto', m.a ? 1 : 0]); }
-  else if (m.k === 'swap') { if (!rtInt(m.a, 0, 5)) throw new Error('in'); rtHostSwap(1, m.a); }
-  else throw new Error('in');
-}
-function rtHostTick() {
-  const R = RT, g = game, ins = R.pend.splice(0, 8), k = g.rt.tick;
-  if (!R.out.i.length && !R.out.f.length && R.out.c === undefined) R.out.a = k;
-  for (const x of ins) R.out.i.push([k, x[0], x[1], x[2]]);
-  rtTick(g, ins);
-  for (const s of g.rt.faints.splice(0)) R.out.f.push([k, s]);
-  R.out.c = (R.out.c || 0) + 1;
-  if (g.rt.tick % RT_SYNC_EVERY === 0) R.out.s = rtSnap(g);
-  if (R.out.c >= 2 || R.out.s || R.out.f.length) rtHostFlush();
-  if (g.over && g.endT > 1.6) rtHostEndRound('ko');
-}
-function rtHostFlush() {
-  const R = RT, o = R.out; if (!o || !o.c) return;
-  rtSend({ t: 'tk', n: R.M.n, a: o.a, c: o.c, i: o.i, f: o.f, s: o.s || undefined });
-  R.out = { a: game && game.rt ? game.rt.tick : 0, i: [], f: [] };
-}
-function rtHostSwap(side, idx) {
-  const R = RT, M = R.M, g = game; if (!R.running || !g || !g.rt || g.over || g.countdown > 0) return;
-  const T = rtTeams(), opp = M.cur[1 - side];
-  if (M.swaps[side].has(opp) || idx === M.cur[side] || !T[side][idx] || !(M.hp[side][idx] > 0)) return;
-  M.swaps[side].add(opp); rtHostEndRound('swap', side, idx);
-}
-function rtHostEndRound(why, side, idx) {
-  const R = RT, M = R.M, g = game; if (!R.running) return;
-  rtHostFlush(); R.running = false;
-  M.hp[0][M.cur[0]] = g.p.state === 'faint' ? 0 : Math.max(1, Math.round(g.p.hp));
-  M.hp[1][M.cur[1]] = g.e.state === 'faint' ? 0 : Math.max(1, Math.round(g.e.hp));
-  M.rocks = g.rocks.map(r => ({ id: r.id, x: r.x, y: r.y, r: r.r, hp: r.hp, maxHp: r.maxHp, seed: r.seed, dead: !!r.dead }));
-  rtSend({ t: 'end', n: M.n, k: g.rt.tick, hp: M.hp, why });
-  if (why === 'swap') { M.cur[side] = idx; return void rtHostRound(); }
-  const need = [0, 1].filter(s => M.hp[s][M.cur[s]] <= 0), out = need.filter(s => !M.hp[s].some(h => h > 0));
-  if (out.length) return rtHostOver(out.length === 2 ? -1 : 1 - out[0], 'ko');
-  M.need = new Set(need);
-  rtSend({ t: 'pick', n: M.n, s: need, hp: M.hp });
-  rtShowPick(need, M.hp);
-  clearTimeout(R.pickT); R.pickT = setTimeout(() => { if (RT === R && M.need && M.need.size) for (const s of [...M.need]) rtHostPick(s, M.hp[s].findIndex(h => h > 0)); }, 45000);
-}
-function rtHostPick(side, i) {
-  const R = RT, M = R.M; if (!M || !M.need || !M.need.has(side)) return;
-  if (!rtInt(i, 0, 5) || !(M.hp[side][i] > 0)) return;
-  M.cur[side] = i; M.need.delete(side);
-  if (!M.need.size) { M.need = null; clearTimeout(R.pickT); rtHostRound(); }
-  else if (side === 0) rtWait('Esperando o outro jogador escolher o próximo Pokémon...');
-}
-function rtHostOver(w, why) {
-  const R = RT, M = R.M; if (!M || M.over) return; M.over = true; R.running = false;
-  rtSend({ t: 'over', w, why }); rtShowOver(w, why);
-}
-
-// ---------- convidado ----------
-function rtGuestTicks(m) {
-  const R = RT;
-  if (!rtInt(m.n, 1, 9999) || !rtInt(m.a, 0, 1e8) || !rtInt(m.c, 1, 60) || !Array.isArray(m.i) || m.i.length > 200 || !Array.isArray(m.f) || m.f.length > 4) throw new Error('tk');
-  const byT = {};
-  for (const x of m.i) { if (!Array.isArray(x) || x.length !== 4 || !rtInt(x[0], m.a, m.a + m.c - 1) || !rtInt(x[1], 0, 1) || !['mv', 'auto'].includes(x[2])) throw new Error('tk'); if (x[2] === 'mv' && !(rtStr(x[3], 30) && MOVES[x[3]])) throw new Error('tk'); if (x[2] === 'auto' && !rtInt(x[3], 0, 1)) throw new Error('tk'); (byT[x[0]] = byT[x[0]] || []).push([x[1], x[2], x[3]]); }
-  const fT = {}; for (const x of m.f) { if (!Array.isArray(x) || !rtInt(x[0], m.a, m.a + m.c - 1) || !rtInt(x[1], 0, 1)) throw new Error('tk'); (fT[x[0]] = fT[x[0]] || []).push(x[1]); }
-  if (m.s !== undefined && (!m.s || !rtInt(m.s.k, m.a + 1, m.a + m.c))) throw new Error('tk');
-  for (let k = m.a; k < m.a + m.c; k++) R.q.push({ n: m.n, k, i: byT[k] || [], f: fT[k] || [], s: m.s && m.s.k === k + 1 ? m.s : null });
-  if (R.q.length > 3000) throw new Error('tk');
-}
-function rtGuestRun(rdt) {
-  const R = RT; let budget = Math.max(1, Math.round(rdt * 60));
-  const pending = R.q.filter(x => !x.bar).length;
-  if (pending > 8) budget += 1; if (pending > 24) budget += pending - 12;
-  while (R.q.length && budget > 0 && RT === R && !R.busy) {
-    const e = R.q[0];
-    if (e.bar) { R.q.shift(); rtGuestBarrier(e.bar).catch(() => rtFail('Chegou uma informação estranha do outro aparelho. A conexão foi fechada por segurança.')); continue; }
-    const g = game; if (!g || !g.rt || e.n !== g.rt.n) { if (!g || !g.rt) break; R.q.shift(); continue; }
-    if (e.k !== g.rt.tick) throw new Error('ordem');
-    R.q.shift(); rtTick(g, e.i);
-    for (const s of e.f) { const m = s ? g.e : g.p; if (m.state !== 'faint') { m.hp = 0; g.rt.allowFaint = true; rtSeeded(g.rt.rng, () => g.faint(m)); g.rt.allowFaint = false; } }
-    if (e.s) rtFix(g, e.s);
-    budget--;
-  }
-}
-async function rtGuestBarrier(m) {
-  const R = RT;
-  if (m.t === 'round') {
-    if (!rtInt(m.n, 1, 9999) || !rtStr(m.arena, 20) || !ARENAS[m.arena] || !rtInt(m.seed, 0, 4294967295) || !rtInt(m.uid, 0, 1e9) || !Array.isArray(m.cur) || !Array.isArray(m.hp) || !Array.isArray(m.auto)) throw new Error('round');
-    const T = rtTeams();
-    if (!rtInt(m.cur[0], 0, T[0].length - 1) || !rtInt(m.cur[1], 0, T[1].length - 1) || m.hp.length !== 2) throw new Error('round');
-    m.hp.forEach((h, s) => { if (!Array.isArray(h) || h.length !== T[s].length || !h.every(v => rtNum(v, 1e5) && v >= 0)) throw new Error('round'); });
-    if (m.rocks !== null && (!Array.isArray(m.rocks) || m.rocks.length > 20 || !m.rocks.every(r => r && rtInt(r.id, 0, 1e9) && rtNum(r.x, 2000) && rtNum(r.y, 2000) && rtNum(r.r, 200) && rtNum(r.hp, 1e5) && rtNum(r.maxHp, 1e5) && rtInt(r.seed, 0, 1e7)))) throw new Error('round');
-    R.mirror = { hp: m.hp, cur: m.cur, swapsUsed: R.mirror ? R.mirror.swapsUsed : new Set() };
-    R.busy = true; await rtShowRound({ n: m.n, arena: m.arena, seed: m.seed, uid: m.uid, cur: m.cur, hp: m.hp, auto: [!!m.auto[0], !!m.auto[1]], rocks: m.rocks }); R.busy = false;
-    if (RT === R) rtSend({ t: 'ready', n: m.n });
-  } else if (m.t === 'end') {
-    if (game && game.rt) game.rt.ended = true;
-    if (Array.isArray(m.hp) && R.mirror) R.mirror.hp = m.hp;
-    if (m.why === 'swap') rtWait('Trocando de Pokémon...');
-  } else if (m.t === 'pick') {
-    if (!Array.isArray(m.s) || !m.s.every(s => rtInt(s, 0, 1))) throw new Error('pick');
-    if (Array.isArray(m.hp)) R.mirror.hp = m.hp;
-    rtShowPick(m.s, R.mirror.hp);
-  } else if (m.t === 'over') {
-    if (!rtInt(m.w, -1, 1)) throw new Error('over');
-    rtShowOver(m.w, rtStr(m.why, 12) ? m.why : '');
-  }
-}
-
-// ---------- passo da luta (chamado pelo laço principal do jogo) ----------
-function rtStep(rdt) {
-  const g = game; if (!g || !g.rt) return false;
-  const R = RT; if (!R) return true;
-  try {
-    if (R.role === 'host') {
-      if (!R.running) return true;
-      R.acc = Math.min(0.25, (R.acc || 0) + rdt); let n = 0;
-      while (R.acc >= RT_STEP && n < 6 && R.running) { R.acc -= RT_STEP; rtHostTick(); n++; }
-    } else rtGuestRun(rdt);
-  } catch (e) { rtFail('A luta saiu de sincronia ou chegou uma informação estranha. A conexão foi fechada por segurança.'); }
-  return true;
-}
-// ordens do jogador neste aparelho
-function rtUse(k) {
-  const R = RT, g = game; if (!R || !g || !g.rt || g.over) return false;
-  const me = g.viewSwap ? g.e : g.p; if (!me.moves.includes(k) || me.cd[k] > 0 || g.countdown > 0) return false;
-  if (R.role === 'host') R.pend.push([0, 'mv', k]); else rtSend({ t: 'in', k: 'mv', a: k });
-  return true;
-}
-function rtAuto(v) {
-  const R = RT; if (!R || !game || !game.rt) return;
-  if (R.role === 'host') { R.M.auto[0] = !!v; R.pend.push([0, 'auto', v ? 1 : 0]); } else rtSend({ t: 'in', k: 'auto', a: !!v });
-}
-
-// ---------- telas da luta ----------
-async function rtShowRound(Rd) {
-  const T = rtTeams(), keys = [T[0][Rd.cur[0]].key, T[1][Rd.cur[1]].key];
-  await Promise.all([ensureSprites(keys), ensureShiny([T[0][Rd.cur[0]].shiny && keys[0], T[1][Rd.cur[1]].shiny && keys[1]])]);
-  if (!RT) return;
-  if (!loadedSprite(keys[0]) || !loadedSprite(keys[1])) return rtFail('Não deu para carregar os sprites desta luta. Confira a internet.');
-  const keep = !!(game && game.rt);
-  game = rtBuild(Rd);
-  keepGround = keep; resetFx(); demo = false; paused = false; $('tPause') && $('tPause').setAttribute('aria-pressed', false);
-  advFighting = false; advEl().hidden = true; $('bnav').hidden = true; $('ovAdv').hidden = true; $('ovStart').hidden = true; $('ovEnd').hidden = true;
-  const app = document.querySelector('.app'); app.classList.remove('adv-menu'); app.classList.add('adv-fight');
-  const me = game.viewSwap ? game.e : game.p, foe = game.viewSwap ? game.p : game.e;
-  setupPlate($('cardP'), me); setupPlate($('cardE'), foe); buildMoves(); rtBar();
-  app.classList.add('rt-on');   // sem pausa no tempo real
-  if (typeof AUDIO !== 'undefined') try { AUDIO.preloadCries(keys); } catch (e) {}
-  if (Rd.n === 1) game.say(`${RT.foe.name} quer batalhar!`, '#ffffff'); else game.say(`Vai, ${me.name}!`, '#ffe680');
-  window.scrollTo({ top: 0 });
-}
-function rtBar() {
-  const bar = $('advBar'), R = RT; bar.hidden = false;
-  const side = R.side, M = R.role === 'host' ? R.M : null, mirror = R.mirror;
-  const cur = M ? M.cur : mirror ? mirror.cur : [0, 0], hp = M ? M.hp : mirror ? mirror.hp : [[], []];
-  const used = M ? M.swaps[side].has(cur[1 - side]) : !!(R.gSwapOpp && R.gSwapOpp.has(cur[1 - side]));
-  const can = hp[side] && hp[side].some((h, i) => h > 0 && i !== cur[side]);
-  bar.innerHTML = `${can ? `<button class="abtn sm swap" data-rb="swap" ${used ? 'disabled' : ''}>⇄ Trocar ${used ? '(já usou)' : '(1×)'}</button>` : ''}<button class="abtn sm" data-rb="flee">Desistir</button><small class="mute rtnote">⚡ Tempo real contra ${esc(R.foe.name)} · sem itens</small>`;
-  bar.querySelectorAll('[data-rb]').forEach(b => b.addEventListener('click', ev => { ev.preventDefault(); rtBarUse(b.dataset.rb, b); }));
-}
-function rtBarUse(k, b) {
-  const R = RT, g = game; if (!R || !g || !g.rt) return;
-  if (k === 'flee') {
-    if (!R.fleeAsk) { R.fleeAsk = true; b.textContent = 'Desistir? Toque de novo'; b.classList.add('red'); setTimeout(() => { if (RT === R) { R.fleeAsk = false; if (b.isConnected) { b.textContent = 'Desistir'; b.classList.remove('red'); } } }, 2500); return; }
-    if (R.role === 'host') return rtHostOver(1, 'desistiu');
-    rtSend({ t: 'bye' }); return rtShowOver(0, 'desistiu', true);
-  }
-  if (k === 'swap') {
-    if (g.over || g.countdown > 0) return;
-    const T = rtTeams(), side = R.side, M = R.M, cur = M ? M.cur : R.mirror.cur, hp = M ? M.hp : R.mirror.hp;
-    const list = T[side].map((m, i) => ({ m, i })).filter(x => x.i !== cur[side] && hp[side][x.i] > 0);
-    rtPickOverlay('Trocar por quem?', 'Você pode trocar 1 vez contra cada Pokémon do adversário. A luta continua enquanto você escolhe.', list, hp[side], i => {
-      if (M) rtHostSwap(0, i); else { rtSend({ t: 'in', k: 'swap', a: i }); R.gSwapOpp = R.gSwapOpp || new Set(); R.gSwapOpp.add(cur[0]); }
-      rtBar();
-    }, true);
-  }
-}
-function rtPickOverlay(title, text, list, hps, done, cancel) {
-  const ov = $('ovAdv'), R = RT; ov.hidden = false;
-  const lv50 = R && R.lv50;
-  ov.innerHTML = `<h1>${title}</h1><p>${text}</p><div class="swapgrid">${list.map(({ m, i }) => { const mx = rtMaxHp(m, lv50), h = hps[i]; return `<button class="tmini btn" data-ri="${i}">${spr(m.key, 48, '', m.shiny)}<b>${nm(m.key)}</b><span>Nv.${lv50 ? 50 : m.level}</span><div class="hpbar"><i style="width:${Math.max(0, Math.min(100, h / mx * 100)).toFixed(0)}%"></i></div></button>`; }).join('')}</div>${cancel ? '<div class="btnrow"><button class="btn" data-ri="x">Cancelar</button></div>' : ''}`;
-  const cvs = [...ov.querySelectorAll('canvas.advspr')];
-  if (cvs.length) ensureSprites(cvs.map(c => Object.keys(SPECIES).find(k => SPECIES[k].sprite === c.dataset.key) || c.dataset.key)).then(() => cvs.forEach(c => drawFrame(c, c.dataset.key, 'S', 0, !!c.dataset.shiny)));
-  ov.querySelectorAll('[data-ri]').forEach(b => b.addEventListener('click', () => { const v = b.dataset.ri; ov.hidden = true; if (v !== 'x') done(+v); }));
-}
-function rtWait(text) { const ov = $('ovAdv'); ov.hidden = false; ov.innerHTML = `<h1>Um momento...</h1><p>${text}</p>`; }
-function rtShowPick(need, hps) {
-  const R = RT, side = R.side, T = rtTeams();
-  if (!need.includes(side)) return rtWait('O Pokémon do adversário desmaiou! Esperando ele escolher o próximo...');
-  const list = T[side].map((m, i) => ({ m, i })).filter(x => hps[side][x.i] > 0);
-  rtPickOverlay('Seu Pokémon desmaiou!', 'Escolha o próximo. Se você não escolher em 45 segundos, o primeiro da lista entra.', list, hps[side], i => {
-    if (R.role === 'host') rtHostPick(0, i); else { rtSend({ t: 'pk', i }); rtWait('Esperando o próximo round...'); }
-  });
-}
-function rtShowOver(w, why, quiet) {
-  const R = RT; if (!R || R.step === 'over') return;
-  const side = R.side, win = w === side, draw = w === -1;
-  R.step = 'over'; R.result = { win, draw, why, foe: R.foe ? R.foe.name : 'adversário' };
-  try { ADV.rtRec = ADV.rtRec || { w: 0, l: 0, d: 0 }; if (draw) ADV.rtRec.d++; else if (win) ADV.rtRec.w++; else ADV.rtRec.l++; saveAdv(ADV); } catch (e) {}
-  const res = R.result;
-  setTimeout(() => { if (RT === R) { rtClose(true); RT = { role: R.role, side, step: 'over', result: res, closed: true }; } rtLeaveBattle(); }, quiet ? 200 : 2200);
-  if (!quiet) { const ov = $('ovAdv'); ov.hidden = false; ov.innerHTML = `<h1>${draw ? 'Empate!' : win ? 'Você venceu!' : 'Você perdeu!'}</h1><p>${why === 'desistiu' ? (win ? 'O adversário desistiu da luta.' : 'Você desistiu da luta.') : ''}</p>`; }
-}
-function rtLeaveBattle() {
-  if (game && game.rt) game = null;
-  document.querySelector('.app').classList.remove('rt-on');
-  $('advBar').hidden = true; $('ovAdv').hidden = true;
-  if (typeof advShow === 'function' && mode === 'adv' && ADV) advShow('rt');
-}
-
-// =====================================================================
-//  TELAS DO MENU: criar sala, entrar, saguão e resultado
-// =====================================================================
-function rtCardHTML() {
-  const rec = ADV.rtRec;
-  if (!RT_OK) return `<div class="acard fcard rtcard"><span class="tag">⚡ PvP em tempo real</span><p>Lute ao vivo contra um amigo, cada um no seu celular. <b>Funciona no app do site</b>: abra <b>${RT_SITE}</b> no navegador. Aqui, use o desafio por código logo abaixo.</p></div>`;
-  return `<div class="acard fcard rtcard"><span class="tag">⚡ PvP em tempo real</span><p>Lute ao vivo contra um amigo, cada um no seu aparelho. Um cria a sala e manda o convite; o outro devolve uma resposta. Sem itens: só golpes (ou automático) e 1 troca contra cada Pokémon do adversário.</p>
-    ${rec ? `<p class="mute">Seu histórico: ${rec.w} vitórias · ${rec.l} derrotas${rec.d ? ` · ${rec.d} empates` : ''}</p>` : ''}
-    <div class="cfgbtns"><button class="abtn gold" data-act="rtHost">Criar sala</button><button class="abtn" data-act="rtJoin">Entrar com convite</button></div></div>`;
-}
-function rtHTML() {
-  const R = RT, back = topBar('⚡ PvP em tempo real', 'rtBack');
-  const safety = '<p class="mute rtsafe">🔒 A ligação é direta entre os dois aparelhos e protegida pelo navegador. Só o seu time e o seu nome de treinador são enviados. O outro aparelho fica sabendo o endereço de internet do seu, como numa chamada de vídeo: jogue só com quem você conhece.</p>';
-  if (!R) return back + `<div class="acard"><p>Nada em andamento.</p><div class="cfgbtns"><button class="abtn gold" data-act="rtHost">Criar sala</button><button class="abtn" data-act="rtJoin">Entrar com convite</button></div></div>`;
-  const err = R.msg ? `<p class="amsg warn">${R.msg}</p>` : '';
-  const copyBox = (id, val, label) => `<textarea id="${id}" class="rtcode" readonly>${esc(val)}</textarea><div class="cfgbtns"><button class="abtn gold" data-rtcopy="${id}">📋 Copiar ${label}</button>${navigator.share ? `<button class="abtn" data-rtshare="${id}">Compartilhar</button>` : ''}</div>`;
-  let h = '';
-  if (R.step === 'making') h = '<div class="acard"><p>Preparando a ligação... (leva alguns segundos)</p></div>';
-  else if (R.step === 'offer') h = `<div class="acard rtsteps"><span class="tag">1 · Mande o convite</span><p>Copie e mande para o seu amigo (por exemplo, no WhatsApp). Ele abre o jogo no site, vai em Desafios › Amigos › <b>Entrar com convite</b> e cola.</p>${copyBox('rtInv', R.invite, 'convite')}
-      <span class="tag">2 · Cole a resposta dele</span><p>O jogo do seu amigo vai criar uma <b>resposta</b>. Quando ele mandar, cole aqui:</p><textarea id="rtAns" class="rtcode" placeholder="Cole aqui a resposta (começa com PBR)"></textarea>${err}<div class="cfgbtns"><button class="abtn red" data-act="rtAns">Conectar</button></div><p class="mute">Deixe esta tela aberta enquanto espera. Se o celular ficar muito tempo em outro app, crie um convite novo.</p></div>${safety}`;
-  else if (R.step === 'paste') h = `<div class="acard"><span class="tag">Cole o convite</span><p>Cole o convite que o seu amigo mandou (começa com PBR):</p><textarea id="rtInvIn" class="rtcode" placeholder="Cole aqui o convite"></textarea>${err}<div class="cfgbtns"><button class="abtn red" data-act="rtInvGo">Gerar resposta</button></div></div>${safety}`;
-  else if (R.step === 'answer') h = `<div class="acard rtsteps"><span class="tag">Mande a resposta</span><p>Copie e mande esta resposta para quem criou a sala. Quando ele colar, a ligação acontece sozinha.</p>${copyBox('rtAnsOut', R.answer, 'resposta')}<p class="mute">Esperando o anfitrião conectar... Deixe esta tela aberta.</p></div>${safety}`;
-  else if (R.step === 'connecting' || R.step === 'hello') h = '<div class="acard"><p>Ligando os dois aparelhos...</p></div>';
-  else if (R.step === 'lobby' || R.step === 'battle') {
-    const row = F => F ? `<div class="rtside"><b>${esc(F.name)}</b><div class="fmini">${F.team.map(m => spr(m.key, 32, '', m.shiny)).join('')}</div></div>` : '<div class="rtside mute">...</div>';
-    h = `<div class="acard"><span class="tag">Conectado ✓</span><div class="rtvs">${row(R.me)}<span class="rtx">VS</span>${row(R.foe)}</div>
-      <p class="mute">${R.lv50 ? 'Todos lutam no nível 50 (o anfitrião ligou "Nivelar no 50").' : 'Cada Pokémon luta no nível que tem.'} Sem itens. Seu time de PvP escolhido é o que entra.</p>
-      ${R.role === 'host' ? (R.me && R.foe ? '<div class="cfgbtns"><button class="abtn big1 red" data-act="rtGo">Começar a luta!</button></div>' : '<p>Recebendo o time do amigo...</p>') : '<p><b>Esperando o anfitrião começar a luta...</b></p>'}
-      <div class="cfgbtns"><button class="alink" data-act="rtCancel">sair da sala</button></div></div>`;
-  } else if (R.step === 'over') {
-    const r = R.result || {};
-    h = `<div class="acard center"><h1>${r.draw ? 'Empate!' : r.win ? '🏆 Você venceu!' : 'Você perdeu'}</h1><p>${r.why === 'desistiu' ? (r.win ? `${esc(r.foe)} desistiu da luta.` : 'Você desistiu da luta.') : `Luta em tempo real contra ${esc(r.foe || 'o adversário')}.`}</p>
-      ${ADV.rtRec ? `<p class="mute">Seu histórico: ${ADV.rtRec.w} vitórias · ${ADV.rtRec.l} derrotas${ADV.rtRec.d ? ` · ${ADV.rtRec.d} empates` : ''}</p>` : ''}<div class="cfgbtns"><button class="abtn gold" data-act="rtHost">Criar outra sala</button><button class="abtn" data-act="rtBack">Voltar</button></div></div>`;
-  } else if (R.step === 'error') h = `<div class="acard"><p class="amsg warn">${esc(R.msg)}</p><div class="cfgbtns"><button class="abtn gold" data-act="rtHost">Criar sala</button><button class="abtn" data-act="rtJoin">Entrar com convite</button></div></div>`;
-  return back + h;
-}
-function rtRefresh() { if (typeof advScreen !== 'undefined' && advScreen === 'rt' && !(game && game.rt) && mode === 'adv') advRender(); }
-const _rtRender = advRender;
-advRender = function () {
-  if (advScreen !== 'rt') return _rtRender.apply(this, arguments);
-  const el = advEl(); el.innerHTML = rtHTML(); fillIcons(el); watchCanvases(el, 'canvas.advspr');
-  el.querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => advAction(b.dataset.act, b.dataset.arg)));
-  el.querySelectorAll('[data-rtcopy]').forEach(b => b.addEventListener('click', async () => { const t = el.querySelector('#' + b.dataset.rtcopy); try { await navigator.clipboard.writeText(t.value); b.textContent = '✓ Copiado!'; } catch (e) { t.select(); document.execCommand && document.execCommand('copy'); b.textContent = '✓ Copiado!'; } }));
-  el.querySelectorAll('[data-rtshare]').forEach(b => b.addEventListener('click', () => { const t = el.querySelector('#' + b.dataset.rtshare); navigator.share({ text: t.value }).catch(() => {}); }));
-};
-const _rtAction = advAction;
-advAction = function (act, arg) {
-  if (act === 'rtHost') { if (!RT_OK) return; advShow('rt'); return void rtHostStart(); }
-  if (act === 'rtJoin') { if (!RT_OK) return; rtNew('guest'); RT.step = 'paste'; return advShow('rt'); }
-  if (act === 'rtAns') { const t = document.getElementById('rtAns'); return void rtHostAnswer(t ? t.value : ''); }
-  if (act === 'rtInvGo') { const t = document.getElementById('rtInvIn'); return void rtGuestJoin(t ? t.value : ''); }
-  if (act === 'rtGo') return rtHostStartMatch();
-  if (act === 'rtCancel') { rtClose(true); return advShow('center'); }
-  if (act === 'rtBack') { if (RT && RT.closed) RT = null; advCtx = Object.assign(advCtx || {}, { cTab: 'friends' }); return advShow('center'); }
-  return _rtAction(act, arg);
-};
-const _rtFriends = friendsHTML;
-friendsHTML = function () { return rtCardHTML() + _rtFriends.apply(this, arguments); };
-
-// =====================================================================
 //  UI 2.0 (v1.9) — menos informação na tela, tudo a um toque
 //  · barra de baixo numa linha só (o resto fica em "Mais")
 //  · cabeçalho de cada tela numa linha: voltar, título, dinheiro
@@ -15490,6 +14935,225 @@ advAction = function (act, arg) {
 };
 
 // =====================================================================
+//  AMIGOS ONLINE (v1.14) — código curto de 6 letras, time e conquistas
+//  sempre atualizados. Os dados ficam no Firebase (Firestore), protegidos
+//  pelas regras do projeto: cada jogo só consegue mexer no próprio perfil.
+//  Guardamos só dados do jogo: nome de treinador, código, time e conquistas.
+//  Só funciona no app (niinty.github.io); no artefato a conexão é bloqueada.
+// =====================================================================
+const FB = { key: 'AIzaSyBM9uLpCtEM2ra4t2x6PUDTJh9uM2PP6DQ', project: 'pokebattle-7ce65' };
+const ON_OK = (location.protocol === 'https:' && /(^|\.)github\.io$/.test(location.hostname)) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+const FS_ROOT = `projects/${FB.project}/databases/(default)/documents`;
+const FS = `https://firestore.googleapis.com/v1/${FS_ROOT}`;
+const ON_ABC = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';   // sem I, O, 0 e 1 (não dá para confundir)
+const ON_MAX = 30, ON_REFRESH = 60000;
+const onSt = () => (ADV.online = ADV.online || {});
+const onF = () => (ADV.onf = ADV.onf || {});
+let onTok = null, onTokExp = 0, onBusy = false, onLastPull = 0;
+const onCodeOk = c => /^[A-HJ-NP-Z2-9]{6}$/.test(c);
+const onClean = s => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+
+// ---------- conexão (sempre com tempo limite) ----------
+async function onFetch(url, opt = {}) {
+  const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 12000);
+  try { return await fetch(url, Object.assign({ signal: ctl.signal }, opt)); }
+  catch (e) { throw new Error('rede'); }
+  finally { clearTimeout(t); }
+}
+// entrada anônima: cada jogo ganha uma chave própria, sem login
+async function onAuth() {
+  if (onTok && Date.now() < onTokExp) return onTok;
+  const S = onSt(); let r, j;
+  if (S.rt) {
+    r = await onFetch(`https://securetoken.googleapis.com/v1/token?key=${FB.key}`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'grant_type=refresh_token&refresh_token=' + encodeURIComponent(S.rt) });
+    j = await r.json().catch(() => ({}));
+    if (r.ok && j.id_token) { onTok = j.id_token; onTokExp = Date.now() + (+j.expires_in || 3600) * 1000 - 60000; S.rt = j.refresh_token || S.rt; S.uid = j.user_id || S.uid; return onTok; }
+    if (r.status !== 400) throw new Error('rede');
+    // a chave antiga não vale mais: começa uma nova (o código antigo fica para trás)
+    delete S.rt; delete S.uid; delete S.code; delete S.hash;
+  }
+  r = await onFetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FB.key}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{"returnSecureToken":true}' });
+  j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.idToken) throw new Error('rede');
+  onTok = j.idToken; onTokExp = Date.now() + (+j.expiresIn || 3600) * 1000 - 60000; S.rt = j.refreshToken; S.uid = j.localId; saveAdv(ADV);
+  return onTok;
+}
+// ---------- Firestore (REST) ----------
+const fsEnc = o => ({ fields: Object.fromEntries(Object.entries(o).map(([k, v]) => [k, typeof v === 'number' ? { integerValue: String(Math.round(v)) } : { stringValue: String(v) }])) });
+const fsDec = d => { const o = {}; for (const [k, v] of Object.entries((d && d.fields) || {})) o[k] = v.integerValue !== undefined ? +v.integerValue : v.stringValue !== undefined ? v.stringValue : null; return o; };
+async function fsReq(method, path, body) {
+  const tok = await onAuth();
+  const r = await onFetch(path.startsWith('http') ? path : `${FS}/${path}`, { method, headers: { Authorization: 'Bearer ' + tok, 'Content-Type': 'application/json' }, body: body ? JSON.stringify(body) : undefined });
+  if (r.status === 401) { onTok = null; }
+  return r;
+}
+async function fsGet(path) { const r = await fsReq('GET', path); if (r.status === 404) return null; if (!r.ok) throw new Error('rede'); return fsDec(await r.json()); }
+async function fsBatch(paths) {
+  if (!paths.length) return {};
+  const r = await fsReq('POST', `${FS}:batchGet`, { documents: paths.map(p => `${FS_ROOT}/${p}`) }); if (!r.ok) throw new Error('rede');
+  const out = {}; for (const x of await r.json()) if (x.found) out[x.found.name.slice(FS_ROOT.length + 1)] = fsDec(x.found);
+  return out;
+}
+// ---------- o seu código (criado uma vez, para sempre) ----------
+async function onEnsureCode() {
+  const S = onSt(); if (S.code) return S.code;
+  await onAuth();
+  for (let i = 0; i < 8; i++) {
+    const c = Array.from(crypto.getRandomValues(new Uint8Array(6)), b => ON_ABC[b % 32]).join('');
+    const r = await fsReq('POST', `codes?documentId=${c}`, fsEnc({ uid: S.uid }));
+    if (r.ok) { S.code = c; saveAdv(ADV); return c; }
+    if (r.status !== 409) throw new Error('rede');   // 409 = código já existe: sorteia outro
+  }
+  throw new Error('rede');
+}
+// ---------- conquistas (resumo pequeno) ----------
+function onAch() {
+  const A = {};
+  try {
+    const regs = typeof REGIONS !== 'undefined' ? REGIONS : [];
+    A.b = (ADV.badges || []).length + regs.reduce((s, r) => s + ((ADV.rg && ADV.rg[r.id] && ADV.rg[r.id].badges) || []).length, 0);
+    A.c = (ADV.champion ? 1 : 0) + regs.filter(r => ADV.rg && ADV.rg[r.id] && ADV.rg[r.id].champ).length;
+    A.d = dexCount().got;
+    const all = [...ADV.team, ...ADV.box];
+    A.s = all.filter(m => m.shiny).length;
+    A.r = typeof ribTotal === 'function' ? all.reduce((s, m) => s + ribTotal(m), 0) : 0;
+    A.p = typeof RIB_PERFECT !== 'undefined' ? all.filter(m => m.rib && m.rib[RIB_PERFECT]).length : 0;
+    A.t = (ADV.tower && ADV.tower.best) || 0;
+    A.l = (ADV.stats && ADV.stats.league) || 0;
+    A.m = Object.keys(ADV.medals || {}).length;
+  } catch (e) {}
+  return JSON.stringify(A);
+}
+const onAchRead = s => { let A = {}; try { A = JSON.parse(s || '{}') || {}; } catch (e) {} const n = k => Math.max(0, Math.min(99999, Math.floor(+A[k] || 0))); return { b: n('b'), c: n('c'), d: n('d'), s: n('s'), r: n('r'), p: n('p'), t: n('t'), l: n('l'), m: n('m') }; };
+function onAchHTML(s, big) {
+  const A = onAchRead(s), it = (ic, v, t) => `<span class="onach" title="${t}">${ic} <b>${v.toLocaleString('pt-BR')}</b>${big ? ` <small>${t}</small>` : ''}</span>`;
+  return `<div class="onachs ${big ? 'big' : ''}">${it('🏅', A.b, 'insígnias')}${it('🏆', A.c, A.c === 1 ? 'região campeã' : 'regiões campeãs')}${it('📘', A.d, 'na Pokédex')}${it('✦', A.s, 'shinies')}${it('🎀', A.r, 'ribbons')}${big ? it('🗼', A.t, 'recorde na Torre') + it('👑', A.l, 'títulos da Liga') + it('🎖️', A.m, 'medalhas') : ''}${A.p ? it('🌟', A.p, A.p === 1 ? 'Pokémon perfeito' : 'Pokémon perfeitos') : ''}</div>`;
+}
+// ---------- enviar o seu perfil (só quando mudou) ----------
+const onHash = s => { let h = 2166136261; for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619); return (h >>> 0).toString(36); };
+async function onPush(force) {
+  if (!ON_OK || !ADV) return false;
+  const S = onSt(); if (!S.on) return false;
+  const code = await onEnsureCode(), team = await teamCode(), ach = onAch(), name = String(trainerOf(ADV).name || 'Treinador').slice(0, 16);
+  if (team.length > 700) return false;
+  const h = onHash(name + '|' + team + '|' + ach);
+  if (!force && h === S.hash) return false;
+  const r = await fsReq('PATCH', `players/${S.uid}`, fsEnc({ name, code, team, ach, v: 1, t: Date.now() }));
+  if (!r.ok) throw new Error('rede');
+  S.hash = h; S.at = Date.now(); saveAdv(ADV); return true;
+}
+// envio automático: um pouco depois de cada mudança salva
+let onPushT = 0;
+const _onSave = saveAdv;
+saveAdv = function (st) {
+  const r = _onSave.apply(this, arguments);
+  try { if (ON_OK && st && st.online && st.online.on && !onBusy) { clearTimeout(onPushT); onPushT = setTimeout(() => { onPush().catch(() => {}); }, 15000); } } catch (e) {}
+  return r;
+};
+setTimeout(() => { try { if (ON_OK && ADV && ADV.online && ADV.online.on) onPush().catch(() => {}); } catch (e) {} }, 6000);
+
+// ---------- amigos ----------
+async function onTeamMini(team) { try { const G = await readTeamCode(team); return { t: G.t, id: G.id, mons: G.team.map(m => ({ key: m.key, level: m.level, shiny: m.shiny })) }; } catch (e) { return null; } }
+async function onStore(code, uid, P) {
+  const mini = await onTeamMini(P.team); if (!mini) return null;
+  const F = onF(), old = F[code] || {};
+  F[code] = { code, uid, name: String(P.name || 'Treinador').slice(0, 16), t: mini.t, id: mini.id, team: P.team, mons: mini.mons, ach: String(P.ach || '').slice(0, 400), upd: +P.t || 0, added: old.added || Date.now() };
+  return F[code];
+}
+async function onAdd(raw) {
+  const code = onClean(raw);
+  if (!onCodeOk(code)) throw new Error('formato');
+  if (code === onSt().code) throw new Error('meu');
+  if (!onF()[code] && Object.keys(onF()).length >= ON_MAX) throw new Error('cheio');
+  const C = await fsGet(`codes/${code}`); if (!C || !C.uid) throw new Error('naoexiste');
+  const P = await fsGet(`players/${C.uid}`); if (!P || !P.team) throw new Error('semtime');
+  const f = await onStore(code, C.uid, P); if (!f) throw new Error('semtime');
+  saveAdv(ADV); return f;
+}
+async function onPull(force) {
+  const F = onF(), list = Object.values(F);
+  if (!list.length) return false;
+  onLastPull = Date.now();
+  const got = await fsBatch(list.map(f => `players/${f.uid}`));
+  for (const f of list) { const P = got[`players/${f.uid}`]; if (P && P.team && P.code === f.code && (+P.t || 0) !== f.upd) await onStore(f.code, f.uid, P); }
+  saveAdv(ADV); return true;
+}
+const onAgo = t => { if (!t) return ''; const m = Math.floor((Date.now() - t) / 60000); return m < 1 ? 'agora mesmo' : m < 60 ? `há ${m} min` : m < 1440 ? `há ${Math.floor(m / 60)} h` : `há ${Math.floor(m / 1440)} dia${m >= 2880 ? 's' : ''}`; };
+const onErrTxt = e => ({ formato: 'O código tem 6 letras e números (ex.: K7Q2MX).', meu: 'Esse é o seu próprio código 🙂', cheio: `Sua lista já tem ${ON_MAX} amigos. Remova alguém para adicionar outro.`, naoexiste: 'Não achei nenhum jogador com esse código. Confira as letras.', semtime: 'Esse jogador ainda não enviou um time.' })[e && e.message] || 'Sem conexão com os Amigos online agora. Confira a internet e tente de novo.';
+
+// ---------- tela ----------
+function onlineHTML() {
+  if (!ON_OK) return `<div class="acard fcard onbox"><span class="tag">Amigos online</span><p class="mute">Os Amigos online (código curto, times sempre atualizados) funcionam no app do jogo: <b>niinty.github.io/pokebattle</b>. Aqui você ainda pode usar o código longo, mais abaixo.</p></div>`;
+  const S = onSt(), C = advCtx || {};
+  if (!S.on) return `<div class="acard fcard onbox"><span class="tag">Amigos online</span>
+    <p>Ganhe um <b>código curtinho de 6 letras</b>. Seus amigos adicionam você uma vez e sempre enxergam o seu <b>time mais recente</b> e as suas <b>conquistas</b>. Você faz o mesmo com eles.</p>
+    <p class="mute">Guardamos só dados do jogo: nome de treinador, time e conquistas. Nada de e-mail, telefone ou login.</p>
+    <div class="cfgbtns"><button class="abtn gold" data-act="onStart" ${onBusy ? 'disabled' : ''}>${onBusy ? 'Conectando…' : '🌐 Ativar Amigos online'}</button></div>${C.onErr ? `<p class="amsg warn">${C.onErr}</p>` : ''}</div>`;
+  const F = Object.values(onF()).sort((a, b) => (b.upd || 0) - (a.upd || 0)), v = C.onView && onF()[C.onView];
+  const rec = f => { const R = (ADV.friends || {})[(f.id + '-' + f.name).toLowerCase()]; return R ? `${R.w} × ${R.l}` : ''; };
+  const prof = v ? `<div class="msheet" data-act="onClose"><div class="msheet-in onprof" onclick="event.stopPropagation()"><button class="mclose" data-act="onClose" aria-label="Fechar">✕</button>
+      <div class="fhead">${trSpr(v.t, 64)}<div><b>${esc(v.name)}</b><small class="mute">Código ${v.code} · time atualizado ${onAgo(v.upd)}</small>${rec(v) ? `<small>Placar de vocês: <b>${rec(v)}</b> (você × ${esc(v.name)})</small>` : ''}</div></div>
+      <span class="tag">Time atual</span>${friendTeamRow(v.mons)}
+      <span class="tag">Conquistas</span>${onAchHTML(v.ach, true)}
+      <div class="abtns center"><button class="abtn big1 red" data-act="onGo" data-arg="${v.code}">⚔️ Batalhar contra ${esc(v.name)}</button></div>
+      <div class="abtns center"><button class="alink" data-act="onDel" data-arg="${v.code}">${C.onDelAsk === v.code ? 'Toque de novo para remover' : 'remover dos amigos'}</button></div></div></div>` : '';
+  return `<div class="acard fcard onbox"><span class="tag">Seu código de amigo</span>
+      <div class="oncode">${S.code ? S.code.split('').map(c => `<i>${c}</i>`).join('') : '<small class="mute">Criando…</small>'}</div>
+      <div class="cfgbtns"><button class="abtn gold" data-act="onCopy" ${S.code ? '' : 'disabled'}>📋 Copiar</button>${navigator.share ? `<button class="abtn" data-act="onShare" ${S.code ? '' : 'disabled'}>📤 Enviar</button>` : ''}</div>
+      <small class="mute">Seu time e suas conquistas são enviados sozinhos quando mudam${S.at ? ` · último envio ${onAgo(S.at)}` : ''}.</small></div>
+    <div class="acard fcard"><span class="tag">Adicionar amigo</span>
+      <div class="onadd"><input id="onIn" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Ex.: K7Q2MX" value="${esc(C.onIn || '')}"><button class="abtn red" data-act="onAdd" ${onBusy ? 'disabled' : ''}>Adicionar</button></div>
+      ${C.onErr ? `<p class="amsg warn">${C.onErr}</p>` : ''}</div>
+    <h3 class="ah3">Amigos online <small class="mute">${F.length}/${ON_MAX}</small>${F.length ? ` <button class="abtn sm" data-act="onPull" ${onBusy ? 'disabled' : ''}>🔄 Atualizar</button>` : ''}</h3>
+    ${F.length ? `<div class="flist">${F.map(f => `<div class="acard frow onrow" data-act="onView" data-arg="${f.code}">${trSpr(f.t, 48)}<div class="fi"><b>${esc(f.name)}</b><small class="mute">${f.code} · ${onAgo(f.upd)}${rec(f) ? ` · placar ${rec(f)}` : ''}</small>
+        <div class="fmini">${f.mons.map(m => spr(m.key, 32, '', m.shiny)).join('')}</div>${onAchHTML(f.ach)}</div>
+        <div class="fbtns" onclick="event.stopPropagation()"><button class="abtn sm red" data-act="onGo" data-arg="${f.code}">Batalhar</button></div></div>`).join('')}</div>`
+      : '<p class="mute">Nenhum amigo ainda. Peça o código de 6 letras do seu amigo e adicione aqui.</p>'}${prof}`;
+}
+// junta com a tela de Amigos: online em cima, código longo recolhido embaixo
+const _onFriends = friendsHTML;
+friendsHTML = function () {
+  const old = _onFriends.apply(this, arguments);
+  const open = advCtx && advCtx.onOld;
+  return onlineHTML() + `<button class="u2more onoldt" data-act="onOld">${open ? 'Esconder o código longo' : '📜 Código longo e times de PvP (sem internet)'}</button>` + (open ? old : '');
+};
+// abriu a aba Amigos: busca os times novos dos amigos (no máximo 1 vez por minuto)
+function onAuto() {
+  if (!ON_OK || onBusy || !ADV || !ADV.online || !ADV.online.on) return;
+  if (Date.now() - onLastPull < ON_REFRESH) return;
+  onLastPull = Date.now(); onBusy = true; Promise.all([onPull().catch(() => {}), onPush().catch(() => {})]).finally(() => { onBusy = false; if (advScreen === 'center' && advCtx && advCtx.cTab === 'friends') advRender(); });
+}
+const _onRender = advRender;
+advRender = function () { const r = _onRender.apply(this, arguments); try { if (advScreen === 'center' && advCtx && advCtx.cTab === 'friends' && !advFighting) { onAuto(); const i = document.getElementById('onIn'); if (i) i.addEventListener('input', () => { advCtx.onIn = i.value; }); } } catch (e) {} return r; };
+async function onGoFight(code) {
+  const f = onF()[code]; if (!f) return;
+  try { const G = await readTeamCode(f.team); advCtx = Object.assign(advCtx || {}, { fPrev: G, onView: null }); friendAction('fGo', 'prev'); }
+  catch (e) { advCtx = Object.assign(advCtx || {}, { onErr: 'O time desse amigo é de uma versão diferente do jogo. Peça para ele abrir o jogo atualizado.' }); advRender(); }
+}
+const _onAction = friendAction;
+friendAction = function (act, arg) {
+  const run = (p, ok) => { onBusy = true; advRender(); p.then(x => { advCtx.onErr = ''; if (ok) ok(x); }).catch(e => { advCtx.onErr = onErrTxt(e); }).finally(() => { onBusy = false; advRender(); }); return true; };
+  if (act === 'onOld') { advCtx = Object.assign(advCtx || {}, { onOld: !(advCtx && advCtx.onOld) }); advRender(); return true; }
+  if (!act || !act.startsWith('on')) return _onAction(act, arg);
+  advCtx = advCtx || {};
+  if (act === 'onStart') { onSt().on = 1; return run(onPush(true), () => { advMsg = '🌐 Amigos online ativados! Mande seu código para os amigos.'; }); }
+  if (act === 'onCopy' || act === 'onShare') {
+    const c = onSt().code; if (!c) return true;
+    const txt = `Me adiciona no PokéBATTLE! Meu código de amigo é ${c}\n(Desafios → Amigos → Adicionar amigo)`;
+    if (act === 'onShare') navigator.share({ title: 'PokéBATTLE', text: txt }).catch(() => {});
+    else navigator.clipboard.writeText(c).then(() => { advMsg = `Código ${c} copiado!`; advRender(); }).catch(() => {});
+    return true;
+  }
+  if (act === 'onAdd') { const el = document.getElementById('onIn'), raw = el ? el.value : ''; return run(onAdd(raw), f => { advCtx.onIn = ''; advMsg = `${esc(f.name)} agora é seu amigo!`; advCtx.onView = f.code; }); }
+  if (act === 'onPull') return run(onPull(true));
+  if (act === 'onView') { advCtx.onView = arg; advCtx.onDelAsk = null; advRender(); return true; }
+  if (act === 'onClose') { advCtx.onView = null; advCtx.onDelAsk = null; advRender(); return true; }
+  if (act === 'onGo') { onGoFight(arg); return true; }
+  if (act === 'onDel') { if (advCtx.onDelAsk !== arg) { advCtx.onDelAsk = arg; advRender(); return true; } delete onF()[arg]; advCtx.onView = null; advCtx.onDelAsk = null; saveAdv(ADV); advRender(); return true; }
+  return _onAction(act, arg);
+};
+
+// =====================================================================
 //  SOM (TESTE) — trilhas 8 bits, efeitos e gritos sintetizados no navegador
 //  Tudo fica neste arquivo. Para remover: tirar a linha do audio.js no
 //  tools/build.py (os ganchos no jogo checam "typeof AUDIO" e viram nada).
@@ -15735,7 +15399,7 @@ function loop(ts) {
   const rdt = Math.min(1 / 30, (ts - last) / 1000 || 0); last = ts; animT += rdt;
   const dt = rdt;
   if (game) {
-    if (!(typeof rtStep === 'function' && rtStep(dt)) && !paused) game.update(dt);
+    if (!paused) game.update(dt);
     if (mode === 'adv') advTick();
   }
   if (game) {
